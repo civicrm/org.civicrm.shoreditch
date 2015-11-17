@@ -6,10 +6,7 @@ var sass = require('gulp-sass');
 gulp.task('sass', function () {
   gulp.src('scss/*.scss')
     .pipe(bulk())
-    .pipe(sass({
-        outputStyle: 'compressed',
-        includePaths: ['vendor/']
-    }).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(rename(function (path) {
         path.basename = 'bootstrap-civicrm-' + path.basename;
     }))
