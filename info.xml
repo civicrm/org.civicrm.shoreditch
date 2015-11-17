@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<extension key="org.civicrm.bootstrapcivicrm" type="module">
+  <file>bootstrapcivicrm</file>
+  <name>CiviCRM Bootstrap theme</name>
+  <description>A CiviCRM theme based on Bootstrap</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Alessandro Verdura</author>
+    <email>alessandro@compucorp.co.uk</email>
+  </maintainer>
+  <releaseDate>2015-11-17</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>4.2</ver>
+  </compatibility>
+  <comments></comments>
+  <civix>
+    <namespace>CRM/Bootstrapcivicrm</namespace>
+  </civix>
+</extension>

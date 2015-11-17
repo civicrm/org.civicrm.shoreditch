@@ -1,0 +1,12 @@
+@import "overrides/variables";
+@import "../../org.civicrm.bootstrap/scss/bootstrap";
+
+@import "fonts/*";
+@import "mixins/*";
+
+#{$bootstrap-namespace} {
+    @import "overrides/style/*";
+    @import "components/*";
+}
+
+@import "font-awesome/scss/font-awesome";

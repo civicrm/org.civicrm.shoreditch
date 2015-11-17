@@ -1,0 +1,12 @@
+@mixin chart-colors($colors, $loops: 2) {
+    @each $color in $colors {
+        $index: index($colors, $color) - 1;
+
+        @for $i from 0 to $loops {
+            .chart-color-#{length($colors) * $i + $index} {
+                background: $color !important;
+                fill: $color !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+//
+// Variables override
+// --------------------------------------------------
+
+
+//== Font Awesome variables
+//
+//##
+$fa-font-path:        "../vendor/font-awesome/fonts" !default;
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker:           #535a67 !default;
+$gray-dark:             #727e8a !default;
+$gray-lighter:          #e6ecef !default;
+
+$brand-primary:         #3ab1c9 !default;
+$brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
+$brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
+$brand-danger:          #E48282 !default;
+
+$background-color:      #e8eef0 !default;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: $background-color !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-base:        "Open Sans", $font-family-sans-serif !default;
+
+$font-size-base-unitless: 13;
+$font-size-base:          13px !default;
+$font-size-medium:        14px !default;
+
+$font-size-h1:            24px !default;
+$font-size-h2:            18px !default;
+$font-size-h3:            16px !default;
+$font-size-h4:            $font-size-medium !default;
+$font-size-h5:            $font-size-base !default;
+
+$line-height-base:        1.53846153846154 !default; // 20/13
+
+//** By default, this inherits from the `<body>`.
+$headings-font-weight:    500 !default;
+
+$font-weight-h1:          600 !default;
+$font-weight-h2:          600 !default;
+$font-weight-h3:          600 !default;
+$font-weight-h4:          500 !default;
+$font-weight-h5:          700 !default;
+$font-weight-h6:          500 !default;
+
+$headings-color:          $gray-darker !default;
+
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+//** Load fonts from this directory.
+$icon-font-path: "../vendor/bootstrap/fonts/bootstrap/" !default;
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical: 7px !default;
+
+$border-radius-base: 2px !default;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding: 10px 20px !default;
+
+//** Background for striped tables
+$table-striped-bg:              $brand-primary-light !default;
+//** Background color used for `.table-striped`.
+$table-bg-accent:               $brand-primary-lighter !default;
+
+//** Border color for table and cell borders.
+$table-border-color: $gray-lighter !default;
+
+
+//== Forms
+//
+//##
+
+//** Default `.form-control` border radius
+$input-border-radius:       0 !default;
+//** Large `.form-control` border radius
+$input-border-radius-large: $input-border-radius !default;
+//** Small `.form-control` border radius
+$input-border-radius-small: $input-border-radius !default;
+
+
+//== Panels
+//
+//##
+
+$panel-bg:                    transparent !default;
+$panel-body-padding:          20px !default;
+$panel-heading-padding:       10px 20px !default;
+$panel-heading-big-padding:   15px 20px !default;
+$panel-footer-big-padding:    $panel-heading-big-padding !default;
+$panel-border-radius:         0 !default;
+
+//** Border color for elements within panels
+$panel-footer-bg:             #ffffff !default;
+
+$panel-default-text:          $gray-darker !default;
+$panel-default-heading-bg:    #ffffff !default;
+
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $gray-dark !default;
+$pagination-bg:                        transparent !default;
+
+$pagination-hover-color:               $gray-darker !default;
+$pagination-hover-bg:                  $pagination-bg !default;
+
+$pagination-active-color:              $gray-darker !default;
+$pagination-active-bg:                 $pagination-bg !default;
+
+$pagination-disabled-color:            $gray-lighter !default;
+$pagination-disabled-bg:               $pagination-bg !default;
+
+
+//== Type
+//
+//##
+
+$dl-horizontal-offset: 250px !default;

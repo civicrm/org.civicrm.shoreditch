@@ -1,0 +1,24 @@
+table,
+.table {
+    margin-bottom: 0;
+
+    th {
+        background: $brand-primary-light;
+    }
+
+    > thead {
+
+        > tr {
+
+            > th {
+                border-bottom: 0;
+                color: $gray-darker;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+.table-striped {
+    background: $table-striped-bg;
+}

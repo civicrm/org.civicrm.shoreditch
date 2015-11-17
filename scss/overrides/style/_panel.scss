@@ -1,0 +1,51 @@
+.panel {
+    @include box-shadow(none);
+
+    border: none;
+}
+
+.panel-body {
+    background: $brand-primary-light;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.panel-footer {
+    border: 0;
+}
+
+.panel-heading {
+    border: none;
+}
+
+.panel-title {
+    font-size: $font-size-h2;
+    font-weight: $font-weight-h2;
+    line-height: $headings-line-height;
+}
+
+
+// Contextual variations
+.panel-default {
+
+    > .panel-footer {
+        padding: $panel-footer-big-padding;
+    }
+
+    > .panel-heading {
+        padding: $panel-heading-big-padding;
+    }
+}
+
+.panel-primary,
+.panel-success,
+.panel-info,
+.panel-warning,
+.panel-danger {
+
+    > .panel-heading {
+        margin-bottom: 15px;
+    }
+}

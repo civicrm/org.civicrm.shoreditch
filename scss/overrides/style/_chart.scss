@@ -1,0 +1,32 @@
+.chart {
+
+svg:not(:root) {
+    overflow: visible;
+}
+
+}
+
+.chart-axis {
+
+    path,
+    line {
+        fill: none;
+        stroke: $gray-lighter;
+    }
+}
+
+/**
+ * Line is hidden, but we still want to show the labels/ticks
+ */
+.chart-axis-x > .tick {
+    fill: $gray-dark;
+    // stroke: $gray-dark;
+}
+
+.chart-axis-y {
+
+    text {
+        fill: $gray-dark;
+       stroke: $gray-dark;
+    }
+}

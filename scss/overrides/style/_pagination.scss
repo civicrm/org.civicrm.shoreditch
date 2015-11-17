@@ -1,0 +1,26 @@
+.pagination {
+    margin: 0;
+    vertical-align: top;
+
+    > li {
+        text-transform: capitalize;
+
+        &.active,
+        &.first:not(.disabled),
+        &.last:not(.disabled),
+        &.next:not(.disabled),
+        &.prev:not(.disabled) {
+
+            > a {
+                color: $gray-darker;
+                font-weight: bold;
+            }
+        }
+
+        > a,
+        > span {
+            border: none;
+            padding: 0 5px;
+        }
+    }
+}

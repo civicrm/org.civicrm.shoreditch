@@ -1,0 +1,81 @@
+// Headings
+// -------------------------
+
+h1, .h1 { font-weight: $font-weight-h1; }
+h2, .h2 { font-weight: $font-weight-h2; }
+h3, .h3 { font-weight: $font-weight-h3; }
+h4, .h4 { font-weight: $font-weight-h4; }
+h5, .h5 { font-weight: $font-weight-h5; }
+h6, .h6 { font-weight: $font-weight-h6; }
+
+
+// Lists
+// -------------------------
+
+dl {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+dt {
+    color: $gray-darker;
+    font-weight: 600;
+
+    &:not(:first-child) {
+        margin-top: em(23);
+    }
+}
+
+.dl-horizontal {
+
+    @media (min-width: $grid-float-breakpoint) {
+        dt {
+            text-align: left;
+
+            &:not(:first-child) {
+
+                + dd {
+                    margin-top: em(23);
+                }
+            }
+        }
+    }
+}
+
+// The definitions list takes the full width available
+.dl-horizontal-full {
+
+    @media (min-width: $grid-float-breakpoint) {
+        @include clearfix;
+
+        dt {
+            width: auto;
+        }
+
+        dd {
+            float: right;
+            margin-left: 0;
+        }
+    }
+}
+
+// The term and definition appear inline one after the other
+.dl-horizontal-inline {
+
+    @media (min-width: $grid-float-breakpoint) {
+        @include clearfix;
+
+        display: inline-block;
+        vertical-align: top;
+
+        dt {
+            width: auto;
+        }
+
+        dd {
+            float: left;
+            margin-left: 10px;
+        }
+    }
+}
