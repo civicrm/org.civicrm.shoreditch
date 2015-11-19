@@ -128,6 +128,20 @@ $panel-default-text:          $gray-darker !default;
 $panel-default-heading-bg:    #ffffff !default;
 
 
+//== Navbar
+//
+//##
+
+$navbar-border-radius:             0 !default;
+
+$navbar-default-color:             #fff !default;
+$navbar-default-bg:                #586277 !default;
+
+$navbar-default-link-color:        $navbar-default-color !default;
+$navbar-default-link-hover-color:  $navbar-default-link-color !default;
+$navbar-default-link-active-color: $navbar-default-link-color !default;
+
+
 //== Pagination
 //
 //##
