@@ -1,0 +1,22 @@
+.breadcrumb {
+    color: $breadcrumb-color;
+
+    a {
+        color: $breadcrumb-color;
+    }
+}
+
+.breadcrumb-bar {
+    background: $breadcrumb-bg;
+    margin-bottom: $line-height-computed;
+
+    .breadcrumb {
+        margin-bottom: 0;
+    }
+
+    .breadcrumb-bar-link {
+        color: $breadcrumb-color;
+        display: inline-block;
+        padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+    }
+}
