@@ -1,0 +1,44 @@
+.nav-stacked-sidebar {
+    background: $crm-page-sidebar-bg;
+
+    > li {
+
+        > a {
+            color: $nav-sidebar-color;
+            font-weight: $nav-sidebar-weigth;
+            padding: $nav-sidebar-link-padding;
+        }
+
+        + li {
+            margin-top: 0;
+        }
+
+        &.active {
+            position: relative;
+
+            > a {
+                background: $nav-sidebar-link-hover-bg;
+                color: $nav-sidebar-link-color;
+
+                &:after,
+                &:before {
+                    content: "";
+                    box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.1);
+                    display: block;
+                    height: 999999px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+
+                &:after {
+                    top: 100%;
+                }
+
+                &:before {
+                    bottom: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,13 @@
+//== CiviCRM Page
+//
+//##
+
+$crm-page-sidebar-bg:    #fff;
+$crm-page-sidebar-width: 170px;
+$crm-page-main-padding:  15px;
+
+
+
 //
 // Variables override
 // --------------------------------------------------
@@ -133,6 +143,14 @@ $panel-default-heading-bg:    #ffffff !default;
 //##
 
 $nav-link-hover-bg:         $brand-primary-light !default;
+
+//=== Nav contained in sidebar
+$nav-sidebar-color:         $gray-darker;
+$nav-sidebar-weigth:        600;
+
+$nav-sidebar-link-padding:  16px 17px!default;
+$nav-sidebar-link-color:    $brand-primary !default;
+$nav-sidebar-link-hover-bg: $background-color !default;
 
 
 //== Pagination
