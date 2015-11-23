@@ -15,7 +15,6 @@
             margin-bottom: -99999px;
             padding-bottom: 99999px;
         }
-
     }
 }
 
@@ -44,4 +43,36 @@
 
 .crm_page__sidebar {
     background: $crm-page-sidebar-bg;
+}
+
+.crm_page__topbar {
+    background: $crm-page-topbar-bg;
+    color: $crm-page-topbar-color;
+
+    .breadcrumb {
+        background: transparent;
+        margin-bottom: 0;
+        padding: $crm-page-topbar-item-padding;
+
+        > li {
+            color: $crm-page-topbar-color;
+
+            &:before {
+                color: $crm-page-topbar-color;
+            }
+
+            > a {
+                color: $crm-page-topbar-color;
+            }
+        }
+    }
+}
+
+.crm_page__topbar__link {
+    display: inline-block;
+    padding: $crm-page-topbar-item-padding;
+
+    > a {
+        color: $crm-page-topbar-color !important;
+    }
 }

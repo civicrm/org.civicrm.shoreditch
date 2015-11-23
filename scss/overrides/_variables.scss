@@ -2,9 +2,13 @@
 //
 //##
 
-$crm-page-sidebar-bg:    #fff;
-$crm-page-sidebar-width: 170px;
-$crm-page-main-padding:  15px;
+$crm-page-sidebar-bg:          #fff !default;
+$crm-page-sidebar-width:       170px !default;
+$crm-page-main-padding:        15px !default;
+
+$crm-page-topbar-bg:           #586277 !default;
+$crm-page-topbar-color:        #fff !default;
+$crm-page-topbar-item-padding: 15px !default;
 
 
 
@@ -174,11 +178,6 @@ $pagination-disabled-bg:               $pagination-bg !default;
 //
 //##
 
-$breadcrumb-padding-vertical:   15px !default;
-$breadcrumb-padding-horizontal: $breadcrumb-padding-vertical !default;
-$breadcrumb-bg:                 #586277 !default;
-$breadcrumb-color:              #fff !default;
-$breadcrumb-active-color:       $breadcrumb-color !default;
 $breadcrumb-separator:          ">" !default;
 
 
