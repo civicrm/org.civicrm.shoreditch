@@ -1,12 +1,13 @@
-.nav-stacked-sidebar {
+.nav-pills-stacked-sidebar {
     background: $crm-page-sidebar-bg;
 
     > li {
 
         > a {
-            color: $nav-sidebar-color;
-            font-weight: $nav-sidebar-weigth;
-            padding: $nav-sidebar-link-padding;
+            border-radius: $nav-pills-sidebar-border-radius;
+            color: $nav-pills-sidebar-color;
+            font-weight: $nav-pills-sidebar-weigth;
+            padding: $nav-pills-sidebar-link-padding;
         }
 
         + li {
@@ -15,29 +16,31 @@
 
         &.active {
             position: relative;
+            z-index: 0;
+
+            &:after,
+            &:before {
+                content: "";
+                box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.1);
+                display: block;
+                height: 999999px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+            }
+
+            &:after {
+                top: 100%;
+            }
+
+            &:before {
+                bottom: 100%;
+            }
 
             > a {
-                background: $nav-sidebar-link-hover-bg;
-                color: $nav-sidebar-link-color;
-
-                &:after,
-                &:before {
-                    content: "";
-                    box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.1);
-                    display: block;
-                    height: 999999px;
-                    left: 0;
-                    position: absolute;
-                    width: 100%;
-                }
-
-                &:after {
-                    top: 100%;
-                }
-
-                &:before {
-                    bottom: 100%;
-                }
+                background: $nav-pills-sidebar-link-hover-bg !important;
+                color: $nav-pills-sidebar-link-color !important;
             }
         }
     }

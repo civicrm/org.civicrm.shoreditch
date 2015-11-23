@@ -149,12 +149,13 @@ $panel-default-heading-bg:    #ffffff !default;
 $nav-link-hover-bg:         $brand-primary-light !default;
 
 //=== Nav contained in sidebar
-$nav-sidebar-color:         $gray-darker;
-$nav-sidebar-weigth:        600;
+$nav-pills-sidebar-border-radius: 0;
+$nav-pills-sidebar-color:         $gray-darker;
+$nav-pills-sidebar-weigth:        600;
 
-$nav-sidebar-link-padding:  16px 17px!default;
-$nav-sidebar-link-color:    $brand-primary !default;
-$nav-sidebar-link-hover-bg: $background-color !default;
+$nav-pills-sidebar-link-padding:  16px 17px!default;
+$nav-pills-sidebar-link-color:    $brand-primary !default;
+$nav-pills-sidebar-link-hover-bg: $background-color !default;
 
 
 //== Pagination
