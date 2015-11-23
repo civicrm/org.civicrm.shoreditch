@@ -3,15 +3,19 @@
     @media (min-width: $screen-md-min) {
         overflow: hidden;
 
-        .crm_page__main {
-            margin-left: $crm-page-sidebar-width;
+        // Override of the grid widths
+        > [class*="col-"] {
+
+            &:first-child {
+                width: 13.674%;
+            }
+
+            &:last-child {
+                width: 86.322222%;
+            }
         }
 
         .crm_page__sidebar {
-            float: left;
-            width: $crm-page-sidebar-width;
-
-            // equal height with container solution
             margin-bottom: -99999px;
             padding-bottom: 99999px;
         }
