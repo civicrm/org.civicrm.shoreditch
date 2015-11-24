@@ -79,3 +79,20 @@ dt {
         }
     }
 }
+
+// The entire list is layed out inline
+.dl-inline {
+
+    > dd,
+    > dt {
+        display: inline-block;
+    }
+
+    > dt {
+        margin: 0 5px 0 0;
+
+        &:not(:first-child) {
+            margin-left: 15px;
+        }
+    }
+}
