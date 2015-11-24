@@ -37,6 +37,10 @@
 
     > .panel-heading {
         padding: $panel-heading-big-padding;
+
+        .btn-group-sm {
+            margin: -13px 0 -10px 0;
+        }
     }
 }
 
