@@ -1,3 +1,8 @@
+.btn-default {
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.19);
+    font-weight: 600;
+}
+
 // Keeps the standard settings for font size, line height, and border radius
 .btn-lg {
     @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);

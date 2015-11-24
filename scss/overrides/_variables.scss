@@ -113,6 +113,14 @@ $table-bg-accent:               $brand-primary-lighter !default;
 $table-border-color: $gray-lighter !default;
 
 
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-default-bg:     #fff !default;
+$btn-default-border: $btn-default-bg !default;
+
+
 //== Forms
 //
 //##
