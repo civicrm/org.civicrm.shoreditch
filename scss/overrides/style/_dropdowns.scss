@@ -1,0 +1,9 @@
+.dropdown-menu {
+    box-shadow: $box-shadow;
+    margin: 0;
+    padding: 0;
+
+    > li > a {
+        padding: 15px 20px;
+    }
+}
