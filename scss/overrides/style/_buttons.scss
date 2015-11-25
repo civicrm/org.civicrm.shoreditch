@@ -1,11 +1,22 @@
-// Redefine the vertical padding for standard-sized buttons
+// Redefine the vertical padding for buttons
 .btn {
-
-  &:not(.btn-xs):not(.btn-sm):not(.btn-lg) {
     padding: $btn-padding-base-vertical $padding-base-horizontal;
-  }
 }
 
+.btn-lg {
+    padding: $padding-large-vertical $padding-large-horizontal;
+}
+
+.btn-sm {
+    padding: $btn-padding-small-vertical $padding-base-horizontal;
+}
+
+.btn-xs {
+    padding: $padding-xs-vertical $padding-xs-horizontal;
+}
+
+
+// Custom style for the default variation
 .btn-default {
     box-shadow: $box-shadow;
     font-weight: 600;
@@ -17,34 +28,34 @@
 }
 
 .btn-block + .btn-block {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 // From Bootstrap 4 alpha
 .btn-secondary {
-  @include button-variant(#ffffff, $gray-dark, $gray-darker);
+    @include button-variant(#ffffff, $gray-dark, $gray-darker);
 }
 
 .btn-primary-outline {
-  @include button-outline-variant($btn-primary-bg);
+    @include button-outline-variant($btn-primary-bg);
 }
 
 .btn-secondary-outline {
-  @include button-outline-variant($gray-darker, $gray-dark);
+    @include button-outline-variant($gray-darker, $gray-dark);
 }
 
 .btn-info-outline {
-  @include button-outline-variant($btn-info-bg);
+    @include button-outline-variant($btn-info-bg);
 }
 
 .btn-success-outline {
-  @include button-outline-variant($btn-success-bg);
+    @include button-outline-variant($btn-success-bg);
 }
 
 .btn-warning-outline {
-  @include button-outline-variant($btn-warning-bg);
+    @include button-outline-variant($btn-warning-bg);
 }
 
 .btn-danger-outline {
-  @include button-outline-variant($btn-danger-bg);
+    @include button-outline-variant($btn-danger-bg);
 }
