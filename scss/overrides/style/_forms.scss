@@ -3,6 +3,25 @@ label {
     font-weight: 600;
 }
 
+
+.form-horizontal {
+
+    @media (min-width: $screen-sm-min) {
+
+        // Labels should always be aligned to the left
+        .control-label {
+            text-align: left;
+        }
+
+        // Label size is always the same also with small size input fields
+        .form-group-sm {
+            .control-label {
+                font-size: $font-size-base;
+            }
+        }
+    }
+}
+
 /**
  * An extension of Bootstraps' input-group,
  * so that the addon has no background or border set

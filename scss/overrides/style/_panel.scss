@@ -8,8 +8,21 @@
 .panel-body {
     background: $brand-primary-light;
 
+    // Avoid extra spacing due to margin bottom of last element
     > *:last-child {
         margin-bottom: 0;
+
+        // A (temporary?) solution to remove extra spacing in a
+        // panel containing an horizontal form
+        &.form-horizontal {
+
+            > .row:last-child {
+
+                .form-group {
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
 }
 
