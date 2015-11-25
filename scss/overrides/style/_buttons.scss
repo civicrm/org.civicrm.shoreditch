@@ -1,3 +1,11 @@
+// Redefine the vertical padding for standard-sized buttons
+.btn {
+
+  &:not(.btn-xs):not(.btn-sm):not(.btn-lg) {
+    padding: $btn-padding-base-vertical $padding-base-horizontal;
+  }
+}
+
 .btn-default {
     box-shadow: $box-shadow;
     font-weight: 600;
