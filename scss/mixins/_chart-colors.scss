@@ -8,6 +8,15 @@
                 border-color: $color !important;
                 fill: $color !important;
             }
+
+            .chart-color-bg-#{length($colors) * $i + $index} {
+                background: $color !important;
+                fill: $color !important;
+            }
+
+            .chart-color-border-#{length($colors) * $i + $index} {
+                border-color: $color !important;
+            }
         }
     }
 }
