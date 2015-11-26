@@ -5,6 +5,7 @@
         @for $i from 0 to $loops {
             .chart-color-#{length($colors) * $i + $index} {
                 background: $color !important;
+                border-color: $color !important;
                 fill: $color !important;
             }
         }
