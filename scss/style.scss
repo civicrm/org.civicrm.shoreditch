@@ -1,3 +1,5 @@
+@import "vendor/font-awesome/scss/font-awesome";
+
 @import "overrides/variables";
 @import "../../org.civicrm.bootstrap/scss/bootstrap";
 
@@ -8,5 +10,3 @@
     @import "overrides/style/*";
     @import "components/*";
 }
-
-@import "vendor/font-awesome/scss/font-awesome";
