@@ -1,3 +1,25 @@
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-body {
+    background: $brand-primary-light;
+}
+
+.modal-header {
+    padding: $modal-title-padding ($modal-title-padding + 5);
+}
+
+.modal-footer {
+    padding: $modal-title-padding + 5;
+}
+
+@media (min-width: $screen-sm-min) {
+    .modal-dialog {
+        margin-top: 50px;
+    }
+}
+
 /**
  * This is a custom class for the custom CTools modal with Bootstrap markup
  * It cancels out the styles that CTools applies via JS

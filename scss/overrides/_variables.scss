@@ -149,6 +149,19 @@ $dropdown-border:        $background-color !default;
 $dropdown-link-hover-bg: $dropdown-border !default;
 
 
+//== Modals
+//
+//##
+
+$modal-inner-padding:         20px 30px !default;
+$modal-title-padding:         15px !default;
+
+$modal-header-border-color:   transparent !default;
+$modal-footer-border-color:   $modal-header-border-color !default;
+
+$modal-md:                    500px !default;
+
+
 //== Panels
 //
 //##
