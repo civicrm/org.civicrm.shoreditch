@@ -19,10 +19,11 @@ $crm-page-topbar-item-padding: 15px !default;
 // --------------------------------------------------
 
 
-//== Font Awesome variables
+//== Font paths
 //
 //##
-$fa-font-path:        "../vendor/font-awesome/fonts" !default;
+$fa-font-path: "../fonts/font-awesome" !default;
+$os-font-path: "../fonts/open-sans" !default;
 
 
 //== Colors

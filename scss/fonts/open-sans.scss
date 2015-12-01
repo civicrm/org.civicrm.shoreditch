@@ -2,30 +2,42 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+  src: url('#{$os-font-path}/OpenSans-Regular-webfont.eot');
+  src: url('#{$os-font-path}/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$os-font-path}/OpenSans-Regular-webfont.woff') format('woff'),
+       url('#{$os-font-path}/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('#{$os-font-path}/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNShampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+  src: url('#{$os-font-path}/OpenSans-Semibold-webfont.eot');
+  src: url('#{$os-font-path}/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$os-font-path}/OpenSans-Semibold-webfont.woff') format('woff'),
+       url('#{$os-font-path}/OpenSans-Semibold-webfont.ttf') format('truetype'),
+       url('#{$os-font-path}/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+  src: url('#{$os-font-path}/OpenSans-Bold-webfont.eot');
+  src: url('#{$os-font-path}/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$os-font-path}/OpenSans-Bold-webfont.woff') format('woff'),
+       url('#{$os-font-path}/OpenSans-Bold-webfont.ttf') format('truetype'),
+       url('#{$os-font-path}/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
-  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBogp9Q8gbYrhqGlRav_IXfk.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+  src: url('#{$os-font-path}/OpenSans-Italic-webfont.eot');
+  src: url('#{$os-font-path}/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$os-font-path}/OpenSans-Italic-webfont.woff') format('woff'),
+       url('#{$os-font-path}/OpenSans-Italic-webfont.ttf') format('truetype'),
+       url('#{$os-font-path}/OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
 }
