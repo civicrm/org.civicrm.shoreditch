@@ -1,6 +1,11 @@
 // Redefine the vertical padding for buttons
 .btn {
     padding: $btn-padding-base-vertical $padding-base-horizontal;
+
+    &:active,
+    &.active {
+        @include box-shadow(none);
+    }
 }
 
 .btn-lg {
