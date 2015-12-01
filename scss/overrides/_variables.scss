@@ -37,6 +37,7 @@ $gray-lighter:          #e6ecef !default;
 $brand-primary:         #3ab1c9 !default;
 $brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
+$brand-success:         #8EC68A !default;
 $brand-danger:          #E48282 !default;
 
 $background-color:      #e8eef0 !default;
