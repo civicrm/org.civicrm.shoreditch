@@ -48,6 +48,7 @@
 
 // Contextual variations
 .panel-default {
+    @include box-shadow($box-shadow);
 
     > .panel-footer {
         padding: $panel-footer-big-padding;
@@ -67,6 +68,34 @@
 .panel-info,
 .panel-warning,
 .panel-danger {
+
+    > .panel-body,
+    > .panel-footer,
+    > .panel-heading {
+        @include box-shadow($box-shadow);
+    }
+
+    > .panel-body {
+        position: relative;
+
+        // Kind of a temporary hack to hide the footer's top border shadow
+        // which overflows into .panel-body. The :before pseudo-element
+        // just sits on top of it with the same panel-body bg color
+        &:before {
+            content: "";
+            background: $brand-primary-light;;
+            bottom: 0;
+            height: 10px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+        }
+    }
+
+    > .panel-footer {
+        position: relative;
+    }
 
     > .panel-heading {
         margin-bottom: 15px;

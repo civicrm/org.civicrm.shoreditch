@@ -1,4 +1,6 @@
 .page-header {
+    @include box-shadow($box-shadow);
+
     background: #fff;
     border: 0;
     padding: 15px 20px;
