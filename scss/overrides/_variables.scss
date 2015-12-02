@@ -22,8 +22,9 @@ $crm-page-topbar-item-padding: 15px !default;
 //== Font paths
 //
 //##
-$fa-font-path: "../fonts/font-awesome" !default;
-$os-font-path: "../fonts/open-sans" !default;
+$icon-font-path: "../../org.civicrm.bootstrap/scss/vendor/bootstrap/fonts/bootstrap/" !default;
+$fa-font-path:   "../fonts/font-awesome" !default;
+$os-font-path:   "../fonts/open-sans" !default;
 
 
 //== Colors
