@@ -7,11 +7,11 @@
         > [class*="col-"] {
 
             &:first-child {
-                width: 11.676%;
+                width: 12.775%;
             }
 
             &:last-child {
-                width: 88.325%;
+                width: 87.2%;
             }
         }
 
@@ -37,8 +37,7 @@
 }
 
 .crm_page__main {
-    padding: $crm-page-main-padding;
-    padding-bottom: 50px;
+    padding: $crm-page-main-padding $crm-page-main-padding 50px 0;
 
     > .crm_page__footer {
         margin-top: 50px;
