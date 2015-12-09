@@ -18,15 +18,10 @@ svg:not(:root) {
 /**
  * Line is hidden, but we still want to show the labels/ticks
  */
-.chart-axis-x > .tick {
-    fill: $gray-dark;
-    // stroke: $gray-dark;
-}
-
+.chart-axis-x,
 .chart-axis-y {
 
-    text {
+    > .tick {
         fill: $gray-dark;
-       stroke: $gray-dark;
     }
 }
