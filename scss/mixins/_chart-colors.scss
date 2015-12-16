@@ -17,6 +17,10 @@
             .chart-color-border-#{length($colors) * $i + $index} {
                 border-color: $color !important;
             }
+
+            .chart-color-stroke-#{length($colors) * $i + $index} {
+                stroke: $color !important;
+            }
         }
     }
 }
