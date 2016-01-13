@@ -3,21 +3,43 @@
     @media (min-width: $screen-md-min) {
         overflow: hidden;
 
-        // Override of the grid widths
-        > [class*="col-"] {
+        > .row {
 
-            &:first-child {
-                width: 12.775%;
-            }
+            > [class*="col-"] {
 
-            &:last-child {
-                width: 87.2%;
+                &:first-child {
+                    max-width: $crm-page-sidebar-max-width + $grid-gutter-width;
+                }
             }
         }
 
+        // On medium/large viewports the main block must
+        // be centered and should not stretch after a certain point
+        .crm_page__main {
+            margin: 0 auto;
+            max-width: $crm-page-main-max-width;
+        }
+
+        // Simple trick for achieving same-height columns look
         .crm_page__sidebar {
             margin-bottom: -99999px;
             padding-bottom: 99999px;
+        }
+    }
+
+    @media (min-width: $crm-page-breakpoint-min) {
+        > .row {
+
+            > [class*="col-"] {
+
+                // The column containing the main block should go full width
+                // so __main can be perfectly centered on the available space
+                &:last-child {
+                    float: none;
+                    margin-left: $crm-page-sidebar-max-width;
+                    width: auto;
+                }
+            }
         }
     }
 }
@@ -37,10 +59,20 @@
 }
 
 .crm_page__main {
-    padding: $crm-page-main-padding $crm-page-main-padding 50px 0;
+    padding: $crm-page-main-padding $crm-page-main-padding 50px $crm-page-main-padding;
 
     > .crm_page__footer {
         margin-top: 50px;
+    }
+
+    // On medium/large viewports, the padding is taken care by Bootstrap
+    @media (min-width: $screen-md-min) {
+        padding-left: 0;
+    }
+
+    // On large viewports, the right padding would prevent perfect centering
+    @media (min-width: $crm-page-breakpoint-min) {
+        padding-right: 0;
     }
 }
 

@@ -4,9 +4,13 @@ $box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.19);
 //
 //##
 
+$crm-page-breakpoint-min:      1240px !default; // Unfortunately arbitrary
+
 $crm-page-sidebar-bg:          #fff !default;
-$crm-page-sidebar-width:       170px !default;
-$crm-page-main-padding:        15px !default;
+$crm-page-sidebar-max-width:   170px !default;
+
+$crm-page-main-max-width:      1018px !default;
+$crm-page-main-padding:        16px !default;
 
 $crm-page-topbar-bg:           #586277 !default;
 $crm-page-topbar-color:        #fff !default;
