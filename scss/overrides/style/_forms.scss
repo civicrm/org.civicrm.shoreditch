@@ -20,6 +20,14 @@ label {
             text-align: left;
         }
 
+        // Checkbox must be vertically aligned when in a form group
+        .form-group {
+
+            input[type="checkbox"] {
+                margin-top: 8px;
+            }
+        }
+
         // Label size is always the same also with small size input fields
         .form-group-sm {
             .control-label {
