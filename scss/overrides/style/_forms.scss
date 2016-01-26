@@ -11,6 +11,14 @@ label {
     }
 }
 
+.form-group.form-required {
+
+    > .control-label:after {
+        content:"*";
+        color: $brand-danger;
+    }
+}
+
 .form-horizontal {
 
     @media (min-width: $screen-sm-min) {
