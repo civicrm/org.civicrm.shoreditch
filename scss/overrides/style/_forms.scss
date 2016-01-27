@@ -58,3 +58,14 @@ label {
         box-shadow: none !important;
     }
 }
+
+
+// AngularJS CSS classes
+input,
+select,
+textarea {
+
+    &.ng-dirty.ng-invalid {
+        border: 1px solid $brand-danger;
+    }
+}
