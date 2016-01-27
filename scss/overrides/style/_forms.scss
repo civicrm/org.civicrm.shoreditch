@@ -61,11 +61,9 @@ label {
 
 
 // AngularJS CSS classes
-input,
-select,
-textarea {
+.form-submitted {
 
-    &.ng-dirty.ng-invalid {
+    .ng-invalid {
         border: 1px solid $brand-danger;
     }
 }
