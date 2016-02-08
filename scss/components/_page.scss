@@ -37,6 +37,7 @@
                 &:last-child {
                     float: none;
                     margin-left: $crm-page-sidebar-max-width;
+                    overflow: hidden;
                     width: auto;
                 }
             }
