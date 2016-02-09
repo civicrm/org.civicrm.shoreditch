@@ -210,6 +210,19 @@ $nav-pills-sidebar-link-padding:  16px 17px!default;
 $nav-pills-sidebar-link-color:    $brand-primary !default;
 $nav-pills-sidebar-link-hover-bg: $background-color !default;
 
+//== Tabs
+
+// Nav tabs placed in a panel heading
+$nav-tabs-panel-heading-border:                  0 !default;
+$nav-tabs-panel-heading-margin:                  -10px 0 !default;
+$nav-tabs-panel-heading-link-background:         transparent !default;
+$nav-tabs-panel-heading-link-border-color:       #ffffff !default;
+$nav-tabs-panel-heading-link-border-width:       0 !default;
+$nav-tabs-panel-heading-link-border-hover-width: 0 0 3px 0 !default;
+$nav-tabs-panel-heading-link-color:              $nav-tabs-panel-heading-link-border-color !default;
+$nav-tabs-panel-heading-link-padding:            15px 15px 12px !default;
+$nav-tabs-panel-heading-link-weight:             600 !default;
+
 
 //== Pagination
 //

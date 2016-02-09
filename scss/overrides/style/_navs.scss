@@ -45,3 +45,36 @@
         }
     }
 }
+
+
+// Nav tabs in the heading of a primary panel
+.panel-primary {
+
+    > .panel-heading {
+
+        > .nav-tabs {
+            border: $nav-tabs-panel-heading-border;
+            margin: $nav-tabs-panel-heading-margin;
+
+            > li {
+
+                &.active,
+                &:hover {
+
+                    > a {
+                        border-width: $nav-tabs-panel-heading-link-border-hover-width;
+                    }
+                }
+
+                > a {
+                    background: $nav-tabs-panel-heading-link-background !important;
+                    border-color: $nav-tabs-panel-heading-link-border-color !important;
+                    border-width: $nav-tabs-panel-heading-link-border-width;
+                    color: $nav-tabs-panel-heading-link-color !important;
+                    font-weight: $nav-tabs-panel-heading-link-weight;
+                    padding: $nav-tabs-panel-heading-link-padding;
+                }
+            }
+        }
+    }
+}
