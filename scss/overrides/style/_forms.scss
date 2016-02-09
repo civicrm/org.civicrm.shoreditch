@@ -3,6 +3,13 @@ label {
     font-weight: 600;
 }
 
+.checkbox {
+
+    > label {
+        color: $text-color;
+    }
+}
+
 .form-control {
     @include box-shadow(none);
 
