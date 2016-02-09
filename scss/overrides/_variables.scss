@@ -228,6 +228,12 @@ $pagination-disabled-color:            $gray-lighter !default;
 $pagination-disabled-bg:               $pagination-bg !default;
 
 
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-danger-text: $brand-danger !default;
+
 //== Breadcrumbs
 //
 //##
