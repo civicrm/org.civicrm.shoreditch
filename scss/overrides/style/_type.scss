@@ -15,6 +15,13 @@ h3, .h3 {
 }
 
 
+// Emphasis & misc
+// -------------------------
+
+@include text-emphasis-variant('.text-default', $text-color);
+@include text-emphasis-variant('.text-default-darker', $gray-darker);
+
+
 // Lists
 // -------------------------
 
