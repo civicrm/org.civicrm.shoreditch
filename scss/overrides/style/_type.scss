@@ -56,6 +56,21 @@ dt {
     }
 }
 
+// The definition list takes half the space of the standard version
+.dl-horizontal-half {
+
+    @media (min-width: $grid-float-breakpoint) {
+
+        dd {
+            margin-left: $dl-horizontal-offset / 2;
+        }
+
+        dt {
+            width: $dl-horizontal-offset / 2;
+        }
+    }
+}
+
 // The definitions list takes the full width available
 .dl-horizontal-full {
 
