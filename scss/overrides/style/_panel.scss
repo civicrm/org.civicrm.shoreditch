@@ -3,6 +3,12 @@
 
     border: none;
     margin-bottom: $grid-gutter-width;
+
+    > .table,
+    > .table-responsive > .table,
+    > .panel-collapse > .table {
+        border-top: 1px solid $gray-lighter;
+    }
 }
 
 .panel-body {
