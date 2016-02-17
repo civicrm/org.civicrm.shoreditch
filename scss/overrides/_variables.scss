@@ -151,6 +151,13 @@ $input-border-radius-small: $input-border-radius !default;
 
 $input-addon-color:         $gray-darker !default;
 
+// custom select
+$customselect-background:             #ffffff;
+$customselect-caret-width:            32;
+$customselect-padding-right:          $customselect-caret-width + 12;
+$customselect-feedback-padding-right: $customselect-padding-right + 10;
+
+
 //== Dropdowns
 //
 //## Dropdown menu container and contents.
