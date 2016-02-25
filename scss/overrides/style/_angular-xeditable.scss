@@ -1,0 +1,168 @@
+.editable {
+    @include transition(border-color ease-in-out .15s,  background-color ease-in-out .15s);
+    border: 1px solid transparent;
+    margin: -4px 0;
+    padding: 3px 30px 3px 5px;
+    position: relative;
+
+    &.editable-with-link {
+        @include transition(color ease-in-out .25s);
+        color: $brand-primary;
+
+        .editable-link {
+            @include transition(all ease-in-out .15s);
+            background-color: #fff;
+            border: 1px solid $gray-light;
+            bottom: 0;
+            color: $gray;
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            height: 100%;
+            opacity: 0;
+            padding: 6px 9px;
+            position: absolute;
+            right: 19px;
+            z-index: 999;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .fa-pencil {
+        @include transition(opacity ease-in-out .15s);
+
+        background-color: $brand-primary-light;
+        border-left: 1px solid $gray-light;
+        font-size: 12px;
+        height: 100%;
+        opacity: 0;
+        padding: 6px 6px 5px 6px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &:hover {
+        border-color: $input-border;
+
+        .fa-pencil,
+        &.editable-with-link .editable-link {
+            opacity: 1;
+        }
+
+        &.editable-with-link .editable-link {
+            bottom: -27px;
+            height: auto;
+        }
+    }
+}
+
+.editable-controls {
+
+    .form-control {
+        height: 27px;
+        padding: 3px 5px;
+    }
+}
+
+.editable-empty {
+    width: 100px;
+
+    &:before {
+        content: "\f";
+        line-height: inherit;
+    }
+}
+
+.editable-bsdate {
+
+    input[type="text"] {
+        max-width: 80px;
+    }
+}
+
+.editable-wrap {
+    margin: -4px 0 -6px;
+    position: relative;
+    top: -1px;
+
+    .editable-buttons {
+        bottom: -24px;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+
+        .btn {
+            background-color: $brand-primary-light;
+            border-color: $gray-light;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: normal;
+            margin: 0 0 0 -1px;
+            padding: 4px 6px;
+            height: 25px;
+
+            &:active,
+            &:focus,
+            &:hover {
+                background-color: $brand-primary-lighter;
+                outline: none;
+            }
+        }
+
+        .glyphicon-ok {
+            color: $brand-primary;
+        }
+
+        .glyphicon-remove {
+            color: $brand-danger;
+        }
+    }
+
+    &.editable-ta {
+        display: block;
+        white-space: normal;
+
+        .editable-input {
+            display: block;
+        }
+
+    }
+
+    .form-control:focus {
+        @include box-shadow(none);
+        border-color: $gray-light;
+    }
+}
+
+.editable-small + .editable-wrap {
+
+    input,
+    select {
+        height: 26px;
+        padding: 3px;
+    }
+
+    .input-group-btn .btn {
+        font-size: 12px;
+        height: 25px;
+        padding: 3px;
+        width: 25px;
+    }
+}
+
+.editable-click {
+    color: inherit;
+    display: inline-block;
+
+    &:hover {
+        color: inherit;
+    }
+}
+
+.editable-error {
+    display: none;
+}

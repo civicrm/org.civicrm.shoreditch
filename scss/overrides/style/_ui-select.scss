@@ -1,0 +1,86 @@
+.ui-select-bootstrap {
+
+    input {
+        font-weight: 400;
+    }
+
+    + .input-group-btn {
+
+        .btn {
+            @include border-left-radius(0);
+            margin-left: -1px;
+        }
+    }
+
+    &.ui-select-multiple {
+        min-height: $input-height-base;
+        padding: 2px 2px 0 2px;
+
+        input.ui-select-search {
+            height: 1.9em;
+            text-indent: 10px;
+        }
+
+        .ui-select-match .close {
+            line-height: 0.8;
+        }
+
+        .ui-select-match-item {
+            border-color: $brand-primary;
+            margin: 0 2px 2px 1px;
+            padding: 2px 8px;
+            text-transform: none;
+        }
+    }
+
+    .ui-select-choices-row {
+
+        &:hover {
+
+            > a {
+                background-color: #428bca;
+                color: #ffffff;
+            }
+        }
+
+        &:not(.active):not(:hover) {
+
+            > a {
+
+                small {
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
+
+.ui-select-match-text,
+.ui-select-placeholder {
+    color: $input-color;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.ui-select-toggle {
+    border-color: $input-border;
+    border-radius: $input-border-radius;
+    padding: 4px 30px 4px 12px;
+
+    &:hover {
+        border-color: $input-border;
+    }
+
+    &[disabled] {
+        background-color: $input-bg-disabled;
+        border-color: $input-border;
+        opacity: 1;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $input-bg-disabled;
+            border-color: $input-border;
+        }
+    }
+}

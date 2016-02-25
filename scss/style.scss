@@ -5,8 +5,12 @@
 @import "mixins/*";
 
 #{$bootstrap-namespace} {
+    @import "vendor/text-angular/text-angular";
+    @import "vendor/ui-select/ui-select";
+
     @import "overrides/style/*";
     @import "components/*";
 }
 
+@import "vendor/angular-xeditable/angular-xeditable";
 @import "vendor/font-awesome/font-awesome";

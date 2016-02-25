@@ -69,6 +69,12 @@
 
         .btn-group-sm {
             margin: -13px 0 -10px 0;
+
+            // TO DO: too much nesting, need to fix this
+            > .btn {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
     }
 }
