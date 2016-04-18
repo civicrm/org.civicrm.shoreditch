@@ -149,6 +149,11 @@ body > .select2-container.open {
   border-bottom-right-radius: 0 !important;
 }
 
+/* Fix position of the feedback inside the dropdown */
+.form-group.has-feedback .ui-select-bootstrap.dropdown .form-control-feedback {
+    right: 0 !important;
+}
+
 .ui-select-bootstrap > .ui-select-match > .btn{
   /* Instead of center because of .btn */
   text-align: left !important;
