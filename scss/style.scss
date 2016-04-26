@@ -6,6 +6,7 @@
 
 #{$bootstrap-namespace} {
     @import "vendor/text-angular/text-angular";
+    @import "vendor/ui-bootstrap/ui-bootstrap";
     @import "vendor/ui-select/ui-select";
 
     @import "overrides/style/*";
