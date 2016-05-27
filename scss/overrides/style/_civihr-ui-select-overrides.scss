@@ -15,12 +15,13 @@
 
 .civihr-ui-select {
   $disabled-color: lighten($gray-light, 25);
+  $tasks-and-assignments: '#civitasks';
   border-color: $gray-light;
   color: $gray-light;
   width: 100% !important;
 
-   &,
-  > * {
+   > *,
+  & {
     border-radius: $input-border-radius !important;
     box-shadow: none !important;
   }
@@ -63,11 +64,26 @@
     }
   }
 
+  .select2-choice {
+    background: none !important;
+  }
+
   &.open {
     .select2-chosen {
-      @extend %ui-select-border;
-      border-bottom: 0 !important;
       color: lighten($gray-light, 20) !important;
+      background: none !important;
+
+      @at-root #{$bootstrap-namespace} & {
+        border: none !important;
+      }
+      @at-root #{$tasks-and-assignments} & {
+        @extend %ui-select-border;
+        border-bottom: 0 !important;
+      }
+    }
+
+    .select2-choice {
+      border-bottom: none !important;
     }
 
     .ui-select-search {
@@ -79,15 +95,21 @@
   &:not(.open) {
     padding: 0 0 0 10px !important;
 
-      .select2-arrow {
+    .select2-choice {
+      border: none !important;
+    }
+
+    .select2-arrow {
       @extend %ui-select-line-height;
       padding-left: 10px !important;
       width: 32px !important;
+      background: none;
 
       &:not(.search-enabled)::before {
         content: '\f0d7';
         padding-left: 2px;
       }
+
       &.search-enabled::before {
         content: '\f002';
       }
@@ -135,10 +157,6 @@
     @extend %ui-select-border;
     border-top: none !important;
     background: white !important;
-  }
-
-  .select2-dropdown-open .select2-choice {
-    border-bottom-color: transparent !important;
   }
 
   .ui-select-match {
@@ -207,6 +225,7 @@
       &:not(.search-enabled)::before {
         content: '\f0d7';
       }
+
       &.search-enabled::before {
         content: '\f002';
       }
