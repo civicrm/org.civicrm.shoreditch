@@ -29,6 +29,13 @@ label {
 
 .form-horizontal {
 
+    .has-feedback {
+
+        [uib-datepicker-popup] + .form-control-feedback {
+            right: 41px;
+        }
+    }
+
     @media (min-width: $screen-sm-min) {
 
         // Labels should always be aligned to the left
