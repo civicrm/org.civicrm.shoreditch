@@ -164,6 +164,15 @@
         line-height: 31px;
       }
     }
+
+    .select2-search::after {
+      @extend %ui-select-icon;
+      position: relative;
+      content: '\f002';
+      color: $gray !important;
+      right: 30px;
+    }
+
   }
 
   &:not(.open) {
@@ -182,15 +191,11 @@
       @extend %ui-select-no-background;
       width: 31px !important;
 
-      &:not(.search-enabled)::before {
+      &::before {
         content: '\f0d7';
         @at-root #{$tasks-and-assignments} & {
           padding-left: 2px;
         }
-      }
-
-      &.search-enabled::before {
-        content: '\f002';
       }
 
       @at-root #{$bootstrap-namespace} & {
@@ -285,15 +290,6 @@
   .select2-result-label {
     padding: 5px 10px !important;
     color: $gray-light;
-    clear: both;
-
-    &::before {
-      @extend %ui-select-icon;
-      content: '\f007';
-      float: left;
-      height: 35px !important;
-      margin-right: 10px;
-    }
   }
 
   .select2-highlighted {
@@ -339,20 +335,12 @@
         @extend %ui-select-no-background;
         @extend %ui-select-font-size;
         color: $gray-light;
-        padding-left: 5px !important;
-        width: 22px !important;
+        padding-left: 13px !important;
+        width: 26px !important;
         height: 30px;
         top: 0 !important;
         pointer-events: none;
         position: absolute;
-      }
-
-      &:not(.search-enabled)::before {
-        content: '\f0d7';
-      }
-
-      &.search-enabled::before {
-        content: '\f002';
       }
     }
 
@@ -360,13 +348,22 @@
       border-color: $gray-light !important;
       padding-left: 0 !important;
 
+      .select2-choices::before {
+        content: '\f0d7';
+      }
+
       .select2-input {
         cursor: pointer;
-        padding: 0 0 0 10px !important;
+        padding: 0 0 0 5px !important;
       }
     }
 
     &.open {
+      .select2-choices::before {
+        content: '\f002';
+        padding-right: 15px;
+      }
+
       .ui-select-search {
         border: 0 !important;
         margin: 0 !important;
