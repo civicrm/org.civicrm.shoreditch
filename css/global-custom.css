@@ -1,0 +1,3242 @@
+@charset "UTF-8";
+.fa-0_5x {
+  font-size: 9px;
+  font-weight: 300;
+}
+
+.fa-1x {
+  font-size: 13px;
+}
+
+.fa-color-primary {
+  color: #3ab1c9;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/open-sans/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/open-sans/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/open-sans/OpenSans-Semibold-webfont.eot");
+  src: url("../fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/OpenSans-Semibold-webfont.woff") format("woff"), url("../fonts/open-sans/OpenSans-Semibold-webfont.ttf") format("truetype"), url("../fonts/open-sans/OpenSans-Semibold-webfont.svg#open_sanssemibold") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/open-sans/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/open-sans/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/open-sans/OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/open-sans/OpenSans-Italic-webfont.eot");
+  src: url("../fonts/open-sans/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/OpenSans-Italic-webfont.woff") format("woff"), url("../fonts/open-sans/OpenSans-Italic-webfont.ttf") format("truetype"), url("../fonts/open-sans/OpenSans-Italic-webfont.svg#open_sansitalic") format("svg");
+}
+
+.btn, .crm-container .crm-button input.crm-form-submit,
+.crm-container .crm-button.crm-i-button,
+.crm-container .crm-hover-button,
+.crm-container .ui-dialog-buttonset .ui-button,
+.crm-container a.button,
+.crm-container a.button:link,
+.crm-container a.button:visited,
+.crm-container input[type=button], .crm-container .crm-search-form-block > a,
+.crm-container .crm-search-form-block > span {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 4px 12px;
+  font-size: 13px;
+  line-height: 1.53846;
+  border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn:focus, .crm-container .crm-button input.crm-form-submit:focus,
+.crm-container .crm-button.crm-i-button:focus,
+.crm-container .crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset .ui-button:focus,
+.crm-container a.button:focus,
+.crm-container input[type=button]:focus, .crm-container .crm-search-form-block > a:focus,
+.crm-container .crm-search-form-block > span:focus, .btn.focus, .crm-container .crm-button input.focus.crm-form-submit,
+.crm-container .focus.crm-button.crm-i-button,
+.crm-container .focus.crm-hover-button,
+.crm-container .ui-dialog-buttonset .focus.ui-button,
+.crm-container a.focus.button,
+.crm-container input.focus[type=button], .crm-container .crm-search-form-block > a.focus,
+.crm-container .crm-search-form-block > span.focus, .btn:active:focus, .crm-container .crm-button input.crm-form-submit:active:focus,
+.crm-container .crm-button.crm-i-button:active:focus,
+.crm-container .crm-hover-button:active:focus,
+.crm-container .ui-dialog-buttonset .ui-button:active:focus,
+.crm-container a.button:active:focus,
+.crm-container input[type=button]:active:focus, .crm-container .crm-search-form-block > a:active:focus,
+.crm-container .crm-search-form-block > span:active:focus, .btn:active.focus, .crm-container .crm-button input.crm-form-submit:active.focus,
+.crm-container .crm-button.crm-i-button:active.focus,
+.crm-container .crm-hover-button:active.focus,
+.crm-container .ui-dialog-buttonset .ui-button:active.focus,
+.crm-container a.button:active.focus,
+.crm-container input[type=button]:active.focus, .crm-container .crm-search-form-block > a:active.focus,
+.crm-container .crm-search-form-block > span:active.focus, .btn.active:focus, .crm-container .crm-button input.active.crm-form-submit:focus,
+.crm-container .active.crm-button.crm-i-button:focus,
+.crm-container .active.crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset .active.ui-button:focus,
+.crm-container a.active.button:focus,
+.crm-container input.active[type=button]:focus, .crm-container .crm-search-form-block > a.active:focus,
+.crm-container .crm-search-form-block > span.active:focus, .btn.active.focus, .crm-container .crm-button input.active.focus.crm-form-submit,
+.crm-container .active.focus.crm-button.crm-i-button,
+.crm-container .active.focus.crm-hover-button,
+.crm-container .ui-dialog-buttonset .active.focus.ui-button,
+.crm-container a.active.focus.button,
+.crm-container input.active.focus[type=button], .crm-container .crm-search-form-block > a.active.focus,
+.crm-container .crm-search-form-block > span.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover, .crm-container .crm-button input.crm-form-submit:hover,
+.crm-container .crm-button.crm-i-button:hover,
+.crm-container .crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset .ui-button:hover,
+.crm-container a.button:hover,
+.crm-container input[type=button]:hover, .crm-container .crm-search-form-block > a:hover,
+.crm-container .crm-search-form-block > span:hover, .btn:focus, .crm-container .crm-button input.crm-form-submit:focus,
+.crm-container .crm-button.crm-i-button:focus,
+.crm-container .crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset .ui-button:focus,
+.crm-container a.button:focus,
+.crm-container input[type=button]:focus, .crm-container .crm-search-form-block > a:focus,
+.crm-container .crm-search-form-block > span:focus, .btn.focus, .crm-container .crm-button input.focus.crm-form-submit,
+.crm-container .focus.crm-button.crm-i-button,
+.crm-container .focus.crm-hover-button,
+.crm-container .ui-dialog-buttonset .focus.ui-button,
+.crm-container a.focus.button,
+.crm-container input.focus[type=button], .crm-container .crm-search-form-block > a.focus,
+.crm-container .crm-search-form-block > span.focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.btn:active, .crm-container .crm-button input.crm-form-submit:active,
+.crm-container .crm-button.crm-i-button:active,
+.crm-container .crm-hover-button:active,
+.crm-container .ui-dialog-buttonset .ui-button:active,
+.crm-container a.button:active,
+.crm-container input[type=button]:active, .crm-container .crm-search-form-block > a:active,
+.crm-container .crm-search-form-block > span:active, .btn.active, .crm-container .crm-button input.active.crm-form-submit,
+.crm-container .active.crm-button.crm-i-button,
+.crm-container .active.crm-hover-button,
+.crm-container .ui-dialog-buttonset .active.ui-button,
+.crm-container a.active.button,
+.crm-container input.active[type=button], .crm-container .crm-search-form-block > a.active,
+.crm-container .crm-search-form-block > span.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn.disabled, .crm-container .crm-button input.disabled.crm-form-submit,
+.crm-container .disabled.crm-button.crm-i-button,
+.crm-container .disabled.crm-hover-button,
+.crm-container .ui-dialog-buttonset .disabled.ui-button,
+.crm-container a.disabled.button,
+.crm-container input.disabled[type=button], .crm-container .crm-search-form-block > a.disabled,
+.crm-container .crm-search-form-block > span.disabled, .btn[disabled], .crm-container .crm-button input[disabled].crm-form-submit,
+.crm-container [disabled].crm-button.crm-i-button,
+.crm-container [disabled].crm-hover-button,
+.crm-container .ui-dialog-buttonset [disabled].ui-button,
+.crm-container a[disabled].button,
+.crm-container input[disabled][type=button], .crm-container .crm-search-form-block > a[disabled],
+.crm-container .crm-search-form-block > span[disabled],
+fieldset[disabled] .btn,
+fieldset[disabled] .crm-container .crm-button input.crm-form-submit, .crm-container .crm-button
+fieldset[disabled] input.crm-form-submit,
+fieldset[disabled]
+.crm-container .crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] .crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container .crm-hover-button,
+.crm-container
+fieldset[disabled] .crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .ui-button,
+fieldset[disabled]
+.crm-container a.button,
+.crm-container
+fieldset[disabled] a.button,
+fieldset[disabled]
+.crm-container input[type=button],
+.crm-container
+fieldset[disabled] input[type=button],
+fieldset[disabled] .crm-container .crm-search-form-block > a, .crm-container
+fieldset[disabled] .crm-search-form-block > a,
+fieldset[disabled]
+.crm-container .crm-search-form-block > span,
+.crm-container
+fieldset[disabled] .crm-search-form-block > span {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+a.btn.disabled,
+.crm-container a.disabled.crm-button.crm-i-button,
+.crm-container a.disabled.crm-hover-button,
+.crm-container .ui-dialog-buttonset a.disabled.ui-button,
+.crm-container a.disabled.button, .crm-container .crm-search-form-block > a.disabled,
+fieldset[disabled] a.btn,
+fieldset[disabled]
+.crm-container a.crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] a.crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container a.crm-hover-button,
+.crm-container
+fieldset[disabled] a.crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset a.ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] a.ui-button,
+fieldset[disabled]
+.crm-container a.button,
+.crm-container
+fieldset[disabled] a.button,
+fieldset[disabled] .crm-container .crm-search-form-block > a, .crm-container
+fieldset[disabled] .crm-search-form-block > a {
+  pointer-events: none;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-default:focus, .btn-default.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #bfbfbf;
+}
+
+.btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+
+.btn-default:active, .btn-default.active,
+.open > .btn-default.dropdown-toggle {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #e0e0e0;
+}
+
+.btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus,
+.open > .btn-default.dropdown-toggle:hover,
+.open > .btn-default.dropdown-toggle:focus,
+.open > .btn-default.dropdown-toggle.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #bfbfbf;
+}
+
+.btn-default:active, .btn-default.active,
+.open > .btn-default.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-default.disabled, .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus, .btn-default[disabled]:active, .btn-default[disabled].active,
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-default:hover,
+fieldset[disabled] .btn-default:focus,
+fieldset[disabled] .btn-default.focus,
+fieldset[disabled] .btn-default:active,
+fieldset[disabled] .btn-default.active {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-primary, .crm-container .crm-button input[value~='Save'].crm-form-submit,
+.crm-container [value~='Save'].crm-button.crm-i-button,
+.crm-container [value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button,
+.crm-container a[value~='Save'].button,
+.crm-container input[value~='Save'][type=button], .crm-container .crm-button input[value~='Search'].crm-form-submit,
+.crm-container [value~='Search'].crm-button.crm-i-button,
+.crm-container [value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button,
+.crm-container a[value~='Search'].button,
+.crm-container input[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save'] {
+  color: #fff;
+  background-color: #3ab1c9;
+  border-color: #32a1b7;
+}
+
+.btn-primary:focus, .crm-container .crm-button input[value~='Save'].crm-form-submit:focus,
+.crm-container [value~='Save'].crm-button.crm-i-button:focus,
+.crm-container [value~='Save'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:focus,
+.crm-container a[value~='Save'].button:focus,
+.crm-container input[value~='Save'][type=button]:focus, .crm-container .crm-button input[value~='Search'].crm-form-submit:focus,
+.crm-container [value~='Search'].crm-button.crm-i-button:focus,
+.crm-container [value~='Search'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:focus,
+.crm-container a[value~='Search'].button:focus,
+.crm-container input[value~='Search'][type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:focus, .btn-primary.focus, .crm-container .crm-button input.focus[value~='Save'].crm-form-submit,
+.crm-container .focus[value~='Save'].crm-button.crm-i-button,
+.crm-container .focus[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .focus[value~='Save'].ui-button,
+.crm-container a.focus[value~='Save'].button,
+.crm-container input.focus[value~='Save'][type=button], .crm-container .crm-button input.focus[value~='Search'].crm-form-submit,
+.crm-container .focus[value~='Search'].crm-button.crm-i-button,
+.crm-container .focus[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .focus[value~='Search'].ui-button,
+.crm-container a.focus[value~='Search'].button,
+.crm-container input.focus[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .focus[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .focus[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .focus[value~='Save'] {
+  color: #fff;
+  background-color: #2d8fa3;
+  border-color: #174953;
+}
+
+.btn-primary:hover, .crm-container .crm-button input[value~='Save'].crm-form-submit:hover,
+.crm-container [value~='Save'].crm-button.crm-i-button:hover,
+.crm-container [value~='Save'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:hover,
+.crm-container a[value~='Save'].button:hover,
+.crm-container input[value~='Save'][type=button]:hover, .crm-container .crm-button input[value~='Search'].crm-form-submit:hover,
+.crm-container [value~='Search'].crm-button.crm-i-button:hover,
+.crm-container [value~='Search'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:hover,
+.crm-container a[value~='Search'].button:hover,
+.crm-container input[value~='Search'][type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:hover, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:hover,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:hover {
+  color: #fff;
+  background-color: #2d8fa3;
+  border-color: #257787;
+}
+
+.btn-primary:active, .crm-container .crm-button input[value~='Save'].crm-form-submit:active,
+.crm-container [value~='Save'].crm-button.crm-i-button:active,
+.crm-container [value~='Save'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:active,
+.crm-container a[value~='Save'].button:active,
+.crm-container input[value~='Save'][type=button]:active, .crm-container .crm-button input[value~='Search'].crm-form-submit:active,
+.crm-container [value~='Search'].crm-button.crm-i-button:active,
+.crm-container [value~='Search'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:active,
+.crm-container a[value~='Search'].button:active,
+.crm-container input[value~='Search'][type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:active, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:active,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:active, .btn-primary.active, .crm-container .crm-button input.active[value~='Save'].crm-form-submit,
+.crm-container .active[value~='Save'].crm-button.crm-i-button,
+.crm-container .active[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .active[value~='Save'].ui-button,
+.crm-container a.active[value~='Save'].button,
+.crm-container input.active[value~='Save'][type=button], .crm-container .crm-button input.active[value~='Search'].crm-form-submit,
+.crm-container .active[value~='Search'].crm-button.crm-i-button,
+.crm-container .active[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .active[value~='Search'].ui-button,
+.crm-container a.active[value~='Search'].button,
+.crm-container input.active[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active[value~='Save'],
+.open > .btn-primary.dropdown-toggle, .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Save'].crm-form-submit,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-button.crm-i-button,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Save'].ui-button,
+.crm-container
+.open > a.dropdown-toggle[value~='Save'].button,
+.crm-container
+.open > input.dropdown-toggle[value~='Save'][type=button], .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Search'].crm-form-submit,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-button.crm-i-button,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Search'].ui-button,
+.crm-container
+.open > a.dropdown-toggle[value~='Search'].button,
+.crm-container
+.open > input.dropdown-toggle[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle[value~='Save'] {
+  color: #fff;
+  background-color: #2d8fa3;
+  border-color: #257787;
+}
+
+.btn-primary:active:hover, .crm-container .crm-button input[value~='Save'].crm-form-submit:active:hover,
+.crm-container [value~='Save'].crm-button.crm-i-button:active:hover,
+.crm-container [value~='Save'].crm-hover-button:active:hover,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:active:hover,
+.crm-container a[value~='Save'].button:active:hover,
+.crm-container input[value~='Save'][type=button]:active:hover, .crm-container .crm-button input[value~='Search'].crm-form-submit:active:hover,
+.crm-container [value~='Search'].crm-button.crm-i-button:active:hover,
+.crm-container [value~='Search'].crm-hover-button:active:hover,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:active:hover,
+.crm-container a[value~='Search'].button:active:hover,
+.crm-container input[value~='Search'][type=button]:active:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:active:hover, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:active:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:active:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:active:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:active:hover,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:active:hover,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:active:hover,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:active:hover, .btn-primary:active:focus, .crm-container .crm-button input[value~='Save'].crm-form-submit:active:focus,
+.crm-container [value~='Save'].crm-button.crm-i-button:active:focus,
+.crm-container [value~='Save'].crm-hover-button:active:focus,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:active:focus,
+.crm-container a[value~='Save'].button:active:focus,
+.crm-container input[value~='Save'][type=button]:active:focus, .crm-container .crm-button input[value~='Search'].crm-form-submit:active:focus,
+.crm-container [value~='Search'].crm-button.crm-i-button:active:focus,
+.crm-container [value~='Search'].crm-hover-button:active:focus,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:active:focus,
+.crm-container a[value~='Search'].button:active:focus,
+.crm-container input[value~='Search'][type=button]:active:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:active:focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:active:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:active:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:active:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:active:focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:active:focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:active:focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:active:focus, .btn-primary:active.focus, .crm-container .crm-button input[value~='Save'].crm-form-submit:active.focus,
+.crm-container [value~='Save'].crm-button.crm-i-button:active.focus,
+.crm-container [value~='Save'].crm-hover-button:active.focus,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:active.focus,
+.crm-container a[value~='Save'].button:active.focus,
+.crm-container input[value~='Save'][type=button]:active.focus, .crm-container .crm-button input[value~='Search'].crm-form-submit:active.focus,
+.crm-container [value~='Search'].crm-button.crm-i-button:active.focus,
+.crm-container [value~='Search'].crm-hover-button:active.focus,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:active.focus,
+.crm-container a[value~='Search'].button:active.focus,
+.crm-container input[value~='Search'][type=button]:active.focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:active.focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:active.focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:active.focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:active.focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:active.focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:active.focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:active.focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:active.focus, .btn-primary.active:hover, .crm-container .crm-button input.active[value~='Save'].crm-form-submit:hover,
+.crm-container .active[value~='Save'].crm-button.crm-i-button:hover,
+.crm-container .active[value~='Save'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset .active[value~='Save'].ui-button:hover,
+.crm-container a.active[value~='Save'].button:hover,
+.crm-container input.active[value~='Save'][type=button]:hover, .crm-container .crm-button input.active[value~='Search'].crm-form-submit:hover,
+.crm-container .active[value~='Search'].crm-button.crm-i-button:hover,
+.crm-container .active[value~='Search'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset .active[value~='Search'].ui-button:hover,
+.crm-container a.active[value~='Search'].button:hover,
+.crm-container input.active[value~='Search'][type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active[value~='Save']:hover, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active[value~='Save']:hover,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active[value~='Save']:hover, .btn-primary.active:focus, .crm-container .crm-button input.active[value~='Save'].crm-form-submit:focus,
+.crm-container .active[value~='Save'].crm-button.crm-i-button:focus,
+.crm-container .active[value~='Save'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset .active[value~='Save'].ui-button:focus,
+.crm-container a.active[value~='Save'].button:focus,
+.crm-container input.active[value~='Save'][type=button]:focus, .crm-container .crm-button input.active[value~='Search'].crm-form-submit:focus,
+.crm-container .active[value~='Search'].crm-button.crm-i-button:focus,
+.crm-container .active[value~='Search'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset .active[value~='Search'].ui-button:focus,
+.crm-container a.active[value~='Search'].button:focus,
+.crm-container input.active[value~='Search'][type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active[value~='Save']:focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active[value~='Save']:focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active[value~='Save']:focus, .btn-primary.active.focus, .crm-container .crm-button input.active.focus[value~='Save'].crm-form-submit,
+.crm-container .active.focus[value~='Save'].crm-button.crm-i-button,
+.crm-container .active.focus[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .active.focus[value~='Save'].ui-button,
+.crm-container a.active.focus[value~='Save'].button,
+.crm-container input.active.focus[value~='Save'][type=button], .crm-container .crm-button input.active.focus[value~='Search'].crm-form-submit,
+.crm-container .active.focus[value~='Search'].crm-button.crm-i-button,
+.crm-container .active.focus[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .active.focus[value~='Search'].ui-button,
+.crm-container a.active.focus[value~='Search'].button,
+.crm-container input.active.focus[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active.focus[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active.focus[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active.focus[value~='Save'],
+.open > .btn-primary.dropdown-toggle:hover, .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Save'].crm-form-submit:hover,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-button.crm-i-button:hover,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Save'].ui-button:hover,
+.crm-container
+.open > a.dropdown-toggle[value~='Save'].button:hover,
+.crm-container
+.open > input.dropdown-toggle[value~='Save'][type=button]:hover, .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Search'].crm-form-submit:hover,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-button.crm-i-button:hover,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Search'].ui-button:hover,
+.crm-container
+.open > a.dropdown-toggle[value~='Search'].button:hover,
+.crm-container
+.open > input.dropdown-toggle[value~='Search'][type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle[value~='Save']:hover, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle[value~='Save']:hover,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle[value~='Save']:hover,
+.open > .btn-primary.dropdown-toggle:focus, .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Save'].crm-form-submit:focus,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-button.crm-i-button:focus,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Save'].ui-button:focus,
+.crm-container
+.open > a.dropdown-toggle[value~='Save'].button:focus,
+.crm-container
+.open > input.dropdown-toggle[value~='Save'][type=button]:focus, .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Search'].crm-form-submit:focus,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-button.crm-i-button:focus,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Search'].ui-button:focus,
+.crm-container
+.open > a.dropdown-toggle[value~='Search'].button:focus,
+.crm-container
+.open > input.dropdown-toggle[value~='Search'][type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle[value~='Save']:focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle[value~='Save']:focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle[value~='Save']:focus,
+.open > .btn-primary.dropdown-toggle.focus, .crm-container .crm-button
+.open > input.dropdown-toggle.focus[value~='Save'].crm-form-submit,
+.crm-container
+.open > .dropdown-toggle.focus[value~='Save'].crm-button.crm-i-button,
+.crm-container
+.open > .dropdown-toggle.focus[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle.focus[value~='Save'].ui-button,
+.crm-container
+.open > a.dropdown-toggle.focus[value~='Save'].button,
+.crm-container
+.open > input.dropdown-toggle.focus[value~='Save'][type=button], .crm-container .crm-button
+.open > input.dropdown-toggle.focus[value~='Search'].crm-form-submit,
+.crm-container
+.open > .dropdown-toggle.focus[value~='Search'].crm-button.crm-i-button,
+.crm-container
+.open > .dropdown-toggle.focus[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle.focus[value~='Search'].ui-button,
+.crm-container
+.open > a.dropdown-toggle.focus[value~='Search'].button,
+.crm-container
+.open > input.dropdown-toggle.focus[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle.focus[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle.focus[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle.focus[value~='Save'] {
+  color: #fff;
+  background-color: #257787;
+  border-color: #174953;
+}
+
+.btn-primary:active, .crm-container .crm-button input[value~='Save'].crm-form-submit:active,
+.crm-container [value~='Save'].crm-button.crm-i-button:active,
+.crm-container [value~='Save'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:active,
+.crm-container a[value~='Save'].button:active,
+.crm-container input[value~='Save'][type=button]:active, .crm-container .crm-button input[value~='Search'].crm-form-submit:active,
+.crm-container [value~='Search'].crm-button.crm-i-button:active,
+.crm-container [value~='Search'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:active,
+.crm-container a[value~='Search'].button:active,
+.crm-container input[value~='Search'][type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:active, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:active,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:active, .btn-primary.active, .crm-container .crm-button input.active[value~='Save'].crm-form-submit,
+.crm-container .active[value~='Save'].crm-button.crm-i-button,
+.crm-container .active[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .active[value~='Save'].ui-button,
+.crm-container a.active[value~='Save'].button,
+.crm-container input.active[value~='Save'][type=button], .crm-container .crm-button input.active[value~='Search'].crm-form-submit,
+.crm-container .active[value~='Search'].crm-button.crm-i-button,
+.crm-container .active[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .active[value~='Search'].ui-button,
+.crm-container a.active[value~='Search'].button,
+.crm-container input.active[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active[value~='Save'],
+.open > .btn-primary.dropdown-toggle, .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Save'].crm-form-submit,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-button.crm-i-button,
+.crm-container
+.open > .dropdown-toggle[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Save'].ui-button,
+.crm-container
+.open > a.dropdown-toggle[value~='Save'].button,
+.crm-container
+.open > input.dropdown-toggle[value~='Save'][type=button], .crm-container .crm-button
+.open > input.dropdown-toggle[value~='Search'].crm-form-submit,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-button.crm-i-button,
+.crm-container
+.open > .dropdown-toggle[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle[value~='Search'].ui-button,
+.crm-container
+.open > a.dropdown-toggle[value~='Search'].button,
+.crm-container
+.open > input.dropdown-toggle[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle[value~='Save'] {
+  background-image: none;
+}
+
+.btn-primary.disabled, .crm-container .crm-button input.disabled[value~='Save'].crm-form-submit,
+.crm-container .disabled[value~='Save'].crm-button.crm-i-button,
+.crm-container .disabled[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .disabled[value~='Save'].ui-button,
+.crm-container a.disabled[value~='Save'].button,
+.crm-container input.disabled[value~='Save'][type=button], .crm-container .crm-button input.disabled[value~='Search'].crm-form-submit,
+.crm-container .disabled[value~='Search'].crm-button.crm-i-button,
+.crm-container .disabled[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .disabled[value~='Search'].ui-button,
+.crm-container a.disabled[value~='Search'].button,
+.crm-container input.disabled[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled[value~='Save'], .btn-primary.disabled:hover, .crm-container .crm-button input.disabled[value~='Save'].crm-form-submit:hover,
+.crm-container .disabled[value~='Save'].crm-button.crm-i-button:hover,
+.crm-container .disabled[value~='Save'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset .disabled[value~='Save'].ui-button:hover,
+.crm-container a.disabled[value~='Save'].button:hover,
+.crm-container input.disabled[value~='Save'][type=button]:hover, .crm-container .crm-button input.disabled[value~='Search'].crm-form-submit:hover,
+.crm-container .disabled[value~='Search'].crm-button.crm-i-button:hover,
+.crm-container .disabled[value~='Search'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset .disabled[value~='Search'].ui-button:hover,
+.crm-container a.disabled[value~='Search'].button:hover,
+.crm-container input.disabled[value~='Search'][type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled[value~='Save']:hover, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled[value~='Save']:hover,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled[value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled[value~='Save']:hover, .btn-primary.disabled:focus, .crm-container .crm-button input.disabled[value~='Save'].crm-form-submit:focus,
+.crm-container .disabled[value~='Save'].crm-button.crm-i-button:focus,
+.crm-container .disabled[value~='Save'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset .disabled[value~='Save'].ui-button:focus,
+.crm-container a.disabled[value~='Save'].button:focus,
+.crm-container input.disabled[value~='Save'][type=button]:focus, .crm-container .crm-button input.disabled[value~='Search'].crm-form-submit:focus,
+.crm-container .disabled[value~='Search'].crm-button.crm-i-button:focus,
+.crm-container .disabled[value~='Search'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset .disabled[value~='Search'].ui-button:focus,
+.crm-container a.disabled[value~='Search'].button:focus,
+.crm-container input.disabled[value~='Search'][type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled[value~='Save']:focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled[value~='Save']:focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled[value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled[value~='Save']:focus, .btn-primary.disabled.focus, .crm-container .crm-button input.disabled.focus[value~='Save'].crm-form-submit,
+.crm-container .disabled.focus[value~='Save'].crm-button.crm-i-button,
+.crm-container .disabled.focus[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .disabled.focus[value~='Save'].ui-button,
+.crm-container a.disabled.focus[value~='Save'].button,
+.crm-container input.disabled.focus[value~='Save'][type=button], .crm-container .crm-button input.disabled.focus[value~='Search'].crm-form-submit,
+.crm-container .disabled.focus[value~='Search'].crm-button.crm-i-button,
+.crm-container .disabled.focus[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .disabled.focus[value~='Search'].ui-button,
+.crm-container a.disabled.focus[value~='Search'].button,
+.crm-container input.disabled.focus[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled.focus[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled.focus[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled.focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled.focus[value~='Save'], .btn-primary.disabled:active, .crm-container .crm-button input.disabled[value~='Save'].crm-form-submit:active,
+.crm-container .disabled[value~='Save'].crm-button.crm-i-button:active,
+.crm-container .disabled[value~='Save'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset .disabled[value~='Save'].ui-button:active,
+.crm-container a.disabled[value~='Save'].button:active,
+.crm-container input.disabled[value~='Save'][type=button]:active, .crm-container .crm-button input.disabled[value~='Search'].crm-form-submit:active,
+.crm-container .disabled[value~='Search'].crm-button.crm-i-button:active,
+.crm-container .disabled[value~='Search'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset .disabled[value~='Search'].ui-button:active,
+.crm-container a.disabled[value~='Search'].button:active,
+.crm-container input.disabled[value~='Search'][type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled[value~='Save']:active, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled[value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled[value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled[value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled[value~='Save']:active,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled[value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled[value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled[value~='Save']:active, .btn-primary.disabled.active, .crm-container .crm-button input.disabled.active[value~='Save'].crm-form-submit,
+.crm-container .disabled.active[value~='Save'].crm-button.crm-i-button,
+.crm-container .disabled.active[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .disabled.active[value~='Save'].ui-button,
+.crm-container a.disabled.active[value~='Save'].button,
+.crm-container input.disabled.active[value~='Save'][type=button], .crm-container .crm-button input.disabled.active[value~='Search'].crm-form-submit,
+.crm-container .disabled.active[value~='Search'].crm-button.crm-i-button,
+.crm-container .disabled.active[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset .disabled.active[value~='Search'].ui-button,
+.crm-container a.disabled.active[value~='Search'].button,
+.crm-container input.disabled.active[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled.active[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled.active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled.active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled.active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled.active[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled.active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled.active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled.active[value~='Save'], .btn-primary[disabled], .crm-container .crm-button input[disabled][value~='Save'].crm-form-submit,
+.crm-container [disabled][value~='Save'].crm-button.crm-i-button,
+.crm-container [disabled][value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [disabled][value~='Save'].ui-button,
+.crm-container a[disabled][value~='Save'].button,
+.crm-container input[disabled][value~='Save'][type=button], .crm-container .crm-button input[disabled][value~='Search'].crm-form-submit,
+.crm-container [disabled][value~='Search'].crm-button.crm-i-button,
+.crm-container [disabled][value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [disabled][value~='Search'].ui-button,
+.crm-container a[disabled][value~='Search'].button,
+.crm-container input[disabled][value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled][value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled][value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled][value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled][value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled][value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled][value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled][value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled][value~='Save'], .btn-primary[disabled]:hover, .crm-container .crm-button input[disabled][value~='Save'].crm-form-submit:hover,
+.crm-container [disabled][value~='Save'].crm-button.crm-i-button:hover,
+.crm-container [disabled][value~='Save'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset [disabled][value~='Save'].ui-button:hover,
+.crm-container a[disabled][value~='Save'].button:hover,
+.crm-container input[disabled][value~='Save'][type=button]:hover, .crm-container .crm-button input[disabled][value~='Search'].crm-form-submit:hover,
+.crm-container [disabled][value~='Search'].crm-button.crm-i-button:hover,
+.crm-container [disabled][value~='Search'].crm-hover-button:hover,
+.crm-container .ui-dialog-buttonset [disabled][value~='Search'].ui-button:hover,
+.crm-container a[disabled][value~='Search'].button:hover,
+.crm-container input[disabled][value~='Search'][type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled][value~='Save']:hover, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled][value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled][value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled][value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled][value~='Save']:hover,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled][value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled][value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled][value~='Save']:hover, .btn-primary[disabled]:focus, .crm-container .crm-button input[disabled][value~='Save'].crm-form-submit:focus,
+.crm-container [disabled][value~='Save'].crm-button.crm-i-button:focus,
+.crm-container [disabled][value~='Save'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset [disabled][value~='Save'].ui-button:focus,
+.crm-container a[disabled][value~='Save'].button:focus,
+.crm-container input[disabled][value~='Save'][type=button]:focus, .crm-container .crm-button input[disabled][value~='Search'].crm-form-submit:focus,
+.crm-container [disabled][value~='Search'].crm-button.crm-i-button:focus,
+.crm-container [disabled][value~='Search'].crm-hover-button:focus,
+.crm-container .ui-dialog-buttonset [disabled][value~='Search'].ui-button:focus,
+.crm-container a[disabled][value~='Search'].button:focus,
+.crm-container input[disabled][value~='Search'][type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled][value~='Save']:focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled][value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled][value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled][value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled][value~='Save']:focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled][value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled][value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled][value~='Save']:focus, .btn-primary[disabled].focus, .crm-container .crm-button input[disabled].focus[value~='Save'].crm-form-submit,
+.crm-container [disabled].focus[value~='Save'].crm-button.crm-i-button,
+.crm-container [disabled].focus[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [disabled].focus[value~='Save'].ui-button,
+.crm-container a[disabled].focus[value~='Save'].button,
+.crm-container input[disabled].focus[value~='Save'][type=button], .crm-container .crm-button input[disabled].focus[value~='Search'].crm-form-submit,
+.crm-container [disabled].focus[value~='Search'].crm-button.crm-i-button,
+.crm-container [disabled].focus[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [disabled].focus[value~='Search'].ui-button,
+.crm-container a[disabled].focus[value~='Search'].button,
+.crm-container input[disabled].focus[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled].focus[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled].focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled].focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled].focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled].focus[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled].focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled].focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled].focus[value~='Save'], .btn-primary[disabled]:active, .crm-container .crm-button input[disabled][value~='Save'].crm-form-submit:active,
+.crm-container [disabled][value~='Save'].crm-button.crm-i-button:active,
+.crm-container [disabled][value~='Save'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset [disabled][value~='Save'].ui-button:active,
+.crm-container a[disabled][value~='Save'].button:active,
+.crm-container input[disabled][value~='Save'][type=button]:active, .crm-container .crm-button input[disabled][value~='Search'].crm-form-submit:active,
+.crm-container [disabled][value~='Search'].crm-button.crm-i-button:active,
+.crm-container [disabled][value~='Search'].crm-hover-button:active,
+.crm-container .ui-dialog-buttonset [disabled][value~='Search'].ui-button:active,
+.crm-container a[disabled][value~='Search'].button:active,
+.crm-container input[disabled][value~='Search'][type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled][value~='Save']:active, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled][value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled][value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled][value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled][value~='Save']:active,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled][value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled][value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled][value~='Save']:active, .btn-primary[disabled].active, .crm-container .crm-button input[disabled].active[value~='Save'].crm-form-submit,
+.crm-container [disabled].active[value~='Save'].crm-button.crm-i-button,
+.crm-container [disabled].active[value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [disabled].active[value~='Save'].ui-button,
+.crm-container a[disabled].active[value~='Save'].button,
+.crm-container input[disabled].active[value~='Save'][type=button], .crm-container .crm-button input[disabled].active[value~='Search'].crm-form-submit,
+.crm-container [disabled].active[value~='Search'].crm-button.crm-i-button,
+.crm-container [disabled].active[value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [disabled].active[value~='Search'].ui-button,
+.crm-container a[disabled].active[value~='Search'].button,
+.crm-container input[disabled].active[value~='Search'][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled].active[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled].active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled].active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled].active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled].active[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled].active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled].active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled].active[value~='Save'],
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .crm-container .crm-button input[value~='Save'].crm-form-submit, .crm-container .crm-button
+fieldset[disabled] input[value~='Save'].crm-form-submit,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-hover-button,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Save'].ui-button,
+fieldset[disabled]
+.crm-container a[value~='Save'].button,
+.crm-container
+fieldset[disabled] a[value~='Save'].button,
+fieldset[disabled]
+.crm-container input[value~='Save'][type=button],
+.crm-container
+fieldset[disabled] input[value~='Save'][type=button],
+fieldset[disabled] .crm-container .crm-button input[value~='Search'].crm-form-submit, .crm-container .crm-button
+fieldset[disabled] input[value~='Search'].crm-form-submit,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-hover-button,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Search'].ui-button,
+fieldset[disabled]
+.crm-container a[value~='Search'].button,
+.crm-container
+fieldset[disabled] a[value~='Search'].button,
+fieldset[disabled]
+.crm-container input[value~='Search'][type=button],
+.crm-container
+fieldset[disabled] input[value~='Search'][type=button],
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save'], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] [value~='Save'],
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] [value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] [value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] [value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] [value~='Save'],
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] [value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] [value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] [value~='Save'],
+fieldset[disabled] .btn-primary:hover,
+fieldset[disabled] .crm-container .crm-button input[value~='Save'].crm-form-submit:hover, .crm-container .crm-button
+fieldset[disabled] input[value~='Save'].crm-form-submit:hover,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-button.crm-i-button:hover,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-button.crm-i-button:hover,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-hover-button:hover,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-hover-button:hover,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:hover,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Save'].ui-button:hover,
+fieldset[disabled]
+.crm-container a[value~='Save'].button:hover,
+.crm-container
+fieldset[disabled] a[value~='Save'].button:hover,
+fieldset[disabled]
+.crm-container input[value~='Save'][type=button]:hover,
+.crm-container
+fieldset[disabled] input[value~='Save'][type=button]:hover,
+fieldset[disabled] .crm-container .crm-button input[value~='Search'].crm-form-submit:hover, .crm-container .crm-button
+fieldset[disabled] input[value~='Search'].crm-form-submit:hover,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-button.crm-i-button:hover,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-button.crm-i-button:hover,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-hover-button:hover,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-hover-button:hover,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:hover,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Search'].ui-button:hover,
+fieldset[disabled]
+.crm-container a[value~='Search'].button:hover,
+.crm-container
+fieldset[disabled] a[value~='Search'].button:hover,
+fieldset[disabled]
+.crm-container input[value~='Search'][type=button]:hover,
+.crm-container
+fieldset[disabled] input[value~='Search'][type=button]:hover,
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:hover, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:hover,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:hover,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] [value~='Save']:hover,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .crm-container .crm-button input[value~='Save'].crm-form-submit:focus, .crm-container .crm-button
+fieldset[disabled] input[value~='Save'].crm-form-submit:focus,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-button.crm-i-button:focus,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-button.crm-i-button:focus,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-hover-button:focus,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-hover-button:focus,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:focus,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Save'].ui-button:focus,
+fieldset[disabled]
+.crm-container a[value~='Save'].button:focus,
+.crm-container
+fieldset[disabled] a[value~='Save'].button:focus,
+fieldset[disabled]
+.crm-container input[value~='Save'][type=button]:focus,
+.crm-container
+fieldset[disabled] input[value~='Save'][type=button]:focus,
+fieldset[disabled] .crm-container .crm-button input[value~='Search'].crm-form-submit:focus, .crm-container .crm-button
+fieldset[disabled] input[value~='Search'].crm-form-submit:focus,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-button.crm-i-button:focus,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-button.crm-i-button:focus,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-hover-button:focus,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-hover-button:focus,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:focus,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Search'].ui-button:focus,
+fieldset[disabled]
+.crm-container a[value~='Search'].button:focus,
+.crm-container
+fieldset[disabled] a[value~='Search'].button:focus,
+fieldset[disabled]
+.crm-container input[value~='Search'][type=button]:focus,
+.crm-container
+fieldset[disabled] input[value~='Search'][type=button]:focus,
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:focus, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:focus,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:focus,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] [value~='Save']:focus,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .crm-container .crm-button input.focus[value~='Save'].crm-form-submit, .crm-container .crm-button
+fieldset[disabled] input.focus[value~='Save'].crm-form-submit,
+fieldset[disabled]
+.crm-container .focus[value~='Save'].crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] .focus[value~='Save'].crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container .focus[value~='Save'].crm-hover-button,
+.crm-container
+fieldset[disabled] .focus[value~='Save'].crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .focus[value~='Save'].ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .focus[value~='Save'].ui-button,
+fieldset[disabled]
+.crm-container a.focus[value~='Save'].button,
+.crm-container
+fieldset[disabled] a.focus[value~='Save'].button,
+fieldset[disabled]
+.crm-container input.focus[value~='Save'][type=button],
+.crm-container
+fieldset[disabled] input.focus[value~='Save'][type=button],
+fieldset[disabled] .crm-container .crm-button input.focus[value~='Search'].crm-form-submit, .crm-container .crm-button
+fieldset[disabled] input.focus[value~='Search'].crm-form-submit,
+fieldset[disabled]
+.crm-container .focus[value~='Search'].crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] .focus[value~='Search'].crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container .focus[value~='Search'].crm-hover-button,
+.crm-container
+fieldset[disabled] .focus[value~='Search'].crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .focus[value~='Search'].ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .focus[value~='Search'].ui-button,
+fieldset[disabled]
+.crm-container a.focus[value~='Search'].button,
+.crm-container
+fieldset[disabled] a.focus[value~='Search'].button,
+fieldset[disabled]
+.crm-container input.focus[value~='Search'][type=button],
+.crm-container
+fieldset[disabled] input.focus[value~='Search'][type=button],
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .focus[value~='Save'], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .focus[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .focus[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .focus[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] .focus[value~='Save'],
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .crm-container .crm-button input[value~='Save'].crm-form-submit:active, .crm-container .crm-button
+fieldset[disabled] input[value~='Save'].crm-form-submit:active,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-button.crm-i-button:active,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-button.crm-i-button:active,
+fieldset[disabled]
+.crm-container [value~='Save'].crm-hover-button:active,
+.crm-container
+fieldset[disabled] [value~='Save'].crm-hover-button:active,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button:active,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Save'].ui-button:active,
+fieldset[disabled]
+.crm-container a[value~='Save'].button:active,
+.crm-container
+fieldset[disabled] a[value~='Save'].button:active,
+fieldset[disabled]
+.crm-container input[value~='Save'][type=button]:active,
+.crm-container
+fieldset[disabled] input[value~='Save'][type=button]:active,
+fieldset[disabled] .crm-container .crm-button input[value~='Search'].crm-form-submit:active, .crm-container .crm-button
+fieldset[disabled] input[value~='Search'].crm-form-submit:active,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-button.crm-i-button:active,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-button.crm-i-button:active,
+fieldset[disabled]
+.crm-container [value~='Search'].crm-hover-button:active,
+.crm-container
+fieldset[disabled] [value~='Search'].crm-hover-button:active,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button:active,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] [value~='Search'].ui-button:active,
+fieldset[disabled]
+.crm-container a[value~='Search'].button:active,
+.crm-container
+fieldset[disabled] a[value~='Search'].button:active,
+fieldset[disabled]
+.crm-container input[value~='Search'][type=button]:active,
+.crm-container
+fieldset[disabled] input[value~='Search'][type=button]:active,
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save']:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save']:active, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save']:active,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save']:active,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] [value~='Save']:active,
+fieldset[disabled] .btn-primary.active,
+fieldset[disabled] .crm-container .crm-button input.active[value~='Save'].crm-form-submit, .crm-container .crm-button
+fieldset[disabled] input.active[value~='Save'].crm-form-submit,
+fieldset[disabled]
+.crm-container .active[value~='Save'].crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] .active[value~='Save'].crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container .active[value~='Save'].crm-hover-button,
+.crm-container
+fieldset[disabled] .active[value~='Save'].crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .active[value~='Save'].ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .active[value~='Save'].ui-button,
+fieldset[disabled]
+.crm-container a.active[value~='Save'].button,
+.crm-container
+fieldset[disabled] a.active[value~='Save'].button,
+fieldset[disabled]
+.crm-container input.active[value~='Save'][type=button],
+.crm-container
+fieldset[disabled] input.active[value~='Save'][type=button],
+fieldset[disabled] .crm-container .crm-button input.active[value~='Search'].crm-form-submit, .crm-container .crm-button
+fieldset[disabled] input.active[value~='Search'].crm-form-submit,
+fieldset[disabled]
+.crm-container .active[value~='Search'].crm-button.crm-i-button,
+.crm-container
+fieldset[disabled] .active[value~='Search'].crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container .active[value~='Search'].crm-hover-button,
+.crm-container
+fieldset[disabled] .active[value~='Search'].crm-hover-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .active[value~='Search'].ui-button,
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .active[value~='Search'].ui-button,
+fieldset[disabled]
+.crm-container a.active[value~='Search'].button,
+.crm-container
+fieldset[disabled] a.active[value~='Search'].button,
+fieldset[disabled]
+.crm-container input.active[value~='Search'][type=button],
+.crm-container
+fieldset[disabled] input.active[value~='Search'][type=button],
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active[value~='Save'], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] .active[value~='Save'],
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active[value~='Save'], .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] .active[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] .active[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] .active[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] .active[value~='Save'],
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active[value~='Save'],
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] .active[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] .active[value~='Save'],
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active[value~='Save'],
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] .active[value~='Save'] {
+  background-color: #3ab1c9;
+  border-color: #32a1b7;
+}
+
+.btn-primary .badge, .crm-container .crm-button input[value~='Save'].crm-form-submit .badge,
+.crm-container [value~='Save'].crm-button.crm-i-button .badge,
+.crm-container [value~='Save'].crm-hover-button .badge,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button .badge,
+.crm-container a[value~='Save'].button .badge,
+.crm-container input[value~='Save'][type=button] .badge, .crm-container .crm-button input[value~='Search'].crm-form-submit .badge,
+.crm-container [value~='Search'].crm-button.crm-i-button .badge,
+.crm-container [value~='Search'].crm-hover-button .badge,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button .badge,
+.crm-container a[value~='Search'].button .badge,
+.crm-container input[value~='Search'][type=button] .badge, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [value~='Save'] .badge, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [value~='Save'] .badge,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [value~='Save'] .badge,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [value~='Save'] .badge,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [value~='Save'] .badge,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [value~='Save'] .badge,
+.crm-container .crm-form-block > .crm-submit-buttons a.button [value~='Save'] .badge,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [value~='Save'] .badge {
+  color: #3ab1c9;
+  background-color: #fff;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #8EC68A;
+  border-color: #7dbe79;
+}
+
+.btn-success:focus, .btn-success.focus {
+  color: #fff;
+  background-color: #6db568;
+  border-color: #407b3c;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #6db568;
+  border-color: #57a852;
+}
+
+.btn-success:active, .btn-success.active,
+.open > .btn-success.dropdown-toggle {
+  color: #fff;
+  background-color: #6db568;
+  border-color: #57a852;
+}
+
+.btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus,
+.open > .btn-success.dropdown-toggle:hover,
+.open > .btn-success.dropdown-toggle:focus,
+.open > .btn-success.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #57a852;
+  border-color: #407b3c;
+}
+
+.btn-success:active, .btn-success.active,
+.open > .btn-success.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-success.disabled, .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success.disabled:active, .btn-success.disabled.active, .btn-success[disabled], .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, .btn-success[disabled]:active, .btn-success[disabled].active,
+fieldset[disabled] .btn-success,
+fieldset[disabled] .btn-success:hover,
+fieldset[disabled] .btn-success:focus,
+fieldset[disabled] .btn-success.focus,
+fieldset[disabled] .btn-success:active,
+fieldset[disabled] .btn-success.active {
+  background-color: #8EC68A;
+  border-color: #7dbe79;
+}
+
+.btn-success .badge {
+  color: #8EC68A;
+  background-color: #fff;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+.btn-info:focus, .btn-info.focus {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+
+.btn-info:active, .btn-info.active,
+.open > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+
+.btn-info:active:hover, .btn-info:active:focus, .btn-info:active.focus, .btn-info.active:hover, .btn-info.active:focus, .btn-info.active.focus,
+.open > .btn-info.dropdown-toggle:hover,
+.open > .btn-info.dropdown-toggle:focus,
+.open > .btn-info.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+
+.btn-info:active, .btn-info.active,
+.open > .btn-info.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active,
+fieldset[disabled] .btn-info,
+fieldset[disabled] .btn-info:hover,
+fieldset[disabled] .btn-info:focus,
+fieldset[disabled] .btn-info.focus,
+fieldset[disabled] .btn-info:active,
+fieldset[disabled] .btn-info.active {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+.btn-info .badge {
+  color: #5bc0de;
+  background-color: #fff;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+.btn-warning:focus, .btn-warning.focus {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+
+.btn-warning:hover {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+
+.btn-warning:active, .btn-warning.active,
+.open > .btn-warning.dropdown-toggle {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+
+.btn-warning:active:hover, .btn-warning:active:focus, .btn-warning:active.focus, .btn-warning.active:hover, .btn-warning.active:focus, .btn-warning.active.focus,
+.open > .btn-warning.dropdown-toggle:hover,
+.open > .btn-warning.dropdown-toggle:focus,
+.open > .btn-warning.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+
+.btn-warning:active, .btn-warning.active,
+.open > .btn-warning.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-warning.disabled, .btn-warning.disabled:hover, .btn-warning.disabled:focus, .btn-warning.disabled.focus, .btn-warning.disabled:active, .btn-warning.disabled.active, .btn-warning[disabled], .btn-warning[disabled]:hover, .btn-warning[disabled]:focus, .btn-warning[disabled].focus, .btn-warning[disabled]:active, .btn-warning[disabled].active,
+fieldset[disabled] .btn-warning,
+fieldset[disabled] .btn-warning:hover,
+fieldset[disabled] .btn-warning:focus,
+fieldset[disabled] .btn-warning.focus,
+fieldset[disabled] .btn-warning:active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+.btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #fff;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #E48282;
+  border-color: #df6d6d;
+}
+
+.btn-danger:focus, .btn-danger.focus {
+  color: #fff;
+  background-color: #db5858;
+  border-color: #a92424;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #db5858;
+  border-color: #d53b3b;
+}
+
+.btn-danger:active, .btn-danger.active,
+.open > .btn-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #db5858;
+  border-color: #d53b3b;
+}
+
+.btn-danger:active:hover, .btn-danger:active:focus, .btn-danger:active.focus, .btn-danger.active:hover, .btn-danger.active:focus, .btn-danger.active.focus,
+.open > .btn-danger.dropdown-toggle:hover,
+.open > .btn-danger.dropdown-toggle:focus,
+.open > .btn-danger.dropdown-toggle.focus {
+  color: #fff;
+  background-color: #d53b3b;
+  border-color: #a92424;
+}
+
+.btn-danger:active, .btn-danger.active,
+.open > .btn-danger.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-danger.disabled, .btn-danger.disabled:hover, .btn-danger.disabled:focus, .btn-danger.disabled.focus, .btn-danger.disabled:active, .btn-danger.disabled.active, .btn-danger[disabled], .btn-danger[disabled]:hover, .btn-danger[disabled]:focus, .btn-danger[disabled].focus, .btn-danger[disabled]:active, .btn-danger[disabled].active,
+fieldset[disabled] .btn-danger,
+fieldset[disabled] .btn-danger:hover,
+fieldset[disabled] .btn-danger:focus,
+fieldset[disabled] .btn-danger.focus,
+fieldset[disabled] .btn-danger:active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #E48282;
+  border-color: #df6d6d;
+}
+
+.btn-danger .badge {
+  color: #E48282;
+  background-color: #fff;
+}
+
+.btn-link {
+  color: #3ab1c9;
+  font-weight: normal;
+  border-radius: 0;
+}
+
+.btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+  border-color: transparent;
+}
+
+.btn-link:hover, .btn-link:focus {
+  color: #277e8f;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.btn-link[disabled]:hover, .btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:hover,
+fieldset[disabled] .btn-link:focus {
+  color: #777777;
+  text-decoration: none;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 17px;
+  line-height: 1.33333;
+  border-radius: 6px;
+}
+
+.btn-sm {
+  padding: 2px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+
+.btn, .crm-container .crm-button input.crm-form-submit,
+.crm-container .crm-button.crm-i-button,
+.crm-container .crm-hover-button,
+.crm-container .ui-dialog-buttonset .ui-button,
+.crm-container a.button,
+.crm-container a.button:link,
+.crm-container a.button:visited,
+.crm-container input[type=button], .crm-container .crm-search-form-block > a,
+.crm-container .crm-search-form-block > span {
+  padding: 7px 12px;
+}
+
+.btn:active, .crm-container .crm-button input.crm-form-submit:active,
+.crm-container .crm-button.crm-i-button:active,
+.crm-container .crm-hover-button:active,
+.crm-container .ui-dialog-buttonset .ui-button:active,
+.crm-container a.button:active,
+.crm-container input[type=button]:active, .crm-container .crm-search-form-block > a:active,
+.crm-container .crm-search-form-block > span:active, .btn.active, .crm-container .crm-button input.active.crm-form-submit,
+.crm-container .active.crm-button.crm-i-button,
+.crm-container .active.crm-hover-button,
+.crm-container .ui-dialog-buttonset .active.ui-button,
+.crm-container a.active.button,
+.crm-container input.active[type=button], .crm-container .crm-search-form-block > a.active,
+.crm-container .crm-search-form-block > span.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+}
+
+.btn-sm {
+  font-weight: 400;
+  padding: 5px 12px;
+}
+
+.btn-xs {
+  padding: 1px 5px;
+}
+
+.btn-default {
+  box-shadow: 0px 4px 15px -2px rgba(0, 0, 0, 0.19);
+  font-weight: 600;
+}
+
+.btn-lg {
+  padding: 10px 16px;
+  font-size: 13px;
+  line-height: 1.53846;
+  border-radius: 2px;
+}
+
+.btn-block + .btn-block {
+  margin-top: 10px;
+}
+
+.btn-secondary, .crm-container #actions .crm-button input.crm-form-submit, .crm-container .crm-button #actions input.crm-form-submit,
+.crm-container #actions .crm-button.crm-i-button,
+.crm-container #actions .crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .ui-button,
+.crm-container .ui-dialog-buttonset #actions .ui-button,
+.crm-container #actions a.button,
+.crm-container #actions input[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :not([value~='Save']), .crm-container .crm-search-form-block > a,
+.crm-container .crm-search-form-block > span {
+  color: #ffffff;
+  background-color: #727e8a;
+  border-color: #535a67;
+}
+
+.btn-secondary:focus, .crm-container #actions .crm-button input.crm-form-submit:focus, .crm-container .crm-button #actions input.crm-form-submit:focus,
+.crm-container #actions .crm-button.crm-i-button:focus,
+.crm-container #actions .crm-hover-button:focus,
+.crm-container #actions .ui-dialog-buttonset .ui-button:focus,
+.crm-container .ui-dialog-buttonset #actions .ui-button:focus,
+.crm-container #actions a.button:focus,
+.crm-container #actions input[type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :focus:not([value~='Save']), .crm-container .crm-search-form-block > a:focus,
+.crm-container .crm-search-form-block > span:focus, .btn-secondary.focus, .crm-container #actions .crm-button input.focus.crm-form-submit, .crm-container .crm-button #actions input.focus.crm-form-submit,
+.crm-container #actions .focus.crm-button.crm-i-button,
+.crm-container #actions .focus.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .focus.ui-button,
+.crm-container .ui-dialog-buttonset #actions .focus.ui-button,
+.crm-container #actions a.focus.button,
+.crm-container #actions input.focus[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .focus:not([value~='Save']), .crm-container .crm-search-form-block > a.focus,
+.crm-container .crm-search-form-block > span.focus {
+  color: #ffffff;
+  background-color: #5b656e;
+  border-color: #1a1c20;
+}
+
+.btn-secondary:hover, .crm-container #actions .crm-button input.crm-form-submit:hover, .crm-container .crm-button #actions input.crm-form-submit:hover,
+.crm-container #actions .crm-button.crm-i-button:hover,
+.crm-container #actions .crm-hover-button:hover,
+.crm-container #actions .ui-dialog-buttonset .ui-button:hover,
+.crm-container .ui-dialog-buttonset #actions .ui-button:hover,
+.crm-container #actions a.button:hover,
+.crm-container #actions input[type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :hover:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :hover:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :hover:not([value~='Save']), .crm-container .crm-search-form-block > a:hover,
+.crm-container .crm-search-form-block > span:hover {
+  color: #ffffff;
+  background-color: #5b656e;
+  border-color: #383c45;
+}
+
+.btn-secondary:active, .crm-container #actions .crm-button input.crm-form-submit:active, .crm-container .crm-button #actions input.crm-form-submit:active,
+.crm-container #actions .crm-button.crm-i-button:active,
+.crm-container #actions .crm-hover-button:active,
+.crm-container #actions .ui-dialog-buttonset .ui-button:active,
+.crm-container .ui-dialog-buttonset #actions .ui-button:active,
+.crm-container #actions a.button:active,
+.crm-container #actions input[type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :active:not([value~='Save']), .crm-container .crm-search-form-block > a:active,
+.crm-container .crm-search-form-block > span:active, .btn-secondary.active, .crm-container #actions .crm-button input.active.crm-form-submit, .crm-container .crm-button #actions input.active.crm-form-submit,
+.crm-container #actions .active.crm-button.crm-i-button,
+.crm-container #actions .active.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .active.ui-button,
+.crm-container .ui-dialog-buttonset #actions .active.ui-button,
+.crm-container #actions a.active.button,
+.crm-container #actions input.active[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active:not([value~='Save']), .crm-container .crm-search-form-block > a.active,
+.crm-container .crm-search-form-block > span.active,
+.open > .btn-secondary.dropdown-toggle, .crm-container #actions .crm-button
+.open > input.dropdown-toggle.crm-form-submit, .crm-container .crm-button #actions
+.open > input.dropdown-toggle.crm-form-submit,
+.crm-container #actions
+.open > .dropdown-toggle.crm-button.crm-i-button,
+.crm-container #actions
+.open > .dropdown-toggle.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset
+.open > .dropdown-toggle.ui-button,
+.crm-container .ui-dialog-buttonset #actions
+.open > .dropdown-toggle.ui-button,
+.crm-container #actions
+.open > a.dropdown-toggle.button,
+.crm-container #actions
+.open > input.dropdown-toggle[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle:not([value~='Save']), .crm-container
+.crm-search-form-block.open > a.dropdown-toggle,
+.crm-container
+.crm-search-form-block.open > span.dropdown-toggle {
+  color: #ffffff;
+  background-color: #5b656e;
+  border-color: #383c45;
+}
+
+.btn-secondary:active:hover, .crm-container #actions .crm-button input.crm-form-submit:active:hover, .crm-container .crm-button #actions input.crm-form-submit:active:hover,
+.crm-container #actions .crm-button.crm-i-button:active:hover,
+.crm-container #actions .crm-hover-button:active:hover,
+.crm-container #actions .ui-dialog-buttonset .ui-button:active:hover,
+.crm-container .ui-dialog-buttonset #actions .ui-button:active:hover,
+.crm-container #actions a.button:active:hover,
+.crm-container #actions input[type=button]:active:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :active:hover:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :active:hover:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :active:hover:not([value~='Save']), .crm-container .crm-search-form-block > a:active:hover,
+.crm-container .crm-search-form-block > span:active:hover, .btn-secondary:active:focus, .crm-container #actions .crm-button input.crm-form-submit:active:focus, .crm-container .crm-button #actions input.crm-form-submit:active:focus,
+.crm-container #actions .crm-button.crm-i-button:active:focus,
+.crm-container #actions .crm-hover-button:active:focus,
+.crm-container #actions .ui-dialog-buttonset .ui-button:active:focus,
+.crm-container .ui-dialog-buttonset #actions .ui-button:active:focus,
+.crm-container #actions a.button:active:focus,
+.crm-container #actions input[type=button]:active:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :active:focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :active:focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :active:focus:not([value~='Save']), .crm-container .crm-search-form-block > a:active:focus,
+.crm-container .crm-search-form-block > span:active:focus, .btn-secondary:active.focus, .crm-container #actions .crm-button input.crm-form-submit:active.focus, .crm-container .crm-button #actions input.crm-form-submit:active.focus,
+.crm-container #actions .crm-button.crm-i-button:active.focus,
+.crm-container #actions .crm-hover-button:active.focus,
+.crm-container #actions .ui-dialog-buttonset .ui-button:active.focus,
+.crm-container .ui-dialog-buttonset #actions .ui-button:active.focus,
+.crm-container #actions a.button:active.focus,
+.crm-container #actions input[type=button]:active.focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :active.focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :active.focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :active.focus:not([value~='Save']), .crm-container .crm-search-form-block > a:active.focus,
+.crm-container .crm-search-form-block > span:active.focus, .btn-secondary.active:hover, .crm-container #actions .crm-button input.active.crm-form-submit:hover, .crm-container .crm-button #actions input.active.crm-form-submit:hover,
+.crm-container #actions .active.crm-button.crm-i-button:hover,
+.crm-container #actions .active.crm-hover-button:hover,
+.crm-container #actions .ui-dialog-buttonset .active.ui-button:hover,
+.crm-container .ui-dialog-buttonset #actions .active.ui-button:hover,
+.crm-container #actions a.active.button:hover,
+.crm-container #actions input.active[type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active:hover:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active:hover:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active:hover:not([value~='Save']), .crm-container .crm-search-form-block > a.active:hover,
+.crm-container .crm-search-form-block > span.active:hover, .btn-secondary.active:focus, .crm-container #actions .crm-button input.active.crm-form-submit:focus, .crm-container .crm-button #actions input.active.crm-form-submit:focus,
+.crm-container #actions .active.crm-button.crm-i-button:focus,
+.crm-container #actions .active.crm-hover-button:focus,
+.crm-container #actions .ui-dialog-buttonset .active.ui-button:focus,
+.crm-container .ui-dialog-buttonset #actions .active.ui-button:focus,
+.crm-container #actions a.active.button:focus,
+.crm-container #actions input.active[type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active:focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active:focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active:focus:not([value~='Save']), .crm-container .crm-search-form-block > a.active:focus,
+.crm-container .crm-search-form-block > span.active:focus, .btn-secondary.active.focus, .crm-container #actions .crm-button input.active.focus.crm-form-submit, .crm-container .crm-button #actions input.active.focus.crm-form-submit,
+.crm-container #actions .active.focus.crm-button.crm-i-button,
+.crm-container #actions .active.focus.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .active.focus.ui-button,
+.crm-container .ui-dialog-buttonset #actions .active.focus.ui-button,
+.crm-container #actions a.active.focus.button,
+.crm-container #actions input.active.focus[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active.focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active.focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active.focus:not([value~='Save']), .crm-container .crm-search-form-block > a.active.focus,
+.crm-container .crm-search-form-block > span.active.focus,
+.open > .btn-secondary.dropdown-toggle:hover, .crm-container #actions .crm-button
+.open > input.dropdown-toggle.crm-form-submit:hover, .crm-container .crm-button #actions
+.open > input.dropdown-toggle.crm-form-submit:hover,
+.crm-container #actions
+.open > .dropdown-toggle.crm-button.crm-i-button:hover,
+.crm-container #actions
+.open > .dropdown-toggle.crm-hover-button:hover,
+.crm-container #actions .ui-dialog-buttonset
+.open > .dropdown-toggle.ui-button:hover,
+.crm-container .ui-dialog-buttonset #actions
+.open > .dropdown-toggle.ui-button:hover,
+.crm-container #actions
+.open > a.dropdown-toggle.button:hover,
+.crm-container #actions
+.open > input.dropdown-toggle[type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle:hover:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle:hover:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle:hover:not([value~='Save']), .crm-container
+.crm-search-form-block.open > a.dropdown-toggle:hover,
+.crm-container
+.crm-search-form-block.open > span.dropdown-toggle:hover,
+.open > .btn-secondary.dropdown-toggle:focus, .crm-container #actions .crm-button
+.open > input.dropdown-toggle.crm-form-submit:focus, .crm-container .crm-button #actions
+.open > input.dropdown-toggle.crm-form-submit:focus,
+.crm-container #actions
+.open > .dropdown-toggle.crm-button.crm-i-button:focus,
+.crm-container #actions
+.open > .dropdown-toggle.crm-hover-button:focus,
+.crm-container #actions .ui-dialog-buttonset
+.open > .dropdown-toggle.ui-button:focus,
+.crm-container .ui-dialog-buttonset #actions
+.open > .dropdown-toggle.ui-button:focus,
+.crm-container #actions
+.open > a.dropdown-toggle.button:focus,
+.crm-container #actions
+.open > input.dropdown-toggle[type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle:focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle:focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle:focus:not([value~='Save']), .crm-container
+.crm-search-form-block.open > a.dropdown-toggle:focus,
+.crm-container
+.crm-search-form-block.open > span.dropdown-toggle:focus,
+.open > .btn-secondary.dropdown-toggle.focus, .crm-container #actions .crm-button
+.open > input.dropdown-toggle.focus.crm-form-submit, .crm-container .crm-button #actions
+.open > input.dropdown-toggle.focus.crm-form-submit,
+.crm-container #actions
+.open > .dropdown-toggle.focus.crm-button.crm-i-button,
+.crm-container #actions
+.open > .dropdown-toggle.focus.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset
+.open > .dropdown-toggle.focus.ui-button,
+.crm-container .ui-dialog-buttonset #actions
+.open > .dropdown-toggle.focus.ui-button,
+.crm-container #actions
+.open > a.dropdown-toggle.focus.button,
+.crm-container #actions
+.open > input.dropdown-toggle.focus[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle.focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle.focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle.focus:not([value~='Save']), .crm-container
+.crm-search-form-block.open > a.dropdown-toggle.focus,
+.crm-container
+.crm-search-form-block.open > span.dropdown-toggle.focus {
+  color: #ffffff;
+  background-color: #4b535b;
+  border-color: #1a1c20;
+}
+
+.btn-secondary:active, .crm-container #actions .crm-button input.crm-form-submit:active, .crm-container .crm-button #actions input.crm-form-submit:active,
+.crm-container #actions .crm-button.crm-i-button:active,
+.crm-container #actions .crm-hover-button:active,
+.crm-container #actions .ui-dialog-buttonset .ui-button:active,
+.crm-container .ui-dialog-buttonset #actions .ui-button:active,
+.crm-container #actions a.button:active,
+.crm-container #actions input[type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :active:not([value~='Save']), .crm-container .crm-search-form-block > a:active,
+.crm-container .crm-search-form-block > span:active, .btn-secondary.active, .crm-container #actions .crm-button input.active.crm-form-submit, .crm-container .crm-button #actions input.active.crm-form-submit,
+.crm-container #actions .active.crm-button.crm-i-button,
+.crm-container #actions .active.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .active.ui-button,
+.crm-container .ui-dialog-buttonset #actions .active.ui-button,
+.crm-container #actions a.active.button,
+.crm-container #actions input.active[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active:not([value~='Save']), .crm-container .crm-search-form-block > a.active,
+.crm-container .crm-search-form-block > span.active,
+.open > .btn-secondary.dropdown-toggle, .crm-container #actions .crm-button
+.open > input.dropdown-toggle.crm-form-submit, .crm-container .crm-button #actions
+.open > input.dropdown-toggle.crm-form-submit,
+.crm-container #actions
+.open > .dropdown-toggle.crm-button.crm-i-button,
+.crm-container #actions
+.open > .dropdown-toggle.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset
+.open > .dropdown-toggle.ui-button,
+.crm-container .ui-dialog-buttonset #actions
+.open > .dropdown-toggle.ui-button,
+.crm-container #actions
+.open > a.dropdown-toggle.button,
+.crm-container #actions
+.open > input.dropdown-toggle[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+.open > .dropdown-toggle:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+.open > .dropdown-toggle:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+.open > .dropdown-toggle:not([value~='Save']), .crm-container
+.crm-search-form-block.open > a.dropdown-toggle,
+.crm-container
+.crm-search-form-block.open > span.dropdown-toggle {
+  background-image: none;
+}
+
+.btn-secondary.disabled, .crm-container #actions .crm-button input.disabled.crm-form-submit, .crm-container .crm-button #actions input.disabled.crm-form-submit,
+.crm-container #actions .disabled.crm-button.crm-i-button,
+.crm-container #actions .disabled.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .disabled.ui-button,
+.crm-container .ui-dialog-buttonset #actions .disabled.ui-button,
+.crm-container #actions a.disabled.button,
+.crm-container #actions input.disabled[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled:not([value~='Save']), .crm-container .crm-search-form-block > a.disabled,
+.crm-container .crm-search-form-block > span.disabled, .btn-secondary.disabled:hover, .crm-container #actions .crm-button input.disabled.crm-form-submit:hover, .crm-container .crm-button #actions input.disabled.crm-form-submit:hover,
+.crm-container #actions .disabled.crm-button.crm-i-button:hover,
+.crm-container #actions .disabled.crm-hover-button:hover,
+.crm-container #actions .ui-dialog-buttonset .disabled.ui-button:hover,
+.crm-container .ui-dialog-buttonset #actions .disabled.ui-button:hover,
+.crm-container #actions a.disabled.button:hover,
+.crm-container #actions input.disabled[type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled:hover:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled:hover:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled:hover:not([value~='Save']), .crm-container .crm-search-form-block > a.disabled:hover,
+.crm-container .crm-search-form-block > span.disabled:hover, .btn-secondary.disabled:focus, .crm-container #actions .crm-button input.disabled.crm-form-submit:focus, .crm-container .crm-button #actions input.disabled.crm-form-submit:focus,
+.crm-container #actions .disabled.crm-button.crm-i-button:focus,
+.crm-container #actions .disabled.crm-hover-button:focus,
+.crm-container #actions .ui-dialog-buttonset .disabled.ui-button:focus,
+.crm-container .ui-dialog-buttonset #actions .disabled.ui-button:focus,
+.crm-container #actions a.disabled.button:focus,
+.crm-container #actions input.disabled[type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled:focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled:focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled:focus:not([value~='Save']), .crm-container .crm-search-form-block > a.disabled:focus,
+.crm-container .crm-search-form-block > span.disabled:focus, .btn-secondary.disabled.focus, .crm-container #actions .crm-button input.disabled.focus.crm-form-submit, .crm-container .crm-button #actions input.disabled.focus.crm-form-submit,
+.crm-container #actions .disabled.focus.crm-button.crm-i-button,
+.crm-container #actions .disabled.focus.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .disabled.focus.ui-button,
+.crm-container .ui-dialog-buttonset #actions .disabled.focus.ui-button,
+.crm-container #actions a.disabled.focus.button,
+.crm-container #actions input.disabled.focus[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled.focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled.focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled.focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled.focus:not([value~='Save']), .crm-container .crm-search-form-block > a.disabled.focus,
+.crm-container .crm-search-form-block > span.disabled.focus, .btn-secondary.disabled:active, .crm-container #actions .crm-button input.disabled.crm-form-submit:active, .crm-container .crm-button #actions input.disabled.crm-form-submit:active,
+.crm-container #actions .disabled.crm-button.crm-i-button:active,
+.crm-container #actions .disabled.crm-hover-button:active,
+.crm-container #actions .ui-dialog-buttonset .disabled.ui-button:active,
+.crm-container .ui-dialog-buttonset #actions .disabled.ui-button:active,
+.crm-container #actions a.disabled.button:active,
+.crm-container #actions input.disabled[type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled:active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled:active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled:active:not([value~='Save']), .crm-container .crm-search-form-block > a.disabled:active,
+.crm-container .crm-search-form-block > span.disabled:active, .btn-secondary.disabled.active, .crm-container #actions .crm-button input.disabled.active.crm-form-submit, .crm-container .crm-button #actions input.disabled.active.crm-form-submit,
+.crm-container #actions .disabled.active.crm-button.crm-i-button,
+.crm-container #actions .disabled.active.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset .disabled.active.ui-button,
+.crm-container .ui-dialog-buttonset #actions .disabled.active.ui-button,
+.crm-container #actions a.disabled.active.button,
+.crm-container #actions input.disabled.active[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .disabled.active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .disabled.active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .disabled.active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .disabled.active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .disabled.active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .disabled.active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button .disabled.active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .disabled.active:not([value~='Save']), .crm-container .crm-search-form-block > a.disabled.active,
+.crm-container .crm-search-form-block > span.disabled.active, .btn-secondary[disabled], .crm-container #actions .crm-button input[disabled].crm-form-submit, .crm-container .crm-button #actions input[disabled].crm-form-submit,
+.crm-container #actions [disabled].crm-button.crm-i-button,
+.crm-container #actions [disabled].crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset [disabled].ui-button,
+.crm-container .ui-dialog-buttonset #actions [disabled].ui-button,
+.crm-container #actions a[disabled].button,
+.crm-container #actions input[disabled][type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled]:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled]:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled]:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled]:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled]:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled]:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled]:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled]:not([value~='Save']), .crm-container .crm-search-form-block > a[disabled],
+.crm-container .crm-search-form-block > span[disabled], .btn-secondary[disabled]:hover, .crm-container #actions .crm-button input[disabled].crm-form-submit:hover, .crm-container .crm-button #actions input[disabled].crm-form-submit:hover,
+.crm-container #actions [disabled].crm-button.crm-i-button:hover,
+.crm-container #actions [disabled].crm-hover-button:hover,
+.crm-container #actions .ui-dialog-buttonset [disabled].ui-button:hover,
+.crm-container .ui-dialog-buttonset #actions [disabled].ui-button:hover,
+.crm-container #actions a[disabled].button:hover,
+.crm-container #actions input[disabled][type=button]:hover, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled]:hover:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled]:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled]:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled]:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled]:hover:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled]:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled]:hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled]:hover:not([value~='Save']), .crm-container .crm-search-form-block > a[disabled]:hover,
+.crm-container .crm-search-form-block > span[disabled]:hover, .btn-secondary[disabled]:focus, .crm-container #actions .crm-button input[disabled].crm-form-submit:focus, .crm-container .crm-button #actions input[disabled].crm-form-submit:focus,
+.crm-container #actions [disabled].crm-button.crm-i-button:focus,
+.crm-container #actions [disabled].crm-hover-button:focus,
+.crm-container #actions .ui-dialog-buttonset [disabled].ui-button:focus,
+.crm-container .ui-dialog-buttonset #actions [disabled].ui-button:focus,
+.crm-container #actions a[disabled].button:focus,
+.crm-container #actions input[disabled][type=button]:focus, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled]:focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled]:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled]:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled]:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled]:focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled]:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled]:focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled]:focus:not([value~='Save']), .crm-container .crm-search-form-block > a[disabled]:focus,
+.crm-container .crm-search-form-block > span[disabled]:focus, .btn-secondary[disabled].focus, .crm-container #actions .crm-button input[disabled].focus.crm-form-submit, .crm-container .crm-button #actions input[disabled].focus.crm-form-submit,
+.crm-container #actions [disabled].focus.crm-button.crm-i-button,
+.crm-container #actions [disabled].focus.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset [disabled].focus.ui-button,
+.crm-container .ui-dialog-buttonset #actions [disabled].focus.ui-button,
+.crm-container #actions a[disabled].focus.button,
+.crm-container #actions input[disabled].focus[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled].focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled].focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled].focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled].focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled].focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled].focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled].focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled].focus:not([value~='Save']), .crm-container .crm-search-form-block > a[disabled].focus,
+.crm-container .crm-search-form-block > span[disabled].focus, .btn-secondary[disabled]:active, .crm-container #actions .crm-button input[disabled].crm-form-submit:active, .crm-container .crm-button #actions input[disabled].crm-form-submit:active,
+.crm-container #actions [disabled].crm-button.crm-i-button:active,
+.crm-container #actions [disabled].crm-hover-button:active,
+.crm-container #actions .ui-dialog-buttonset [disabled].ui-button:active,
+.crm-container .ui-dialog-buttonset #actions [disabled].ui-button:active,
+.crm-container #actions a[disabled].button:active,
+.crm-container #actions input[disabled][type=button]:active, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled]:active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled]:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled]:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled]:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled]:active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled]:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled]:active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled]:active:not([value~='Save']), .crm-container .crm-search-form-block > a[disabled]:active,
+.crm-container .crm-search-form-block > span[disabled]:active, .btn-secondary[disabled].active, .crm-container #actions .crm-button input[disabled].active.crm-form-submit, .crm-container .crm-button #actions input[disabled].active.crm-form-submit,
+.crm-container #actions [disabled].active.crm-button.crm-i-button,
+.crm-container #actions [disabled].active.crm-hover-button,
+.crm-container #actions .ui-dialog-buttonset [disabled].active.ui-button,
+.crm-container .ui-dialog-buttonset #actions [disabled].active.ui-button,
+.crm-container #actions a[disabled].active.button,
+.crm-container #actions input[disabled].active[type=button], .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit [disabled].active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit [disabled].active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button [disabled].active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button [disabled].active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button [disabled].active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button [disabled].active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button [disabled].active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] [disabled].active:not([value~='Save']), .crm-container .crm-search-form-block > a[disabled].active,
+.crm-container .crm-search-form-block > span[disabled].active,
+fieldset[disabled] .btn-secondary,
+fieldset[disabled] .crm-container #actions .crm-button input.crm-form-submit, .crm-container #actions .crm-button
+fieldset[disabled] input.crm-form-submit,
+fieldset[disabled] .crm-container .crm-button #actions input.crm-form-submit, .crm-container .crm-button #actions
+fieldset[disabled] input.crm-form-submit,
+fieldset[disabled]
+.crm-container #actions .crm-button.crm-i-button,
+.crm-container #actions
+fieldset[disabled] .crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container #actions .crm-hover-button,
+.crm-container #actions
+fieldset[disabled] .crm-hover-button,
+fieldset[disabled]
+.crm-container #actions .ui-dialog-buttonset .ui-button,
+.crm-container #actions .ui-dialog-buttonset
+fieldset[disabled] .ui-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset #actions .ui-button,
+.crm-container .ui-dialog-buttonset #actions
+fieldset[disabled] .ui-button,
+fieldset[disabled]
+.crm-container #actions a.button,
+.crm-container #actions
+fieldset[disabled] a.button,
+fieldset[disabled]
+.crm-container #actions input[type=button],
+.crm-container #actions
+fieldset[disabled] input[type=button],
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :not([value~='Save']), .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] :not([value~='Save']),
+fieldset[disabled] .crm-container .crm-search-form-block > a, .crm-container
+fieldset[disabled] .crm-search-form-block > a,
+fieldset[disabled]
+.crm-container .crm-search-form-block > span,
+.crm-container
+fieldset[disabled] .crm-search-form-block > span,
+fieldset[disabled] .btn-secondary:hover,
+fieldset[disabled] .crm-container #actions .crm-button input.crm-form-submit:hover, .crm-container #actions .crm-button
+fieldset[disabled] input.crm-form-submit:hover,
+fieldset[disabled] .crm-container .crm-button #actions input.crm-form-submit:hover, .crm-container .crm-button #actions
+fieldset[disabled] input.crm-form-submit:hover,
+fieldset[disabled]
+.crm-container #actions .crm-button.crm-i-button:hover,
+.crm-container #actions
+fieldset[disabled] .crm-button.crm-i-button:hover,
+fieldset[disabled]
+.crm-container #actions .crm-hover-button:hover,
+.crm-container #actions
+fieldset[disabled] .crm-hover-button:hover,
+fieldset[disabled]
+.crm-container #actions .ui-dialog-buttonset .ui-button:hover,
+.crm-container #actions .ui-dialog-buttonset
+fieldset[disabled] .ui-button:hover,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset #actions .ui-button:hover,
+.crm-container .ui-dialog-buttonset #actions
+fieldset[disabled] .ui-button:hover,
+fieldset[disabled]
+.crm-container #actions a.button:hover,
+.crm-container #actions
+fieldset[disabled] a.button:hover,
+fieldset[disabled]
+.crm-container #actions input[type=button]:hover,
+.crm-container #actions
+fieldset[disabled] input[type=button]:hover,
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :hover:not([value~='Save']), .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :hover:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :hover:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :hover:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] :hover:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-search-form-block > a:hover, .crm-container
+fieldset[disabled] .crm-search-form-block > a:hover,
+fieldset[disabled]
+.crm-container .crm-search-form-block > span:hover,
+.crm-container
+fieldset[disabled] .crm-search-form-block > span:hover,
+fieldset[disabled] .btn-secondary:focus,
+fieldset[disabled] .crm-container #actions .crm-button input.crm-form-submit:focus, .crm-container #actions .crm-button
+fieldset[disabled] input.crm-form-submit:focus,
+fieldset[disabled] .crm-container .crm-button #actions input.crm-form-submit:focus, .crm-container .crm-button #actions
+fieldset[disabled] input.crm-form-submit:focus,
+fieldset[disabled]
+.crm-container #actions .crm-button.crm-i-button:focus,
+.crm-container #actions
+fieldset[disabled] .crm-button.crm-i-button:focus,
+fieldset[disabled]
+.crm-container #actions .crm-hover-button:focus,
+.crm-container #actions
+fieldset[disabled] .crm-hover-button:focus,
+fieldset[disabled]
+.crm-container #actions .ui-dialog-buttonset .ui-button:focus,
+.crm-container #actions .ui-dialog-buttonset
+fieldset[disabled] .ui-button:focus,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset #actions .ui-button:focus,
+.crm-container .ui-dialog-buttonset #actions
+fieldset[disabled] .ui-button:focus,
+fieldset[disabled]
+.crm-container #actions a.button:focus,
+.crm-container #actions
+fieldset[disabled] a.button:focus,
+fieldset[disabled]
+.crm-container #actions input[type=button]:focus,
+.crm-container #actions
+fieldset[disabled] input[type=button]:focus,
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :focus:not([value~='Save']), .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] :focus:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-search-form-block > a:focus, .crm-container
+fieldset[disabled] .crm-search-form-block > a:focus,
+fieldset[disabled]
+.crm-container .crm-search-form-block > span:focus,
+.crm-container
+fieldset[disabled] .crm-search-form-block > span:focus,
+fieldset[disabled] .btn-secondary.focus,
+fieldset[disabled] .crm-container #actions .crm-button input.focus.crm-form-submit, .crm-container #actions .crm-button
+fieldset[disabled] input.focus.crm-form-submit,
+fieldset[disabled] .crm-container .crm-button #actions input.focus.crm-form-submit, .crm-container .crm-button #actions
+fieldset[disabled] input.focus.crm-form-submit,
+fieldset[disabled]
+.crm-container #actions .focus.crm-button.crm-i-button,
+.crm-container #actions
+fieldset[disabled] .focus.crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container #actions .focus.crm-hover-button,
+.crm-container #actions
+fieldset[disabled] .focus.crm-hover-button,
+fieldset[disabled]
+.crm-container #actions .ui-dialog-buttonset .focus.ui-button,
+.crm-container #actions .ui-dialog-buttonset
+fieldset[disabled] .focus.ui-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset #actions .focus.ui-button,
+.crm-container .ui-dialog-buttonset #actions
+fieldset[disabled] .focus.ui-button,
+fieldset[disabled]
+.crm-container #actions a.focus.button,
+.crm-container #actions
+fieldset[disabled] a.focus.button,
+fieldset[disabled]
+.crm-container #actions input.focus[type=button],
+.crm-container #actions
+fieldset[disabled] input.focus[type=button],
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .focus:not([value~='Save']), .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .focus:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .focus:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .focus:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] .focus:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-search-form-block > a.focus, .crm-container
+fieldset[disabled] .crm-search-form-block > a.focus,
+fieldset[disabled]
+.crm-container .crm-search-form-block > span.focus,
+.crm-container
+fieldset[disabled] .crm-search-form-block > span.focus,
+fieldset[disabled] .btn-secondary:active,
+fieldset[disabled] .crm-container #actions .crm-button input.crm-form-submit:active, .crm-container #actions .crm-button
+fieldset[disabled] input.crm-form-submit:active,
+fieldset[disabled] .crm-container .crm-button #actions input.crm-form-submit:active, .crm-container .crm-button #actions
+fieldset[disabled] input.crm-form-submit:active,
+fieldset[disabled]
+.crm-container #actions .crm-button.crm-i-button:active,
+.crm-container #actions
+fieldset[disabled] .crm-button.crm-i-button:active,
+fieldset[disabled]
+.crm-container #actions .crm-hover-button:active,
+.crm-container #actions
+fieldset[disabled] .crm-hover-button:active,
+fieldset[disabled]
+.crm-container #actions .ui-dialog-buttonset .ui-button:active,
+.crm-container #actions .ui-dialog-buttonset
+fieldset[disabled] .ui-button:active,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset #actions .ui-button:active,
+.crm-container .ui-dialog-buttonset #actions
+fieldset[disabled] .ui-button:active,
+fieldset[disabled]
+.crm-container #actions a.button:active,
+.crm-container #actions
+fieldset[disabled] a.button:active,
+fieldset[disabled]
+.crm-container #actions input[type=button]:active,
+.crm-container #actions
+fieldset[disabled] input[type=button]:active,
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :active:not([value~='Save']), .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] :active:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-search-form-block > a:active, .crm-container
+fieldset[disabled] .crm-search-form-block > a:active,
+fieldset[disabled]
+.crm-container .crm-search-form-block > span:active,
+.crm-container
+fieldset[disabled] .crm-search-form-block > span:active,
+fieldset[disabled] .btn-secondary.active,
+fieldset[disabled] .crm-container #actions .crm-button input.active.crm-form-submit, .crm-container #actions .crm-button
+fieldset[disabled] input.active.crm-form-submit,
+fieldset[disabled] .crm-container .crm-button #actions input.active.crm-form-submit, .crm-container .crm-button #actions
+fieldset[disabled] input.active.crm-form-submit,
+fieldset[disabled]
+.crm-container #actions .active.crm-button.crm-i-button,
+.crm-container #actions
+fieldset[disabled] .active.crm-button.crm-i-button,
+fieldset[disabled]
+.crm-container #actions .active.crm-hover-button,
+.crm-container #actions
+fieldset[disabled] .active.crm-hover-button,
+fieldset[disabled]
+.crm-container #actions .ui-dialog-buttonset .active.ui-button,
+.crm-container #actions .ui-dialog-buttonset
+fieldset[disabled] .active.ui-button,
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset #actions .active.ui-button,
+.crm-container .ui-dialog-buttonset #actions
+fieldset[disabled] .active.ui-button,
+fieldset[disabled]
+.crm-container #actions a.active.button,
+.crm-container #actions
+fieldset[disabled] a.active.button,
+fieldset[disabled]
+.crm-container #actions input.active[type=button],
+.crm-container #actions
+fieldset[disabled] input.active[type=button],
+fieldset[disabled] .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit .active:not([value~='Save']), .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit .active:not([value~='Save']), .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button .active:not([value~='Save']),
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons a.button .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons a.button
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled]
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] .active:not([value~='Save']),
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button]
+fieldset[disabled] .active:not([value~='Save']),
+fieldset[disabled] .crm-container .crm-search-form-block > a.active, .crm-container
+fieldset[disabled] .crm-search-form-block > a.active,
+fieldset[disabled]
+.crm-container .crm-search-form-block > span.active,
+.crm-container
+fieldset[disabled] .crm-search-form-block > span.active {
+  background-color: #727e8a;
+  border-color: #535a67;
+}
+
+.btn-secondary .badge, .crm-container #actions .crm-button input.crm-form-submit .badge, .crm-container .crm-button #actions input.crm-form-submit .badge,
+.crm-container #actions .crm-button.crm-i-button .badge,
+.crm-container #actions .crm-hover-button .badge,
+.crm-container #actions .ui-dialog-buttonset .ui-button .badge,
+.crm-container .ui-dialog-buttonset #actions .ui-button .badge,
+.crm-container #actions a.button .badge,
+.crm-container #actions input[type=button] .badge, .crm-container .crm-form-block > .crm-submit-buttons .crm-button input.crm-form-submit :not([value~='Save']) .badge, .crm-container .crm-button .crm-form-block > .crm-submit-buttons input.crm-form-submit :not([value~='Save']) .badge,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-button.crm-i-button :not([value~='Save']) .badge,
+.crm-container .crm-form-block > .crm-submit-buttons .crm-hover-button :not([value~='Save']) .badge,
+.crm-container .crm-form-block > .crm-submit-buttons .ui-dialog-buttonset .ui-button :not([value~='Save']) .badge,
+.crm-container .ui-dialog-buttonset .crm-form-block > .crm-submit-buttons .ui-button :not([value~='Save']) .badge,
+.crm-container .crm-form-block > .crm-submit-buttons a.button :not([value~='Save']) .badge,
+.crm-container .crm-form-block > .crm-submit-buttons input[type=button] :not([value~='Save']) .badge, .crm-container .crm-search-form-block > a .badge,
+.crm-container .crm-search-form-block > span .badge {
+  color: #727e8a;
+  background-color: #ffffff;
+}
+
+.btn-primary-outline {
+  color: #3ab1c9;
+  background-image: none;
+  background-color: transparent;
+  border-color: #3ab1c9;
+}
+
+.btn-primary-outline:focus, .btn-primary-outline.focus, .btn-primary-outline:active, .btn-primary-outline.active,
+.open > .btn-primary-outline.dropdown-toggle {
+  color: #fff;
+  background-color: #3ab1c9;
+  border-color: #3ab1c9;
+}
+
+.btn-primary-outline:hover {
+  color: #fff;
+  background-color: #3ab1c9;
+  border-color: #3ab1c9;
+}
+
+.btn-primary-outline.disabled:focus, .btn-primary-outline.disabled.focus, .btn-primary-outline:disabled:focus, .btn-primary-outline:disabled.focus,
+fieldset[disabled] .btn-primary-outline:focus,
+fieldset[disabled] .btn-primary-outline.focus {
+  border-color: #8ad1df;
+}
+
+.btn-primary-outline.disabled:hover, .btn-primary-outline:disabled:hover,
+fieldset[disabled] .btn-primary-outline:hover {
+  border-color: #8ad1df;
+}
+
+.btn-secondary-outline, .crm-container .crm-button input.crm-form-submit:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:not([value~='Search']),
+.crm-container .crm-hover-button:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:not([value~='Search']),
+.crm-container a.button:not([value~='Search']),
+.crm-container input[type=button]:not([value~='Search']) {
+  color: #535a67;
+  background-image: none;
+  background-color: transparent;
+  border-color: #535a67;
+}
+
+.btn-secondary-outline:focus, .crm-container .crm-button input.crm-form-submit:focus:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:focus:not([value~='Search']),
+.crm-container .crm-hover-button:focus:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:focus:not([value~='Search']),
+.crm-container a.button:focus:not([value~='Search']),
+.crm-container input[type=button]:focus:not([value~='Search']), .btn-secondary-outline.focus, .crm-container .crm-button input.focus.crm-form-submit:not([value~='Search']),
+.crm-container .focus.crm-button.crm-i-button:not([value~='Search']),
+.crm-container .focus.crm-hover-button:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .focus.ui-button:not([value~='Search']),
+.crm-container a.focus.button:not([value~='Search']),
+.crm-container input.focus[type=button]:not([value~='Search']), .btn-secondary-outline:active, .crm-container .crm-button input.crm-form-submit:active:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:active:not([value~='Search']),
+.crm-container .crm-hover-button:active:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:active:not([value~='Search']),
+.crm-container a.button:active:not([value~='Search']),
+.crm-container input[type=button]:active:not([value~='Search']), .btn-secondary-outline.active, .crm-container .crm-button input.active.crm-form-submit:not([value~='Search']),
+.crm-container .active.crm-button.crm-i-button:not([value~='Search']),
+.crm-container .active.crm-hover-button:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .active.ui-button:not([value~='Search']),
+.crm-container a.active.button:not([value~='Search']),
+.crm-container input.active[type=button]:not([value~='Search']),
+.open > .btn-secondary-outline.dropdown-toggle, .crm-container .crm-button
+.open > input.dropdown-toggle.crm-form-submit:not([value~='Search']),
+.crm-container
+.open > .dropdown-toggle.crm-button.crm-i-button:not([value~='Search']),
+.crm-container
+.open > .dropdown-toggle.crm-hover-button:not([value~='Search']),
+.crm-container .ui-dialog-buttonset
+.open > .dropdown-toggle.ui-button:not([value~='Search']),
+.crm-container
+.open > a.dropdown-toggle.button:not([value~='Search']),
+.crm-container
+.open > input.dropdown-toggle[type=button]:not([value~='Search']) {
+  color: #fff;
+  background-color: #727e8a;
+  border-color: #535a67;
+}
+
+.btn-secondary-outline:hover, .crm-container .crm-button input.crm-form-submit:hover:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:hover:not([value~='Search']),
+.crm-container .crm-hover-button:hover:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:hover:not([value~='Search']),
+.crm-container a.button:hover:not([value~='Search']),
+.crm-container input[type=button]:hover:not([value~='Search']) {
+  color: #fff;
+  background-color: #727e8a;
+  border-color: #535a67;
+}
+
+.btn-secondary-outline.disabled:focus, .crm-container .crm-button input.disabled.crm-form-submit:focus:not([value~='Search']),
+.crm-container .disabled.crm-button.crm-i-button:focus:not([value~='Search']),
+.crm-container .disabled.crm-hover-button:focus:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .disabled.ui-button:focus:not([value~='Search']),
+.crm-container a.disabled.button:focus:not([value~='Search']),
+.crm-container input.disabled[type=button]:focus:not([value~='Search']), .btn-secondary-outline.disabled.focus, .crm-container .crm-button input.disabled.focus.crm-form-submit:not([value~='Search']),
+.crm-container .disabled.focus.crm-button.crm-i-button:not([value~='Search']),
+.crm-container .disabled.focus.crm-hover-button:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .disabled.focus.ui-button:not([value~='Search']),
+.crm-container a.disabled.focus.button:not([value~='Search']),
+.crm-container input.disabled.focus[type=button]:not([value~='Search']), .btn-secondary-outline:disabled:focus, .crm-container .crm-button input.crm-form-submit:disabled:focus:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:disabled:focus:not([value~='Search']),
+.crm-container .crm-hover-button:disabled:focus:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:disabled:focus:not([value~='Search']),
+.crm-container a.button:disabled:focus:not([value~='Search']),
+.crm-container input[type=button]:disabled:focus:not([value~='Search']), .btn-secondary-outline:disabled.focus, .crm-container .crm-button input.crm-form-submit:disabled.focus:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:disabled.focus:not([value~='Search']),
+.crm-container .crm-hover-button:disabled.focus:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:disabled.focus:not([value~='Search']),
+.crm-container a.button:disabled.focus:not([value~='Search']),
+.crm-container input[type=button]:disabled.focus:not([value~='Search']),
+fieldset[disabled] .btn-secondary-outline:focus,
+fieldset[disabled] .crm-container .crm-button input.crm-form-submit:focus:not([value~='Search']), .crm-container .crm-button
+fieldset[disabled] input.crm-form-submit:focus:not([value~='Search']),
+fieldset[disabled]
+.crm-container .crm-button.crm-i-button:focus:not([value~='Search']),
+.crm-container
+fieldset[disabled] .crm-button.crm-i-button:focus:not([value~='Search']),
+fieldset[disabled]
+.crm-container .crm-hover-button:focus:not([value~='Search']),
+.crm-container
+fieldset[disabled] .crm-hover-button:focus:not([value~='Search']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .ui-button:focus:not([value~='Search']),
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .ui-button:focus:not([value~='Search']),
+fieldset[disabled]
+.crm-container a.button:focus:not([value~='Search']),
+.crm-container
+fieldset[disabled] a.button:focus:not([value~='Search']),
+fieldset[disabled]
+.crm-container input[type=button]:focus:not([value~='Search']),
+.crm-container
+fieldset[disabled] input[type=button]:focus:not([value~='Search']),
+fieldset[disabled] .btn-secondary-outline.focus,
+fieldset[disabled] .crm-container .crm-button input.focus.crm-form-submit:not([value~='Search']), .crm-container .crm-button
+fieldset[disabled] input.focus.crm-form-submit:not([value~='Search']),
+fieldset[disabled]
+.crm-container .focus.crm-button.crm-i-button:not([value~='Search']),
+.crm-container
+fieldset[disabled] .focus.crm-button.crm-i-button:not([value~='Search']),
+fieldset[disabled]
+.crm-container .focus.crm-hover-button:not([value~='Search']),
+.crm-container
+fieldset[disabled] .focus.crm-hover-button:not([value~='Search']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .focus.ui-button:not([value~='Search']),
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .focus.ui-button:not([value~='Search']),
+fieldset[disabled]
+.crm-container a.focus.button:not([value~='Search']),
+.crm-container
+fieldset[disabled] a.focus.button:not([value~='Search']),
+fieldset[disabled]
+.crm-container input.focus[type=button]:not([value~='Search']),
+.crm-container
+fieldset[disabled] input.focus[type=button]:not([value~='Search']) {
+  border-color: #848c9c;
+}
+
+.btn-secondary-outline.disabled:hover, .crm-container .crm-button input.disabled.crm-form-submit:hover:not([value~='Search']),
+.crm-container .disabled.crm-button.crm-i-button:hover:not([value~='Search']),
+.crm-container .disabled.crm-hover-button:hover:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .disabled.ui-button:hover:not([value~='Search']),
+.crm-container a.disabled.button:hover:not([value~='Search']),
+.crm-container input.disabled[type=button]:hover:not([value~='Search']), .btn-secondary-outline:disabled:hover, .crm-container .crm-button input.crm-form-submit:disabled:hover:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:disabled:hover:not([value~='Search']),
+.crm-container .crm-hover-button:disabled:hover:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:disabled:hover:not([value~='Search']),
+.crm-container a.button:disabled:hover:not([value~='Search']),
+.crm-container input[type=button]:disabled:hover:not([value~='Search']),
+fieldset[disabled] .btn-secondary-outline:hover,
+fieldset[disabled] .crm-container .crm-button input.crm-form-submit:hover:not([value~='Search']), .crm-container .crm-button
+fieldset[disabled] input.crm-form-submit:hover:not([value~='Search']),
+fieldset[disabled]
+.crm-container .crm-button.crm-i-button:hover:not([value~='Search']),
+.crm-container
+fieldset[disabled] .crm-button.crm-i-button:hover:not([value~='Search']),
+fieldset[disabled]
+.crm-container .crm-hover-button:hover:not([value~='Search']),
+.crm-container
+fieldset[disabled] .crm-hover-button:hover:not([value~='Search']),
+fieldset[disabled]
+.crm-container .ui-dialog-buttonset .ui-button:hover:not([value~='Search']),
+.crm-container .ui-dialog-buttonset
+fieldset[disabled] .ui-button:hover:not([value~='Search']),
+fieldset[disabled]
+.crm-container a.button:hover:not([value~='Search']),
+.crm-container
+fieldset[disabled] a.button:hover:not([value~='Search']),
+fieldset[disabled]
+.crm-container input[type=button]:hover:not([value~='Search']),
+.crm-container
+fieldset[disabled] input[type=button]:hover:not([value~='Search']) {
+  border-color: #848c9c;
+}
+
+.btn-info-outline {
+  color: #5bc0de;
+  background-image: none;
+  background-color: transparent;
+  border-color: #5bc0de;
+}
+
+.btn-info-outline:focus, .btn-info-outline.focus, .btn-info-outline:active, .btn-info-outline.active,
+.open > .btn-info-outline.dropdown-toggle {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.btn-info-outline:hover {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #5bc0de;
+}
+
+.btn-info-outline.disabled:focus, .btn-info-outline.disabled.focus, .btn-info-outline:disabled:focus, .btn-info-outline:disabled.focus,
+fieldset[disabled] .btn-info-outline:focus,
+fieldset[disabled] .btn-info-outline.focus {
+  border-color: #b0e1ef;
+}
+
+.btn-info-outline.disabled:hover, .btn-info-outline:disabled:hover,
+fieldset[disabled] .btn-info-outline:hover {
+  border-color: #b0e1ef;
+}
+
+.btn-success-outline {
+  color: #8EC68A;
+  background-image: none;
+  background-color: transparent;
+  border-color: #8EC68A;
+}
+
+.btn-success-outline:focus, .btn-success-outline.focus, .btn-success-outline:active, .btn-success-outline.active,
+.open > .btn-success-outline.dropdown-toggle {
+  color: #fff;
+  background-color: #8EC68A;
+  border-color: #8EC68A;
+}
+
+.btn-success-outline:hover {
+  color: #fff;
+  background-color: #8EC68A;
+  border-color: #8EC68A;
+}
+
+.btn-success-outline.disabled:focus, .btn-success-outline.disabled.focus, .btn-success-outline:disabled:focus, .btn-success-outline:disabled.focus,
+fieldset[disabled] .btn-success-outline:focus,
+fieldset[disabled] .btn-success-outline.focus {
+  border-color: #d0e7cf;
+}
+
+.btn-success-outline.disabled:hover, .btn-success-outline:disabled:hover,
+fieldset[disabled] .btn-success-outline:hover {
+  border-color: #d0e7cf;
+}
+
+.btn-warning-outline {
+  color: #f0ad4e;
+  background-image: none;
+  background-color: transparent;
+  border-color: #f0ad4e;
+}
+
+.btn-warning-outline:focus, .btn-warning-outline.focus, .btn-warning-outline:active, .btn-warning-outline.active,
+.open > .btn-warning-outline.dropdown-toggle {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.btn-warning-outline:hover {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.btn-warning-outline.disabled:focus, .btn-warning-outline.disabled.focus, .btn-warning-outline:disabled:focus, .btn-warning-outline:disabled.focus,
+fieldset[disabled] .btn-warning-outline:focus,
+fieldset[disabled] .btn-warning-outline.focus {
+  border-color: #f8d9ac;
+}
+
+.btn-warning-outline.disabled:hover, .btn-warning-outline:disabled:hover,
+fieldset[disabled] .btn-warning-outline:hover {
+  border-color: #f8d9ac;
+}
+
+.btn-danger-outline {
+  color: #E48282;
+  background-image: none;
+  background-color: transparent;
+  border-color: #E48282;
+}
+
+.btn-danger-outline:focus, .btn-danger-outline.focus, .btn-danger-outline:active, .btn-danger-outline.active,
+.open > .btn-danger-outline.dropdown-toggle {
+  color: #fff;
+  background-color: #E48282;
+  border-color: #E48282;
+}
+
+.btn-danger-outline:hover {
+  color: #fff;
+  background-color: #E48282;
+  border-color: #E48282;
+}
+
+.btn-danger-outline.disabled:focus, .btn-danger-outline.disabled.focus, .btn-danger-outline:disabled:focus, .btn-danger-outline:disabled.focus,
+fieldset[disabled] .btn-danger-outline:focus,
+fieldset[disabled] .btn-danger-outline.focus {
+  border-color: #f6d6d6;
+}
+
+.btn-danger-outline.disabled:hover, .btn-danger-outline:disabled:hover,
+fieldset[disabled] .btn-danger-outline:hover {
+  border-color: #f6d6d6;
+}
+
+.crm-container .crm-button input.crm-form-submit,
+.crm-container .crm-button.crm-i-button,
+.crm-container .crm-hover-button,
+.crm-container .ui-dialog-buttonset .ui-button,
+.crm-container a.button,
+.crm-container a.button:link,
+.crm-container a.button:visited,
+.crm-container input[type=button] {
+  text-shadow: none;
+  text-transform: uppercase;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  opacity: 1 !important;
+  font-size: 1em !important;
+}
+
+.crm-container .crm-button input.crm-form-submit:not([value~='Search']),
+.crm-container .crm-button.crm-i-button:not([value~='Search']),
+.crm-container .crm-hover-button:not([value~='Search']),
+.crm-container .ui-dialog-buttonset .ui-button:not([value~='Search']),
+.crm-container a.button:not([value~='Search']),
+.crm-container input[type=button]:not([value~='Search']) {
+  border-radius: 2px;
+}
+
+.crm-container .crm-button input.crm-form-submit:not([value~='Search']).css_right,
+.crm-container .crm-button.crm-i-button:not([value~='Search']).css_right,
+.crm-container .crm-hover-button:not([value~='Search']).css_right,
+.crm-container .ui-dialog-buttonset .ui-button:not([value~='Search']).css_right,
+.crm-container a.button:not([value~='Search']).css_right,
+.crm-container input[type=button]:not([value~='Search']).css_right {
+  padding: 7px 15px !important;
+}
+
+.crm-container .crm-button input.crm-form-submit:not([value~='Search']) .crm-i,
+.crm-container .crm-button.crm-i-button:not([value~='Search']) .crm-i,
+.crm-container .crm-hover-button:not([value~='Search']) .crm-i,
+.crm-container .ui-dialog-buttonset .ui-button:not([value~='Search']) .crm-i,
+.crm-container a.button:not([value~='Search']) .crm-i,
+.crm-container input[type=button]:not([value~='Search']) .crm-i {
+  line-height: inherit;
+}
+
+.crm-container .crm-button input[value~='Save'].crm-form-submit,
+.crm-container [value~='Save'].crm-button.crm-i-button,
+.crm-container [value~='Save'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [value~='Save'].ui-button,
+.crm-container a[value~='Save'].button,
+.crm-container input[value~='Save'][type=button], .crm-container .crm-button input[value~='Search'].crm-form-submit,
+.crm-container [value~='Search'].crm-button.crm-i-button,
+.crm-container [value~='Search'].crm-hover-button,
+.crm-container .ui-dialog-buttonset [value~='Search'].ui-button,
+.crm-container a[value~='Search'].button,
+.crm-container input[value~='Search'][type=button] {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.crm-container .crm-i-button,
+.crm-container .refresh {
+  padding: 0 !important;
+}
+
+.crm-container .crm-button {
+  background: none;
+}
+
+.crm-container .crm-hover-button {
+  padding: 7px 15px !important;
+}
+
+.crm-container .crm-hover-button:hover {
+  background: #727e8a !important;
+}
+
+.crm-container .crm-button-type-refresh,
+.crm-container .crm-submit-buttons > .crm-button {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+.crm-container .crm-button-type-refresh .crm-i,
+.crm-container .crm-submit-buttons > .crm-button .crm-i {
+  padding: 3px;
+  background-color: transparent !important;
+}
+
+.crm-container .crm-i {
+  text-shadow: none;
+}
+
+.crm-container .crm-button-type-refresh .crm-i {
+  color: #ffffff;
+}
+
+.crm-container .adv-search-top-submit > div {
+  float: right;
+  padding-left: 10px;
+}
+
+.crm-container .crm-form-block > .crm-submit-buttons {
+  min-height: 50px;
+}
+
+.crm-container .crm-search-form-block > a,
+.crm-container .crm-search-form-block > span {
+  float: right;
+  margin-left: 5px;
+}
+
+.crm-container .crm-search-form-block > span {
+  width: 12px !important;
+  overflow: hidden;
+}
+
+.crm-container .crm-search-form-block > span > a:link {
+  color: #ffffff;
+}
+
+.crm-container .crm-search-form-block > span > a::before {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  text-rendering: auto;
+  font-size: 0.8em;
+  padding: 0 15px 0 2px;
+}
+
+.crm-container .crm-search-form-block > span > a[href~='#collapse']::before {
+  content: '\f066';
+}
+
+.crm-container .crm-search-form-block > span > a[href~='#expand']::before {
+  content: '\f065';
+}
+
+.crm-container .crm-accordion-header, .crm-container .crm-accordion-body {
+  border-radius: 0 !important;
+}
+
+.crm-container .crm-accordion-header {
+  line-height: 40px;
+  background-image: none !important;
+  background: #f3f6f7 !important;
+  color: #535a67;
+  font-weight: normal !important;
+}
+
+.crm-container .crm-accordion-header::before {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  text-rendering: auto;
+  font-size: 0.8em;
+  padding-right: 10px;
+}
+
+.crm-container .crm-accordion-header.crm-master-accordion-header {
+  background: #3ab1c9 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.crm-container .crm-accordion-header.crm-master-accordion-header::before {
+  padding-right: 0 !important;
+}
+
+.crm-container .crm-accordion-header .crm-close-accordion {
+  margin-top: 5px;
+}
+
+.crm-container .crm-accordion-header .helpicon {
+  padding-left: 15px;
+  color: white;
+}
+
+.crm-container .crm-accordion-wrapper:not(.collapsed) .crm-accordion-header::before {
+  content: '\f078';
+}
+
+.crm-container .crm-accordion-wrapper.collapsed .crm-accordion-header::before {
+  content: '\f054';
+}
+
+.crm-container .crm-accordion-body {
+  border: 0;
+  background: #ffffff;
+}
+
+.crm-container .crm-accordion-body td {
+  border-right-width: 0;
+}
+
+body, #page {
+  background: #e8eef0 !important;
+}
+
+.crm-container .crm-form-block {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  background: none;
+}
+
+#toolbar {
+  box-shadow: none !important;
+}
+
+#branding {
+  background: #586277 !important;
+  color: #ffffff !important;
+  position: relative;
+}
+
+#branding .breadcrumb {
+  position: relative;
+  top: -40px;
+  left: -40px;
+  float: left;
+  word-spacing: -4px;
+}
+
+#branding .breadcrumb > a {
+  float: left;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding-right: 5px;
+  position: relative;
+  top: 35px;
+  left: 40px;
+  word-spacing: initial;
+}
+
+#branding .breadcrumb > a::after {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  text-rendering: auto;
+  font-size: 0.6em;
+  content: "";
+  padding: 0 0 0 6px;
+  display: inline-block;
+}
+
+#branding h1 {
+  color: #ffffff !important;
+  font-size: 0.8rem !important;
+  position: relative;
+  top: -5px;
+  left: -10px;
+}
+
+div#printer-friendly a {
+  position: absolute;
+  right: 0;
+  top: -67px;
+  color: #ffffff;
+}

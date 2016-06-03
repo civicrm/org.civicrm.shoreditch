@@ -1,0 +1,11 @@
+body, #page {
+  background: $background-color !important;
+}
+
+.crm-container {
+  .crm-form-block {
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
+    padding: 0;
+    background: none;
+  }
+}

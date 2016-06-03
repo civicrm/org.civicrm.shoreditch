@@ -1,0 +1,69 @@
+.crm-container {
+  $header-color: #f3f6f7;
+
+  %no-border-radius {
+    border-radius: 0 !important;
+  }
+
+  .crm-accordion-header {
+    @extend %no-border-radius;
+    line-height: 40px;
+    background-image: none !important;
+    background: $header-color !important;
+    color: $gray-darker;
+    font-weight: normal !important;
+
+    &::before {
+      @include fa-icon(.8em);
+      padding-right: 10px;
+    }
+
+
+    &.crm-master-accordion-header {
+      background: $brand-primary !important;
+      color: white !important;
+      font-weight: bold !important;
+
+      &::before {
+        padding-right: 0 !important;
+      }
+    }
+
+    .crm-close-accordion {
+      margin-top: 5px;
+    }
+
+    .helpicon {
+      padding-left: 15px;
+      color: white;
+    }
+  }
+
+  .crm-accordion-wrapper {
+    &:not(.collapsed) {
+      .crm-accordion-header {
+        &::before {
+          content: '\f078';
+        }
+      }
+    }
+
+    &.collapsed {
+      .crm-accordion-header {
+        &::before {
+          content: '\f054';
+        }
+      }
+    }
+  }
+
+  .crm-accordion-body {
+    @extend %no-border-radius;
+    border: 0;
+    background: #ffffff;
+
+    td {
+      border-right-width: 0;
+    }
+  }
+}

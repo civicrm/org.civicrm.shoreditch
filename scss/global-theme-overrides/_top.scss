@@ -1,0 +1,51 @@
+#toolbar {
+  box-shadow: none !important;
+}
+
+#branding {
+  $font-size: .8rem;
+  background: $crm-page-topbar-bg !important;
+  color: #ffffff !important;
+  position: relative;
+
+  .breadcrumb {
+    position: relative;
+    top: -40px;
+    left: -40px;
+    float: left;
+    word-spacing: -4px;
+
+    > a {
+      float: left;
+      color: #ffffff;
+      font-size: $font-size;
+      padding-right: 5px;
+      position: relative;
+      top: 35px;
+      left: 40px;
+      word-spacing: initial;
+
+      &::after {
+        @include fa-icon(.6em, '\f054');
+        padding: 0 0 0 6px;
+        display: inline-block;
+      }
+    }
+  }
+
+  h1 {
+    color: #ffffff !important;
+    font-size: $font-size !important;
+    position: relative;
+    top: -5px;
+    left: -10px;
+  }
+}
+
+// The "printer" icon button
+div#printer-friendly a {
+  position: absolute;
+  right: 0;
+  top: -67px;
+  color: #ffffff;
+}
