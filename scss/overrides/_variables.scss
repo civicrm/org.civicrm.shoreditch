@@ -35,17 +35,20 @@ $os-font-path:   "../fonts/open-sans" !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:           #535a67 !default;
-$gray-dark:             #727e8a !default;
-$gray-lighter:          #e6ecef !default;
+$background:            #E8EEF0 !default;
+$copy:                  #727E8A !default;
 
-$brand-primary:         #3ab1c9 !default;
+$gray-darker:           #4D5663 !default;
+$gray-dark:             $copy !default;
+$gray-light:            $background !default;
+$gray-lighter:          #F3F6F7 !default;
+
+$brand-primary:         #42AFCB !default;
 $brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 $brand-success:         #8EC68A !default;
-$brand-danger:          #E48282 !default;
-
-$background-color:      #e8eef0 !default;
+$brand-warning:         #ECA67F !default;
+$brand-danger:          #E6807F !default;
 
 
 //== Scaffolding
@@ -53,7 +56,7 @@ $background-color:      #e8eef0 !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg: $background-color !default;
+$body-bg: $background !default;
 
 
 //== Typography
@@ -121,7 +124,7 @@ $table-striped-bg:              $brand-primary-light !default;
 $table-bg-accent:               $brand-primary-lighter !default;
 
 //** Border color for table and cell borders.
-$table-border-color: $gray-lighter !default;
+$table-border-color: $gray-light !default;
 
 
 //== Buttons
@@ -163,7 +166,7 @@ $customselect-feedback-padding-right: $customselect-padding-right + 10;
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-$dropdown-border:        $background-color !default;
+$dropdown-border:        $background !default;
 $dropdown-link-hover-bg: $dropdown-border !default;
 
 
@@ -218,7 +221,7 @@ $nav-pills-sidebar-weigth:        600;
 
 $nav-pills-sidebar-link-padding:  16px 17px!default;
 $nav-pills-sidebar-link-color:    $brand-primary !default;
-$nav-pills-sidebar-link-hover-bg: $background-color !default;
+$nav-pills-sidebar-link-hover-bg: $background !default;
 
 //== Tabs
 
@@ -247,7 +250,7 @@ $pagination-hover-bg:                  $pagination-bg !default;
 $pagination-active-color:              $gray-darker !default;
 $pagination-active-bg:                 $pagination-bg !default;
 
-$pagination-disabled-color:            $gray-lighter !default;
+$pagination-disabled-color:            $gray-light !default;
 $pagination-disabled-bg:               $pagination-bg !default;
 $input-bg-disabled:                    #fefefe !default;
 
