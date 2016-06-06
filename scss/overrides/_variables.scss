@@ -42,14 +42,17 @@ $gray-darker:           #4D5663 !default;
 $gray-dark:             $copy !default;
 $gray-light:            $background !default;
 $gray-lighter:          #F3F6F7 !default;
+$gray-lightest:         lighten(desaturate(adjust-hue(#f3f6f7, -15.0000), 0.0000), 1.9608) !default;
 
 $brand-primary:         #42AFCB !default;
 $brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 $brand-success:         #8EC68A !default;
+$brand-info:            #5bc0de !default;
 $brand-warning:         #ECA67F !default;
 $brand-danger:          #E6807F !default;
 
+$dark-blue:             #586277 !default;
 
 //== Scaffolding
 //
@@ -145,8 +148,10 @@ $btn-default-border:        $btn-default-bg !default;
 //
 //##
 
+$input-bg-disabled:         $gray-lightest !default;
 $input-color:               $gray-dark !default;
 $input-border:              $gray-dark !default;
+$input-border-disabled:     #b2bac0 !default;
 
 $input-border-radius:       0 !default;
 $input-border-radius-large: $input-border-radius !default;
@@ -252,13 +257,17 @@ $pagination-active-bg:                 $pagination-bg !default;
 
 $pagination-disabled-color:            $gray-light !default;
 $pagination-disabled-bg:               $pagination-bg !default;
-$input-bg-disabled:                    #fefefe !default;
+
 
 //== Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-danger-text: $brand-danger !default;
+$state-success-text:             $brand-success !default;
+$state-info-text:                $brand-info !default;
+$state-warning-text:             $brand-warning !default;
+$state-danger-text:              $brand-danger !default;
+
 
 //== Breadcrumbs
 //
