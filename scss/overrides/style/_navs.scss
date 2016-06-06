@@ -4,10 +4,10 @@
     > li {
 
         > a {
-            border-radius: $nav-pills-sidebar-border-radius;
-            color: $nav-pills-sidebar-color;
-            font-weight: $nav-pills-sidebar-weigth;
-            padding: $nav-pills-sidebar-link-padding;
+            border-radius: $crm-nav-pills-sidebar-border-radius;
+            color: $crm-nav-pills-sidebar-color;
+            font-weight: $crm-nav-pills-sidebar-weigth;
+            padding: $crm-nav-pills-sidebar-link-padding;
         }
 
         + li {
@@ -39,8 +39,8 @@
             }
 
             > a {
-                background: $nav-pills-sidebar-link-hover-bg !important;
-                color: $nav-pills-sidebar-link-color !important;
+                background: $crm-nav-pills-sidebar-link-hover-bg !important;
+                color: $crm-nav-pills-sidebar-link-color !important;
             }
         }
     }
@@ -53,8 +53,8 @@
     > .panel-heading {
 
         > .nav-tabs {
-            border: $nav-tabs-panel-heading-border;
-            margin: $nav-tabs-panel-heading-margin;
+            border: $crm-nav-tabs-panel-heading-border;
+            margin: $crm-nav-tabs-panel-heading-margin;
 
             > li {
 
@@ -62,17 +62,17 @@
                 &:hover {
 
                     > a {
-                        border-width: $nav-tabs-panel-heading-link-border-hover-width;
+                        border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
                     }
                 }
 
                 > a {
-                    background: $nav-tabs-panel-heading-link-background !important;
-                    border-color: $nav-tabs-panel-heading-link-border-color !important;
-                    border-width: $nav-tabs-panel-heading-link-border-width;
-                    color: $nav-tabs-panel-heading-link-color !important;
-                    font-weight: $nav-tabs-panel-heading-link-weight;
-                    padding: $nav-tabs-panel-heading-link-padding;
+                    background: $crm-nav-tabs-panel-heading-link-background !important;
+                    border-color: $crm-nav-tabs-panel-heading-link-border-color !important;
+                    border-width: $crm-nav-tabs-panel-heading-link-border-width;
+                    color: $crm-nav-tabs-panel-heading-link-color !important;
+                    font-weight: $crm-nav-tabs-panel-heading-link-weight;
+                    padding: $crm-nav-tabs-panel-heading-link-padding;
                 }
             }
         }

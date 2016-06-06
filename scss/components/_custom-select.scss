@@ -1,11 +1,11 @@
 .crm_custom-select {
-    background: $customselect-background;
+    background: $crm-customselect-background;
     display: inline-block;
     position: relative;
 
     > select {
         background: transparent;
-        padding-right: #{$customselect-padding-right}px;
+        padding-right: #{$crm-customselect-padding-right}px;
         position: relative;
         width: 100%;
         z-index: 2;
@@ -54,7 +54,7 @@
     background: transparent;
 
     option {
-        background: $customselect-background;
+        background: $crm-customselect-background;
     }
 }
 
@@ -62,12 +62,12 @@
     border-left: 1px solid $input-border;
     bottom: 0;
     display: inline-block;
-    line-height: #{$customselect-caret-width - 1}px;
+    line-height: #{$crm-customselect-caret-width - 1}px;
     position: absolute;
     right: 0;
     text-align: center;
     top: 0;
-    width: #{$customselect-caret-width}px;
+    width: #{$crm-customselect-caret-width}px;
     z-index: 1;
 
     &:before {
@@ -92,11 +92,11 @@
     > .crm_custom-select {
 
         > select {
-            padding-right: #{$customselect-feedback-padding-right}px;
+            padding-right: #{$crm-customselect-feedback-padding-right}px;
         }
 
         + .form-control-feedback {
-            right: #{$customselect-caret-width - 5}px !important;
+            right: #{$crm-customselect-caret-width - 5}px !important;
         }
     }
 }

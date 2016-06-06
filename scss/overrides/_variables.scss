@@ -35,31 +35,30 @@ $os-font-path:   "../fonts/open-sans" !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$background:            #E8EEF0 !default;
-$copy:                  #727E8A !default;
+$crm-background:        #E8EEF0 !default;
+$crm-copy:              #727E8A !default;
 
 $gray-darker:           #4D5663 !default;
-$gray-dark:             $copy !default;
-$gray-light:            $background !default;
+$gray-dark:             $crm-copy !default;
+$gray-light:            $crm-background !default;
 $gray-lighter:          #F3F6F7 !default;
-$gray-lightest:         lighten(desaturate(adjust-hue(#f3f6f7, -15.0000), 0.0000), 1.9608) !default;
+$crm-gray-lightest:     lighten(desaturate(adjust-hue(#f3f6f7, -15.0000), 0.0000), 1.9608) !default;
 
 $brand-primary:         #42AFCB !default;
-$brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
-$brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 $brand-success:         #8EC68A !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #ECA67F !default;
 $brand-danger:          #E6807F !default;
+$crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
+$crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
-$dark-blue:             #586277 !default;
+$crm-dark-blue:         #586277 !default;
 
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
 
-//** Background color for `<body>`.
-$body-bg: $background !default;
+$body-bg: $crm-background !default;
 
 
 //== Typography
@@ -69,10 +68,10 @@ $body-bg: $background !default;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-base:        "Open Sans", $font-family-sans-serif !default;
 
-$font-size-base-unitless: 13;
-$font-size-base:          13px !default;
-$font-size-medium:        14px !default;
-$font-size-xs:            9px !default;
+$font-size-base:              13px !default;
+$font-size-medium:            14px !default;
+$font-size-xs:                9px !default;
+$crm-font-size-base-unitless: 13;
 
 $font-size-h1:            24px !default;
 $font-size-h2:            18px !default;
@@ -82,24 +81,21 @@ $font-size-h5:            $font-size-base !default;
 
 $line-height-base:        1.53846153846154 !default; // 20/13
 
-//** By default, this inherits from the `<body>`.
 $headings-font-weight:    500 !default;
-
-$font-weight-h1:          600 !default;
-$font-weight-h2:          600 !default;
-$font-weight-h3:          600 !default;
-$font-weight-h4:          500 !default;
-$font-weight-h5:          700 !default;
-$font-weight-h6:          500 !default;
-
 $headings-color:          $gray-darker !default;
+
+$crm-font-weight-h1:          600 !default;
+$crm-font-weight-h2:          600 !default;
+$crm-font-weight-h3:          600 !default;
+$crm-font-weight-h4:          500 !default;
+$crm-font-weight-h5:          700 !default;
+$crm-font-weight-h6:          500 !default;
 
 
 //== Iconography
 //
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-//** Load fonts from this directory.
 $icon-font-path: "../vendor/bootstrap/fonts/bootstrap/" !default;
 
 
@@ -118,16 +114,12 @@ $border-radius-small: $border-radius-base !default;
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
-//** Padding for `<th>`s and `<td>`s.
 $table-cell-padding: 10px 20px !default;
+$table-bg-accent:    $crm-brand-primary-lighter !default;
+$table-border-color: $gray-light !default;
 
 //** Background for striped tables
-$table-striped-bg:              $brand-primary-light !default;
-//** Background color used for `.table-striped`.
-$table-bg-accent:               $brand-primary-lighter !default;
-
-//** Border color for table and cell borders.
-$table-border-color: $gray-light !default;
+$crm-table-striped-bg: $crm-brand-primary-light !default;
 
 
 //== Buttons
@@ -135,10 +127,10 @@ $table-border-color: $gray-light !default;
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight:            600 !default;
-$btn-small-font-weight:      400 !default;
+$crm-btn-small-font-weight:      400 !default;
 
-$btn-padding-base-vertical:  7px;
-$btn-padding-small-vertical: 5px;
+$crm-btn-padding-base-vertical:  7px;
+$crm-btn-padding-small-vertical: 5px;
 
 $btn-default-bg:            #fff !default;
 $btn-default-border:        $btn-default-bg !default;
@@ -148,30 +140,29 @@ $btn-default-border:        $btn-default-bg !default;
 //
 //##
 
-$input-bg-disabled:         $gray-lightest !default;
+$input-bg-disabled:         $crm-gray-lightest !default;
 $input-color:               $gray-dark !default;
 $input-border:              $gray-dark !default;
-$input-border-disabled:     #b2bac0 !default;
+$crm-input-border-disabled: #b2bac0 !default;
 
 $input-border-radius:       0 !default;
 $input-border-radius-large: $input-border-radius !default;
 $input-border-radius-small: $input-border-radius !default;
 
-$input-addon-color:         $gray-darker !default;
+$crm-input-addon-color:     $gray-darker !default;
 
-// custom select
-$customselect-background:             #ffffff;
-$customselect-caret-width:            32;
-$customselect-padding-right:          $customselect-caret-width + 12;
-$customselect-feedback-padding-right: $customselect-padding-right + 10;
+//** Custom select
+$crm-customselect-background:             #ffffff;
+$crm-customselect-caret-width:            32;
+$crm-customselect-padding-right:          $crm-customselect-caret-width + 12;
+$crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
 
 
 //== Dropdowns
 //
 //## Dropdown menu container and contents.
 
-//** Background for the dropdown menu.
-$dropdown-border:        $background !default;
+$dropdown-border:        $crm-background !default;
 $dropdown-link-hover-bg: $dropdown-border !default;
 
 
@@ -192,14 +183,13 @@ $modal-md:                    500px !default;
 //
 //##
 
-$panel-bg:                    transparent !default;
-$panel-body-padding:          20px !default;
-$panel-heading-padding:       10px 20px !default;
-$panel-heading-big-padding:   15px 20px !default;
-$panel-footer-big-padding:    $panel-heading-big-padding !default;
-$panel-border-radius:         0 !default;
+$panel-bg:                        transparent !default;
+$panel-body-padding:              20px !default;
+$panel-heading-padding:           10px 20px !default;
+$panel-border-radius:             0 !default;
+$crm-panel-heading-big-padding:   15px 20px !default;
+$crm-panel-footer-big-padding:    $crm-panel-heading-big-padding !default;
 
-//** Border color for elements within panels
 $panel-footer-bg:             #ffffff !default;
 
 $panel-default-text:          $gray-darker !default;
@@ -217,29 +207,27 @@ $grid-gutter-width: 16px !default;
 //
 //##
 
-$nav-link-hover-bg:         $brand-primary-light !default;
+$nav-link-hover-bg:         $crm-brand-primary-light !default;
 
-//=== Nav contained in sidebar
-$nav-pills-sidebar-border-radius: 0;
-$nav-pills-sidebar-color:         $gray-darker;
-$nav-pills-sidebar-weigth:        600;
+//== Nav contained in sidebar
+$crm-nav-pills-sidebar-border-radius: 0;
+$crm-nav-pills-sidebar-color:         $gray-darker;
+$crm-nav-pills-sidebar-weigth:        600;
 
-$nav-pills-sidebar-link-padding:  16px 17px!default;
-$nav-pills-sidebar-link-color:    $brand-primary !default;
-$nav-pills-sidebar-link-hover-bg: $background !default;
+$crm-nav-pills-sidebar-link-padding:  16px 17px!default;
+$crm-nav-pills-sidebar-link-color:    $brand-primary !default;
+$crm-nav-pills-sidebar-link-hover-bg: $crm-background !default;
 
-//== Tabs
-
-// Nav tabs placed in a panel heading
-$nav-tabs-panel-heading-border:                  0 !default;
-$nav-tabs-panel-heading-margin:                  -10px 0 !default;
-$nav-tabs-panel-heading-link-background:         transparent !default;
-$nav-tabs-panel-heading-link-border-color:       #ffffff !default;
-$nav-tabs-panel-heading-link-border-width:       0 !default;
-$nav-tabs-panel-heading-link-border-hover-width: 0 0 3px 0 !default;
-$nav-tabs-panel-heading-link-color:              $nav-tabs-panel-heading-link-border-color !default;
-$nav-tabs-panel-heading-link-padding:            15px 15px 12px !default;
-$nav-tabs-panel-heading-link-weight:             600 !default;
+//== Nav tabs placed in a panel heading
+$crm-nav-tabs-panel-heading-border:                  0 !default;
+$crm-nav-tabs-panel-heading-margin:                  -10px 0 !default;
+$crm-nav-tabs-panel-heading-link-background:         transparent !default;
+$crm-nav-tabs-panel-heading-link-border-color:       #ffffff !default;
+$crm-nav-tabs-panel-heading-link-border-width:       0 !default;
+$crm-nav-tabs-panel-heading-link-border-hover-width: 0 0 3px 0 !default;
+$crm-nav-tabs-panel-heading-link-color:              $crm-nav-tabs-panel-heading-link-border-color !default;
+$crm-nav-tabs-panel-heading-link-padding:            15px 15px 12px !default;
+$crm-nav-tabs-panel-heading-link-weight:             600 !default;
 
 
 //== Pagination

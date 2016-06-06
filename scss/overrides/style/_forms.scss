@@ -21,8 +21,8 @@ label {
     &[disabled],
     &[readonly],
     fieldset[disabled] & {
-      border-color: $input-border-disabled;
-      color: $input-border-disabled;
+      border-color: $crm-input-border-disabled;
+      color: $crm-input-border-disabled;
     }
 }
 

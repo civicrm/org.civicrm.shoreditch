@@ -3,7 +3,7 @@ table,
     margin-bottom: 0;
 
     th {
-        background: $brand-primary-light;
+        background: $crm-brand-primary-light;
     }
 
     > thead {
@@ -20,5 +20,5 @@ table,
 }
 
 .table-striped {
-    background: $table-striped-bg;
+    background: $crm-table-striped-bg;
 }

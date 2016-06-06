@@ -1,6 +1,6 @@
 // Redefine the vertical padding for buttons
 .btn {
-    padding: $btn-padding-base-vertical $padding-base-horizontal;
+    padding: $crm-btn-padding-base-vertical $padding-base-horizontal;
 
     &:active,
     &.active {
@@ -14,8 +14,8 @@
 }
 
 .btn-sm {
-    font-weight: $btn-small-font-weight;
-    padding: $btn-padding-small-vertical $padding-base-horizontal;
+    font-weight: $crm-btn-small-font-weight;
+    padding: $crm-btn-padding-small-vertical $padding-base-horizontal;
 }
 
 .btn-xs {

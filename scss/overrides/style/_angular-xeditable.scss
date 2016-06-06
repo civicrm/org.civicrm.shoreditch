@@ -34,7 +34,7 @@
     .fa-pencil {
         @include transition(opacity ease-in-out .15s);
 
-        background-color: $brand-primary-light;
+        background-color: $crm-brand-primary-light;
         border-left: 1px solid $gray-light;
         font-size: 12px;
         height: 100%;
@@ -96,7 +96,7 @@
         z-index: 999;
 
         .btn {
-            background-color: $brand-primary-light;
+            background-color: $crm-brand-primary-light;
             border-color: $gray-light;
             border-radius: 0;
             font-size: 11px;
@@ -108,7 +108,7 @@
             &:active,
             &:focus,
             &:hover {
-                background-color: $brand-primary-lighter;
+                background-color: $crm-brand-primary-lighter;
                 outline: none;
             }
         }

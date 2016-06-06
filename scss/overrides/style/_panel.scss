@@ -12,7 +12,7 @@
 }
 
 .panel-body {
-    background: $brand-primary-light;
+    background: $crm-brand-primary-light;
 
     // Avoid extra spacing due to margin bottom of last element
     > *:last-child {
@@ -46,13 +46,13 @@
 
 .panel-title {
     font-size: $font-size-h2;
-    font-weight: $font-weight-h2;
+    font-weight: $crm-font-weight-h2;
     line-height: $headings-line-height;
 }
 
 .panel-title-sm {
     font-size: $font-size-h3;
-    font-weight: $font-weight-h3;
+    font-weight: $crm-font-weight-h3;
 }
 
 
@@ -61,11 +61,11 @@
     @include box-shadow($box-shadow);
 
     > .panel-footer {
-        padding: $panel-footer-big-padding;
+        padding: $crm-panel-footer-big-padding;
     }
 
     > .panel-heading {
-        padding: $panel-heading-big-padding;
+        padding: $crm-panel-heading-big-padding;
 
         .btn-group-sm {
             margin: -13px 0 -10px 0;
@@ -99,7 +99,7 @@
         // just sits on top of it with the same panel-body bg color
         &:before {
             content: "";
-            background: $brand-primary-light;;
+            background: $crm-brand-primary-light;;
             bottom: 0;
             height: 10px;
             left: 0;

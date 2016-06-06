@@ -9,7 +9,7 @@
         }
 
         tbody {
-            background-color: $brand-primary-light;
+            background-color: $crm-brand-primary-light;
 
             .btn {
                 background-color: inherit;
@@ -25,7 +25,7 @@
                 }
 
                 &:hover {
-                    background: $brand-primary-lighter;
+                    background: $crm-brand-primary-lighter;
                 }
 
                 &.active {
