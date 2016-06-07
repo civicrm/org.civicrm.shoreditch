@@ -119,7 +119,7 @@ $table-bg-accent:    $crm-brand-primary-lighter !default;
 $table-border-color: $gray-light !default;
 
 //** Background for striped tables
-$crm-table-striped-bg: $crm-brand-primary-light !default;
+$crm-table-striped-bg: #f4f7f8 !default;
 
 
 //== Buttons
@@ -207,7 +207,11 @@ $grid-gutter-width: 16px !default;
 //
 //##
 
-$nav-link-hover-bg:         $crm-brand-primary-light !default;
+$nav-link-padding:                          10px 20px !default;
+
+$nav-tabs-border-color:                     $gray-light !default;
+$nav-tabs-active-link-hover-bg:             $crm-table-striped-bg !default;
+$nav-tabs-active-link-hover-color:          $brand-primary !default;
 
 //== Nav contained in sidebar
 $crm-nav-pills-sidebar-border-radius: 0;

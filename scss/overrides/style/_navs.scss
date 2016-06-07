@@ -1,3 +1,13 @@
+.nav {
+
+  > li {
+
+    > a {
+      color: $crm-copy;
+    }
+  }
+}
+
 .nav-pills-stacked-sidebar {
     background: $crm-page-sidebar-bg;
 
