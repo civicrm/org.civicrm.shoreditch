@@ -4,48 +4,65 @@
 
 #branding {
   $font-size: .8rem;
+
+  %breadcrumb-divider {
+    // @include fa-icon(.6em, '\f054');
+    font-size: .6em;
+    content: '>';
+    display: inline-block;
+  }
+
+  %breadcrumb {
+    position: relative;
+    top: -5px;
+    float: left;
+  }
+
+  line-height: 20px;
   background: $crm-page-topbar-bg !important;
   color: #ffffff !important;
-  position: relative;
 
   .breadcrumb {
-    position: relative;
-    top: -40px;
-    left: -40px;
-    float: left;
-    word-spacing: -4px;
+    @extend %breadcrumb;
+    left: 10px;
+    color: transparent;
 
     > a {
-      float: left;
       color: #ffffff;
       font-size: $font-size;
-      padding-right: 5px;
       position: relative;
-      top: 35px;
-      left: 40px;
-      word-spacing: initial;
+      left: -10px;
+      padding: 0 5px;
 
-      &::after {
-        @include fa-icon(.6em, '\f054');
-        padding: 0 0 0 6px;
-        display: inline-block;
+      &:not(:last-of-type)::after {
+        @extend %breadcrumb-divider;
+        position: absolute;
+        right: -10px;
       }
+    }
+
+    & + h1::before {
+      @extend %breadcrumb-divider;
+      padding: 0 8px 0 4px;
+      position: relative;
+      top: -1px;
     }
   }
 
   h1 {
+    @extend %breadcrumb;
     color: #ffffff !important;
     font-size: $font-size !important;
-    position: relative;
-    top: -5px;
-    left: -10px;
   }
 }
-
 // The "printer" icon button
-div#printer-friendly a {
-  position: absolute;
-  right: 0;
-  top: -67px;
-  color: #ffffff;
+
+div#printer-friendly {
+  position: absolute !important;
+  right: 0 !important;
+  top: -7px !important;
+
+  a {
+    color: #ffffff;
+  }
 }

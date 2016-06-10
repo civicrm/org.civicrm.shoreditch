@@ -2,7 +2,6 @@
 @import '../overrides/style/buttons';
 
 .crm-container {
-
   %btn {
     @extend .btn;
     $btn-height: 20px;
@@ -39,14 +38,27 @@
     }
   }
 
+  // "Toolbar" buttons
+  $toolbar-top-space: 7px;
   .crm-form-block > .crm-submit-buttons {
-    %btn {
-      [value~='Save'] {
-        @extend .btn-primary;
+    &:first-of-type {
+      padding-top: $toolbar-top-space;
+      %btn {
+        @extend .btn;
+        padding-left: 23px;
+        color: #ffffff !important;
       }
+    }
 
-      :not([value~='Save']) {
-        @extend .btn-secondary;
+    &:not(:first-of-type) {
+      %btn {
+        [value~='Save'] {
+          @extend .btn-primary;
+        }
+
+        :not([value~='Save']) {
+          @extend .btn-secondary;
+        }
       }
     }
   }
@@ -107,13 +119,24 @@
 
   .crm-form-block > .crm-submit-buttons {
     min-height: 50px;
+
+    > .crm-button:first-of-type {
+      margin-left: 10px;
+    }
   }
 
+  //"Expand all" and "configure pane" buttons;
   .crm-search-form-block > a,
   .crm-search-form-block > span {
-    @extend .btn, .btn-secondary;
+    @extend .btn, .btn-secondary-outline;
     float: right;
-    margin-left: 5px;
+    border: 0;
+    color: #ffffff;
+    margin-top: $toolbar-top-space;
+  }
+
+  .crm-search-form-block > a {
+    margin-right: 10px;
   }
 
   .crm-search-form-block > span {
