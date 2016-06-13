@@ -37,6 +37,10 @@
     margin-top: 10px;
 }
 
+.btn-primary {
+    min-width: 90px;
+}
+
 // From Bootstrap 4 alpha
 .btn-secondary {
     @include button-variant(#ffffff, $gray-dark, $gray-darker);
