@@ -18,15 +18,10 @@
       padding-right: 10px;
     }
 
-
     &.crm-master-accordion-header {
       background: $brand-primary !important;
-      color: white !important;
+      color: #ffffff !important;
       font-weight: bold !important;
-
-      &::before {
-        padding-right: 0 !important;
-      }
     }
 
     .crm-close-accordion {
@@ -35,7 +30,7 @@
 
     .helpicon {
       padding-left: 15px;
-      color: white;
+      color: #ffffff;
     }
   }
 
@@ -61,6 +56,12 @@
     @extend %no-border-radius;
     border: 0;
     background: #ffffff;
+    padding: 15px;
+
+    .form-item,
+    .form-item > table {
+      margin: 0;
+    }
 
     td {
       border-right-width: 0;

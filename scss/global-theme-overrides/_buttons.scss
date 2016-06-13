@@ -1,17 +1,22 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/buttons';
 @import '../overrides/style/buttons';
 
+form#user-login-form {
+  input.form-submit {
+    @extend .btn, .btn-primary;
+  }
+}
+
 .crm-container {
   %btn {
     @extend .btn;
     $btn-height: 20px;
     text-shadow: none;
     text-transform: uppercase;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     opacity: 1 !important;
     font-size: 1em !important;
 
-    &:not([value~='Search']) {
+    &:not(.crm-form-submit) {
       @extend .btn-secondary-outline;
       border-radius: 2px;
 
@@ -24,8 +29,7 @@
       }
     }
 
-    &[value~='Save'],
-    &[value~='Search'] {
+    &.crm-form-submit {
       @extend .btn-primary;
       border-style: solid;
       border-width: 1px;
@@ -37,12 +41,13 @@
       @extend .btn-secondary;
     }
   }
-
   // "Toolbar" buttons
   $toolbar-top-space: 7px;
+
   .crm-form-block > .crm-submit-buttons {
     &:first-of-type {
       padding-top: $toolbar-top-space;
+
       %btn {
         @extend .btn;
         padding-left: 23px;
@@ -124,7 +129,6 @@
       margin-left: 10px;
     }
   }
-
   //"Expand all" and "configure pane" buttons;
   .crm-search-form-block > a,
   .crm-search-form-block > span {

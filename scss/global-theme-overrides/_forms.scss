@@ -1,0 +1,179 @@
+@import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/forms';
+@import '../overrides/style/forms';
+
+%custom-form-control {
+  @extend .form-control;
+  height: 20px;
+  line-height: 20px;
+}
+
+.crm-container,
+form#user-login-form {
+  div.form-item {
+    @extend .form-group;
+  }
+
+  label {
+    @extend .control-label;
+    font-weight: bold !important;
+  }
+
+  input[type=email],
+  input[type=password],
+  input[type=search],
+  input[type=text],
+  textarea {
+    @extend %custom-form-control;
+    width: inherit;
+  }
+}
+
+.crm-container {
+  input[type=email],
+  input[type=password],
+  input[type=search],
+  input[type=text],
+  textarea {
+    display: inline-block;
+  }
+  // "Select2" Drop-downs
+  .select2-container {
+    %arrow {
+      @include fa-icon(13px, '\f0d7');
+      display: block;
+      text-align: center;
+      color: $gray-light;
+    }
+
+    &.select2-container-multi {
+      .select2-choices,
+      .select2-choices::before {
+        @extend %arrow;
+        background: none;
+        padding-right: 3px;
+      }
+
+      .select2-choices .select2-search-field input {
+        padding-left: 10px;
+      }
+
+      &.select2-dropdown-open .select2-choices::before {
+        content: '\f002';
+      }
+
+      .select2-choices {
+        font-family: inherit;
+
+        .select2-search-choice {
+          padding: 2px 25px 2px 5px;
+          margin-top: 4px;
+          background: none;
+          border-radius: 0;
+          border-color: $brand-primary;
+
+          .select2-search-choice-close {
+            left: initial;
+            right: 5px;
+          }
+        }
+      }
+    }
+
+    .select2-choice {
+      @extend %custom-form-control;
+      box-sizing: inherit;
+      height: 30px;
+      line-height: 28px;
+      padding-top: 0;
+      padding-left: 10px;
+
+      abbr {
+        top: 0;
+      }
+    }
+
+    &.select2-container-active {
+      .select2-choices {
+        box-shadow: none;
+      }
+
+      &:not(.select2-dropdown-open) {
+        span {
+          color: $brand-primary;
+        }
+      }
+
+      &.select2-dropdown-open {
+        span {
+          color: lighten($gray-light, 30);
+        }
+      }
+    }
+
+    .select2-arrow {
+      background: none;
+      padding: 0 4px;
+
+      > b {
+        display: none;
+      }
+
+      &::before {
+        @extend %arrow;
+        width: inherit;
+      }
+    }
+
+    &.select2-dropdown-open {
+      height: 25px;
+
+      .select2-arrow::before {
+        content: '\f0d8';
+      }
+
+      .select2-choice,
+      .select2-choices {
+        @extend .select2-drop;
+      }
+    }
+
+    .select2-search-choice-close {
+      right: 35px;
+      background: none;
+
+      &::before {
+        @include fa-icon(13px, '\f057');
+        line-height: inherit;
+        vertical-align: middle;
+        text-align: right;
+        display: block;
+        color: $brand-primary;
+      }
+    }
+
+    &.select2-container-multi .select2-choices .select2-search-field input {
+      margin: 0;
+    }
+  }
+}
+// Absolute positioned "Select2" elements
+
+.select2-drop,
+.select2-drop.select2-drop-above {
+  border-radius: 0;
+  border-color: $brand-primary;
+  box-shadow: none;
+}
+
+.select2-results {
+  margin-right: 0;
+
+  .select2-result-label {
+    padding: 5px 10px;
+    color: $gray-light;
+  }
+
+  .select2-highlighted {
+    background: $gray-lighter;
+  }
+}

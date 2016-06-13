@@ -4,9 +4,9 @@
 
 #branding {
   $font-size: .8rem;
+  padding-left: 35px !important;
 
   %breadcrumb-divider {
-    // @include fa-icon(.6em, '\f054');
     font-size: .6em;
     content: '>';
     display: inline-block;
@@ -55,8 +55,8 @@
     font-size: $font-size !important;
   }
 }
-// The "printer" icon button
 
+// The "printer" icon button
 div#printer-friendly {
   position: absolute !important;
   right: 0 !important;

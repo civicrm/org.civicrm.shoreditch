@@ -4,6 +4,12 @@
 @import '../mixins/*';
 @import '../fonts/*';
 @import 'buttons';
+@import 'forms';
 @import 'accordions';
 @import 'backgrounds';
 @import 'top';
+@import 'alerts';
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
