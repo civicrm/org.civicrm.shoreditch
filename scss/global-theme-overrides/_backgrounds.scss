@@ -5,9 +5,9 @@ body {
 
 .crm-container {
   .crm-form-block {
+    border-radius: 0;
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
     padding: 0;
-
-    background: linear-gradient(to bottom, $brand-primary 50px, rgba(255, 255, 255, 0) 50px);
+    background: linear-gradient(to bottom, $brand-primary 50px, #ffffff 50px);
   }
 }

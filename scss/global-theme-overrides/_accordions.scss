@@ -22,6 +22,10 @@
       background: $brand-primary !important;
       color: #ffffff !important;
       font-weight: bold !important;
+
+      &::before {
+        color: #ffffff;
+      }
     }
 
     .crm-close-accordion {

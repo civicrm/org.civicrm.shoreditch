@@ -16,23 +16,16 @@ form#user-login-form {
     opacity: 1 !important;
     font-size: 1em !important;
 
-    &:not(.crm-form-submit) {
+    &:not(.crm-form-submit):not(.crm-close-accordion):not(.crm-clear-link) {
       @extend .btn-secondary-outline;
       border-radius: 2px;
-
-      &.css_right {
-        padding: 7px 15px !important;
-      }
-
-      .crm-i {
-        line-height: inherit;
-      }
     }
 
-    &.crm-form-submit {
+    &.crm-form-submit:not(.cancel) {
       @extend .btn-primary;
       border-style: solid;
       border-width: 1px;
+      min-width: 90px;
     }
   }
 
@@ -42,7 +35,7 @@ form#user-login-form {
     }
   }
   // "Toolbar" buttons
-  $toolbar-top-space: 7px;
+  $toolbar-top-space: 6px;
 
   .crm-form-block > .crm-submit-buttons {
     &:first-of-type {
@@ -52,19 +45,30 @@ form#user-login-form {
         @extend .btn;
         padding-left: 23px;
         color: #ffffff !important;
+        min-width: initial;
+
+        &:hover {
+          background: $gray-dark;
+        }
       }
     }
 
     &:not(:first-of-type) {
       %btn {
-        [value~='Save'] {
+        .crm-form-submit:not(.cancel) {
           @extend .btn-primary;
         }
 
-        :not([value~='Save']) {
+        .crm-form-submit.cancel,
+        :not(.crm-form-submit) {
           @extend .btn-secondary;
         }
       }
+    }
+
+    .crm-button-type-cancel input {
+      ///The default theme uses "!important"
+      color: #ffffff !important;
     }
   }
 
@@ -88,11 +92,26 @@ form#user-login-form {
     @extend %btn;
   }
 
-  .crm-hover-button {
-    padding: 7px 15px !important;
+  .crm-accordion-header,
+  .crm-form-date-wrapper {
+    a.crm-hover-button {
+      @extend .btn-xs;
+    }
+  }
+
+  a.crm-hover-button {
+    &.css_right {
+      box-sizing: content-box;
+      padding: 7px 12px !important;
+    }
+
+    &.crm-close-accordion {
+      padding: 7px 15px !important;
+    }
 
     &:hover {
-      background: $gray-dark !important;
+      background-image: none;
+      color: inherit;
     }
   }
 
@@ -109,6 +128,8 @@ form#user-login-form {
 
   .crm-i {
     text-shadow: none;
+    vertical-align: middle;
+    line-height: inherit;
   }
 
   .crm-button-type-refresh {
@@ -148,12 +169,8 @@ form#user-login-form {
     overflow: hidden;
 
     > a {
-      &:link {
-        color: #ffffff;
-      }
-
       &::before {
-        @include fa-icon(.8em);
+        @include fa-icon(.8em, '', #ffffff);
         padding: 0 15px 0 2px;
       }
 
