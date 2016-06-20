@@ -1,10 +1,12 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/forms';
 @import '../overrides/style/forms';
+$control-height: 30px;
 
 %custom-form-control {
   @extend .form-control;
-  height: 20px;
-  line-height: 20px;
+  height: $control-height;
+  line-height: $control-height;
+  box-sizing: border-box;
 }
 
 form#user-login-form {
@@ -96,7 +98,7 @@ form#user-login-form {
 
         .select2-search-choice {
           padding: 0 5px;
-          line-height: 18px;
+          line-height: 20px;
           margin-top: 4px;
           background: none;
           border-radius: 0;
@@ -139,10 +141,9 @@ form#user-login-form {
     .select2-choice {
       @extend %custom-form-control;
       box-sizing: inherit;
-      height: 30px;
-      line-height: 30px;
-      padding-top: 0;
-      padding-left: 10px;
+      height: $control-height;
+      line-height: $control-height;
+      padding: 0 10px;
 
       abbr {
         top: 0;
@@ -216,13 +217,57 @@ form#user-login-form {
     }
   }
   // Control sizes
+  $control-width: 230px;
+
+  %control-min-width {
+    min-width: $control-width;
+  }
+
+  %field-wrapper {
+    width: $control-width;
+  }
+  //Page specific
+  form.CRM_Contact_Form_Search_Advanced {
+    $control-width: 450px;
+
+    %control-min-width {
+      min-width: $control-width;
+    }
+
+    %field-wrapper {
+      width: $control-width;
+    }
+
+    table.form-layout-compressed td.label {
+      min-width: 170px;
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+    margin-top: -1px;
+    vertical-align: middle;
+  }
+
   .crm-accordion-body {
     td td {
       padding: 0;
     }
 
-    td.label {
-      vertical-align: middle;
+    td {
+      .label,
+      label {
+        vertical-align: middle;
+      }
+
+      label ~ input ~ label ~ input {
+        margin-left: 5px;
+      }
+    }
+
+    input + label {
+      display: inline-block;
     }
 
     input.crm-form-text:not(.crm-form-date) {
@@ -235,30 +280,38 @@ form#user-login-form {
         margin-top: 5px;
       }
     }
-    $control-width: 230px;
 
     .select2-container-multi,
     label ~ input.crm-form-text,
     td .crm-field-wrapper input.crm-form-text:only-child,
     td .crm-form-date-wrapper input.crm-form-text:only-child,
     td > input.crm-form-text {
-      min-width: $control-width - 26;
+      @extend %control-min-width;
+      box-sizing: border-box;
+      height: $control-height;
+      display: inline-block;
     }
 
     label ~ .select2-container,
     td .crm-field-wrapper .select2-container {
+      @extend %control-min-width;
       width: inherit !important;
-      min-width: $control-width;
     }
 
-    td > .select2-container {
+    td > .select2-container,
+    td > .select2-container-multi {
+      @extend %control-min-width;
       // Needed in order to render correctly in PhantomJS
       width: initial !important;
-      min-width: $control-width;
+      height: auto !important;
     }
 
     td .crm-field-wrapper {
-      width: $control-width;
+      @extend %field-wrapper;
+
+      label {
+        padding-right: 5px;
+      }
 
       > div {
         display: flex;
@@ -272,12 +325,12 @@ form#user-login-form {
     }
 
     .crm-form-date-wrapper {
-      .crm-form-date:not(.crm-hidden-date):not(:only-of-type) {
+      .crm-form-date:not(:only-of-type) {
         width: $control-width / 2 - 40;
         padding-right: 0;
       }
 
-      .crm-form-date:not(.crm-hidden-date):only-of-type {
+      .crm-form-date:only-of-type {
         min-width: $control-width;
       }
 
@@ -292,13 +345,17 @@ form#user-login-form {
 
         + .crm-clear-link {
           float: right;
-          margin: 0 3px 0 0;
+          margin-right: 3px;
         }
       }
     }
   }
 }
 // Absolute positioned "Select2" elements
+
+.select2-container-active.select2-drop-above .select2-choice {
+  border-top: 0;
+}
 
 .select2-drop,
 .select2-drop.select2-drop-above {
@@ -307,7 +364,9 @@ form#user-login-form {
   box-shadow: none;
 
   .select2-input {
+    border-color: $brand-primary;
     background: none !important;
+    height: $control-height !important;
   }
 
   .select2-search::before {

@@ -4668,8 +4668,9 @@ form#user-login-form input[type=password],
 form#user-login-form input[type=search],
 form#user-login-form input[type=text],
 form#user-login-form textarea, .crm-container .select2-container .select2-choice {
-  height: 20px;
-  line-height: 20px;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
 }
 
 form#user-login-form input[type=email],
@@ -4745,7 +4746,7 @@ form#user-login-form label {
 
 .crm-container .select2-container.select2-container-multi .select2-choices .select2-search-choice {
   padding: 0 5px;
-  line-height: 18px;
+  line-height: 20px;
   margin-top: 4px;
   background: none;
   border-radius: 0;
@@ -4786,8 +4787,7 @@ form#user-login-form label {
   box-sizing: inherit;
   height: 30px;
   line-height: 30px;
-  padding-top: 0;
-  padding-left: 10px;
+  padding: 0 10px;
 }
 
 .crm-container .select2-container .select2-choice abbr {
@@ -4853,12 +4853,64 @@ form#user-login-form label {
   margin: 0;
 }
 
+.crm-container .crm-accordion-body .select2-container-multi,
+.crm-container .crm-accordion-body label ~ input.crm-form-text,
+.crm-container .crm-accordion-body td .crm-field-wrapper input.crm-form-text:only-child,
+.crm-container .crm-accordion-body td .crm-form-date-wrapper input.crm-form-text:only-child,
+.crm-container .crm-accordion-body td > input.crm-form-text, .crm-container .crm-accordion-body label ~ .select2-container,
+.crm-container .crm-accordion-body td .crm-field-wrapper .select2-container, .crm-container .crm-accordion-body td > .select2-container,
+.crm-container .crm-accordion-body td > .select2-container-multi {
+  min-width: 230px;
+}
+
+.crm-container .crm-accordion-body td .crm-field-wrapper {
+  width: 230px;
+}
+
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body .select2-container-multi, .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced .select2-container-multi,
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body label ~ input.crm-form-text,
+.crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced label ~ input.crm-form-text,
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-field-wrapper input.crm-form-text:only-child,
+.crm-container .crm-accordion-body td .crm-field-wrapper form.CRM_Contact_Form_Search_Advanced input.crm-form-text:only-child,
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-form-date-wrapper input.crm-form-text:only-child,
+.crm-container .crm-accordion-body td .crm-form-date-wrapper form.CRM_Contact_Form_Search_Advanced input.crm-form-text:only-child,
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td > input.crm-form-text,
+.crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced td > input.crm-form-text, .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body label ~ .select2-container, .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced label ~ .select2-container,
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-field-wrapper .select2-container,
+.crm-container .crm-accordion-body td .crm-field-wrapper form.CRM_Contact_Form_Search_Advanced .select2-container, .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td > .select2-container, .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced td > .select2-container {
+  min-width: 450px;
+}
+
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-field-wrapper, .crm-container .crm-accordion-body td form.CRM_Contact_Form_Search_Advanced .crm-field-wrapper {
+  width: 450px;
+}
+
+.crm-container form.CRM_Contact_Form_Search_Advanced table.form-layout-compressed td.label {
+  min-width: 170px;
+}
+
+.crm-container input[type="checkbox"],
+.crm-container input[type="radio"] {
+  margin-right: 5px;
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
 .crm-container .crm-accordion-body td td {
   padding: 0;
 }
 
-.crm-container .crm-accordion-body td.label {
+.crm-container .crm-accordion-body td .label,
+.crm-container .crm-accordion-body td label {
   vertical-align: middle;
+}
+
+.crm-container .crm-accordion-body td label ~ input ~ label ~ input {
+  margin-left: 5px;
+}
+
+.crm-container .crm-accordion-body input + label {
+  display: inline-block;
 }
 
 .crm-container .crm-accordion-body input.crm-form-text:not(.crm-form-date) {
@@ -4875,22 +4927,24 @@ form#user-login-form label {
 .crm-container .crm-accordion-body td .crm-field-wrapper input.crm-form-text:only-child,
 .crm-container .crm-accordion-body td .crm-form-date-wrapper input.crm-form-text:only-child,
 .crm-container .crm-accordion-body td > input.crm-form-text {
-  min-width: 204px;
+  box-sizing: border-box;
+  height: 30px;
+  display: inline-block;
 }
 
 .crm-container .crm-accordion-body label ~ .select2-container,
 .crm-container .crm-accordion-body td .crm-field-wrapper .select2-container {
   width: inherit !important;
-  min-width: 230px;
 }
 
-.crm-container .crm-accordion-body td > .select2-container {
+.crm-container .crm-accordion-body td > .select2-container,
+.crm-container .crm-accordion-body td > .select2-container-multi {
   width: initial !important;
-  min-width: 230px;
+  height: auto !important;
 }
 
-.crm-container .crm-accordion-body td .crm-field-wrapper {
-  width: 230px;
+.crm-container .crm-accordion-body td .crm-field-wrapper label {
+  padding-right: 5px;
 }
 
 .crm-container .crm-accordion-body td .crm-field-wrapper > div {
@@ -4903,13 +4957,13 @@ form#user-login-form label {
   flex-grow: 1;
 }
 
-.crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date:not(.crm-hidden-date):not(:only-of-type) {
-  width: 75px;
+.crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date:not(:only-of-type) {
+  width: 185px;
   padding-right: 0;
 }
 
-.crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date:not(.crm-hidden-date):only-of-type {
-  min-width: 230px;
+.crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date:only-of-type {
+  min-width: 450px;
 }
 
 .crm-container .crm-accordion-body .crm-form-date-wrapper .crm-clear-link {
@@ -4924,7 +4978,11 @@ form#user-login-form label {
 
 .crm-container .crm-accordion-body .crm-form-date-wrapper ~ .crm-form-date-wrapper .crm-form-date + .crm-clear-link {
   float: right;
-  margin: 0 3px 0 0;
+  margin-right: 3px;
+}
+
+.select2-container-active.select2-drop-above .select2-choice {
+  border-top: 0;
 }
 
 .select2-drop, .crm-container .select2-container.select2-dropdown-open .select2-choice,
@@ -4941,7 +4999,9 @@ form#user-login-form label {
 .crm-container .select2-container.select2-dropdown-open .select2-choices .select2-input,
 .select2-drop.select2-drop-above .select2-input, .crm-container .select2-container.select2-dropdown-open .select2-drop-above.select2-choice .select2-input,
 .crm-container .select2-container.select2-dropdown-open .select2-drop-above.select2-choices .select2-input {
+  border-color: #3ab1c9;
   background: none !important;
+  height: 30px !important;
 }
 
 .select2-drop .select2-search::before, .crm-container .select2-container.select2-dropdown-open .select2-choice .select2-search::before,
