@@ -3,13 +3,16 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/mixins/*';
 @import '../mixins/*';
 @import '../fonts/*';
+@import '../overrides/style/*';
 @import 'buttons';
 @import 'forms';
 @import 'accordions';
 @import 'backgrounds';
 @import 'top';
 @import 'alerts';
+@import 'modals';
 
-body {
+body,
+%open-sans-font-family {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }

@@ -1,0 +1,63 @@
+.ui-dialog {
+  .help {
+    border-radius: 2px;
+  }
+
+  table {
+    @extend .table-bordered, %open-sans-font-family;
+    $border-color: $table-border-color;
+
+    tr {
+      background: #ffffff !important;
+    }
+
+    &.row-highlight tr:hover {
+      background: $gray-lighter !important;
+    }
+
+    th {
+      color: $gray-darker;
+      border-bottom: 0;
+      font-weight: bold !important;
+    }
+
+    td {
+      font-weight: 100 !important;
+    }
+
+    th,
+    tr,
+    tr td {
+
+      border: initial !important;
+      line-height: 35px;
+      padding-left: 15px;
+      border-bottom: solid 1px $table-border-color !important;
+    }
+  }
+
+  .ui-dialog-titlebar {
+    @extend .modal-header, %open-sans-font-family;
+    padding: 20px;
+    background: none !important;
+    border: none !important;
+    color: $gray-darker !important;
+
+    .ui-dialog-title {
+      @extend .modal-title, %open-sans-font-family;
+      font-size: 18px;
+    }
+  }
+
+  .ui-dialog-content {
+    @extend .modal-body, %open-sans-font-family;
+    padding: 30px;
+    margin-top: 0;
+  }
+
+  .ui-dialog-buttonpane {
+    @extend .modal-footer, %open-sans-font-family;
+    background: #ffffff;
+    border-top: 0;
+  }
+}

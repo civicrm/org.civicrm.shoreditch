@@ -8,6 +8,23 @@ body {
     border-radius: 0;
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
     padding: 0;
-    background: linear-gradient(to bottom, $brand-primary 50px, #ffffff 50px);
+
+    &.crm-search-form-block {
+      background: linear-gradient(to bottom, $brand-primary 50px, #ffffff 50px);
+    }
+
+    &:not(.crm-search-form-block) {
+      background: #ffffff;
+      padding: 10px 15px;
+    }
+  }
+
+  .crm-accordion-body table {
+    &,
+    th,
+    tr,
+    td {
+      background: none !important;
+    }
   }
 }

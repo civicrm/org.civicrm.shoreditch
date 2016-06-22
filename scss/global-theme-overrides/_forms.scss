@@ -3,7 +3,7 @@
 $control-height: 30px;
 
 %custom-form-control {
-  @extend .form-control;
+  @extend .form-control, %open-sans-font-family;
   height: $control-height;
   line-height: $control-height;
   box-sizing: border-box;
@@ -76,10 +76,46 @@ form#user-login-form {
         border-color: $gray-light;
         width: 100%;
         box-sizing: border-box;
-      }
+        font-family: inherit;
+        line-height: inherit;
 
-      .select2-choices .select2-search-field input {
-        padding-left: 10px;
+        &::before {
+          line-height: 22px;
+        }
+
+        .select2-search-choice {
+          padding: 0 15px 0 5px;
+          line-height: 20px;
+          margin-top: 4px;
+          background: none;
+          border-radius: 0;
+          border-color: $brand-primary;
+
+          > div {
+            line-height: normal;
+            padding-right: 10px;
+            display: inline-block;
+            vertical-align: text-bottom;
+          }
+
+          .select2-search-choice-close {
+            line-height: inherit;
+            padding-right: 5px;
+            position: absolute;
+            right: 0 !important;
+            left: auto !important;
+            top: 1px;
+          }
+        }
+
+        .select2-search-field {
+          margin: 0;
+          padding: 0;
+
+          input {
+            padding-left: 10px;
+          }
+        }
       }
 
       &.select2-dropdown-open .select2-choices::before {
@@ -89,32 +125,6 @@ form#user-login-form {
       &.select2-container-disabled {
         .select2-choices {
           width: inherit;
-        }
-      }
-
-      .select2-choices {
-        font-family: inherit;
-        line-height: inherit;
-
-        .select2-search-choice {
-          padding: 0 5px;
-          line-height: 20px;
-          margin-top: 4px;
-          background: none;
-          border-radius: 0;
-          border-color: $brand-primary;
-
-          .select2-search-choice-close {
-            line-height: inherit;
-            position: initial;
-            float: right;
-            padding-left: 10px;
-          }
-
-          > div {
-            line-height: inherit;
-            float: left;
-          }
         }
       }
     }
@@ -166,8 +176,10 @@ form#user-login-form {
           color: lighten($gray-light, 30);
         }
 
-        .select2-search-choice-close {
-          display: none !important;
+        &:not(.select2-container-multi) {
+          .select2-search-choice-close {
+            display: none !important;
+          }
         }
       }
     }
@@ -216,8 +228,26 @@ form#user-login-form {
       margin: 0;
     }
   }
+
+  select:not([multiple]) {
+    @extend %custom-form-control;
+    line-height: normal;
+    border-radius: 0 !important;
+    border-color: $gray-light !important;
+    background: none !important;
+    display: inline-block;
+    width: auto !important;
+    height: $control-height !important;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 10px !important;
+    position: relative;
+    top: 1px;
+  }
   // Control sizes
   $control-width: 230px;
+  $control-spacing: 15px;
 
   %control-min-width {
     min-width: $control-width;
@@ -256,6 +286,8 @@ form#user-login-form {
     }
 
     td {
+      background: none !important;
+
       .label,
       label {
         vertical-align: middle;
@@ -278,6 +310,54 @@ form#user-login-form {
       .select2-container,
       input.crm-form-text {
         margin-top: 5px;
+      }
+
+      .crm-age-range input {
+        min-width: $control-width / 2 !important;
+        margin: 0 $control-spacing;
+      }
+    }
+
+    table.form-layout-compressed {
+      td {
+        &.label {
+          min-width: 300px;
+          padding-top: $control-spacing;
+        }
+
+        &:not(.label) {
+          min-width: $control-width;
+        }
+
+        > div,
+        > select,
+        > span:not(.crm-form-date-wrapper) input,
+        > span:not(.crm-form-date-wrapper) select,
+        > input {
+          margin: $control-spacing $control-spacing $control-spacing 0 !important;
+        }
+
+        > span.crm-form-date-wrapper {
+          input {
+            margin: $control-spacing 0 !important;
+          }
+
+          a {
+            margin: $control-spacing $control-spacing / 2 !important;
+          }
+        }
+
+        label {
+          padding-right: $control-spacing;
+        }
+      }
+
+      tr td.label + td {
+         > input,
+        > div {
+          margin-right: 0 !important;
+          min-width: 100%;
+        }
       }
     }
 
@@ -325,6 +405,12 @@ form#user-login-form {
     }
 
     .crm-form-date-wrapper {
+      display: inline-block;
+
+      & ~ .crm-form-date-wrapper {
+        float: right;
+      }
+
       .crm-form-date:not(:only-of-type) {
         width: $control-width / 2 - 40;
         padding-right: 0;
@@ -364,7 +450,7 @@ form#user-login-form {
   box-shadow: none;
 
   .select2-input {
-    border-color: $brand-primary;
+    border-color: $brand-primary !important;
     background: none !important;
     height: $control-height !important;
   }
