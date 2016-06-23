@@ -135,7 +135,7 @@ form#user-login-form .editable-controls input[type=search], .editable-controls
 form#user-login-form input[type=text],
 form#user-login-form .editable-controls input[type=text], .editable-controls
 form#user-login-form textarea,
-form#user-login-form .editable-controls textarea, .editable-controls .crm-container .select2-container .select2-choice, .crm-container .select2-container .editable-controls .select2-choice, .editable-controls .crm-container select:not([multiple]), .crm-container .editable-controls select:not([multiple]) {
+form#user-login-form .editable-controls textarea, .editable-controls .crm-container .select2-container .select2-choice, .crm-container .select2-container .editable-controls .select2-choice, .editable-controls .crm-container select:not([multiple]), .crm-container .editable-controls select:not([multiple]), .editable-controls .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .editable-controls option {
   height: 27px;
   padding: 3px 5px;
 }
@@ -279,7 +279,7 @@ form#user-login-form .editable-wrap input[type=search]:focus, .editable-wrap
 form#user-login-form input[type=text]:focus,
 form#user-login-form .editable-wrap input[type=text]:focus, .editable-wrap
 form#user-login-form textarea:focus,
-form#user-login-form .editable-wrap textarea:focus, .editable-wrap .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .editable-wrap .select2-choice:focus, .editable-wrap .crm-container select:focus:not([multiple]), .crm-container .editable-wrap select:focus:not([multiple]) {
+form#user-login-form .editable-wrap textarea:focus, .editable-wrap .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .editable-wrap .select2-choice:focus, .editable-wrap .crm-container select:focus:not([multiple]), .crm-container .editable-wrap select:focus:not([multiple]), .editable-wrap .crm-container select:not([multiple]) option:focus, .crm-container select:not([multiple]) .editable-wrap option:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
   border-color: #777777;
@@ -2181,7 +2181,7 @@ form#user-login-form input[type=number],
 form#user-login-form input[type=password],
 form#user-login-form input[type=search],
 form#user-login-form input[type=text],
-form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]) {
+form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]), .crm-container select:not([multiple]) option {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2197,7 +2197,7 @@ form#user-login-form input[type=number]:focus,
 form#user-login-form input[type=password]:focus,
 form#user-login-form input[type=search]:focus,
 form#user-login-form input[type=text]:focus,
-form#user-login-form textarea:focus, .crm-container .select2-container .select2-choice:focus, .crm-container select:focus:not([multiple]) {
+form#user-login-form textarea:focus, .crm-container .select2-container .select2-choice:focus, .crm-container select:focus:not([multiple]), .crm-container select:not([multiple]) option:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -2615,7 +2615,8 @@ form#user-login-form input.ta-scroll-window[type=search],
 form#user-login-form input.ta-scroll-window[type=text],
 form#user-login-form textarea.ta-scroll-window,
 .crm-container .select2-container .ta-scroll-window.select2-choice,
-.crm-container select.ta-scroll-window:not([multiple]) {
+.crm-container select.ta-scroll-window:not([multiple]),
+.crm-container select:not([multiple]) option.ta-scroll-window {
   min-height: 120px;
   overflow: visible;
 }
@@ -6483,6 +6484,10 @@ fieldset[disabled] .btn-danger-outline:hover {
   background: none;
 }
 
+.crm-container a.crm-hover-button {
+  padding: 3px 6px;
+}
+
 .crm-container a.crm-hover-button.css_right {
   box-sizing: content-box;
   padding: 7px 12px !important;
@@ -6730,7 +6735,7 @@ form#user-login-form input[type=number],
 form#user-login-form input[type=password],
 form#user-login-form input[type=search],
 form#user-login-form input[type=text],
-form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]) {
+form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]), .crm-container select:not([multiple]) option {
   display: block;
   width: 100%;
   height: 30px;
@@ -6760,7 +6765,7 @@ form#user-login-form input[type=number]:focus,
 form#user-login-form input[type=password]:focus,
 form#user-login-form input[type=search]:focus,
 form#user-login-form input[type=text]:focus,
-form#user-login-form textarea:focus, .crm-container .select2-container .select2-choice:focus, .crm-container select:focus:not([multiple]) {
+form#user-login-form textarea:focus, .crm-container .select2-container .select2-choice:focus, .crm-container select:focus:not([multiple]), .crm-container select:not([multiple]) option:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
@@ -6778,7 +6783,7 @@ form#user-login-form input[type=number]::-moz-placeholder,
 form#user-login-form input[type=password]::-moz-placeholder,
 form#user-login-form input[type=search]::-moz-placeholder,
 form#user-login-form input[type=text]::-moz-placeholder,
-form#user-login-form textarea::-moz-placeholder, .crm-container .select2-container .select2-choice::-moz-placeholder, .crm-container select:not([multiple])::-moz-placeholder {
+form#user-login-form textarea::-moz-placeholder, .crm-container .select2-container .select2-choice::-moz-placeholder, .crm-container select:not([multiple])::-moz-placeholder, .crm-container select:not([multiple]) option::-moz-placeholder {
   color: #999;
   opacity: 1;
 }
@@ -6794,7 +6799,7 @@ form#user-login-form input[type=number]:-ms-input-placeholder,
 form#user-login-form input[type=password]:-ms-input-placeholder,
 form#user-login-form input[type=search]:-ms-input-placeholder,
 form#user-login-form input[type=text]:-ms-input-placeholder,
-form#user-login-form textarea:-ms-input-placeholder, .crm-container .select2-container .select2-choice:-ms-input-placeholder, .crm-container select:-ms-input-placeholder:not([multiple]) {
+form#user-login-form textarea:-ms-input-placeholder, .crm-container .select2-container .select2-choice:-ms-input-placeholder, .crm-container select:-ms-input-placeholder:not([multiple]), .crm-container select:not([multiple]) option:-ms-input-placeholder {
   color: #999;
 }
 
@@ -6809,7 +6814,7 @@ form#user-login-form input[type=number]::-webkit-input-placeholder,
 form#user-login-form input[type=password]::-webkit-input-placeholder,
 form#user-login-form input[type=search]::-webkit-input-placeholder,
 form#user-login-form input[type=text]::-webkit-input-placeholder,
-form#user-login-form textarea::-webkit-input-placeholder, .crm-container .select2-container .select2-choice::-webkit-input-placeholder, .crm-container select:not([multiple])::-webkit-input-placeholder {
+form#user-login-form textarea::-webkit-input-placeholder, .crm-container .select2-container .select2-choice::-webkit-input-placeholder, .crm-container select:not([multiple])::-webkit-input-placeholder, .crm-container select:not([multiple]) option::-webkit-input-placeholder {
   color: #999;
 }
 
@@ -6824,7 +6829,7 @@ form#user-login-form input[disabled][type=number],
 form#user-login-form input[disabled][type=password],
 form#user-login-form input[disabled][type=search],
 form#user-login-form input[disabled][type=text],
-form#user-login-form textarea[disabled], .crm-container .select2-container [disabled].select2-choice, .crm-container select[disabled]:not([multiple]), .form-control[readonly], .crm-container input[readonly][type=email],
+form#user-login-form textarea[disabled], .crm-container .select2-container [disabled].select2-choice, .crm-container select[disabled]:not([multiple]), .crm-container select:not([multiple]) option[disabled], .form-control[readonly], .crm-container input[readonly][type=email],
 .crm-container input[readonly][type=number],
 .crm-container input[readonly][type=password],
 .crm-container input[readonly][type=search],
@@ -6835,7 +6840,7 @@ form#user-login-form input[readonly][type=number],
 form#user-login-form input[readonly][type=password],
 form#user-login-form input[readonly][type=search],
 form#user-login-form input[readonly][type=text],
-form#user-login-form textarea[readonly], .crm-container .select2-container [readonly].select2-choice, .crm-container select[readonly]:not([multiple]),
+form#user-login-form textarea[readonly], .crm-container .select2-container [readonly].select2-choice, .crm-container select[readonly]:not([multiple]), .crm-container select:not([multiple]) option[readonly],
 fieldset[disabled] .form-control,
 fieldset[disabled] .crm-container input[type=email], .crm-container
 fieldset[disabled] input[type=email],
@@ -6886,7 +6891,9 @@ fieldset[disabled] textarea,
 fieldset[disabled] .crm-container .select2-container .select2-choice, .crm-container .select2-container
 fieldset[disabled] .select2-choice,
 fieldset[disabled] .crm-container select:not([multiple]), .crm-container
-fieldset[disabled] select:not([multiple]) {
+fieldset[disabled] select:not([multiple]),
+fieldset[disabled] .crm-container select:not([multiple]) option, .crm-container select:not([multiple])
+fieldset[disabled] option {
   background-color: #FAFBFB;
   opacity: 1;
 }
@@ -6902,7 +6909,7 @@ form#user-login-form input[disabled][type=number],
 form#user-login-form input[disabled][type=password],
 form#user-login-form input[disabled][type=search],
 form#user-login-form input[disabled][type=text],
-form#user-login-form textarea[disabled], .crm-container .select2-container [disabled].select2-choice, .crm-container select[disabled]:not([multiple]),
+form#user-login-form textarea[disabled], .crm-container .select2-container [disabled].select2-choice, .crm-container select[disabled]:not([multiple]), .crm-container select:not([multiple]) option[disabled],
 fieldset[disabled] .form-control,
 fieldset[disabled] .crm-container input[type=email], .crm-container
 fieldset[disabled] input[type=email],
@@ -6953,7 +6960,9 @@ fieldset[disabled] textarea,
 fieldset[disabled] .crm-container .select2-container .select2-choice, .crm-container .select2-container
 fieldset[disabled] .select2-choice,
 fieldset[disabled] .crm-container select:not([multiple]), .crm-container
-fieldset[disabled] select:not([multiple]) {
+fieldset[disabled] select:not([multiple]),
+fieldset[disabled] .crm-container select:not([multiple]) option, .crm-container select:not([multiple])
+fieldset[disabled] option {
   cursor: not-allowed;
 }
 
@@ -7174,7 +7183,7 @@ form#user-login-form .form-group-sm input[type=search], .form-group-sm
 form#user-login-form input[type=text],
 form#user-login-form .form-group-sm input[type=text], .form-group-sm
 form#user-login-form textarea,
-form#user-login-form .form-group-sm textarea, .form-group-sm .crm-container .select2-container .select2-choice, .crm-container .select2-container .form-group-sm .select2-choice, .form-group-sm .crm-container select:not([multiple]), .crm-container .form-group-sm select:not([multiple]) {
+form#user-login-form .form-group-sm textarea, .form-group-sm .crm-container .select2-container .select2-choice, .crm-container .select2-container .form-group-sm .select2-choice, .form-group-sm .crm-container select:not([multiple]), .crm-container .form-group-sm select:not([multiple]), .form-group-sm .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .form-group-sm option {
   height: 24px;
   padding: 2px 10px;
   font-size: 12px;
@@ -7248,7 +7257,7 @@ form#user-login-form .form-group-lg input[type=search], .form-group-lg
 form#user-login-form input[type=text],
 form#user-login-form .form-group-lg input[type=text], .form-group-lg
 form#user-login-form textarea,
-form#user-login-form .form-group-lg textarea, .form-group-lg .crm-container .select2-container .select2-choice, .crm-container .select2-container .form-group-lg .select2-choice, .form-group-lg .crm-container select:not([multiple]), .crm-container .form-group-lg select:not([multiple]) {
+form#user-login-form .form-group-lg textarea, .form-group-lg .crm-container .select2-container .select2-choice, .crm-container .select2-container .form-group-lg .select2-choice, .form-group-lg .crm-container select:not([multiple]), .crm-container .form-group-lg select:not([multiple]), .form-group-lg .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .form-group-lg option {
   height: 45px;
   padding: 10px 16px;
   font-size: 17px;
@@ -7308,7 +7317,7 @@ form#user-login-form .has-feedback input[type=search], .has-feedback
 form#user-login-form input[type=text],
 form#user-login-form .has-feedback input[type=text], .has-feedback
 form#user-login-form textarea,
-form#user-login-form .has-feedback textarea, .has-feedback .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-feedback .select2-choice, .has-feedback .crm-container select:not([multiple]), .crm-container .has-feedback select:not([multiple]) {
+form#user-login-form .has-feedback textarea, .has-feedback .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-feedback .select2-choice, .has-feedback .crm-container select:not([multiple]), .crm-container .has-feedback select:not([multiple]), .has-feedback .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .has-feedback option {
   padding-right: 37.5px;
 }
 
@@ -7377,7 +7386,9 @@ form#user-login-form
 .form-group-lg .crm-container .select2-container .select2-choice + .form-control-feedback, .crm-container .select2-container
 .form-group-lg .select2-choice + .form-control-feedback,
 .form-group-lg .crm-container select:not([multiple]) + .form-control-feedback, .crm-container
-.form-group-lg select:not([multiple]) + .form-control-feedback {
+.form-group-lg select:not([multiple]) + .form-control-feedback,
+.form-group-lg .crm-container select:not([multiple]) option + .form-control-feedback, .crm-container select:not([multiple])
+.form-group-lg option + .form-control-feedback {
   width: 45px;
   height: 45px;
   line-height: 45px;
@@ -7435,7 +7446,9 @@ form#user-login-form
 .form-group-sm .crm-container .select2-container .select2-choice + .form-control-feedback, .crm-container .select2-container
 .form-group-sm .select2-choice + .form-control-feedback,
 .form-group-sm .crm-container select:not([multiple]) + .form-control-feedback, .crm-container
-.form-group-sm select:not([multiple]) + .form-control-feedback {
+.form-group-sm select:not([multiple]) + .form-control-feedback,
+.form-group-sm .crm-container select:not([multiple]) option + .form-control-feedback, .crm-container select:not([multiple])
+.form-group-sm option + .form-control-feedback {
   width: 24px;
   height: 24px;
   line-height: 24px;
@@ -7482,7 +7495,7 @@ form#user-login-form .has-success input[type=search], .has-success
 form#user-login-form input[type=text],
 form#user-login-form .has-success input[type=text], .has-success
 form#user-login-form textarea,
-form#user-login-form .has-success textarea, .has-success .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-success .select2-choice, .has-success .crm-container select:not([multiple]), .crm-container .has-success select:not([multiple]) {
+form#user-login-form .has-success textarea, .has-success .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-success .select2-choice, .has-success .crm-container select:not([multiple]), .crm-container .has-success select:not([multiple]), .has-success .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .has-success option {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -7510,7 +7523,7 @@ form#user-login-form .has-success input[type=search]:focus, .has-success
 form#user-login-form input[type=text]:focus,
 form#user-login-form .has-success input[type=text]:focus, .has-success
 form#user-login-form textarea:focus,
-form#user-login-form .has-success textarea:focus, .has-success .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .has-success .select2-choice:focus, .has-success .crm-container select:focus:not([multiple]), .crm-container .has-success select:focus:not([multiple]) {
+form#user-login-form .has-success textarea:focus, .has-success .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .has-success .select2-choice:focus, .has-success .crm-container select:focus:not([multiple]), .crm-container .has-success select:focus:not([multiple]), .has-success .crm-container select:not([multiple]) option:focus, .crm-container select:not([multiple]) .has-success option:focus {
   border-color: #2b542c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
@@ -7567,7 +7580,7 @@ form#user-login-form .has-warning input[type=search], .has-warning
 form#user-login-form input[type=text],
 form#user-login-form .has-warning input[type=text], .has-warning
 form#user-login-form textarea,
-form#user-login-form .has-warning textarea, .has-warning .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-warning .select2-choice, .has-warning .crm-container select:not([multiple]), .crm-container .has-warning select:not([multiple]) {
+form#user-login-form .has-warning textarea, .has-warning .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-warning .select2-choice, .has-warning .crm-container select:not([multiple]), .crm-container .has-warning select:not([multiple]), .has-warning .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .has-warning option {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -7595,7 +7608,7 @@ form#user-login-form .has-warning input[type=search]:focus, .has-warning
 form#user-login-form input[type=text]:focus,
 form#user-login-form .has-warning input[type=text]:focus, .has-warning
 form#user-login-form textarea:focus,
-form#user-login-form .has-warning textarea:focus, .has-warning .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .has-warning .select2-choice:focus, .has-warning .crm-container select:focus:not([multiple]), .crm-container .has-warning select:focus:not([multiple]) {
+form#user-login-form .has-warning textarea:focus, .has-warning .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .has-warning .select2-choice:focus, .has-warning .crm-container select:focus:not([multiple]), .crm-container .has-warning select:focus:not([multiple]), .has-warning .crm-container select:not([multiple]) option:focus, .crm-container select:not([multiple]) .has-warning option:focus {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -7652,7 +7665,7 @@ form#user-login-form .has-error input[type=search], .has-error
 form#user-login-form input[type=text],
 form#user-login-form .has-error input[type=text], .has-error
 form#user-login-form textarea,
-form#user-login-form .has-error textarea, .has-error .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-error .select2-choice, .has-error .crm-container select:not([multiple]), .crm-container .has-error select:not([multiple]) {
+form#user-login-form .has-error textarea, .has-error .crm-container .select2-container .select2-choice, .crm-container .select2-container .has-error .select2-choice, .has-error .crm-container select:not([multiple]), .crm-container .has-error select:not([multiple]), .has-error .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .has-error option {
   border-color: #E48282;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -7680,7 +7693,7 @@ form#user-login-form .has-error input[type=search]:focus, .has-error
 form#user-login-form input[type=text]:focus,
 form#user-login-form .has-error input[type=text]:focus, .has-error
 form#user-login-form textarea:focus,
-form#user-login-form .has-error textarea:focus, .has-error .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .has-error .select2-choice:focus, .has-error .crm-container select:focus:not([multiple]), .crm-container .has-error select:focus:not([multiple]) {
+form#user-login-form .has-error textarea:focus, .has-error .crm-container .select2-container .select2-choice:focus, .crm-container .select2-container .has-error .select2-choice:focus, .has-error .crm-container select:focus:not([multiple]), .crm-container .has-error select:focus:not([multiple]), .has-error .crm-container select:not([multiple]) option:focus, .crm-container select:not([multiple]) .has-error option:focus {
   border-color: #db5858;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f6d6d6;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f6d6d6;
@@ -7741,7 +7754,7 @@ form#user-login-form .has-error textarea:focus, .has-error .crm-container .selec
   form#user-login-form input[type=text],
   form#user-login-form .form-inline input[type=text], .form-inline
   form#user-login-form textarea,
-  form#user-login-form .form-inline textarea, .form-inline .crm-container .select2-container .select2-choice, .crm-container .select2-container .form-inline .select2-choice, .form-inline .crm-container select:not([multiple]), .crm-container .form-inline select:not([multiple]) {
+  form#user-login-form .form-inline textarea, .form-inline .crm-container .select2-container .select2-choice, .crm-container .select2-container .form-inline .select2-choice, .form-inline .crm-container select:not([multiple]), .crm-container .form-inline select:not([multiple]), .form-inline .crm-container select:not([multiple]) option, .crm-container select:not([multiple]) .form-inline option {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -7805,7 +7818,9 @@ form#user-login-form .has-error textarea:focus, .has-error .crm-container .selec
   .form-inline .input-group .crm-container .select2-container .select2-choice, .crm-container .select2-container
   .form-inline .input-group .select2-choice,
   .form-inline .input-group .crm-container select:not([multiple]), .crm-container
-  .form-inline .input-group select:not([multiple]) {
+  .form-inline .input-group select:not([multiple]),
+  .form-inline .input-group .crm-container select:not([multiple]) option, .crm-container select:not([multiple])
+  .form-inline .input-group option {
     width: auto;
   }
   .form-inline .input-group > .form-control, .form-inline .crm-container .input-group > input[type=email], .crm-container .form-inline .input-group > input[type=email], .form-inline
@@ -7830,7 +7845,7 @@ form#user-login-form .has-error textarea:focus, .has-error .crm-container .selec
   form#user-login-form .input-group > input[type=text],
   form#user-login-form .form-inline .input-group > input[type=text], .form-inline
   form#user-login-form .input-group > textarea,
-  form#user-login-form .form-inline .input-group > textarea, .form-inline .crm-container .select2-container .input-group > .select2-choice, .crm-container .select2-container .form-inline .input-group > .select2-choice, .form-inline .crm-container .input-group > select:not([multiple]), .crm-container .form-inline .input-group > select:not([multiple]) {
+  form#user-login-form .form-inline .input-group > textarea, .form-inline .crm-container .select2-container .input-group > .select2-choice, .crm-container .select2-container .form-inline .input-group > .select2-choice, .form-inline .crm-container .input-group > select:not([multiple]), .crm-container .form-inline .input-group > select:not([multiple]), .form-inline .crm-container select:not([multiple]) .input-group > option, .crm-container select:not([multiple]) .form-inline .input-group > option {
     width: 100%;
   }
   .form-inline .control-label, .form-inline .crm-container label, .crm-container .form-inline label, .form-inline
@@ -7949,7 +7964,7 @@ form#user-login-form input[type=number],
 form#user-login-form input[type=password],
 form#user-login-form input[type=search],
 form#user-login-form input[type=text],
-form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]) {
+form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]), .crm-container select:not([multiple]) option {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -7965,7 +7980,7 @@ form#user-login-form input[type=number]:focus,
 form#user-login-form input[type=password]:focus,
 form#user-login-form input[type=search]:focus,
 form#user-login-form input[type=text]:focus,
-form#user-login-form textarea:focus, .crm-container .select2-container .select2-choice:focus, .crm-container select:focus:not([multiple]) {
+form#user-login-form textarea:focus, .crm-container .select2-container .select2-choice:focus, .crm-container select:focus:not([multiple]), .crm-container select:not([multiple]) option:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -8029,7 +8044,7 @@ form#user-login-form input[type=number],
 form#user-login-form input[type=password],
 form#user-login-form input[type=search],
 form#user-login-form input[type=text],
-form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]) {
+form#user-login-form textarea, .crm-container .select2-container .select2-choice, .crm-container select:not([multiple]), .crm-container select:not([multiple]) option {
   height: 30px;
   line-height: 30px;
   box-sizing: border-box;
@@ -8226,10 +8241,10 @@ form#user-login-form label {
 }
 
 .crm-container select:not([multiple]) {
+  cursor: pointer;
   line-height: normal;
   border-radius: 0 !important;
   border-color: #777777 !important;
-  background: none !important;
   display: inline-block;
   width: auto !important;
   height: 30px !important;
@@ -8239,23 +8254,37 @@ form#user-login-form label {
   padding-right: 10px !important;
   position: relative;
   top: 1px;
+  background: url("drop-down-arrow.svg") no-repeat right !important;
 }
 
-.crm-container .crm-accordion-body .select2-container-multi,
+.crm-container select:not([multiple]) option {
+  padding-top: 5px 0;
+  border: 0;
+}
+
+.crm-container textarea, .crm-container select, .crm-container form.CRM_Contact_Form_Search_Advanced table.form-layout-compressed td:not(.label), .crm-container .crm-accordion-body td > .select2-container-multi,
+.crm-container .crm-accordion-body td > .select2-container, .crm-container .crm-accordion-body table.form-layout-compressed tr td.label + td > input:not([type="radio"]),
+.crm-container .crm-accordion-body table.form-layout-compressed tr td.label + td > div, .crm-container .crm-accordion-body .select2-container-multi,
 .crm-container .crm-accordion-body label ~ input.crm-form-text,
 .crm-container .crm-accordion-body td .crm-field-wrapper input.crm-form-text:only-child,
 .crm-container .crm-accordion-body td .crm-form-date-wrapper input.crm-form-text:only-child,
-.crm-container .crm-accordion-body td > input.crm-form-text, .crm-container .crm-accordion-body label ~ .select2-container,
-.crm-container .crm-accordion-body td .crm-field-wrapper .select2-container, .crm-container .crm-accordion-body td > .select2-container,
-.crm-container .crm-accordion-body td > .select2-container-multi {
+.crm-container .crm-accordion-body td > input.crm-form-text, .crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date {
   min-width: 230px;
+}
+
+.crm-container .crm-accordion-body td > input[type="text"]:not(:only-of-type), .crm-container .crm-accordion-body table:not(.form-layout-compressed) .crm-age-range input {
+  min-width: 115px;
 }
 
 .crm-container .crm-accordion-body td .crm-field-wrapper {
   width: 230px;
 }
 
-.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body .select2-container-multi, .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced .select2-container-multi,
+.crm-container form.CRM_Contact_Form_Search_Advanced textarea, .crm-container form.CRM_Contact_Form_Search_Advanced select, .crm-container form.CRM_Contact_Form_Search_Advanced table.form-layout-compressed td:not(.label),
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td > .select2-container,
+.crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced td > .select2-container, .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body table.form-layout-compressed tr td.label + td > input:not([type="radio"]), .crm-container .crm-accordion-body table.form-layout-compressed tr form.CRM_Contact_Form_Search_Advanced td.label + td > input:not([type="radio"]),
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body table.form-layout-compressed tr td.label + td > div,
+.crm-container .crm-accordion-body table.form-layout-compressed tr form.CRM_Contact_Form_Search_Advanced td.label + td > div, .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body .select2-container-multi, .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced .select2-container-multi,
 .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body label ~ input.crm-form-text,
 .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced label ~ input.crm-form-text,
 .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-field-wrapper input.crm-form-text:only-child,
@@ -8263,10 +8292,12 @@ form#user-login-form label {
 .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-form-date-wrapper input.crm-form-text:only-child,
 .crm-container .crm-accordion-body td .crm-form-date-wrapper form.CRM_Contact_Form_Search_Advanced input.crm-form-text:only-child,
 .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td > input.crm-form-text,
-.crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced td > input.crm-form-text, .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body label ~ .select2-container, .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced label ~ .select2-container,
-.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-field-wrapper .select2-container,
-.crm-container .crm-accordion-body td .crm-field-wrapper form.CRM_Contact_Form_Search_Advanced .select2-container, .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td > .select2-container, .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced td > .select2-container {
+.crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced td > input.crm-form-text, .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body .crm-form-date-wrapper .crm-form-date, .crm-container .crm-accordion-body .crm-form-date-wrapper form.CRM_Contact_Form_Search_Advanced .crm-form-date {
   min-width: 450px;
+}
+
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td > input[type="text"]:not(:only-of-type), .crm-container .crm-accordion-body form.CRM_Contact_Form_Search_Advanced td > input[type="text"]:not(:only-of-type), .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body table:not(.form-layout-compressed) .crm-age-range input, .crm-container .crm-accordion-body table:not(.form-layout-compressed) .crm-age-range form.CRM_Contact_Form_Search_Advanced input {
+  min-width: 225px !important;
 }
 
 .crm-container form.CRM_Contact_Form_Search_Advanced .crm-accordion-body td .crm-field-wrapper, .crm-container .crm-accordion-body td form.CRM_Contact_Form_Search_Advanced .crm-field-wrapper {
@@ -8275,6 +8306,14 @@ form#user-login-form label {
 
 .crm-container form.CRM_Contact_Form_Search_Advanced table.form-layout-compressed td.label {
   min-width: 170px;
+}
+
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-form-date-wrapper {
+  width: 47% !important;
+}
+
+.crm-container form.CRM_Contact_Form_Search_Advanced .crm-form-date-wrapper .crm-form-date {
+  min-width: 85% !important;
 }
 
 .crm-container input[type="checkbox"],
@@ -8301,6 +8340,40 @@ form#user-login-form label {
   margin-left: 5px;
 }
 
+.crm-container .crm-accordion-body td .crm-option-edit-link {
+  margin-left: 5px;
+}
+
+.crm-container .crm-accordion-body td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
+  position: relative;
+  left: -15px;
+}
+
+.crm-container .crm-accordion-body td > .select2-container-multi,
+.crm-container .crm-accordion-body td > .select2-container {
+  width: initial !important;
+  height: auto !important;
+}
+
+.crm-container .crm-accordion-body td .crm-field-wrapper .select2-container,
+.crm-container .crm-accordion-body td label ~ .select2-container {
+  width: inherit !important;
+}
+
+.crm-container .crm-accordion-body td .crm-field-wrapper label {
+  padding-right: 5px;
+}
+
+.crm-container .crm-accordion-body td .crm-field-wrapper > div {
+  display: flex;
+  align-items: baseline;
+}
+
+.crm-container .crm-accordion-body td .crm-field-wrapper > div > input:not(:only-child) {
+  width: 20%;
+  flex-grow: 1;
+}
+
 .crm-container .crm-accordion-body input + label {
   display: inline-block;
 }
@@ -8315,17 +8388,12 @@ form#user-login-form label {
 }
 
 .crm-container .crm-accordion-body table:not(.form-layout-compressed) .crm-age-range input {
-  min-width: 225px !important;
   margin: 0 15px;
 }
 
 .crm-container .crm-accordion-body table.form-layout-compressed td.label {
   min-width: 300px;
   padding-top: 15px;
-}
-
-.crm-container .crm-accordion-body table.form-layout-compressed td:not(.label) {
-  min-width: 450px;
 }
 
 .crm-container .crm-accordion-body table.form-layout-compressed td > div,
@@ -8348,10 +8416,9 @@ form#user-login-form label {
   padding-right: 15px;
 }
 
-.crm-container .crm-accordion-body table.form-layout-compressed tr td.label + td > input,
+.crm-container .crm-accordion-body table.form-layout-compressed tr td.label + td > input:not([type="radio"]),
 .crm-container .crm-accordion-body table.form-layout-compressed tr td.label + td > div {
   margin-right: 0 !important;
-  min-width: 100%;
 }
 
 .crm-container .crm-accordion-body .select2-container-multi,
@@ -8364,31 +8431,6 @@ form#user-login-form label {
   display: inline-block;
 }
 
-.crm-container .crm-accordion-body label ~ .select2-container,
-.crm-container .crm-accordion-body td .crm-field-wrapper .select2-container {
-  width: inherit !important;
-}
-
-.crm-container .crm-accordion-body td > .select2-container,
-.crm-container .crm-accordion-body td > .select2-container-multi {
-  width: initial !important;
-  height: auto !important;
-}
-
-.crm-container .crm-accordion-body td .crm-field-wrapper label {
-  padding-right: 5px;
-}
-
-.crm-container .crm-accordion-body td .crm-field-wrapper > div {
-  display: flex;
-  align-items: baseline;
-}
-
-.crm-container .crm-accordion-body td .crm-field-wrapper > div > input:not(:only-child) {
-  width: 20%;
-  flex-grow: 1;
-}
-
 .crm-container .crm-accordion-body .crm-form-date-wrapper {
   display: inline-block;
 }
@@ -8397,13 +8439,8 @@ form#user-login-form label {
   float: right;
 }
 
-.crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date:not(:only-of-type) {
-  width: 185px;
+.crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date {
   padding-right: 0;
-}
-
-.crm-container .crm-accordion-body .crm-form-date-wrapper .crm-form-date:only-of-type {
-  min-width: 450px;
 }
 
 .crm-container .crm-accordion-body .crm-form-date-wrapper .crm-clear-link {
@@ -8796,6 +8833,8 @@ form#user-login-form input[type=text],
 form#user-login-form textarea,
 .crm-container .select2-container .select2-choice,
 .crm-container select:not([multiple]),
+.crm-container select:not([multiple]) option,
+.crm-container select,
 .ui-dialog table,
 .ui-dialog .ui-dialog-titlebar,
 .ui-dialog .ui-dialog-titlebar .ui-dialog-title,

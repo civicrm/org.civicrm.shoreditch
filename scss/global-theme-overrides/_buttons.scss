@@ -6,11 +6,9 @@ form#user-login-form {
     @extend .btn, .btn-primary;
   }
 }
-
 $button-border-radius: 2px;
 
 .crm-container {
-
   %btn {
     @extend .btn, %open-sans-font-family;
     text-shadow: none;
@@ -36,6 +34,7 @@ $button-border-radius: 2px;
       @extend .btn-secondary;
     }
   }
+
   // "Toolbar" buttons
   $toolbar-top-space: 6px;
 
@@ -108,6 +107,8 @@ $button-border-radius: 2px;
   }
 
   a.crm-hover-button {
+    padding: 3px 6px;
+
     &.css_right {
       box-sizing: content-box;
       padding: 7px 12px !important;
@@ -159,6 +160,7 @@ $button-border-radius: 2px;
       margin-left: 10px;
     }
   }
+
   //"Expand all" and "configure pane" buttons;
   .crm-search-form-block > a,
   .crm-search-form-block > span {
@@ -248,8 +250,8 @@ $button-border-radius: 2px;
     }
   }
 }
-//Absolute positioned
 
+//Absolute positioned
 .ui-dialog {
   .button {
     padding: 4px 12px !important;

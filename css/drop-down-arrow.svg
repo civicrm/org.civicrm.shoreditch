@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="28"
+   height="30.00001"
+   viewBox="0 0 27.999999 30.000009"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="drop-down-arrow.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="8.5080017"
+     inkscape:cy="15.073833"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     units="px">
+    <sodipodi:guide
+       position="9.6749594,30.000001"
+       orientation="0,1"
+       id="guide3397" />
+    <sodipodi:guide
+       position="9.6436689e-06,27.348351"
+       orientation="1,0"
+       id="guide3403" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline"
+     transform="translate(-300.44186,-142.40416)" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-300.44186,-142.40416)">
+    <path
+       id="path3386"
+       d="m 318.92022,155.88246 q 0,0.17662 -0.12908,0.3057 l -3.0434,3.0434 q -0.12907,0.12907 -0.3057,0.12907 -0.17663,0 -0.3057,-0.12907 l -3.0434,-3.0434 q -0.12908,-0.12908 -0.12908,-0.3057 0,-0.17663 0.12908,-0.3057 0.12907,-0.12907 0.30569,-0.12907 l 6.08682,0 q 0.17662,0 0.30569,0.12907 0.12908,0.12907 0.12908,0.3057 z"
+       inkscape:connector-curvature="0"
+       style="fill:#777777;fill-opacity:1" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#777777;stroke-width:1.00335848px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 300.84154,142.40416 0,30"
+       id="path3405"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -2,18 +2,14 @@
   font-family: 'FontAwesome';
   font-style: normal;
   text-rendering: auto;
-
-
   @if($font-size) {
     font-size: $font-size;
   } @else {
     font-size: .8em;
   }
-
   @if($content) {
     content: $content;
   }
-
   @if($color) {
     color: $color;
   } @else {

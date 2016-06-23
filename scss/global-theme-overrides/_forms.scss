@@ -37,7 +37,7 @@ form#user-login-form {
   input[type=search],
   input[type=text],
   textarea {
-    @extend %custom-form-control;
+    @extend %custom-form-control, %open-sans-font-family;
   }
 }
 
@@ -50,6 +50,11 @@ form#user-login-form {
     display: inline-block;
     width: 15%;
   }
+
+  textarea {
+    @extend %control-width;
+  }
+
   // "Select2" Drop-downs
   .select2-container {
     %arrow {
@@ -229,47 +234,84 @@ form#user-login-form {
     }
   }
 
-  select:not([multiple]) {
-    @extend %custom-form-control;
-    line-height: normal;
-    border-radius: 0 !important;
-    border-color: $gray-light !important;
-    background: none !important;
-    display: inline-block;
-    width: auto !important;
-    height: $control-height !important;
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    padding-right: 10px !important;
-    position: relative;
-    top: 1px;
+  select {
+    @extend %control-width, %open-sans-font-family;
+
+    &:not([multiple]) {
+      @extend %custom-form-control;
+      cursor: pointer;
+      line-height: normal;
+      border-radius: 0 !important;
+      border-color: $gray-light !important;
+      display: inline-block;
+      width: auto !important;
+      height: $control-height !important;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      padding-right: 10px !important;
+      position: relative;
+      top: 1px;
+      background: url('drop-down-arrow.svg') no-repeat right !important;
+
+      option {
+        @extend %custom-form-control;
+        padding-top: 5px 0;
+        border: 0;
+      }
+    }
   }
+
   // Control sizes
   $control-width: 230px;
   $control-spacing: 15px;
 
-  %control-min-width {
+  %control-width {
     min-width: $control-width;
+  }
+
+  %control-half-width {
+    min-width: $control-width / 2;
   }
 
   %field-wrapper {
     width: $control-width;
   }
+
   //Page specific
   form.CRM_Contact_Form_Search_Advanced {
     $control-width: 450px;
 
-    %control-min-width {
+    %control-width {
       min-width: $control-width;
+    }
+
+    %control-half-width {
+      min-width: $control-width / 2 !important;
     }
 
     %field-wrapper {
       width: $control-width;
     }
 
-    table.form-layout-compressed td.label {
-      min-width: 170px;
+    table.form-layout-compressed {
+      td {
+        &:not(.label) {
+          @extend %control-width;
+        }
+
+        &.label {
+          min-width: 170px;
+        }
+      }
+    }
+
+    .crm-form-date-wrapper {
+      width: 47% !important;
+
+      .crm-form-date {
+        min-width: 85% !important;
+      }
     }
   }
 
@@ -296,6 +338,52 @@ form#user-login-form {
       label ~ input ~ label ~ input {
         margin-left: 5px;
       }
+
+      // "Edit options" ("wrench") buttons besides the dropdowns
+      .crm-option-edit-link {
+        margin-left: 5px;
+      }
+
+      &:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
+        //Compensate the ".select2-container" right margin
+        position: relative;
+        left: -$control-spacing;
+      }
+
+      > .select2-container-multi,
+      > .select2-container {
+        @extend %control-width;
+        // Needed in order to render correctly in PhantomJS
+        width: initial !important;
+        height: auto !important;
+      }
+
+      > input[type="text"]:not(:only-of-type) {
+        @extend %control-half-width;
+      }
+
+      .crm-field-wrapper .select2-container,
+      label ~ .select2-container {
+        width: inherit !important;
+      }
+
+      .crm-field-wrapper {
+        @extend %field-wrapper;
+
+        label {
+          padding-right: 5px;
+        }
+
+        > div {
+          display: flex;
+          align-items: baseline;
+
+          > input:not(:only-child) {
+            width: 20%;
+            flex-grow: 1;
+          }
+        }
+      }
     }
 
     input + label {
@@ -313,7 +401,7 @@ form#user-login-form {
       }
 
       .crm-age-range input {
-        min-width: $control-width / 2 !important;
+        @extend %control-half-width;
         margin: 0 $control-spacing;
       }
     }
@@ -323,10 +411,6 @@ form#user-login-form {
         &.label {
           min-width: 300px;
           padding-top: $control-spacing;
-        }
-
-        &:not(.label) {
-          min-width: $control-width;
         }
 
         > div,
@@ -353,10 +437,10 @@ form#user-login-form {
       }
 
       tr td.label + td {
-         > input,
+        > input:not([type="radio"]),
         > div {
+          @extend %control-width;
           margin-right: 0 !important;
-          min-width: 100%;
         }
       }
     }
@@ -366,42 +450,10 @@ form#user-login-form {
     td .crm-field-wrapper input.crm-form-text:only-child,
     td .crm-form-date-wrapper input.crm-form-text:only-child,
     td > input.crm-form-text {
-      @extend %control-min-width;
+      @extend %control-width;
       box-sizing: border-box;
       height: $control-height;
       display: inline-block;
-    }
-
-    label ~ .select2-container,
-    td .crm-field-wrapper .select2-container {
-      @extend %control-min-width;
-      width: inherit !important;
-    }
-
-    td > .select2-container,
-    td > .select2-container-multi {
-      @extend %control-min-width;
-      // Needed in order to render correctly in PhantomJS
-      width: initial !important;
-      height: auto !important;
-    }
-
-    td .crm-field-wrapper {
-      @extend %field-wrapper;
-
-      label {
-        padding-right: 5px;
-      }
-
-      > div {
-        display: flex;
-        align-items: baseline;
-
-        > input:not(:only-child) {
-          width: 20%;
-          flex-grow: 1;
-        }
-      }
     }
 
     .crm-form-date-wrapper {
@@ -411,13 +463,9 @@ form#user-login-form {
         float: right;
       }
 
-      .crm-form-date:not(:only-of-type) {
-        width: $control-width / 2 - 40;
+      .crm-form-date {
+        @extend %control-width;
         padding-right: 0;
-      }
-
-      .crm-form-date:only-of-type {
-        min-width: $control-width;
       }
 
       .crm-clear-link {
@@ -437,8 +485,8 @@ form#user-login-form {
     }
   }
 }
-// Absolute positioned "Select2" elements
 
+// Absolute positioned "Select2" elements
 .select2-container-active.select2-drop-above .select2-choice {
   border-top: 0;
 }
