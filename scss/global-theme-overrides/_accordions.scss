@@ -1,6 +1,4 @@
 .crm-container {
-  $header-color: #f3f6f7;
-
   %no-border-radius {
     border-radius: 0 !important;
   }
@@ -9,7 +7,7 @@
     @extend %no-border-radius;
     line-height: 40px;
     background-image: none !important;
-    background: $header-color !important;
+    background: $crm-accordion-header-color !important;
     color: $gray-darker;
     font-weight: normal !important;
 

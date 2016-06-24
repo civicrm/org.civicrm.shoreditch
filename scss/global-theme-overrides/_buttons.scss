@@ -39,34 +39,39 @@ $button-border-radius: 2px;
   $toolbar-top-space: 6px;
 
   .crm-form-block {
-    &.crm-search-form-block > .crm-submit-buttons:first-of-type {
+    &.crm-search-form-block > .crm-submit-buttons {
       padding-top: $toolbar-top-space;
+      background: $crm-accordion-header-color !important;
 
-      .crm-button-type-cancel input {
-        background: none !important;
+      %btn {
+        border: 0;
+        color: $gray-darker !important;
+        min-width: initial !important;
+
+        &,
+        &:hover {
+          background: none !important;
+        }
+
+        &:hover {
+          border: 1px solid $gray-darker;
+        }
+      }
+
+      .crm-i {
+        color: $gray-darker !important;
       }
     }
 
     .crm-submit-buttons {
-      &:first-of-type {
-        %btn {
-          @extend .btn;
-          padding-left: 23px;
-          color: #ffffff !important;
-          min-width: initial;
+      %btn {
+        .crm-form-submit:not(.cancel) {
+          @extend .btn-primary;
         }
-      }
 
-      &:not(:first-of-type) {
-        %btn {
-          .crm-form-submit:not(.cancel) {
-            @extend .btn-primary;
-          }
-
-          .crm-button-type-cancel input,
-          .crm-form-submit.cancel {
-            @extend .btn-secondary;
-          }
+        .crm-button-type-cancel input,
+        .crm-form-submit.cancel {
+          @extend .btn-secondary;
         }
       }
 
@@ -154,7 +159,8 @@ $button-border-radius: 2px;
   }
 
   .crm-form-block > .crm-submit-buttons {
-    min-height: 50px;
+    min-height: 43px;
+    margin-left: 0;
 
     > .crm-button:first-of-type {
       margin-left: 10px;
@@ -167,8 +173,13 @@ $button-border-radius: 2px;
     @extend .btn, .btn-secondary-outline;
     float: right;
     border: 0;
-    color: #ffffff;
     margin-top: $toolbar-top-space;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    line-height: 26px;
+    margin-left: 15px;
   }
 
   .crm-search-form-block > a {
@@ -176,13 +187,23 @@ $button-border-radius: 2px;
   }
 
   .crm-search-form-block > span {
-    width: 12px !important;
     overflow: hidden;
 
     > a {
       &::before {
-        @include fa-icon(.8em, '', #ffffff);
-        padding: 0 15px 0 2px;
+        @include fa-icon();
+        padding: 0 15px 0 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+      }
+
+      &:hover {
+        &,
+        &::before {
+          color: #ffffff !important;
+        }
       }
 
       &[href~='#collapse']::before {

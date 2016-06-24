@@ -8,13 +8,9 @@ body {
     border-radius: 0;
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
     padding: 0;
-
-    &.crm-search-form-block {
-      background: linear-gradient(to bottom, $brand-primary 50px, #ffffff 50px);
-    }
-
+    background: #ffffff;
+    
     &:not(.crm-search-form-block) {
-      background: #ffffff;
       padding: 10px 15px;
     }
   }
