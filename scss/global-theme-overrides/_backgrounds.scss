@@ -3,23 +3,35 @@ body {
   background: $background-color !important;
 }
 
+%block-with-shadow {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
+  background: #ffffff;
+}
+
+h1.page-title {
+  @extend %block-with-shadow;
+}
+
 .crm-container {
   .crm-form-block {
+    @extend %block-with-shadow;
     border-radius: 0;
-    box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
     padding: 0;
-    background: #ffffff;
-    
+
     &:not(.crm-search-form-block) {
       padding: 10px 15px;
     }
   }
 
+  #crm-main-content-wrapper > .crm-form-block {
+    padding: 0;
+  }
+
   .crm-accordion-body table {
     &,
+    td,
     th,
-    tr,
-    td {
+    tr {
       background: none !important;
     }
   }

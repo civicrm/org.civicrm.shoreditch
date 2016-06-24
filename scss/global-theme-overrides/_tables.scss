@@ -1,0 +1,65 @@
+%crm-table {
+  @extend .table-bordered, %open-sans-font-family;
+  $border-color: $table-border-color;
+
+  tr {
+    background: #ffffff !important;
+  }
+
+  &.row-highlight tr:hover {
+    background: $gray-lighter !important;
+  }
+
+  th {
+    color: $gray-darker;
+    border-bottom: 0;
+    font-weight: bold !important;
+  }
+
+  td {
+    font-weight: 100 !important;
+  }
+
+  th,
+  tr,
+  tr td {
+    border: initial !important;
+    line-height: 35px;
+    padding-left: 15px;
+    border-bottom: solid 1px $table-border-color !important;
+  }
+
+  td .crm-hover-button {
+    &:not(:only-of-type) {
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+
+      &:first-of-type {
+        border-top-left-radius: $button-border-radius !important;
+        border-bottom-left-radius: $button-border-radius !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+
+      &:last-of-type {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: $button-border-radius !important;
+        border-bottom-right-radius: $button-border-radius !important;
+      }
+    }
+
+    + .crm-hover-button {
+      border-left: 0;
+    }
+  }
+}
+
+.crm-container {
+  > table,
+  table.report-layout {
+    @extend %crm-table;
+  }
+}

@@ -4,35 +4,7 @@
   }
 
   table {
-    @extend .table-bordered, %open-sans-font-family;
-    $border-color: $table-border-color;
-
-    tr {
-      background: #ffffff !important;
-    }
-
-    &.row-highlight tr:hover {
-      background: $gray-lighter !important;
-    }
-
-    th {
-      color: $gray-darker;
-      border-bottom: 0;
-      font-weight: bold !important;
-    }
-
-    td {
-      font-weight: 100 !important;
-    }
-
-    th,
-    tr,
-    tr td {
-      border: initial !important;
-      line-height: 35px;
-      padding-left: 15px;
-      border-bottom: solid 1px $table-border-color !important;
-    }
+    @extend %crm-table;
   }
 
   .ui-dialog-titlebar {

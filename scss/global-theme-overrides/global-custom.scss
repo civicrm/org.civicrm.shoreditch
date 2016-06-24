@@ -3,8 +3,11 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/mixins/*';
 @import '../mixins/*';
 @import '../fonts/*';
+@import '../vendor/font-awesome/variables';
+@import '../vendor/font-awesome/path';
 @import '../overrides/style/*';
 @import 'buttons';
+@import 'tables';
 @import 'forms';
 @import 'accordions';
 @import 'backgrounds';

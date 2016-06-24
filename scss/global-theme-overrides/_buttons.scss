@@ -29,7 +29,8 @@ $button-border-radius: 2px;
     }
   }
 
-  #actions {
+  #actions,
+  #crm-main-content-wrapper div.action-link  {
     %btn {
       @extend .btn-secondary;
     }
@@ -47,6 +48,7 @@ $button-border-radius: 2px;
         border: 0;
         color: $gray-darker !important;
         min-width: initial !important;
+        padding-left: 25px;
 
         &,
         &:hover {
@@ -60,6 +62,7 @@ $button-border-radius: 2px;
 
       .crm-i {
         color: $gray-darker !important;
+        line-height: inherit;
       }
     }
 
@@ -270,6 +273,29 @@ $button-border-radius: 2px;
       top: -45px;
     }
   }
+
+  .action-link {
+    line-height: 45px;
+    height: 45px !important;
+
+    a {
+      display: inline-block !important;
+      float: none !important;
+      height: 20px
+    }
+
+    .crm-i {
+      line-height: normal !important;
+    }
+
+    &:first-of-type a {
+      vertical-align: top !important;
+    }
+
+    &:not(:first-of-type) a {
+      vertical-align: bottom !important;
+    }
+  }
 }
 
 //Absolute positioned
@@ -286,31 +312,6 @@ $button-border-radius: 2px;
 
     .ui-button-text-icon-primary .ui-button-text {
       padding: 0 0 0 7px !important;
-    }
-  }
-
-  td .crm-hover-button {
-    &:not(:only-of-type) {
-      border-top-left-radius: 0 !important;
-      border-bottom-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-      border-bottom-right-radius: 0 !important;
-    }
-
-    &:first-of-type {
-      border-top-left-radius: $button-border-radius !important;
-      border-bottom-left-radius: $button-border-radius !important;
-      border-top-right-radius: 0 !important;
-      border-bottom-right-radius: 0 !important;
-      border-right: 0;
-    }
-
-    &:last-of-type {
-      border-top-left-radius: 0 !important;
-      border-bottom-left-radius: 0 !important;
-      border-top-right-radius: $button-border-radius !important;
-      border-bottom-right-radius: $button-border-radius !important;
-      border-left: 0;
     }
   }
 }
