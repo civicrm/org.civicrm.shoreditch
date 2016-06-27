@@ -62,4 +62,23 @@
   table.report-layout {
     @extend %crm-table;
   }
+
+  table {
+    td {
+      &.label {
+        vertical-align: middle !important;
+      }
+    }
+
+    &.form-layout {
+      //For "New Activity" page
+      tr[class^="crm-activity-form"] > td:not(.label):not(.view-value) {
+        padding: 0;
+      }
+
+      > tbody > tr > td.label {
+        line-height: 25px;
+      }
+    }
+  }
 }

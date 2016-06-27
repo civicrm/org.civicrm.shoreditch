@@ -315,11 +315,61 @@ form#user-login-form {
     }
   }
 
+  form.CRM_Activity_Form_Activity {
+    $control-width: 450px;
+    %control-width {
+      width: $control-width !important;
+    }
+  }
+
   input[type="checkbox"],
   input[type="radio"] {
     margin-right: 5px;
     margin-top: -1px;
     vertical-align: middle;
+  }
+
+  //Control spacing
+  table {
+    &.form-layout,
+    &.form-layout-compressed {
+      td {
+        > div.select2-container,
+        > div.select2-container ~ a,
+        > select,
+        > span:not(.crm-form-date-wrapper) input,
+        > span:not(.crm-form-date-wrapper) select,
+        > input {
+          margin: $control-spacing / 2 $control-spacing $control-spacing / 2 0 !important;
+          bottom: initial !important;
+        }
+
+        > span.crm-form-date-wrapper {
+          input,
+          a {
+            margin: $control-spacing / 2 0 !important;
+          }
+        }
+
+        label {
+          padding-right: $control-spacing;
+        }
+
+        &.view-value {
+          > div.cke {
+            width: 95%;
+          }
+        }
+      }
+
+      tr td.label + td {
+        > input:not([type="radio"]):not([type="checkbox"]),
+        > div.select2-container {
+          @extend %control-width;
+          margin-right: 0 !important;
+        }
+      }
+    }
   }
 
   .crm-accordion-body {
@@ -406,45 +456,6 @@ form#user-login-form {
       }
     }
 
-    table.form-layout-compressed {
-      td {
-        &.label {
-          min-width: 300px;
-          padding-top: $control-spacing;
-        }
-
-        > div,
-        > select,
-        > span:not(.crm-form-date-wrapper) input,
-        > span:not(.crm-form-date-wrapper) select,
-        > input {
-          margin: $control-spacing $control-spacing $control-spacing 0 !important;
-        }
-
-        > span.crm-form-date-wrapper {
-          input {
-            margin: $control-spacing 0 !important;
-          }
-
-          a {
-            margin: $control-spacing $control-spacing / 2 !important;
-          }
-        }
-
-        label {
-          padding-right: $control-spacing;
-        }
-      }
-
-      tr td.label + td {
-        > input:not([type="radio"]),
-        > div {
-          @extend %control-width;
-          margin-right: 0 !important;
-        }
-      }
-    }
-
     .select2-container-multi,
     label ~ input.crm-form-text,
     td .crm-field-wrapper input.crm-form-text:only-child,
@@ -470,8 +481,7 @@ form#user-login-form {
 
       .crm-clear-link {
         line-height: 25px;
-        margin: 0 0 0 3px;
-        padding: 0;
+        padding: 0 5px;
       }
 
       ~ .crm-form-date-wrapper .crm-form-date {
@@ -484,15 +494,79 @@ form#user-login-form {
       }
     }
   }
+
+  .cke {
+    border: solid 1px $gray-dark;
+    border-radius: 0;
+    box-shadow: none;
+
+    .cke_top,
+    .cke_bottom {
+      background: $gray-lighter;
+      border-color: $gray-dark;
+    }
+
+    .cke_toolgroup {
+      background: none;
+      border-radius: 0;
+      border: 0;
+      box-shadow: none;
+
+      a {
+        box-shadow: none;
+
+        &:hover {
+          background: lighten($gray-lighter, 10);
+        }
+      }
+    }
+
+    .cke_combo_text {
+      @extend %open-sans-font-family;
+      border-right: solid 1px $gray-dark;
+      margin: 0;
+      padding-right: 7px;
+      //Match the dropdown size;
+      width: 107px !important;
+    }
+
+    .cke_combo_button {
+      border-radius: 0 !important;
+      border: solid 1px $gray-dark !important;
+      background: #ffffff !important;
+
+      &,
+      &:active {
+        box-shadow: none !important;
+      }
+    }
+
+    .cke_combo_on {
+      box-shadow: none !important;
+    }
+
+    .cke_combo_open {
+      padding: 0 10px;
+      margin: 0 !important;
+    }
+  }
 }
 
 // Absolute positioned "Select2" elements
+
+.cke_panel {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-color: $gray-dark;
+}
+
 .select2-container-active.select2-drop-above .select2-choice {
   border-top: 0;
 }
 
 .select2-drop,
 .select2-drop.select2-drop-above {
+  background: #ffffff !important;
   border-radius: 0;
   border-color: $brand-primary;
   box-shadow: none;

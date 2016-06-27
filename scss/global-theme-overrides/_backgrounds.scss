@@ -13,12 +13,15 @@ h1.page-title {
 }
 
 .crm-container {
+  background: inherit;
+
   .crm-form-block {
     @extend %block-with-shadow;
     border-radius: 0;
     padding: 0;
 
-    &:not(.crm-search-form-block) {
+    &.crm-api-import-uploadfile-form-block,
+    .crm-form-block {
       padding: 10px 15px;
     }
   }
@@ -27,12 +30,5 @@ h1.page-title {
     padding: 0;
   }
 
-  .crm-accordion-body table {
-    &,
-    td,
-    th,
-    tr {
-      background: none !important;
-    }
-  }
+  
 }

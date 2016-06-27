@@ -54,11 +54,15 @@
     }
   }
 
+  .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
+  .section {
+    padding: 15px !important;
+  }
+
   .crm-accordion-body {
     @extend %no-border-radius;
     border: 0;
     background: #ffffff;
-    padding: 15px;
 
     .form-item,
     .form-item > table {
@@ -67,6 +71,15 @@
 
     td {
       border-right-width: 0;
+    }
+
+    > table {
+      &,
+      td,
+      th,
+      tr {
+        background: none !important;
+      }
     }
   }
 }

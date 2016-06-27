@@ -40,7 +40,8 @@ $button-border-radius: 2px;
   $toolbar-top-space: 6px;
 
   .crm-form-block {
-    &.crm-search-form-block > .crm-submit-buttons {
+    &.crm-search-form-block > .crm-submit-buttons,
+    &.crm-form-block > .crm-submit-buttons {
       padding-top: $toolbar-top-space;
       background: $crm-accordion-header-color !important;
 
@@ -95,15 +96,19 @@ $button-border-radius: 2px;
     background: none;
   }
 
+  table.form-layout > tbody > tr > td > span.crm-button.crm-i-button {
+    line-height: 35px;
+  }
+
   #crm-submit-buttons input.crm-form-submit,
   .crm-button input.crm-form-submit,
-  .crm-button.crm-i-button,
   .crm-hover-button,
   .ui-dialog-buttonset .ui-button,
   a.button,
   a.button:link,
   a.button:visited,
-  input[type=button] {
+  input[type=button],
+  input[type=file] {
     @extend %btn;
   }
 
