@@ -14,24 +14,46 @@ $control-height: 30px;
   $control-width: 230px;
   $control-spacing: 15px;
 
+  %responsive {
+    @media (max-width: 1340px) {
+      min-width: 100% !important;
+      width: 100% !important;
+    }
+
+    @media (max-width: 992px) {
+      margin: 0;
+    }
+  }
+
   %control-width {
+    @extend %responsive;
     min-width: $control-width;
   }
 
   %control-half-width {
-    min-width: $control-width / 2;
+    @media (min-width: 1065px) {
+      min-width: $control-width / 2;
+    }
+
+    @media (max-width: 1064px) {
+      min-width: 30% !important;
+      width: 30% !important;
+    }
   }
 
   %field-wrapper {
+    @extend %responsive;
     width: $control-width;
   }
 
   //Page specific
   @at-root .page-civicrm-contact & {
     td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
-      //Compensate the ".select2-container" right margin
-      position: relative;
-      left: -$control-spacing;
+      @media (min-width: 1330px) {
+        //Compensate the ".select2-container" right margin
+        position: relative;
+        left: -$control-spacing;
+      }
     }
   }
 
@@ -40,10 +62,25 @@ $control-height: 30px;
 
     %control-width {
       min-width: $control-width;
+
+      @media (max-width: 1500px) {
+        min-width: 100%;
+      }
+
+      @media (max-width: 1064px) {
+        margin: 0;
+      }
     }
 
     %control-half-width {
-      min-width: $control-width / 2 !important;
+      @media (min-width: 1065px) {
+        min-width: $control-width / 2;
+      }
+
+      @media (max-width: 1064px) {
+        min-width: 30% !important;
+        width: 30% !important;
+      }
     }
 
     %field-wrapper {
@@ -66,7 +103,7 @@ $control-height: 30px;
       width: 47% !important;
 
       .crm-form-date {
-        min-width: 85% !important;
+        min-width: 100% !important;
       }
     }
   }
@@ -91,13 +128,6 @@ $control-height: 30px;
         > input {
           margin: $control-spacing / 2 $control-spacing $control-spacing / 2 0 !important;
           bottom: initial !important;
-        }
-
-        > span.crm-form-date-wrapper {
-          input,
-          a {
-            margin: $control-spacing / 2 0 !important;
-          }
         }
 
         label {
@@ -406,7 +436,15 @@ $control-height: 30px;
 
       .crm-field-wrapper .select2-container,
       label ~ .select2-container {
-        width: inherit !important;
+        @media (min-width: 1065px) {
+          width: inherit;
+        }
+
+        @media (max-width: 1064px) {
+          min-width: 100%;
+          width: 100%;
+          margin: 0;
+        }
       }
 
       .crm-field-wrapper {
@@ -460,7 +498,9 @@ $control-height: 30px;
     }
 
     .crm-form-date-wrapper {
+      position: relative;
       display: inline-block;
+      margin: $control-spacing / 2 0 $control-spacing / 2 0 !important;
 
       & ~ .crm-form-date-wrapper {
         float: right;
@@ -472,8 +512,10 @@ $control-height: 30px;
       }
 
       .crm-clear-link {
-        line-height: 25px;
+        line-height: 26px;
         padding: 0 5px;
+        position: absolute;
+        right: 0;
       }
 
       ~ .crm-form-date-wrapper .crm-form-date {
@@ -566,7 +608,7 @@ $control-height: 30px;
   .select2-input {
     border-color: $brand-primary !important;
     background: none !important;
-    height: $control-height !important
+    height: $control-height !important;
   }
 
   .select2-search::before {
