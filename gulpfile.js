@@ -28,7 +28,7 @@ gulp.task('global-sass', function () {
     }))
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',
-      exclude: [/ui-dialog/, /select2/, /logged-in/, /cke/, // absolute positioned elements
+      exclude: [/ui-dialog/, /ui-datepicker/, /select2/, /logged-in/, /cke/, // absolute positioned elements
         /^\.crm-container/] // avoid repeating the namespace
     }), postcssDiscardDuplicates]))
     .pipe(gulp.dest('css/'));
