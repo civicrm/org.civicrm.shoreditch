@@ -1,11 +1,6 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/buttons';
 @import '../overrides/style/buttons';
 
-form#user-login-form {
-  input.form-submit {
-    @extend .btn, .btn-primary;
-  }
-}
 $button-border-radius: 2px;
 
 .crm-container {

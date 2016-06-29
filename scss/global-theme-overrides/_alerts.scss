@@ -1,5 +1,5 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/alerts';
 
-div#console {
+.logged-in div#console {
   @extend .alert, .alert-warning;
 }

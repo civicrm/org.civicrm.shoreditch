@@ -9,260 +9,8 @@ $control-height: 30px;
   box-sizing: border-box;
 }
 
-form#user-login-form {
-  input[type=email],
-  input[type=number],
-  input[type=password],
-  input[type=search],
-  input[type=text],
-  textarea {
-    width: initial;
-  }
-}
-
-.crm-container,
-form#user-login-form {
-  div.form-item {
-    @extend .form-group;
-  }
-
-  label {
-    @extend .control-label;
-    font-weight: bold !important;
-  }
-
-  input[type=email],
-  input[type=number],
-  input[type=password],
-  input[type=search],
-  input[type=text],
-  textarea {
-    @extend %custom-form-control, %open-sans-font-family;
-  }
-}
-
 .crm-container {
   $disabled-color: lighten($gray-light, 25);
-
-  input.crm-form-text,
-  input.dateplugin,
-  textarea {
-    display: inline-block;
-    width: 15%;
-  }
-
-  textarea {
-    @extend %control-width;
-  }
-
-  // "Select2" Drop-downs
-  .select2-container {
-    %arrow {
-      @include fa-icon(13px, '\f0d7');
-      display: block;
-      text-align: center;
-    }
-
-    &.select2-container-multi {
-      width: initial;
-
-      .select2-choices,
-      .select2-choices::before {
-        @extend %arrow;
-        background: none;
-        padding-right: 3px;
-
-        b {
-          display: none;
-        }
-      }
-
-      .select2-choices {
-        border-color: $gray-light;
-        width: 100%;
-        box-sizing: border-box;
-        font-family: inherit;
-        line-height: inherit;
-
-        &::before {
-          line-height: 22px;
-        }
-
-        .select2-search-choice {
-          padding: 0 15px 0 5px;
-          line-height: 20px;
-          margin-top: 4px;
-          background: none;
-          border-radius: 0;
-          border-color: $brand-primary;
-
-          > div {
-            line-height: normal;
-            padding-right: 10px;
-            display: inline-block;
-            vertical-align: text-bottom;
-          }
-
-          .select2-search-choice-close {
-            line-height: inherit;
-            padding-right: 5px;
-            position: absolute;
-            right: 0 !important;
-            left: auto !important;
-            top: 1px;
-          }
-        }
-
-        .select2-search-field {
-          margin: 0;
-          padding: 0;
-
-          input {
-            padding-left: 10px;
-          }
-        }
-      }
-
-      &.select2-dropdown-open .select2-choices::before {
-        content: '\f002';
-      }
-
-      &.select2-container-disabled {
-        .select2-choices {
-          width: inherit;
-        }
-      }
-    }
-
-    &:not(.select2-container-active).select2-container-disabled {
-      &,
-      .select2-arrow,
-      .select2-choice,
-      .select2-choices,
-      .select2-chosen {
-        &,
-        &::before {
-          border-color: $disabled-color !important;
-          color: $disabled-color !important;
-          background: $input-bg-disabled !important;
-        }
-      }
-
-      .select2-arrow {
-        border-left: 1px solid;
-      }
-    }
-
-    .select2-choice {
-      @extend %custom-form-control;
-      box-sizing: inherit;
-      height: $control-height;
-      line-height: $control-height;
-      padding: 0 10px;
-
-      abbr {
-        top: 0;
-      }
-    }
-
-    &.select2-container-active {
-      .select2-choices {
-        box-shadow: none;
-      }
-
-      &:not(.select2-dropdown-open) {
-        span {
-          color: $brand-primary;
-        }
-      }
-
-      &.select2-dropdown-open {
-        span {
-          color: lighten($gray-light, 30);
-        }
-
-        &:not(.select2-container-multi) {
-          .select2-search-choice-close {
-            display: none !important;
-          }
-        }
-      }
-    }
-
-    .select2-arrow {
-      background: none;
-      padding: 0 4px;
-
-      > b {
-        display: none;
-      }
-
-      &::before {
-        @extend %arrow;
-        width: inherit;
-      }
-    }
-
-    &.select2-dropdown-open {
-      height: 25px;
-
-      .select2-arrow::before {
-        content: '\f0d8';
-      }
-
-      .select2-choice,
-      .select2-choices {
-        @extend .select2-drop;
-      }
-    }
-
-    .select2-search-choice-close {
-      right: 35px;
-      background: none;
-
-      &::before {
-        @include fa-icon(13px, '\f057', $brand-primary);
-        line-height: inherit;
-        vertical-align: middle;
-        text-align: right;
-        display: block;
-      }
-    }
-
-    &.select2-container-multi .select2-choices .select2-search-field input {
-      margin: 0;
-    }
-  }
-
-  select {
-    @extend %control-width, %open-sans-font-family;
-
-    &:not([multiple]) {
-      @extend %custom-form-control;
-      cursor: pointer;
-      line-height: normal;
-      border-radius: 0 !important;
-      border-color: $gray-light !important;
-      display: inline-block;
-      width: auto !important;
-      height: $control-height !important;
-      appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      padding-right: 10px !important;
-      position: relative;
-      top: 1px;
-      background: url('drop-down-arrow.svg') no-repeat right !important;
-
-      option {
-        @extend %custom-form-control;
-        padding-top: 5px 0;
-        border: 0;
-      }
-    }
-  }
-
-  // Control sizes
   $control-width: 230px;
   $control-spacing: 15px;
 
@@ -279,6 +27,14 @@ form#user-login-form {
   }
 
   //Page specific
+  @at-root .page-civicrm-contact & {
+    td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
+      //Compensate the ".select2-container" right margin
+      position: relative;
+      left: -$control-spacing;
+    }
+  }
+
   form.CRM_Contact_Form_Search_Advanced {
     $control-width: 450px;
 
@@ -322,17 +78,10 @@ form#user-login-form {
     }
   }
 
-  input[type="checkbox"],
-  input[type="radio"] {
-    margin-right: 5px;
-    margin-top: -1px;
-    vertical-align: middle;
-  }
-
-  //Control spacing
   table {
     &.form-layout,
     &.form-layout-compressed {
+
       td {
         > div.select2-container,
         > div.select2-container ~ a,
@@ -372,7 +121,256 @@ form#user-login-form {
     }
   }
 
+  .form-layout,
+  .form-layout-compressed,
   .crm-accordion-body {
+    input.crm-form-text,
+    input.dateplugin,
+    textarea {
+      display: inline-block;
+      width: 15%;
+    }
+
+    textarea {
+      @extend %control-width;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+      margin-top: -1px;
+      vertical-align: middle;
+    }
+
+    div.form-item {
+      @extend .form-group;
+    }
+
+    select {
+      @extend %control-width, %open-sans-font-family;
+
+      &:not([multiple]) {
+        @extend %custom-form-control;
+        cursor: pointer;
+        line-height: normal;
+        border-radius: 0 !important;
+        border-color: $gray-light !important;
+        display: inline-block;
+        width: auto !important;
+        height: $control-height !important;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        padding-right: 10px !important;
+        position: relative;
+        top: 1px;
+        background: url('drop-down-arrow.svg') no-repeat right !important;
+
+        option {
+          @extend %custom-form-control;
+          padding-top: 5px 0;
+          border: 0;
+        }
+      }
+    }
+
+    label {
+      @extend .control-label;
+      font-weight: bold !important;
+    }
+
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=text],
+    textarea {
+      @extend %custom-form-control, %open-sans-font-family;
+    }
+
+    // "Select2" Drop-downs
+    .select2-container {
+      %arrow {
+        @include fa-icon(13px, '\f0d7');
+        display: block;
+        text-align: center;
+      }
+
+      &.select2-container-multi {
+        width: initial;
+
+        .select2-choices,
+        .select2-choices::before {
+          @extend %arrow;
+          background: none;
+          padding-right: 3px;
+
+          b {
+            display: none;
+          }
+        }
+
+        .select2-choices {
+          border-color: $gray-light;
+          width: 100%;
+          box-sizing: border-box;
+          font-family: inherit;
+          line-height: inherit;
+
+          &::before {
+            line-height: 22px;
+          }
+
+          .select2-search-choice {
+            padding: 0 15px 0 5px;
+            line-height: 20px;
+            margin-top: 4px;
+            background: none;
+            border-radius: 0;
+            border-color: $brand-primary;
+
+            > div {
+              line-height: normal;
+              padding-right: 10px;
+              display: inline-block;
+              vertical-align: text-bottom;
+            }
+
+            .select2-search-choice-close {
+              line-height: inherit;
+              padding-right: 5px;
+              position: absolute;
+              right: 0 !important;
+              left: auto !important;
+              top: 1px;
+            }
+          }
+
+          .select2-search-field {
+            margin: 0;
+            padding: 0;
+
+            input {
+              padding-left: 10px;
+            }
+          }
+        }
+
+        &.select2-dropdown-open .select2-choices::before {
+          content: '\f002';
+        }
+
+        &.select2-container-disabled {
+          .select2-choices {
+            width: inherit;
+          }
+        }
+      }
+
+      &:not(.select2-container-active).select2-container-disabled {
+        &,
+        .select2-arrow,
+        .select2-choice,
+        .select2-choices,
+        .select2-chosen {
+          &,
+          &::before {
+            border-color: $disabled-color !important;
+            color: $disabled-color !important;
+            background: $input-bg-disabled !important;
+          }
+        }
+
+        .select2-arrow {
+          border-left: 1px solid;
+        }
+      }
+
+      .select2-choice {
+        @extend %custom-form-control;
+        box-sizing: inherit;
+        height: $control-height;
+        line-height: $control-height;
+        padding: 0 10px;
+
+        abbr {
+          top: 0;
+        }
+      }
+
+      &.select2-container-active {
+        .select2-choices {
+          box-shadow: none;
+        }
+
+        &:not(.select2-dropdown-open) {
+          span {
+            color: $brand-primary;
+          }
+        }
+
+        &.select2-dropdown-open {
+          span {
+            color: lighten($gray-light, 30);
+          }
+
+          &:not(.select2-container-multi) {
+            .select2-search-choice-close {
+              display: none !important;
+            }
+          }
+        }
+      }
+
+      .select2-arrow {
+        background: none;
+        padding: 0 4px;
+
+        > b {
+          display: none;
+        }
+
+        &::before {
+          @extend %arrow;
+          width: inherit;
+        }
+      }
+
+      &.select2-dropdown-open {
+        height: 25px;
+
+        .select2-arrow::before {
+          content: '\f0d8';
+        }
+
+        .select2-choice,
+        .select2-choices {
+          @extend .select2-drop;
+        }
+      }
+
+      .select2-search-choice-close {
+        right: 35px;
+        background: none;
+
+        &::before {
+          @include fa-icon(13px, '\f057', $brand-primary);
+          line-height: inherit;
+          vertical-align: middle;
+          text-align: right;
+          display: block;
+        }
+      }
+
+      &.select2-container-multi .select2-choices .select2-search-field input {
+        margin: 0;
+      }
+
+      .select2-input {
+        border: 0 !important;
+      }
+    }
+
     td td {
       padding: 0;
     }
@@ -392,12 +390,6 @@ form#user-login-form {
       // "Edit options" ("wrench") buttons besides the dropdowns
       .crm-option-edit-link {
         margin-left: 5px;
-      }
-
-      &:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
-        //Compensate the ".select2-container" right margin
-        position: relative;
-        left: -$control-spacing;
       }
 
       > .select2-container-multi,
@@ -574,7 +566,7 @@ form#user-login-form {
   .select2-input {
     border-color: $brand-primary !important;
     background: none !important;
-    height: $control-height !important;
+    height: $control-height !important
   }
 
   .select2-search::before {
