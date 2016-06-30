@@ -1,0 +1,392 @@
+@import "../../../org.civicrm.bootstrap/scss/overrides/variables";
+
+%ui-select-opened-background {
+  background: $component-active-color !important;
+}
+
+%ui-select-no-background {
+  background: none !important;
+}
+
+%ui-select-border {
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+
+%ui-select-icon {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+%ui-select-line-height {
+  line-height: 28px !important;
+}
+
+%ui-select-font-size {
+  font-size: 13px !important;
+}
+
+%ui-select-no-padding {
+  padding: 0 !important;
+}
+
+.civihr-ui-select {
+  $disabled-color: lighten($gray-light, 25);
+  $tasks-and-assignments: '#civitasks';
+  color: $gray-light;
+
+  width: 100% !important;
+
+  &:not(.open).form-control.select2-container-disabled {
+    color: $disabled-color !important;
+    border-color: $disabled-color !important;
+    background: $input-bg-disabled !important;
+
+    .select2-chosen {
+      color: $disabled-color !important;
+    }
+
+    .select2-arrow::before,
+    .select2-choices::before {
+      border-color: $disabled-color !important;
+      color: $disabled-color !important;
+    }
+  }
+
+  &.ng-invalid {
+    &,
+    & *,
+    &.form-control {
+      border-color: $brand-danger !important;
+    }
+  }
+
+  &:not(.ng-invalid) {
+    &,
+    & * {
+      border-color: $brand-primary !important;
+    }
+  }
+
+  > *,
+  & {
+    border-radius: $input-border-radius !important;
+    box-shadow: none !important;
+  }
+
+  // For the "perfect-scrollbar" plugin to look properly
+  .ps-container {
+    .ps-scrollbar-y-rail {
+      > .ps-scrollbar-y {
+        background-color: $gray-light !important;
+      }
+
+      &:hover {
+        background-color: $gray-lighter !important;
+
+        > .ps-scrollbar-y {
+          background-color: $gray-dark !important;
+        }
+      }
+    }
+  }
+
+  .select2-drop {
+    border-radius: $input-border-radius !important;
+  }
+
+  .select2-search-choice-close {
+    @extend %ui-select-no-background;
+    width: 15px !important;
+    height: 15px;
+    right: 45px !important;
+    left: unset !important;
+
+    @at-root #{$bootstrap-namespace} & {
+      top: 2px !important;
+    }
+
+    @at-root #{$tasks-and-assignments} & {
+      top: 3px !important;
+    }
+
+    &::before {
+      @extend %ui-select-icon;
+      @extend %ui-select-font-size;
+      content: '\f057';
+      line-height: inherit !important;
+      vertical-align: middle !important;
+      text-align: right;
+      display: block;
+    }
+  }
+
+  @at-root #{$tasks-and-assignments} & a.select2-search-choice-close {
+    top: 0 !important;
+  }
+
+  &.open {
+    @extend %ui-select-opened-background;
+
+    .select2-chosen {
+      @extend %ui-select-border;
+      @extend %ui-select-no-background;
+      color: lighten($gray-light, 20) !important;
+
+      @at-root #{$bootstrap-namespace} & {
+        border: 0 !important;
+      }
+
+      @at-root #{$tasks-and-assignments} & {
+        border-bottom: 0 !important;
+        padding-left: 12px !important;
+      }
+    }
+
+    .select2-choice {
+      border-bottom: 0 !important;
+    }
+
+    .ui-select-search {
+      @extend %ui-select-border;
+      padding: 0 5px !important;
+      margin-top: 5px !important;
+    }
+
+    .select2-search-choice-close::before {
+      display: none;
+    }
+
+    .select2-arrow {
+      @extend %ui-select-no-padding;
+
+      @at-root #{$tasks-and-assignments} & {
+        line-height: 31px;
+      }
+    }
+
+    .select2-search::after {
+      @extend %ui-select-icon;
+      position: relative;
+      content: '\f002';
+      color: $gray !important;
+      right: 30px;
+    }
+
+  }
+
+  &:not(.open) {
+    border-color: $gray-light !important;
+    padding: 0 0 0 10px !important;
+
+    .select2-choice {
+      border: 0 !important;
+      @at-root #{$bootstrap-namespace} & {
+        @extend %ui-select-no-padding;
+      }
+    }
+
+    .select2-arrow {
+      @extend %ui-select-line-height;
+      @extend %ui-select-no-background;
+      width: 31px !important;
+
+      &::before {
+        content: '\f0d7';
+        @at-root #{$tasks-and-assignments} & {
+          padding-left: 2px;
+        }
+      }
+
+      @at-root #{$bootstrap-namespace} & {
+        @extend %ui-select-no-padding;
+
+        &::before {
+          display: block;
+          text-align: center;
+        }
+      }
+      @at-root #{$tasks-and-assignments} & {
+        padding-left: 10px !important;
+      }
+    }
+
+    &:not(.select2-container-disabled) .select2-arrow {
+      border-left: solid 1px $gray-light !important;
+    }
+
+    &.ng-invalid .select2-arrow {
+      border-left: solid 1px $brand-danger !important;
+    }
+
+    &.select2-container-disabled .select2-arrow {
+      border-left: solid 1px $disabled-color !important;
+    }
+
+    .select2-chosen {
+      @extend %ui-select-line-height;
+
+      &:not(.empty) {
+        color: $brand-primary !important;
+      }
+    }
+  }
+
+  .select2-input {
+    @extend %ui-select-line-height;
+    width: inherit;
+  }
+
+  .select2-arrow {
+    cursor: pointer !important;
+
+    &::before {
+      @extend %ui-select-icon;
+      color: $gray-light;
+      content: '\f0d8';
+    }
+  }
+
+  .select2-chosen {
+    @extend %ui-select-font-size;
+    color: $gray !important;
+    padding-left: 5px !important;
+  }
+
+  .select2-drop-active {
+    @extend %ui-select-opened-background;
+    border-top: 0 !important;
+    border-style: solid;
+    border-width: 1px !important;
+
+    @at-root #{$tasks-and-assignments} & {
+      @extend %ui-select-border;
+      border-top: 0 !important;
+    }
+  }
+
+  a.select2-choice {
+    @extend %ui-select-no-background;
+    @at-root #{$bootstrap-namespace} & {
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+
+  .ui-select-search {
+    @extend %ui-select-no-background;
+  }
+
+  .ui-select-match {
+    height: 100% !important;
+  }
+
+  .ui-select-choices {
+    @extend %ui-select-no-padding;
+    margin: 5px 0 0 !important;
+  }
+
+  .select2-result-label {
+    padding: 5px 10px !important;
+    color: $gray-light;
+  }
+
+  .select2-highlighted {
+    background: $gray-lighter !important;
+  }
+
+  &.ui-select-multiple {
+    @extend %ui-select-border;
+    height: 100% !important;
+
+    .ui-select-match-item {
+      @extend %ui-select-border;
+      box-sizing: border-box !important;
+      line-height: 17px !important;
+      margin: 5px 5px 5px 0 !important;
+      padding: 0 22px 0 5px !important;
+      border-radius: 0 !important;
+      background: none;
+
+      .select2-search-choice-close {
+        right: 5px !important;
+        top: 0 !important;
+
+        &::before {
+          display: block;
+        }
+      }
+    }
+
+    .select2-choices {
+      box-shadow: none !important;
+      -moz-padding-start: 0 !important;
+      -webkit-padding-start: 0 !important;
+      margin-bottom: 0 !important;
+      width: 100% !important;
+      border: 0;
+      background-image: none !important;
+      background: none !important;
+
+      &::before {
+        @extend %ui-select-line-height;
+        @extend %ui-select-icon;
+        @extend %ui-select-no-background;
+        @extend %ui-select-font-size;
+        color: $gray-light;
+        padding-left: 13px !important;
+        width: 26px !important;
+        height: 30px;
+        top: 0 !important;
+        pointer-events: none;
+        position: absolute;
+      }
+    }
+
+    &:not(.open) {
+      border-color: $gray-light !important;
+      padding-left: 0 !important;
+
+      .select2-choices::before {
+        content: '\f0d7';
+      }
+
+      .select2-input {
+        cursor: pointer;
+        padding: 0 0 0 5px !important;
+      }
+    }
+
+    &.open {
+      .select2-choices::before {
+        content: '\f002';
+        padding-right: 15px;
+      }
+
+      .ui-select-search {
+        border: 0 !important;
+        margin: 0 !important;
+      }
+
+      .select2-search-field {
+        @extend %ui-select-no-padding;
+        margin: 0 !important;
+      }
+
+      .select2-chosen {
+        min-height: 25px !important;
+        border: 0 !important;
+        line-height: 25px;
+      }
+    }
+
+    .select2-drop-active {
+      @extend %ui-select-opened-background;
+      left: -1px;
+      box-sizing: content-box !important;
+    }
+  }
+}
