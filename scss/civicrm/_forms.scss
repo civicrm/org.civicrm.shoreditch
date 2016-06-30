@@ -1,5 +1,5 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/forms';
-@import '../overrides/style/forms';
+@import '../bootstrap/overrides/style/forms';
 $control-height: 30px;
 
 %custom-form-control {
@@ -194,7 +194,7 @@ $control-height: 30px;
         padding-right: 10px !important;
         position: relative;
         top: 1px;
-        background: url('drop-down-arrow.svg') no-repeat right !important;
+        background: url('../svgs/drop-down-arrow.svg') no-repeat right !important;
 
         option {
           @extend %custom-form-control;
@@ -340,6 +340,11 @@ $control-height: 30px;
         }
 
         &.select2-dropdown-open {
+          .select2-choice,
+          .select2-choices {
+            border-color: $brand-primary;
+          }
+
           span {
             color: lighten($gray-light, 30);
           }
@@ -584,50 +589,42 @@ $control-height: 30px;
       margin: 0 !important;
     }
   }
-}
 
-// Absolute positioned "Select2" elements
-
-.cke_panel {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  border-color: $gray-dark;
-}
-
-.select2-container-active.select2-drop-above .select2-choice {
-  border-top: 0;
-}
-
-.select2-drop,
-.select2-drop.select2-drop-above {
-  background: #ffffff !important;
-  border-radius: 0;
-  border-color: $brand-primary;
-  box-shadow: none;
-
-  .select2-input {
-    border-color: $brand-primary !important;
-    background: none !important;
-    height: $control-height !important;
+  &.select2-container-active.select2-drop-above .select2-choice {
+    border-top: 0;
   }
 
-  .select2-search::before {
-    @include fa-icon(13px, '\f002');
-    position: absolute;
-    right: 15px;
-    top: 10px;
-  }
-}
+  &.select2-drop,
+  &.select2-drop.select2-drop-above {
+    background: #ffffff !important;
+    border-radius: 0;
+    border-color: $brand-primary;
+    box-shadow: none;
 
-.select2-results {
-  margin-right: 0;
+    .select2-input {
+      border-color: $brand-primary !important;
+      background: none !important;
+      height: $control-height !important;
+    }
 
-  .select2-result-label {
-    padding: 5px 10px;
-    color: $gray-light;
-  }
+    .select2-search::before {
+      @include fa-icon(13px, '\f002');
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
 
-  .select2-highlighted {
-    background: $gray-lighter;
+    .select2-results {
+      margin-right: 0;
+
+      .select2-result-label {
+        padding: 5px 10px;
+        color: $gray-light;
+      }
+
+      .select2-highlighted {
+        background: $gray-lighter;
+      }
+    }
   }
 }

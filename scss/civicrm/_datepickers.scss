@@ -1,4 +1,4 @@
-.ui-datepicker {
+.page-civicrm .ui-datepicker {
   background: #ffffff !important;
 
   &,
@@ -20,7 +20,7 @@
       background: $gray-lighter !important;
 
       &.ui-state-highlight {
-        border-color: $brand-primary !important; 
+        border-color: $brand-primary !important;
       }
     }
   }
@@ -66,7 +66,7 @@
       padding-right: 10px !important;
       position: relative;
       top: 1px;
-      background: url('drop-down-arrow.svg') no-repeat right !important;
+      background: url('../svgs/drop-down-arrow.svg') no-repeat right !important;
     }
   }
 }

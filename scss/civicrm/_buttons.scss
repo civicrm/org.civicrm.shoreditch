@@ -1,5 +1,5 @@
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/buttons';
-@import '../overrides/style/buttons';
+@import '../bootstrap/overrides/style/buttons';
 
 $button-border-radius: 2px;
 
@@ -296,22 +296,21 @@ $button-border-radius: 2px;
       vertical-align: bottom !important;
     }
   }
-}
 
-//Absolute positioned
-.ui-dialog {
-  .button {
-    padding: 4px 12px !important;
-    font-weight: normal !important;
-  }
-
-  .ui-dialog-buttonset {
-    .crm-i {
-      line-height: initial !important;
+  &.ui-dialog {
+    .button {
+      padding: 4px 12px !important;
+      font-weight: normal !important;
     }
 
-    .ui-button-text-icon-primary .ui-button-text {
-      padding: 0 0 0 7px !important;
+    .ui-dialog-buttonset {
+      .crm-i {
+        line-height: initial !important;
+      }
+
+      .ui-button-text-icon-primary .ui-button-text {
+        padding: 0 0 0 7px !important;
+      }
     }
   }
 }
