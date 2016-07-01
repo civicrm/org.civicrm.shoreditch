@@ -17,7 +17,7 @@ gulp.task('sass-bootstrap', function () {
 });
 
 gulp.task('sass-civicrm', function () {
-  gulp.src('scss/civicrm/civicrm.scss')
+  gulp.src('scss/civicrm/custom-civicrm.scss')
     .pipe(bulk())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([postcssPrefix({
