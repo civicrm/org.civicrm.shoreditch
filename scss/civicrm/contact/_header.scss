@@ -1,0 +1,93 @@
+#branding {
+  display: none;
+}
+
+#page {
+  padding: 0;
+  margin: 0;
+}
+
+.crm-summary-block-wrap {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  margin: 10px 0 0 10px;
+}
+
+.crm-summary-contactphoto {
+  width: 82px;
+  border-radius: 50%;
+  margin: 10px 45px 0 35px;
+  padding-top: 5px;
+}
+
+.crm-summary-contactname-block-without-contract {
+  background: $brand-danger !important;
+}
+
+.crm-contact-detail {
+  margin-right: 15px;
+  color: $gray-lighter;
+
+  strong {
+    color: #FFFFFF;
+  }
+}
+
+.crm-contact-detail-wrap {
+  margin-top: 8px;
+  line-height: 20px;
+}
+
+#crm-container {
+  div.crm-summary-contactname-block {
+    position: relative;
+    background: $crm-page-topbar-bg;
+    color: #FFFFFF;
+    height: 100px;
+    box-sizing: border-box;
+  }
+
+  .crm-contact-page {
+    padding: 0;
+  }
+}
+
+.crm-actions-ribbon {
+  color: #FFFFFF;
+  background: $crm-page-topbar-bg-light;
+  padding: 15px 10px;
+  margin-bottom: 0 !important;
+
+  .button {
+    border: 0 !important;
+    background-color: $brand-primary !important;
+
+    &.delete {
+      background-color: $brand-danger !important;
+    }
+  }
+
+  .crm-next-action,
+  .crm-previous-action {
+    .button {
+      background-color: transparent !important;
+      border: 1px solid #FFFFFF !important;
+      padding-left: 4px !important;
+
+      .crm-i {
+        display: none;
+      }
+    }
+  }
+}
+
+.crm-summary-display_name {
+  font-size: 24px !important;
+  font-weight: 600;
+  padding-top: 12px;
+
+  .crm-summary-link {
+    display: none;
+  }
+}

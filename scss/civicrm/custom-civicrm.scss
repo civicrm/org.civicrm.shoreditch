@@ -7,15 +7,8 @@
 @import '../bootstrap/vendor/font-awesome/variables';
 @import '../bootstrap/vendor/font-awesome/path';
 @import '../bootstrap/overrides/style/*';
-@import 'buttons';
-@import 'tables';
-@import 'forms';
-@import 'accordions';
-@import 'backgrounds';
-@import 'top';
-@import 'alerts';
-@import 'modals';
-@import 'datepickers';
+@import 'common/common';
+@import 'contact/contact';
 
 body,
 %open-sans-font-family {

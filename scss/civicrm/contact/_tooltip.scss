@@ -1,0 +1,48 @@
+#crm-contact-actions-list {
+  background: transparent !important;
+  margin-top: 20px;
+  box-shadow: $box-shadow;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    border-bottom: 10px solid #FFF;
+  }
+
+  .crm-contact-actions-list-inner {
+    background-color: #FFF;
+    padding: 10px 0 !important;
+
+    .crm-contact_actions-list {
+      border-color: $background-color !important;
+    }
+
+    ul {
+      padding: 0 !important;
+      height: 280px;
+
+      li {
+        padding: 10px !important;
+
+        &:hover {
+          background: $background-color !important;
+
+          a {
+            background: $background-color !important;
+          }
+        }
+      }
+    }
+
+    a {
+      color: $gray-dark !important;
+    }
+  }
+}
