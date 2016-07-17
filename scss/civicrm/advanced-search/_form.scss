@@ -1,0 +1,50 @@
+form.CRM_Contact_Form_Search_Advanced {
+  $control-width: 250px;
+
+  %control-width {
+    width: $control-width;
+
+    @media (max-width: 1500px) {
+      min-width: 100%;
+    }
+
+    @media (max-width: 1064px) {
+      margin: 0;
+    }
+  }
+
+  %control-half-width {
+    @media (min-width: 1065px) {
+      min-width: $control-width / 2;
+    }
+
+    @media (max-width: 1064px) {
+      min-width: 30% !important;
+      width: 30% !important;
+    }
+  }
+
+  %field-wrapper {
+    width: $control-width;
+  }
+
+  table.form-layout-compressed {
+    td {
+      &:not(.label) {
+        @extend %control-width;
+      }
+
+      &.label {
+        min-width: 170px;
+      }
+    }
+  }
+
+  .crm-form-date-wrapper {
+    width: 47% !important;
+
+    .crm-form-date {
+      min-width: 100% !important;
+    }
+  }
+}

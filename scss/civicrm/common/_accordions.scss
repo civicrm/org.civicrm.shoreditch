@@ -6,6 +6,8 @@
   .crm-accordion-header {
     @extend %no-border-radius;
     line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
     background-image: none !important;
     background: $crm-accordion-header-color !important;
     color: $gray-darker;
@@ -17,9 +19,11 @@
     }
 
     &.crm-master-accordion-header {
+      @extend %open-sans-font-family;
       background: $brand-primary !important;
       color: #ffffff !important;
-      font-weight: bold !important;
+      font-weight: 600 !important;
+      font-size: 18px;
 
       &::before {
         color: #ffffff;
@@ -37,10 +41,12 @@
   }
 
   .crm-accordion-wrapper {
+    margin-bottom: 1px;
+
     &:not(.collapsed) {
       .crm-accordion-header {
         &::before {
-          content: '\f078';
+          content: '\f107';
         }
       }
     }
@@ -48,7 +54,7 @@
     &.collapsed {
       .crm-accordion-header {
         &::before {
-          content: '\f054';
+          content: '\f105';
         }
       }
     }
@@ -80,6 +86,11 @@
       tr {
         background: none !important;
       }
+    }
+
+    .helpicon {
+      color: $brand-primary;
+      font-size: 13px;
     }
   }
 }

@@ -1,0 +1,181 @@
+#{$basic-criteria},
+#{$search-settings} {
+  br {
+    display: none;
+  }
+
+  label {
+    float: left;
+    line-height: 20px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    height: 30px;
+  }
+
+  label:first-of-type {
+    @media (min-width: $screen-sm-min) {
+      width: 100% !important;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: 11vw !important;
+    }
+
+    & ~ div:not(.select2-container) {
+      clear: left;
+    }
+  }
+
+  .crm-field-wrapper {
+    clear: left;
+
+     > div:not(.select2-container):first-of-type,
+    .postal_code-wrapper {
+      @extend label;
+    }
+  }
+
+  .crm-field-wrapper > div:not(:first-of-type) {
+    float: left;
+  }
+
+  .crm-field-wrapper > div:not(:first-of-type) {
+    float: left;
+  }
+
+  input[type='radio'] {
+    float: left;
+  }
+
+  td {
+    position: relative;
+
+    .helpicon {
+      position: absolute;
+
+      &::before {
+        position: absolute;
+        left: -20px;
+        top: 100%;
+      }
+    }
+  }
+}
+
+#{$search-settings} {
+  label {
+    float: left;
+    line-height: 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    height: 45px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    height: 45px;
+  }
+
+  td {
+    width: 30% !important;
+
+    &:nth-child(1) {
+      margin-right: 35px;
+    }
+
+    .helpicon::before {
+      position: relative;
+      top: 15px;
+      left: initial;
+    }
+  }
+}
+
+#{$display-settings-for-results} {
+  td {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    label {
+      flex: 1 1 8vw;
+    }
+
+    .helpicon {
+      padding-right: 10px;
+    }
+  }
+}
+
+#{$display-settings-for-results} {
+  td {
+    width: 30%;
+  }
+}
+
+#{$address-fields} > .form-layout tbody,
+#{$display-settings-for-results} {
+  br {
+    display: none;
+  }
+
+  .select2-choices,
+  .select2-container {
+    flex: 5 1 auto;
+    max-width: initial !important;
+
+    .select2-input {
+      width: initial !important;
+    }
+  }
+
+  input.crm-form-text {
+    flex: 5 1 10vw;
+    max-width: initial !important;
+    width: initial !important;
+  }
+
+  .description {
+    flex: 0 0 60%;
+  }
+
+  tr {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    td:nth-child(1) {
+      margin-right: 35px;
+    }
+  }
+
+  .crm-field-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+     > input:not([type="text"]):not([type="number"]),
+    .helpicon {
+      flex: 1 10 auto;
+      min-width: initial !important;
+    }
+
+    > label {
+      flex: 0 1 105px;
+
+      & ~ label {
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
