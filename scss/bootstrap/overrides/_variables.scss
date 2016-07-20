@@ -36,11 +36,11 @@ $os-font-path:   "../fonts/open-sans" !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:           #535a67 !default;
+$gray-darker:           #4d5663 !default;
 $gray-dark:             #727e8a !default;
 $gray-lighter:          #e6ecef !default;
 
-$brand-primary:         #3ab1c9 !default;
+$brand-primary:         #42afcb !default;
 $brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 $brand-success:         #8EC68A !default;
