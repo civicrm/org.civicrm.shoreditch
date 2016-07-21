@@ -1,0 +1,34 @@
+.crm-container.ui-dialog {
+  .help {
+    border-radius: 2px;
+  }
+
+  table {
+    @extend %crm-table;
+  }
+
+  .ui-dialog-titlebar {
+    @extend .modal-header, %open-sans-font-family;
+    padding: 20px;
+    background: none !important;
+    border: none !important;
+    color: $gray-darker !important;
+
+    .ui-dialog-title {
+      @extend .modal-title, %open-sans-font-family;
+      font-size: 18px;
+    }
+  }
+
+  .ui-dialog-content {
+    @extend .modal-body, %open-sans-font-family;
+    padding: 30px;
+    margin-top: 0;
+  }
+
+  .ui-dialog-buttonpane {
+    @extend .modal-footer, %open-sans-font-family;
+    background: #ffffff;
+    border-top: 0;
+  }
+}

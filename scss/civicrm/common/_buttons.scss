@@ -1,0 +1,316 @@
+@import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/buttons';
+@import '../bootstrap/overrides/style/buttons';
+
+$button-border-radius: 2px;
+
+.crm-container {
+  %btn {
+    @extend .btn, %open-sans-font-family;
+    text-shadow: none;
+    text-transform: uppercase;
+    opacity: 1 !important;
+    font-size: 1em !important;
+
+    &:not(.crm-form-submit):not(.crm-close-accordion):not(.crm-clear-link) {
+      @extend .btn-secondary-outline;
+      border-radius: $button-border-radius;
+    }
+
+    &.crm-form-submit:not(.cancel) {
+      @extend .btn-primary;
+      border-style: solid;
+      border-width: 1px;
+      min-width: 90px;
+    }
+  }
+
+  #actions,
+  #crm-main-content-wrapper div.action-link  {
+    %btn {
+      @extend .btn-secondary;
+    }
+  }
+
+  // "Toolbar" buttons
+  $toolbar-top-space: 6px;
+
+  .crm-form-block {
+    &.crm-search-form-block > .crm-submit-buttons,
+    &.crm-form-block > .crm-submit-buttons {
+      padding-top: $toolbar-top-space;
+      background: $crm-accordion-header-color !important;
+
+      %btn {
+        border: 0;
+        color: $gray-darker !important;
+        min-width: initial !important;
+        padding-left: 25px;
+
+        &,
+        &:hover {
+          background: none !important;
+        }
+
+        &:hover {
+          border: 1px solid $gray-darker;
+        }
+      }
+
+      .crm-i {
+        color: $gray-darker !important;
+        line-height: inherit;
+      }
+    }
+
+    .crm-submit-buttons {
+      %btn {
+        .crm-form-submit:not(.cancel) {
+          @extend .btn-primary;
+        }
+
+        .crm-button-type-cancel input,
+        .crm-form-submit.cancel {
+          @extend .btn-secondary;
+        }
+      }
+
+      .crm-button-type-cancel input {
+        @extend .btn-secondary;
+        ///The default theme uses "!important"
+        color: #ffffff !important;
+      }
+    }
+  }
+
+  .crm-i-button,
+  .refresh {
+    padding: 0 !important;
+  }
+
+  .crm-button {
+    background: none;
+  }
+
+  table.form-layout > tbody > tr > td > span.crm-button.crm-i-button {
+    line-height: 35px;
+  }
+
+  #crm-submit-buttons input.crm-form-submit,
+  .crm-button input.crm-form-submit,
+  .crm-hover-button,
+  .ui-dialog-buttonset .ui-button,
+  a.button,
+  a.button:link,
+  a.button:visited,
+  input[type=button],
+  input[type=file] {
+    @extend %btn;
+  }
+
+  .crm-accordion-header,
+  .crm-form-date-wrapper {
+    a.crm-hover-button {
+      @extend .btn-xs;
+    }
+  }
+
+  a.crm-hover-button {
+    padding: 3px 6px;
+
+    &.css_right {
+      box-sizing: content-box;
+      padding: 7px 12px !important;
+    }
+
+    &.crm-close-accordion {
+      padding: 7px 15px !important;
+    }
+
+    &:hover {
+      background-image: none;
+      color: inherit;
+    }
+  }
+
+  .crm-button-type-refresh,
+  .crm-submit-buttons > .crm-button {
+    padding: 0 !important;
+    border: 0 !important;
+
+    .crm-i {
+      padding: 3px;
+      background-color: transparent !important;
+      color: #ffffff;
+    }
+  }
+
+  .crm-i {
+    text-shadow: none;
+    vertical-align: middle;
+    line-height: inherit;
+  }
+
+  .crm-button-type-refresh {
+    .crm-i {
+      color: #ffffff;
+    }
+  }
+
+  .adv-search-top-submit > div {
+    float: right;
+    padding-left: 10px;
+  }
+
+  .crm-form-block > .crm-submit-buttons {
+    min-height: 43px;
+    margin-left: 0;
+
+    > .crm-button:first-of-type {
+      margin-left: 10px;
+    }
+  }
+
+  //"Expand all" and "configure pane" buttons;
+  .crm-search-form-block > a,
+  .crm-search-form-block > span {
+    @extend .btn, .btn-secondary-outline;
+    float: right;
+    border: 0;
+    margin-top: $toolbar-top-space;
+    padding: 0;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    line-height: 26px;
+    margin-left: 15px;
+  }
+
+  .crm-search-form-block > a {
+    margin-right: 10px;
+  }
+
+  .crm-search-form-block > span {
+    overflow: hidden;
+
+    > a {
+      &::before {
+        @include fa-icon();
+        padding: 0 15px 0 0;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+      }
+
+      &:hover {
+        &,
+        &::before {
+          color: #ffffff !important;
+        }
+      }
+
+      &[href~='#collapse']::before {
+        content: '\f066';
+      }
+
+      &[href~='#expand']::before {
+        content: '\f065';
+      }
+    }
+  }
+
+  ul.wizard-bar {
+    $height: 25px;
+    @extend .btn-group;
+    height: $height;
+    border: 0 !important;
+
+    > li {
+      display: inline-block !important;
+      height: $height !important;
+      line-height: $height !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+
+      &:first-child {
+        border-top-left-radius: $button-border-radius !important;
+        border-bottom-left-radius: $button-border-radius !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+
+      &:last-child {
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-right-radius: $button-border-radius !important;
+        border-bottom-right-radius: $button-border-radius !important;
+      }
+
+      &:not(.current-step) {
+        @extend %btn, .btn-default;
+
+        &:hover {
+          color: $gray-darker !important;
+        }
+      }
+
+      &.current-step {
+        @extend %btn, .btn-secondary;
+        background: $gray-dark !important;
+        border-color: $gray-darker !important;
+
+        &:hover {
+          color: #ffffff !important;
+        }
+      }
+    }
+  }
+
+  #wizard-steps {
+    + h1,
+    + h2 {
+      position: relative;
+      top: -45px;
+    }
+  }
+
+  .action-link {
+    line-height: 45px;
+    height: 45px !important;
+
+    a {
+      display: inline-block !important;
+      float: none !important;
+      height: 20px
+    }
+
+    .crm-i {
+      line-height: normal !important;
+    }
+
+    &:first-of-type a {
+      vertical-align: top !important;
+    }
+
+    &:not(:first-of-type) a {
+      vertical-align: bottom !important;
+    }
+  }
+
+  &.ui-dialog {
+    .button {
+      padding: 4px 12px !important;
+      font-weight: normal !important;
+    }
+
+    .ui-dialog-buttonset {
+      .crm-i {
+        line-height: initial !important;
+      }
+
+      .ui-button-text-icon-primary .ui-button-text {
+        padding: 0 0 0 7px !important;
+      }
+    }
+  }
+}

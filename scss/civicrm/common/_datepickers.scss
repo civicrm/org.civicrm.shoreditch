@@ -1,0 +1,72 @@
+.page-civicrm .ui-datepicker {
+  background: #ffffff !important;
+
+  &,
+  * {
+    @extend %open-sans-font-family;
+    border-radius: 0;
+    box-shadow: none !important;
+  }
+
+  * {
+    background: none !important;
+  }
+
+  &,
+  .ui-datepicker-calendar {
+    border: 1px solid $gray-dark !important;
+
+    td[data-handler] a {
+      background: $gray-lighter !important;
+
+      &.ui-state-highlight {
+        border-color: $brand-primary !important;
+      }
+    }
+  }
+
+  .ui-datepicker-header {
+    border: 0;
+    margin-bottom: 5px;
+
+    .ui-datepicker-next,
+    .ui-datepicker-prev {
+      &,
+      &.ui-state-hover {
+        height: 28px;
+      }
+      box-shadow: none !important;
+      top: 4px;
+
+      &::before {
+        display: inline-block;
+        line-height: 30px;
+      }
+    }
+
+    .ui-datepicker-prev::before {
+      @include fa-icon(13px, '\f0d9');
+      padding-left: 5px;
+    }
+
+    .ui-datepicker-next::before {
+      @include fa-icon(13px, '\f0da');
+      padding-left: 15px;
+    }
+
+    select {
+      @extend .form-control, %open-sans-font-family;
+      display: inline-block;
+      width: 75px;
+      font-size: .8em;
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      padding-left: 5px !important;
+      padding-right: 10px !important;
+      position: relative;
+      top: 1px;
+      background: url('../svgs/drop-down-arrow.svg') no-repeat right !important;
+    }
+  }
+}

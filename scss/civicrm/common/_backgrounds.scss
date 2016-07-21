@@ -1,0 +1,34 @@
+.page-civicrm {
+  &,
+  #page {
+    background: $crm-background !important;
+  }
+
+  %block-with-shadow {
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
+    background: #ffffff;
+  }
+
+  h1.page-title {
+    @extend %block-with-shadow;
+  }
+
+  .crm-container {
+    background: inherit;
+
+    .crm-form-block {
+      @extend %block-with-shadow;
+      border-radius: 0;
+      padding: 0;
+
+      &.crm-api-import-uploadfile-form-block,
+      .crm-form-block {
+        padding: 10px 15px;
+      }
+    }
+
+    #crm-main-content-wrapper > .crm-form-block {
+      padding: 0;
+    }
+  }
+}

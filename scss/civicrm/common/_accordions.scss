@@ -1,0 +1,85 @@
+.crm-container {
+  %no-border-radius {
+    border-radius: 0 !important;
+  }
+
+  .crm-accordion-header {
+    @extend %no-border-radius;
+    line-height: 40px;
+    background-image: none !important;
+    background: $crm-accordion-header-color !important;
+    color: $gray-darker;
+    font-weight: normal !important;
+
+    &::before {
+      @include fa-icon(.8em);
+      padding-right: 10px;
+    }
+
+    &.crm-master-accordion-header {
+      background: $brand-primary !important;
+      color: #ffffff !important;
+      font-weight: bold !important;
+
+      &::before {
+        color: #ffffff;
+      }
+    }
+
+    .crm-close-accordion {
+      margin-top: 5px;
+    }
+
+    .helpicon {
+      padding-left: 15px;
+      color: #ffffff;
+    }
+  }
+
+  .crm-accordion-wrapper {
+    &:not(.collapsed) {
+      .crm-accordion-header {
+        &::before {
+          content: '\f078';
+        }
+      }
+    }
+
+    &.collapsed {
+      .crm-accordion-header {
+        &::before {
+          content: '\f054';
+        }
+      }
+    }
+  }
+
+  .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
+  .section {
+    padding: 15px !important;
+  }
+
+  .crm-accordion-body {
+    @extend %no-border-radius;
+    border: 0;
+    background: #ffffff;
+
+    .form-item,
+    .form-item > table {
+      margin: 0;
+    }
+
+    td {
+      border-right-width: 0;
+    }
+
+    > table {
+      &,
+      td,
+      th,
+      tr {
+        background: none !important;
+      }
+    }
+  }
+}
