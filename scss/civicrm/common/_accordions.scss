@@ -37,6 +37,11 @@
     .helpicon {
       padding-left: 15px;
       color: #ffffff;
+      opacity: 1;
+
+      &:hover{
+        opacity: .8;
+      }
     }
   }
 
