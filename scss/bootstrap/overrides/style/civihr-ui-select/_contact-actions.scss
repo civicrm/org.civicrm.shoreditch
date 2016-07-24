@@ -1,0 +1,11 @@
+#civihr-ui-select-contact {
+  padding: 10px;
+  background: $mid-grey;
+  border: solid 1px;
+  border-color: darken($mid-grey, 10) !important;
+  margin: 5px;
+
+  .crm-add-entity {
+    padding-right: 10px;
+  }
+}
