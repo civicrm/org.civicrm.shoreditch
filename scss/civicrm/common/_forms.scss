@@ -28,6 +28,11 @@ $control-height: 30px;
   %control-width {
     @extend %responsive;
     min-width: $control-width;
+
+    &.select2-container,
+    &.select2-choice {
+      width: $control-width !important;
+    }
   }
 
   %control-half-width {
@@ -43,7 +48,7 @@ $control-height: 30px;
 
   %field-wrapper {
     @extend %responsive;
-    width: $control-width;
+    width: 100% !important;
   }
 
   //Page specific
@@ -57,59 +62,7 @@ $control-height: 30px;
     }
   }
 
-  form.CRM_Contact_Form_Search_Advanced {
-    $control-width: 450px;
-
-    %control-width {
-      min-width: $control-width;
-
-      @media (max-width: 1500px) {
-        min-width: 100%;
-      }
-
-      @media (max-width: 1064px) {
-        margin: 0;
-      }
-    }
-
-    %control-half-width {
-      @media (min-width: 1065px) {
-        min-width: $control-width / 2;
-      }
-
-      @media (max-width: 1064px) {
-        min-width: 30% !important;
-        width: 30% !important;
-      }
-    }
-
-    %field-wrapper {
-      width: $control-width;
-    }
-
-    table.form-layout-compressed {
-      td {
-        &:not(.label) {
-          @extend %control-width;
-        }
-
-        &.label {
-          min-width: 170px;
-        }
-      }
-    }
-
-    .crm-form-date-wrapper {
-      width: 47% !important;
-
-      .crm-form-date {
-        min-width: 100% !important;
-      }
-    }
-  }
-
   form.CRM_Activity_Form_Activity {
-    $control-width: 450px;
     %control-width {
       width: $control-width !important;
     }
@@ -128,10 +81,6 @@ $control-height: 30px;
         > input {
           margin: $control-spacing / 2 $control-spacing $control-spacing / 2 0 !important;
           bottom: initial !important;
-        }
-
-        label {
-          padding-right: $control-spacing;
         }
 
         &.view-value {
@@ -206,7 +155,7 @@ $control-height: 30px;
 
     label {
       @extend .control-label;
-      font-weight: bold !important;
+      font-weight: 600 !important;
     }
 
     input[type=email],
@@ -220,6 +169,10 @@ $control-height: 30px;
 
     // "Select2" Drop-downs
     .select2-container {
+      @media (min-width: $screen-lg-min) {
+        width: $control-width !important;
+      }
+
       %arrow {
         @include fa-icon(13px, '\f0d7');
         display: block;
@@ -227,8 +180,6 @@ $control-height: 30px;
       }
 
       &.select2-container-multi {
-        width: initial;
-
         .select2-choices,
         .select2-choices::before {
           @extend %arrow;

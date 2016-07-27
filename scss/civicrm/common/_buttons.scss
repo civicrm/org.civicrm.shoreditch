@@ -18,8 +18,7 @@ $button-border-radius: 2px;
 
     &.crm-form-submit:not(.cancel) {
       @extend .btn-primary;
-      border-style: solid;
-      border-width: 1px;
+      border: 0;
       min-width: 90px;
     }
   }
@@ -154,11 +153,6 @@ $button-border-radius: 2px;
     .crm-i {
       color: #ffffff;
     }
-  }
-
-  .adv-search-top-submit > div {
-    float: right;
-    padding-left: 10px;
   }
 
   .crm-form-block > .crm-submit-buttons {

@@ -1,0 +1,47 @@
+.crm-container {
+  @import 'variables';
+  @import 'labels';
+
+  #{$search-settings},
+  #{$bottom} {
+    .fa-check {
+      display: none;
+    }
+  }
+
+  #{$bottom} {
+    padding: 23px 40px 33px;
+  }
+
+  #{$search-settings}{
+    td {
+      float: left;
+      width: 20%;
+
+      &:nth-child(3) {
+        clear: left;
+      }
+    }
+
+    .adv-search-top-submit {
+      border-top: solid 1px $crm-background;
+      width: 100% !important;
+      padding-top: 20px;
+      margin-top: 20px;
+
+      > div {
+        float: left;
+
+        &:nth-child(1) {
+          padding-right: 10px;
+        }
+
+        &:nth-child(2) {
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
