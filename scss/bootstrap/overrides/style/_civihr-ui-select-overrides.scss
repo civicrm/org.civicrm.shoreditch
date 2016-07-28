@@ -31,9 +31,9 @@
 }
 
 .civihr-ui-select {
-  $disabled-color: lighten($gray-light, 25);
+  $disabled-color: lighten($gray-dark, 25);
   $tasks-and-assignments: '#civitasks';
-  color: $gray-light;
+  color: $gray-dark;
 
   width: 100% !important;
 
@@ -131,7 +131,7 @@
     .select2-chosen {
       @extend %ui-select-border;
       @extend %ui-select-no-background;
-      color: lighten($gray-light, 20) !important;
+      color: lighten($gray-dark, 20) !important;
 
       @at-root #{$bootstrap-namespace} & {
         border: 0 !important;
@@ -176,7 +176,7 @@
   }
 
   &:not(.open) {
-    border-color: $gray-light !important;
+    border-color: $gray-dark !important;
     padding: 0 0 0 10px !important;
 
     .select2-choice {
@@ -212,7 +212,7 @@
     }
 
     &:not(.select2-container-disabled) .select2-arrow {
-      border-left: solid 1px $gray-light !important;
+      border-left: solid 1px $gray-dark !important;
     }
 
     &.ng-invalid .select2-arrow {
@@ -242,7 +242,7 @@
 
     &::before {
       @extend %ui-select-icon;
-      color: $gray-light;
+      color: $gray-dark;
       content: '\f0d8';
     }
   }
@@ -289,7 +289,7 @@
 
   .select2-result-label {
     padding: 5px 10px !important;
-    color: $gray-light;
+    color: $gray-dark;
   }
 
   .select2-highlighted {
@@ -334,7 +334,7 @@
         @extend %ui-select-icon;
         @extend %ui-select-no-background;
         @extend %ui-select-font-size;
-        color: $gray-light;
+        color: $gray-dark;
         padding-left: 13px !important;
         width: 26px !important;
         height: 30px;
@@ -345,7 +345,7 @@
     }
 
     &:not(.open) {
-      border-color: $gray-light !important;
+      border-color: $gray-dark !important;
       padding-left: 0 !important;
 
       .select2-choices::before {

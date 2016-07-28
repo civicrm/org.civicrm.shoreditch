@@ -10,7 +10,7 @@ $control-height: 30px;
 }
 
 .crm-container {
-  $disabled-color: lighten($gray-light, 25);
+  $disabled-color: lighten($gray-dark, 25);
   $control-width: 230px;
   $control-spacing: 15px;
 
@@ -133,7 +133,7 @@ $control-height: 30px;
         cursor: pointer;
         line-height: normal;
         border-radius: 0 !important;
-        border-color: $gray-light !important;
+        border-color: $gray-dark !important;
         display: inline-block;
         width: auto !important;
         height: $control-height !important;
@@ -192,7 +192,7 @@ $control-height: 30px;
         }
 
         .select2-choices {
-          border-color: $gray-light;
+          border-color: $gray-dark;
           width: 100%;
           box-sizing: border-box;
           font-family: inherit;
@@ -570,7 +570,7 @@ $control-height: 30px;
 
       .select2-result-label {
         padding: 5px 10px;
-        color: $gray-light;
+        color: $gray-dark;
       }
 
       .select2-highlighted {

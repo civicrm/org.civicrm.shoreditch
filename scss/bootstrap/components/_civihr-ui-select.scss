@@ -8,10 +8,10 @@
   }
 
   &__custom-options {
-    background: lighten($gray-lighter, 5) !important;
+    background: lighten($gray-dark, 5) !important;
     padding: 5px 10px !important;
     margin: 5px 0 !important;
-    border: solid 1px $gray-lighter !important;
+    border: solid 1px $gray-dark !important;
     color: $gray;
   }
 
@@ -20,7 +20,7 @@
   }
 
   &__button-group {
-    border-top: solid 1px $gray-lighter !important;
+    border-top: solid 1px $gray-dark !important;
     padding-top: 10px !important;
     margin-top: 10px !important;
   }

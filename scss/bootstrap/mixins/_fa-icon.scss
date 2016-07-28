@@ -13,6 +13,6 @@
   @if($color) {
     color: $color;
   } @else {
-    color: $gray-light;
+    color: $gray-dark;
   }
 }
