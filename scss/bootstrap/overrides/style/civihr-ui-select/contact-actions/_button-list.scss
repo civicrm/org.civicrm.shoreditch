@@ -1,0 +1,11 @@
+.button-list {
+  border-top: solid 2px;
+  padding-top: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  &__button {
+    cursor: pointer;
+  }
+}

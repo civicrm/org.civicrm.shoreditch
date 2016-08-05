@@ -1,0 +1,13 @@
+#civihr-ui-select-contact {
+  @import 'refine-search';
+  @import 'button-list';
+  @import 'loading-indicator';
+
+  &, * {
+    border-color: $gray-light !important;
+  }
+  padding: 10px;
+  background: $gray-lighter;
+  border: solid 1px;
+  margin: 5px;
+}
