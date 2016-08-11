@@ -4,7 +4,8 @@
 $button-border-radius: 2px;
 
 .crm-container {
-  %btn {
+  %btn,
+  .crm-profile-selector-preview {
     @extend .btn, %open-sans-font-family;
     text-shadow: none;
     text-transform: uppercase;
@@ -305,6 +306,15 @@ $button-border-radius: 2px;
       .ui-button-text-icon-primary .ui-button-text {
         padding: 0 0 0 7px !important;
       }
+    }
+  }
+
+  .crm-profile-selector-preview {
+    padding: 4px 12px;
+
+    .crm-i {
+      position: relative;
+      top: -1px;
     }
   }
 }
