@@ -1,0 +1,100 @@
+.page-civicrm {
+  .ui-datepicker {
+    min-width: 160px;
+    width: auto !important;
+    padding: 10px !important;
+    border: 1px solid $datepicker-border-color !important;
+    border-radius: 0;
+    box-shadow: $box-shadow !important;
+
+    .ui-datepicker-header {
+      .ui-datepicker-prev,
+      .ui-datepicker-next {
+        border-radius: 2px;
+        cursor: pointer;
+        text-align: center;
+        width: 35px;
+
+        &:before {
+          padding: 0 !important;
+          color: $datepicker-gray-dark !important;
+          font-weight: normal;
+          font-size: 14px;
+        }
+
+        &-hover {
+          color: $datepicker-gray-dark;
+          background-color: #e6e6e6 !important;
+          border-color: $datepicker-gray-darker;
+          border: 0 !important;
+        }
+      }
+
+      .ui-datepicker-prev {
+        &:before {
+          content: '\f053' !important;
+        }
+
+        &-hover {
+          left: 2px !important;
+        }
+      }
+
+      .ui-datepicker-next {
+        &:before {
+          content: '\f054' !important;
+        }
+
+        &-hover {
+          right: 2px !important;
+        }
+      }
+
+      .ui-datepicker-title {
+        padding: 0 30px;
+      }
+    }
+
+    .ui-datepicker-calendar {
+      border: 0 !important;
+
+      thead {
+        tr {
+          border-top: 1px solid rgb(221, 221, 221);
+
+          th {
+            color: $datepicker-gray-darker;
+            font-size: 11px;
+          }
+        }
+      }
+
+      td[data-handler],
+      td.ui-state-disabled {
+        padding: 7px;
+        font-size: 12px;
+        background-color: $crm-table-striped-bg !important;
+        border: 0;
+        opacity: 1;
+
+        a {
+          background-color: transparent !important;
+          width: auto;
+          text-align: center;
+          border: 0;
+          border-radius: 20px;
+          padding: 7px;
+          line-height: 1;
+          width: auto !important;
+          color: $datepicker-gray-dark;
+          cursor: pointer;
+
+          &.ui-state-active {
+            background-color: $brand-primary !important;
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}
