@@ -94,6 +94,13 @@
             color: #fff !important;
           }
         }
+
+        &.ui-datepicker-days-cell-over.ui-datepicker-today {
+          a.ui-state-highlight {
+            background-color: $brand-primary !important;
+            color: #fff !important;
+          }
+        }
       }
     }
   }
