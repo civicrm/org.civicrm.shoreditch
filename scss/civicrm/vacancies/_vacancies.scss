@@ -30,6 +30,11 @@
           > .crm-form-date-wrapper .crm-form-text:nth-child(2) {
             min-width: 200px !important;
             width: 200px !important;
+
+            &.hasDatePicker {
+              min-width: 169px !important;
+              width: 169px !important;
+            }
           }
         }
       }
@@ -127,7 +132,7 @@
             font-family: 'FontAwesome';
             font-weight: normal;
             position: absolute;
-            left: 368px;
+            left: 338px;
             top: 1px;
             color: $brand-primary;
             z-index: 201;
@@ -136,7 +141,7 @@
           &:before {
             content: '';
             position: absolute;
-            left: 358px;
+            left: 327px;
             top: -5px;
             width: 30px;
             height: 28px;
@@ -147,7 +152,7 @@
         }
 
         .crm-form-time {
-          margin-left: 50px !important;
+          margin-left: 15px !important;
         }
       }
     }
