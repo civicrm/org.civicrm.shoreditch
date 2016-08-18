@@ -6,3 +6,26 @@
     }
   }
 }
+
+.form-layout-compressed {
+  td {
+    &.label {
+      text-align: left !important;
+    }
+  }
+
+  .CRM_HRRecruitment_Form_HRVacancy {
+    .crm-form-block {
+      padding-top: 15px;
+
+      > table.form-layout-compressed,
+      > fieldset {
+        margin: 15px;
+      }
+
+      > table.form-layout-compressed {
+        margin-top: 0;
+      }
+    }
+  }
+}
