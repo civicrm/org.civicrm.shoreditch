@@ -1,104 +1,107 @@
-.crm-container {
-  .advmultiselect {
-    input[type='button'] {
-      bottom: 21px !important;
-      position: relative;
-    }
-  }
-}
+.page-civicrm-vacancy {
 
-.form-layout-compressed {
-  td {
-    &.label {
-      text-align: left !important;
-    }
-  }
-
-  .CRM_HRRecruitment_Form_HRVacancy {
-    .crm-form-block {
-      padding-top: 15px;
-
-      > table.form-layout-compressed,
-      > fieldset {
-        margin: 15px;
-      }
-
-      > table.form-layout-compressed {
-        margin-top: 0;
+  .crm-container {
+    .advmultiselect {
+      input[type='button'] {
+        bottom: 21px !important;
+        position: relative;
       }
     }
   }
-}
 
-.crm-form-block.crm-form-block {
-  .crm-button.crm-button_qf_HRVacancy_next,
-  .crm-profile-selector-preview {
+  .form-layout-compressed {
+    td {
+      &.label {
+        text-align: left !important;
+      }
+    }
+
+    .CRM_HRRecruitment_Form_HRVacancy {
+      .crm-form-block {
+        padding-top: 15px;
+
+        > table.form-layout-compressed,
+        > fieldset {
+          margin: 15px;
+        }
+
+        > table.form-layout-compressed {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .crm-form-block.crm-form-block {
+    .crm-button.crm-button_qf_HRVacancy_next,
+    .crm-profile-selector-preview {
+      @extend %btn-primary;
+    }
+
+    .crm-button-type-cancel {
+      @extend %btn-default;
+    }
+  }
+
+  #addMorePermission {
     @extend %btn-primary;
-  }
 
-  .crm-button-type-cancel {
-    @extend %btn-default;
-  }
-}
+    > .add-icon {
+      background-image: none;
+      text-indent: 0;
+      margin-right: 3px;
 
-#addMorePermission {
-  @extend %btn-primary;
-
-  > .add-icon {
-    background-image: none;
-    text-indent: 0;
-    margin-right: 3px;
-
-    &:after {
-      content: '\f067';
-      position: relative;
-      top: -1px;
-      font-family: 'FontAwesome';
-      color: #fff !important;
+      &:after {
+        content: '\f067';
+        position: relative;
+        top: -1px;
+        font-family: 'FontAwesome';
+        color: #fff !important;
+      }
     }
   }
-}
 
-.permission-delete-link {
-  border: none !important;
-  padding: 0 !important;
-
-  &:hover,
-  &:focus {
-    background: none !important;
-  }
-
-  > .icon {
-    margin-left: 0;
-    background-image: none !important;
-    text-indent: 0 !important;
-    display: inline !important;
+  .permission-delete-link {
+    border: none !important;
+    padding: 0 !important;
 
     &:hover,
     &:focus {
       background: none !important;
     }
 
-    &:after {
-      content: '\f014';
-      top: -3px;
-      position: relative;
-      font-family: 'FontAwesome';
-      font-weight: normal;
-      color: $brand-danger !important;
+    > .icon {
+      margin-left: 0;
+      background-image: none !important;
+      text-indent: 0 !important;
+      display: inline !important;
+
+      &:hover,
+      &:focus {
+        background: none !important;
+      }
+
+      &:after {
+        content: '\f014';
+        top: -3px;
+        position: relative;
+        font-family: 'FontAwesome';
+        font-weight: normal;
+        color: $brand-danger !important;
+      }
     }
   }
-}
 
-.crm-option-edit-link.crm-hover-button {
-  border: none !important;
+  .crm-option-edit-link.crm-hover-button {
+    border: none !important;
 
-  &:hover,
-  &:focus {
-    background-color: transparent !important;
-  }
+    &:hover,
+    &:focus {
+      background-color: transparent !important;
+    }
 
-  > .crm-i {
-    color: $brand-primary !important;
+    > .crm-i {
+      color: $brand-primary !important;
+    }
   }
 }
