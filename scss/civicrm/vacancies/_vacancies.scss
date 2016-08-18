@@ -1,5 +1,4 @@
 .page-civicrm-vacancy {
-
   .crm-container {
     .advmultiselect {
       input[type='button'] {
@@ -9,30 +8,28 @@
     }
   }
 
-  .form-layout-compressed {
-    td {
-      &.label {
-        text-align: left !important;
+  .CRM_HRRecruitment_Form_HRVacancy {
+    .crm-block {
+      padding-top: 20px;
+
+      > table.form-layout-compressed,
+      > fieldset {
+        margin: 20px;
       }
-    }
 
-    .CRM_HRRecruitment_Form_HRVacancy {
-      .crm-form-block {
-        padding-top: 15px;
+      > table.form-layout-compressed {
+        margin-top: 0;
 
-        > table.form-layout-compressed,
-        > fieldset {
-          margin: 15px;
-        }
-
-        > table.form-layout-compressed {
-          margin-top: 0;
+        td {
+          &.label {
+            text-align: left !important;
+          }
         }
       }
     }
   }
 
-  .crm-form-block.crm-form-block {
+  .crm-block.crm-form-block {
     .crm-button.crm-button_qf_HRVacancy_next,
     .crm-profile-selector-preview {
       @extend %btn-primary;
@@ -103,5 +100,11 @@
     > .crm-i {
       color: $brand-primary !important;
     }
+  }
+
+  .crm-submit-buttons {
+    padding: 20px !important;
+    margin: 0 !important;
+    min-height: 35px !important;
   }
 }
