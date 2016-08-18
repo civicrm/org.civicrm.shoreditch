@@ -1,5 +1,6 @@
 .page-civicrm {
   .ui-datepicker {
+    z-index: 9999 !important;
     min-width: 160px;
     width: auto !important;
     padding: 10px !important;
