@@ -89,3 +89,16 @@
     }
   }
 }
+
+.crm-option-edit-link.crm-hover-button {
+  border: none !important;
+
+  &:hover,
+  &:focus {
+    background-color: transparent !important;
+  }
+
+  > .crm-i {
+    color: $brand-primary !important;
+  }
+}
