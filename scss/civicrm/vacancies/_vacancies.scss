@@ -24,6 +24,13 @@
           &.label {
             text-align: left !important;
           }
+
+          > .select2-container,
+          > .crm-form-text,
+          > .crm-form-date-wrapper .crm-form-text:nth-child(2) {
+            min-width: 200px !important;
+            width: 200px !important;
+          }
         }
       }
     }
