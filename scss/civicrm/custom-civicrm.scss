@@ -1,3 +1,4 @@
+@import 'variables';
 @import '../bootstrap/overrides/variables';
 @import '../../../org.civicrm.bootstrap/scss/overrides/variables';
 @import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/variables';
@@ -7,7 +8,6 @@
 @import '../bootstrap/vendor/font-awesome/variables';
 @import '../bootstrap/vendor/font-awesome/path';
 @import '../bootstrap/overrides/style/*';
-@import 'variables';
 @import 'common/common';
 @import 'contact/contact';
 @import 'advanced-search/advanced-search';
