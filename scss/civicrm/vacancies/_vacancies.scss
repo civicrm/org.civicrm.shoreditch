@@ -29,3 +29,32 @@
     }
   }
 }
+
+.crm-form-block.crm-form-block {
+  .crm-button.crm-button_qf_HRVacancy_next,
+  .crm-profile-selector-preview {
+    @extend %btn-primary;
+  }
+
+  .crm-button-type-cancel {
+    @extend %btn-default;
+  }
+}
+
+#addMorePermission {
+  @extend %btn-primary;
+
+  > .add-icon {
+    background-image: none;
+    text-indent: 0;
+    margin-right: 3px;
+
+    &:after {
+      content: '\f067';
+      position: relative;
+      top: -1px;
+      font-family: 'FontAwesome';
+      color: #fff !important;
+    }
+  }
+}
