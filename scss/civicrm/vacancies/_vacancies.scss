@@ -154,4 +154,8 @@
       margin-top: 20px;
     }
   }
+
+  .ui-dialog-content a.button:not(.hr-job-info-close) {
+    @extend .btn-primary;
+  }
 }
