@@ -142,7 +142,7 @@
     }
   }
 
-  table {
+  &.page-civicrm-vacancy-publiclisting table {
     @extend %crm-table;
     @extend %crm-table-striped;
 
