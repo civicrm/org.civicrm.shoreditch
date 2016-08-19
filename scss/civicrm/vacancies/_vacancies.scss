@@ -70,49 +70,7 @@
     }
   }
 
-  .permission-delete-link {
-    border: none !important;
-    padding: 0 !important;
 
-    &:hover,
-    &:focus {
-      background: none !important;
-    }
-
-    > .icon {
-      margin-left: 0;
-      background-image: none !important;
-      text-indent: 0 !important;
-      display: inline !important;
-
-      &:hover,
-      &:focus {
-        background: none !important;
-      }
-
-      &:after {
-        content: '\f014';
-        top: -3px;
-        position: relative;
-        font-family: 'FontAwesome';
-        font-weight: normal;
-        color: $brand-danger !important;
-      }
-    }
-  }
-
-  .crm-option-edit-link.crm-hover-button {
-    border: none !important;
-
-    &:hover,
-    &:focus {
-      background-color: transparent !important;
-    }
-
-    > .crm-i {
-      color: $brand-primary !important;
-    }
-  }
 
   .crm-submit-buttons {
     padding: 20px !important;
@@ -153,14 +111,5 @@
         margin-left: 15px !important;
       }
     }
-  }
-
-  .collapsible-title {
-    width: 100%;
-    border-bottom: 1px solid $crm-background;
-    font-family: 'Open Sans';
-    font-size: 16px;
-    padding-bottom: 15px;
-    box-sizing: border-box;
   }
 }
