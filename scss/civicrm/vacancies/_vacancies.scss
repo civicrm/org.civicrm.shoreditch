@@ -155,7 +155,15 @@
     }
   }
 
-  .ui-dialog-content a.button:not(.hr-job-info-close) {
-    @extend .btn-primary;
+  .ui-dialog-content {
+    .view-hrvacancy-info {
+      a.button:not(.hr-job-info-close) {
+        @extend .btn-primary;
+      }
+
+      h3 {
+        @extend .collapsible-title;
+      }
+    }
   }
 }
