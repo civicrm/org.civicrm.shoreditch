@@ -601,10 +601,9 @@ $control-height: 30px;
       }
 
       &:after {
-        content: '\f014';
+        @include fa-icon(13px, '\f014');
         top: -3px;
         position: relative;
-        font-family: 'FontAwesome';
         font-weight: normal;
         color: $brand-danger !important;
       }

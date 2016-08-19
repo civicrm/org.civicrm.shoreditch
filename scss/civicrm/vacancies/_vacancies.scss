@@ -61,10 +61,9 @@
       margin-right: 3px;
 
       &:after {
-        content: '\f067';
+        @include fa-icon(13px, '\f067');
         position: relative;
         top: -1px;
-        font-family: 'FontAwesome';
         color: #fff !important;
       }
     }
@@ -84,8 +83,7 @@
         position: relative;
 
         &:after {
-          content: '\f073';
-          font-family: 'FontAwesome';
+          @include fa-icon(13px, '\f073');
           font-weight: normal;
           position: absolute;
           left: 338px;
