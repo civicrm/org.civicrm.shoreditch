@@ -6,6 +6,12 @@
         position: relative;
       }
     }
+
+    .crm-block.crm-form-block {
+      .form-layout-compressed .crm-profile-selector-preview {
+        @extend .btn-primary;
+      }
+    }
   }
 
   .CRM_HRRecruitment_Form_HRVacancy {
@@ -41,19 +47,44 @@
     }
   }
 
-  .crm-block.crm-form-block {
-    .crm-button.crm-button_qf_HRVacancy_next,
-    .crm-profile-selector-preview {
-      @extend %btn-primary;
-    }
+  #HRVacancy > div.crm-block.crm-form-block > div > span.crm-button {
+    &.crm-i-button {
+      min-width: auto !important;
 
-    .crm-button-type-cancel {
-      @extend %btn-default;
+      &.crm-button-type-next.crm-button_qf_HRVacancy_next {
+        @extend .btn-primary;
+
+        > .crm-i,
+        > .crm-form-submit {
+          color: #fff !important;
+        }
+      }
+
+      &.crm-button-type-cancel.crm-button_qf_HRVacancy_cancel {
+        @extend .btn-secondary-outline;
+
+        &:hover {
+          > .crm-i,
+          > .crm-form-submit {
+            color: #fff !important;
+          }
+        }
+      }
+
+      > .crm-i {
+        padding: 3px;
+      }
+
+      > .crm-form-submit {
+        &:hover {
+          border: 0 !important;
+        }
+      }
     }
   }
 
   #addMorePermission {
-    @extend %btn-primary;
+    @extend .btn-primary;
 
     > .add-icon {
       background-image: none;

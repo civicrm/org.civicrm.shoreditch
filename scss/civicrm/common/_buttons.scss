@@ -40,7 +40,7 @@ $button-border-radius: 2px;
       padding-top: $toolbar-top-space;
       background: $crm-accordion-header-color !important;
 
-      %btn {
+      %btn:not(.crm-button_qf_HRVacancy_next):not(.crm-button_qf_HRVacancy_cancel) {
         border: 0;
         color: $gray-darker !important;
         min-width: initial !important;
@@ -133,7 +133,7 @@ $button-border-radius: 2px;
   }
 
   .crm-button-type-refresh,
-  .crm-submit-buttons > .crm-button {
+  .crm-submit-buttons > .crm-button:not(.crm-button_qf_HRVacancy_next):not(.crm-button_qf_HRVacancy_cancel) {
     padding: 0 !important;
     border: 0 !important;
 
@@ -315,47 +315,6 @@ $button-border-radius: 2px;
     .crm-i {
       position: relative;
       top: -1px;
-    }
-  }
-}
-
-%btn-primary {
-  background: $brand-primary !important;
-  border: none;
-  color: #fff !important;
-
-  &:hover {
-    background: darken($brand-primary, 10%) !important;
-
-    > input.crm-form-submit {
-      border: 1px solid darken($brand-primary, 10%) !important;
-    }
-  }
-
-  > input.crm-form-submit {
-    border: 1px solid $brand-primary !important;
-  }
-
-  > input.crm-form-submit,
-  > .crm-i {
-    color: #fff !important;
-  }
-}
-
-%btn-default {
-  background: transparent !important;
-
-  > input.crm-form-submit {
-    border: 1px solid $gray-darker !important;
-  }
-
-  &:hover {
-    background: $crm-copy !important;
-    color: #fff !important;
-
-    > input.crm-form-submit,
-    > .crm-i {
-      color: #fff !important;
     }
   }
 }
