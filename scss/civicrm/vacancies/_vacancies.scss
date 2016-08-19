@@ -142,47 +142,16 @@
     }
   }
 
-  .crm-submit-buttons {
-    padding: 20px !important;
-    margin: 0 !important;
-    min-height: 35px !important;
-  }
+  table {
+    @extend %crm-table;
+    @extend %crm-table-striped;
 
-  .CRM_HRRecruitment_Form_HRVacancy {
-    tbody:first-child {
-      tr:nth-child(8),
-      tr:nth-child(9) {
-        label {
-          position: relative;
+    &.vacancy-popup {
+      margin-bottom: 20px;
+    }
 
-          &:after {
-            content: '\f073';
-            font-family: 'FontAwesome';
-            font-weight: normal;
-            position: absolute;
-            left: 368px;
-            top: 1px;
-            color: $brand-primary;
-            z-index: 201;
-          }
-
-          &:before {
-            content: '';
-            position: absolute;
-            left: 358px;
-            top: -5px;
-            width: 30px;
-            height: 28px;
-            border: 1px solid $crm-copy;
-            background: $crm-accordion-header-color;
-            z-index: 200;
-          }
-        }
-
-        .crm-form-time {
-          margin-left: 50px !important;
-        }
-      }
+    &.selector {
+      margin-top: 20px;
     }
   }
 }
