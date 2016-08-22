@@ -1,6 +1,10 @@
-.crm-container {
+.crm-container .CRM_Contact_Form_Search_Advanced {
   @import 'variables';
   @import 'labels';
+
+  td input + label + br {
+    display: none;
+  }
 
   #{$search-settings},
   #{$bottom} {
@@ -13,7 +17,7 @@
     padding: 23px 40px 33px;
   }
 
-  #{$search-settings}{
+  #{$search-settings} {
     td {
       float: left;
       width: 20%;
@@ -42,6 +46,14 @@
           }
         }
       }
+    }
+  }
+
+  #{$cases} {
+    > table > tbody > tr:nth-child(-n+3) td {
+      width: 50vw;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

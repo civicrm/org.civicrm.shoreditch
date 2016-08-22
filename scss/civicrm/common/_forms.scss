@@ -15,24 +15,25 @@ $control-height: 30px;
   $control-spacing: 15px;
 
   %responsive {
-    @media (max-width: 1340px) {
-      min-width: 100% !important;
-      width: 100% !important;
+    @media (min-device-width: $screen-sm-min) {
+      min-width: 230px;
+      width: 230px !important;
     }
 
-    @media (max-width: 992px) {
+    @media (max-device-width: $screen-sm-max) {
+      min-width: 270px !important;
+      width: 270px !important;
+    }
+
+    @media (max-device-width: $screen-xs-max) {
       margin: 0;
+      max-width: 270px !important;
     }
   }
 
-  %control-width {
+  &.select2-container,
+  &.select2-choice {
     @extend %responsive;
-    min-width: $control-width;
-
-    &.select2-container,
-    &.select2-choice {
-      width: $control-width !important;
-    }
   }
 
   %control-half-width {
@@ -46,11 +47,6 @@ $control-height: 30px;
     }
   }
 
-  %field-wrapper {
-    @extend %responsive;
-    width: 100% !important;
-  }
-
   //Page specific
   @at-root .page-civicrm-contact & {
     td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
@@ -59,12 +55,6 @@ $control-height: 30px;
         position: relative;
         left: -$control-spacing;
       }
-    }
-  }
-
-  form.CRM_Activity_Form_Activity {
-    %control-width {
-      width: $control-width !important;
     }
   }
 
@@ -78,7 +68,7 @@ $control-height: 30px;
         > select,
         > span:not(.crm-form-date-wrapper) input,
         > span:not(.crm-form-date-wrapper) select,
-        > input {
+        > input:not([type='radio']):not([type='checkbox']) {
           margin: $control-spacing / 2 $control-spacing $control-spacing / 2 0 !important;
           bottom: initial !important;
         }
@@ -93,7 +83,7 @@ $control-height: 30px;
       tr td.label + td {
         > input:not([type="radio"]):not([type="checkbox"]),
         > div.select2-container {
-          @extend %control-width;
+          @extend %responsive;
           margin-right: 0 !important;
         }
       }
@@ -106,19 +96,22 @@ $control-height: 30px;
     input.crm-form-text,
     input.dateplugin,
     textarea {
+      @extend %responsive;
       display: inline-block;
-      width: 15%;
     }
 
     textarea {
-      @extend %control-width;
+      @extend %responsive;
     }
 
     input[type="checkbox"],
     input[type="radio"] {
-      margin-right: 5px;
-      margin-top: -1px;
+      margin: 0 5px 0 0;
       vertical-align: middle;
+
+      &:not(:first-of-type) {
+        margin-left: 15px !important;
+      }
     }
 
     div.form-item {
@@ -126,7 +119,7 @@ $control-height: 30px;
     }
 
     select {
-      @extend %control-width, %open-sans-font-family;
+      @extend %responsive, %open-sans-font-family;
 
       &:not([multiple]) {
         @extend %custom-form-control;
@@ -169,10 +162,6 @@ $control-height: 30px;
 
     // "Select2" Drop-downs
     .select2-container {
-      @media (min-width: $screen-lg-min) {
-        width: $control-width !important;
-      }
-
       %arrow {
         @include fa-icon(13px, '\f0d7');
         display: block;
@@ -380,7 +369,7 @@ $control-height: 30px;
 
       > .select2-container-multi,
       > .select2-container {
-        @extend %control-width;
+        @extend %responsive;
         // Needed in order to render correctly in PhantomJS
         width: initial !important;
         height: auto !important;
@@ -390,21 +379,8 @@ $control-height: 30px;
         @extend %control-half-width;
       }
 
-      .crm-field-wrapper .select2-container,
-      label ~ .select2-container {
-        @media (min-width: 1065px) {
-          width: inherit;
-        }
-
-        @media (max-width: 1064px) {
-          min-width: 100%;
-          width: 100%;
-          margin: 0;
-        }
-      }
-
       .crm-field-wrapper {
-        @extend %field-wrapper;
+        width: 100% !important;
 
         label {
           padding-right: 5px;
@@ -427,7 +403,7 @@ $control-height: 30px;
     }
 
     input.crm-form-text:not(.crm-form-date) {
-      max-width: 55%;
+      @extend %responsive;
     }
 
     table:not(.form-layout-compressed) {
@@ -447,7 +423,7 @@ $control-height: 30px;
     td .crm-field-wrapper input.crm-form-text:only-child,
     td .crm-form-date-wrapper input.crm-form-text:only-child,
     td > input.crm-form-text {
-      @extend %control-width;
+      @extend %responsive;
       box-sizing: border-box;
       height: $control-height;
       display: inline-block;
@@ -463,7 +439,7 @@ $control-height: 30px;
       }
 
       .crm-form-date {
-        @extend %control-width;
+        @extend %responsive;
         padding-right: 0;
       }
 

@@ -1,3 +1,18 @@
+#{$basic-criteria} {
+  input[type='checkbox'],
+  input[type='radio'] {
+    margin-top: 15px;
+  }
+
+  label + .crm-hover-button {
+    margin-top: 7px;
+  }
+
+  select + .helpicon {
+    right: -50px;
+  }
+}
+
 #{$basic-criteria},
 #{$search-settings} {
   br {
@@ -11,11 +26,6 @@
     display: flex;
     align-items: center;
     height: 45px;
-  }
-
-  input[type="checkbox"],
-  input[type="radio"] {
-    height: 30px;
   }
 
   label:first-of-type {
@@ -34,14 +44,10 @@
   .crm-field-wrapper {
     clear: left;
 
-     > div:not(.select2-container):first-of-type,
+    > div:not(.select2-container):first-of-type,
     .postal_code-wrapper {
       @extend label;
     }
-  }
-
-  .crm-field-wrapper > div:not(:first-of-type) {
-    float: left;
   }
 
   .crm-field-wrapper > div:not(:first-of-type) {
@@ -57,13 +63,27 @@
 
     .helpicon {
       position: absolute;
+      padding: 0 10px;
 
       &::before {
         position: absolute;
-        left: -20px;
-        top: 100%;
+
+        @media (max-device-width: 1400px) {
+          left: -15px;
+          top: 125%;
+        }
+
+        @media (min-device-width: 1401px) {
+          left: -20px;
+          top: 100%;
+        }
       }
     }
+  }
+
+  input + label + .helpicon {
+    top: 4px;
+    margin-left: 10px;
   }
 }
 
@@ -77,8 +97,8 @@
     height: 45px;
   }
 
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type='checkbox'],
+  input[type='radio'] {
     height: 45px;
   }
 
@@ -103,6 +123,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+    width: 30%;
 
     label {
       flex: 1 1 8vw;
@@ -111,12 +132,6 @@
     .helpicon {
       padding-right: 10px;
     }
-  }
-}
-
-#{$display-settings-for-results} {
-  td {
-    width: 30%;
   }
 }
 
@@ -164,9 +179,13 @@
     justify-content: space-between;
     align-items: center;
 
-     > input:not([type="text"]):not([type="number"]),
-    .helpicon {
+    > input:not([type='text']):not([type='number']) {
       flex: 1 10 auto;
+      min-width: initial !important;
+    }
+
+    > input:not([type='text']):not([type='number']) {
+      flex: 1 0 auto;
       min-width: initial !important;
     }
 
