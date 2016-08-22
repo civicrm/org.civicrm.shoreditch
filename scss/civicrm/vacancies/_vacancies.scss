@@ -144,6 +144,7 @@
 
   &.page-civicrm-vacancy-publiclisting table {
     @extend %crm-table;
+    box-shadow: $box-shadow;
 
     tr {
       &:first-child {
@@ -169,6 +170,10 @@
           }
         }
       }
+
+      td {
+        color: $crm-copy;
+      }
     }
 
     &.vacancy-popup {
@@ -182,6 +187,7 @@
 
   .crm-container.ui-dialog {
     border-radius: 0;
+    background: $crm-table-striped-bg;
 
     .ui-dialog-titlebar {
       background: $crm-table-striped-bg !important;
