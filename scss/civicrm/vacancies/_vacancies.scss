@@ -144,7 +144,32 @@
 
   &.page-civicrm-vacancy-publiclisting table {
     @extend %crm-table;
-    @extend %crm-table-striped;
+
+    tr {
+      &:first-child {
+        th {
+          &:first-child {
+            border-top-left-radius: 2px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 2px;
+          }
+        }
+      }
+
+      &:last-child {
+        td {
+          &:first-child {
+            border-bottom-left-radius: 2px;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: 2px;
+          }
+        }
+      }
+    }
 
     &.vacancy-popup {
       margin-bottom: 20px;
@@ -155,14 +180,70 @@
     }
   }
 
-  .ui-dialog-content {
-    .view-hrvacancy-info {
-      a.button:not(.hr-job-info-close) {
-        @extend .btn-primary;
+  .crm-container.ui-dialog {
+    border-radius: 0;
+
+    .ui-dialog-titlebar {
+      background: $crm-table-striped-bg !important;
+      border-bottom: 1px solid $crm-background !important;
+      border-radius: 0 !important;
+
+      > .ui-button {
+        &:nth-child(2) {
+          right: 20px !important;
+        }
+
+        &:nth-child(3) {
+          right: 45px !important;
+        }
+
+        &:nth-child(4) {
+          right: 70px !important;
+        }
+
+        .ui-icon[class*=" fa-"] {
+          margin-left: -8px !important;
+        }
       }
 
-      h3 {
-        @extend .collapsible-title;
+      .ui-dialog-title {
+        background: none;
+        padding-left: 20px;
+        font-weight: 600;
+      }
+
+      .ui-button-text {
+        display: none;
+      }
+    }
+
+    .ui-dialog-content {
+      background: $crm-table-striped-bg;
+      height: auto !important;
+      padding: 20px;
+
+      .view-hrvacancy-info {
+        a.button:not(.hr-job-info-close) {
+          @extend .btn-primary;
+        }
+
+        h3 {
+          display: none;
+        }
+      }
+    }
+
+    table {
+      tr {
+        td {
+          color: $crm-copy;
+          font-weight: 400;
+
+          &:first-child {
+            font-weight: 600 !important;
+            color: $gray-darker;
+          }
+        }
       }
     }
   }

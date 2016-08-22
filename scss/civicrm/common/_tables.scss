@@ -57,18 +57,6 @@
   }
 }
 
-%crm-table-striped {
-  tr {
-    &:nth-child(odd) {
-      background: $crm-table-striped-bg !important;
-
-      th {
-        background: $crm-table-striped-bg !important;
-      }
-    }
-  }
-}
-
 .crm-container {
   > table,
   table.report-layout {
