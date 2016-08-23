@@ -12,7 +12,7 @@ $button-border-radius: 2px;
     opacity: 1 !important;
     font-size: 1em !important;
 
-    &:not(.crm-form-submit):not(.crm-close-accordion):not(.crm-clear-link):not([href^="/index.php?q=civicrm/vacancy/apply&reset=1&id="]) {
+    &:not(.crm-form-submit):not(.crm-close-accordion):not(.crm-clear-link):not(.ui-dialog .button) {
       @extend .btn-secondary-outline;
       border-radius: $button-border-radius;
     }
