@@ -142,7 +142,7 @@
     }
   }
 
-  &.page-civicrm-vacancy-publiclisting table {
+  table {
     @extend %crm-table;
     box-shadow: $box-shadow;
 
