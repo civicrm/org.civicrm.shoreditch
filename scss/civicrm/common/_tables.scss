@@ -58,7 +58,10 @@
 }
 
 .crm-container {
-  table {
+  > table,
+  table.report-layout,
+  table.selector,
+  .ui-dialog table {
     @extend %crm-table;
 
     &:not(.report-layout) {
