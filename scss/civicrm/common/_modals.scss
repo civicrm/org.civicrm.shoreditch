@@ -1,10 +1,23 @@
 .crm-container.ui-dialog {
+  border-radius: 0;
+  background: $crm-table-striped-bg;
+
   .help {
     border-radius: 2px;
   }
 
   table {
     @extend %crm-table;
+
+    td {
+      color: $crm-copy;
+      font-weight: 400;
+
+      &:first-child {
+        font-weight: 600 !important;
+        color: $gray-darker;
+      }
+    }
   }
 
   .ui-dialog-titlebar {
@@ -12,18 +25,55 @@
     padding: 20px;
     background: none !important;
     border: none !important;
+    border-bottom: 1px solid $crm-background !important;
     color: $gray-darker !important;
 
     .ui-dialog-title {
       @extend .modal-title, %open-sans-font-family;
       font-size: 18px;
+
+      background: none;
+      padding-left: 20px;
+      font-weight: 600;
+    }
+
+    > .ui-button {
+      &[type="button"] {
+        right: 20px !important;
+      }
+
+      &.crm-dialog-titlebar-resize {
+        right: 45px !important;
+      }
+
+      &.crm-dialog-titlebar-print {
+        right: 70px !important;
+      }
+
+      .ui-icon[class*=" fa-"] {
+        margin-left: -8px !important;
+      }
+    }
+
+    .ui-button-text {
+      display: none;
     }
   }
 
   .ui-dialog-content {
     @extend .modal-body, %open-sans-font-family;
-    padding: 30px;
+    padding: 20px;
     margin-top: 0;
+    height: auto !important;
+    background: $crm-table-striped-bg;
+
+    a.button:not(.hr-job-info-close) {
+      @extend .btn-primary;
+    }
+
+    h3 {
+      display: none;
+    }
   }
 
   .ui-dialog-buttonpane {
