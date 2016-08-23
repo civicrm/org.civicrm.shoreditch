@@ -143,39 +143,6 @@
   }
 
   table {
-    @extend %crm-table;
-    box-shadow: $box-shadow;
-
-    tr {
-      &:first-child {
-        th {
-          &:first-child {
-            border-top-left-radius: 2px;
-          }
-
-          &:last-child {
-            border-top-right-radius: 2px;
-          }
-        }
-      }
-
-      &:last-child {
-        td {
-          &:first-child {
-            border-bottom-left-radius: 2px;
-          }
-
-          &:last-child {
-            border-bottom-right-radius: 2px;
-          }
-        }
-      }
-
-      td {
-        color: $crm-copy;
-      }
-    }
-
     &.vacancy-popup {
       margin-bottom: 20px;
     }
