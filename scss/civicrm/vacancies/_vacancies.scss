@@ -160,5 +160,33 @@
         border: 0 !important;
       }
     }
+
+    .crm-search-form-block {
+      margin-bottom: 20px;
+    }
+  }
+
+  #searchForm {
+    padding: 20px;
+
+    td {
+      padding: 0;
+    }
+
+    tr:nth-child(2) {
+      td {
+        padding: 20px 0;
+      }
+    }
+
+    #_qf_Search_refresh {
+      margin-bottom: 0 !important;
+    }
+
+    .listing-box {
+      > div {
+        padding: 5px;
+      }
+    }
   }
 }
