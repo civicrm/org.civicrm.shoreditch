@@ -12,6 +12,10 @@ $button-border-radius: 2px;
     opacity: 1 !important;
     font-size: 1em !important;
 
+    /**
+     * :not(.ui-dialog .button) is used to do not apply the selector .btn-secondary-outline
+     * on modal's buttons.
+     */
     &:not(.crm-form-submit):not(.crm-close-accordion):not(.crm-clear-link):not(.ui-dialog .button) {
       @extend .btn-secondary-outline;
       border-radius: $button-border-radius;
