@@ -1,0 +1,25 @@
+// Custom scrollbar
+// --------------------------------------------------
+.ps-container {
+  position: relative;
+  overflow: auto;
+
+  .ps-scrollbar-y-rail,
+  .ps-scrollbar-x-rail {
+    opacity: 1 !important;
+    background-color: $crm-background !important;
+  }
+
+  .ps-scrollbar-y-rail {
+    right: 0 !important;
+  }
+
+  .ps-scrollbar-x-rail {
+    bottom: 0 !important;
+  }
+
+  .ps-scrollbar-x,
+  .ps-scrollbar-y {
+    background-color: $crm-page-topbar-bg !important;
+  }
+}
