@@ -139,6 +139,20 @@
       .crm-form-time {
         margin-left: 15px !important;
       }
+
+      tr {
+        td {
+          vertical-align: middle !important;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          td:first-child {
+            vertical-align: top !important;
+          }
+        }
+      }
     }
   }
 
@@ -204,6 +218,137 @@
 
     .crm-form-text {
       width: 312px !important;
+    }
+  }
+
+  .hr-pipeline-tab {
+    .crm-accordion-header {
+      h2 {
+        color: $gray-darker !important;
+      }
+    }
+
+    .hr-vacancy {
+      width: 49%;
+      margin-bottom: 20px;
+      border: 1px solid $crm-background;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      overflow: hidden;
+
+      > div {
+        padding: 0;
+        font-size: 13px;
+        font-family: 'Open Sans';
+        font-weight: normal;
+
+        > table {
+          width: 101%;
+          background-color: #ffffff;
+          border: 0;
+
+          tr {
+            td {
+              color: $crm-dark-blue;
+              padding: 0 15px;
+
+              &:not(:first-child) {
+                padding: 10px 15px;
+              }
+
+              h3 {
+                background-color: $crm-copy;
+                font-weight: bold;
+                padding: 8px 15px;
+
+                > a {
+                  color: #ffffff !important;
+                  margin-left: 5px;
+                  border: 0;
+
+                  &:hover {
+                    border: 0;
+
+                    .edit-icon {
+                      background-image: none;
+                    }
+                  }
+
+                  .edit-icon {
+                    background-image: none;
+                    text-indent: 0;
+                    top: -3px;
+                    margin: 0;
+
+                    &:after {
+                      @include fa-icon(13px, '\f040', #ffffff);
+                      font-weight: normal;
+                    }
+
+                    &:hover {
+                      &:after {
+                        opacity: .8;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .hr-stage {
+                border-left: 0 !important;
+                width: auto !important;
+
+                a {
+                  font-weight: 600;
+                  color: $brand-primary;
+                  right: 0;
+                  left: -3px;
+                }
+              }
+            }
+
+            &:first-child {
+              td {
+                padding: 0;
+              }
+            }
+
+            &:nth-child(2) {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .hr-dashboard-recent-activity {
+      border: 1px solid $crm-background;
+      overflow: hidden;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .hr-recent-activity-title {
+        background-color: $crm-copy;
+        font-weight: bold;
+        padding: 8px 15px;
+        border-color: $crm-copy;
+        line-height: 24px;
+      }
+
+      .row-highlight {
+        border: 0;
+
+        tr {
+          background-color: #ffffff !important;
+          border-bottom: 1px solid $crm-background;
+
+          .hr-recent-activity-block {
+            font-size: 13px;
+          }
+        }
+      }
     }
   }
 }
