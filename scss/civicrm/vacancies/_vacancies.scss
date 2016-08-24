@@ -184,8 +184,17 @@
     }
 
     .listing-box {
+      background-color: transparent;
+      border-color: $crm-copy;
+
       > div {
-        padding: 5px;
+        background-color: transparent;
+
+        label {
+          color: $crm-copy !important;
+          font-weight: normal !important;
+          padding: 5px;
+        }
       }
     }
 
@@ -194,7 +203,7 @@
     }
 
     .crm-form-text {
-      width: 312px;
+      width: 312px !important;
     }
   }
 }
