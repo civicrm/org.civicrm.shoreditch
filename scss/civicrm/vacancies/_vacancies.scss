@@ -113,13 +113,17 @@
       tbody:first-child {
         label[for^="dp"] {
           position: relative;
+          height: 30px;
+          line-height: 30px;
+          margin: 7.5px 0;
+          display: block;
 
           &:after {
             @include fa-icon(13px, '\f073');
             font-weight: normal;
             position: absolute;
             left: 338px;
-            top: 1px;
+            top: 0;
             color: $brand-primary;
             z-index: 91;
           }
@@ -128,7 +132,7 @@
             content: '';
             position: absolute;
             left: 327px;
-            top: -5px;
+            top: 0;
             width: 30px;
             height: 28px;
             border: 1px solid $crm-copy;
@@ -359,6 +363,20 @@
             color: $crm-dark-blue;
           }
         }
+      }
+    }
+  }
+
+  .CRM_HRRecruitment_Form_Application {
+    .crm-profile-name-application_profile {
+      padding: 20px;
+
+      .label {
+        text-align: left !important;
+      }
+
+      .select2-container {
+        width: 173px !important;
       }
     }
   }
