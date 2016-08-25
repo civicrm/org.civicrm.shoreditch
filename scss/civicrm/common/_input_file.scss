@@ -1,0 +1,59 @@
+.crm-container {
+  .uploaded-file {
+    min-width: 300px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 10px 0;
+
+    .uploaded-file-icon-trash {
+      color: $brand-danger;
+      float: right;
+      margin-left: 20px;
+    }
+  }
+}
+
+%input-file {
+  width: 300px;
+  height: 120px;
+  opacity: 0 !important;
+  overflow: hidden;
+  z-index: 20;
+  padding: 0;
+}
+
+%label-input-file {
+  position: relative;
+  display: block;
+
+  &:after {
+    content: 'Drop file here \A or click to browse';
+    white-space: pre;
+    position: absolute;
+    left: 112%;
+    top: 0;
+    display: block;
+    width: 300px;
+    height: 70px;
+    border: 1px dashed $crm-page-topbar-bg;
+    text-align: center;
+    color: $crm-page-topbar-bg;
+    padding-top: 50px;
+    font-weight: 600;
+  }
+
+  &:before {
+    content: "\f0ee";
+    font-family: "FontAwesome";
+    font-size: 23px;
+    position: absolute;
+    left: 111%;
+    color: $crm-page-topbar-bg;
+    top: 0;
+    display: block;
+    width: 300px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 100;
+  }
+}

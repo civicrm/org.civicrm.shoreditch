@@ -383,6 +383,14 @@
         @extend .collapsible-title;
         padding-top: 20px;
       }
+
+      label[for="custom_87"] {
+        @extend %label-input-file;
+      }
+
+      input[type=file] {
+        @extend %input-file;
+      }
     }
 
     .crm-submit-buttons {
