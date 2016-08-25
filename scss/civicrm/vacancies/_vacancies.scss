@@ -392,6 +392,14 @@
       input[type=file] {
         @extend %input-file;
       }
+
+      #editrow-custom_92 {
+        .content {
+          label {
+            margin-right: 15px;
+          }
+        }
+      }
     }
 
     .crm-submit-buttons {
