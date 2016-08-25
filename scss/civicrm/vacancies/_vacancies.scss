@@ -384,5 +384,36 @@
         padding-top: 20px;
       }
     }
+
+    .crm-submit-buttons {
+      > .crm-button {
+        &.crm-button_qf_Application_upload {
+          @extend .btn-primary;
+          min-width: auto !important;
+
+          .crm-i {
+            color: #fff !important;
+          }
+        }
+
+        &.crm-button_qf_Application_cancel {
+          @extend .btn-secondary-outline;
+        }
+
+        .crm-i {
+          padding: 3px !important;
+        }
+
+        .crm-form-submit {
+          padding-left: 2.3em !important;
+          min-width: auto !important;
+
+          &:hover {
+            color: inherit !important;
+            border: 0 !important;
+          }
+        }
+      }
+    }
   }
 }
