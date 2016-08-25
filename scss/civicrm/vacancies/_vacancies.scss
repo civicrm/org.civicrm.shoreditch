@@ -378,6 +378,11 @@
       .select2-container {
         width: 173px !important;
       }
+
+      legend {
+        @extend .collapsible-title;
+        padding-top: 20px;
+      }
     }
   }
 }
