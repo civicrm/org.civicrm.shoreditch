@@ -407,6 +407,7 @@
         &.crm-button_qf_Application_upload {
           @extend .btn-primary;
           min-width: auto !important;
+          margin-left: 0;
 
           .crm-i {
             color: #fff !important;
