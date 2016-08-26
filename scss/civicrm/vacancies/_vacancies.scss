@@ -2,8 +2,26 @@
   .crm-container {
     .advmultiselect {
       input[type='button'] {
-        bottom: 21px !important;
+        bottom: 0 !important;
         position: relative;
+        margin: 0 20px !important;
+        height: 35px;
+        padding: 0 12px;
+
+        &:first-child {
+          margin-right: 0 !important;
+        }
+      }
+
+      .crm-form-multiselect {
+        margin: 0 !important;
+      }
+
+      tr:first-child {
+        td:nth-child(2) {
+          vertical-align: bottom;
+          padding-bottom: 4px;
+        }
       }
     }
 
