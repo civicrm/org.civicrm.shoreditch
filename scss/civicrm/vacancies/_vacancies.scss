@@ -318,6 +318,12 @@
           border: 0;
 
           tr {
+            &:nth-child(2) {
+              td {
+                line-height: 25px;
+              }
+            }
+
             td {
               color: $crm-dark-blue;
               padding: 0 15px;
