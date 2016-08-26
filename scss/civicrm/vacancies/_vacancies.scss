@@ -70,6 +70,37 @@
         }
       }
     }
+
+    @media (max-width: 1340px) {
+      #s2id_permission_1 {
+        min-width: 200px !important;
+      }
+
+      .crm-form-multiselect {
+        min-width: 230px !important;
+        width: 230px !important;
+      }
+    }
+
+    @media (max-width: 1100px) and (min-width: 861px) {
+      .crm-form-multiselect {
+        min-width: 160px !important;
+        width: 160px !important;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .advmultiselect {
+        td:nth-child(2) {
+          vertical-align: middle !important;
+          padding-bottom: 15px !important;
+
+          > input:first-child {
+            margin: 0 0 10px 0 !important;
+          }
+        }
+      }
+    }
   }
 
   #HRVacancy > div.crm-block.crm-form-block > div > span.crm-button {
