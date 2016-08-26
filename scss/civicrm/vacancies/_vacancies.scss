@@ -28,6 +28,9 @@
     .crm-block.crm-form-block {
       .form-layout-compressed .crm-profile-selector-preview {
         @extend .btn-primary;
+        height: 30px;
+        line-height: 16px;
+        margin-left: 20px;
       }
     }
   }
