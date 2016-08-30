@@ -2,4 +2,9 @@
   &__dropdown {
     box-shadow: none !important;
   }
+
+  &__placeholder {
+    color: $gray;
+    padding-bottom: 10px;
+  }
 }

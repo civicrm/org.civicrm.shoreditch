@@ -49,6 +49,10 @@
 
 .btn-secondary-outline {
     @include button-outline-variant($gray-darker, $gray-dark);
+    border-color: $gray-darker !important;
+    &:hover {
+      color: #ffffff !important;
+    }
 }
 
 .btn-info-outline {

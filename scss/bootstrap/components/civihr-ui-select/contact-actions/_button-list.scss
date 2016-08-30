@@ -4,6 +4,10 @@
 
   &__button {
     cursor: pointer;
+
+    &:not(:last-of-type) {
+      padding-right: 5px;
+    }
   }
 
   &--with-upper-margin {

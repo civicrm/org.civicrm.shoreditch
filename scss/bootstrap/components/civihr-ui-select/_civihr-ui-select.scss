@@ -1,3 +1,7 @@
+@import 'overrides';
+@import 'result-list';
+@import 'contact-actions/contact-actions';
+
 .civihr-ui-select {
   &__content {
     padding: 0 5px !important;

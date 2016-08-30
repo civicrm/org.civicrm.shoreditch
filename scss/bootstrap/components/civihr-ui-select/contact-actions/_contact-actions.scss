@@ -6,8 +6,9 @@
   &, * {
     border-color: $gray-light !important;
   }
-  padding: 10px;
-  background: $gray-lighter;
-  border: solid 1px;
-  margin: 5px;
+
+  padding: 10px !important;
+  background: $gray-lighter !important;
+  border: solid 1px !important;
+  margin: 5px !important;
 }
