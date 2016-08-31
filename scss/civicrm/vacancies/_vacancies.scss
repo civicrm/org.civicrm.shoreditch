@@ -1,3 +1,19 @@
+%search-filter-block {
+  margin: 20px 0;
+  padding: 18px 15px;
+  background-color: $gray-lighter;
+
+  .form-layout-compressed {
+    margin: 0;
+  }
+
+  .select2-container {
+    width: 180px !important;
+  }
+}
+
+// .page-civicrm-vacancy
+// =====================================
 .page-civicrm-vacancy {
   .crm-container {
     .advmultiselect {
@@ -155,8 +171,6 @@
       }
     }
   }
-
-
 
   .crm-submit-buttons {
     padding: 20px !important;
@@ -497,6 +511,8 @@
   }
 }
 
+// .page-civicrm-case
+// =====================================
 .page-civicrm-case {
   .font-size12pt {
     font-size: 13px;
@@ -565,13 +581,7 @@
   }
 
   .crm-search-tasks {
-    margin: 20px 0;
-    padding: 18px 15px;
-    background-color: $gray-lighter;
-
-    .form-layout-compressed {
-      margin: 0;
-    }
+    @extend %search-filter-block;
   }
 
   .caseSelector {
@@ -619,7 +629,13 @@
   }
 }
 
+// .page-civicrm-activity
+// =====================================
 .page-civicrm-activity {
+  .crm-search-tasks {
+    @extend %search-filter-block;
+  }
+
   #searchForm {
     box-sizing: border-box;
 
