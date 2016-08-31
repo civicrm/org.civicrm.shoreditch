@@ -26,27 +26,29 @@
 // =====================================
 .page-civicrm-vacancy {
   .crm-container {
-    .advmultiselect {
-      input[type='button'] {
-        bottom: 0 !important;
-        position: relative;
-        margin: 0 20px !important;
-        height: 35px;
-        padding: 0 12px;
+    .form-layout-compressed {
+      .advmultiselect {
+        input[type='button'] {
+          bottom: 0 !important;
+          position: relative;
+          margin: 0 20px !important;
+          height: 35px;
+          padding: 0 12px;
 
-        &:first-child {
-          margin-right: 0 !important;
+          &:first-child {
+            margin-right: 0 !important;
+          }
         }
-      }
 
-      .crm-form-multiselect {
-        margin: 0 !important;
-      }
+        .crm-form-multiselect {
+          margin: 0 !important;
+        }
 
-      tr:first-child {
-        td:nth-child(2) {
-          vertical-align: bottom;
-          padding-bottom: 4px;
+        tr:first-child {
+          td:nth-child(2) {
+            vertical-align: bottom;
+            padding-bottom: 4px;
+          }
         }
       }
     }
@@ -224,6 +226,8 @@
 
         .crm-form-time {
           margin-left: 15px !important;
+          min-width: 70px !important;
+          max-width: 70px !important;
         }
 
         tr {

@@ -25,6 +25,7 @@ $button-border-radius: 2px;
       @extend .btn-primary;
       border: 0;
       min-width: 90px;
+      padding-left: 12px;
     }
   }
 
@@ -123,7 +124,7 @@ $button-border-radius: 2px;
 
     &.css_right {
       box-sizing: content-box;
-      padding: 7px 12px !important;
+      padding: 6px 12px !important;
     }
 
     &.crm-close-accordion {
