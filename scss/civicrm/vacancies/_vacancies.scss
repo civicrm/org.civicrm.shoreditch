@@ -498,6 +498,15 @@
 }
 
 .page-civicrm-case {
+  .font-size12pt {
+    font-size: 13px;
+
+    label {
+      width: 212px;
+      display: inline-block;
+    }
+  }
+
   .crm-case-search-form-block {
     tr {
       td {
@@ -505,15 +514,6 @@
 
         &.label {
           text-align: left !important;
-        }
-
-        &.font-size12pt {
-          font-size: 13px;
-
-          label {
-            width: 212px;
-            display: inline-block;
-          }
         }
 
         &.crm-submit-buttons {
@@ -561,6 +561,16 @@
           padding-left: 0 !important;
         }
       }
+    }
+  }
+
+  .crm-search-tasks {
+    margin: 20px 0;
+    padding: 18px 15px;
+    background-color: $gray-lighter;
+
+    .form-layout-compressed {
+      margin: 0;
     }
   }
 
