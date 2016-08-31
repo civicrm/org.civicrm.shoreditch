@@ -62,7 +62,8 @@
   table.report-layout,
   table.selector,
   .ui-dialog table,
-  .CRM_HRRecruitment_Form_Search > table {
+  .CRM_HRRecruitment_Form_Search > table,
+  .CRM_Case_Form_Search .caseSelector {
     @extend %crm-table;
 
     &:not(.report-layout) {

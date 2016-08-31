@@ -498,7 +498,7 @@
 }
 
 .page-civicrm-case {
-  #Search {
+  .crm-case-search-form-block {
     tr {
       td {
         padding: 0 !important;
@@ -559,6 +559,50 @@
 
         td {
           padding-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  .caseSelector {
+    > tbody {
+      > tr {
+        > td:first-child,
+        > th:first-child {
+          width: 50px;
+          text-align: center;
+        }
+
+        th {
+          color: $gray-darker !important;
+
+          a {
+            color: $gray-darker !important;
+          }
+        }
+
+        .crm-hover-button {
+          border-left: 1px solid transparent !important;
+
+          &:hover {
+            background: none;
+            border-left: 1px solid #AAAAAA !important;
+            color: $crm-copy;
+          }
+        }
+
+        .nestedActivitySelector {
+          td {
+            &:nth-child(8) {
+              text-align: left;
+            }
+          }
+        }
+
+        .ui-buttonset {
+          .ui-button {
+            padding: 5px 10px;
+          }
         }
       }
     }
