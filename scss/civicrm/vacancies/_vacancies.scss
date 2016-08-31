@@ -618,3 +618,55 @@
     }
   }
 }
+
+.page-civicrm-activity {
+  #searchForm {
+    box-sizing: border-box;
+
+    tr {
+      &:not(#activityCustom) {
+        td {
+          padding: 10px 20px !important;
+        }
+      }
+
+      &:nth-child(n+8):nth-child(-n+9) {
+        display: none;
+      }
+
+      td {
+        border: 0 !important;
+        padding: 10px 0 !important;
+
+        &.font-size12pt {
+          font-size: 13px;
+        }
+
+        .crm-button_qf_Search_refresh {
+          float: right !important;
+          margin: 0;
+
+          > .crm-form-submit {
+            margin-right: 0 !important;
+          }
+        }
+
+        &.label {
+          text-align: left;
+        }
+
+        #sort_name {
+          max-width: 230px !important;
+          min-width: 230px !important;
+        }
+
+        .select2-choices,
+        .select2-choice,
+        #activity_subject {
+          width: 329px !important;
+          min-width: 329px !important;
+        }
+      }
+    }
+  }
+}
