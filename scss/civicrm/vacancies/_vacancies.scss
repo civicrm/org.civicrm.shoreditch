@@ -12,6 +12,16 @@
   }
 }
 
+%group-buttons {
+  border-left: 1px solid transparent !important;
+
+  &:hover {
+    background: none;
+    border-left: 1px solid #AAAAAA !important;
+    color: $crm-copy;
+  }
+}
+
 // .page-civicrm-vacancy
 // =====================================
 .page-civicrm-vacancy {
@@ -602,13 +612,7 @@
         }
 
         .crm-hover-button {
-          border-left: 1px solid transparent !important;
-
-          &:hover {
-            background: none;
-            border-left: 1px solid #AAAAAA !important;
-            color: $crm-copy;
-          }
+          @extend %group-buttons;
         }
 
         .nestedActivitySelector {
@@ -634,6 +638,10 @@
 .page-civicrm-activity {
   .crm-search-tasks {
     @extend %search-filter-block;
+  }
+
+  .crm-hover-button {
+    @extend %group-buttons;
   }
 
   #searchForm {
