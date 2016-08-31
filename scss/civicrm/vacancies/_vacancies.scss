@@ -167,6 +167,7 @@
 
   #addMorePermission {
     @extend .btn-primary;
+    padding: 7px 6px;
 
     > .add-icon {
       background-image: none;
