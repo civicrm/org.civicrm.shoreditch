@@ -32,7 +32,7 @@
 
 .civihr-ui-select {
   $disabled-color: lighten($gray-dark, 25);
-  $tasks-and-assignments: '#civitasks';
+  $tasks-and-assignments: '#civitasks', '#cividocuments';
   color: $gray-dark;
 
   width: 100% !important;
@@ -106,8 +106,10 @@
       top: 2px !important;
     }
 
-    @at-root #{$tasks-and-assignments} & {
-      top: 3px !important;
+    @each $id in $tasks-and-assignments {
+      @at-root #{$id} & {
+        top: 1px !important;
+      }
     }
 
     &::before {
@@ -121,8 +123,10 @@
     }
   }
 
-  @at-root #{$tasks-and-assignments} & a.select2-search-choice-close {
-    top: 0 !important;
+  @each $id in $tasks-and-assignments {
+    @at-root #{$id} & a.select2-search-choice-close {
+      top: 0 !important;
+    }
   }
 
   &.open {
@@ -137,9 +141,11 @@
         border: 0 !important;
       }
 
-      @at-root #{$tasks-and-assignments} & {
-        border-bottom: 0 !important;
-        padding-left: 12px !important;
+      @each $id in $tasks-and-assignments {
+        @at-root #{$id} & {
+          border-bottom: 0 !important;
+          padding-left: 12px !important;
+        }
       }
     }
 
@@ -160,8 +166,10 @@
     .select2-arrow {
       @extend %ui-select-no-padding;
 
-      @at-root #{$tasks-and-assignments} & {
-        line-height: 31px;
+      @each $id in $tasks-and-assignments {
+        @at-root #{$id} & {
+          line-height: 31px;
+        }
       }
     }
 
@@ -193,9 +201,6 @@
 
       &::before {
         content: '\f0d7';
-        @at-root #{$tasks-and-assignments} & {
-          padding-left: 2px;
-        }
       }
 
       @at-root #{$bootstrap-namespace} & {
@@ -206,8 +211,11 @@
           text-align: center;
         }
       }
-      @at-root #{$tasks-and-assignments} & {
-        padding-left: 10px !important;
+
+      @each $id in $tasks-and-assignments {
+        @at-root #{$id} & {
+          text-align: center;
+        }
       }
     }
 
@@ -259,9 +267,11 @@
     border-style: solid;
     border-width: 1px !important;
 
-    @at-root #{$tasks-and-assignments} & {
-      @extend %ui-select-border;
-      border-top: 0 !important;
+    @each $id in $tasks-and-assignments {
+      @at-root #{$id} & {
+        @extend %ui-select-border;
+        border-top: 0 !important;
+      }
     }
   }
 
