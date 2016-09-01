@@ -1,0 +1,23 @@
+.crm-pager {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: $box-shadow;
+  margin: 15px 0;
+  color: $crm-copy;
+
+  > .element-right {
+    margin-top: 3px;
+  }
+}
+
+.ui-spinner {
+  border-radius: 0;
+
+  > a {
+    background: none;
+
+    &:first-child {
+      border-bottom: 1px solid $crm-copy;
+    }
+  }
+}
