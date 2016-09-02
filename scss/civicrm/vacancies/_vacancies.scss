@@ -3,6 +3,7 @@
   padding: 18px 15px;
   background-color: #fff;
   box-shadow: $box-shadow;
+  border-radius: 0;
 
   .form-layout-compressed {
     margin: 0;
@@ -734,6 +735,22 @@
             padding-left: 4px;
           }
         }
+      }
+    }
+
+    #Activity > div.crm-block.crm-content-block.crm-activity-view-block > table > tbody > tr {
+      border-bottom: 0 !important;
+
+      > td {
+        border-bottom: 0 !important;
+      }
+    }
+
+    #Activity_Custom_Fields__1 {
+      padding: 0 !important;
+
+      .crm-accordion-body {
+        padding-right: 0 !important;
       }
     }
 
