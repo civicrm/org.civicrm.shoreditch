@@ -63,7 +63,8 @@
   table.selector,
   .ui-dialog table,
   .CRM_HRRecruitment_Form_Search > table,
-  .CRM_Case_Form_Search .caseSelector {
+  .CRM_Case_Form_Search .caseSelector,
+  .CRM_Activity_Form_Activity > .crm-activity-view-block > .crm-info-panel {
     @extend %crm-table;
 
     &:not(.report-layout) {
@@ -71,6 +72,8 @@
     }
 
     td {
+      background: #fff !important;
+
       &.label {
         vertical-align: middle !important;
       }
