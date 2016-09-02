@@ -1,7 +1,8 @@
 %search-filter-block {
   margin: 20px 0;
   padding: 18px 15px;
-  background-color: $gray-lighter;
+  background-color: #fff;
+  box-shadow: $box-shadow;
 
   .form-layout-compressed {
     margin: 0;
@@ -750,7 +751,13 @@
 
           > td,
           #Activity_Custom_Fields__ {
-            padding: 0 !important;
+            padding: 0 20px !important;
+          }
+        }
+
+        &-schedule_followup {
+          > td {
+            padding-bottom: 20px !important;
           }
         }
       }
