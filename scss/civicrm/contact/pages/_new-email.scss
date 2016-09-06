@@ -2,4 +2,16 @@
   .crm-submit-buttons:first-child {
     display: none;
   }
+
+  table {
+    &.form-layout-compressed {
+      tr {
+        td {
+          &.label {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
 }
