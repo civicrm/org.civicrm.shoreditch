@@ -99,7 +99,7 @@ $button-border-radius: 2px;
   }
 
   .crm-option-edit-link.crm-hover-button,
-  .crm-hover-button,
+  .crm-hover-button:not(#addMorePermission),
   .crm-clear-link {
     border: 0 !important;
     color: $gray-dark;
@@ -139,7 +139,7 @@ $button-border-radius: 2px;
   }
 
   .crm-button-type-refresh,
-  .crm-submit-buttons > .crm-button:not(.crm-button_qf_HRVacancy_next):not(.crm-button_qf_HRVacancy_cancel):not(.crm-button_qf_Application_upload):not(.crm-button_qf_Application_cancel) {
+  .crm-submit-buttons > .crm-button {
     padding: 0 !important;
     border: 0 !important;
 
