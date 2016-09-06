@@ -1,0 +1,19 @@
+.page-civicrm-contact-add {
+  .crm-container {
+    .form-layout-compressed {
+      td {
+        &.label {
+          text-align: left;
+        }
+      }
+    }
+
+    .crm-form-block.crm-form-block {
+      > .crm-submit-buttons {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
