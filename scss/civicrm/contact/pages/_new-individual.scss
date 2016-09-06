@@ -20,6 +20,11 @@
 
               &:last-child {
                 > .select2-container {
+                  width: auto !important;
+                  min-width: auto !important;
+                }
+
+                #s2id_suffix_id {
                   width: 80px !important;
                   min-width: 80px !important;
                 }
