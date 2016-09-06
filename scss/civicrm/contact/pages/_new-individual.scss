@@ -1,9 +1,57 @@
 .page-civicrm-contact-add {
+  @media (min-device-width: $screen-sm-min) {
+    .crm-container {
+      .crm-contactDetails-accordion {
+        .contact_basic_information-section {
+          tr {
+            &:first-child {
+              td {
+                &:last-child {
+                  min-width: 150px;
+                }
+              }
+            }
+
+            td {
+              > input[type="text"] {
+                width: 100% !important;
+                min-width: 100% !important;
+              }
+
+              &:last-child {
+                > .select2-container {
+                  width: 80px !important;
+                  min-width: 80px !important;
+                }
+              }
+            }
+          }
+        }
+
+        .select2-container,
+        .crm-form-select {
+            width: 120px !important;
+            min-width: 120px !important;
+
+            + .crm-option-edit-link {
+              position: relative;
+              left: -15px;
+            }
+        }
+
+        input[type='text'] {
+          width: auto !important;
+        }
+      }
+    }
+  }
+
   .crm-container {
     .form-layout-compressed {
       td {
         &.label {
           text-align: left;
+          vertical-align: middle;
         }
       }
     }
@@ -14,6 +62,12 @@
           display: none;
         }
       }
+    }
+
+    #addMoreAddress1 {
+      height: auto;
+      zoom: 1;
+      overflow: auto;
     }
   }
 }
