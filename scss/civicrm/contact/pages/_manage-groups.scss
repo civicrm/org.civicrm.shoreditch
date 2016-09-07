@@ -10,6 +10,24 @@
     }
   }
 
+  .crm-submit-buttons {
+    height: auto;
+    @include clearfix;
+  }
+
+  .crm-group-search-form-block {
+    padding: 20px !important;
+
+    h3 {
+      @extend .collapsible-title;
+    }
+
+    > h3,
+    > table td {
+      padding: 0;
+    }
+  }
+
   #DataTables_Table_0 {
     width: 100% !important;
     margin-top: 20px;
