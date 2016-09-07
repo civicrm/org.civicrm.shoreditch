@@ -93,4 +93,14 @@
       }
     }
   }
+
+  #summary-counts {
+    width: 100% !important;
+
+    tr {
+      td:first-child {
+        @include table-header();
+      }
+    }
+  }
 }
