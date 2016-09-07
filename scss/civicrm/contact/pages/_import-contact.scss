@@ -63,23 +63,17 @@
       padding: 20px 0 0 0 !important;
     }
 
-    #map-field,
-    #preview-counts {
-      margin: 0 20px;
-
-      .columnheader {
-        td {
-          @include table-header();
-        }
-      }
-    }
-
     .help {
       margin: 20px;
     }
 
     h2 {
       margin: 0 20px !important;
+    }
+
+    #map-field,
+    #preview-counts {
+      margin: 0 20px;
     }
 
     #preview-counts {
@@ -90,6 +84,15 @@
         td:first-child {
           @include table-header();
         }
+      }
+    }
+  }
+
+  #map-field,
+  #preview-counts {
+    .columnheader {
+      td {
+        @include table-header();
       }
     }
   }
