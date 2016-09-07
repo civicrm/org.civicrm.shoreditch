@@ -1,9 +1,4 @@
-.page-civicrm-contact-view {
-  @import 'tabs';
-  @import 'header';
-  @import 'detail';
-}
-
 @import 'pages/new-individual';
 @import 'pages/new-email';
 @import 'pages/import-contact';
+@import 'pages/manage-groups';

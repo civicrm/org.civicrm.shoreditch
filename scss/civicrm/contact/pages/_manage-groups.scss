@@ -1,0 +1,37 @@
+.page-civicrm-group {
+  .help {
+    @extend %block-with-shadow;
+    border-radius: 0;
+    border-color: $gray;
+    background-color: #ffffff;
+
+    + .crm-submit-buttons {
+      display: none;
+    }
+  }
+
+  #DataTables_Table_0 {
+    width: 100% !important;
+    margin-top: 20px;
+
+    th,
+    td {
+      min-width: 100px;
+      line-height: normal !important;
+    }
+
+    .DataTables_sort_icon {
+      display: inline-block;
+    }
+
+    .crm-editable-enabled {
+      white-space: normal !important;
+    }
+
+    .crm-hover-button {
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
+}
