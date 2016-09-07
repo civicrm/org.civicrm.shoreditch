@@ -92,7 +92,8 @@ $control-height: 30px;
 
   .form-layout,
   .form-layout-compressed,
-  .crm-accordion-body {
+  .crm-accordion-body,
+  .crm-form-block {
     input.crm-form-text,
     input.dateplugin,
     textarea {
@@ -161,7 +162,8 @@ $control-height: 30px;
     }
 
     // "Select2" Drop-downs
-    .select2-container {
+    .select2-container,
+    .crm-form-select {
       %arrow {
         @include fa-icon(13px, '\f0d7');
         display: block;

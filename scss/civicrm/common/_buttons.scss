@@ -59,15 +59,18 @@ $button-border-radius: 2px;
         display: none;
       }
 
-      .crm-button-type-cancel input {
-        @extend .btn-secondary-outline;
-        ///The default theme uses "!important"
-        color: $gray !important;
-        border: solid 1px $gray-dark;
+      .crm-button-type-cancel,
+      .crm-button-type-back {
+        input {
+          @extend .btn-secondary-outline;
+          ///The default theme uses "!important"
+          color: $gray !important;
+          border: solid 1px $gray-dark;
 
-        &:hover {
-          color: #ffffff !important;
-          background: $gray-dark;
+          &:hover {
+            color: #ffffff !important;
+            background: $gray-dark;
+          }
         }
       }
     }

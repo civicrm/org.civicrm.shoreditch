@@ -16,19 +16,13 @@
     }
 
     h2 {
+      position: initial !important;
       margin: 0 0 20px 0;
     }
 
     h3 {
       @extend .collapsible-title;
       margin-top: 20px;
-    }
-  }
-
-  .CRM_Contact_Import_Form_DataSource {
-    h2 {
-      position: initial !important;
-      margin: 20px 20px 0;
     }
 
     .help {
@@ -42,9 +36,20 @@
       text-align: left !important;
       vertical-align: middle !important;
     }
+  }
 
-    > .crm-import-datasource-form-block {
-      padding: 20px 20px 0 20px !important;
+  form > .crm-form-block.crm-form-block {
+    padding: 20px 20px 0 20px !important;
+  }
+
+  #map-field {
+    table.selector {
+      width: 100% !important;
+      margin-bottom: 20px;
     }
+  }
+
+  .crm-form-select {
+    @extend .select2-container;
   }
 }
