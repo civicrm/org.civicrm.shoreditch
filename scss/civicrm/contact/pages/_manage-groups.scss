@@ -52,4 +52,49 @@
       }
     }
   }
+
+  .ui-dialog {
+    .help {
+      border-radius: 0;
+    }
+
+    .CRM_Group_Form_Edit {
+      .crm-form-block {
+        padding: 20px 20px 0 20px;
+
+        table {
+          tr {
+            border-bottom: 0 !important;
+
+            td {
+              border-bottom: 0 !important;
+
+              &.label,
+              &.report-label {
+                text-align: left;
+                padding: 0;
+
+                label[for='parents'] {
+                  position: relative;
+                  left: -19px;
+                }
+              }
+            }
+          }
+        }
+
+        .crm-submit-buttons {
+          margin: 20px 0 0 0 !important;
+        }
+
+        .crm-form-textarea {
+          min-height: 70px;
+        }
+      }
+    }
+
+    .ui-dialog-buttonpane {
+      display: none;
+    }
+  }
 }
