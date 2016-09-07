@@ -1,0 +1,50 @@
+.page-civicrm-import-contact {
+  #wizard-steps {
+    display: none;
+  }
+
+  .crm-form-block.crm-form-block {
+    box-shadow: none;
+    padding: 0 !important;
+
+    > .crm-submit-buttons {
+      margin-left: 0 !important;
+
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+
+    h2 {
+      margin: 0 0 20px 0;
+    }
+
+    h3 {
+      @extend .collapsible-title;
+      margin-top: 20px;
+    }
+  }
+
+  .CRM_Contact_Import_Form_DataSource {
+    h2 {
+      position: initial !important;
+      margin: 20px 20px 0;
+    }
+
+    .help {
+      @extend %block-with-shadow;
+      border-radius: 0;
+      border-color: $gray;
+      background-color: #ffffff;
+    }
+
+    .label {
+      text-align: left !important;
+      vertical-align: middle !important;
+    }
+
+    > .crm-import-datasource-form-block {
+      padding: 20px 20px 0 20px !important;
+    }
+  }
+}
