@@ -39,7 +39,7 @@
   }
 
   table {
-    .mergecontact {
+    &.mergecontact {
       @include civihr-table;
 
       .DataTables_sort_icon {
