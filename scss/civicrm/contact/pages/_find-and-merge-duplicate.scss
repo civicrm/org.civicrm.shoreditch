@@ -1,4 +1,39 @@
 .page-civicrm-contact-deduperules {
+  #crm-main-content-wrapper {
+    @include clearfix;
+    margin-bottom: 30px;
+  }
+
+  .help {
+    @extend %block-with-shadow;
+    border-radius: 0;
+    border-color: $gray;
+    background-color: #ffffff;
+  }
+
+  .action-link {
+    line-height: normal;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  #browseValues_ {
+    &Household,
+    &Individual,
+    &Organization {
+      @include clearfix;
+
+      .button {
+        margin: 10px 0 0 0;
+      }
+    }
+
+    &Individual,
+    &Orgazination {
+      margin: 20px 0 !important;
+    }
+  }
+
   table {
     @include civihr-table;
 
