@@ -98,4 +98,50 @@
       display: none;
     }
   }
+
+  .crm-basic-criteria-form-block {
+    padding: 0 !important;
+    margin-top: 20px;
+
+    .crm-accordion-body {
+      padding: 20px !important;
+
+      .label {
+        text-align: left;
+      }
+
+      .crm-submit-buttons {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .crm-search-tasks {
+    @extend %search-filter-block;
+  }
+
+  #alpha-filter {
+    background-color: #ffffff !important;
+    box-shadow: $box-shadow;
+    padding: 5px 20px !important;
+
+    li {
+      a {
+        color: $crm-copy;
+      }
+    }
+  }
+
+  table.selector {
+    span.privacy-flag {
+      position: relative;
+      top: 10px;
+    }
+
+    .crm-hover-button {
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
 }
