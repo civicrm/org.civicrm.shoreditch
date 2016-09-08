@@ -81,6 +81,12 @@
           margin: 20px 0 0 0 !important;
         }
       }
+
+      .crm-dedupe-rules-form-block-is_reserved {
+        br {
+          display: none;
+        }
+      }
     }
   }
 }
