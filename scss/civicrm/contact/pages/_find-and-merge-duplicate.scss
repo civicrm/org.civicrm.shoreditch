@@ -1,0 +1,9 @@
+.page-civicrm-contact-deduperules {
+  table {
+    @include civihr-table;
+
+    .DataTables_sort_icon {
+      display: inline-block !important;
+    }
+  }
+}

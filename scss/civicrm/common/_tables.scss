@@ -11,7 +11,7 @@
   }
 
   th {
-    color: $gray-darker;
+    color: $gray-darker !important;
     border-bottom: 0;
     font-weight: bold !important;
   }
@@ -57,6 +57,63 @@
   }
 }
 
+@mixin civihr-table {
+  @extend %crm-table;
+
+  &:not(.report-layout) {
+    box-shadow: $box-shadow;
+  }
+
+  td {
+    background: #fff !important;
+
+    &.label {
+      vertical-align: middle !important;
+    }
+  }
+
+  &.form-layout {
+    //For "New Activity" page
+    tr[class^="crm-activity-form"] > td:not(.label):not(.view-value) {
+      padding: 0;
+    }
+
+    > tbody > tr > td.label {
+      line-height: 25px;
+    }
+  }
+
+  tr {
+    &:first-child {
+      th {
+        &:first-child {
+          border-top-left-radius: 2px;
+        }
+
+        &:last-child {
+          border-top-right-radius: 2px;
+        }
+      }
+    }
+
+    &:last-child {
+      td {
+        &:first-child {
+          border-bottom-left-radius: 2px;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: 2px;
+        }
+      }
+    }
+
+    td {
+      color: $crm-copy;
+    }
+  }
+}
+
 .crm-container {
   > table,
   table.report-layout,
@@ -68,59 +125,6 @@
   #preview-counts,
   #summary-counts,
   #DataTables_Table_0 {
-    @extend %crm-table;
-
-    &:not(.report-layout) {
-      box-shadow: $box-shadow;
-    }
-
-    td {
-      background: #fff !important;
-
-      &.label {
-        vertical-align: middle !important;
-      }
-    }
-
-    &.form-layout {
-      //For "New Activity" page
-      tr[class^="crm-activity-form"] > td:not(.label):not(.view-value) {
-        padding: 0;
-      }
-
-      > tbody > tr > td.label {
-        line-height: 25px;
-      }
-    }
-
-    tr {
-      &:first-child {
-        th {
-          &:first-child {
-            border-top-left-radius: 2px;
-          }
-
-          &:last-child {
-            border-top-right-radius: 2px;
-          }
-        }
-      }
-
-      &:last-child {
-        td {
-          &:first-child {
-            border-bottom-left-radius: 2px;
-          }
-
-          &:last-child {
-            border-bottom-right-radius: 2px;
-          }
-        }
-      }
-
-      td {
-        color: $crm-copy;
-      }
-    }
+    @include civihr-table;
   }
 }
