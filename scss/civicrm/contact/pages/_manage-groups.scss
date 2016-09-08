@@ -174,4 +174,9 @@
       }
     }
   }
+
+  .ui-dialog {
+    max-height: 90% !important;
+    overflow-y: auto;
+  }
 }
