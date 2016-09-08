@@ -144,4 +144,34 @@
       }
     }
   }
+
+  .CRM_Group_Form_Edit {
+    .crm-group-form-block {
+      padding: 20px;
+
+      .label,
+      .report-label {
+        text-align: left !important;
+        vertical-align: middle;
+
+        label[for='parents'] {
+          position: relative;
+          left: -19px;
+        }
+      }
+
+      .crm-form-textarea {
+        min-height: 70px;
+      }
+
+      h3 {
+        @extend .collapsible-title;
+        margin-top: 20px;
+      }
+
+      .crm-submit-buttons {
+        margin: 20px 0 0 0 !important;
+      }
+    }
+  }
 }
