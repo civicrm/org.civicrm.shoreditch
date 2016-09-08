@@ -10,7 +10,8 @@
     background: $gray-lighter !important;
   }
 
-  th {
+  th,
+  .columnheader td {
     color: $gray-darker !important;
     border-bottom: 0;
     font-weight: bold !important;
