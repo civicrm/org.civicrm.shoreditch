@@ -58,7 +58,7 @@
   }
 }
 
-@mixin civihr-table {
+%civihr-table {
   @extend %crm-table;
 
   &:not(.report-layout) {
@@ -126,6 +126,6 @@
   #preview-counts,
   #summary-counts,
   #DataTables_Table_0 {
-    @include civihr-table;
+    @extend %civihr-table;
   }
 }

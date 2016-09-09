@@ -10,7 +10,7 @@
   }
 
   #dedupeExceptions {
-    @include civihr-table;
+    @extend %civihr-table;
   }
 
   .ui-toolbar {
