@@ -1,0 +1,20 @@
+.page-civicrm-dedupe-exception {
+  .action-link {
+    line-height: normal;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  #dedupeExceptions {
+    @include civihr-table;
+  }
+
+  .ui-toolbar {
+    background: #ffffff !important;
+    border-radius: 0;
+    box-shadow: $box-shadow;
+    margin: 20px 0 !important;
+    line-height: 25px;
+    color: $crm-copy !important;
+  }
+}
