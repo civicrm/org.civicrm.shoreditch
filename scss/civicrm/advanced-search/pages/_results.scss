@@ -43,11 +43,22 @@
     margin-bottom: 15px !important;
   }
 
-  .crm-selection-reset {
-    @extend %btn;
+  #alpha-filter + .crm-selection-reset {
     color: $gray-darker !important;
     border: solid 1px $gray-darker;
     margin-bottom: 15px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 2px;
+
+    &:hover {
+      background: $gray-dark !important;
+      color: #ffffff !important;
+    }
+
+    .crm-i {
+      display: none;
+    }
   }
 
   .crm-pager,
@@ -57,6 +68,10 @@
 
   table.selector {
     @extend %crm-table;
+
+    tr.highlight > td {
+      background: $gray-light !important;
+    }
 
     ul.panel {
       @extend %block-with-shadow;
