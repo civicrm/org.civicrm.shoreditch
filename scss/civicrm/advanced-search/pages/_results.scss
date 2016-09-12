@@ -1,0 +1,106 @@
+.CRM_Contact_Form_Search_Advanced .crm-results-block {
+  @extend %block-with-shadow;
+  padding: 15px !important;
+
+  .crm-search-tasks {
+    border-radius: 0 !important;
+  }
+
+  .crm-pager-nav {
+    padding-left: 0 !important;
+  }
+
+  .crm-tooltip-wrapper {
+    background-image: none !important;
+
+    .crm-tooltip {
+      @extend %block-with-shadow;
+      background: $crm-background !important;
+
+      .crm-table-group-summary tr td,
+      .label {
+        color: $gray-dark !important;
+      }
+
+      .content {
+        color: $gray !important;
+      }
+
+      .crm-table-group-summary {
+        background: $crm-background !important;
+      }
+    }
+  }
+
+  #alpha-filter,
+  .crm-results-block,
+  .crm-search-tasks {
+    background: #ffffff !important;
+    border-bottom: solid 1px $crm-background;
+    padding-left: 0 !important;
+    padding-right: 0;
+    padding-bottom: 15px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .crm-selection-reset {
+    @extend %btn;
+    color: $gray-darker !important;
+    border: solid 1px $gray-darker;
+    margin-bottom: 15px;
+  }
+
+  .crm-pager,
+  table {
+    box-shadow: none !important;
+  }
+
+  table.selector {
+    @extend %crm-table;
+
+    ul.panel {
+      @extend %block-with-shadow;
+      border: solid 1px $crm-background !important;
+      margin-top: 10px !important;
+
+      li {
+        background: #ffffff !important;
+
+        a {
+          border-color: $crm-background !important;
+          border-radius: 0 !important;
+
+          &:not(:hover) {
+            color: $gray !important;
+          }
+
+          &:hover {
+            background-color: $gray-dark !important;
+            color: #ffffff !important;
+          }
+        }
+      }
+    }
+
+    .crm-icon {
+      background: none !important;
+      text-indent: 0 !important;
+
+      &::before {
+        text-indent: 0 !important;
+      }
+
+      &.Individual-icon::before {
+        @include fa-icon(13px, '\f007');
+      }
+
+      &.Household-icon::before {
+        @include fa-icon(13px, '\f015');
+      }
+
+      &.Organization-icon::before {
+        @include fa-icon(13px, '\f1ad');
+      }
+    }
+  }
+}

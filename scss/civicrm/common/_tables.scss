@@ -31,6 +31,18 @@
   }
 
   td .crm-hover-button {
+    border: solid 1px $table-border-color;
+    background-image: none !important;
+
+    &:hover {
+      background-color: $gray-dark !important;
+      color: #ffffff !important;
+    }
+
+    &:not(:hover) {
+      color: $gray-dark !important;
+    }
+
     &:not(:only-of-type) {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
@@ -49,6 +61,7 @@
         border-bottom-left-radius: 0 !important;
         border-top-right-radius: $button-border-radius !important;
         border-bottom-right-radius: $button-border-radius !important;
+        border-left: 0 !important;
       }
     }
 
