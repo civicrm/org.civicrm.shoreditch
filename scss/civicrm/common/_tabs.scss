@@ -1,0 +1,40 @@
+.ui-tabs {
+  background: #ffffff;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+
+  .ui-tabs-nav {
+    background: #f4f7f8;
+    border-radius: 0;
+    padding: 10px 10px 0 10px;
+
+    .ui-corner-all {
+      background: #f4f7f8;
+      border-radius: 0;
+      border: 1px solid transparent;
+      padding: 0;
+
+      a {
+        color: #545b68;
+        outline: none;
+        margin: 5px 10px !important;
+        display: block;
+      }
+
+      &.ui-tabs-active {
+        background: #ffffff;
+        border-color: #e8eef0;
+        border-bottom: 1px solid transparent;
+
+        a {
+          color: #43afcb;
+        }
+      }
+    }
+  }
+
+  .ui-tabs-panel {
+    padding: 20px 0 0 0 !important;
+  }
+}

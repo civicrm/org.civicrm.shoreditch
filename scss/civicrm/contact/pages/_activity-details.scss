@@ -1,0 +1,93 @@
+.page-civicrm-report-instance {
+  .crm-report-field-form-block {
+    box-shadow: $box-shadow;
+    margin-bottom: 20px;
+
+    .crm-form-submit {
+      @extend %btn-civi, %btn-civi-secondary-outline;
+    }
+  }
+
+  .crm-tasks {
+    background: #ffffff;
+    box-shadow: $box-shadow;
+    border-radius: 0;
+    margin: 20px 0;
+    padding-left: 11px;
+
+    td {
+      border: 0 !important;
+
+      .crm-form-submit {
+        @extend %btn-civi, %btn-civi-secondary-outline;
+      }
+    }
+  }
+
+  #report-tab {
+    &-format,
+    &-email,
+    &-access {
+      padding: 20px !important;
+
+      h3 {
+        @extend .collapsible-title;
+      }
+    }
+
+    &-email,
+    .crm-report-instanceForm-form-block-permission {
+      .report-label {
+        vertical-align: middle !important;
+      }
+    }
+
+    &-set-filters {
+      .label {
+        padding-left: 20px;
+      }
+
+      .crm-form-select {
+        margin-top: 5px;
+      }
+
+      .select2-container {
+        min-width: 230px !important;
+      }
+    }
+
+    &-order-by-elements {
+      #optionField {
+        @extend %civihr-table;
+
+        .form-link {
+          &:before {
+            @include fa-icon($content: '\f00d');
+          }
+        }
+      }
+
+      #optionFieldLink {
+        padding: 20px;
+
+        > .form-link {
+          @extend .btn, .btn-primary;
+        }
+      }
+
+      .action-icon {
+        display: none;
+      }
+    }
+  }
+
+  .civireport-criteria {
+    > .criteria-group {
+      margin: 0 20px;
+    }
+
+    .report-label {
+      text-align: left !important;
+    }
+  }
+}

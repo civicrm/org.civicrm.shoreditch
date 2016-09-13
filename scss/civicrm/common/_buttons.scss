@@ -3,29 +3,41 @@
 
 $button-border-radius: 2px;
 
+%btn-civi {
+  @extend .btn, %open-sans-font-family;
+  text-shadow: none;
+  text-transform: uppercase;
+  opacity: 1 !important;
+  font-size: 1em !important;
+}
+
+%btn-civi-primary {
+  @extend .btn-primary;
+  border: 0;
+  min-width: 90px;
+  padding: 8px 12px;
+}
+
+%btn-civi-secondary-outline {
+  @extend .btn-secondary-outline;
+  border-radius: $button-border-radius;
+}
+
 .crm-container {
   %btn,
   .crm-profile-selector-preview {
-    @extend .btn, %open-sans-font-family;
-    text-shadow: none;
-    text-transform: uppercase;
-    opacity: 1 !important;
-    font-size: 1em !important;
+    @extend %btn-civi;
 
     /**
      * :not(.ui-dialog .button) is used to do not apply the selector .btn-secondary-outline
      * on modal's buttons.
      */
-    &:not(.crm-form-submit):not(.crm-close-accordion):not(.crm-clear-link):not(.ui-dialog .button) {
-      @extend .btn-secondary-outline;
-      border-radius: $button-border-radius;
+    &:not(.crm-form-submit):not(.crm-close-accordion):not(.crm-clear-link):not(.ui-button) {
+      @extend %btn-civi-secondary-outline;
     }
 
     &.crm-form-submit:not(.cancel) {
-      @extend .btn-primary;
-      border: 0;
-      min-width: 90px;
-      padding: 8px 12px;
+      @extend %btn-civi-primary;
     }
   }
 
@@ -41,7 +53,8 @@ $button-border-radius: 2px;
 
   .crm-form-block {
     &.crm-search-form-block > .crm-submit-buttons,
-    &.crm-form-block > .crm-submit-buttons {
+    &.crm-form-block > .crm-submit-buttons,
+    .crm-submit-buttons {
       background: #ffffff !important;
       border-top: 1px solid $gray-lighter;
       margin: 20px 20px 0 !important;

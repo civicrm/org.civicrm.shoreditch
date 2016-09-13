@@ -12,17 +12,6 @@
     }
   }
 
-  .crm-tasks {
-    background: #ffffff;
-    box-shadow: $box-shadow;
-    border-radius: 0;
-
-    .crm-form-submit {
-      @extend .btn;
-      text-shadow: none;
-    }
-  }
-
   #Absence {
     tr {
       td {
