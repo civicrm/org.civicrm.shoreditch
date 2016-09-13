@@ -79,6 +79,14 @@
         display: none;
       }
     }
+
+    &-access {
+      .crm-report-instanceForm-form-block-is_navigation {
+        .report-label {
+          padding-top: 17px;
+        }
+      }
+    }
   }
 
   .civireport-criteria {
