@@ -24,10 +24,10 @@
   th,
   tr,
   tr td {
-    border: initial !important;
+    border: initial;
     line-height: 35px;
     padding-left: 15px;
-    border-bottom: solid 1px $table-border-color !important;
+    border-bottom: solid 1px $table-border-color;
   }
 
   td .crm-hover-button {

@@ -4,6 +4,9 @@
 
   .crm-search-tasks {
     border-radius: 0 !important;
+    border-bottom: solid 1px $crm-background;
+    padding-bottom: 15px !important;
+    margin-bottom: 15px !important;
   }
 
   .crm-pager-nav {
@@ -15,49 +18,48 @@
 
     .crm-tooltip {
       @extend %block-with-shadow;
-      background: $crm-background !important;
+      background: $crm-dark-blue !important;
+
 
       .crm-table-group-summary tr td,
-      .label {
-        color: $gray-dark !important;
-      }
-
+      .label,
       .content {
-        color: $gray !important;
+        color: #ffffff !important;
+        font-weight: 600;
       }
 
-      .crm-table-group-summary {
-        background: $crm-background !important;
+      .crm-table-group-summary,
+      td {
+        background: $crm-dark-blue !important;
+      }
+
+      .crm-table-group-summary > tbody > tr:nth-child(1) > td {
+        font-size: 1.5em;
+      }
+
+      td,
+      tr {
+        border: 0 !important;
+        border-bottom: 0 !important;
       }
     }
   }
 
   #alpha-filter,
-  .crm-results-block,
   .crm-search-tasks {
     background: #ffffff !important;
-    border-bottom: solid 1px $crm-background;
     padding-left: 0 !important;
     padding-right: 0;
-    padding-bottom: 15px !important;
-    margin-bottom: 15px !important;
   }
 
-  #alpha-filter + .crm-selection-reset {
-    color: $gray-darker !important;
-    border: solid 1px $gray-darker;
-    margin-bottom: 15px;
-    height: 25px;
-    line-height: 25px;
-    border-radius: 2px;
+  #alpha-filter {
+    float: left;
+    margin-bottom: 15px !important;
 
-    &:hover {
-      background: $gray-dark !important;
-      color: #ffffff !important;
-    }
-
-    .crm-i {
-      display: none;
+    + .crm-selection-reset {
+      margin-bottom: 15px !important;
+      float: right;
+      margin-top: 10px;
     }
   }
 
@@ -68,6 +70,9 @@
 
   table.selector {
     @extend %crm-table;
+    border-top: solid 1px $crm-background;
+    padding-top: 15px !important;
+    margin-top: 15px !important;
 
     tr.highlight > td {
       background: $gray-light !important;
@@ -80,18 +85,17 @@
 
       li {
         background: #ffffff !important;
+        padding: 0 !important;
 
         a {
-          border-color: $crm-background !important;
+          border: 0 !important;
           border-radius: 0 !important;
-
-          &:not(:hover) {
-            color: $gray !important;
-          }
+          line-height: 30px !important;
+          color: $crm-copy !important;
+          font-weight: initial;
 
           &:hover {
-            background-color: $gray-dark !important;
-            color: #ffffff !important;
+            background-color: $crm-background !important;
           }
         }
       }
