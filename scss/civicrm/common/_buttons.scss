@@ -23,6 +23,13 @@ $button-border-radius: 2px;
   border-radius: $button-border-radius;
 }
 
+%submit-buttons-civi {
+  background: #ffffff !important;
+  border-top: 1px solid $gray-lighter;
+  margin: 20px 20px 0 !important;
+  padding: 20px 0 10px !important
+}
+
 .crm-container {
   %btn,
   .crm-profile-selector-preview {
@@ -53,12 +60,8 @@ $button-border-radius: 2px;
 
   .crm-form-block {
     &.crm-search-form-block > .crm-submit-buttons,
-    &.crm-form-block > .crm-submit-buttons,
-    .crm-submit-buttons {
-      background: #ffffff !important;
-      border-top: 1px solid $gray-lighter;
-      margin: 20px 20px 0 !important;
-      padding: 20px 0 10px !important;
+    &.crm-form-block > .crm-submit-buttons {
+      @extend %submit-buttons-civi;
     }
 
     .crm-button.crm-i-button input.crm-form-submit {

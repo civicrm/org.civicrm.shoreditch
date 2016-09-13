@@ -98,4 +98,8 @@
       text-align: left !important;
     }
   }
+
+  .crm-submit-buttons {
+    @extend %submit-buttons-civi;
+  }
 }
