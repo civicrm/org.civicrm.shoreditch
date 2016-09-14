@@ -1,10 +1,5 @@
 .page-civicrm-group {
   .help {
-    @extend %block-with-shadow;
-    border-radius: 0;
-    border-color: $gray;
-    background-color: #ffffff;
-
     + .crm-submit-buttons {
       display: none;
     }
