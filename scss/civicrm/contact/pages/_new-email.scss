@@ -27,4 +27,34 @@
   #helphtml {
     margin: 0 0 20px 0;
   }
+
+  #attachments {
+    > .form-layout-compressed {
+      width: 100%;
+
+      tr {
+        td {
+          padding: 0;
+        }
+
+        &:first-child {
+          td {
+            padding-bottom: 20px;
+          }
+        }
+
+        &:nth-child(3) {
+          td {
+            padding: 20px 0;
+          }
+        }
+
+        &:nth-child(6) {
+          td {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
 }
