@@ -33,25 +33,15 @@
       width: 100%;
 
       tr {
-        td {
-          padding: 0;
-        }
-
         &:first-child {
           td {
             padding-bottom: 20px;
           }
         }
 
-        &:nth-child(3) {
+        &.attachment-fieldset {
           td {
-            padding: 20px 0;
-          }
-        }
-
-        &:nth-child(6) {
-          td {
-            padding-top: 20px;
+            padding-bottom: 13px;
           }
         }
       }
