@@ -356,9 +356,13 @@ $control-height: 30px;
     td {
       background: none !important;
 
-      .label,
-      label {
-        vertical-align: middle;
+      &.label {
+        display: flex;
+        align-items: center;
+
+        label {
+          text-align: initial;
+        }
       }
 
       label ~ input ~ label ~ input {
@@ -442,24 +446,7 @@ $control-height: 30px;
       }
 
       .crm-form-date {
-        @extend %responsive;
         padding-right: 0;
-      }
-
-      .crm-clear-link {
-        line-height: 26px;
-        padding: 0 5px;
-        position: absolute;
-        right: 0;
-      }
-
-      ~ .crm-form-date-wrapper .crm-form-date {
-        float: right;
-
-        + .crm-clear-link {
-          float: right;
-          margin-right: 3px;
-        }
       }
     }
   }
@@ -605,4 +592,25 @@ $control-height: 30px;
   .crm-marker {
     color: $brand-danger;
   }
+}
+
+.crm-form-text:focus + .addon.fa-calendar {
+  border-color: $input-border-focus;
+}
+
+.addon.fa-calendar {
+  border: 1px solid $gray-dark;
+  border-left: 0;
+  padding: 8px 10px 7px;
+  vertical-align: bottom;
+  color: $brand-primary;
+  cursor: pointer;
+}
+
+input.dateplugin,
+input.crm-form-date {
+  background: #ffffff;
+  height: 26px;
+  border: 1px solid $gray-dark;
+  vertical-align: bottom;
 }
