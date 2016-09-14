@@ -109,4 +109,11 @@
       }
     }
   }
+
+  #map-field > .selector,
+  #preview-counts,
+  #summary-counts {
+    box-shadow: none !important;
+    border: 1px solid $crm-background;
+  }
 }
