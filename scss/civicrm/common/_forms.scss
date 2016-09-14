@@ -150,6 +150,7 @@ $control-height: 30px;
     label {
       @extend .control-label;
       font-weight: 600 !important;
+      color: $gray-darker;
     }
 
     input[type=email],

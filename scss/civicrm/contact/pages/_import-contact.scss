@@ -16,6 +16,10 @@
     box-shadow: none;
     padding: 0 !important;
 
+    td {
+      color: $crm-copy;
+    }
+
     > .crm-submit-buttons {
       margin-left: 0 !important;
     }
