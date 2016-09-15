@@ -78,6 +78,8 @@
       .form-layout-compressed {
         @extend %civihr-table;
         width: 100% !important;
+        box-shadow: none !important;
+        border: 1px solid $crm-background;
       }
 
       &.crm-form-block {
