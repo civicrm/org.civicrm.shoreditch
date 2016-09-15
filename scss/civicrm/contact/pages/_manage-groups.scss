@@ -29,6 +29,14 @@
     }
   }
 
+  .crm-block {
+     > .css_right {
+       .crm-hover-button {
+         color: $brand-primary !important;
+       }
+     }
+  }
+
   #DataTables_Table_0 {
     width: 100% !important;
     margin-top: 20px;
