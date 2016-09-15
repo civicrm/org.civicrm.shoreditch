@@ -8,6 +8,11 @@
   .crm-submit-buttons {
     height: auto;
     @include clearfix;
+
+    a.newGroup.button {
+      @extend %btn-civi-primary;
+      margin-bottom: 20px;
+    }
   }
 
   .crm-group-search-form-block {
