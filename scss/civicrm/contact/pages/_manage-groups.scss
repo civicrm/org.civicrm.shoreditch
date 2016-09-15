@@ -168,6 +168,9 @@
   .CRM_Group_Form_Edit {
     .crm-group-form-block {
       padding: 20px;
+      box-shadow: none;
+      border: 1px solid #d3dee2;
+      border-radius: 2px;
 
       .label,
       .report-label {
