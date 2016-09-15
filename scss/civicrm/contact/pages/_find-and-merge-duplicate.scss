@@ -14,6 +14,10 @@
     line-height: normal;
     height: auto;
     margin: 20px 0;
+
+    .button {
+      border: 0 !important;
+    }
   }
 
   #browseValues_ {
