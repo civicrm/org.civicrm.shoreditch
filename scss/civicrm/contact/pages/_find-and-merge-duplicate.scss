@@ -20,6 +20,11 @@
     }
   }
 
+  .crm-hover-button {
+    text-transform: lowercase;
+    color: $brand-primary !important;
+  }
+
   #browseValues_ {
     &Household,
     &Individual,
