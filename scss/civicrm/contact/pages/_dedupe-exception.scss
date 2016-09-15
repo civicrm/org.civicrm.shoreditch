@@ -14,9 +14,8 @@
   }
 
   .ui-toolbar {
-    background: #ffffff !important;
-    border-radius: 0;
-    box-shadow: $box-shadow;
+    background: transparent !important;
+    border: 0;
     margin: 20px 0 !important;
     line-height: 25px;
     color: $crm-copy !important;
