@@ -12,6 +12,11 @@
     a.newGroup.button {
       @extend %btn-civi-primary;
       margin-bottom: 20px;
+
+      .crm-i {
+        position: relative;
+        bottom: 1px;
+      }
     }
   }
 
