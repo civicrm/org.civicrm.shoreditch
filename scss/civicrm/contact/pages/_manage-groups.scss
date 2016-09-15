@@ -47,9 +47,21 @@
       white-space: normal !important;
     }
 
-    .crm-hover-button {
-      &:hover {
-        background: none !important;
+    .crm-group-group_links {
+      > .crm-hover-button,
+      span > .crm-hover-button {
+        text-transform: lowercase;
+        color: $brand-primary;
+
+        &:hover {
+          background: none !important;
+        }
+
+        &.btn-slide {
+          &:after {
+            top: 5px;
+          }
+        }
       }
     }
   }
