@@ -45,25 +45,41 @@ $button-border-radius: 2px;
       padding-top: $toolbar-top-space;
       background: $crm-accordion-header-color !important;
 
-      %btn:not(.crm-button_qf_HRVacancy_next):not(.crm-button_qf_HRVacancy_cancel):not(#_qf_Application_upload) {
-        border: 0;
-        color: $gray-darker !important;
-        min-width: initial !important;
-        padding-left: 25px;
+      :not(.crm-public_holidays-form-block) {
+        %btn:not(.crm-button_qf_HRVacancy_next):not(.crm-button_qf_HRVacancy_cancel):not(#_qf_Application_upload) {
+          border: 0;
+          color: $gray-darker !important;
+          min-width: initial !important;
+          padding-left: 25px;
 
-        &,
-        &:hover {
-          background: none !important;
+          &,
+          &:hover {
+            background: none !important;
+          }
+
+          &:hover {
+            border: 1px solid $gray-darker;
+          }
         }
 
-        &:hover {
-          border: 1px solid $gray-darker;
+        .crm-i {
+          color: $gray-darker !important;
+          line-height: inherit;
         }
       }
 
-      .crm-i {
-        color: $gray-darker !important;
-        line-height: inherit;
+      .crm-button_qf_PublicHolidays_next,
+      .crm-button_qf_PublicHolidays_cancel {
+        .crm-i {
+          display: none;
+        }
+
+        input {
+          @extend .btn-primary;
+          min-width: 70px;
+          padding: 7px 12px;
+          border: none;
+        }
       }
     }
 
