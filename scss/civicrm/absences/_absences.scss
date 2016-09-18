@@ -1,0 +1,58 @@
+.page-civicrm-absence-period,
+.page-civicrm-absence-type {
+  .crm-container{
+    #crm-main-content-wrapper {
+      div.action-link {
+        background: transparent !important;
+
+        a.button {
+          @extend .btn-primary;
+          margin-top: 10px;
+
+          .icon {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page-civicrm-absence-type {
+  .crm-entity.odd-row,
+  .crm-entity.even-row
+  {
+    a {
+      @extend .btn-primary;
+      margin: 5px;
+      display: inline-block;
+      width: 60px !important;
+      min-width: initial !important;
+      font-size: 12px !important;
+    }
+  }
+
+  .crm-container tr {
+    border-bottom: 1px solid $crm_table_border !important;
+
+    td {
+      color: $crm_gray;
+      vertical-align: middle;
+      border-right: none;
+    }
+
+    th {
+      color: $crm_dark_gray !important;
+      padding: 10px 7px !important;
+      border: none !important;
+    }
+
+    &.even-row {
+      background-color: $crm_table_even_row;
+    }
+
+    &.odd-row {
+      background-color: $crm_table_odd_row;
+    }
+  }
+}
