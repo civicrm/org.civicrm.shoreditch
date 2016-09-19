@@ -68,19 +68,7 @@ $button-border-radius: 2px;
         }
       }
 
-      .crm-button_qf_PublicHolidays_next,
-      .crm-button_qf_PublicHolidays_cancel {
-        .crm-i {
-          display: none;
-        }
 
-        input {
-          @extend .btn-primary;
-          min-width: 70px;
-          padding: 7px 12px;
-          border: none;
-        }
-      }
     }
 
     .crm-submit-buttons {
