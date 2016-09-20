@@ -1,0 +1,98 @@
+.page-civicrm-contact-deduperules {
+  #crm-main-content-wrapper {
+    @include clearfix;
+    margin-bottom: 30px;
+  }
+
+  .help {
+    + .crm-submit-buttons {
+      display: none;
+    }
+  }
+
+  .action-link {
+    line-height: normal;
+    height: auto;
+    margin: 20px 0;
+
+    .button {
+      border: 0 !important;
+    }
+  }
+
+  .crm-hover-button {
+    text-transform: lowercase;
+    color: $brand-primary !important;
+  }
+
+  #browseValues_ {
+    &Household,
+    &Individual,
+    &Organization {
+      @include clearfix;
+
+      .button {
+        margin: 10px 0 0 0;
+      }
+    }
+
+    &Individual,
+    &Orgazination {
+      margin: 20px 0 !important;
+    }
+  }
+
+  table {
+    &.mergecontact {
+      @extend %civihr-table;
+
+      .DataTables_sort_icon {
+        display: inline-block !important;
+      }
+    }
+  }
+
+  #DedupeRules {
+    h3 {
+      @extend .collapsible-title;
+      margin-bottom: 0;
+    }
+
+    .crm-dedupe-rules-form-block {
+      padding: 20px 20px 0 20px !important;
+
+      .form-layout {
+        tr {
+          &:first-child {
+            .label {
+              padding-top: 20px !important;
+            }
+          }
+        }
+      }
+
+      .label {
+        text-align: left !important;
+      }
+
+      .form-layout-compressed {
+        @extend %civihr-table;
+        width: 100% !important;
+        box-shadow: none !important;
+        border: 1px solid $crm-background;
+      }
+
+      &.crm-form-block {
+        > .crm-submit-buttons {
+          margin: 20px 0 0 0 !important;
+        }
+      }
+
+      .crm-dedupe-rules-form-block-is_reserved {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.page-civicrm-activity-email {
+  .crm-submit-buttons:first-child {
+    display: none;
+  }
+
+  table {
+    &.form-layout-compressed {
+      tr {
+        td {
+          &.label {
+            text-align: left;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+  .crm-contactEmail-form-block {
+    padding-top: 20px !important;
+
+    > .form-layout-compressed {
+      margin: 0 0 20px 20px;
+    }
+
+    .select2-choice {
+      > span.select2-chosen {
+        color: $brand-primary;
+      }
+    }
+  }
+
+  #helphtml {
+    margin: 0 0 20px 0;
+  }
+
+  #attachments {
+    > .form-layout-compressed {
+      width: 100%;
+
+      tr {
+        &:first-child {
+          td {
+            padding-bottom: 20px;
+          }
+        }
+
+        &.attachment-fieldset {
+          td {
+            padding-bottom: 13px;
+          }
+        }
+      }
+    }
+  }
+}

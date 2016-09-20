@@ -1,0 +1,209 @@
+.page-civicrm-group {
+  .help {
+    + .crm-submit-buttons {
+      display: none;
+    }
+  }
+
+  .crm-submit-buttons {
+    height: auto;
+    @include clearfix;
+
+    a.newGroup.button {
+      @extend %btn-civi-primary;
+      margin-bottom: 20px;
+
+      .crm-i {
+        position: relative;
+        bottom: 1px;
+      }
+    }
+  }
+
+  .crm-group-search-form-block {
+    padding: 20px !important;
+    margin-bottom: 20px;
+
+    h3 {
+      @extend .collapsible-title;
+    }
+
+    > table td {
+      padding: 0;
+    }
+  }
+
+  .crm-block {
+     > .css_right {
+       .crm-hover-button {
+         color: $brand-primary !important;
+       }
+     }
+  }
+
+  #DataTables_Table_0 {
+    width: 100% !important;
+    margin-top: 20px;
+
+    th,
+    td {
+      min-width: 100px;
+      line-height: normal !important;
+    }
+
+    .DataTables_sort_icon {
+      display: inline-block;
+    }
+
+    .crm-editable-enabled {
+      white-space: normal !important;
+    }
+
+    .crm-group-group_links {
+      > .crm-hover-button,
+      span > .crm-hover-button {
+        text-transform: lowercase;
+        color: $brand-primary;
+
+        &:hover {
+          background: none !important;
+        }
+
+        &.btn-slide {
+          &:after {
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .ui-dialog {
+    .help {
+      border-radius: 0;
+    }
+
+    .CRM_Group_Form_Edit {
+      .crm-form-block {
+        padding: 20px 20px 0 20px;
+
+        table {
+          tr {
+            border-bottom: 0 !important;
+
+            td {
+              border-bottom: 0 !important;
+
+              &.label,
+              &.report-label {
+                text-align: left;
+                padding: 0;
+
+                label[for='parents'] {
+                  position: relative;
+                  left: -19px;
+                }
+              }
+            }
+          }
+        }
+
+        .crm-submit-buttons {
+          margin: 20px 0 0 0 !important;
+        }
+
+        .crm-form-textarea {
+          min-height: 70px;
+        }
+      }
+    }
+
+    .ui-dialog-buttonpane {
+      display: none;
+    }
+  }
+
+  .crm-basic-criteria-form-block {
+    padding: 0 !important;
+    margin-top: 20px;
+
+    .crm-accordion-body {
+      padding: 20px !important;
+
+      .label {
+        text-align: left;
+      }
+
+      .crm-submit-buttons {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .crm-search-tasks {
+    @extend %search-filter-block;
+  }
+
+  #alpha-filter {
+    background-color: #ffffff !important;
+    box-shadow: $box-shadow;
+    padding: 5px 20px !important;
+
+    li {
+      a {
+        color: $crm-copy;
+      }
+    }
+  }
+
+  table.selector {
+    span.privacy-flag {
+      position: relative;
+      top: 10px;
+    }
+
+    .crm-hover-button {
+      &:hover {
+        background: none !important;
+      }
+    }
+  }
+
+  .CRM_Group_Form_Edit {
+    .crm-group-form-block {
+      padding: 20px;
+      box-shadow: none;
+      border: 1px solid $crm-dialog-container-border;
+      border-radius: 2px;
+
+      .label,
+      .report-label {
+        text-align: left !important;
+        vertical-align: middle;
+
+        label[for='parents'] {
+          position: relative;
+          left: -19px;
+        }
+      }
+
+      .crm-form-textarea {
+        min-height: 70px;
+      }
+
+      h3 {
+        @extend .collapsible-title;
+        margin-top: 20px;
+      }
+
+      .crm-submit-buttons {
+        margin: 20px 0 0 0 !important;
+      }
+    }
+  }
+
+  .ui-dialog {
+    max-height: 90% !important;
+    overflow-y: auto;
+  }
+}

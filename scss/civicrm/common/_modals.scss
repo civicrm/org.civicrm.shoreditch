@@ -1,6 +1,8 @@
 .crm-container.ui-dialog {
   border-radius: 0;
   background: $crm-table-striped-bg;
+  max-height: 90%;
+  overflow-y: auto;
 
   .help {
     border-radius: 2px;

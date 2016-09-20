@@ -1,0 +1,24 @@
+.page-civicrm-report {
+  .action-link,
+  .crm-submit-buttons {
+    line-height: normal;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .crm-hover-button {
+    &:hover {
+      background: none !important;
+    }
+  }
+
+  #Absence {
+    tr {
+      td {
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
