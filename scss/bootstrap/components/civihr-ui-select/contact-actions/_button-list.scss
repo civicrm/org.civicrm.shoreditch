@@ -1,0 +1,18 @@
+.button-list {
+  display: flex;
+  justify-content: space-between;
+
+  &__button {
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      padding-right: 5px;
+    }
+  }
+
+  &--with-upper-margin {
+    border-top: solid 2px;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+}

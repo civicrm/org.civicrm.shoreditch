@@ -55,6 +55,7 @@ $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36
 
 $crm-dark-blue:         #586277 !default;
 
+
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -69,9 +70,9 @@ $body-bg: $crm-background !default;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-base:        "Open Sans", $font-family-sans-serif !default;
 
-$font-size-base:              13px !default;
-$font-size-medium:            14px !default;
-$font-size-xs:                9px !default;
+$font-size-base:          13px !default;
+$font-size-medium:        14px !default;
+$font-size-xs:            9px !default;
 $crm-font-size-base-unitless: 13;
 
 $font-size-h1:            24px !default;
@@ -163,7 +164,7 @@ $crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
 //
 //## Dropdown menu container and contents.
 
-$dropdown-border:        $crm-background !default;
+$dropdown-border:        #C4D1D9 !default;
 $dropdown-link-hover-bg: $dropdown-border !default;
 
 
@@ -184,10 +185,10 @@ $modal-md:                    500px !default;
 //
 //##
 
-$panel-bg:                        transparent !default;
-$panel-body-padding:              20px !default;
-$panel-heading-padding:           10px 20px !default;
-$panel-border-radius:             0 !default;
+$panel-bg:                    transparent !default;
+$panel-body-padding:          20px !default;
+$panel-heading-padding:       10px 20px !default;
+$panel-border-radius:         0 !default;
 $crm-panel-heading-big-padding:   15px 20px !default;
 $crm-panel-footer-big-padding:    $crm-panel-heading-big-padding !default;
 
@@ -251,7 +252,6 @@ $pagination-active-bg:                 $pagination-bg !default;
 $pagination-disabled-color:            $gray-light !default;
 $pagination-disabled-bg:               $pagination-bg !default;
 
-
 //== Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
@@ -259,8 +259,7 @@ $pagination-disabled-bg:               $pagination-bg !default;
 $state-success-text:             $brand-success !default;
 $state-info-text:                $brand-info !default;
 $state-warning-text:             $brand-warning !default;
-$state-danger-text:              $brand-danger !default;
-
+$state-danger-text: $brand-danger !default;
 
 //== Breadcrumbs
 //
