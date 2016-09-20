@@ -1,0 +1,56 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="36" height="36" id="svg3159" inkscape:version="0.91" sodipodi:docname="civicrm.svg">
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1920" inkscape:window-height="1003" id="namedview3422" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:zoom="3.36" inkscape:cx="-37.9" inkscape:cy="-0.51" inkscape:window-x="0" inkscape:window-y="25" inkscape:window-maximized="1" inkscape:current-layer="svg3159"/>
+  <defs id="defs3161">
+    <clipPath id="clipPath3079">
+      <path d="M0 432 864 432 864 0 0 0 0 432Z" id="path3081" inkscape:connector-curvature="0"/>
+    </clipPath>
+    <clipPath id="clipPath3103">
+      <path d="m468.37 239.96 13.94-12.09-4.37-48.88 2.52-10.08 10.58 6.55-1.51 12.43 49.72 27.21 4.7 8.01-7.56 4.09-23.35 1.85-30.82 19.15-13.86 1.85 0-10.08z" id="path3105" inkscape:connector-curvature="0"/>
+    </clipPath>
+    <clipPath id="clipPath3079-5">
+      <path inkscape:connector-curvature="0" id="path3081-3" d="M0 432 864 432 864 0 0 0 0 432Z"/>
+    </clipPath>
+    <clipPath id="clipPath3103-5">
+      <path inkscape:connector-curvature="0" id="path3105-6" d="m468.37 239.96 13.94-12.09-4.37-48.88 2.52-10.08 10.58 6.55-1.51 12.43 49.72 27.21 4.7 8.01-7.56 4.09-23.35 1.85-30.82 19.15-13.86 1.85 0-10.08z"/>
+    </clipPath>
+    <clipPath id="clipPath3079-3">
+      <path id="path3081-6" d="M0 432 864 432 864 0 0 0 0 432z"/>
+    </clipPath>
+    <clipPath id="clipPath3103-0">
+      <path id="path3105-62" d="m468.37 239.96 13.94-12.09-4.37-48.88 2.52-10.08 10.58 6.55-1.51 12.43 49.72 27.21 4.7 8.01-7.56 4.09-23.35 1.85-30.82 19.15-13.86 1.85 0-10.08z"/>
+    </clipPath>
+  </defs>
+  <metadata id="metadata3164">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>
+          image/svg+xml
+        </dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g id="g3865" transform="matrix(0.49089055,0,0,0.49089055,39.605441,9.7698648)" inkscape:transform-center-x="-1.82" inkscape:transform-center-y="1.08">
+    <g transform="translate(-563.51485,-521.47572)" id="layer1">
+      <g transform="matrix(0.75141876,0,0,-0.75141876,144.92682,699.59046)" id="g3073">
+        <g id="g3075">
+          <g clip-path="url(#clipPath3079-3)" id="g3077">
+            <g transform="translate(470.7715,245.6162)" id="g3091">
+              <path inkscape:connector-curvature="0" d="m0 0c0 0-9.86 2.1-6.73-7.48l20.6-63.12c0 0 3.13-9.58 9.86-2.08l44.21 49.29c0 0 6.73 7.5-3.13 9.6L0 0Z" id="path3093-1" style="fill:none;stroke-miterlimit:4;stroke-width:6.72;stroke:#2a698b"/>
+            </g>
+            <g transform="translate(481.2305,252.2236)" id="g3095">
+              <path inkscape:connector-curvature="0" d="m0 0c0 0-8.89 4.75-8.53-5.32l2.38-66.51c0 0 0.36-10.07 8.88-4.69l55.84 35.26c0 0 8.52 5.38-0.36 10.14L0 0Z" id="path3097-8" style="fill:none;stroke-miterlimit:4;stroke-width:6.72;stroke:#86c661"/>
+            </g>
+          </g>
+        </g>
+        <g id="g3099">
+          <g clip-path="url(#clipPath3103-0)" id="g3101">
+            <g transform="translate(470.7715,245.6172)" id="g3107">
+              <path inkscape:connector-curvature="0" d="m0 0c0 0-9.86 2.1-6.73-7.48l20.6-63.12c0 0 3.13-9.58 9.86-2.08l44.21 49.29c0 0 6.73 7.5-3.13 9.6L0 0Z" id="path3109-7" style="fill:none;stroke-miterlimit:4;stroke-width:6.72;stroke:#2a698b"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
