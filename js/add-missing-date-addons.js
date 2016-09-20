@@ -2,8 +2,36 @@ CRM.$(function() {
   'use strict';
 
   /**
-   * The purpose of this script is to add the missing calendar icons ('.input-group-addon .fa .fa-calendar')
+   * The purpose of this script is to add the missing calendar addons to datepicker fields
    */
+
+  /**
+   * Adds an datepicker addon to the given input
+   * @param {Object} input The jQuery object for the input
+   */
+  function addDateAddonToInput(input) {
+    CRM.$('<span class="addon fa fa-calendar"></span>')
+      .insertAfter(input)
+      .css('margin-top', input.css('margin-top'))
+      .css('margin-bottom', input.css('margin-bottom'))
+      .on('click', function() {
+        input.focus();
+      });
+
+    input[0].style.setProperty('width', input.width() - 19 + 'px', 'important');
+    input[0].style.setProperty('margin-right', 0, 'important');
+    input.css('min-width', 'initial');
+  }
+
+  /**
+   * Moves the addon to the input's side
+   * @param  {Object} input The jQuery object for the input
+   * @param  {Object} addon The jQuery object for the addon
+   */
+  function moveAddonToInputsSide(input, addon) {
+    input.after(addon);
+    addon.css('margin-right', 10);
+  }
 
   /**
    * We're debouncing the callback to avoid calling the plugin multiple times
@@ -12,18 +40,11 @@ CRM.$(function() {
   var observer = new MutationObserver(debounce(function() {
     CRM.$('.crm-container input.hasDatepicker').each(function() {
       var $this = CRM.$(this);
-      if (!$this.siblings('.addon').length && !$this.siblings('.input-group-addon').length) {
-        CRM.$('<span class="addon fa fa-calendar"></span>')
-          .insertAfter($this)
-          .css('margin-top', $this.css('margin-top'))
-          .css('margin-bottom', $this.css('margin-bottom'))
-          .on('click', function() {
-            $this.focus();
-          });
-
-        this.style.setProperty('width', $this.width() - 19 + 'px', 'important');
-        this.style.setProperty('margin-right', 0, 'important');
-        $this.css('min-width', 'initial');
+      var addon = $this.siblings('.addon');
+      if (!addon.length && !$this.siblings('.input-group-addon').length) {
+        addDateAddonToInput($this);
+      } else if (addon.length && !$this.next('.addon').length) {
+        moveAddonToInputsSide($this, addon);
       }
     });
   }, 500));

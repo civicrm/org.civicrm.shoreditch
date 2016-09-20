@@ -52,7 +52,7 @@ label {
 
         // Checkbox must be vertically aligned when in a form group
         .form-group {
-
+            overflow: initial;
             input[type="checkbox"] {
                 margin-top: 8px;
             }
