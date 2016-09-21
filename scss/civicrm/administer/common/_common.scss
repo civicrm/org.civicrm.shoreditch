@@ -4,3 +4,10 @@
 
 @import "table/table";
 @import "ui-tabs/ui-tabs";
+
+#crm-main-content-wrapper > .help {
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: $box-shadow;
+  background: #FFFFFF;
+}

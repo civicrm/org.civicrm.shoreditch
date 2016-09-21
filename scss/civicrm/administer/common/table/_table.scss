@@ -29,6 +29,13 @@
         background: #F4F7F8;
       }
     }
+
+    &.row-highlight {
+
+      tr:hover {
+        background: #FCFDFD !important;
+      }
+    }
   }
 
   .action-link,
