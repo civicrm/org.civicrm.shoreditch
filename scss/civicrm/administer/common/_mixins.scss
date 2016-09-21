@@ -1,0 +1,42 @@
+@mixin civihr_table() {
+  table {
+
+    tr {
+      background: #F4F7F8;
+      border-bottom: $panel-border;
+
+      & > td,
+      & > th {
+        color: $text-color;
+        background: transparent;
+        border: none;
+        padding: 15px;
+        vertical-align: middle;
+      }
+
+      & > th {
+        color: #4D5663;
+      }
+
+      &.odd-row {
+        background: #FFFFFF;
+      }
+
+      &.even-row {
+        background: #F4F7F8;
+      }
+    }
+
+    &.row-highlight {
+
+      tr:hover {
+        background: #FCFDFD !important;
+      }
+    }
+  }
+}
+
+@mixin civihr_panel {
+  background: #FFFFFF;
+  box-shadow: $box-shadow;
+}

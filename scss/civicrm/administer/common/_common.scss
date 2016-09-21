@@ -1,13 +1,14 @@
 // Styles that may apply to more than one page
 //
 @import "variables";
+@import "mixins";
 
 @import "table/table";
 @import "ui-tabs/ui-tabs";
 
 #crm-main-content-wrapper > .help {
+  @include civihr_panel();
+  
   padding: 10px;
   margin-bottom: 10px;
-  box-shadow: $box-shadow;
-  background: #FFFFFF;
 }
