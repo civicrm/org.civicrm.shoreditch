@@ -1,4 +1,8 @@
-@import "variables";
+.page-civicrm-admin,
+.page-civicrm-a {
+  @import "common/common";
 
-@import "system-status/system-status";
-@import "customize-data/customize-data";
+  @import "system-status/system-status";
+  @import "customize-data/customize-data";
+  @import "profiles/profiles";
+}

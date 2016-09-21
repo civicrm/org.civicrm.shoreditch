@@ -1,0 +1,38 @@
+#user-profiles,
+#reserved-profiles {
+  // override !important in higher level style
+  padding: 0 !important;
+
+  .crm-content-block {
+    box-shadow: none;
+
+    table {
+      border: none;
+
+      thead th.sorting .DataTables_sort_icon {
+        display: block;
+      }
+
+      tr {
+        border: none;
+        border-bottom: $panel-border;
+
+        &.odd {
+          background: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+#crm-main-content-wrapper > .crm-submit-buttons {
+  background: $panel-background;
+  box-shadow: $box-shadow;
+  padding: 10px;
+  margin: 0;
+  height: auto;
+
+  a {
+    float: none;
+  }
+}
