@@ -1,6 +1,7 @@
 %crm-table {
-  @extend .table-bordered, %open-sans-font-family;
+  @extend %open-sans-font-family;
   $border-color: $table-border-color;
+  border: 0;
 
   tr, th {
     background: #ffffff !important;
@@ -31,42 +32,26 @@
   }
 
   td .crm-hover-button {
-    border: solid 1px $table-border-color;
+    border: 0;
     background-image: none !important;
 
-    &:hover {
-      background-color: $gray-dark !important;
-      color: #ffffff !important;
+    &,
+    * {
+      text-transform: capitalize !important;
     }
 
     &:not(:hover) {
-      color: $gray-dark !important;
-    }
-
-    &:not(:only-of-type) {
-      border-top-left-radius: 0 !important;
-      border-bottom-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-      border-bottom-right-radius: 0 !important;
-
-      &:first-of-type {
-        border-top-left-radius: $button-border-radius !important;
-        border-bottom-left-radius: $button-border-radius !important;
-        border-top-right-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
-      }
-
-      &:last-of-type {
-        border-top-left-radius: 0 !important;
-        border-bottom-left-radius: 0 !important;
-        border-top-right-radius: $button-border-radius !important;
-        border-bottom-right-radius: $button-border-radius !important;
-        border-left: 0 !important;
+      &,
+      * {
+        color: $brand-primary !important;
       }
     }
 
-    + .crm-hover-button {
-      border-left: 0;
+    &:hover {
+      &,
+      * {
+        color: $gray-dark !important;
+      }
     }
   }
 }
