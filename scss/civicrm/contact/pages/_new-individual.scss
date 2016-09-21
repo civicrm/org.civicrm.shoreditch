@@ -1,0 +1,88 @@
+.page-civicrm-contact-add {
+  @media (min-device-width: $screen-sm-min) {
+    .crm-container {
+      .crm-contactDetails-accordion {
+        .contact_basic_information-section {
+          tr {
+            &:first-child {
+              td {
+                &:last-child {
+                  min-width: 150px;
+                }
+              }
+            }
+
+            td {
+              > input[type="text"] {
+                width: 100% !important;
+                min-width: 100% !important;
+              }
+
+              &:last-child {
+                > .select2-container {
+                  width: auto !important;
+                  min-width: auto !important;
+                }
+
+                #s2id_suffix_id {
+                  width: 80px !important;
+                  min-width: 80px !important;
+                }
+              }
+            }
+          }
+        }
+
+        .select2-container,
+        .crm-form-select {
+            width: 120px !important;
+            min-width: 120px !important;
+
+            + .crm-option-edit-link {
+              position: relative;
+              left: -15px;
+            }
+        }
+
+        input[type='text'] {
+          width: auto !important;
+        }
+      }
+    }
+  }
+
+  .crm-container {
+    .form-layout-compressed {
+      td {
+        &.label {
+          text-align: left;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .crm-form-block.crm-form-block {
+      > .crm-submit-buttons {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+
+    #addMoreAddress1 {
+      height: auto;
+      zoom: 1;
+      overflow: auto;
+    }
+
+    .crm-button_qf_Contact_refresh_dedupe {
+      border: 0;
+    }
+
+    .select2-choice {
+      > .select2-chosen {
+        font-size: 13px;
+      }
+    }
+  }
+}

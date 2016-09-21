@@ -1,0 +1,23 @@
+.page-civicrm-dedupe-exception {
+  .action-link {
+    line-height: normal;
+    height: auto;
+    margin: 20px 0;
+
+    .crm-i {
+      display: none;
+    }
+  }
+
+  #dedupeExceptions {
+    @extend %civihr-table;
+  }
+
+  .ui-toolbar {
+    background: transparent !important;
+    border: 0;
+    margin: 20px 0 !important;
+    line-height: 25px;
+    color: $crm-copy !important;
+  }
+}

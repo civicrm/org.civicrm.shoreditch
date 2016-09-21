@@ -92,7 +92,8 @@ $control-height: 30px;
 
   .form-layout,
   .form-layout-compressed,
-  .crm-accordion-body {
+  .crm-accordion-body,
+  .crm-form-block {
     input.crm-form-text,
     input.dateplugin,
     textarea {
@@ -149,6 +150,7 @@ $control-height: 30px;
     label {
       @extend .control-label;
       font-weight: 600 !important;
+      color: $gray-darker;
     }
 
     input[type=email],
@@ -161,7 +163,8 @@ $control-height: 30px;
     }
 
     // "Select2" Drop-downs
-    .select2-container {
+    .select2-container,
+    .crm-form-select {
       %arrow {
         @include fa-icon(13px, '\f0d7');
         display: block;
@@ -597,5 +600,9 @@ $control-height: 30px;
     > .crm-i {
       color: $brand-primary !important;
     }
+  }
+
+  .crm-marker {
+    color: $brand-danger;
   }
 }
