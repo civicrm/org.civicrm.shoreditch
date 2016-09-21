@@ -9,14 +9,14 @@ var postcssPrefix = require('postcss-prefix-selector');
 // Used to remove duplicated css rules
 var postcssDiscardDuplicates = require('postcss-discard-duplicates');
 
-gulp.task('sass-bootstrap', function () {
+gulp.task('sass-bootstrap', function (next) {
   gulp.src('scss/bootstrap/bootstrap.scss')
     .pipe(bulk())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(gulp.dest('css/'));
+    .pipe(gulp.dest('css/')).on('end', next);
 });
 
-gulp.task('sass-civicrm', function () {
+gulp.task('sass-civicrm', function (next) {
   gulp.src('scss/civicrm/custom-civicrm.scss')
     .pipe(bulk())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
@@ -24,7 +24,7 @@ gulp.task('sass-civicrm', function () {
       prefix: '.crm-container ',
       exclude: [/page-civicrm/, /crm-container/]
     }), postcssDiscardDuplicates]))
-    .pipe(gulp.dest('css/'));
+    .pipe(gulp.dest('css/')).on('end', next);
 });
 
 gulp.task('sass', ['sass-bootstrap', 'sass-civicrm']);
