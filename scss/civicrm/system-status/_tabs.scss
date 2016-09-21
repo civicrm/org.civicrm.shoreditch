@@ -1,0 +1,42 @@
+ul.ui-tabs-nav {
+  background: #FFFFFF;
+  border-bottom: $panel-border;
+  padding-bottom: 0;
+  border-radius: 0;
+
+  *:focus {
+    outline: none;
+  }
+
+  li.crm-tab-button {
+    display: inline-block;
+    white-space: normal;
+    margin-bottom: -1px;
+    border: 1px solid transparent;
+
+    padding: 10px 20px;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+    border-radius: 3px 3px 0px 0px;
+    top: 0;
+    box-sizing: border-box;
+
+    a,
+    a em {
+      color: #4d5663;
+    }
+
+    &.ui-state-active {
+      background: $panel-background;
+      border: $panel-border;
+      border-bottom: 1px solid $panel-background;
+
+      a,
+      a em {
+        color: $brand-primary;
+      }
+    }
+  }
+}

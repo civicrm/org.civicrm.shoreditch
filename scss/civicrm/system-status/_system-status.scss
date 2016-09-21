@@ -1,0 +1,12 @@
+@import "variables";
+
+#crm-status-list .crm-tabset {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 0;
+  box-shadow: $box-shadow;
+  padding: 15px;
+
+  @import "tabs";
+  @import "content";
+}

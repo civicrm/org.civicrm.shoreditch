@@ -1,0 +1,70 @@
+.ui-tabs-panel {
+  background: $panel-background;
+  border: $panel-border;
+  border-width: 0 1px 1px;
+  border-radius: 0;
+
+  padding: 20px;
+
+  .crm-status-item {
+    background: #FFFFFF;
+    box-shadow: $box-shadow;
+    margin-bottom: 15px;
+
+    h3 {
+      padding: 10px;
+      margin: 0;
+
+      &.crm-severity-error {
+        background: #E6807F;
+      }
+
+      &.crm-severity-warning {
+        background: #ECA67F;
+      }
+
+      &.crm-severity-info {
+        background: #8EC68A;
+      }
+    }
+
+    .crm-status-message-body {
+      margin: 0;
+      padding: 15px;
+    }
+
+    button {
+      background: #FFFFFF;
+      box-shadow: $box-shadow;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .hush-menu {
+
+      ul {
+        background: #FFFFFF;
+        list-style: none;
+        box-shadow: $box-shadow;
+
+        & > li {
+          background: #FFFFFF;
+          padding: 10px;
+          color: $text-color;
+          border: none;
+
+          &:hover {
+            background: $hover-background;
+            border: none;
+          }
+
+          // remove jquery's margin: -1px;
+          &.ui-state-focus {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
