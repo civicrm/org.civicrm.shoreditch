@@ -1,0 +1,24 @@
+#crm-main-content-wrapper {
+  .crm-content-block {
+    background: none;
+    box-shadow: none;
+
+    .help {
+      padding: 10px;
+      margin-bottom: 10px;
+      box-shadow: $box-shadow;
+      background: #FFFFFF;
+    }
+
+    #cat {
+      background: #FFFFFF;
+      box-shadow: $box-shadow;
+    }
+
+    .crm-submit-buttons {
+      padding: 0;
+      background: #FFFFFF;
+      box-shadow: $box-shadow;
+    }
+  }
+}
