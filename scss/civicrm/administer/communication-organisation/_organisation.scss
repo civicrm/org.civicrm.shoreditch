@@ -1,0 +1,26 @@
+&.page-civicrm-admin-domain {
+
+  .crm-form-block {
+    padding: 10px;
+
+    .crm-submit-buttons {
+      margin: -10px !important;
+      padding: 10px !important;
+      background: $panel-background !important;
+
+      min-height: auto;
+      height: auto;
+      text-align: right;
+
+      & > span.crm-button {
+        float: none !important;
+        display: inline-block;;
+      }
+
+      &:first-of-type {
+        margin-bottom: 10px !important;
+        text-align: left;
+      }
+    }
+  }
+}

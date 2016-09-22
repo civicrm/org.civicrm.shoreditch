@@ -17,6 +17,10 @@
 
       & > th {
         color: #4D5663;
+
+        .DataTables_sort_icon {
+          display: block;
+        }
       }
 
       &.odd-row {

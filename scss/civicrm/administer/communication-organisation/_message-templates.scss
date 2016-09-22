@@ -1,0 +1,29 @@
+&.page-civicrm-admin-messagetemplates {
+
+  #mainTabContainer {
+    @include civihr_table();
+
+    #option11_wrapper,
+    #option12_wrapper {
+      padding: 0 10px;
+
+      tr.odd {
+        background: #FFFFFF;
+      }
+
+      thead > tr,
+      tr.even {
+        background: #FCFDFD;
+      }
+    }
+
+    .action-link {
+      height: auto;
+      padding-left: 10px;
+    }
+
+    .help {
+      padding: 0 10px;
+    }
+  }
+}
