@@ -1,11 +1,17 @@
-&.page-civicrm-admin-schedulereminders {
+&.page-civicrm-admin-schedulereminders,
+&.page-civicrm-admin-labelformats,
+&.page-civicrm-admin-pdfformats {
 
-  #reminder {
+  #reminder, #ltype {
     @include civihr_panel();
     @include civihr_table();
   }
 
   .action-link {
     @include civihr_actions();
+  }
+
+  #crm-main-content-wrapper > .spacer {
+    display: none;
   }
 }
