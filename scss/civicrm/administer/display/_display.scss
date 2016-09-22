@@ -1,4 +1,5 @@
-&.page-civicrm-admin-setting-preferences-display {
+&.page-civicrm-admin-setting-preferences-display,
+&.page-civicrm-admin-setting-search {
 
   .crm-form-block {
 
@@ -20,94 +21,101 @@
       }
     }
 
-    & > .form-layout {
-      margin-top: 10px;
+    tr > td:nth-of-type(2) > label {
+      padding-right: 10px;
+    }
+  }
+}
 
-      tr.crm-preferences-display-form-block-contact_view_options,
-      tr.crm-preferences-display-form-block-advanced_search_options,
-      tr.crm-preferences-display-form-block-user_dashboard_options,
-      tr.crm-preferences-display-form-block-contact_smart_group_display {
+&.page-civicrm-admin-setting-preferences-display {
 
-        & > td:nth-of-type(2) > label {
-          padding-right: 10px;
-          width: 230px;
-        }
+  & > .form-layout {
+    margin-top: 10px;
+
+    tr.crm-preferences-display-form-block-contact_view_options,
+    tr.crm-preferences-display-form-block-advanced_search_options,
+    tr.crm-preferences-display-form-block-user_dashboard_options,
+    tr.crm-preferences-display-form-block-contact_smart_group_display {
+
+      & > td:nth-of-type(2) > label {
+        padding-right: 10px;
+        width: 230px;
       }
+    }
 
-      tr.crm-preferences-display-form-block-contact_edit_options {
+    tr.crm-preferences-display-form-block-contact_edit_options {
 
-        table {
+      table {
 
-          td {
-            width: 210px !important;
+        td {
+          width: 210px !important;
 
-            ul {
-              list-style: none;
-              margin: 10px 0;
+          ul {
+            list-style: none;
+            margin: 10px 0;
 
-              & > li {
-                border-radius: 0;
-                background: $panel-background;
-                padding: 5px !important;
-                max-width: 200px;
+            & > li {
+              border-radius: 0;
+              background: $panel-background;
+              padding: 5px !important;
+              max-width: 200px;
 
-                .crm-grip {
-                  margin-right: 10px;
-                }
+              .crm-grip {
+                margin-right: 10px;
               }
             }
+          }
 
-            &:not(:first-of-type) {
+          &:not(:first-of-type) {
 
-              & > ul > li {
-                cursor: move; /* fallback if grab cursor is unsupported */
-                cursor: grab;
-                cursor: -moz-grab;
-                cursor: -webkit-grab;
+            & > ul > li {
+              cursor: move; /* fallback if grab cursor is unsupported */
+              cursor: grab;
+              cursor: -moz-grab;
+              cursor: -webkit-grab;
 
-                &:active {
-                  cursor: grabbing;
-                  cursor: -moz-grabbing;
-                  cursor: -webkit-grabbing;
-                }
+              &:active {
+                cursor: grabbing;
+                cursor: -moz-grabbing;
+                cursor: -webkit-grabbing;
               }
             }
           }
         }
       }
+    }
 
-      tr.crm-preferences-display-form-block-editor_id {
+    tr.crm-preferences-display-form-block-editor_id {
 
-        select {
-          margin-top: 0 !important;
-          vertical-align: top;
-        }
-
-        .crm-button {
-          border: none;
-          padding: 0;
-        }
-
-        .crm-i {
-          margin: 0 -25px 0 15px !important;
-        }
-
-        #ckeditor_config {
-          margin: 0 !important;
-          padding-left: 30px;
-        }
+      select {
+        margin-top: 0 !important;
+        vertical-align: top;
       }
 
-      tr.crm-preferences-display-form-block-display_name_format,
-      tr.crm-preferences-display-form-block-sort_name_format {
+      .crm-button {
+        border: none;
+        padding: 0;
+      }
 
-        .crm-form-textarea {
-          padding: 15px;
-          border: 1px solid $dark-grey;
+      .crm-i {
+        margin: 0 -25px 0 15px !important;
+      }
 
-          width: 400px !important;
-          min-height: 150px;
-        }
+      #ckeditor_config {
+        margin: 0 !important;
+        padding-left: 30px;
+      }
+    }
+
+    tr.crm-preferences-display-form-block-display_name_format,
+    tr.crm-preferences-display-form-block-sort_name_format {
+
+      .crm-form-textarea {
+        padding: 10px;
+        border: 1px solid $dark-grey;
+
+        width: 400px !important;
+        min-height: 150px;
       }
     }
   }
