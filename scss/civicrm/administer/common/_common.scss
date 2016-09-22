@@ -7,8 +7,5 @@
 @import "ui-tabs/ui-tabs";
 
 #crm-main-content-wrapper > .help {
-  @include civihr_panel();
-  
-  padding: 10px;
-  margin-bottom: 10px;
+  @include civihr_help();
 }

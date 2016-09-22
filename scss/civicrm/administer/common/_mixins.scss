@@ -51,3 +51,10 @@
   line-height: normal;
   text-align: right;
 }
+
+@mixin civihr_help {
+  @include civihr_panel();
+
+  padding: 10px;
+  margin-bottom: 10px;
+}
