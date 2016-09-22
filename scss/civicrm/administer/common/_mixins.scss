@@ -3,6 +3,7 @@
 
     tr {
       background: #F4F7F8;
+      border: none;
       border-bottom: $panel-border;
 
       & > td,
@@ -36,7 +37,17 @@
   }
 }
 
-@mixin civihr_panel {
+@mixin civihr_panel() {
   background: #FFFFFF;
   box-shadow: $box-shadow;
+}
+
+@mixin civihr_actions() {
+  @include civihr_panel();
+
+  margin: 0;
+  padding: 10px;
+  height: auto;
+  line-height: normal;
+  text-align: right;
 }

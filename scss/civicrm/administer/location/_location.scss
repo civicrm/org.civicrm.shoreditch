@@ -1,0 +1,11 @@
+&.page-civicrm-admin-locationtype {
+
+  #ltype {
+    @include civihr_panel();
+    @include civihr_table();
+  }
+
+  .action-link {
+    @include civihr_actions();
+  }
+}
