@@ -123,13 +123,6 @@ $button-border-radius: 2px;
     border: 0 !important;
     color: $gray-dark;
     margin: 0;
-
-    &:hover,
-    &:focus,
-    &:hover::before {
-      background-color: transparent !important;
-      color: $brand-primary !important;
-    }
   }
 
   .crm-accordion-header,

@@ -1,0 +1,178 @@
+.CRM_Contact_Form_Search_Advanced .crm-results-block {
+  @extend %block-with-shadow;
+  margin-top: 20px;
+
+  .crm-search-tasks {
+    border-radius: 0 !important;
+    border-bottom: solid 1px $crm-background;
+    margin-bottom: 15px !important;
+  }
+
+  .crm-pager-nav {
+    padding-left: 0 !important;
+    a {
+      color: $brand-primary !important;
+
+      &:hover {
+        color: $gray !important;
+      }
+    }
+  }
+
+  .crm-tooltip-wrapper {
+    background-image: none !important;
+
+    .crm-tooltip {
+      @extend %block-with-shadow;
+      background: $crm-dark-blue !important;
+
+      .content,
+      .crm-table-group-summary tr td,
+      .label {
+        color: #ffffff !important;
+        font-weight: 600;
+      }
+
+      .crm-table-group-summary,
+      td {
+        background: $crm-dark-blue !important;
+
+        > div {
+          line-height: 30px;
+        }
+      }
+
+      .crm-section {
+        height: 30px !important;
+        margin-bottom: 0;
+        clear: both;
+      }
+
+      .crm-table-group-summary > tbody > tr:nth-child(1) > td {
+        font-size: 1.5em;
+      }
+
+      td,
+      tr {
+        border: 0 !important;
+        border-bottom: 0 !important;
+      }
+    }
+  }
+
+  a {
+    &.crm-tooltip-down {
+      .crm-tooltip-wrapper {
+        &::before {
+          content: '';
+          position: relative;
+          top: 0;
+          left: 30px;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid $crm-dark-blue !important;
+        }
+      }
+    }
+
+    &:not(.crm-tooltip-down) {
+      .crm-tooltip-wrapper {
+        &::after {
+          content: '';
+          position: relative;
+          top: 0;
+          left: 30px;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $crm-dark-blue !important;
+        }
+      }
+    }
+  }
+
+  #alpha-filter,
+  .crm-search-tasks,
+  .crm-selection-reset {
+    background: #ffffff !important;
+    padding: 15px !important;
+  }
+
+  #alpha-filter {
+    float: left;
+    margin-bottom: 15px !important;
+
+    a {
+      color: $brand-primary;
+    }
+
+    + .crm-selection-reset {
+      margin-bottom: 15px !important;
+      float: right;
+      margin-top: 10px;
+    }
+  }
+
+  .crm-pager,
+  table {
+    box-shadow: none !important;
+  }
+
+  table.selector {
+    @extend %crm-table;
+    border-top: solid 1px $crm-background;
+    padding-top: 15px !important;
+    margin-top: 15px !important;
+
+    tr.highlight > td {
+      background: $gray-light !important;
+    }
+
+    ul.panel {
+      @extend %block-with-shadow;
+      border: solid 1px $crm-background !important;
+      margin-top: 10px !important;
+
+      li {
+        background: #ffffff !important;
+        padding: 0 !important;
+
+        a.crm-hover-button.action-item {
+          border: 0 !important;
+          border-radius: 0 !important;
+          line-height: 30px !important;
+          color: $crm-copy !important;
+          font-weight: initial;
+
+          &:hover {
+            background-color: $crm-background !important;
+          }
+        }
+      }
+    }
+
+    .crm-icon {
+      background: none !important;
+      text-indent: 0 !important;
+
+      &::before {
+        text-indent: 0 !important;
+      }
+
+      &.Individual-icon::before {
+        @include fa-icon(13px, '\f007');
+      }
+
+      &.Household-icon::before {
+        @include fa-icon(13px, '\f015');
+      }
+
+      &.Organization-icon::before {
+        @include fa-icon(13px, '\f1ad');
+      }
+    }
+  }
+}
