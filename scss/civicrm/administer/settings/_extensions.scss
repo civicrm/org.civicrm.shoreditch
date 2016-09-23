@@ -1,0 +1,49 @@
+&.page-civicrm-admin-extensions {
+
+  .action-link {
+    @include civihr_actions();
+  }
+
+  #mainTabContainer {
+    @include civihr_table();
+
+    #extensions-main,
+    #extensions-addnew {
+      padding: 0 !important;
+      border: none;
+
+      table#option11,
+      table#option12 {
+        border-top: none;
+
+        td:not(:first-of-type) {
+          width: 70px;
+          text-overflow: clip;
+          overflow: scroll;
+        }
+
+        tr.hiddenElement {
+          background: #FFFFFF;
+
+          table.crm-info-panel {
+            width: 100%;
+
+            td {
+              text-overflow: clip;
+              overflow: scroll;
+              width: auto;
+
+              &.label {
+                width: 150px;
+              }
+            }
+          }
+        }
+      }
+
+      table#option12 td:last-of-type {
+        width: 140px;
+      }
+    }
+  }
+}

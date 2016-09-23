@@ -56,11 +56,20 @@
 @mixin civihr_actions() {
   @include civihr_panel();
 
-  margin: 0;
-  padding: 10px;
-  height: auto;
   line-height: normal;
   text-align: right;
+  height: auto;
+  min-height: inherit;
+
+  // overriding !importants in most of the places - what the hell
+  background: $panel-background !important;
+  margin: 0 !important;
+  padding: 10px !important;
+
+  & > span.crm-button {
+    float: none !important;
+    display: inline-block;
+  }
 }
 
 @mixin civihr_help {

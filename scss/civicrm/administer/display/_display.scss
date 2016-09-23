@@ -10,18 +10,6 @@
       @include civihr_actions();
 
       box-shadow: none;
-
-      // overriding !importants - what the hell
-      background: $panel-background !important;
-      margin: 0 !important;
-      padding: 10px !important;
-      height: auto;
-      min-height: inherit;
-
-      & > span.crm-button {
-        float: none !important;
-        display: inline-block;
-      }
     }
 
     tr > td:nth-of-type(2) > label {
