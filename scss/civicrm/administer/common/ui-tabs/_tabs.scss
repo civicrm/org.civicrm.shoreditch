@@ -19,18 +19,18 @@ ul.ui-tabs-nav {
     font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 600;
-    background: transparent;
+    background: transparent !important;
     border-radius: 3px 3px 0px 0px;
     top: 0;
     box-sizing: border-box;
 
     a,
     a em {
-      color: #4d5663;
+      color: $dark-grey;
     }
 
     &.ui-state-active {
-      background: $panel-background;
+      background: $panel-background !important;
       border: $panel-border;
       border-bottom: 1px solid $panel-background;
 
