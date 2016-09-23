@@ -3,7 +3,7 @@
     max-width: 100%;
 
     tr {
-      background: #F4F7F8;
+      background: #FFFFFF;
       border: none;
       border-bottom: $panel-border;
 
@@ -29,14 +29,10 @@
           display: block;
         }
       }
+    }
 
-      &.odd-row {
-        background: #FFFFFF;
-      }
-
-      &.even-row {
-        background: #F4F7F8;
-      }
+    thead > tr {
+      background: #F4F7F8;
     }
 
     &.row-highlight {
