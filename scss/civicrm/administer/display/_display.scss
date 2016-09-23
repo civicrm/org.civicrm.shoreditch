@@ -20,7 +20,7 @@
 
 &.page-civicrm-admin-setting-preferences-display {
 
-  & > .form-layout {
+  table.form-layout {
     margin-top: 10px;
 
     tr.crm-preferences-display-form-block-contact_view_options,
@@ -30,7 +30,7 @@
 
       & > td:nth-of-type(2) > label {
         padding-right: 10px;
-        width: 230px;
+        width: 230px !important;
       }
     }
 
