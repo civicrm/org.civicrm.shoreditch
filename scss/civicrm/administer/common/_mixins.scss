@@ -9,7 +9,7 @@
 
       & > td,
       & > th {
-        color: $text-color;
+        color: $gray-dark;
         background: transparent;
         border: none;
         padding: 15px;
@@ -58,7 +58,7 @@
   min-height: inherit;
 
   // overriding !importants in most of the places - what the hell
-  background: $panel-background !important;
+  background: $crm-table-striped-bg !important;
   margin: 0 !important;
   padding: 10px !important;
 

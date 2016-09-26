@@ -26,13 +26,13 @@ ul.ui-tabs-nav {
 
     a,
     a em {
-      color: $dark-grey;
+      color: $gray-darker;
     }
 
     &.ui-state-active {
-      background: $panel-background !important;
+      background: $crm-table-striped-bg !important;
       border: $panel-border;
-      border-bottom: 1px solid $panel-background;
+      border-bottom: 1px solid $crm-table-striped-bg;
 
       a,
       a em {

@@ -32,18 +32,18 @@
 
       .crm-form-textarea {
         padding: 5px;
-        border: 1px solid $dark-grey;
+        border: 1px solid $gray-darker;
         width: 100% !important;
         min-height: 40px;
       }
 
       .string-override-table .columnheader {
-        background: $panel-background !important;
+        background: $crm-table-striped-bg !important;
         border: none;
         border-bottom: $panel-border;
 
         &:hover {
-          background: $panel-background !important;
+          background: $crm-table-striped-bg !important;
         }
       }
 

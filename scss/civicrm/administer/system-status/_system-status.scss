@@ -47,11 +47,11 @@
         & > li {
           background: #FFFFFF;
           padding: 10px;
-          color: $text-color;
+          color: $gray-dark;
           border: none;
 
           &:hover {
-            background: $hover-background;
+            background: $gray-light;
             border: none;
           }
 

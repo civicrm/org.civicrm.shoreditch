@@ -47,7 +47,7 @@
 
             & > li {
               border-radius: 0;
-              background: $panel-background;
+              background: $crm-table-striped-bg;
               padding: 5px !important;
               max-width: 200px;
 
@@ -103,7 +103,7 @@
 
       .crm-form-textarea {
         padding: 10px;
-        border: 1px solid $dark-grey;
+        border: 1px solid $gray-darker;
 
         width: 400px !important;
         min-height: 150px;
