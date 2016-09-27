@@ -62,7 +62,7 @@
   margin: 0 !important;
   padding: 10px !important;
 
-  & > span.crm-button {
+  & > span.crm-button, & > a.button {
     float: none !important;
     display: inline-block;
   }

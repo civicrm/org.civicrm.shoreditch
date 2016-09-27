@@ -1,0 +1,11 @@
+&.page-civicrm-a {
+  @include civihr_table();
+
+  .help {
+    @include civihr_help();
+  }
+
+  .crm-submit-buttons {
+    @include civihr_actions();
+  }
+}
