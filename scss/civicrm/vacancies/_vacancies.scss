@@ -361,6 +361,11 @@
               .hr-stage {
                 border-left: 0 !important;
                 width: auto !important;
+                display: none;
+
+                &:first-child {
+                  display: block;
+                }
 
                 a {
                   font-weight: 600;
