@@ -226,6 +226,12 @@
     .description {
       margin-bottom: 20px;
     }
+
+    td {
+      > a {
+        color: $brand-primary;
+      }
+    }
   }
 
   .CRM_HRRecruitment_Form_Search {
