@@ -18,8 +18,10 @@
   @import "communication-organisation/reminders";
   @import "localization/languages";
   @import "permissions/access";
+  
   @import "settings/components";
   @import "settings/extensions";
-  
+  @import "settings/scheduled-jobs";
+
   @import "civi-case/case-types";
 }
