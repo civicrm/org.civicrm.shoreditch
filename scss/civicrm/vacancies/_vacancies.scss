@@ -287,57 +287,59 @@
     }
   }
 
-  .ui-dialog {
-    table {
-      tr {
-        border-bottom: 0;
-
-        td {
-          padding-left: 0 !important;
+  &.page-civicrm-vacancy-dashboard {
+    .ui-dialog {
+      table {
+        tr {
           border-bottom: 0;
+
+          td {
+            padding-left: 0 !important;
+            border-bottom: 0;
+          }
         }
       }
-    }
 
-    label[for^="dp"] {
-      &:after {
-        top: 2px !important;
-        left: 332px !important;
+      label[for^="dp"] {
+        &:after {
+          top: 2px !important;
+          left: 332px !important;
+        }
+
+        &:before {
+          top: 2px !important;
+          left: 322px !important;
+        }
       }
 
-      &:before {
-        top: 2px !important;
-        left: 322px !important;
-      }
-    }
+      .advmultiselect {
+        tr {
+          &:first-child {
+            td {
+              &:nth-child(2) {
+                vertical-align: top !important;
 
-    .advmultiselect {
-      tr {
-        &:first-child {
-          td {
-            &:nth-child(2) {
-              vertical-align: top !important;
-
-              input[type='button']:first-child {
-                margin-left: 0 !important;
-                margin-bottom: 15px !important;
-                width: 71px;
-                display: block;
+                input[type='button']:first-child {
+                  margin-left: 0 !important;
+                  margin-bottom: 15px !important;
+                  width: 71px;
+                  display: block;
+                }
               }
             }
           }
         }
       }
-    }
 
-    .crm-submit-buttons {
-      > .crm-button:first-of-type {
-        margin-left: 0 !important;
+      .crm-submit-buttons {
+        > .crm-button:first-of-type {
+          margin-left: 0 !important;
+        }
       }
-    }
 
-    .ui-dialog-buttonpane {
-      display: none;
+      .ui-dialog-buttonpane {
+        display: none;
+      }
     }
   }
 
