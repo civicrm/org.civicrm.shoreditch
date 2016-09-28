@@ -2,6 +2,10 @@
   input[type=checkbox],
   input[type=radio] {
     display: none;
+
+    + label[for] {
+      margin-right: 10px;
+    }
   }
   input[type=checkbox] + label[for],
   input[type=radio] + label[for] {
