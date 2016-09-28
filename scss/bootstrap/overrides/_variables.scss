@@ -165,7 +165,7 @@ $crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
 //
 //## Dropdown menu container and contents.
 
-$dropdown-border:        #C4D1D9 !default;
+$dropdown-border:        $crm-copy !default;
 $dropdown-link-hover-bg: $dropdown-border !default;
 
 
