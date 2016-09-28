@@ -1,0 +1,6 @@
+&.page-civicrm-admin-paymentprocessor {
+
+  .action-link {
+    @include civihr_actions;
+  }
+}

@@ -1,4 +1,4 @@
-@mixin civihr_table() {
+@mixin civihr_table($overflow: false) {
   table {
     max-width: 100%;
 
@@ -15,11 +15,13 @@
         padding: 15px;
         vertical-align: middle;
 
-        // prevent table from overflowing
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 1px;
-        white-space: nowrap;
+        @if $overflow == 'false' {
+          // prevent table from overflowing
+          text-overflow: ellipsis;
+          overflow: hidden;
+          max-width: 1px;
+          white-space: nowrap;
+        }
       }
 
       & > th {

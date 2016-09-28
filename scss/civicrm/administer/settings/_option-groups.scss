@@ -1,0 +1,35 @@
+&.page-civicrm-admin-options {
+
+  #browseValues {
+    @include civihr_table;
+    @include civihr_panel;
+
+    .action-link {
+      @include civihr_actions;
+    }
+  }
+}
+
+
+&.page-civicrm-admin-setting-preferences-multisite,
+&.page-civicrm-admin-setting-misc {
+
+  .crm-form-block {
+    @include civihr_table(true);
+
+    .crm-submit-buttons {
+      @include civihr_actions;
+
+      box-shadow: none;
+      margin: 0 !important;
+    }
+
+    .form-layout {
+      margin: 10px 0;
+    }
+
+    .description {
+      padding: 10px;
+    }
+  }
+}
