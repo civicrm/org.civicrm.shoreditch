@@ -74,3 +74,11 @@
     border: 0 !important;
   }
 }
+
+#bootstrap-theme .input-group-addon.fa-calendar {
+  background: none !important;
+  border: solid 1px $gray-dark !important;
+  border-left: 0 !important;
+  color: $brand-primary;
+  cursor: pointer;
+}
