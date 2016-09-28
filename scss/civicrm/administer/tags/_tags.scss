@@ -1,15 +1,8 @@
 &.page-civicrm-admin-tag #crm-main-content-wrapper {
-  
+
   .crm-content-block {
     background: none;
     box-shadow: none;
-
-    .help {
-      @include civihr_panel();
-
-      padding: 10px;
-      margin-bottom: 10px;
-    }
 
     #cat {
       @include civihr_panel();

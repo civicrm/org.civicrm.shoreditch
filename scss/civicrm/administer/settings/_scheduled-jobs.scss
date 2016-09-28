@@ -1,9 +1,5 @@
 &.page-civicrm-admin-job {
 
-  .action-link {
-    @include civihr_actions();
-  }
-
   #ltype {
     @include civihr_table();
 

@@ -1,7 +1,4 @@
 &.page-civicrm-admin-extensions {
-  .action-link {
-    @include civihr_actions();
-  }
 
   #mainTabContainer {
     @include civihr_table();

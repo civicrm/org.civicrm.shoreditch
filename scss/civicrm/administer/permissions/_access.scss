@@ -20,9 +20,5 @@
     .help {
       display: none;
     }
-
-    .crm-submit-buttons {
-      @include civihr_actions();
-    }
   }
 }

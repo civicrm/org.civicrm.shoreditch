@@ -18,12 +18,7 @@
 
       tr {
 
-        &.odd-row,
-        &.even-row {
-          background: #F4F7F8;
-        }
-
-        &.odd {
+        td {
           background: #FFFFFF !important;
         }
       }

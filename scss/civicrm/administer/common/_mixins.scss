@@ -1,4 +1,8 @@
-@mixin civihr_table($overflow: false) {
+/*
+ * Adds CiviHR table-specific styles for all children tables
+ * @param $overflow {string} indicates whether table should wrap the overflowing text
+ */
+@mixin civihr_table($overflow: 'false') {
   table {
     max-width: 100%;
 
@@ -17,10 +21,12 @@
 
         @if $overflow == 'false' {
           // prevent table from overflowing
-          text-overflow: ellipsis;
           overflow: hidden;
-          max-width: 1px;
-          white-space: nowrap;
+          white-space: normal;
+
+          .crm-editable {
+            white-space: normal;
+          }
         }
       }
 
@@ -46,33 +52,10 @@
   }
 }
 
+/*
+ * Since different elements may be a CiviHR Panel, this mixin prevents duplicating much code.
+ */
 @mixin civihr_panel() {
   background: #FFFFFF;
   box-shadow: $box-shadow;
-}
-
-@mixin civihr_actions() {
-  @include civihr_panel();
-
-  line-height: normal;
-  text-align: right;
-  height: auto;
-  min-height: inherit;
-
-  // overriding !importants in most of the places - what the hell
-  background: $crm-table-striped-bg !important;
-  margin: 0 !important;
-  padding: 10px !important;
-
-  & > span.crm-button, & > a.button {
-    float: none !important;
-    display: inline-block;
-  }
-}
-
-@mixin civihr_help {
-  @include civihr_panel();
-
-  padding: 10px;
-  margin-bottom: 10px;
 }

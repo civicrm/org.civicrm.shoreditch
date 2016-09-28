@@ -4,10 +4,6 @@
     background: none;
     box-shadow: none;
 
-    .help {
-      @include civihr_help();
-    }
-
     table.advmultiselect,
     p.description {
       @include civihr_panel();
@@ -23,10 +19,6 @@
 
     p.description {
       padding: 10px;
-    }
-
-    .crm-submit-buttons {
-      @include civihr_actions();
     }
   }
 }

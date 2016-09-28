@@ -6,6 +6,29 @@
 @import "table/table";
 @import "ui-tabs/ui-tabs";
 
-#crm-main-content-wrapper > .help {
-  @include civihr_help();
+.action-link,
+.crm-submit-buttons {
+  @include civihr_panel();
+
+  line-height: normal;
+  text-align: right;
+  height: auto;
+  min-height: inherit;
+
+  // overriding !importants in most of the places - what the hell
+  background: $crm-table-striped-bg !important;
+  margin: 0 !important;
+  padding: 10px !important;
+
+  & > span.crm-button, & > a.button {
+    float: none !important;
+    display: inline-block;
+  }
+}
+
+.help {
+  @include civihr_panel();
+
+  padding: 10px;
+  margin-bottom: 10px;
 }

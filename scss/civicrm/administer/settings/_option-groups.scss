@@ -3,10 +3,6 @@
   #browseValues {
     @include civihr_table;
     @include civihr_panel;
-
-    .action-link {
-      @include civihr_actions;
-    }
   }
 }
 
@@ -18,8 +14,6 @@
     @include civihr_table(true);
 
     .crm-submit-buttons {
-      @include civihr_actions;
-
       box-shadow: none;
       margin: 0 !important;
     }

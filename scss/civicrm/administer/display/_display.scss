@@ -7,8 +7,6 @@
   .crm-form-block {
 
     & > .crm-submit-buttons {
-      @include civihr_actions();
-
       box-shadow: none;
     }
 

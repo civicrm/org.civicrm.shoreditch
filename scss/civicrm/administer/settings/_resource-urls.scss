@@ -24,17 +24,9 @@
       margin: 0 !important;
     }
 
-    .help {
-      @include civihr_help();
-    }
-
-    .crm-submit-buttons {
-      @include civihr_actions();
-    }
-
     .form-item {
       @include civihr_panel;
-      
+
       padding: 10px;
     }
   }

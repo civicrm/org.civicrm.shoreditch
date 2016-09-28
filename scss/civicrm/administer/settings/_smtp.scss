@@ -40,13 +40,5 @@
         margin: 0;
       }
     }
-
-    .help {
-      @include civihr_help();
-    }
-
-    .crm-submit-buttons {
-      @include civihr_actions();
-    }
   }
 }

@@ -6,11 +6,7 @@
     @include civihr_panel();
     @include civihr_table();
   }
-
-  .action-link {
-    @include civihr_actions();
-  }
-
+  
   #crm-main-content-wrapper > .spacer {
     display: none;
   }
