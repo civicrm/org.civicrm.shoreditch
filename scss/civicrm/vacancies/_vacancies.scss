@@ -225,6 +225,16 @@
 
   &.page-civicrm-vacancy-dashboard {
     .ui-dialog {
+      padding: 0;
+
+      &-content {
+        padding: 0;
+
+        .crm-block {
+          box-shadow: none;
+        }
+      }
+
       table {
         tr {
           border-bottom: 0;
