@@ -63,6 +63,10 @@
 // Edit label
 #crm-container {
 
+  .crm-summary-block-wrap {
+    width: 100%;
+  }
+
   #crm-contactname-content {
     border: none !important;
     max-height: 50px;
@@ -89,6 +93,15 @@
         &:first-of-type {
           padding-left: 0;
         }
+
+        #household_name {
+          height: 33px !important;
+          margin-top: 2px;
+          background: $crm-page-topbar-bg-light;
+          padding: 1px 10px;
+          color: $crm-white;
+          border-color: $crm-copy;
+        }
       }
 
       .crm-inline-button {
@@ -96,6 +109,34 @@
         margin: 0 !important;
         border: 0;
         order: 2;
+      }
+
+      .crm-button_qf_ContactName_upload {
+        i {
+          display: inline-block;
+        }
+      }
+
+      .crm-form-submit {
+        padding: 7px 12px !important;
+        margin-top: 5px;
+        min-width: initial;
+
+        &:hover {
+          background-color: $brand-primary !important;
+          color: $crm-white !important;
+        }
+
+        &.cancel {
+          background-color: $brand-danger !important;
+          color: $crm-white !important;
+          border-radius: 2px;
+          border: none !important;
+
+          &:hover {
+            background-color: $brand-danger !important;
+          }
+        }
       }
     }
   }
