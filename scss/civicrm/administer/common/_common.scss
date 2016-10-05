@@ -6,29 +6,32 @@
 @import "table/table";
 @import "ui-tabs/ui-tabs";
 
-.action-link,
-.crm-submit-buttons {
-  @include civihr_panel();
+#crm-main-content-wrapper {
 
-  line-height: normal;
-  text-align: right;
-  height: auto;
-  min-height: inherit;
+  .action-link,
+  .crm-submit-buttons {
+    @include civihr_panel();
 
-  // overriding !importants in most of the places - what the hell
-  background: $crm-table-striped-bg !important;
-  margin: 0 !important;
-  padding: 10px !important;
+    line-height: normal;
+    text-align: right;
+    height: auto;
+    min-height: inherit;
 
-  & > span.crm-button, & > a.button {
-    float: none !important;
-    display: inline-block;
+    // overriding !importants in most of the places - what the hell
+    background: $crm-table-striped-bg !important;
+    margin: 0 !important;
+    padding: 10px !important;
+
+    & > span.crm-button, & > a.button {
+      float: none !important;
+      display: inline-block;
+    }
   }
-}
 
-.help {
-  @include civihr_panel();
+  .help {
+    @include civihr_panel();
 
-  padding: 10px;
-  margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 }

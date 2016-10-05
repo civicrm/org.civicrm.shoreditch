@@ -1,3 +1,7 @@
+.page-civicrm-admin-uf-group-add {
+  
+}
+
 #user-profiles,
 #reserved-profiles {
   // override !important in higher level style
@@ -22,17 +26,5 @@
         }
       }
     }
-  }
-}
-
-#crm-main-content-wrapper > .crm-submit-buttons {
-  background: $crm-table-striped-bg;
-  box-shadow: $box-shadow;
-  padding: 10px;
-  margin: 0;
-  height: auto;
-
-  a {
-    float: none;
   }
 }
