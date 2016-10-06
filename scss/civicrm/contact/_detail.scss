@@ -65,7 +65,7 @@
 
   .crm-summary-block-wrap {
     float: left;
-    width: calc(100% - 180px); // 100% - width of the image - margin
+    width: calc(100% - $contact-avatar*2); // 100% - width of the image - margin
     margin-top: 0;
   }
 
