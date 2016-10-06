@@ -64,24 +64,21 @@
 #crm-container {
 
   .crm-summary-block-wrap {
-    width: 100%;
+    float: left;
+    width: calc(100% - 180px); // 100% - width of the image - margin
     margin-top: 0;
   }
 
   #crm-contactname-content {
     border: none !important;
-    height: 60px;
     max-height: 60px;
 
     .crm-summary-display_name {
-      padding-top: 22px;
+      padding: 22px 0; // centering name vertically
     }
   }
 
   .crm-summary-contactname-block {
-    display: flex;
-    flex-direction: row;
-    max-height: 120px;
     padding: 10px 0;
   }
 
