@@ -54,6 +54,7 @@ $crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
 $crm-dark-blue:         #586277 !default;
+$crm-white:             #FFF !default;
 
 $crm-dialog-container-border: #d3dee2;
 
@@ -165,7 +166,7 @@ $crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
 //
 //## Dropdown menu container and contents.
 
-$dropdown-border:        #C4D1D9 !default;
+$dropdown-border:        $crm-copy !default;
 $dropdown-link-hover-bg: $dropdown-border !default;
 
 

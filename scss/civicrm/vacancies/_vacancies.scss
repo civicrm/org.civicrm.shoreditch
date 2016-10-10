@@ -136,6 +136,7 @@
   #addMorePermission {
     @extend .btn-primary;
     padding: 7px 6px;
+    color: #ffffff !important;
 
     > .add-icon {
       background-image: none;
@@ -151,70 +152,6 @@
     }
   }
 
-  .CRM_HRRecruitment_Form_HRVacancy {
-    table:first-child {
-      tbody:first-child {
-        label[for^="dp"] {
-          position: relative;
-          height: 30px;
-          line-height: 30px;
-          margin: 7.5px 0;
-          display: block;
-
-          &:after {
-            @include fa-icon(13px, '\f073');
-            font-weight: normal;
-            position: absolute;
-            left: 338px;
-            top: 0;
-            color: $brand-primary;
-            z-index: 91;
-          }
-
-          &:before {
-            content: '';
-            position: absolute;
-            left: 327px;
-            top: 0;
-            width: 30px;
-            height: 28px;
-            border: 1px solid $crm-copy;
-            background: $crm-accordion-header-color;
-            z-index: 90;
-          }
-        }
-
-        .crm-form-time {
-          margin-left: 15px !important;
-          min-width: 70px !important;
-          max-width: 70px !important;
-        }
-
-        tr {
-          td {
-            vertical-align: middle !important;
-          }
-        }
-
-        &:not(.CRM_HRRecruitment_Form_HRVacancy_Template) {
-          tr:nth-child(n+5):nth-child(-n+7) {
-            td:first-child {
-              vertical-align: top !important;
-            }
-          }
-        }
-
-        &.CRM_HRRecruitment_Form_HRVacancy_Template {
-          tr:nth-child(n+4):nth-child(-n+6) {
-            td:first-child {
-              vertical-align: top !important;
-            }
-          }
-        }
-      }
-    }
-  }
-
   table {
     &.vacancy-popup {
       margin-bottom: 20px;
@@ -224,6 +161,12 @@
   .view-hrvacancies {
     .description {
       margin-bottom: 20px;
+    }
+
+    td {
+      > a {
+        color: $brand-primary;
+      }
     }
   }
 
@@ -277,6 +220,72 @@
 
     .crm-form-text {
       width: 312px !important;
+    }
+  }
+
+  &.page-civicrm-vacancy-dashboard {
+    .ui-dialog {
+      padding: 0;
+
+      &-content {
+        padding: 0;
+
+        .crm-block {
+          box-shadow: none;
+        }
+      }
+
+      table {
+        tr {
+          border-bottom: 0;
+
+          td {
+            padding-left: 0 !important;
+            border-bottom: 0;
+          }
+        }
+      }
+
+      label[for^="dp"] {
+        &:after {
+          top: 2px !important;
+          left: 332px !important;
+        }
+
+        &:before {
+          top: 2px !important;
+          left: 322px !important;
+        }
+      }
+
+      .advmultiselect {
+        tr {
+          &:first-child {
+            td {
+              &:nth-child(2) {
+                vertical-align: top !important;
+
+                input[type='button']:first-child {
+                  margin-left: 0 !important;
+                  margin-bottom: 15px !important;
+                  width: 71px;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .crm-submit-buttons {
+        > .crm-button:first-of-type {
+          margin-left: 0 !important;
+        }
+      }
+
+      .ui-dialog-buttonpane {
+        display: none;
+      }
     }
   }
 
@@ -361,6 +370,11 @@
               .hr-stage {
                 border-left: 0 !important;
                 width: auto !important;
+                display: none;
+
+                &:first-child {
+                  display: block;
+                }
 
                 a {
                   font-weight: 600;

@@ -1,0 +1,54 @@
+#crm-notification-container {
+
+  div {
+    &.ui-notify-message {
+      border-radius: 0;
+
+      div.icon {
+        display: none;
+      }
+
+      &.error {
+        h1::before {
+          @include fa-icon(13px, '\f06a', $brand-danger);
+        }
+      }
+
+      &.alert {
+        h1::before {
+          @include fa-icon(13px, '\f06a', $brand-warning);
+        }
+      }
+
+      &.success {
+        h1::before {
+          @include fa-icon(13px, '\f00c', $brand-success);
+        }
+      }
+
+      &.info {
+        h1::before {
+          @include fa-icon(13px, '\f05a', $brand-info);
+        }
+      }
+
+      h1 {
+        padding-left: 0;
+
+        &::before {
+          margin-right: 5px;
+        }
+      }
+
+      &,
+      a.ui-notify-cross,
+      h1 {
+        color: $gray;
+      }
+    }
+
+    &.ui-notify-message-style {
+      background: #ffffff;
+    }
+  }
+}

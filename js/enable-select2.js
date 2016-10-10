@@ -1,5 +1,6 @@
 CRM.$(function() {
   'use strict';
+
   /**
    * The purpose of this script is to activate the "select2" dropdowns on standard select elements.
    * When the "select2" is enabled, its corresponding select is hidden, so we're
@@ -13,7 +14,7 @@ CRM.$(function() {
    * during DOM changes
    */
   var observer = new MutationObserver(debounce(function() {
-    CRM.$('select:visible').select2();
+    CRM.$('select:visible:not([class^="ui-datepicker"])').select2();
   }, 500));
 
   observer.observe(document.querySelector('body'), {
