@@ -1,5 +1,9 @@
-.page-civicrm-admin-uf-group-add {
-  
+&.page-civicrm-admin-uf-group-add {
+
+  #crm-main-content-wrapper .crm-submit-buttons,
+  #crm-main-content-wrapper .crm-accordion-body .crm-form-block {
+    box-shadow: none;
+  }
 }
 
 #user-profiles,
