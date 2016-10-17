@@ -8,6 +8,11 @@
 
 #crm-main-content-wrapper {
 
+  .dataTables_wrapper,
+  .crm-content-block {
+    overflow: scroll;
+  }
+
   .action-link,
   .crm-submit-buttons {
     @include civihr_panel();
