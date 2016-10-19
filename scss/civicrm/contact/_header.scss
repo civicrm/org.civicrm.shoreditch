@@ -15,9 +15,11 @@
 }
 
 .crm-summary-contactphoto {
-  width: 82px;
+  float: left;
+  width: $contact-avatar;
+  height: $contact-avatar;
   border-radius: 50%;
-  margin: 10px 45px 0 35px;
+  margin: 10px $contact-avatar/2 0;
   padding-top: 5px;
 }
 
@@ -44,8 +46,7 @@
     position: relative;
     background: $crm-page-topbar-bg;
     color: #FFFFFF;
-    height: 100px;
-    box-sizing: border-box;
+    min-height: 110px; // min-height is needed as we use float inside
   }
 
   .crm-contact-page {

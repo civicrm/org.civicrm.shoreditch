@@ -1,7 +1,23 @@
-.page-civicrm-import-contact {
+.page-civicrm-import-contact,
+.page-civicrm-import-activity,
+.page-civicrm-import-custom {
   @mixin table-header {
     font-weight: bold !important;
     color: $gray-darker;
+  }
+
+  &.page-civicrm-import-custom {
+    #upload-file {
+      > .crm-submit-buttons {
+        @extend %submit-buttons-civi;
+        min-height: 43px;
+        margin: 20px 0 0 0 !important;
+
+        &:first-child {
+          display: none;
+        }
+      }
+    }
   }
 
   #wizard-steps {
@@ -21,7 +37,7 @@
     }
 
     > .crm-submit-buttons {
-      margin-left: 0 !important;
+      margin: 20px 0 0 0 !important;
     }
 
     h2 {
@@ -43,6 +59,7 @@
     .label {
       text-align: left !important;
       vertical-align: middle !important;
+      width: 180px;
     }
   }
 
@@ -51,17 +68,28 @@
   }
 
   #map-field {
-    table.selector {
-      width: 100% !important;
+    > table {
       margin-bottom: 20px;
+      @extend %civihr-table;
+      width: 100% !important;
+      box-shadow: none !important;
+      border: 1px solid $crm-background;
+
+      tr {
+        th {
+          border-right: 0 !important;
+        }
+      }
     }
   }
 
-  .crm-form-select {
-    @extend .select2-container;
+  @at-root {
+    select.crm-form-select {
+      @extend .select2-container;
+    }
   }
 
-  .CRM_Contact_Import_Form_Preview {
+  #Preview {
     > .crm-form-block.crm-form-block {
       padding: 20px 0 0 0 !important;
     }
@@ -115,5 +143,15 @@
   #summary-counts {
     box-shadow: none !important;
     border: 1px solid $crm-background;
+  }
+
+  #saveDetails {
+    tr {
+      td {
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
   }
 }

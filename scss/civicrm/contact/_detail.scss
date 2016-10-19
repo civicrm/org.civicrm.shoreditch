@@ -62,6 +62,111 @@
 
 // Edit label
 #crm-container {
+
+  .crm-summary-block-wrap {
+    float: left;
+    width: calc(100% - $contact-avatar*2); // 100% - width of the image - margin
+    margin-top: 0;
+  }
+
+  #crm-contactname-content {
+    border: none !important;
+    max-height: 60px;
+
+    .crm-summary-display_name {
+      padding: 22px 0; // centering name vertically
+    }
+  }
+
+  .crm-summary-contactname-block {
+    padding: 10px 0;
+  }
+
+  .crm-contact-detail-wrap {
+    margin-top: 0px;
+  }
+
+  form.CRM_Contact_Form_Inline_ContactName {
+    border: none;
+
+    .select2-choice {
+
+      .select2-search-choice-close {
+        top: 8px;
+        right: 30px;
+      }
+
+      .select2-chosen {
+        margin-right: 26px;
+      }
+    }
+
+    .crm-inline-edit-form {
+      background-color: transparent !important;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: 0;
+
+      & > .crm-inline-edit-field ~ .crm-inline-edit-field {
+        padding: 10px 5px;
+      }
+
+      & > .crm-inline-edit-field {
+        padding: 10px 5px 10px 0;
+
+        label {
+          color: $crm-white;
+        }
+
+        #household_name {
+          height: 33px !important;
+          margin-top: 2px;
+          background: $crm-page-topbar-bg-light;
+          padding: 1px 10px;
+          color: $crm-white;
+          border-color: $crm-copy;
+        }
+      }
+
+      .crm-inline-button {
+        padding: 20px 5px;
+        margin: 0 !important;
+        border: 0;
+        order: 2;
+      }
+
+      .crm-button_qf_ContactName_upload {
+        i {
+          display: inline-block;
+        }
+      }
+
+      .crm-form-submit {
+        padding: 7px 12px !important;
+        margin-top: 5px;
+        min-width: initial;
+
+        &:hover {
+          background-color: $brand-primary !important;
+          color: $crm-white !important;
+        }
+
+        &.cancel {
+          background-color: $brand-danger !important;
+          color: $crm-white !important;
+          border-radius: 2px;
+          border: none !important;
+
+          &:hover {
+            background-color: $brand-danger !important;
+          }
+        }
+      }
+    }
+  }
+
   .crm-inline-edit-form {
     background-color: transparent !important;
     padding: 10px;
