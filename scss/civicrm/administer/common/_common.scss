@@ -8,9 +8,22 @@
 
 #crm-main-content-wrapper {
 
-  .dataTables_wrapper,
-  .crm-content-block {
+  #activity_type,
+  #custom_group {
     overflow: scroll;
+  }
+
+  #ltype {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .dataTables_wrapper {
+    overflow: scroll;
+    padding-bottom: 150px;
+    margin-bottom: -150px;
+    background: transparent !important;
+    box-shadow: none;
   }
 
   .action-link,
@@ -31,6 +44,11 @@
       float: none !important;
       display: inline-block;
     }
+  }
+
+  .crm-submit-buttons > .action-link {
+    box-shadow: none;
+    padding: 0 !important;
   }
 
   .help {

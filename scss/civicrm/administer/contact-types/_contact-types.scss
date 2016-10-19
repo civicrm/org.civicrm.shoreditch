@@ -3,8 +3,11 @@
   #crm-main-content-wrapper {
 
     div:nth-of-type(2) {
-      @include civihr_panel();
       @include civihr_table();
+    }
+
+    #option11 {
+      @include civihr_panel();
     }
   }
 }

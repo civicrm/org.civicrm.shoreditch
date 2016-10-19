@@ -10,8 +10,11 @@
     text-align: right;
   }
 
-  #ltype {
+  #option11 {
     @include civihr_panel();
+  }
+
+  #ltype {
     @include civihr_table();
 
     table {
