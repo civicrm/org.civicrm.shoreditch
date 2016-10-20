@@ -18,6 +18,11 @@
     box-shadow: none !important;
   }
 
+  /*
+    To prevent table to scroll vertically when popup is shown we set padding-bottom,
+    and margin-bottom to oposite values (i.e. when padding is 150px, margin is -150px)
+    Doing this gives space for popup to expand, overflowing over other elements.
+  */
   .dataTables_wrapper {
     overflow: scroll;
     padding-bottom: 150px;
