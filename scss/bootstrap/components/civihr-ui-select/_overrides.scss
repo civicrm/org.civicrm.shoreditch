@@ -91,7 +91,7 @@
     right: 45px !important;
     left: unset !important;
 
-    @at-root #{$bootstrap-namespace} & {
+    @at-root & {
       top: 2px !important;
     }
 
@@ -134,7 +134,7 @@
       @extend %ui-select-no-background;
       color: lighten($gray-dark, 20) !important;
 
-      @at-root #{$bootstrap-namespace} & {
+      @at-root & {
         border: 0 !important;
       }
 
@@ -193,7 +193,7 @@
 
     .select2-choice {
       border: 0 !important;
-      @at-root #{$bootstrap-namespace} & {
+      @at-root & {
         @extend %ui-select-no-padding;
       }
     }
@@ -276,7 +276,7 @@
 
   a.select2-choice {
     @extend %ui-select-no-background;
-    @at-root #{$bootstrap-namespace} & {
+    @at-root & {
       &:hover {
         text-decoration: none !important;
       }
