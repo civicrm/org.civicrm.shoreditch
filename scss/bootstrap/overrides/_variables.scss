@@ -131,14 +131,14 @@ $crm-table-striped-bg: #f4f7f8 !default;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:            600 !default;
-$crm-btn-small-font-weight:      400 !default;
+$btn-font-weight:                 500 !default;
 
-$crm-btn-padding-base-vertical:  7px;
-$crm-btn-padding-small-vertical: 5px;
+$crm-btn-padding-base-horizontal: 19px;
+$crm-btn-padding-base-vertical:   7px;
+$crm-btn-padding-small-vertical:  5px;
 
-$btn-default-bg:            #fff !default;
-$btn-default-border:        $btn-default-bg !default;
+$btn-default-bg:                  $crm-white !default;
+$btn-default-border:              $btn-default-bg !default;
 
 
 //== Forms
