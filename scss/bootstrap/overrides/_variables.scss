@@ -264,6 +264,18 @@ $state-info-text:                $brand-info !default;
 $state-warning-text:             $brand-warning !default;
 $state-danger-text: $brand-danger !default;
 
+
+//== Badges
+//
+//##
+
+$badge-bg:            $gray-darker !default;
+$badge-font-weight:   400 !default;
+$badge-line-height:   1.1 !default;
+
+$crm-badge-min-width: 25px;
+
+
 //== Breadcrumbs
 //
 //##
