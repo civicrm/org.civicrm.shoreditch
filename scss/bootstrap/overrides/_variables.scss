@@ -43,7 +43,7 @@ $gray-darker:           #4D5663 !default;
 $gray-dark:             $crm-copy !default;
 $gray-light:            $crm-background !default;
 $gray-lighter:          #F3F6F7 !default;
-$crm-gray-lightest:     lighten(desaturate(adjust-hue(#f3f6f7, -15.0000), 0.0000), 1.9608) !default;
+$crm-gray-lightest:     #FAFAFB !default;
 
 $brand-primary:         #42AFCB !default;
 $brand-success:         #8EC68A !default;
@@ -54,6 +54,7 @@ $crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
 $crm-dark-blue:         #586277 !default;
+$crm-dark-grayblue:     #D3DEE2 !default;
 $crm-white:             #FFF !default;
 
 $crm-dialog-container-border: #d3dee2;
