@@ -1,10 +1,22 @@
+// Configuration Checklist
+#crm-container td.tasklist a {
+
+  &:visited {
+    color: #8ec68a;
+  }
+
+  &:link {
+    color: #e68074;
+  }
+}
+
+// System Status
 #crm-status-list .ui-tabs .ui-tabs-panel {
   // override !important in higher level style
   padding: 20px !important;
 
   .crm-status-item {
     background: #FFFFFF;
-    box-shadow: $box-shadow;
     margin-bottom: 15px;
 
     h3 {

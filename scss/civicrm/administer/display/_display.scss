@@ -6,12 +6,19 @@
 
   .crm-form-block {
 
-    & > .crm-submit-buttons {
-      box-shadow: none;
+    .crm-submit-buttons {
+      box-shadow: none !important;
     }
 
-    tr > td:nth-of-type(2) > label {
-      padding-right: 10px;
+    table.form-layout {
+
+      td {
+        padding: 20px;
+      }
+
+      tr > td:nth-of-type(2) > label {
+        padding-right: 10px;
+      }
     }
   }
 }
@@ -19,7 +26,6 @@
 &.page-civicrm-admin-setting-preferences-display {
 
   table.form-layout {
-    margin-top: 10px;
 
     tr.crm-preferences-display-form-block-contact_view_options,
     tr.crm-preferences-display-form-block-advanced_search_options,

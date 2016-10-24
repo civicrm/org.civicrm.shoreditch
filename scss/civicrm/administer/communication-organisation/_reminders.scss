@@ -6,7 +6,12 @@
     @include civihr_panel();
     @include civihr_table();
   }
-  
+
+  #option11_wrapper {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   #crm-main-content-wrapper > .spacer {
     display: none;
   }

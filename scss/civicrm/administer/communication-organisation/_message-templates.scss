@@ -18,3 +18,9 @@
     }
   }
 }
+
+#email_greeting,
+#postal_greeting,
+#addressee {
+  @extend .dataTables_wrapper;
+}

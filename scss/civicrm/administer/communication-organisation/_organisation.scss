@@ -1,11 +1,9 @@
 &.page-civicrm-admin-domain {
 
   .crm-form-block {
-    padding: 10px;
 
     .crm-submit-buttons {
-      margin: -10px !important;
-      padding: 10px !important;
+      box-shadow: none !important;
       background: $crm-table-striped-bg !important;
 
       min-height: auto;
@@ -21,6 +19,17 @@
         margin-bottom: 10px !important;
         text-align: left;
       }
+    }
+
+    div:not(.crm-submit-buttons),
+    & > h3,
+    & > table td {
+      padding: 10px !important;
+    }
+
+    #Address_Block_1 .crm-submit-buttons {
+      margin: -10px !important;
+      padding: 10px !important;
     }
   }
 }
