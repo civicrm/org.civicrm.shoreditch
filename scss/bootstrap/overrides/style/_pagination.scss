@@ -1,26 +1,46 @@
 .pagination {
-    margin: 0;
-    vertical-align: top;
+  margin: 0;
+  vertical-align: top;
 
-    > li {
-        text-transform: capitalize;
+  > li {
+    text-transform: capitalize;
 
-        &.active,
-        &.first:not(.disabled),
-        &.last:not(.disabled),
-        &.next:not(.disabled),
-        &.prev:not(.disabled) {
+    &.active,
+    &.first:not(.disabled),
+    &.last:not(.disabled),
+    &.next:not(.disabled),
+    &.prev:not(.disabled) {
 
-            > a {
-                color: $gray-darker;
-                font-weight: bold;
-            }
-        }
-
-        > a,
-        > span {
-            border: none;
-            padding: 0 5px;
-        }
+      > a {
+        color: $gray-darker;
+        font-weight: bold;
+      }
     }
+
+    > a,
+    > span {
+      border: none;
+      padding: 0 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.first {
+      @include pagination-control('\00ab', 'left');
+    }
+
+    &.last {
+      @include pagination-control('\00bb', 'right');
+    }
+
+    &.next {
+      @include pagination-control('\203A', 'right');
+    }
+
+    &.prev {
+      @include pagination-control('\2039', 'left');
+    }
+  }
 }
