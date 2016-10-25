@@ -6,33 +6,31 @@ CRM.$(function($) {
 
   // .btn-slide is a continer of popup and a button triggering it
   $('.btn-slide').attrchange(function(e) {
-    var $button = $(this),
-        $popup,
-        button_offset;
+    var $button = $(this), $body = $('body'), $popup, buttonOffset;
 
+    // check if popup is open
     if($button.hasClass('btn-slide-active')) {
-      // check if popup is open
       $popup = $button.children('ul.panel');
 
-      $popup.appendTo('body')
+      $popup
+        .appendTo($body)
         .addClass('civihr-popup');
 
-      button_offset = $button.offset();
+      buttonOffset = $button.offset();
 
-      $popup.css('position', 'absolute')
-        .css('top', parseInt(button_offset.top, 10) + 24) // 24 is the fontsize + paddings
-        .css('left', parseInt(button_offset.left, 10) - ($popup.width() - 57)); // 57 is the width of more button
+      $popup
+        .css('top', parseInt(buttonOffset.top, 10) + $button.outerHeight())
+        .css('left', parseInt(buttonOffset.left, 10) - ($popup.width() - $button.outerWidth()));
 
-      $('body').addClass('civihr-popup-open');
+      $body.addClass('civihr-popup-open');
     } else {
-      // popup closed
 
-      $('body > ul.panel')
+      $body
+        .children('.civihr-popup')
         .appendTo($button)
-        .css('position', 'static')
-        .css('display', 'none');
+        .removeClass('civihr-popup');
 
-      $('body').removeClass('civihr-popup-open');
+      $body.removeClass('civihr-popup-open');
     }
 
   });
