@@ -169,8 +169,10 @@ $crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
 //
 //## Dropdown menu container and contents.
 
-$dropdown-border:        $crm-copy !default;
-$dropdown-link-hover-bg: $dropdown-border !default;
+$dropdown-link-hover-bg: $gray-lighter !default;
+$dropdown-header-color:  $gray-darker !default;
+
+$crm-dropdown-padding:   11px 20px;
 
 
 //== Labels

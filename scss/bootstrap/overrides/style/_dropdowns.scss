@@ -1,9 +1,15 @@
-.dropdown-menu {
-    box-shadow: $box-shadow;
-    margin: 0;
-    padding: 0;
+.dropdown-header {
+  padding: $crm-dropdown-padding;
+}
 
-    > li > a {
-        padding: 15px 20px;
-    }
+.dropdown-menu {
+  @include box-shadow($box-shadow);
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  > li > a {
+    padding: $crm-dropdown-padding;
+  }
 }
