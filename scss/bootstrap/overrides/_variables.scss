@@ -123,11 +123,12 @@ $border-radius-small: $border-radius-base !default;
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-cell-padding: 10px 20px !default;
-$table-bg-accent:    $crm-brand-primary-lighter !default;
+$table-bg:           $crm-white !default;
+$table-bg-accent:    $crm-brand-primary-light !default;
 $table-border-color: $gray-light !default;
 
-//** Background for striped tables
-$crm-table-striped-bg: #f4f7f8 !default;
+$crm-table-heading-bg: $gray-lighter !default;
+$crm-table-heading-border-color: $crm-dark-grayblue !default;
 
 
 //== Buttons
@@ -223,7 +224,7 @@ $grid-gutter-width: 16px !default;
 $nav-link-padding:                          10px 20px !default;
 
 $nav-tabs-border-color:                     $gray-light !default;
-$nav-tabs-active-link-hover-bg:             $crm-table-striped-bg !default;
+$nav-tabs-active-link-hover-bg:             $gray-lighter !default;
 $nav-tabs-active-link-hover-color:          $brand-primary !default;
 
 //== Nav contained in sidebar
