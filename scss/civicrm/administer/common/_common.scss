@@ -1,0 +1,90 @@
+// Styles that may apply to more than one page
+//
+@import "variables";
+@import "mixins";
+
+@import "table/table";
+@import "ui-tabs/ui-tabs";
+
+
+ul.civihr-popup {
+  position: absolute;
+  box-shadow: $box-shadow;
+  background: #FFFFFF;
+  list-style: none;
+  margin: 0;
+
+  li > a {
+    padding: 10px 20px;
+    color: $gray-dark;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      background-color: #E8EEF0;
+    }
+  }
+}
+
+&.civihr-popup-open {
+
+  /* If popup is open we do not allow scrolling */
+  .dataTables_wrapper,
+  #activity_type,
+  #custom_group,
+  #ltype {
+    overflow: hidden !important;
+  }
+}
+
+#crm-main-content-wrapper {
+
+  #activity_type,
+  #custom_group {
+    overflow: scroll;
+  }
+
+  #ltype {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .dataTables_wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background: transparent !important;
+    box-shadow: none;
+  }
+
+  .action-link,
+  .crm-submit-buttons {
+    @include civihr_panel();
+
+    line-height: normal;
+    text-align: right;
+    height: auto;
+    min-height: inherit;
+
+    // overriding !importants in most of the places - what the hell
+    background: $crm-table-striped-bg !important;
+    margin: 0 !important;
+    padding: 10px !important;
+
+    & > span.crm-button, & > a.button {
+      float: none !important;
+      display: inline-block;
+    }
+  }
+
+  .crm-submit-buttons > .action-link {
+    box-shadow: none;
+    padding: 0 !important;
+  }
+
+  .help {
+    @include civihr_panel();
+
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}

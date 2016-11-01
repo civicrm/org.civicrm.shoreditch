@@ -1,0 +1,33 @@
+&.page-civicrm-admin-setting-url,
+&.page-civicrm-admin-setting-mapping,
+&.page-civicrm-admin-setting-path,
+&.page-civicrm-admin-setting-debug,
+&.page-civicrm-admin-setting-uf {
+
+  .crm-form-block {
+    @include civihr_table;
+
+    background: none;
+    box-shadow: none;
+
+
+    table.form-layout {
+      @include civihr_panel();
+
+      td:first-of-type {
+        width: 30%;
+      }
+    }
+
+    table.form-layout-compressed {
+      width: 100%;
+      margin: 0 !important;
+    }
+
+    .form-item {
+      @include civihr_panel;
+
+      padding: 10px;
+    }
+  }
+}

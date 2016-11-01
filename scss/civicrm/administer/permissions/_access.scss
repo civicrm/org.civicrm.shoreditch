@@ -1,0 +1,24 @@
+&.page-civicrm-admin-access {
+
+  #crm-container {
+    @include civihr_table();
+
+    table.report {
+      @include civihr_panel();
+
+      width: 100%;
+    }
+  }
+}
+
+&.page-civicrm-admin-synchuser {
+
+  .crm-form-block {
+    background: none;
+    box-shadow: none;
+
+    .help {
+      display: none;
+    }
+  }
+}

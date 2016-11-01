@@ -1,0 +1,18 @@
+&.page-civicrm-admin-custom-group {
+
+  #options table td:last-of-type {
+    width: 350px;
+  }
+
+  #Group {
+
+    .crm-form-block {
+      background: none;
+      box-shadow: none;
+    }
+
+    .form-layout {
+      @include civihr_panel;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+&.page-civicrm-admin-job {
+
+  #ltype {
+    @include civihr_table();
+
+    table tr th {
+      white-space: nowrap;
+
+      &:first-of-type {
+        width: 35% !important;
+      }
+
+      &:nth-of-type(2) {
+        width: 25%;
+      }
+
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        width: 10%;
+        min-width: 100px;
+      }
+
+      &:first-of-type {
+        width: 20%;
+        min-width: 200px;
+      }
+    }
+
+    table tr td {
+      vertical-align: top;
+      text-overflow: clip;
+      white-space: normal;
+    }
+  }
+}

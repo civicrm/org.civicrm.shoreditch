@@ -1,0 +1,18 @@
+&.page-civicrm-admin-menu {
+
+  .crm-content-block {
+
+    #new-menu-item {
+      background: $crm-table-striped-bg;
+      margin: 0;
+      padding: 10px;
+    }
+
+    #navigation-tree {
+
+      ul > li {
+        padding: 5px;
+      }
+    }
+  }
+}

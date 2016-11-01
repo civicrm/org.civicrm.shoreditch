@@ -1,0 +1,24 @@
+&.page-civicrm-admin-setting-component {
+
+  .crm-form-block {
+    background: none;
+    box-shadow: none;
+
+    table.advmultiselect,
+    p.description {
+      @include civihr_panel();
+    }
+
+    table.advmultiselect {
+      width: 100%;
+
+      td {
+        border: none;
+      }
+    }
+
+    p.description {
+      padding: 10px;
+    }
+  }
+}

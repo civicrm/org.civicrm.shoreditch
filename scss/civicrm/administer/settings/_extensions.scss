@@ -1,0 +1,45 @@
+&.page-civicrm-admin-extensions {
+
+  #mainTabContainer {
+    @include civihr_table();
+
+    #extensions-addnew,
+    #extensions-main {
+      padding: 0 !important;
+      border: none;
+
+      table#option11,
+      table#option12 {
+        border-top: none;
+
+        td:not(:first-of-type) {
+          width: 70px;
+          text-overflow: clip;
+          overflow: scroll;
+        }
+
+        tr.hiddenElement {
+          background: #FFFFFF;
+
+          table.crm-info-panel {
+            width: 100%;
+
+            td {
+              text-overflow: clip;
+              overflow: scroll;
+              width: auto;
+
+              &.label {
+                width: 150px;
+              }
+            }
+          }
+        }
+      }
+
+      table#option12 td:last-of-type {
+        width: 140px;
+      }
+    }
+  }
+}

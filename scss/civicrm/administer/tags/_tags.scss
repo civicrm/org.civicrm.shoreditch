@@ -1,0 +1,17 @@
+&.page-civicrm-admin-tag #crm-main-content-wrapper {
+
+  .crm-content-block {
+    background: none;
+    box-shadow: none;
+
+    #option11 {
+      @include civihr_panel();
+    }
+
+    .crm-submit-buttons {
+      @include civihr_panel();
+
+      padding: 0;
+    }
+  }
+}

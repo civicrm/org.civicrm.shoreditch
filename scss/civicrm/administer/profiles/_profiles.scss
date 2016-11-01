@@ -1,0 +1,34 @@
+&.page-civicrm-admin-uf-group-add {
+
+  #crm-main-content-wrapper .crm-submit-buttons,
+  #crm-main-content-wrapper .crm-accordion-body .crm-form-block {
+    box-shadow: none;
+  }
+}
+
+#user-profiles,
+#reserved-profiles {
+  // override !important in higher level style
+  padding: 0 !important;
+
+  .crm-content-block {
+    box-shadow: none;
+
+    table {
+      border: none;
+
+      thead th.sorting .DataTables_sort_icon {
+        display: block;
+      }
+
+      tr {
+        border: none;
+        border-bottom: $panel-border;
+
+        &.odd {
+          background: #FFFFFF;
+        }
+      }
+    }
+  }
+}
