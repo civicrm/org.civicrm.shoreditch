@@ -1,0 +1,8 @@
+&.page-civicrm-admin-locationtype,
+&.page-civicrm-hours-location {
+
+  #ltype {
+    @include civihr_panel();
+    @include civihr_table();
+  }
+}

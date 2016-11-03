@@ -1,0 +1,26 @@
+&.page-civicrm-admin-messagetemplates {
+
+  #mainTabContainer {
+    @include civihr_table();
+
+    #option11_wrapper,
+    #option12_wrapper {
+      padding: 0 10px;
+    }
+
+    .action-link {
+      height: auto;
+      padding-left: 10px;
+    }
+
+    .help {
+      padding: 0 10px;
+    }
+  }
+}
+
+#email_greeting,
+#postal_greeting,
+#addressee {
+  @extend .dataTables_wrapper;
+}

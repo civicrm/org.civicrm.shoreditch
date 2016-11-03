@@ -1,0 +1,51 @@
+/*
+ * Adds CiviHR table-specific styles for all children tables
+ * @param $overflow {string} indicates whether table should wrap the overflowing text
+ */
+@mixin civihr_table($overflow: 'false') {
+  table {
+    max-width: 100%;
+
+    tr {
+      background: #FFFFFF;
+      border: none;
+      border-bottom: $panel-border;
+
+      & > td,
+      & > th {
+        color: $gray-dark;
+        background: transparent;
+        border: none;
+        padding: 15px;
+        vertical-align: middle;
+      }
+
+      & > th {
+        color: #4D5663;
+
+        .DataTables_sort_icon {
+          display: block;
+        }
+      }
+    }
+
+    thead > tr {
+      background: #F4F7F8;
+    }
+
+    &.row-highlight {
+
+      tr:hover {
+        background: #FCFDFD !important;
+      }
+    }
+  }
+}
+
+/*
+ * Since different elements may be a CiviHR Panel, this mixin prevents duplicating much code.
+ */
+@mixin civihr_panel() {
+  background: #FFFFFF;
+  box-shadow: $box-shadow;
+}

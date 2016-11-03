@@ -1,3 +1,6 @@
+@import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/modals';
+@import '../bootstrap/overrides/style/modals';
+
 .crm-container.ui-dialog {
   border-radius: 0;
   background: $gray-lighter;

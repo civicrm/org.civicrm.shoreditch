@@ -1,0 +1,13 @@
+&.page-civicrm-admin-options-subtype {
+
+  #crm-main-content-wrapper {
+
+    div:nth-of-type(2) {
+      @include civihr_table();
+    }
+
+    #option11 {
+      @include civihr_panel();
+    }
+  }
+}

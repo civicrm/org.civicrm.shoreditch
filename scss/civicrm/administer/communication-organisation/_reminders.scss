@@ -1,0 +1,18 @@
+&.page-civicrm-admin-schedulereminders,
+&.page-civicrm-admin-labelformats,
+&.page-civicrm-admin-pdfformats {
+
+  #reminder, #ltype {
+    @include civihr_panel();
+    @include civihr_table();
+  }
+
+  #option11_wrapper {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #crm-main-content-wrapper > .spacer {
+    display: none;
+  }
+}

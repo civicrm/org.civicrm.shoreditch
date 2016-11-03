@@ -1,0 +1,78 @@
+// Configuration Checklist
+#crm-container td.tasklist a {
+
+  &:visited {
+    color: #8ec68a;
+  }
+
+  &:link {
+    color: #e68074;
+  }
+}
+
+// System Status
+#crm-status-list .ui-tabs .ui-tabs-panel {
+  // override !important in higher level style
+  padding: 20px !important;
+
+  .crm-status-item {
+    background: #FFFFFF;
+    margin-bottom: 15px;
+
+    h3 {
+      padding: 10px;
+      margin: 0;
+
+      &.crm-severity-error {
+        background: #E6807F;
+      }
+
+      &.crm-severity-warning {
+        background: #ECA67F;
+      }
+
+      &.crm-severity-info {
+        background: #8EC68A;
+      }
+    }
+
+    .crm-status-message-body {
+      margin: 0;
+      padding: 15px;
+    }
+
+    button {
+      background: #FFFFFF;
+      box-shadow: $box-shadow;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .hush-menu {
+
+      ul {
+        background: #FFFFFF;
+        list-style: none;
+        box-shadow: $box-shadow;
+
+        & > li {
+          background: #FFFFFF;
+          padding: 10px;
+          color: $gray-dark;
+          border: none;
+
+          &:hover {
+            background: $gray-light;
+            border: none;
+          }
+
+          // remove jquery's margin: -1px;
+          &.ui-state-focus {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

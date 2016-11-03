@@ -1,0 +1,30 @@
+&.page-civicrm-admin-setting-localization,
+&.page-civicrm-admin-setting-preferences-address,
+&.page-civicrm-admin-setting-date {
+
+  .help {
+    margin: 0;
+  }
+
+  .crm-form-block > .spacer {
+    display: none;
+  }
+
+  tr > td:nth-of-type(2) > label {
+    padding-right: 10px;
+    width: 230px;
+  }
+
+  .crm-form-textarea {
+    padding: 5px;
+    border: 1px solid $gray-darker;
+    width: 300px;
+    min-height: 40px;
+  }
+
+  #address_standardization_provider,
+  #address_standardization_userid,
+  #address_standardization_url {
+    margin-top: 0 !important;
+  }
+}

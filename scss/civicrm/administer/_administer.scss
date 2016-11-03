@@ -1,0 +1,30 @@
+.page-civicrm-admin,
+.page-civicrm-a {
+  @import "common/common";
+
+  @import "system-status/system-status";
+  @import "customize-data/customize-data";
+  @import "profiles/profiles";
+  @import "tags/tags";
+  @import "relationship/relationship";
+  @import "contact-types/contact-types";
+  @import "location/location";
+  @import "date/date";
+  @import "display/display";
+  @import "menu/menu";
+  @import "replacement/replacement";
+  @import "communication-organisation/organisation";
+  @import "communication-organisation/message-templates";
+  @import "communication-organisation/reminders";
+  @import "localization/languages";
+  @import "permissions/access";
+
+  @import "settings/components";
+  @import "settings/extensions";
+  @import "settings/scheduled-jobs";
+  @import "settings/resource-urls";
+  @import "settings/smtp";
+  @import "settings/option-groups";
+
+  @import "civi-case/case-types";
+}

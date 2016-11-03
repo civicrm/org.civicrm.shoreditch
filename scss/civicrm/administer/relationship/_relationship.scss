@@ -1,0 +1,30 @@
+&.page-civicrm-admin-reltype {
+
+  .action-link {
+    @include civihr_panel();
+
+    margin: 0;
+    padding: 10px;
+    height: auto;
+    line-height: normal;
+    text-align: right;
+  }
+
+  #option11 {
+    @include civihr_panel();
+  }
+
+  #ltype {
+    @include civihr_table();
+
+    table {
+
+      tr {
+
+        td {
+          background: #FFFFFF !important;
+        }
+      }
+    }
+  }
+}
