@@ -199,17 +199,31 @@ $modal-md:                    500px !default;
 //
 //##
 
-$panel-bg:                    transparent !default;
-$panel-body-padding:          20px !default;
-$panel-heading-padding:       10px 20px !default;
-$panel-border-radius:         0 !default;
-$crm-panel-heading-big-padding:   15px 20px !default;
-$crm-panel-footer-big-padding:    $crm-panel-heading-big-padding !default;
+$panel-bg:                  transparent !default;
+$panel-body-padding:        15px 20px !default;
+$panel-heading-padding:     $panel-body-padding !default;
+$panel-footer-padding:      $panel-heading-padding !default;
+$panel-border-radius:       $border-radius-base + 1 !default;
 
-$panel-footer-bg:             #ffffff !default;
+$panel-inner-border:        $gray-light !default;
+$panel-footer-bg:           #ffffff !default;
 
-$panel-default-text:          $gray-darker !default;
-$panel-default-heading-bg:    #ffffff !default;
+$panel-default-text:        $gray-darker !default;
+$panel-default-heading-bg:  $gray-lighter !default;
+
+$panel-success-text:        $crm-white !default;
+$panel-success-heading-bg:  $brand-success !default;
+
+$panel-info-text:           $crm-white !default;
+$panel-info-heading-bg:     $brand-info !default;
+
+$panel-warning-text:        $crm-white !default;
+$panel-warning-heading-bg:  $brand-warning !default;
+
+$panel-danger-text:         $crm-white !default;
+$panel-danger-heading-bg:   $brand-danger !default;
+
+$crm-panel-heading-margin:  10px !default;
 
 
 //== Grid system
