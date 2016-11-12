@@ -8,10 +8,6 @@
   &.active {
     @include box-shadow(none);
   }
-
-  &:not(.btn-link):not(.dropdown-toggle) {
-    min-width: 70px;
-  }
 }
 
 // Keeps the standard settings for font size, line height, and border radius
