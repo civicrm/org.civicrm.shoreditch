@@ -237,11 +237,20 @@ $grid-gutter-width: 16px !default;
 //
 //##
 
-$nav-link-padding:                          10px 20px !default;
+$nav-link-padding:                        10px 20px !default;
+$crm-nav-color:                           $gray-darker;
 
-$nav-tabs-border-color:                     $gray-light !default;
-$nav-tabs-active-link-hover-bg:             $gray-lighter !default;
-$nav-tabs-active-link-hover-color:          $brand-primary !default;
+$nav-disabled-link-color:                 lighten(desaturate(adjust-hue($crm-nav-color, -13.6364), 1.1598), 46.4706) !default;
+$nav-disabled-link-hover-color:           $nav-disabled-link-color !default;
+
+$nav-tabs-border-color:                   $crm-dark-grayblue !default;
+$nav-tabs-active-link-hover-bg:           $crm-white !default;
+$nav-tabs-active-link-hover-color:        $brand-primary !default;
+$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default;
+
+$crm-nav-stacked-bg:                      $crm-white;
+$crm-nav-stacked-link-padding:            15px 20px !default;
+$crm-nav-stacked-border-radius:           0 !default;
 
 //== Nav contained in sidebar
 $crm-nav-pills-sidebar-border-radius: 0;

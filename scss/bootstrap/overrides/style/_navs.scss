@@ -3,7 +3,33 @@
   > li {
 
     > a {
-      color: $crm-copy;
+      color: $crm-nav-color;
+    }
+
+    &.disabled > a:hover {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+}
+
+.nav-stacked {
+
+  > li {
+
+    > a {
+      background: $crm-nav-stacked-bg;
+      border-radius: $crm-nav-stacked-border-radius;
+      padding: $crm-nav-stacked-link-padding;
+    }
+
+    + li {
+      margin-top: 0;
+    }
+
+    &.disabled > a:hover {
+      background: $crm-white;
     }
   }
 }
