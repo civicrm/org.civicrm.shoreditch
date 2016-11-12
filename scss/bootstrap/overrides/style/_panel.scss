@@ -34,6 +34,18 @@
   border: none;
 }
 
+.panel-subheading {
+  padding: $crm-panel-subheading-padding;
+}
+
+.panel-subtitle {
+  color: inherit;
+  font-size: $font-size-h5;
+  font-weight: $crm-font-weight-h5;
+  line-height: $headings-line-height;
+  margin: 0;
+}
+
 .panel-title {
   font-size: $font-size-h2;
   font-weight: $crm-font-weight-h2;
@@ -60,7 +72,6 @@
 }
 
 
-// Contextual variations
 .panel-default {
   @include box-shadow($box-shadow);
 
@@ -81,10 +92,72 @@
     }
   }
 
+  > .panel-subheading {
+    background: $panel-default-heading-bg;
+    color: $panel-default-text;
+    border-top: 1px solid $gray-light;
+  }
+
   > .table,
   > .table-responsive > .table,
   > .panel-collapse > .table {
     border-top: 1px solid $crm-dark-grayblue;
+  }
+}
+
+// Contextual variations
+.panel-primary {
+
+  .panel-subheading {
+    background: $panel-primary-heading-bg;
+    color: $panel-primary-text;
+    border-top: 1px solid $panel-info-border;
+
+    @include shadow-mask($panel-primary-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-success {
+
+  .panel-subheading {
+    background: $panel-success-heading-bg;
+    color: $panel-success-text;
+    border-top: 1px solid $panel-success-border;
+
+    @include shadow-mask($panel-success-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-info {
+
+  .panel-subheading {
+    background: $panel-info-heading-bg;
+    color: $panel-info-text;
+    border-top: 1px solid $panel-info-border;
+
+    @include shadow-mask($panel-info-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-warning {
+
+  .panel-subheading {
+    background: $panel-warning-heading-bg;
+    color: $panel-warning-text;
+    border-top: 1px solid $panel-warning-border;
+
+    @include shadow-mask($panel-warning-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-danger {
+
+  .panel-subheading {
+    background: $panel-danger-heading-bg;
+    color: $panel-danger-text;
+    border-top: 1px solid $panel-danger-border;
+
+    @include shadow-mask($panel-danger-heading-bg, 'top', -11px);
   }
 }
 
@@ -96,35 +169,22 @@
 
   > .panel-body,
   > .panel-footer,
-  > .panel-heading {
+  > .panel-heading,
+  > .panel-subheading {
     @include box-shadow($box-shadow);
   }
 
   > .panel-body {
-    position: relative;
-
-    // Kind of a temporary hack to hide the footer's top border shadow
-    // which overflows into .panel-body. The :before pseudo-element
-    // just sits on top of it with the same panel-body bg color
-    &:before {
-      content: "";
-      background: $crm-white;
-      bottom: 0;
-      height: 10px;
-      left: 0;
-      position: absolute;
-      width: 100%;
-      z-index: 2;
-    }
+    @include shadow-mask($crm-white, 'bottom', 0);
   }
 
   > .panel-footer {
     position: relative;
   }
 
-  > .panel-heading {
+  &:not(.panel-w-subheading) > .panel-heading,
+  &.panel-w-subheading > .panel-subheading {
     @include border-bottom-radius(($panel-border-radius - 1));
-
     margin-bottom: $crm-panel-heading-margin;
   }
 }

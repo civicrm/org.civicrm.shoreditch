@@ -208,6 +208,12 @@ $panel-border-radius:       $border-radius-base + 1 !default;
 $panel-inner-border:        $gray-light !default;
 $panel-footer-bg:           #ffffff !default;
 
+$crm-panel-heading-margin:    10px !default;
+
+//== Subheading
+$crm-panel-subheading-padding: $panel-heading-padding !default;
+
+//== Contextual variations
 $panel-default-text:        $gray-darker !default;
 $panel-default-heading-bg:  $gray-lighter !default;
 
@@ -222,8 +228,6 @@ $panel-warning-heading-bg:  $brand-warning !default;
 
 $panel-danger-text:         $crm-white !default;
 $panel-danger-heading-bg:   $brand-danger !default;
-
-$crm-panel-heading-margin:  10px !default;
 
 
 //== Grid system

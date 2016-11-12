@@ -1,0 +1,19 @@
+// Kind of a temporary hack to hide a box shadow of a sibling, that overflow
+// on the element in which this mixins is called
+// The :before pseudo-element just sits on top of the shadow with the
+// given bg color, so that the box shadow is covered
+
+@mixin shadow-mask($background, $direction, $offset) {
+  position: relative;
+
+  &:before {
+    content: "";
+    background: $background;
+    #{$direction}: #{$offset};
+    height: 10px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+}
