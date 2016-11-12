@@ -72,6 +72,7 @@
 }
 
 
+// Contextual variations
 .panel-default {
   @include box-shadow($box-shadow);
 
@@ -97,15 +98,8 @@
     color: $panel-default-text;
     border-top: 1px solid $gray-light;
   }
-
-  > .table,
-  > .table-responsive > .table,
-  > .panel-collapse > .table {
-    border-top: 1px solid $crm-dark-grayblue;
-  }
 }
 
-// Contextual variations
 .panel-primary {
 
   .panel-subheading {

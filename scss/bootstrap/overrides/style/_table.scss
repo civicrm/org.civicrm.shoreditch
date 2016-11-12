@@ -32,3 +32,12 @@ table,
     }
   }
 }
+
+.panel-default {
+
+  > .table,
+  > .table-responsive > .table,
+  > .panel-collapse > .table {
+    border-top: 1px solid $crm-dark-grayblue;
+  }
+}

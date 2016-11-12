@@ -102,6 +102,64 @@
   }
 }
 
+
+// Nav tabs stacked vertically, in a grid+flexbox layout (content on the right)
+.nav-tabs-stacked {
+  border-bottom: 0;
+
+  > li {
+    float: none;
+
+    > a {
+      margin-right: 0;
+      padding: $crm-nav-stacked-link-padding;
+    }
+
+    > a,
+    > a:hover {
+      border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
+    }
+
+    &.active {
+
+      > a,
+      > a:hover,
+      > a:focus {
+        border-color: $nav-tabs-active-link-hover-border-color transparent $nav-tabs-active-link-hover-border-color transparent;
+        border-bottom-color: $nav-tabs-active-link-hover-border-color;
+      }
+    }
+  }
+}
+
+.nav-tabs-stacked-wrapper {
+  display: flex;
+
+  // Removes the grid gutter to visually connect the tabs to the content
+  .nav-tabs-stacked {
+    margin-right: -$grid-gutter-width;
+  }
+
+  .nav-tabs-stacked-content {
+    display: flex;
+  }
+
+  .tab-content {
+    flex: 1;
+  }
+}
+
+.panel-default {
+
+  > .nav-tabs-stacked-wrapper {
+    border-top: 1px solid $crm-dark-grayblue;
+
+    .active:first-child > a {
+      border-top-color: transparent;
+    }
+  }
+}
+
 // Nav tabs in the heading of a primary panel
 .panel-primary {
 
