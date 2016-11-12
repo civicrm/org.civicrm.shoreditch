@@ -34,6 +34,11 @@
   }
 }
 
+.tab-content {
+  background: $crm-white;
+  padding: $crm-nav-tab-content-padding;
+}
+
 .nav-pills-stacked-sidebar {
     background: $crm-page-sidebar-bg;
 
@@ -82,6 +87,20 @@
     }
 }
 
+// Nav tabs in a panel subheading
+.panel-subheading {
+
+  > .nav-tabs {
+    $padding-y: nth($crm-panel-subheading-padding, 1);
+    $padding-x: nth($crm-panel-subheading-padding, 2);
+
+    margin: -#{$padding-y - 5} -#{$padding-x} -#{$padding-y};
+
+    > li:first-child {
+      margin-left: 20px;
+    }
+  }
+}
 
 // Nav tabs in the heading of a primary panel
 .panel-primary {
