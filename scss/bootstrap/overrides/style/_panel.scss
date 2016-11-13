@@ -58,6 +58,11 @@
 
 // Subheading and subtitle
 .panel-subheading {
+
+  .panel-heading + & {
+    border-top: 1px solid transparent;
+  }
+
   padding: $crm-panel-subheading-padding;
 }
 
@@ -102,15 +107,37 @@
         padding-right: 20px;
       }
     }
-
-    + .panel-subheading {
-      border-top: 1px solid $gray-light;
-    }
   }
 
   > .panel-subheading {
     background: $panel-default-heading-bg;
+    border-top-color: $gray-light;
     color: $panel-default-text;
+  }
+
+  // Status strips
+  &[class*="panel-strip-"] {
+    border-left: $crm-panel-status-strip-width solid transparent;
+  }
+
+  &.panel-strip-primary {
+    border-left-color: $brand-primary;
+  }
+
+  &.panel-strip-success {
+    border-left-color: $brand-success;
+  }
+
+  &.panel-strip-info {
+    border-left-color: $brand-info;
+  }
+
+  &.panel-strip-warning {
+    border-left-color: $brand-warning;
+  }
+
+  &.panel-strip-danger {
+    border-left-color: $brand-danger;
   }
 }
 
@@ -119,7 +146,7 @@
   > .panel-subheading {
     background: $panel-primary-heading-bg;
     color: $panel-primary-text;
-    border-top: 1px solid $panel-info-border;
+    border-top-color: $panel-info-border;
 
     @include shadow-mask($panel-primary-heading-bg, 'top', -11px);
   }
@@ -130,7 +157,7 @@
   > .panel-subheading {
     background: $panel-success-heading-bg;
     color: $panel-success-text;
-    border-top: 1px solid $panel-success-border;
+    border-top-color: $panel-success-border;
 
     @include shadow-mask($panel-success-heading-bg, 'top', -11px);
   }
@@ -141,7 +168,7 @@
   > .panel-subheading {
     background: $panel-info-heading-bg;
     color: $panel-info-text;
-    border-top: 1px solid $panel-info-border;
+    border-top-color: $panel-info-border;
 
     @include shadow-mask($panel-info-heading-bg, 'top', -11px);
   }
@@ -152,7 +179,7 @@
   > .panel-subheading {
     background: $panel-warning-heading-bg;
     color: $panel-warning-text;
-    border-top: 1px solid $panel-warning-border;
+    border-top-color: $panel-warning-border;
 
     @include shadow-mask($panel-warning-heading-bg, 'top', -11px);
   }
@@ -163,7 +190,7 @@
   > .panel-subheading {
     background: $panel-danger-heading-bg;
     color: $panel-danger-text;
-    border-top: 1px solid $panel-danger-border;
+    border-top-color: $panel-danger-border;
 
     @include shadow-mask($panel-danger-heading-bg, 'top', -11px);
   }
@@ -196,6 +223,7 @@
     margin-bottom: $crm-panel-heading-margin;
   }
 }
+
 
 // Panel heading with buttons, aligned vertically
 .panel-heading-w-buttons {
