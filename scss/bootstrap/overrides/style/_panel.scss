@@ -70,6 +70,19 @@
 }
 
 
+// Nested panels
+.panel-nest-group {
+
+  > .panel {
+    margin-bottom: 10px;
+  }
+
+  .panel-nested {
+    margin-left: 20px;
+  }
+}
+
+
 // Contextual variations
 .panel-default {
   @include box-shadow($box-shadow);
@@ -89,12 +102,15 @@
         padding-right: 20px;
       }
     }
+
+    + .panel-subheading {
+      border-top: 1px solid $gray-light;
+    }
   }
 
   > .panel-subheading {
     background: $panel-default-heading-bg;
     color: $panel-default-text;
-    border-top: 1px solid $gray-light;
   }
 }
 
