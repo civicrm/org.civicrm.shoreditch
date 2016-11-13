@@ -208,10 +208,14 @@ $panel-border-radius:       $border-radius-base + 1 !default;
 $panel-inner-border:        $gray-light !default;
 $panel-footer-bg:           #ffffff !default;
 
-$crm-panel-heading-margin:    10px !default;
+$crm-panel-heading-margin:  10px !default;
 
 //== Subheading
 $crm-panel-subheading-padding: $panel-heading-padding !default;
+
+//== Abstract and collapsible extra
+$crm-panel-abstract-padding: 8px 20px !default;
+$crm-panel-extra-padding:    5px 20px 10px 35px !default;
 
 //== Contextual variations
 $panel-default-text:        $gray-darker !default;

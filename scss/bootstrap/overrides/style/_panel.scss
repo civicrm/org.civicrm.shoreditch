@@ -34,6 +34,29 @@
   border: none;
 }
 
+.panel-title {
+  font-size: $font-size-h2;
+  font-weight: $crm-font-weight-h2;
+  line-height: $headings-line-height;
+}
+
+.panel-title-sm {
+  font-size: $font-size-h3;
+  font-weight: $crm-font-weight-h3;
+}
+
+
+// Abstract and collapsible extra
+.panel-body-abstract {
+  padding: $crm-panel-abstract-padding;
+}
+
+.panel-body-extra {
+  padding: $crm-panel-extra-padding;
+}
+
+
+// Subheading and subtitle
 .panel-subheading {
   padding: $crm-panel-subheading-padding;
 }
@@ -46,37 +69,12 @@
   margin: 0;
 }
 
-.panel-title {
-  font-size: $font-size-h2;
-  font-weight: $crm-font-weight-h2;
-  line-height: $headings-line-height;
-
-  > [data-toggle="collapse"] {
-
-    &:before {
-      @include fa-icon();
-      color: inherit;
-      content: $fa-var-angle-down;
-      font-size: $font-size-h2;
-    }
-
-    &.collapsed:before {
-      content: $fa-var-angle-right;
-    }
-  }
-}
-
-.panel-title-sm {
-  font-size: $font-size-h3;
-  font-weight: $crm-font-weight-h3;
-}
-
 
 // Contextual variations
 .panel-default {
   @include box-shadow($box-shadow);
 
-  > .panel-body {
+  .panel-body:not(.panel-body-extra) {
     border-top: 1px solid $crm-dark-grayblue;
   }
 
@@ -102,7 +100,7 @@
 
 .panel-primary {
 
-  .panel-subheading {
+  > .panel-subheading {
     background: $panel-primary-heading-bg;
     color: $panel-primary-text;
     border-top: 1px solid $panel-info-border;
@@ -113,7 +111,7 @@
 
 .panel-success {
 
-  .panel-subheading {
+  > .panel-subheading {
     background: $panel-success-heading-bg;
     color: $panel-success-text;
     border-top: 1px solid $panel-success-border;
@@ -124,7 +122,7 @@
 
 .panel-info {
 
-  .panel-subheading {
+  > .panel-subheading {
     background: $panel-info-heading-bg;
     color: $panel-info-text;
     border-top: 1px solid $panel-info-border;
@@ -135,7 +133,7 @@
 
 .panel-warning {
 
-  .panel-subheading {
+  > .panel-subheading {
     background: $panel-warning-heading-bg;
     color: $panel-warning-text;
     border-top: 1px solid $panel-warning-border;
@@ -146,7 +144,7 @@
 
 .panel-danger {
 
-  .panel-subheading {
+  > .panel-subheading {
     background: $panel-danger-heading-bg;
     color: $panel-danger-text;
     border-top: 1px solid $panel-danger-border;
@@ -188,5 +186,22 @@
 
   .btn {
     margin: -8px 0 -8px 10px;
+  }
+}
+
+
+// TODO: Move it into its own partial, it's not strictly related to panels
+[data-toggle="collapse"] {
+
+  &:before {
+    @include fa-icon();
+    color: inherit;
+    content: $fa-var-angle-down;
+    font-size: inherit;
+    margin-right: 10px;
+  }
+
+  &.collapsed:before {
+    content: $fa-var-angle-right;
   }
 }
