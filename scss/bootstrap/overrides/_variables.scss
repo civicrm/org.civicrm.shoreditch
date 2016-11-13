@@ -187,12 +187,16 @@ $label-default-bg: $crm-darker-grayblue;
 //##
 
 $modal-inner-padding:         20px 30px !default;
-$modal-title-padding:         15px !default;
+$modal-title-padding:         10px 29px !default;
+$crm-modal-footer-padding:    20px !default;
+$crm-modal-sm-title-padding:  10px 20px !default;
+$crm-modal-sm-footer-padding: 10px !default;
 
-$modal-header-border-color:   transparent !default;
-$modal-footer-border-color:   $modal-header-border-color !default;
+$modal-footer-border-color:   $gray-light !default;
 
-$modal-md:                    500px !default;
+$modal-lg:                    945px !default;
+$modal-md:                    555px !default;
+$modal-sm:                    360px !default;
 
 
 //== Panels

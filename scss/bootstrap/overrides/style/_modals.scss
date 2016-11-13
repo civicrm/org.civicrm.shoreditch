@@ -1,23 +1,32 @@
 .modal-content {
-    border-radius: 0;
-}
+  @include box-shadow($box-shadow);
 
-.modal-body {
-    background: $crm-brand-primary-light;
-}
-
-.modal-header {
-    padding: $modal-title-padding ($modal-title-padding + 5);
+  border: 0;
+  border-radius: $border-radius-base;
 }
 
 .modal-footer {
-    padding: $modal-title-padding + 5;
+  padding: $crm-modal-footer-padding;
+
+  .modal-sm & {
+    padding: $crm-modal-sm-footer-padding;
+  }
+}
+
+.modal-header {
+  background: $gray-lighter;
+  border-bottom: 0;
+  border-radius: $border-radius-base;
+
+  .modal-sm & {
+    padding: $crm-modal-sm-title-padding;
+  }
 }
 
 @media (min-width: $screen-sm-min) {
-    .modal-dialog {
-        margin-top: 50px;
-    }
+  .modal-dialog {
+    margin-top: 50px;
+  }
 }
 
 /**
@@ -25,14 +34,14 @@
  * It cancels out the styles that CTools applies via JS
  */
 .modal-civihr-bootstrap {
+  position: initial !important;
+  top: initial !important;
+  left: initial !important;
+
+  .loading-spinner {
+    left: initial !important;
+    margin: 0 auto -20px !important;
     position: initial !important;
     top: initial !important;
-    left: initial !important;
-
-    .loading-spinner {
-        left: initial !important;
-        margin: 0 auto -20px !important;
-        position: initial !important;
-        top: initial !important;
-    }
+  }
 }
