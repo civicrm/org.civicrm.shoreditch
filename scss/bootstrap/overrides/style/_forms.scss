@@ -85,6 +85,37 @@ label {
   }
 }
 
+// Restoring label colors for checkboxes and radio buttons with status
+.has-success {
+
+  .radio label,
+  .checkbox label,
+  .radio-inline label,
+  .checkbox-inline label  {
+    color: $state-success-text;
+  }
+}
+
+.has-warning {
+
+  .radio label,
+  .checkbox label,
+  .radio-inline label,
+  .checkbox-inline label  {
+    color: $state-warning-text;
+  }
+}
+
+.has-error {
+
+  .radio label,
+  .checkbox label,
+  .radio-inline label,
+  .checkbox-inline label  {
+    color: $state-danger-text;
+  }
+}
+
 .input-group-btn {
 
   .btn-default {
