@@ -22,6 +22,10 @@
 
     > a {
       padding: $crm-nav-stacked-link-padding;
+
+      &:active {
+        background: $gray-light;
+      }
     }
 
     + li {
