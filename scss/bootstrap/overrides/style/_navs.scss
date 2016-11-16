@@ -4,6 +4,7 @@
 
     > a {
       color: $crm-nav-color;
+      font-weight: 600;
     }
 
     &.disabled > a:hover {
@@ -121,29 +122,24 @@
 
 //== Sidebar navigation
 .nav-pills-stacked-sidebar {
-  background: $crm-page-sidebar-bg;
+  background: transparent;
 
   > li {
+    position: relative;
+    z-index: 2;
 
     > a {
-      border-radius: $crm-nav-pills-sidebar-border-radius;
-      color: $crm-nav-pills-sidebar-color;
-      font-weight: $crm-nav-pills-sidebar-weigth;
-      padding: $crm-nav-pills-sidebar-link-padding;
-    }
-
-    + li {
-      margin-top: 0;
+      background: $crm-nav-stacked-bg;
     }
 
     &.active {
-      position: relative;
       z-index: 0;
 
       &:after,
       &:before {
-        content: "";
-        box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.1);
+        @include box-shadow($box-shadow);
+
+        content: '';
         display: block;
         height: 999999px;
         left: 0;
@@ -161,8 +157,8 @@
       }
 
       > a {
-        background: $crm-nav-pills-sidebar-link-hover-bg !important;
-        color: $crm-nav-pills-sidebar-link-color !important;
+        background: transparent !important;
+        color: $crm-nav-color !important;
       }
     }
   }
