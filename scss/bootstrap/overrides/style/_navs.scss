@@ -15,21 +15,16 @@
 }
 
 .nav-stacked {
+  background: $crm-nav-stacked-bg;
 
   > li {
 
     > a {
-      background: $crm-nav-stacked-bg;
-      border-radius: $crm-nav-stacked-border-radius;
       padding: $crm-nav-stacked-link-padding;
     }
 
     + li {
       margin-top: 0;
-    }
-
-    &.disabled > a:hover {
-      background: $crm-white;
     }
   }
 }
@@ -39,53 +34,6 @@
   padding: $crm-nav-tab-content-padding;
 }
 
-.nav-pills-stacked-sidebar {
-    background: $crm-page-sidebar-bg;
-
-    > li {
-
-        > a {
-            border-radius: $crm-nav-pills-sidebar-border-radius;
-            color: $crm-nav-pills-sidebar-color;
-            font-weight: $crm-nav-pills-sidebar-weigth;
-            padding: $crm-nav-pills-sidebar-link-padding;
-        }
-
-        + li {
-            margin-top: 0;
-        }
-
-        &.active {
-            position: relative;
-            z-index: 0;
-
-            &:after,
-            &:before {
-                content: "";
-                box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.1);
-                display: block;
-                height: 999999px;
-                left: 0;
-                position: absolute;
-                width: 100%;
-                z-index: 1;
-            }
-
-            &:after {
-                top: 100%;
-            }
-
-            &:before {
-                bottom: 100%;
-            }
-
-            > a {
-                background: $crm-nav-pills-sidebar-link-hover-bg !important;
-                color: $crm-nav-pills-sidebar-link-color !important;
-            }
-        }
-    }
-}
 
 // Nav tabs in a panel subheading
 .panel-subheading {
@@ -103,7 +51,125 @@
 }
 
 
-// Nav tabs stacked vertically, in a grid+flexbox layout (content on the right)
+//== Horizontal variation of .nav-pills
+.nav-pills-horizontal {
+  @include box-shadow($box-shadow);
+  padding-left: 20px;
+
+  > li {
+
+    > a {
+      padding: $crm-nav-stacked-link-padding;
+    }
+
+    + li {
+      margin-left: 0;
+    }
+
+    &.active {
+
+      > a {
+        background: transparent;
+        position: relative;
+
+        &:after {
+          border-bottom: 3px solid transparent;
+          bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Contextual variations
+.nav-pills-horizontal-default {
+  @include nav-pills-horizontal-variant($crm-nav-stacked-bg, $crm-nav-color, false);
+}
+
+.nav-pills-horizontal-primary {
+  @include nav-pills-horizontal-variant($brand-primary, $crm-white);
+}
+
+.nav-pills-horizontal-success {
+  @include nav-pills-horizontal-variant($brand-success, $crm-white);
+}
+
+.nav-pills-horizontal-info {
+  @include nav-pills-horizontal-variant($brand-info, $crm-white);
+}
+
+.nav-pills-horizontal-warning {
+  @include nav-pills-horizontal-variant($brand-warning, $crm-white);
+}
+
+.nav-pills-horizontal-danger {
+  @include nav-pills-horizontal-variant($brand-danger, $crm-white);
+}
+
+
+//== Sidebar navigation
+.nav-pills-stacked-sidebar {
+  background: $crm-page-sidebar-bg;
+
+  > li {
+
+    > a {
+      border-radius: $crm-nav-pills-sidebar-border-radius;
+      color: $crm-nav-pills-sidebar-color;
+      font-weight: $crm-nav-pills-sidebar-weigth;
+      padding: $crm-nav-pills-sidebar-link-padding;
+    }
+
+    + li {
+      margin-top: 0;
+    }
+
+    &.active {
+      position: relative;
+      z-index: 0;
+
+      &:after,
+      &:before {
+        content: "";
+        box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.1);
+        display: block;
+        height: 999999px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+      }
+
+      &:after {
+        top: 100%;
+      }
+
+      &:before {
+        bottom: 100%;
+      }
+
+      > a {
+        background: $crm-nav-pills-sidebar-link-hover-bg !important;
+        color: $crm-nav-pills-sidebar-link-color !important;
+      }
+    }
+  }
+}
+
+
+//== Nav tabs stacked vertically (w/ content on the right), in a grid+flexbox layout
 .nav-tabs-stacked {
   border-bottom: 0;
 
@@ -132,6 +198,7 @@
   }
 }
 
+// The wrapper that enforces the layout
 .nav-tabs-stacked-wrapper {
   display: flex;
 
@@ -147,11 +214,9 @@
   .tab-content {
     flex: 1;
   }
-}
 
-.panel-default {
-
-  > .nav-tabs-stacked-wrapper {
+  // The whole component will be inside a .panel-default (no panel variations supported)
+  .panel-default > & {
     border-top: 1px solid $crm-dark-grayblue;
 
     .active:first-child > a {
@@ -160,34 +225,35 @@
   }
 }
 
-// Nav tabs in the heading of a primary panel
+
+//== Nav tabs in the heading of a primary panel
 .panel-primary {
 
-    > .panel-heading {
+  > .panel-heading {
 
-        > .nav-tabs {
-            border: $crm-nav-tabs-panel-heading-border;
-            margin: $crm-nav-tabs-panel-heading-margin;
+    > .nav-tabs {
+      border: $crm-nav-tabs-panel-heading-border;
+      margin: $crm-nav-tabs-panel-heading-margin;
 
-            > li {
+      > li {
 
-                &.active,
-                &:hover {
+        &.active,
+        &:hover {
 
-                    > a {
-                        border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
-                    }
-                }
-
-                > a {
-                    background: $crm-nav-tabs-panel-heading-link-background !important;
-                    border-color: $crm-nav-tabs-panel-heading-link-border-color !important;
-                    border-width: $crm-nav-tabs-panel-heading-link-border-width;
-                    color: $crm-nav-tabs-panel-heading-link-color !important;
-                    font-weight: $crm-nav-tabs-panel-heading-link-weight;
-                    padding: $crm-nav-tabs-panel-heading-link-padding;
-                }
-            }
+          > a {
+            border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
+          }
         }
+
+        > a {
+          background: $crm-nav-tabs-panel-heading-link-background !important;
+          border-color: $crm-nav-tabs-panel-heading-link-border-color !important;
+          border-width: $crm-nav-tabs-panel-heading-link-border-width;
+          color: $crm-nav-tabs-panel-heading-link-color !important;
+          font-weight: $crm-nav-tabs-panel-heading-link-weight;
+          padding: $crm-nav-tabs-panel-heading-link-padding;
+        }
+      }
     }
+  }
 }
