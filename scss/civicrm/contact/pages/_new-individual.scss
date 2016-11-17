@@ -27,6 +27,7 @@
                 #s2id_suffix_id {
                   width: 80px !important;
                   min-width: 80px !important;
+                  padding-right: 0 !important;
                 }
               }
             }
@@ -35,7 +36,7 @@
 
         .select2-container,
         .crm-form-select {
-            width: 120px !important;
+            padding-right: 40px !important;
             min-width: 120px !important;
 
             + .crm-option-edit-link {
