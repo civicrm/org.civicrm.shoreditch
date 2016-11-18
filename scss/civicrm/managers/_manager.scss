@@ -1,0 +1,55 @@
+#contact-summary-relationship-tab.view-content {
+  font-family: $font-family-base;
+
+  div.action-link {
+    height: auto;
+
+    > a.button {
+      @extend .btn-primary;
+    }
+  }
+
+  h3 {
+    box-shadow: $box-shadow;
+    background-color: $brand-primary;
+    color: $crm-white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 11px 20px 10px;
+  }
+
+  .crm-contact-relationship-current {
+    margin-bottom: 15px;
+  }
+
+  .crm-contact-relationship-selector-current,
+  .crm-contact-relationship-selector-past {
+    width: 100% !important;
+  }
+
+  .crm-datatable-pager-top,
+  .crm-datatable-pager-bottom {
+    background: $crm-white;
+    padding: 15px;
+    height: 20px;
+    font-size: 14px;
+  }
+
+  .dataTables_paginate {
+    padding: 0;
+    margin-top: -5px;
+  }
+
+  .label.font-red {
+    box-shadow: $box-shadow;
+    background-color: $brand-danger;
+    color: $crm-white !important;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 11px 20px 10px;
+  }
+
+  .description {
+    margin: 10px 0;
+  }
+}
