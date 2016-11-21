@@ -27,16 +27,19 @@
                 #s2id_suffix_id {
                   width: 80px !important;
                   min-width: 80px !important;
-                  padding-right: 0 !important;
                 }
               }
             }
           }
         }
 
+        // Add padding to only select type markup
+        select.crm-form-select {
+          padding-right: 40px !important;
+        }
+
         .select2-container,
         .crm-form-select {
-            padding-right: 40px !important;
             min-width: 120px !important;
 
             + .crm-option-edit-link {
