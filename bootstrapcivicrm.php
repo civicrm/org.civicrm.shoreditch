@@ -131,6 +131,12 @@ function bootstrapcivicrm_civicrm_pageRun($page) {
     CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.bootstrapcivicrm', 'css/select2-bootstrap.css');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/radio-checkbox.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/add-missing-date-addons.js');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrap', 'js/transition.js', 1000, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrap', 'js/scrollspy.js', 1000, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrap', 'js/dropdown.js', 1000, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrap', 'js/collapse.js', 1000, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrap', 'js/modal.js', 1000, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrap', 'js/tab.js', 1000, 'html-header');
   }
 }
 
