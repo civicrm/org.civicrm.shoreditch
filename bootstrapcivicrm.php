@@ -123,10 +123,10 @@ function bootstrapcivicrm_civicrm_alterSettingsFolders(&$metaDataFolders = NULL)
 }
 
 /**
- * Implementation of hook_civicrm_pageRun
+ * Implementation of hook_civicrm_coreResourceList
  */
-function bootstrapcivicrm_civicrm_pageRun($page) {
-  if (!(isset($_GET['snippet']) && $_GET['snippet'] == 'json')) {
+function bootstrapcivicrm_civicrm_coreResourceList(&$items, $region) {
+  if ($region == 'html-header') {
     CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.bootstrapcivicrm', 'css/bootstrap.css', -50, 'html-header');
     CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.bootstrapcivicrm', 'css/select2-bootstrap.css', -49, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/radio-checkbox.js');
@@ -144,8 +144,6 @@ function bootstrapcivicrm_civicrm_pageRun($page) {
  * Implementation of hook_civicrm_buildForm
  */
 function bootstrapcivicrm_civicrm_buildForm($formName) {
-  CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/radio-checkbox.js');
-  CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/add-missing-date-addons.js');
   if($formName == 'CRM_Contact_Form_Search_Advanced') {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/enable-select2.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/highlight-table-rows.js');
