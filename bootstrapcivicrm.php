@@ -128,7 +128,6 @@ function bootstrapcivicrm_civicrm_alterSettingsFolders(&$metaDataFolders = NULL)
 function bootstrapcivicrm_civicrm_coreResourceList(&$items, $region) {
   if ($region == 'html-header') {
     CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.bootstrapcivicrm', 'css/bootstrap.css', -50, 'html-header');
-    CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.bootstrapcivicrm', 'css/select2-bootstrap.css', -49, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/radio-checkbox.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrapcivicrm', 'js/add-missing-date-addons.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.bootstrap', 'js/transition.js', 1000, 'html-header');
