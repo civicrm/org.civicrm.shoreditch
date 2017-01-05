@@ -24,7 +24,7 @@ gulp.task('sass-civicrm', function (next) {
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',
-      exclude: [/page-civicrm/, /crm-container/]
+      exclude: [/page-civicrm/, /crm-container/, /civicrm-menu/, /#root-menu-div/]
     }), postcssDiscardDuplicates]))
     .pipe(gulp.dest('css/')).on('end', next);
 });
