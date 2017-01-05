@@ -232,7 +232,11 @@
 
       .crm-button-type-cancel,
       .crm-button_qf_Address_1_cancel,
-      .crm-button_qf_Address_2_cancel {
+      .crm-button_qf_Address_2_cancel,
+      .crm-button_qf_Address_3_cancel,
+      .crm-button_qf_Address_4_cancel,
+      .crm-button_qf_Address_5_cancel,
+      .crm-button_qf_Address_6_cancel {
         input {
           color: $gray-darker !important;
           border: 1px solid $gray-darker !important;
@@ -281,7 +285,11 @@
 }
 
 #Address_1,
-#Address_2 {
+#Address_2,
+#Address_3,
+#Address_4,
+#Address_5,
+#Address_6 {
   padding: 10px;
 
   .form {
@@ -301,7 +309,15 @@
   #address_1_geo_code_1,
   #address_1_geo_code_2,
   #address_2_geo_code_1,
-  #address_2_geo_code_2 {
+  #address_2_geo_code_2,
+  #address_3_geo_code_1,
+  #address_3_geo_code_2,
+  #address_4_geo_code_1,
+  #address_4_geo_code_2,
+  #address_5_geo_code_1,
+  #address_5_geo_code_2,
+  #address_6_geo_code_1,
+  #address_6_geo_code_2 {
     width: 18% !important;
   }
 
@@ -313,7 +329,11 @@
     font-weight: normal !important;
 
     &[for="address_1_location_type_id"],
-    &[for="address_2_location_type_id"] {
+    &[for="address_2_location_type_id"],
+    &[for="address_3_location_type_id"],
+    &[for="address_4_location_type_id"],
+    &[for="address_5_location_type_id"],
+    &[for="address_6_location_type_id"] {
       font-weight: bold !important;
     }
   }
