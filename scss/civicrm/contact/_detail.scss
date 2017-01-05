@@ -296,7 +296,19 @@
     width: 94% !important;
   }
 
-  [class*="#address_"] {
+
+  #address_1_geo_code_1,
+  #address_1_geo_code_2,
+  #address_2_geo_code_1,
+  #address_2_geo_code_2,
+  #address_3_geo_code_1,
+  #address_3_geo_code_2,
+  #address_4_geo_code_1,
+  #address_4_geo_code_2,
+  #address_5_geo_code_1,
+  #address_5_geo_code_2,
+  #address_6_geo_code_1,
+  #address_6_geo_code_2 {
     width: 18% !important;
   }
 
