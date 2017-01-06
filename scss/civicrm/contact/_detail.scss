@@ -250,6 +250,11 @@
       td {
         background-color: transparent !important;
       }
+
+      td.label {
+        display: inline-block;
+        font-size: $font-size-base;
+      }
     }
   }
 
