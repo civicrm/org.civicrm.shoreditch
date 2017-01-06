@@ -3,13 +3,13 @@
 }
 
 #civicrm-menu #crm-qsearch {
-  background-color: #ffffff !important;
+  background-color: $crm-white !important;
   line-height: 28px;
   height: 30px !important;
 }
 
 #civicrm-menu #crm-qsearch input {
-  background-color: #ffffff;
+  background-color: $crm-white;
   border-color: #c2cfd8;
   border-radius: 2px;
 }
@@ -25,7 +25,7 @@
 }
 
 #civicrm-menu > li.menumain.crm-link-home {
-  background: #42afcb;
+  background: $brand-primary;
 }
 
 #civicrm-menu > li.menumain.crm-link-home.activetarget {
@@ -34,19 +34,19 @@
 
 #civicrm-menu > li.menumain.activetarget,
 #root-menu-div li.active {
-  background-color: #f3f6f7;
+  background-color: $gray-lighter;
 }
 
 #civicrm-menu,
 #root-menu-div .menu-ul {
-  background: #ffffff;
+  background: $crm-white;
 }
 
 #civicrm-menu,
 #civicrm-menu > .menumain > a,
 #root-menu-div .menu-item,
 #root-menu-div .menu-item a {
-  color: #4d5663;
+  color: $gray-darker;
 }
 
 #root-menu-div [class*="shadowbox"] {
@@ -70,7 +70,7 @@
 }
 
 #root-menu-div .menu-ul li.menu-separator {
-  border-color: #4d5663;
+  border-color: $gray-darker;
   margin: 0 !important;
   padding: 0 !important;
 }
