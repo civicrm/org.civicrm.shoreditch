@@ -1,35 +1,35 @@
 #civicrm-menu {
   height: 32px;
-}
 
-#civicrm-menu #crm-qsearch {
-  background-color: $crm-white !important;
-  line-height: 28px;
-  height: 30px !important;
-}
+  #crm-qsearch {
+    background-color: $crm-white !important;
+    line-height: 28px;
+    height: 30px !important;
 
-#civicrm-menu #crm-qsearch input {
-  background-color: $crm-white;
-  border-color: #c2cfd8;
-  border-radius: 2px;
-}
+    input {
+      background-color: $crm-white;
+      border-color: #c2cfd8;
+      border-radius: 2px;
+    }
+  }
 
-#civicrm-menu #sort_name_navigation {
-  width: 160px !important;
-}
+  #sort_name_navigation {
+    width: 160px !important;
+  }
 
-#civicrm-menu > li.menumain {
-  border-right: 0;
-  height: 26px !important;
-  line-height: 26px;
-}
+  > li.menumain {
+    border-right: 0;
+    height: 26px !important;
+    line-height: 26px;
 
-#civicrm-menu > li.menumain.crm-link-home {
-  background: $brand-primary;
-}
+    &.crm-link-home {
+      background: $brand-primary;
 
-#civicrm-menu > li.menumain.crm-link-home.activetarget {
-  background: #2f92ab;
+      &.activetarget {
+        background: #2f92ab;
+      }
+    }
+  }
 }
 
 #civicrm-menu > li.menumain.activetarget,
@@ -49,28 +49,34 @@
   color: $gray-darker;
 }
 
-#root-menu-div [class*="shadowbox"] {
-  display: none;
-}
+#root-menu-div {
 
-#root-menu-div .fa.menu-item-arrow {
-  position: absolute;
-  right: 6px;
-  top: 12px;
-}
+  [class*="shadowbox"] {
+    display: none;
+  }
 
-#root-menu-div .menu-ul {
-  border: 0;
-  box-shadow: 0 3px 10px 0 rgba(48, 40, 40, 0.25);
-}
+  .fa.menu-item-arrow {
+    position: absolute;
+    right: 6px;
+    top: 12px;
+  }
 
-#root-menu-div .menu-ul li:not(.menu-separator) {
-  margin-top: 0 !important;
-  padding: 5px 15px 5px 5px !important;
-}
+  .menu-ul {
+    border: 0;
+    box-shadow: 0 3px 10px 0 rgba(48, 40, 40, 0.25);
 
-#root-menu-div .menu-ul li.menu-separator {
-  border-color: $gray-darker;
-  margin: 0 !important;
-  padding: 0 !important;
+    li {
+
+      &:not(.menu-separator) {
+        margin-top: 0 !important;
+        padding: 5px 15px 5px 5px !important;
+      }
+
+      &.menu-separator {
+        border-color: $gray-darker;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  }
 }
