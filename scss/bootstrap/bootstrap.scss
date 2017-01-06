@@ -1,19 +1,14 @@
-@import "overrides/variables";
-@import "../../../org.civicrm.bootstrap/scss/bootstrap";
-
-@import "fonts/*";
-@import "mixins/*";
-
-#{$bootstrap-namespace} {
-  @import "vendor/ui-bootstrap/ui-bootstrap";
-  @import "vendor/ui-select/ui-select";
-
-  @import "overrides/style/*";
-  @import "components/*";
-}
-
 @import "vendor/text-angular/text-angular";
 @import "vendor/angular-xeditable/angular-xeditable";
 @import "vendor/font-awesome/font-awesome";
 @import "vendor/perfect-scrollbar/main";
-@import "components/civihr-ui-select/civihr-ui-select";
+@import "vendor/ui-bootstrap/ui-bootstrap";
+@import "vendor/ui-select/ui-select";
+
+@import "overrides/variables";
+@import "fonts/*";
+@import "mixins/*";
+
+@import "../../../org.civicrm.bootstrap/scss/bootstrap";
+@import "overrides/style/*";
+@import "components/*";
