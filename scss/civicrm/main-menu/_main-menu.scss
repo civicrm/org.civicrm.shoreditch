@@ -1,4 +1,5 @@
 #civicrm-menu {
+  font-family: $font-family-base;
   height: 32px;
 
   #crm-qsearch {
@@ -64,6 +65,7 @@
   .menu-ul {
     border: 0;
     box-shadow: 0 3px 10px 0 rgba(48, 40, 40, 0.25);
+    font-family: $font-family-base;
 
     li {
 
@@ -73,7 +75,7 @@
       }
 
       &.menu-separator {
-        border-color: $gray-darker;
+        border-color: #D3DEE2;
         margin: 0 !important;
         padding: 0 !important;
       }
