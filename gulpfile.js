@@ -29,7 +29,7 @@ gulp.task('sass-civicrm', function () {
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',
-      exclude: [/page-civicrm/, /crm-container/]
+      exclude: [/page-civicrm/, /crm-container/, /civicrm-menu/, /#root-menu-div/]
     }), postcssDiscardDuplicates]))
     .pipe(gulp.dest('css/'));
 });
