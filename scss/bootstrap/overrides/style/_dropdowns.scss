@@ -9,6 +9,12 @@
   margin: 0;
   padding: 0;
 
+  > li {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
   > li > a {
     padding: $crm-dropdown-padding;
   }
