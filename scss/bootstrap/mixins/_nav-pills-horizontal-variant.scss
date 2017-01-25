@@ -1,0 +1,33 @@
+// Variation of a horizontal nav pills element
+@mixin nav-pills-horizontal-variant($background, $color, $hover: true) {
+  background: $background;
+
+  > li {
+
+    > a {
+      color: $color !important;
+
+      @if ($hover) {
+        &:hover {
+          background: lighten(desaturate(adjust-hue($background, -0.0677), 0.1644), 4.7059);
+        }
+      }
+    }
+
+    &.active {
+
+      > a {
+
+        &:after {
+          border-color: $color;
+        }
+
+        @if ($hover) {
+          &:hover {
+            background: $background;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,24 +1,43 @@
 table,
 .table {
-    margin-bottom: 0;
+  margin-bottom: 0;
 
-    th {
-        background: $crm-table-striped-bg;
+  th {
+    background: $crm-table-heading-bg;
+  }
+
+  > thead {
+
+    > tr {
+
+      > th {
+        border-bottom: 0;
+        color: $gray-darker;
+        text-transform: capitalize;
+      }
     }
+  }
 
-    > thead {
+  // The border below the headings should be darker
+  &:not(.table-bordered) {
 
-        > tr {
+    > tbody {
 
-            > th {
-                border-bottom: 0;
-                color: $gray-darker;
-                text-transform: capitalize;
-            }
+      > tr:first-child {
+
+        > td {
+          border-color: $crm-table-heading-border-color;
         }
+      }
     }
+  }
 }
 
-.table-striped {
-    background: $crm-table-striped-bg;
+.panel-default {
+
+  > .table,
+  > .table-responsive > .table,
+  > .panel-collapse > .table {
+    border-top: 1px solid $crm-dark-grayblue;
+  }
 }

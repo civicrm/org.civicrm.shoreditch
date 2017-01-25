@@ -1,82 +1,199 @@
 .panel {
-    @include box-shadow(none);
+  @include box-shadow(none);
 
-    border: none;
-    margin-bottom: $grid-gutter-width;
-
-    > .table,
-    > .table-responsive > .table,
-    > .panel-collapse > .table {
-        border-top: 1px solid $gray-lighter;
-    }
+  border: none;
+  margin-bottom: $grid-gutter-width;
 }
 
 .panel-body {
-    background: $crm-brand-primary-light;
+  background: $crm-white;
 
-    // Avoid extra spacing due to margin bottom of last element
-    > *:last-child {
-        margin-bottom: 0;
+  // Avoid extra spacing due to margin bottom of last element
+  > *:last-child {
+    margin-bottom: 0;
 
-        // A (temporary?) solution to remove extra spacing in a
-        // panel containing an horizontal form
-        &.form-horizontal {
+    // A (temporary?) solution to remove extra spacing in a
+    // panel containing an horizontal form
+    &.form-horizontal {
 
-            > .row:last-child {
+      > .row:last-child {
 
-                .form-group {
-                    margin-bottom: 0;
-                }
-            }
+        .form-group {
+          margin-bottom: 0;
         }
+      }
     }
+  }
 }
 
 .panel-body-small {
-    padding: $panel-heading-padding;
-}
-
-.panel-footer {
-    border: 0;
+  padding: $panel-heading-padding;
 }
 
 .panel-heading {
-    border: none;
+  border: none;
 }
 
 .panel-title {
-    font-size: $font-size-h2;
-    font-weight: $crm-font-weight-h2;
-    line-height: $headings-line-height;
+  font-size: $font-size-h2;
+  font-weight: $crm-font-weight-h2;
+  line-height: $headings-line-height;
 }
 
 .panel-title-sm {
-    font-size: $font-size-h3;
-    font-weight: $crm-font-weight-h3;
+  font-size: $font-size-h3;
+  font-weight: $crm-font-weight-h3;
+}
+
+
+// Abstract and collapsible extra
+.panel-body-abstract {
+  padding: $crm-panel-abstract-padding;
+}
+
+.panel-body-extra {
+  padding: $crm-panel-extra-padding;
+}
+
+
+// Subheading and subtitle
+.panel-subheading {
+
+  .panel-heading + & {
+    border-top: 1px solid transparent;
+  }
+
+  padding: $crm-panel-subheading-padding;
+}
+
+.panel-subtitle {
+  color: inherit;
+  font-size: $font-size-h5;
+  font-weight: $crm-font-weight-h5;
+  line-height: $headings-line-height;
+  margin: 0;
+}
+
+
+// Nested panels
+.panel-nest-group {
+
+  > .panel {
+    margin-bottom: 10px;
+  }
+
+  .panel-nested {
+    margin-left: 20px;
+  }
 }
 
 
 // Contextual variations
 .panel-default {
-    @include box-shadow($box-shadow);
+  @include box-shadow($box-shadow);
 
-    > .panel-footer {
-        padding: $crm-panel-footer-big-padding;
+  .panel-body:not(.panel-body-extra) {
+    border-top: 1px solid $crm-dark-grayblue;
+  }
+
+  > .panel-heading {
+
+    .btn-group-sm {
+      margin: -13px 0 -10px 0;
+
+      // TO DO: too much nesting, need to fix this
+      > .btn {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
+  }
 
-    > .panel-heading {
-        padding: $crm-panel-heading-big-padding;
+  > .panel-subheading {
+    background: $panel-default-heading-bg;
+    border-top-color: $gray-light;
+    color: $panel-default-text;
+  }
 
-        .btn-group-sm {
-            margin: -13px 0 -10px 0;
+  // Status strips
+  &[class*="panel-strip-"] {
+    border-left: $crm-panel-status-strip-width solid transparent;
+  }
 
-            // TO DO: too much nesting, need to fix this
-            > .btn {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-    }
+  &.panel-strip-primary {
+    border-left-color: $brand-primary;
+  }
+
+  &.panel-strip-success {
+    border-left-color: $brand-success;
+  }
+
+  &.panel-strip-info {
+    border-left-color: $brand-info;
+  }
+
+  &.panel-strip-warning {
+    border-left-color: $brand-warning;
+  }
+
+  &.panel-strip-danger {
+    border-left-color: $brand-danger;
+  }
+}
+
+.panel-primary {
+
+  > .panel-subheading {
+    background: $panel-primary-heading-bg;
+    color: $panel-primary-text;
+    border-top-color: $panel-info-border;
+
+    @include shadow-mask($panel-primary-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-success {
+
+  > .panel-subheading {
+    background: $panel-success-heading-bg;
+    color: $panel-success-text;
+    border-top-color: $panel-success-border;
+
+    @include shadow-mask($panel-success-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-info {
+
+  > .panel-subheading {
+    background: $panel-info-heading-bg;
+    color: $panel-info-text;
+    border-top-color: $panel-info-border;
+
+    @include shadow-mask($panel-info-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-warning {
+
+  > .panel-subheading {
+    background: $panel-warning-heading-bg;
+    color: $panel-warning-text;
+    border-top-color: $panel-warning-border;
+
+    @include shadow-mask($panel-warning-heading-bg, 'top', -11px);
+  }
+}
+
+.panel-danger {
+
+  > .panel-subheading {
+    background: $panel-danger-heading-bg;
+    color: $panel-danger-text;
+    border-top-color: $panel-danger-border;
+
+    @include shadow-mask($panel-danger-heading-bg, 'top', -11px);
+  }
 }
 
 .panel-primary,
@@ -85,43 +202,50 @@
 .panel-warning,
 .panel-danger {
 
-    > .panel-body,
-    > .panel-footer,
-    > .panel-heading {
-        @include box-shadow($box-shadow);
-    }
+  > .panel-body,
+  > .panel-footer,
+  > .panel-heading,
+  > .panel-subheading {
+    @include box-shadow($box-shadow);
+  }
 
-    > .panel-body {
-        position: relative;
+  > .panel-body {
+    @include shadow-mask($crm-white, 'bottom', 0);
+  }
 
-        // Kind of a temporary hack to hide the footer's top border shadow
-        // which overflows into .panel-body. The :before pseudo-element
-        // just sits on top of it with the same panel-body bg color
-        &:before {
-            content: "";
-            background: $crm-brand-primary-light;;
-            bottom: 0;
-            height: 10px;
-            left: 0;
-            position: absolute;
-            width: 100%;
-            z-index: 2;
-        }
-    }
+  > .panel-footer {
+    position: relative;
+  }
 
-    > .panel-footer {
-        position: relative;
-    }
-
-    > .panel-heading {
-        margin-bottom: 15px;
-    }
+  &:not(.panel-w-subheading) > .panel-heading,
+  &.panel-w-subheading > .panel-subheading {
+    @include border-bottom-radius(($panel-border-radius - 1));
+    margin-bottom: $crm-panel-heading-margin;
+  }
 }
+
 
 // Panel heading with buttons, aligned vertically
 .panel-heading-w-buttons {
 
-    .btn {
-        margin: -8px 0 -8px 10px;
-    }
+  .btn {
+    margin: -8px 0 -8px 10px;
+  }
+}
+
+
+// TODO: Move it into its own partial, it's not strictly related to panels
+[data-toggle="collapse"] {
+
+  &:before {
+    @include fa-icon();
+    color: inherit;
+    content: $fa-var-angle-down;
+    font-size: inherit;
+    margin-right: 10px;
+  }
+
+  &.collapsed:before {
+    content: $fa-var-angle-right;
+  }
 }

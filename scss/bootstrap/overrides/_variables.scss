@@ -1,4 +1,4 @@
-$box-shadow: 0px 4px 15px -2px rgba(0,0,0,0.19);
+$box-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
 
 //== CiviCRM Page
 //
@@ -36,25 +36,27 @@ $os-font-path:   "../fonts/open-sans" !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$crm-background:        #E8EEF0 !default;
-$crm-copy:              #727E8A !default;
+$crm-background:            #E8EEF0 !default;
+$crm-copy:                  #727E8A !default;
 
-$gray-darker:           #4D5663 !default;
-$gray-dark:             $crm-copy !default;
-$gray-light:            $crm-background !default;
-$gray-lighter:          #F3F6F7 !default;
-$crm-gray-lightest:     lighten(desaturate(adjust-hue(#f3f6f7, -15.0000), 0.0000), 1.9608) !default;
+$gray-darker:               #4D5663 !default;
+$gray-dark:                 $crm-copy !default;
+$gray-light:                $crm-background !default;
+$gray-lighter:              #F3F6F7 !default;
+$crm-gray-lightest:         #FAFAFB !default;
 
-$brand-primary:         #42AFCB !default;
-$brand-success:         #8EC68A !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #ECA67F !default;
-$brand-danger:          #E6807F !default;
+$brand-primary:             #42AFCB !default;
+$brand-success:             #8EC68A !default;
+$brand-info:                #5bc0de !default;
+$brand-warning:             #ECA67F !default;
+$brand-danger:              #E6807F !default;
 $crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
-$crm-dark-blue:         #586277 !default;
-$crm-white:             #FFF !default;
+$crm-dark-blue:             #586277 !default;
+$crm-dark-grayblue:         #D3DEE2 !default;
+$crm-darker-grayblue:       #C2CFD8 !default;
+$crm-white:                 #FFF !default;
 
 $crm-dialog-container-border: #d3dee2;
 
@@ -107,8 +109,10 @@ $icon-font-path: "../vendor/bootstrap/fonts/bootstrap/" !default;
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-$padding-base-vertical:  4px !default;
-$padding-small-vertical: 2px !default;
+$padding-base-vertical:   4px !default;
+$padding-small-vertical:  2px !default;
+
+$padding-base-horizontal: 10px !default;
 
 $border-radius-base:  2px !default;
 $border-radius-small: $border-radius-base !default;
@@ -119,39 +123,39 @@ $border-radius-small: $border-radius-base !default;
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
 $table-cell-padding: 10px 20px !default;
-$table-bg-accent:    $crm-brand-primary-lighter !default;
+$table-bg:           $crm-white !default;
+$table-bg-accent:    $crm-brand-primary-light !default;
 $table-border-color: $gray-light !default;
 
-//** Background for striped tables
-$crm-table-striped-bg: #f4f7f8 !default;
+$crm-table-heading-bg: $gray-lighter !default;
+$crm-table-heading-border-color: $crm-dark-grayblue !default;
 
 
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight:            600 !default;
-$crm-btn-small-font-weight:      400 !default;
+$btn-font-weight:                 500 !default;
 
-$crm-btn-padding-base-vertical:  7px;
-$crm-btn-padding-small-vertical: 5px;
+$crm-btn-padding-base-horizontal: 19px;
+$crm-btn-padding-base-vertical:   7px;
+$crm-btn-padding-small-vertical:  5px;
 
-$btn-default-bg:            #fff !default;
-$btn-default-border:        $btn-default-bg !default;
+$btn-default-color:               $gray-darker;
+$btn-default-bg:                  $crm-white !default;
+$btn-default-border:              $btn-default-bg !default;
 
 
 //== Forms
 //
 //##
 
-$input-bg-disabled:         $crm-gray-lightest !default;
-$input-color:               $gray-dark !default;
-$input-border:              $gray-dark !default;
-$crm-input-border-disabled: #b2bac0 !default;
+$input-bg-disabled:         $gray-lighter !default;
+$input-color:               $gray-darker !default;
+$input-border:              $crm-darker-grayblue !default;
 
-$input-border-radius:       0 !default;
-$input-border-radius-large: $input-border-radius !default;
-$input-border-radius-small: $input-border-radius !default;
+$input-border-radius-large: $border-radius-base !default;
+$input-border-radius-small: $border-radius-base !default;
 
 $crm-input-addon-color:     $gray-darker !default;
 
@@ -166,8 +170,17 @@ $crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
 //
 //## Dropdown menu container and contents.
 
-$dropdown-border:        $crm-copy !default;
-$dropdown-link-hover-bg: $dropdown-border !default;
+$dropdown-link-hover-bg: $gray-lighter !default;
+$dropdown-header-color:  $gray-darker !default;
+
+$crm-dropdown-padding:   11px 20px;
+
+
+//== Labels
+//
+//##
+
+$label-default-bg: $crm-darker-grayblue;
 
 
 //== Modals
@@ -175,29 +188,58 @@ $dropdown-link-hover-bg: $dropdown-border !default;
 //##
 
 $modal-inner-padding:         20px 30px !default;
-$modal-title-padding:         15px !default;
+$modal-title-padding:         10px 29px !default;
+$crm-modal-footer-padding:    20px !default;
+$crm-modal-sm-title-padding:  10px 20px !default;
+$crm-modal-sm-footer-padding: 10px !default;
 
-$modal-header-border-color:   transparent !default;
-$modal-footer-border-color:   $modal-header-border-color !default;
+$modal-footer-border-color:   $gray-light !default;
 
-$modal-md:                    500px !default;
+$modal-lg:                    945px !default;
+$modal-md:                    555px !default;
+$modal-sm:                    360px !default;
 
 
 //== Panels
 //
 //##
 
-$panel-bg:                    transparent !default;
-$panel-body-padding:          20px !default;
-$panel-heading-padding:       10px 20px !default;
-$panel-border-radius:         0 !default;
-$crm-panel-heading-big-padding:   15px 20px !default;
-$crm-panel-footer-big-padding:    $crm-panel-heading-big-padding !default;
+$panel-bg:                  transparent !default;
+$panel-body-padding:        15px 20px !default;
+$panel-heading-padding:     $panel-body-padding !default;
+$panel-footer-padding:      $panel-heading-padding !default;
+$panel-border-radius:       $border-radius-base + 1 !default;
 
-$panel-footer-bg:             #ffffff !default;
+$panel-inner-border:        $gray-light !default;
+$panel-footer-bg:           #ffffff !default;
 
-$panel-default-text:          $gray-darker !default;
-$panel-default-heading-bg:    #ffffff !default;
+$crm-panel-heading-margin:  10px !default;
+
+//== Subheading
+$crm-panel-subheading-padding: $panel-heading-padding !default;
+
+//== Abstract and collapsible extra
+$crm-panel-abstract-padding: 8px 20px !default;
+$crm-panel-extra-padding:    5px 20px 10px 35px !default;
+
+//== Contextual variations
+$panel-default-text:        $gray-darker !default;
+$panel-default-heading-bg:  $gray-lighter !default;
+
+$panel-success-text:        $crm-white !default;
+$panel-success-heading-bg:  $brand-success !default;
+
+$panel-info-text:           $crm-white !default;
+$panel-info-heading-bg:     $brand-info !default;
+
+$panel-warning-text:        $crm-white !default;
+$panel-warning-heading-bg:  $brand-warning !default;
+
+$panel-danger-text:         $crm-white !default;
+$panel-danger-heading-bg:   $brand-danger !default;
+
+//== Status strip
+$crm-panel-status-strip-width: 6px !default;
 
 
 //== Grid system
@@ -211,20 +253,23 @@ $grid-gutter-width: 16px !default;
 //
 //##
 
-$nav-link-padding:                          10px 20px !default;
+//=== Shared nav styles
+$nav-link-padding:                        10px 20px !default;
+$crm-nav-color:                           $gray-darker;
 
-$nav-tabs-border-color:                     $gray-light !default;
-$nav-tabs-active-link-hover-bg:             $crm-table-striped-bg !default;
-$nav-tabs-active-link-hover-color:          $brand-primary !default;
+$nav-disabled-link-color:                 lighten(desaturate(adjust-hue($crm-nav-color, -13.6364), 1.1598), 46.4706) !default;
+$nav-disabled-link-hover-color:           $nav-disabled-link-color !default;
 
-//== Nav contained in sidebar
-$crm-nav-pills-sidebar-border-radius: 0;
-$crm-nav-pills-sidebar-color:         $gray-darker;
-$crm-nav-pills-sidebar-weigth:        600;
+//== Tabs
+$nav-tabs-border-color:                   $crm-dark-grayblue !default;
+$nav-tabs-active-link-hover-bg:           $crm-white !default;
+$nav-tabs-active-link-hover-color:        $brand-primary !default;
+$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default;
+$crm-nav-tab-content-padding:             $panel-body-padding !default;
 
-$crm-nav-pills-sidebar-link-padding:  16px 17px!default;
-$crm-nav-pills-sidebar-link-color:    $brand-primary !default;
-$crm-nav-pills-sidebar-link-hover-bg: $crm-background !default;
+$crm-nav-stacked-bg:                      $crm-white;
+$crm-nav-stacked-link-padding:            15px 20px !default;
+$crm-nav-stacked-border-radius:           0 !default;
 
 //== Nav tabs placed in a panel heading
 $crm-nav-tabs-panel-heading-border:                  0 !default;
@@ -263,6 +308,18 @@ $state-info-text:                $brand-info !default;
 $state-warning-text:             $brand-warning !default;
 $state-danger-text: $brand-danger !default;
 
+
+//== Badges
+//
+//##
+
+$badge-bg:            $brand-primary !default;
+$badge-font-weight:   400 !default;
+$badge-line-height:   1.1 !default;
+
+$crm-badge-min-width: 25px;
+
+
 //== Breadcrumbs
 //
 //##
@@ -275,3 +332,6 @@ $breadcrumb-separator:          ">" !default;
 //##
 
 $dl-horizontal-offset: 250px !default;
+
+$blockquote-small-color:      $crm-copy !default;
+$blockquote-border-color:     $brand-primary !default;

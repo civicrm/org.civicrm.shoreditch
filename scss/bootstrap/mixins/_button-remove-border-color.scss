@@ -1,0 +1,20 @@
+@mixin button-remove-border-color() {
+  border-color: transparent;
+
+  &:focus,
+  &:hover {
+    border-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    border-color: transparent;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      border-color: transparent;
+    }
+  }
+}

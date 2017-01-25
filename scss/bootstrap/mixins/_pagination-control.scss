@@ -1,0 +1,12 @@
+@mixin pagination-control($char, $orientation: 'left') {
+  $pseudo: if($orientation == 'left', 'before', 'after');
+  $margin: if($orientation == 'left', 'right', 'left');
+
+  a {
+    "&:#{$pseudo}" {
+      content: $char;
+      font-weight: 400;
+      margin-#{$margin}: 3px;
+    }
+  }
+}

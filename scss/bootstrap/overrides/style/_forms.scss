@@ -1,78 +1,78 @@
 label {
-    color: $gray-darker;
-    font-weight: 600;
+  color: $gray-darker;
+  font-weight: 600;
 }
 
 .checkbox,
 .radio {
 
-    > label {
-        color: $text-color;
-    }
+  > label {
+    color: $text-color;
+  }
 }
 
 .form-control {
-    @include box-shadow(none);
+  @include box-shadow(inset 0 0 3px 0 rgba(0, 0, 0, 0.2));
 
-    &:focus {
-        @include box-shadow(none);
-    }
+  &:focus {
+    @include box-shadow(inset 0 0 3px 0 rgba(0, 0, 0, 0.2));
 
-    &[disabled],
-    &[readonly],
-    fieldset[disabled] & {
-      border-color: $crm-input-border-disabled;
-      color: $crm-input-border-disabled;
-    }
+    border-color: $brand-primary;
+  }
+
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    color: $crm-darker-grayblue;
+  }
 }
 
-.form-group.form-required {
-
-    > .control-label:after {
-        content:"*";
-        color: $brand-danger;
-    }
+// Wrapper for a custom error message
+.form-error-message {
+  margin-top: 5px;
 }
 
 .form-horizontal {
 
-    .has-feedback {
+  .has-feedback {
 
-        [uib-datepicker-popup] + .form-control-feedback {
-            right: 41px;
-        }
+    [uib-datepicker-popup] + .form-control-feedback {
+      right: 41px;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+
+    // Labels should always be aligned to the left
+    .control-label {
+      text-align: left;
     }
 
-    @media (min-width: $screen-sm-min) {
+    // Checkbox must be vertically aligned when in a form group
+    .form-group {
+      overflow: initial;
 
-        // Labels should always be aligned to the left
-        .control-label {
-            text-align: left;
-        }
-
-        // Checkbox must be vertically aligned when in a form group
-        .form-group {
-            overflow: initial;
-            input[type="checkbox"] {
-                margin-top: 8px;
-            }
-        }
-
-        // Label size is always the same also with small size input fields
-        .form-group-sm {
-            .control-label {
-                font-size: $font-size-base;
-            }
-        }
+      input[type="checkbox"] {
+          margin-top: 8px;
+      }
     }
+
+    // Label size is always the same also with small/big size input fields
+    .form-group-lg,
+    .form-group-sm {
+      .control-label {
+        font-size: $font-size-base;
+      }
+    }
+  }
 }
 
 // A .form-horizontal spreaded on a single line
 .form-horizontal-inline {
 
-    .form-group {
-        margin-bottom: 0;
-    }
+  .form-group {
+    margin-bottom: 0;
+  }
 }
 
 // Removing color from labels of fields with status
@@ -85,25 +85,70 @@ label {
   }
 }
 
-/**
- * An extension of Bootstraps' input-group,
- * so that the addon has no background or border set
- */
-.input-group-unstyled {
+// Restoring label colors for checkboxes and radio buttons with status
+.has-success {
 
-    .input-group-addon,
-    .input-group-btn > button {
-        background: transparent !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
+  .radio label,
+  .checkbox label,
+  .radio-inline label,
+  .checkbox-inline label  {
+    color: $state-success-text;
+  }
 }
 
+.has-warning {
+
+  .radio label,
+  .checkbox label,
+  .radio-inline label,
+  .checkbox-inline label  {
+    color: $state-warning-text;
+  }
+}
+
+.has-error {
+
+  .radio label,
+  .checkbox label,
+  .radio-inline label,
+  .checkbox-inline label  {
+    color: $state-danger-text;
+  }
+}
+
+.input-group-btn {
+
+  .btn-default {
+    border-color: $input-border;
+    text-transform: none;
+  }
+}
 
 // AngularJS CSS classes
 .form-submitted, .ng-submitted {
 
-    .ng-invalid {
-        border: 1px solid $brand-danger;
-    }
+  .ng-invalid {
+    border: 1px solid $brand-danger;
+  }
+}
+
+// Required mark (*)
+.required {
+
+  &:after {
+    content:"*";
+    color: $brand-danger;
+    margin-left: 5px;
+  }
+}
+
+.required-input {
+  position: relative;
+
+  &:after {
+    bottom: 0;
+    position: absolute;
+    right: -10px;
+    top: 0;
+  }
 }

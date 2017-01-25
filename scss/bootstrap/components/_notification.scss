@@ -1,0 +1,79 @@
+.crm_notification {
+  @include box-shadow($box-shadow);
+
+  background: $crm-white;
+  border-radius: $border-radius-base;
+  padding: 20px;
+  width: 360px;
+
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.crm_notification__close {
+  float: right;
+
+  &:before {
+    @include fa-icon(1em, $fa-var-times);
+    color: $gray-darker;
+  }
+}
+
+.crm_notification__header {
+  margin-bottom: 10px;
+}
+
+.crm_notification__heading {
+
+  > .crm_notification__title {
+    display: inline-block;
+    margin: 0 0 0 5px;
+  }
+}
+
+.crm_notification__icon {
+
+  &:before {
+    @include fa-icon(1em);
+  }
+}
+
+.crm_notification__title {
+  font-size: $font-size-h5;
+}
+
+
+// Contextual variations
+.crm_notification--danger {
+
+  .crm_notification__icon {
+
+    &:before {
+      content: $fa-var-exclamation-circle;
+      color: $brand-danger;
+    }
+  }
+}
+
+.crm_notification--info {
+
+  .crm_notification__icon {
+
+    &:before {
+      content: $fa-var-info-circle;
+      color: $brand-info;
+    }
+  }
+}
+
+.crm_notification--success {
+
+  .crm_notification__icon {
+
+    &:before {
+      content: $fa-var-check;
+      color: $brand-success;
+    }
+  }
+}

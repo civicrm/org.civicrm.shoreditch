@@ -38,12 +38,12 @@
       }
 
       .string-override-table .columnheader {
-        background: $crm-table-striped-bg !important;
+        background: $gray-lighter !important;
         border: none;
         border-bottom: $panel-border;
 
         &:hover {
-          background: $crm-table-striped-bg !important;
+          background: $gray-lighter !important;
         }
       }
 

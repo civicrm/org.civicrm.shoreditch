@@ -1,72 +1,133 @@
-// Redefine the vertical padding for buttons
 .btn {
-    padding: $crm-btn-padding-base-vertical $padding-base-horizontal;
+  @include button-remove-border-color();
 
-    &:active,
-    &.active {
-        @include box-shadow(none);
-    }
+  padding: $crm-btn-padding-base-vertical $crm-btn-padding-base-horizontal;
+  text-transform: uppercase;
+
+  // Remove the inner shadow
+  &:active,
+  &.active {
+    @include box-shadow(none);
+  }
 }
 
-// Keeps the standard settings for font size, line height, and border radius
+.btn-default {
+
+  &:hover {
+    color: $gray-dark;
+  }
+}
+
 .btn-lg {
-    @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
 }
 
 .btn-sm {
-    font-weight: $crm-btn-small-font-weight;
-    padding: $crm-btn-padding-small-vertical $padding-base-horizontal;
+  padding: $crm-btn-padding-small-vertical $padding-base-horizontal;
 }
 
 .btn-xs {
-    padding: $padding-xs-vertical $padding-xs-horizontal;
-}
-
-
-// Customize variations
-.btn-default {
-    box-shadow: $box-shadow;
-    font-weight: 600;
-}
-
-.btn-primary {
-    min-width: 90px;
+  padding: 0 $padding-xs-horizontal;
 }
 
 .btn-block + .btn-block {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
-// From Bootstrap 4 alpha
+.btn-link {
+  text-transform: none;
+}
+
+// Adds the standard outer shadow to the button
+.btn-shadow {
+  @include box-shadow($box-shadow);
+}
+
+// Icon wrapper
+.btn-icon {
+  margin-right: 5px;
+}
+
+
+// Variations hover
+.btn-default {
+
+  &:hover {
+    background-color: $btn-default-bg;
+  }
+}
+
+.btn-primary {
+
+  &:hover {
+    background-color: lighten(desaturate(adjust-hue($btn-primary-bg, 0.6298), 0.0390), 5.4902);
+  }
+}
+
+.btn-success {
+
+  &:hover {
+    background-color: lighten(desaturate(adjust-hue($btn-success-bg, 0.6298), 0.0390), 5.4902);
+  }
+}
+
+.btn-info {
+
+  &:hover {
+    background-color: lighten(desaturate(adjust-hue($btn-info-bg, 0.6298), 0.0390), 5.4902);
+  }
+}
+
+.btn-warning {
+
+  &:hover {
+    background-color: lighten(desaturate(adjust-hue($btn-warning-bg, 0.6298), 0.0390), 5.4902);
+  }
+}
+
+.btn-danger {
+
+  &:hover {
+    background-color: lighten(desaturate(adjust-hue($btn-danger-bg, 0.6298), 0.0390), 5.4902);
+  }
+}
+
+
+//== From Bootstrap 4 alpha
 .btn-secondary {
-    @include button-variant(#ffffff, $gray-dark, $gray-darker);
+  @include button-variant(#ffffff, $gray-dark, $gray-darker);
+  @include button-remove-border-color();
+
+  &:hover {
+    background-color: lighten(desaturate(adjust-hue($gray-dark, 0.6298), 0.0390), 5.4902);
+  }
 }
 
 .btn-primary-outline {
-    @include button-outline-variant($btn-primary-bg);
-    min-width: 90px;
+  @include button-outline-variant($btn-primary-bg);
 }
 
 .btn-secondary-outline {
-    @include button-outline-variant($gray-darker, $gray-dark);
-    border-color: $gray-darker !important;
-    &:hover {
-      color: #ffffff !important;
-    }
+  @include button-outline-variant($gray-darker, $gray-dark);
+  border-color: $gray-darker !important;
+
+  &:hover {
+    color: #ffffff !important;
+  }
 }
 
 .btn-info-outline {
-    @include button-outline-variant($btn-info-bg);
+  @include button-outline-variant($btn-info-bg);
 }
 
 .btn-success-outline {
-    @include button-outline-variant($btn-success-bg);
+  @include button-outline-variant($btn-success-bg);
 }
 
 .btn-warning-outline {
-    @include button-outline-variant($btn-warning-bg);
+  @include button-outline-variant($btn-warning-bg);
 }
 
 .btn-danger-outline {
-    @include button-outline-variant($btn-danger-bg);
+  @include button-outline-variant($btn-danger-bg);
 }

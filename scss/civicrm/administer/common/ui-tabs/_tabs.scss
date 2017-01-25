@@ -30,9 +30,9 @@ ul.ui-tabs-nav {
     }
 
     &.ui-state-active {
-      background: $crm-table-striped-bg !important;
+      background: $gray-lighter !important;
       border: $panel-border;
-      border-bottom: 1px solid $crm-table-striped-bg;
+      border-bottom: 1px solid $gray-lighter;
 
       a,
       a em {

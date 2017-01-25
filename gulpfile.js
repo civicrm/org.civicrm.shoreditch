@@ -12,7 +12,10 @@ var bootstrapNamespace = '#bootstrap-theme';
 gulp.task('sass-bootstrap', function () {
   gulp.src('scss/bootstrap/bootstrap.scss')
     .pipe(bulk())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'compressed',
+      precision: 10
+    }).on('error', sass.logError))
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: bootstrapNamespace + ' ',
@@ -25,7 +28,10 @@ gulp.task('sass-bootstrap', function () {
 gulp.task('sass-civicrm', function () {
   gulp.src('scss/civicrm/custom-civicrm.scss')
     .pipe(bulk())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'compressed',
+      precision: 10
+    }).on('error', sass.logError))
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',

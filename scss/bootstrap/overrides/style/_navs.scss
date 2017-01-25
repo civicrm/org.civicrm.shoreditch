@@ -3,88 +3,257 @@
   > li {
 
     > a {
-      color: $crm-copy;
+      color: $crm-nav-color;
+      font-weight: 600;
+    }
+
+    &.disabled > a:hover {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-left-color: transparent;
     }
   }
 }
 
-.nav-pills-stacked-sidebar {
-    background: $crm-page-sidebar-bg;
+.nav-stacked {
+  background: $crm-nav-stacked-bg;
 
-    > li {
+  > li {
 
-        > a {
-            border-radius: $crm-nav-pills-sidebar-border-radius;
-            color: $crm-nav-pills-sidebar-color;
-            font-weight: $crm-nav-pills-sidebar-weigth;
-            padding: $crm-nav-pills-sidebar-link-padding;
-        }
+    > a {
+      padding: $crm-nav-stacked-link-padding;
 
-        + li {
-            margin-top: 0;
-        }
-
-        &.active {
-            position: relative;
-            z-index: 0;
-
-            &:after,
-            &:before {
-                content: "";
-                box-shadow: 1px 4px 15px 0px rgba(0,0,0,0.1);
-                display: block;
-                height: 999999px;
-                left: 0;
-                position: absolute;
-                width: 100%;
-                z-index: 1;
-            }
-
-            &:after {
-                top: 100%;
-            }
-
-            &:before {
-                bottom: 100%;
-            }
-
-            > a {
-                background: $crm-nav-pills-sidebar-link-hover-bg !important;
-                color: $crm-nav-pills-sidebar-link-color !important;
-            }
-        }
+      &:active {
+        background: $gray-light;
+      }
     }
+
+    + li {
+      margin-top: 0;
+    }
+  }
+}
+
+.tab-content {
+  background: $crm-white;
+  padding: $crm-nav-tab-content-padding;
 }
 
 
-// Nav tabs in the heading of a primary panel
+// Nav tabs in a panel subheading
+.panel-subheading {
+
+  > .nav-tabs {
+    $padding-y: nth($crm-panel-subheading-padding, 1);
+    $padding-x: nth($crm-panel-subheading-padding, 2);
+
+    margin: -#{$padding-y - 5} -#{$padding-x} -#{$padding-y};
+
+    > li:first-child {
+      margin-left: 20px;
+    }
+  }
+}
+
+
+//== Horizontal variation of .nav-pills
+.nav-pills-horizontal {
+  @include box-shadow($box-shadow);
+  padding-left: 20px;
+
+  > li {
+
+    > a {
+      padding: $crm-nav-stacked-link-padding;
+    }
+
+    + li {
+      margin-left: 0;
+    }
+
+    &.active {
+
+      > a {
+        background: transparent;
+        position: relative;
+
+        &:after {
+          border-bottom: 3px solid transparent;
+          bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+
+        &:hover {
+          background: transparent;
+        }
+      }
+    }
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+// Contextual variations
+.nav-pills-horizontal-default {
+  @include nav-pills-horizontal-variant($crm-nav-stacked-bg, $crm-nav-color, false);
+}
+
+.nav-pills-horizontal-primary {
+  @include nav-pills-horizontal-variant($brand-primary, $crm-white);
+}
+
+.nav-pills-horizontal-success {
+  @include nav-pills-horizontal-variant($brand-success, $crm-white);
+}
+
+.nav-pills-horizontal-info {
+  @include nav-pills-horizontal-variant($brand-info, $crm-white);
+}
+
+.nav-pills-horizontal-warning {
+  @include nav-pills-horizontal-variant($brand-warning, $crm-white);
+}
+
+.nav-pills-horizontal-danger {
+  @include nav-pills-horizontal-variant($brand-danger, $crm-white);
+}
+
+
+//== Sidebar navigation
+.nav-pills-stacked-sidebar {
+  background: transparent;
+
+  > li {
+    position: relative;
+    z-index: 2;
+
+    > a {
+      background: $crm-nav-stacked-bg;
+    }
+
+    &.active {
+      z-index: 0;
+
+      &:after,
+      &:before {
+        @include box-shadow($box-shadow);
+
+        content: '';
+        display: block;
+        height: 999999px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+      }
+
+      &:after {
+        top: 100%;
+      }
+
+      &:before {
+        bottom: 100%;
+      }
+
+      > a {
+        background: transparent !important;
+        color: $crm-nav-color !important;
+      }
+    }
+  }
+}
+
+
+//== Nav tabs stacked vertically (w/ content on the right), in a grid+flexbox layout
+.nav-tabs-stacked {
+  border-bottom: 0;
+
+  > li {
+    float: none;
+
+    > a {
+      margin-right: 0;
+      padding: $crm-nav-stacked-link-padding;
+    }
+
+    > a,
+    > a:hover {
+      border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
+    }
+
+    &.active {
+
+      > a,
+      > a:hover,
+      > a:focus {
+        border-color: $nav-tabs-active-link-hover-border-color transparent $nav-tabs-active-link-hover-border-color transparent;
+        border-bottom-color: $nav-tabs-active-link-hover-border-color;
+      }
+    }
+  }
+}
+
+// The wrapper that enforces the layout
+.nav-tabs-stacked-wrapper {
+  display: flex;
+
+  // Removes the grid gutter to visually connect the tabs to the content
+  .nav-tabs-stacked {
+    margin-right: -$grid-gutter-width;
+  }
+
+  .nav-tabs-stacked-content {
+    display: flex;
+  }
+
+  .tab-content {
+    flex: 1;
+  }
+
+  // The whole component will be inside a .panel-default (no panel variations supported)
+  .panel-default > & {
+    border-top: 1px solid $crm-dark-grayblue;
+
+    .active:first-child > a {
+      border-top-color: transparent;
+    }
+  }
+}
+
+
+//== Nav tabs in the heading of a primary panel
 .panel-primary {
 
-    > .panel-heading {
+  > .panel-heading {
 
-        > .nav-tabs {
-            border: $crm-nav-tabs-panel-heading-border;
-            margin: $crm-nav-tabs-panel-heading-margin;
+    > .nav-tabs {
+      border: $crm-nav-tabs-panel-heading-border;
+      margin: $crm-nav-tabs-panel-heading-margin;
 
-            > li {
+      > li {
 
-                &.active,
-                &:hover {
+        &.active,
+        &:hover {
 
-                    > a {
-                        border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
-                    }
-                }
-
-                > a {
-                    background: $crm-nav-tabs-panel-heading-link-background !important;
-                    border-color: $crm-nav-tabs-panel-heading-link-border-color !important;
-                    border-width: $crm-nav-tabs-panel-heading-link-border-width;
-                    color: $crm-nav-tabs-panel-heading-link-color !important;
-                    font-weight: $crm-nav-tabs-panel-heading-link-weight;
-                    padding: $crm-nav-tabs-panel-heading-link-padding;
-                }
-            }
+          > a {
+            border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
+          }
         }
+
+        > a {
+          background: $crm-nav-tabs-panel-heading-link-background !important;
+          border-color: $crm-nav-tabs-panel-heading-link-border-color !important;
+          border-width: $crm-nav-tabs-panel-heading-link-border-width;
+          color: $crm-nav-tabs-panel-heading-link-color !important;
+          font-weight: $crm-nav-tabs-panel-heading-link-weight;
+          padding: $crm-nav-tabs-panel-heading-link-padding;
+        }
+      }
     }
+  }
 }

@@ -1,6 +1,9 @@
+@import '../../../org.civicrm.bootstrap/scss/vendor/bootstrap/modals';
+@import '../bootstrap/overrides/style/modals';
+
 .crm-container.ui-dialog {
   border-radius: 0;
-  background: $crm-table-striped-bg;
+  background: $gray-lighter;
   max-height: 90%;
   overflow-y: auto;
 
@@ -66,7 +69,7 @@
     padding: 20px;
     margin-top: 0;
     height: auto !important;
-    background: $crm-table-striped-bg;
+    background: $gray-lighter;
 
     a.button:not(.hr-job-info-close) {
       @extend .btn-primary;
