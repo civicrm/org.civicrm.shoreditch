@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "civicrm-scssroot": "git://github.com/totten/civicrm-scssroot.git#v0.1.1",
     "gulp": "^3.9.0",
     "gulp-postcss": "~6.1.1",
     "node-sass": "3.4.2",
