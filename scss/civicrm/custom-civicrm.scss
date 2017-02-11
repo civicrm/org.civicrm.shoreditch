@@ -1,8 +1,8 @@
 @import 'variables';
 @import '../bootstrap/overrides/variables';
-@import 'SCSSROOT/org.civicrm.bootstrap/scss/overrides/variables';
-@import 'SCSSROOT/org.civicrm.bootstrap/scss/vendor/bootstrap/variables';
-@import 'SCSSROOT/org.civicrm.bootstrap/scss/vendor/bootstrap/mixins/ALL';
+@import 'SCSSROOT/org.civicrm.bootstrapcivicrm/base/scss/overrides/variables';
+@import 'SCSSROOT/org.civicrm.bootstrapcivicrm/base/scss/vendor/bootstrap/variables';
+@import 'SCSSROOT/org.civicrm.bootstrapcivicrm/base/scss/vendor/bootstrap/mixins/ALL';
 @import '../bootstrap/mixins/*';
 @import '../bootstrap/fonts/*';
 @import '../bootstrap/vendor/font-awesome/variables';
