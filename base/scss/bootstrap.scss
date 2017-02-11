@@ -1,0 +1,12 @@
+@import "overrides/variables";
+@import "mixins/initial-value";
+
+// Core variables and mixins
+@import "vendor/bootstrap/variables";
+@import "vendor/bootstrap/mixins";
+
+// Reset CMS and old CiviCRM style
+@import "overrides/reset/drupal";
+@import "overrides/reset/civicrm";
+
+@import "themes/default";

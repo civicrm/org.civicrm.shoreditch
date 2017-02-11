@@ -1,0 +1,4 @@
+@mixin initial($property, $initial-value) {
+  #{$property}: $initial-value;
+  #{$property}: initial;
+}

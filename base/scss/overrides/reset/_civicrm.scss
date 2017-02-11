@@ -1,0 +1,52 @@
+/**
+ * Resets css rules that are applied by the CiviCRM style
+ *
+ * (`initial` was used at first, but there is no support by IE for it)
+ */
+h3 {
+  @include initial(background-color, transparent);
+  @include initial(font-family, $font-family-base);
+  @include initial(padding, 0);
+  @include initial(margin, 0);
+
+  font-weight: 400;
+  font-size: $font-size-h3;
+}
+
+table {
+  @include initial(border, 0);
+  @include initial(margin, 0);
+
+  font-size: inherit;
+
+  td {
+    @include initial(border, 0);
+
+    color: inherit;
+  }
+
+  th {
+    @include initial(background-color, inherit);
+    @include initial(border, 0);
+    @include initial(text-transform, none);
+
+    color: inherit;
+    font-size: inherit;
+    font-weight: 600;
+  }
+}
+
+.collapsed {
+  @include initial(background, none);
+  @include initial(cursor, auto);
+  @include initial(padding, 0);
+}
+
+.panel {
+  @include initial(position, static);
+  @include initial(padding, 0);
+  @include initial(width, auto);
+  @include initial(z-index, auto);
+
+  display: block;
+}
