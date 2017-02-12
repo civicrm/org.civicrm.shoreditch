@@ -19,14 +19,14 @@ function _bootstrapcivicrm_civix_civicrm_config(&$config = NULL) {
   $extRoot = dirname(__FILE__) . DIRECTORY_SEPARATOR;
   $extDir = $extRoot . 'templates';
 
-  if ( is_array( $template->template_dir ) ) {
-      array_unshift( $template->template_dir, $extDir );
+  if (is_array($template->template_dir)) {
+    array_unshift($template->template_dir, $extDir);
   }
   else {
-      $template->template_dir = array( $extDir, $template->template_dir );
+    $template->template_dir = array($extDir, $template->template_dir);
   }
 
-  $include_path = $extRoot . PATH_SEPARATOR . get_include_path( );
+  $include_path = $extRoot . PATH_SEPARATOR . get_include_path();
   set_include_path($include_path);
 }
 
@@ -117,7 +117,7 @@ function _bootstrapcivicrm_civix_civicrm_upgrade($op, CRM_Queue_Queue $queue = N
  * @return CRM_Bootstrapcivicrm_Upgrader
  */
 function _bootstrapcivicrm_civix_upgrader() {
-  if (!file_exists(__DIR__.'/CRM/Bootstrapcivicrm/Upgrader.php')) {
+  if (!file_exists(__DIR__ . '/CRM/Bootstrapcivicrm/Upgrader.php')) {
     return NULL;
   }
   else {
@@ -153,7 +153,8 @@ function _bootstrapcivicrm_civix_find_files($dir, $pattern) {
       while (FALSE !== ($entry = readdir($dh))) {
         $path = $subdir . DIRECTORY_SEPARATOR . $entry;
         if ($entry{0} == '.') {
-        } elseif (is_dir($path)) {
+        }
+        elseif (is_dir($path)) {
           $todos[] = $path;
         }
       }
@@ -212,14 +213,14 @@ function _bootstrapcivicrm_civix_civicrm_caseTypes(&$caseTypes) {
 }
 
 /**
-* (Delegated) Implements hook_civicrm_angularModules().
-*
-* Find any and return any files matching "ang/*.ang.php"
-*
-* Note: This hook only runs in CiviCRM 4.5+.
-*
-* @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_angularModules
-*/
+ * (Delegated) Implements hook_civicrm_angularModules().
+ *
+ * Find any and return any files matching "ang/*.ang.php"
+ *
+ * Note: This hook only runs in CiviCRM 4.5+.
+ *
+ * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_angularModules
+ */
 function _bootstrapcivicrm_civix_civicrm_angularModules(&$angularModules) {
   if (!is_dir(__DIR__ . '/ang')) {
     return;
@@ -266,26 +267,30 @@ function _bootstrapcivicrm_civix_insert_navigation_menu(&$menu, $path, $item, $p
 
   // If we are done going down the path, insert menu
   if (empty($path)) {
-    if (!$navId) $navId = CRM_Core_DAO::singleValueQuery("SELECT max(id) FROM civicrm_navigation");
-    $navId ++;
-    $menu[$navId] = array (
+    if (!$navId) {
+      $navId = CRM_Core_DAO::singleValueQuery("SELECT max(id) FROM civicrm_navigation");
+    }
+    $navId++;
+    $menu[$navId] = array(
       'attributes' => array_merge($item, array(
         'label'      => CRM_Utils_Array::value('name', $item),
         'active'     => 1,
         'parentID'   => $parentId,
         'navID'      => $navId,
-      ))
+      )),
     );
-    return true;
+    return TRUE;
   }
   else {
     // Find an recurse into the next level down
-    $found = false;
+    $found = FALSE;
     $path = explode('/', $path);
     $first = array_shift($path);
     foreach ($menu as $key => &$entry) {
       if ($entry['attributes']['name'] == $first) {
-        if (!$entry['child']) $entry['child'] = array();
+        if (!$entry['child']) {
+          $entry['child'] = array();
+        }
         $found = _bootstrapcivicrm_civix_insert_navigation_menu($entry['child'], implode('/', $path), $item, $key);
       }
     }
@@ -306,7 +311,7 @@ function _bootstrapcivicrm_civix_civicrm_alterSettingsFolders(&$metaDataFolders 
   $configured = TRUE;
 
   $settingsDir = __DIR__ . DIRECTORY_SEPARATOR . 'settings';
-  if(is_dir($settingsDir) && !in_array($settingsDir, $metaDataFolders)) {
+  if (is_dir($settingsDir) && !in_array($settingsDir, $metaDataFolders)) {
     $metaDataFolders[] = $settingsDir;
   }
 }
