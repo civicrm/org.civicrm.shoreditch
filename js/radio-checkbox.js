@@ -9,7 +9,7 @@ CRM.$(function() {
      * The customized radio buttons / checkboxes depend on the existence of the
      * "for" attribute in the respective labels.
      * This is a workaround to add any missing "for" attributes to the markup.
-     * @see: org.civicrm.bootstrapcivicrm/scss/civicrm/common/_radio-checkbox.scss
+     * @see: org.civicrm.london/scss/civicrm/common/_radio-checkbox.scss
      */
     CRM.$('.crm-container input[type=checkbox], .crm-container input[type=radio]').each(function() {
       var $this = CRM.$(this);

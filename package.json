@@ -1,5 +1,5 @@
 {
-  "name": "org.civicrm.bootstrapcivicrm",
+  "name": "org.civicrm.london",
   "version": "1.0.0",
   "description": "A CiviCRM theme based on Bootstrap",
   "main": "index.js",

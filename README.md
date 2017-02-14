@@ -1,4 +1,4 @@
-# org.civicrm.bootstrapcivicrm (developmental)
+# org.civicrm.london (developmental)
 
 The Bootstrap extension provides a copy of [Bootstrap CSS](http://getbootstrap.com/)
 for use with CiviCRM.
@@ -35,7 +35,7 @@ look-and-feel matches the Bootstrap look-and-feel.  It is implemented with the s
 and mixins. To use it, update the setting `customCSSURL`, e.g.
 
 ```
-cv api setting.create customCSSURL="<fixme>/org.civicrm.bootstrapcivicrm/css/custom-civicrm.css"
+cv api setting.create customCSSURL="<fixme>/org.civicrm.london/css/custom-civicrm.css"
 ```
 
 ## Build

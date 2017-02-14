@@ -1,4 +1,4 @@
-Package: org.civicrm.bootstrapcivicrm
+Package: org.civicrm.london
 Copyright (C) 2015, Alessandro Verdura <alessandro@compucorp.co.uk>
 Licensed under the GNU Affero Public License 3.0 (below).
 
