@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<extension key="org.civicrm.london" type="module">
-  <file>london</file>
+<extension key="org.civicrm.shoreditch" type="module">
+  <file>shoreditch</file>
   <name>CiviCRM Bootstrap theme</name>
   <description>A CiviCRM theme based on Bootstrap</description>
   <license>AGPL-3.0</license>
@@ -16,6 +16,6 @@
   </compatibility>
   <comments></comments>
   <civix>
-    <namespace>CRM/London</namespace>
+    <namespace>CRM/Shoreditch</namespace>
   </civix>
 </extension>
