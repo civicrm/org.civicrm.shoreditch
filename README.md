@@ -44,7 +44,7 @@ cv url -x shoreditch/css/custom-civicrm.css
 And then put this URL in the setting `customCSSURL`, e.g.
 
 ```
-cv api setting.create customCSSURL=$(cv url -x shoreditch/css/custom-civicrm.css --out=shell)
+cv api setting.create customCSSURL=$(cv url -x shoreditch/css/custom-civicrm.css --out=list)
 ```
 
 ## Build
