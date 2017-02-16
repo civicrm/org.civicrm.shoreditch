@@ -127,6 +127,7 @@ function shoreditch_civicrm_coreResourceList(&$items, $region) {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/collapse.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/modal.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/tab.js', 1000, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/button.js', 1000, 'html-header');
   }
 }
 
