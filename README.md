@@ -59,7 +59,7 @@ npm install
 ```
 
 Once you have the tools, you can run `gulp`. This will monitor the SCSS
-files automatically recompile whenver they change.
+files and automatically recompile whenever they change.
 
 ```
 gulp
