@@ -1,114 +1,111 @@
 .crmb-wizard {
-  .crmb-wizard-title,
-  .crmb-wizard-body {
+  &-body,
+  &-title {
     margin-bottom: 30px;
   }
 
-  .crmb-wizard-title .panel-body {
-    padding: 0;
-  }
-
-  .crmb-wizard-title .nav-pills {
-    padding: 0;
-
-    a,
-    a:active,
-    a:hover {
-      padding: 15px 20px;
-      color: $brand-primary;
+  &-title {
+    .crmb-wizard-number {
+      border: 2px solid;
+      border-radius: 50px;
+      display: inline-block;
+      height: 32px;
+      line-height: 28px;
+      margin-right: 5px;
+      text-align: center;
+      width: 32px;
     }
 
-    li.active a {
-      background: $crm-light-gray;
-      position: relative;
-      color: $brand-primary;
+    .nav-pills {
+      padding: 0;
 
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: -8px;
-        width: 0;
-        height: 100%;
-        border-color: transparent;
-        border-left-color: $crm-light-gray;
-        border-style: solid;
-        border-width: 30px 0px 30px 8px;
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        border-color: transparent;
-        border-left-color: $crm-white;
-        border-style: solid;
-        border-width: 30px 0px 30px 8px;
-      }
-    }
-
-    li.active:first-child a:before {
-      display: none;
-    }
-
-    li:not(.active) a {
-      color: $gray-darker;
-
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        right: -9px;
-        width: 1px;
-        height: 31px;
-        transform: skewX(-15deg);
-        background: $crm-light-gray;
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -9px;
-        width: 1px;
-        height: 31px;
-        transform: skewX(15deg);
-        background: $crm-light-gray;
-      }
-
-      &:hover {
-        background: none;
+      a,
+      a:active,
+      a:hover {
         color: $brand-primary;
+        padding: 15px 20px;
       }
+
+      li.active a {
+        background: $crm-light-gray;
+        color: $brand-primary;
+        position: relative;
+
+        &:after,
+        &:before {
+          border-color: transparent;
+          border-style: solid;
+          border-width: 30px 0 30px 8px;
+          bottom: 0;
+          content: '';
+          height: 100%;
+          position: absolute;
+          top: 0;
+          width: 0;
+        }
+
+        &:after {
+          border-left-color: $crm-light-gray;
+          right: -8px;
+        }
+
+        &:before {
+          border-left-color: $crm-white;
+          left: 0;
+        }
+      }
+
+      li.active:first-child a:before {
+        display: none;
+      }
+
+      li:not(.active) a {
+        color: $gray-darker;
+
+        &:after,
+        &:before {
+          background: $crm-light-gray;
+          content: '';
+          height: 31px;
+          position: absolute;
+          right: -9px;
+          width: 1px;
+        }
+
+        &:after {
+          @include prefix(transform, skewX(-15deg), webkit ms moz);
+          bottom: 0;
+        }
+
+        &:before {
+          @include prefix(transform, skewX(15deg), webkit ms moz);
+          top: 0;
+        }
+
+        &:hover {
+          background: none;
+          color: $brand-primary;
+        }
+      }
+    }
+
+    .panel-body {
+      padding: 0;
     }
   }
 
-  .crmb-wizard-title .crmb-wizard-number {
-    line-height: 28px;
-    width: 32px;
-    height: 32px;
-    margin-right: 5px;
-    border: 2px solid;
-    border-radius: 50px;
-    text-align: center;
-    display: inline-block;
-  }
+  &-body {
+    .form-group {
+      max-width: 550px;
+    }
 
-  .crmb-wizard-body .form-group {
-    max-width: 550px;
-  }
+    .form-control,
+    .form-group .select2-container {
+      max-width: 370px;
+    }
 
-  .crmb-wizard-body .form-control,
-  .crmb-wizard-body .form-group .select2-container {
-    max-width: 350px;
-  }
-
-  .crmb-wizard-body .select2-container  {
-    height: auto;
+    .select2-container {
+      height: auto;
+    }
   }
 }
