@@ -1,5 +1,5 @@
 .panel {
-  @include box-shadow(none);
+  @include box-shadow($crm-panels-box-shadow);
 
   border: none;
   margin-bottom: $grid-gutter-width;

@@ -12,25 +12,167 @@
     top: 2px;
 }
 
-.form-control.select2-container {
+.form-control.select2-container,
+.form-group .select2-container {
     padding: 0;
     height: auto;
+    background: $crm-white;
+    border: 1px solid $crm-darker-grayblue;
+    box-shadow: $crm-form-control-shadow;
+    height: 30px;
 }
 
-.form-control.select2-container.select2-dropdown-open {
+.form-control.select2-container.select2-dropdown-open,
+.form-group .select2-container.select2-dropdown-open {
     border-color: #5897FB;
     border-radius: 3px 3px 0 0;
 }
 
-.form-control .select2-container.select2-dropdown-open .select2-choices {
+.form-control .select2-container.select2-dropdown-open .select2-choices,
+.form-group .select2-container.select2-dropdown-open .select2-choices {
     border-radius: 3px 3px 0 0;
 }
 
-.form-control.select2-container .select2-choices {
+.form-control.select2-container .select2-choices,
+ul.select2-choices {
     border: 0 !important;
     border-radius: 3px;
     padding-left: 4px;
     margin-bottom: 0;
+    background: none;
+
+    .select2-search-choice {
+      background: $crm-white;
+      border-color: $brand-primary;
+      padding: 5px 20px 5px 5px;
+    }
+
+    .select2-search-choice .select2-search-choice-close {
+      right: 2px;
+      left: auto;
+      color: $crm-white;
+      background: $brand-primary;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 10px;
+      text-align: center;
+      box-sizing: border-box;
+      border-radius: 25px;
+      font-size: 1em;
+
+      &:after {
+        @include fa-icon($content: '\f00d', $color: $crm-white);
+      }
+    }
+}
+
+.form-control.select2-container .select2-choice,
+.form-group .select2-container .select2-choice {
+    background: none;
+    line-height: 30px;
+    border: none;
+
+    .select2-arrow {
+      background: none;
+    }
+}
+
+.form-control.select2-container .select2-input,
+.form-group .select2-container .select2-input {
+    height: 28px;
+    line-height: 28px;
+}
+
+.select2-drop,
+.select2-drop.select2-drop-above {
+  background: $crm-white;
+  border-radius: 0;
+  border-color: $brand-primary;
+  box-shadow: none;
+  margin-left: 0;
+  margin-top: -4px;
+
+  .select2-input {
+    border-color: $brand-primary;
+    background: none;
+  }
+
+  .select2-search::before {
+    @include fa-icon($content: '\f002');
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  .select2-results {
+    margin: 4px 0 0 0;
+    color: $gray-darker;
+
+    li {
+      padding: 5px;
+      background: $crm-white;
+    }
+
+    .select2-result-label {
+      padding: 5px 10px;
+      color: $gray-dark;
+
+      .crm-icon {
+        text-indent: 0;
+        text-align: center;
+
+        &:before {
+          font-size: $font-size-base;
+          position: relative;
+          bottom: 2px;
+        }
+
+        &.Individual-icon {
+          background: none;
+          &:before {
+            @include fa-icon($content: "\f007");
+          }
+        }
+
+        &.Organization-icon {
+          background: none;
+          &:before {
+            @include fa-icon($content: "\f0f7");
+          }
+        }
+
+        &.Household-icon {
+          background: none;
+          &:before {
+            @include fa-icon($content: "\f015");
+          }
+        }
+      }
+    }
+
+    .select2-highlighted {
+      background: $crm-background;
+      color: $gray-dark;
+
+      .crm-select2-row-description {
+        p {
+          color: $gray-dark;
+        }
+      }
+    }
+
+    .select2-no-results {
+      padding: 4px;
+      margin: 0;
+      background: none;
+    }
+
+    select {
+      height: 30px;
+      background: $crm-white;
+      border: 1px solid $crm-darker-grayblue;
+    }
+  }
 }
 
 .control-group.warning .select2-container .select2-choice,
