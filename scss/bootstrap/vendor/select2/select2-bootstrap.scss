@@ -1,94 +1,250 @@
-.form-control .select2-choice {
+.form-control.select2-container,
+.form-group .select2-container {
+  background: $crm-white;
+  border: 1px solid $crm-darker-grayblue;
+  box-shadow: $crm-form-control-shadow;
+  height: 30px;
+  padding: 0;
+
+  .select2-choice {
     border: 0;
     border-radius: 2px;
     text-decoration: none !important;
-}
+  }
 
-.form-control .select2-choice .select2-arrow {
-    border-radius: 0 2px 2px 0;
+  .select2-choice .select2-arrow {
     background: transparent;
     border-left: 0 none;
+    border-radius: 0 2px 2px 0;
     right: 4px;
     top: 2px;
-}
+  }
 
-.form-control.select2-container {
-    padding: 0;
-    height: auto;
-}
-
-.form-control.select2-container.select2-dropdown-open {
-    border-color: #5897FB;
+  &.select2-dropdown-open {
+    border-color: $crm-select2-dropdown-border;
     border-radius: 3px 3px 0 0;
+
+    .select2-choices {
+      border-radius: 3px 3px 0 0;
+    }
+  }
+
+  .select2-choice {
+    background: none;
+    border: none;
+    line-height: 30px;
+
+    .select2-arrow {
+      background: none;
+      border: none;
+    }
+  }
+
+  &.crm-ajax-select .select2-choice {
+    .select2-arrow {
+      border: none;
+      width: 30px;
+    }
+
+    .select2-arrow b {
+      background-position: -28px -22px;
+    }
+  }
+
+  .select2-chosen {
+    border-right: 1px solid $crm-darker-grayblue;
+  }
+
+  .select2-input {
+    height: 28px;
+    line-height: 28px;
+  }
 }
 
-.form-control .select2-container.select2-dropdown-open .select2-choices {
-    border-radius: 3px 3px 0 0;
+.form-control.select2-container .select2-choices,
+ul.select2-choices {
+  background: none;
+  border: 0 !important;
+  border-radius: 3px;
+  margin-bottom: 0;
+  padding-left: 4px;
+
+  .select2-search-choice {
+    background: $crm-white;
+    border-color: $brand-primary;
+    padding: 5px 20px 5px 5px;
+  }
+
+  .select2-search-choice .select2-search-choice-close {
+    @include prefix(transform, translateY(-50%), webkit ms moz);
+    background: $brand-primary;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: $crm-white;
+    font-size: 1em;
+    left: auto;
+    line-height: 10px;
+    right: 2px;
+    text-align: center;
+    top: 50%;
+
+    &:after {
+      @include fa-icon($content: '\f00d', $color: $crm-white);
+    }
+  }
 }
 
-.form-control.select2-container .select2-choices {
-    border: 0 !important;
-    border-radius: 3px;
-    padding-left: 4px;
-    margin-bottom: 0;
+.select2-drop,
+.select2-drop.select2-drop-above {
+  background: $crm-white;
+  border-color: $brand-primary;
+  border-radius: 0;
+  box-shadow: none;
+  margin-left: 0;
+  margin-top: -4px;
+
+  .select2-input {
+    background: none;
+    border-color: $brand-primary;
+  }
+
+  .select2-search::before {
+    @include fa-icon($content: '\f002');
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  .select2-results {
+    color: $gray-darker;
+    margin: 4px 0 0;
+
+    li {
+      background: $crm-white;
+      padding: 5px;
+    }
+
+    .select2-result-label {
+      color: $gray-dark;
+      padding: 5px 10px;
+    }
+
+    .select2-result-label .crm-icon {
+      text-indent: 0;
+      text-align: center;
+    }
+
+    .select2-result-label .crm-icon:before {
+      bottom: 2px;
+      font-size: $font-size-base;
+      position: relative;
+    }
+
+    .select2-result-label .crm-icon.Individual-icon {
+      background: none;
+
+      &:before {
+        @include fa-icon($content: "\f007");
+      }
+    }
+
+    .select2-result-label .crm-icon.Organization-icon {
+      background: none;
+
+      &:before {
+        @include fa-icon($content: "\f0f7");
+      }
+    }
+
+    .select2-result-label .crm-icon.Household-icon {
+      background: none;
+
+      &:before {
+        @include fa-icon($content: "\f015");
+      }
+    }
+
+    .select2-highlighted {
+      background: $crm-background;
+      color: $gray-dark;
+
+      .crm-select2-row-description {
+        p {
+          color: $gray-dark;
+        }
+      }
+    }
+
+    .select2-no-results {
+      background: none;
+      margin: 0;
+      padding: 4px;
+    }
+
+    select {
+      background: $crm-white;
+      border: 1px solid $crm-darker-grayblue;
+      height: 30px;
+    }
+  }
 }
 
 .control-group.warning .select2-container .select2-choice,
 .control-group.warning .select2-container .select2-choices,
 .control-group.warning .select2-container-active .select2-choice,
 .control-group.warning .select2-container-active .select2-choices,
+.control-group.warning .select2-container-multi.select2-container-active .select2-choices,
 .control-group.warning .select2-dropdown-open.select2-drop-above .select2-choice,
-.control-group.warning .select2-dropdown-open.select2-drop-above .select2-choices,
-.control-group.warning .select2-container-multi.select2-container-active .select2-choices {
-    border: 1px solid #C09853 !important;
+.control-group.warning .select2-dropdown-open.select2-drop-above .select2-choices {
+  border: 1px solid #C09853 !important;
 }
 
 .control-group.warning .select2-container .select2-choice div {
-    border-left: 1px solid #C09853 !important;
-    background: #FCF8E3 !important;
+  border-left: 1px solid #C09853 !important;
+  background: #FCF8E3 !important;
 }
 
 .control-group.error .select2-container .select2-choice,
 .control-group.error .select2-container .select2-choices,
 .control-group.error .select2-container-active .select2-choice,
 .control-group.error .select2-container-active .select2-choices,
+.control-group.error .select2-container-multi.select2-container-active .select2-choices,
 .control-group.error .select2-dropdown-open.select2-drop-above .select2-choice,
-.control-group.error .select2-dropdown-open.select2-drop-above .select2-choices,
-.control-group.error .select2-container-multi.select2-container-active .select2-choices {
-    border: 1px solid #B94A48 !important;
+.control-group.error .select2-dropdown-open.select2-drop-above .select2-choices {
+  border: 1px solid #B94A48 !important;
 }
 
 .control-group.error .select2-container .select2-choice div {
-    border-left: 1px solid #B94A48 !important;
-    background: #F2DEDE !important;
+  border-left: 1px solid #B94A48 !important;
+  background: #F2DEDE !important;
 }
 
 .control-group.info .select2-container .select2-choice,
 .control-group.info .select2-container .select2-choices,
 .control-group.info .select2-container-active .select2-choice,
 .control-group.info .select2-container-active .select2-choices,
+.control-group.info .select2-container-multi.select2-container-active .select2-choices,
 .control-group.info .select2-dropdown-open.select2-drop-above .select2-choice,
-.control-group.info .select2-dropdown-open.select2-drop-above .select2-choices,
-.control-group.info .select2-container-multi.select2-container-active .select2-choices {
-    border: 1px solid #3A87AD !important;
+.control-group.info .select2-dropdown-open.select2-drop-above .select2-choices {
+  border: 1px solid #3A87AD !important;
 }
 
 .control-group.info .select2-container .select2-choice div {
-    border-left: 1px solid #3A87AD !important;
-    background: #D9EDF7 !important;
+  border-left: 1px solid #3A87AD !important;
+  background: #D9EDF7 !important;
 }
 
 .control-group.success .select2-container .select2-choice,
 .control-group.success .select2-container .select2-choices,
 .control-group.success .select2-container-active .select2-choice,
 .control-group.success .select2-container-active .select2-choices,
+.control-group.success .select2-container-multi.select2-container-active .select2-choices,
 .control-group.success .select2-dropdown-open.select2-drop-above .select2-choice,
-.control-group.success .select2-dropdown-open.select2-drop-above .select2-choices,
-.control-group.success .select2-container-multi.select2-container-active .select2-choices {
-    border: 1px solid #468847 !important;
+.control-group.success .select2-dropdown-open.select2-drop-above .select2-choices {
+  border: 1px solid #468847 !important;
 }
 
 .control-group.success .select2-container .select2-choice div {
-    border-left: 1px solid #468847 !important;
-    background: #DFF0D8 !important;
+  border-left: 1px solid #468847 !important;
+  background: #DFF0D8 !important;
 }
