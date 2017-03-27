@@ -47,7 +47,7 @@
     $padding-y: nth($crm-panel-subheading-padding, 1);
     $padding-x: nth($crm-panel-subheading-padding, 2);
 
-    margin: -#{$padding-y - 5} -#{$padding-x} -#{$padding-y};
+    margin: -#{$padding-y - 5} #{-$padding-x} #{-$padding-y};
 
     > li:first-child {
       margin-left: 20px;
