@@ -215,7 +215,7 @@
 
   .select2-chosen {
     @extend %ui-select-font-size;
-    color: darken($dropdown-border, 10%) !important;
+    color: $gray-dark !important;
     padding-left: 5px !important;
   }
 
