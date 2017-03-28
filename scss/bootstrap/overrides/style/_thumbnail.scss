@@ -1,10 +1,23 @@
 .crm-mosaico-template-item {
   background: $crm-background-light;
   border: 2px solid $crm-white !important;
-  @include prefix(border-radius, 4px, moz webkit ms);
+  border-radius: 4px;
   margin: auto;
-  opacity: 1.0;
+  opacity: 1;
   width: 165px;
+
+  &:hover {
+    border: 2px solid $brand-primary !important;
+    box-shadow: $crm-template-shadow;
+
+    .crm-mosaico-template-actions {
+      opacity: 1;
+    }
+
+    img {
+      opacity: 0.66;
+    }
+  }
 
   .crm-mosaico-template-image-wrapper {
     background: $crm-dark-gray;
@@ -57,19 +70,6 @@
 
     small {
       font-weight: normal;
-    }
-  }
-
-  &:hover {
-    border: 2px solid $brand-primary !important;
-    box-shadow: $crm-template-shadow;
-
-    .crm-mosaico-template-actions {
-      opacity: 1;
-    }
-
-    img {
-      opacity: 0.66;
     }
   }
 }
