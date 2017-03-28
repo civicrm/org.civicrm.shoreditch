@@ -95,8 +95,14 @@
   }
 
   &-body {
-    .form-group {
+    .form-group,
+    .form-group-lg {
       max-width: 550px;
+    }
+
+    .form-group-lg .form-control {
+      min-width: 100%;
+      margin-bottom: 15px;
     }
 
     .form-control,
