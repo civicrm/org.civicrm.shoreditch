@@ -1,0 +1,75 @@
+.crm-mosaico-template-item {
+  background: $crm-background-light;
+  border: 2px solid $crm-white !important;
+  @include prefix(border-radius, 4px, moz webkit ms);
+  margin: auto;
+  opacity: 1.0;
+  width: 165px;
+
+  .crm-mosaico-template-image-wrapper {
+    background: $crm-dark-gray;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      height: auto !important;
+    }
+
+    .crm-mosaico-template-actions-wrapper {
+      bottom: 0;
+      display: table;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      width: 100%;
+    }
+
+    .crm-mosaico-template-actions {
+      display: table-cell;
+      @include prefix(transition, opacity 400ms, moz webkit ms);
+      opacity: 0;
+      vertical-align: middle;
+    }
+
+    .crm-mosaico-template-actions .btn {
+      float: none !important;
+      margin-bottom: 7px;
+      width: 100px;
+    }
+  }
+
+  .crm-mosaico-template-title-wrapper a {
+    border: 1px solid $crm-background;
+    color: $gray-darker;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    height: 60px;
+    overflow: hidden;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    small {
+      font-weight: normal;
+    }
+  }
+
+  &:hover {
+    border: 2px solid $brand-primary !important;
+    box-shadow: $crm-template-shadow;
+
+    .crm-mosaico-template-actions {
+      opacity: 1;
+    }
+
+    img {
+      opacity: 0.66;
+    }
+  }
+}

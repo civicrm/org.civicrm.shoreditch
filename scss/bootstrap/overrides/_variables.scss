@@ -1,6 +1,7 @@
 $box-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
 $crm-panels-box-shadow: 0 3px 18px 0 rgba(49,40,40,0.25);
 $crm-form-control-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+$crm-template-shadow: inset 0 1px 10px 0 rgba(0,0,0,0.25);
 
 //== CiviCRM Page
 //
@@ -39,6 +40,7 @@ $os-font-path:   "../fonts/open-sans" !default;
 //## Gray and brand colors for use across Bootstrap.
 
 $crm-background:            #E8EEF0 !default;
+$crm-background-light:      #F1F5F6;
 $crm-copy:                  #727E8A !default;
 
 $gray-darker:               #4D5663 !default;
@@ -60,6 +62,7 @@ $crm-dark-grayblue:         #D3DEE2 !default;
 $crm-darker-grayblue:       #C2CFD8 !default;
 $crm-white:                 #FFF !default;
 $crm-light-gray:            #EFF3F5;
+$crm-dark-gray:             #333;
 
 $crm-dialog-container-border: #d3dee2;
 
