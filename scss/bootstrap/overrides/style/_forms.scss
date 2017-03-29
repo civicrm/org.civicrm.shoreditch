@@ -75,6 +75,36 @@ label {
   }
 }
 
+// Style new group of type radio
+.form-inline {
+
+  &.form-inline-tabs .form-group {
+    box-shadow: $crm-form-control-shadow;
+    border: 1px solid $crm-darker-grayblue;
+    line-height: 1em;
+    padding: 8px 15px;
+    margin-right: -5px;
+    min-width: 180px;
+
+
+    &.active {
+      background-color: $crm-active-radio-group;
+    }
+
+    &:first-child {
+      border-radius: 2px 0 0 2px;
+    }
+
+    &:last-child {
+      border-radius: 0 2px 2px 0;
+    }
+
+    input {
+      margin-right: 10px;
+    }
+  }
+}
+
 // Removing color from labels of fields with status
 .has-success,
 .has-warning,
