@@ -25,6 +25,30 @@ label {
   fieldset[disabled] & {
     color: $crm-darker-grayblue;
   }
+
+  &[type="text"] {
+    &::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: $crm-dark-grayblue;
+    }
+
+    &:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: $crm-dark-grayblue;
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: $crm-dark-grayblue;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $crm-dark-grayblue;
+    }
+  }
 }
 
 // Wrapper for a custom error message
