@@ -3,11 +3,11 @@
   border-radius: $border-radius-small;
   border: none;
   margin-bottom: $grid-gutter-width;
-  overflow: hidden;
 }
 
 .panel-body {
   background: $crm-white;
+  border-radius: $border-radius-small;
 
   // Avoid extra spacing due to margin bottom of last element
   > *:last-child {
