@@ -1,8 +1,9 @@
 .panel {
   @include box-shadow($crm-panels-box-shadow);
-
+  border-radius: $border-radius-small;
   border: none;
   margin-bottom: $grid-gutter-width;
+  overflow: hidden;
 }
 
 .panel-body {
