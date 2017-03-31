@@ -114,4 +114,8 @@
       height: auto;
     }
   }
+
+  .panel-body {
+    border-radius: $border-radius-small;
+  }
 }

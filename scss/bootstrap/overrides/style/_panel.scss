@@ -1,13 +1,11 @@
 .panel {
   @include box-shadow($crm-panels-box-shadow);
-  border-radius: $border-radius-small;
   border: none;
   margin-bottom: $grid-gutter-width;
 }
 
 .panel-body {
   background: $crm-white;
-  border-radius: $border-radius-small;
 
   // Avoid extra spacing due to margin bottom of last element
   > *:last-child {
