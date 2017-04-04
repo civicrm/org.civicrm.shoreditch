@@ -184,11 +184,12 @@ $control-height: 30px;
         }
 
         .select2-choices {
-          border-color: $gray-dark;
-          width: 100%;
+          border-color: $input-border;
+          box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
           box-sizing: border-box;
           font-family: inherit;
           line-height: inherit;
+          width: 100%;
 
           &::before {
             line-height: 22px;
@@ -286,6 +287,7 @@ $control-height: 30px;
           .select2-choice,
           .select2-choices {
             border-color: $brand-primary;
+            box-shadow: none;
           }
 
           span {
@@ -302,6 +304,7 @@ $control-height: 30px;
 
       .select2-arrow {
         background: none;
+        border-color: $crm-darker-grayblue;
         padding: 0 4px;
 
         > b {
@@ -346,6 +349,7 @@ $control-height: 30px;
 
       .select2-input {
         border: 0 !important;
+        box-shadow: none !important;
       }
     }
 
@@ -437,15 +441,16 @@ $control-height: 30px;
     }
 
     .crm-form-date-wrapper {
-      position: relative;
       display: inline-block;
       margin: $control-spacing / 2 0 $control-spacing / 2 0 !important;
+      position: relative;
 
       & ~ .crm-form-date-wrapper {
         float: right;
       }
 
       .crm-form-date {
+        border-radius: $border-radius-base 0 0 $border-radius-base;
         padding-right: 0;
       }
     }
@@ -599,12 +604,13 @@ $control-height: 30px;
 }
 
 .addon.fa-calendar {
-  border: 1px solid $gray-dark;
+  background: $gray-lighter;
+  border: 1px solid $input-border;
   border-left: 0;
+  color: $gray-darker;
+  cursor: pointer;
   padding: 8px 10px 7px;
   vertical-align: bottom;
-  color: $brand-primary;
-  cursor: pointer;
 }
 
 input.dateplugin,
