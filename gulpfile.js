@@ -10,8 +10,8 @@ var civicrmScssRoot = require('civicrm-scssroot')();
 
 var bootstrapNamespace = '#bootstrap-theme';
 
-gulp.task('sass-bootstrap', ['sass-sync'], function () {
-  gulp.src('scss/bootstrap/bootstrap.scss')
+gulp.task('sass:bootstrap', ['sass:sync'], function () {
+  return gulp.src('scss/bootstrap/bootstrap.scss')
     .pipe(bulk())
     .pipe(sass({
       outputStyle: 'compressed',
@@ -27,8 +27,8 @@ gulp.task('sass-bootstrap', ['sass-sync'], function () {
     .pipe(gulp.dest('css/'));
 });
 
-gulp.task('sass-civicrm', ['sass-sync'], function () {
-  gulp.src('scss/civicrm/custom-civicrm.scss')
+gulp.task('sass:civicrm', ['sass:sync'], function () {
+  return gulp.src('scss/civicrm/custom-civicrm.scss')
     .pipe(bulk())
     .pipe(sass({
       outputStyle: 'compressed',
@@ -43,11 +43,11 @@ gulp.task('sass-civicrm', ['sass-sync'], function () {
     .pipe(gulp.dest('css/'));
 });
 
-gulp.task('sass-sync', function(){
+gulp.task('sass:sync', function(){
   civicrmScssRoot.updateSync();
 });
 
-gulp.task('sass', ['sass-bootstrap', 'sass-civicrm']);
+gulp.task('sass', ['sass:bootstrap', 'sass:civicrm']);
 
 gulp.task('watch', function () {
   gulp.watch(civicrmScssRoot.getWatchList(), ['sass']);
