@@ -33,6 +33,8 @@ $button-border-radius: 2px;
 }
 
 .crm-container {
+  margin-left: 0 !important;
+
   %btn,
   .crm-profile-selector-preview {
     @extend %btn-civi;

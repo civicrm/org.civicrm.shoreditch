@@ -133,7 +133,7 @@ label {
 }
 
 // Required mark (*)
-.required {
+.required-mark {
 
   &:after {
     content:"*";
@@ -142,7 +142,7 @@ label {
   }
 }
 
-.required-input {
+.required-mark-input {
   position: relative;
 
   &:after {
