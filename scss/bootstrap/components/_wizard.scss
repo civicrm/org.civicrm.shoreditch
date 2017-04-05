@@ -27,7 +27,7 @@
       }
 
       li.active a {
-        background: $crm-light-gray;
+        background: $gray-lighter;
         color: $brand-primary;
         position: relative;
 
@@ -45,7 +45,7 @@
         }
 
         &:after {
-          border-left-color: $crm-light-gray;
+          border-left-color: $gray-lighter;
           right: -8px;
         }
 
@@ -64,7 +64,7 @@
 
         &:after,
         &:before {
-          background: $crm-light-gray;
+          background: $gray-lighter;
           content: '';
           height: 31px;
           position: absolute;

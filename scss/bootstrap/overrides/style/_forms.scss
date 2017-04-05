@@ -12,11 +12,10 @@ label {
 }
 
 .form-control {
-  @include box-shadow(inset 0 0 3px 0 rgba(0, 0, 0, 0.2));
+  @include box-shadow($crm-form-control-shadow);
 
   &:focus {
-    @include box-shadow(inset 0 0 3px 0 rgba(0, 0, 0, 0.2));
-
+    @include box-shadow($crm-form-control-shadow);
     border-color: $brand-primary;
   }
 
@@ -103,7 +102,7 @@ label {
 
 
     &.active {
-      background-color: $crm-active-radio-group;
+      background-color: $gray-lighter;
     }
 
     &:first-child {
@@ -178,7 +177,7 @@ label {
 }
 
 // Required mark (*)
-.required {
+.required-mark {
 
   &:after {
     content:"*";
@@ -187,7 +186,7 @@ label {
   }
 }
 
-.required-input {
+.required-mark-input {
   position: relative;
 
   &:after {
