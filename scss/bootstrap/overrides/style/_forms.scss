@@ -89,35 +89,39 @@ label {
   }
 }
 
-// Style new group of type radio
-.form-inline {
+// Define a new class "form-inline-tabs" that can be used to wrap form-groups. This new class can be used in case of this
+// form group is clickable and has specific interactive action E.g (Can be used with form groups that wrapping checkboxes).
+// We also define "active" class that can be assigned to form group and give it the appropriate interactive style.
+.form-inline-tabs {
+  display: flex;
 
-  &.form-inline-tabs .form-group {
-    box-shadow: $crm-form-control-shadow;
+  .form-group {
     border: 1px solid $crm-darker-grayblue;
+    box-shadow: $crm-form-control-shadow;
     line-height: 1em;
-    padding: 8px 15px;
-    margin-right: -5px;
+    margin: 0;
     min-width: 180px;
-
+    padding: 8px 15px;
 
     &.active {
       background-color: $gray-lighter;
     }
 
     &:first-child {
-      border-radius: 2px 0 0 2px;
+      border-radius: $border-radius-small 0 0 $border-radius-small;
     }
 
     &:last-child {
-      border-radius: 0 2px 2px 0;
+      border-radius: 0 $border-radius-small $border-radius-small 0;
     }
 
-    input {
+    input[type='radio'] {
       margin-right: 10px;
     }
   }
 }
+
+
 
 // Removing color from labels of fields with status
 .has-success,
