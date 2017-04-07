@@ -93,13 +93,10 @@ label {
 // form group is clickable and has specific interactive action E.g (Can be used with form groups that wrapping checkboxes).
 // We also define "active" class that can be assigned to form group and give it the appropriate interactive style.
 .form-inline-tabs {
-  display: flex;
-
   .form-group {
     border: 1px solid $crm-darker-grayblue;
     box-shadow: $crm-form-control-shadow;
     line-height: 1em;
-    margin: 0;
     min-width: 180px;
     padding: 8px 15px;
 
@@ -113,10 +110,6 @@ label {
 
     &:last-child {
       border-radius: 0 $border-radius-small $border-radius-small 0;
-    }
-
-    input[type='radio'] {
-      margin-right: 10px;
     }
   }
 }
@@ -196,5 +189,12 @@ label {
     position: absolute;
     right: -10px;
     top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    margin-right: 10px;
   }
 }
