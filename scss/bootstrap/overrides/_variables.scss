@@ -1,4 +1,5 @@
 $box-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
+$crm-form-control-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
 
 //== CiviCRM Page
 //
@@ -17,7 +18,6 @@ $crm-page-topbar-bg-light:     #656C80;
 $crm-page-topbar-color:        #fff !default;
 $crm-page-topbar-item-padding: 15px !default;
 $crm-accordion-header-color:   #f3f6f7;
-
 
 //
 // Variables override
@@ -144,6 +144,7 @@ $crm-btn-padding-small-vertical:  5px;
 $btn-default-color:               $gray-darker;
 $btn-default-bg:                  $crm-white !default;
 $btn-default-border:              $btn-default-bg !default;
+$crm-btn-border-color:            #979797;
 
 
 //== Forms

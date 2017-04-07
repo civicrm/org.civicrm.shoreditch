@@ -1,6 +1,5 @@
 .panel {
   @include box-shadow(none);
-
   border: none;
   margin-bottom: $grid-gutter-width;
 }

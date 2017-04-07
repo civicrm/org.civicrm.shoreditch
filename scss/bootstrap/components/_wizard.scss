@@ -1,0 +1,121 @@
+.crm_wizard {
+  &__body,
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    .crm_wizard__title__number {
+      border: 2px solid;
+      border-radius: 50px;
+      display: inline-block;
+      height: 32px;
+      line-height: 28px;
+      margin-right: 5px;
+      text-align: center;
+      width: 32px;
+    }
+
+    .nav-pills {
+      padding: 0;
+
+      a,
+      a:active,
+      a:hover {
+        color: $brand-primary;
+        padding: 15px 20px;
+      }
+
+      li.active a {
+        background: $gray-lighter;
+        color: $brand-primary;
+        position: relative;
+
+        &:after,
+        &:before {
+          border-color: transparent;
+          border-style: solid;
+          border-width: 30px 0 30px 8px;
+          bottom: 0;
+          content: '';
+          height: 100%;
+          position: absolute;
+          top: 0;
+          width: 0;
+        }
+
+        &:after {
+          border-left-color: $gray-lighter;
+          right: -8px;
+        }
+
+        &:before {
+          border-left-color: $crm-white;
+          left: 0;
+        }
+      }
+
+      li.active:first-child a:before {
+        display: none;
+      }
+
+      li:not(.active) a {
+        color: $gray-darker;
+
+        &:after,
+        &:before {
+          background: $gray-lighter;
+          content: '';
+          height: 31px;
+          position: absolute;
+          right: -9px;
+          width: 1px;
+        }
+
+        &:after {
+          @include prefix(transform, skewX(-15deg), webkit ms moz);
+          bottom: 0;
+        }
+
+        &:before {
+          @include prefix(transform, skewX(15deg), webkit ms moz);
+          top: 0;
+        }
+
+        &:hover {
+          background: none;
+          color: $brand-primary;
+        }
+      }
+    }
+
+    .panel-body {
+      padding: 0;
+    }
+  }
+
+  &__body {
+    .form-group,
+    .form-group-lg {
+      max-width: 550px;
+    }
+
+    .form-group-lg .form-control {
+      min-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .form-control,
+    .form-group .select2-container {
+      max-width: 370px;
+    }
+
+    .select2-container {
+      height: auto;
+    }
+  }
+
+  .panel-body {
+    border-radius: $border-radius-small;
+  }
+}

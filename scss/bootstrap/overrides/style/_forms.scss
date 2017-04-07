@@ -12,11 +12,10 @@ label {
 }
 
 .form-control {
-  @include box-shadow(inset 0 0 3px 0 rgba(0, 0, 0, 0.2));
+  @include box-shadow($crm-form-control-shadow);
 
   &:focus {
-    @include box-shadow(inset 0 0 3px 0 rgba(0, 0, 0, 0.2));
-
+    @include box-shadow($crm-form-control-shadow);
     border-color: $brand-primary;
   }
 
@@ -24,6 +23,21 @@ label {
   &[readonly],
   fieldset[disabled] & {
     color: $crm-darker-grayblue;
+  }
+
+  &[type="text"] {
+    &::-webkit-input-placeholder {
+      color: $crm-dark-grayblue;
+    }
+
+    &::-moz-placeholder {
+      color: $crm-dark-grayblue;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: $crm-dark-grayblue;
+    }
   }
 }
 
@@ -72,6 +86,43 @@ label {
 
   .form-group {
     margin-bottom: 0;
+  }
+}
+
+// Styling for different .form-inline fields
+.form-inline {
+
+  @media (min-width: $screen-sm-min) {
+
+    .checkbox input[type="checkbox"],
+    .radio input[type="radio"] {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Define a new class "form-inline-tabs" that can be used to wrap form-groups. This new class can be used in case of this
+// form group is clickable and has specific interactive action E.g (Can be used with form groups that wrapping checkboxes).
+// We also define "active" class that can be assigned to form group and give it the appropriate interactive style.
+.form-inline-tabs {
+  .form-group {
+    border: 1px solid $crm-darker-grayblue;
+    box-shadow: $crm-form-control-shadow;
+    line-height: 1em;
+    min-width: 180px;
+    padding: 8px 15px;
+
+    &.active {
+      background-color: $gray-lighter;
+    }
+
+    &:first-child {
+      border-radius: $border-radius-small 0 0 $border-radius-small;
+    }
+
+    &:last-child {
+      border-radius: 0 $border-radius-small $border-radius-small 0;
+    }
   }
 }
 
