@@ -89,6 +89,18 @@ label {
   }
 }
 
+// Styling for different .form-inline fields
+.form-inline {
+
+  @media (min-width: $screen-sm-min) {
+
+    .checkbox input[type="checkbox"],
+    .radio input[type="radio"] {
+      margin-right: 10px;
+    }
+  }
+}
+
 // Define a new class "form-inline-tabs" that can be used to wrap form-groups. This new class can be used in case of this
 // form group is clickable and has specific interactive action E.g (Can be used with form groups that wrapping checkboxes).
 // We also define "active" class that can be assigned to form group and give it the appropriate interactive style.
@@ -189,12 +201,5 @@ label {
     position: absolute;
     right: -10px;
     top: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .form-inline .radio input[type="radio"],
-  .form-inline .checkbox input[type="checkbox"] {
-    margin-right: 10px;
   }
 }
