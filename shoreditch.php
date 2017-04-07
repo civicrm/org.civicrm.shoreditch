@@ -140,4 +140,11 @@ function shoreditch_civicrm_buildForm($formName) {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/enable-select2.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/highlight-table-rows.js');
   }
+  elseif ($formName == 'CRM_Admin_Form_Setting_Url') {
+    $baseUrl = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.shoreditch');
+    $cssUrl = CRM_Utils_File::addTrailingSlash($baseUrl, '/') . 'css/custom-civicrm.css';
+    Civi::resources()
+      ->addScriptFile('org.civicrm.shoreditch', 'js/urlSettingsForm.js')
+      ->addVars('shoreditch', array('cssUrl' => $cssUrl));
+  }
 }
