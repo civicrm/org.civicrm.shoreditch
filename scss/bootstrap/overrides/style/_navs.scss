@@ -55,6 +55,18 @@
   }
 }
 
+.nav-pills {
+  margin-bottom: 15px;
+
+  > li {
+    // Active state
+    &.active > a {
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
 
 //== Horizontal variation of .nav-pills
 .nav-pills-horizontal {
