@@ -56,11 +56,11 @@
 }
 
 .nav-pills {
-  margin-bottom: 15px;
 
   > li {
-    // Active state
-    &.active > a {
+
+    &.active > a,
+    > a {
       &:focus {
         background-color: transparent;
       }
