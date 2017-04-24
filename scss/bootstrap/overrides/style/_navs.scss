@@ -55,6 +55,18 @@
   }
 }
 
+.nav-pills {
+
+  > li {
+
+    &.active > a,
+    > a {
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
 
 //== Horizontal variation of .nav-pills
 .nav-pills-horizontal {
