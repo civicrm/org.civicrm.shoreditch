@@ -1,0 +1,8 @@
+@mixin page-header-variant($bg-color) {
+  background: $bg-color;
+
+  > h1,
+  > h2 {
+    color: $crm-white;
+  }
+}
