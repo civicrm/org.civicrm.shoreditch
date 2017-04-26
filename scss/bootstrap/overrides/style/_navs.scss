@@ -40,22 +40,6 @@
 }
 
 
-// Nav tabs in a panel subheading
-.panel-subheading {
-
-  > .nav-tabs {
-    $padding-y: nth($crm-panel-subheading-padding, 1);
-    $padding-x: nth($crm-panel-subheading-padding, 2);
-
-    margin: -#{$padding-y - 5} #{-$padding-x} #{-$padding-y};
-
-    > li:first-child {
-      margin-left: 20px;
-    }
-  }
-}
-
-
 //== Horizontal variation of .nav-pills
 .nav-pills-horizontal {
   @include box-shadow($box-shadow);
@@ -169,63 +153,6 @@
 }
 
 
-//== Nav tabs stacked vertically (w/ content on the right), in a grid+flexbox layout
-.nav-tabs-stacked {
-  border-bottom: 0;
-
-  > li {
-    float: none;
-
-    > a {
-      margin-right: 0;
-      padding: $crm-nav-stacked-link-padding;
-    }
-
-    > a,
-    > a:hover {
-      border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
-    }
-
-    &.active {
-
-      > a,
-      > a:hover,
-      > a:focus {
-        border-color: $nav-tabs-active-link-hover-border-color transparent $nav-tabs-active-link-hover-border-color transparent;
-        border-bottom-color: $nav-tabs-active-link-hover-border-color;
-      }
-    }
-  }
-}
-
-// The wrapper that enforces the layout
-.nav-tabs-stacked-wrapper {
-  display: flex;
-
-  // Removes the grid gutter to visually connect the tabs to the content
-  .nav-tabs-stacked {
-    margin-right: -$grid-gutter-width;
-  }
-
-  .nav-tabs-stacked-content {
-    display: flex;
-  }
-
-  .tab-content {
-    flex: 1;
-  }
-
-  // The whole component will be inside a .panel-default (no panel variations supported)
-  .panel-default > & {
-    border-top: 1px solid $crm-dark-grayblue;
-
-    .active:first-child > a {
-      border-top-color: transparent;
-    }
-  }
-}
-
-
 //== Nav tabs in the heading of a primary panel
 .panel-primary {
 
@@ -254,6 +181,79 @@
           padding: $crm-nav-tabs-panel-heading-link-padding;
         }
       }
+    }
+  }
+}
+
+
+//== Nav tabs in a panel-default
+.panel-default {
+
+  // Horizontal nav tabs
+  .nav-tabs:not(.nav-tabs-stacked) {
+    $padding-x: nth($crm-panel-subheading-padding, 2);
+
+    background: $gray-lighter;
+    padding: 5px 0 0 $padding-x;
+  }
+
+  // Vertical nav tabs w/ content on the right, in a grid+flexbox layout
+  .nav-tabs-stacked {
+    border-bottom: 0;
+
+    > li {
+      float: none;
+
+      > a {
+        margin-right: 0;
+        padding: $crm-nav-stacked-link-padding;
+      }
+
+      > a,
+      > a:hover {
+        border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
+      }
+
+      &.active {
+
+        > a,
+        > a:hover,
+        > a:focus {
+          border-color: $nav-tabs-active-link-hover-border-color transparent $nav-tabs-active-link-hover-border-color transparent;
+          border-bottom-color: $nav-tabs-active-link-hover-border-color;
+        }
+      }
+    }
+
+    // The wrapper that enforces the layout
+    &-wrapper {
+      border-top: 1px solid $crm-dark-grayblue;
+      display: flex;
+
+      .active:first-child > a {
+        border-top-color: transparent !important;
+      }
+
+      // Removes the grid gutter to visually connect the tabs to the content
+      .nav-tabs-stacked {
+        margin-right: -$grid-gutter-width;
+      }
+
+      .nav-tabs-stacked-content {
+        display: flex;
+      }
+
+      .tab-content {
+        flex: 1;
+      }
+    }
+  }
+
+  // If under a panel heading, add a border
+  .panel-heading {
+
+    + .nav-tabs {
+      border-top: 1px solid $gray-light;
     }
   }
 }
