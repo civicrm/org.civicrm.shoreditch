@@ -449,7 +449,7 @@
         padding-top: 20px;
       }
 
-      label[for="custom_87"] {
+      label[data-file="true"] {
         @extend %label-input-file;
       }
 
