@@ -76,6 +76,7 @@
 
 // Nested panels
 .panel-nest-group {
+  margin-bottom: $line-height-computed; // same as .panel
 
   > .panel {
     margin-bottom: 10px;
