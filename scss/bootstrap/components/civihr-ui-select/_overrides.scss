@@ -64,7 +64,7 @@
   }
 
   .select2-drop {
-    border-radius: $input-border-radius !important;
+    border-radius: 0 0 $input-border-radius $input-border-radius !important;
   }
 
   .select2-search-choice-close {
@@ -205,6 +205,8 @@
 
   .select2-arrow {
     cursor: pointer !important;
+    right: 0 !important;
+    top: 0 !important;
 
     &::before {
       @extend %ui-select-icon;
