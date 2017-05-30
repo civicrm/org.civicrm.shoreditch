@@ -222,11 +222,11 @@
       > a {
         margin-right: 0;
         padding: $crm-nav-stacked-link-padding;
-      }
 
-      > a,
-      > a:hover {
-        border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
+        &,
+        &:hover {
+          border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
+        }
       }
 
       &.active {
