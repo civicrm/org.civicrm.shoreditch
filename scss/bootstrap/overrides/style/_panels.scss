@@ -76,13 +76,14 @@
 
 // Nested panels
 .panel-nest-group {
+  margin-bottom: $line-height-computed; // same as .panel
 
   > .panel {
     margin-bottom: 10px;
   }
 
   .panel-nested {
-    margin-left: 20px;
+    margin: 0 $crm-panel-nested-indent;
   }
 }
 
