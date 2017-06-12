@@ -1,102 +1,102 @@
 .crm_custom-select {
-    background: $crm-customselect-background;
-    display: inline-block;
+  background: $crm-customselect-background;
+  display: inline-block;
+  position: relative;
+
+  > select {
+    background: transparent;
+    padding-right: #{$crm-customselect-padding-right}px;
     position: relative;
+    width: 100%;
+    z-index: 2;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:disabled {
+
+      + .crm_custom-select__arrow {
+        z-index: 2;
+      }
+    }
+
+    &:focus {
+
+      + .crm_custom-select__arrow {
+        border-color: $input-border-focus;
+      }
+    }
+  }
+
+  .ie9 & {
 
     > select {
-        background: transparent;
-        padding-right: #{$crm-customselect-padding-right}px;
-        position: relative;
-        width: 100%;
-        z-index: 2;
-
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        -webkit-border-radius: 0px;
-
-        &::-ms-expand {
-            display: none;
-        }
-
-        &:disabled {
-
-            + .crm_custom-select__arrow {
-                z-index: 2;
-            }
-        }
-
-        &:focus {
-
-            + .crm_custom-select__arrow {
-                border-color: $input-border-focus;
-            }
-        }
+      padding-right: 10px;
     }
 
-    .ie9 & {
-
-        > select {
-            padding-right: 10px;
-        }
-
-        .crm_custom-select__arrow {
-            display: none;
-        }
+    .crm_custom-select__arrow {
+      display: none;
     }
+  }
 }
 
 .crm_custom-select--full {
-    display: block;
-    width: auto;
+  display: block;
+  width: auto;
 }
 
 .crm_custom-select--transparent {
-    background: transparent;
+  background: transparent;
 
-    option {
-        background: $crm-customselect-background;
-    }
+  option {
+    background: $crm-customselect-background;
+  }
 }
 
 .crm_custom-select__arrow {
-    border-left: 1px solid $input-border;
-    bottom: 0;
-    display: inline-block;
-    line-height: #{$crm-customselect-caret-width - 1}px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: #{$crm-customselect-caret-width}px;
-    z-index: 1;
+  border-left: 1px solid $input-border;
+  bottom: 0;
+  display: inline-block;
+  line-height: #{$crm-customselect-caret-width - 1}px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: #{$crm-customselect-caret-width}px;
+  z-index: 1;
 
-    &:before {
-        content: '\f0d7';
-        color: $text-color;
-        font-family: "FontAwesome";
-        font-style: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-    }
+  &:before {
+    content: '\f0d7';
+    color: $text-color;
+    font-family: "FontAwesome";
+    font-style: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 
 .has-error {
 
-    .crm_custom-select__arrow {
-        border-color: $brand-danger !important;
-    }
+  .crm_custom-select__arrow {
+    border-color: $brand-danger !important;
+  }
 }
 
 .has-feedback {
 
-    > .crm_custom-select {
+  > .crm_custom-select {
 
-        > select {
-            padding-right: #{$crm-customselect-feedback-padding-right}px;
-        }
-
-        + .form-control-feedback {
-            right: #{$crm-customselect-caret-width - 5}px !important;
-        }
+    > select {
+      padding-right: #{$crm-customselect-feedback-padding-right}px;
     }
+
+    + .form-control-feedback {
+      right: #{$crm-customselect-caret-width - 5}px !important;
+    }
+  }
 }
