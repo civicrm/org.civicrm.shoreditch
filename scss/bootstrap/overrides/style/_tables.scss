@@ -33,6 +33,28 @@ table,
   }
 }
 
+
+// Table included in a tab (as the only content)
+.table-tab {
+  $padding-y: nth($crm-nav-tab-content-padding, 1);
+  $padding-x: nth($crm-nav-tab-content-padding, 2);
+
+  margin: #{-$padding-y} #{-$padding-x};
+
+  > table {
+
+    > thead {
+
+      > tr {
+
+        > th {
+          background: $nav-tabs-active-link-hover-bg;
+        }
+      }
+    }
+  }
+}
+
 .panel-default {
 
   > .table,
