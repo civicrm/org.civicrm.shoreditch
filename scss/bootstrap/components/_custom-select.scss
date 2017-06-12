@@ -1,3 +1,9 @@
+//** Custom select
+$crm-customselect-background:             #ffffff;
+$crm-customselect-caret-width:            32;
+$crm-customselect-padding-right:          $crm-customselect-caret-width + 12;
+$crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
+
 .crm_custom-select {
   background: $crm-customselect-background;
   display: inline-block;
@@ -5,7 +11,7 @@
 
   > select {
     background: transparent;
-    padding-right: #{$crm-customselect-padding-right}px;
+    padding: 6px #{$crm-customselect-padding-right}px 6px 12px;
     position: relative;
     width: 100%;
     z-index: 2;
