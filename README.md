@@ -8,7 +8,7 @@ The "Shoreditch" extension is a theme for CiviCRM based on a contemporary [flat 
 
 > This extension is under **active development**. Significant elements may change.
 
-## Using `bootstrap.css`
+### Using `bootstrap.css`
 
 This extension provides the CSS for Bootstrap.  Other extensions should output compliant HTML, e.g.
 
@@ -30,7 +30,7 @@ This extension provides the CSS for Bootstrap.  Other extensions should output c
 Note the use of `id="bootstrap-theme"`.  To avoid conflicts with CMS UIs, the CSS rules are
 restricted to `#bootstrap-theme`.
 
-## Using `custom-civicrm.css`
+### Using `custom-civicrm.css`
 
 This extension includes an optional file `custom-civicrm.css` which can replace the default
 `civicrm.css`.  This uses the same CSS classes as traditional CiviCRM screens, but the
@@ -44,20 +44,5 @@ Or from the command line:
 cv api setting.create customCSSURL=$(cv url -x shoreditch/css/custom-civicrm.css --out=list)
 ```
 
-## Build
-
-If you are doing development on this extension, then you may need to build
-new CSS files. This requires the toolchain for SCSS=>CSS compilation.
-Install [NodeJS](https://nodejs.org/) and then run:
-
-```
-npm install -g gulp
-npm install
-```
-
-Once you have the tools, you can run `gulp`. This will monitor the SCSS
-files and automatically recompile whenever they change.
-
-```
-gulp
-```
+## Contributing
+Want to report a bug, suggest enhancements, or contribute to the project? Please read [here](CONTRIBUTING.md)!
