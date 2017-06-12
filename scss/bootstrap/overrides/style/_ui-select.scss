@@ -1,4 +1,4 @@
-.ui-select-bootstrap {
+.ui-select-bootstrap[theme="civihr-ui-select"] {
 
   + .input-group-btn {
 
@@ -54,5 +54,91 @@
         border-color: $input-border;
       }
     }
+  }
+}
+
+.ui-select-container:not([theme="civihr-ui-select"]) {
+  &:not(.ui-select-multiple) {
+    .btn:hover {
+      background: #FFF;
+    }
+
+    .dropdown-menu {
+      border: 1px solid #727E8A;
+      border-top: 1px solid transparent;
+    }
+
+    .ui-select-match-text {
+      padding-right: 3em;
+      color: $gray;
+
+      span {
+        text-overflow: ellipsis;
+      }
+    }
+
+    a.btn {
+      margin-right: 14px !important;
+    }
+
+    .glyphicon-remove {
+      font-size: 10px;
+    }
+
+    .caret {
+      display: none;
+    }
+
+    input {
+      border: 1px solid #727E8A !important;
+      box-shadow: none !important;
+    }
+
+    &:after {
+      content: '\f002';
+      bottom: 0;
+      font-family: "FontAwesome";
+      display: inline-block;
+      height: 33px;
+      line-height: 35px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      width: 32px;
+      z-index: 1;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  .text-muted {
+    color: #727E8A;
+  }
+}
+
+.ui-select-multiple:not([theme="civihr-ui-select"]) {
+  border: 1px solid #949caa;
+  padding: 3px !important;
+
+  .ui-select-match-item {
+    border: 1px solid #ccc;
+    padding: 1px 5px;
+    text-transform: none;
+  }
+
+  &:after {
+    @include dropdown-arrow();
+  }
+}
+
+.ui-select-bootstrap .ui-select-choices-row:not([theme="civihr-ui-select"]) {
+  > span {
+    color: $gray;
+    font-size: $font-size-small;
+    padding: 3px 10px;
+  }
+
+  &.active > span {
+    color: $gray;
+    background: #eeeded;
   }
 }

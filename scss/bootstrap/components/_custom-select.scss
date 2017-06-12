@@ -11,6 +11,7 @@ $crm-customselect-feedback-padding-right: $crm-customselect-padding-right + 10;
 
   > select {
     background: transparent;
+    border: 1px solid #949caa;
     padding: 6px #{$crm-customselect-padding-right}px 6px 12px;
     position: relative;
     width: 100%;

@@ -9,3 +9,23 @@
   right: 0;
   top: 0;
 }
+
+/**
+ * Dropdown arrow
+ */
+@mixin dropdown-arrow() {
+  content: '\f0d7';
+  border-left: 1px solid #C2CFD8;
+  bottom: 0;
+  font-family: "FontAwesome";
+  display: inline-block;
+  height: 32px;
+  line-height: 35px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 32px;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
