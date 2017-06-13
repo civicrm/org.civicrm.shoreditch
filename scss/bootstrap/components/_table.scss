@@ -1,0 +1,10 @@
+.table {
+  &.table-transparent {
+    background-color: transparent;
+    border: 1px solid $crm-dark-grayblue;
+
+    th {
+      background-color: transparent;
+    }
+  }
+}
