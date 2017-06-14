@@ -125,6 +125,10 @@
     text-transform: none;
   }
 
+  .ui-select-search {
+    padding-left: 6px !important;
+  }
+
   &:after {
     @include dropdown-arrow();
   }
