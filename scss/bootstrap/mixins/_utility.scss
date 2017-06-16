@@ -15,12 +15,12 @@
  */
 @mixin dropdown-arrow() {
   content: '\f0d7';
-  border-left: 1px solid #C2CFD8;
+  border-left: 1px solid $input-border;
   bottom: 0;
   font-family: "FontAwesome";
   display: inline-block;
   height: 100%;
-  line-height: 33px;
+  line-height: $input-height-base;
   position: absolute;
   right: 0;
   text-align: center;
