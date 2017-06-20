@@ -1,0 +1,42 @@
+$crm-text-angular-min-height: 120px;
+
+[text-angular] {
+  border: 1px solid $gray-light;
+  padding: 0;
+
+  [text-angular-toolbar] {
+    background-color: #f4f7f8;
+    border: 0;
+    margin-left: 0;
+    padding: 10px;
+
+    .btn {
+      border: none;
+      background: transparent;
+      color: #727E8A;
+
+      &.active {
+        color: $gray-darker;
+      }
+
+      i.fa {
+        font-size: $font-size-small;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .ta-editor {
+    border: none !important;
+  }
+  .form-control {
+    border: none;
+    min-height: $crm-text-angular-min-height;
+    box-shadow: none !important;
+
+    &.ta-scroll-window > .ta-bind {
+      min-height: $crm-text-angular-min-height;
+      outline: 0;
+    }
+  }
+}

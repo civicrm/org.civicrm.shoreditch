@@ -53,6 +53,7 @@ $brand-danger:              #E6807F !default;
 $crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
+$crm-color-neutral:         #949caa !default; // gray shade
 $crm-dark-blue:             #586277 !default;
 $crm-dark-grayblue:         #D3DEE2 !default;
 $crm-darker-grayblue:       #C2CFD8 !default;
