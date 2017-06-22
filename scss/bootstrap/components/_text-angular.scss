@@ -11,8 +11,8 @@ $crm-text-angular-min-height: 120px;
     padding: 10px;
 
     .btn {
-      border: none;
       background: transparent;
+      border: none;
       color: #727E8A;
 
       &.active {
@@ -29,10 +29,11 @@ $crm-text-angular-min-height: 120px;
   .ta-editor {
     border: none !important;
   }
+
   .form-control {
     border: none;
-    min-height: $crm-text-angular-min-height;
     box-shadow: none !important;
+    min-height: $crm-text-angular-min-height;
 
     &.ta-scroll-window > .ta-bind {
       min-height: $crm-text-angular-min-height;
