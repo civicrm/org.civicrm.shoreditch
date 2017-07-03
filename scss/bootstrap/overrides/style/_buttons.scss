@@ -104,10 +104,12 @@
 }
 
 .btn-default-outline {
-  background-color: transparent !important;
-  border-color: $crm-white !important;
-  color: $crm-white !important;
 
+  @include button-outline-variant($crm-white);
+  color: $crm-white !important;
+  border-color: $crm-white !important;
+
+  .open &,
   &:hover,
   &:active {
     background-color: $crm-white !important;
