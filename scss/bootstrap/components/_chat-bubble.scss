@@ -1,0 +1,134 @@
+.chat-bubble {
+  margin: 10px 0;
+  padding: 0;
+  
+  &.chat-user-left {
+    .chat-user {
+      float: left;
+    }
+
+    .chat-cont {
+      margin-left: 50px;
+      margin-right: 0px;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: -9px;
+        top: 10px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 8px solid $gray-lighter; 
+      }
+      &:after {
+        border-right: 8px solid $crm-gray-lightest; 
+        left: -8px;
+      }
+    }  
+  }
+
+  &.chat-user-right {
+    .chat-user {
+      float: right;
+    }
+
+    .chat-cont {
+      margin-left: 0;
+      margin-right: 50px;
+
+      &:before, &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: -9px;
+        top: 10px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 8px solid $gray-lighter; 
+      }
+
+      &:after {
+        border-left: 8px solid $crm-gray-lightest; 
+        right: -8px;
+      }
+    }
+  }
+  
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .chat-user {
+    float: left;
+    width: 35px;
+    height: 35px;
+    background: $gray-dark;
+    color: $crm-white;
+    border-radius: 50%;
+    text-align: center;
+    verticle-align: middle;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .fa {
+      margin: 0 auto;
+    }
+  }
+
+  .chat-cont {
+    border-radius: 3px;
+    padding: 8px 10px;
+    background: $crm-gray-lightest;
+    border: 1px solid $gray-lighter;
+    position: relative;
+  }
+}
+.chat-bubble-primary {
+  .chat-user {
+    background: $brand-primary;
+  }
+  .chat-cont {
+    background-color: lighten($brand-primary,42%);
+    border-color: lighten($brand-primary,38%);
+  }
+
+  &.chat-user-left {
+
+    .chat-cont {
+      background-color: lighten($brand-primary,42%);
+      border-color: lighten($brand-primary,38%);
+    
+      &:before, &:after {
+        border-right-color: lighten($brand-primary,38%); 
+      }
+
+      &:after {
+        border-right-color: lighten($brand-primary,42%); 
+      }
+    }
+  }
+  
+  &.chat-user-right {
+   
+    .chat-cont {
+      background-color: lighten($brand-primary,42%);
+      border-color: lighten($brand-primary,38%);
+    
+      &:before, &:after {
+        border-left-color: lighten($brand-primary,38%); 
+      }
+
+      &:after {
+        border-left-color: lighten($brand-primary,42%); 
+      }
+    }
+  }
+}
