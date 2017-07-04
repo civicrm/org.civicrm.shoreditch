@@ -103,6 +103,20 @@
   }
 }
 
+.btn-default-outline {
+
+  @include button-outline-variant($crm-white);
+  color: $crm-white !important;
+  border-color: $crm-white !important;
+
+  .open &,
+  &:hover,
+  &:active {
+    background-color: $crm-white !important;
+    color: $crm-dark-blue !important;
+  }
+}
+
 .btn-primary-outline {
   @include button-outline-variant($btn-primary-bg);
 }

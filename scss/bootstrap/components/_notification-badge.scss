@@ -1,0 +1,52 @@
+.noti-badge {
+  margin: 0 2px;
+  padding: 5px 8px;
+  background: $brand-primary;
+  color: $crm-white;
+  border-radius: 3px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 14px;
+  font-size: 12px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+  
+  &:hover {
+    text-decoration: none;
+    color: $crm-white;
+    opacity: 0.8;
+  }
+}
+
+.noti-badge-active {
+  background: $crm-white;
+  color: $brand-primary;
+
+  &:hover {
+    background: $crm-white;
+    color: $brand-primary;
+  }
+}
+
+.noti-badge-success {
+  background: $brand-success;
+  color: $crm-white;
+}
+
+.noti-badge-warning {
+  background: $brand-warning;
+  color: $crm-white;
+}
+
+.noti-badge-danger {
+  background: $brand-danger;
+  color: $crm-white;
+}
