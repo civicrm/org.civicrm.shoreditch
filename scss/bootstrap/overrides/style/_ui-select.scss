@@ -61,8 +61,12 @@
   &:not(.ui-select-multiple) {
 
     .btn {
-      height: $input-height-base;
-      border-color: $input-border;
+      &.ui-select-toggle {
+        border-color: $input-border;
+        height: $input-height-base;
+        padding: $crm-ui-select-top-padding 10px;
+        text-transform: none;
+      }
 
       &:hover {
         background: #FFF;
