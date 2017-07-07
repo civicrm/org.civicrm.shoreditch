@@ -1,0 +1,23 @@
+.chr_wysiwyg {
+  border-bottom: none !important;
+}
+
+.chr_wysiwyg__action {
+  background-color: #FFF;
+  border: 1px solid $gray-light;
+  border-top: none;
+  padding: 5px 0;
+  text-align: right;
+
+  hr {
+    margin: 0 10px;
+  }
+
+  .btn-link {
+    margin-top: 5px;
+  }
+
+  .fa {
+    margin-right: 5px;
+  }
+}

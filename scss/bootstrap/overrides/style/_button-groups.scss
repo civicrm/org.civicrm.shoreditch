@@ -1,0 +1,22 @@
+.btn .caret {
+  margin: 0 5px;
+}
+
+.btn-group {
+
+  .btn {
+    box-shadow: none;
+    border-color: $input-border;
+
+    &:not([class*=" btn-"]) {
+      &:hover {
+        border-color: $input-border;
+      }
+    }
+
+    &.active {
+      background-color: $gray;
+      color: #FFF;
+    }
+  }
+}
