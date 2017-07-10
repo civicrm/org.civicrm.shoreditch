@@ -1,3 +1,7 @@
+@import "../mixins/button-outline-variant";
+@import "../mixins/hover";
+@import "../overrides/variables";
+
 .btn-default-outline {
   @include button-outline-variant($crm-white);
   color: $crm-white !important;
