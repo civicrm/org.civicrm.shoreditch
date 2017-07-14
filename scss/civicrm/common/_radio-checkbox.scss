@@ -7,34 +7,80 @@
       margin-right: 10px;
     }
   }
+
   input[type=checkbox] + label[for],
   input[type=radio] + label[for] {
-    cursor: pointer;
+    color: $crm-copy;
+    cursor: pointer;    
+    position: relative;
   }
+
   input[type=radio] {
     &:checked + label[for]::before,
     + label[for]::before {
+      font-weight: normal;
       margin-right: 5px;
-      vertical-align: middle;
+      vertical-align: text-bottom;
     }
+
     + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f10c', $color: $gray);
+      background-color: $crm-white;
+      border: solid 1px $crm-darker-grayblue;
+      border-radius: $border-radius-radio;
+      box-shadow: $crm-checkbox-shadow;
+      content: '';
+      display: inline-block;
+      height: 16px;
+      min-width: 16px;
+      width: 16px;
     }
-    &:checked + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f192', $color: $gray);
+
+    &:checked + label[for]::after {
+      background-color: $crm-copy;
+      border-radius: $border-radius-radio;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      left: 4px;
+      margin-top: -3px;
+      min-width: 8px;
+      position: absolute;
+      top: 50%;
+      width: 8px;
     }
   }
+
   input[type=checkbox] {
     &:checked + label[for]::before,
     + label[for]::before {
+      font-weight: normal;
       margin-right: 5px;
       vertical-align: middle;
     }
+
     + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f096', $color: $gray);
+      background-color: $crm-white;
+      border: solid 1px $crm-darker-grayblue;
+      border-radius: $border-radius-base;
+      box-shadow: $crm-checkbox-shadow;
+      content: '';
+      display: inline-block;
+      height: 16px;
+      min-width: 16px;
+      width: 16px;
     }
-    &:checked + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f046', $color: $gray);
+
+    &:checked + label[for] {
+      position: relative;
+    }
+    
+    &:checked + label[for]::after {
+      @include fa-icon($font-size: 15px, $content: $fa-var-check, $color: $gray-darker);
+      display: inline-block;
+      font-weight: normal;
+      left: 0;
+      line-height: 22px;
+      position: absolute;
     }
   }
 }

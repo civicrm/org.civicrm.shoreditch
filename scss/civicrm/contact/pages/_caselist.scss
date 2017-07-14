@@ -1,0 +1,221 @@
+.page-civicrm-case {
+  #branding h1.page-title {
+    margin-bottom: 20px !important;
+  }
+
+  #bootstrap-theme {
+    // Peoples tab.
+    .civicase-view-with-search.case-is-focused {
+      padding-left: 40px;
+
+      .panel-header {
+        border-radius: $panel-border-radius $panel-border-radius 0 0;
+      }
+
+      .panel-body {
+        border-radius: 0 0 $panel-border-radius $panel-border-radius;
+      }
+    }
+
+    .case-list-panel.case-is-focused {
+      height: calc(100% - 32px);
+      position: absolute;
+      width: 30px;
+    }
+
+    .civicase-table-placeholder {
+      background: $crm-white;
+      border-radius: $border-radius-base;
+      height: 100%;
+      width: 30px;
+
+      div {
+        left: 11px;
+      }
+    }
+
+    .btn {
+      font-weight: $crm-font-weight-h2;
+    }
+
+    .select2-container {
+      height: 30px;
+
+      .select2-choice {
+        background-image: none;
+
+        > .select2-chosen {
+          color: $crm-copy;
+          font-size: $font-size-base;
+        }
+      }
+
+      &.select2-dropdown-open,
+      &.select2-container-active .select2-choice, 
+      &.select2-container-active .select2-choices {
+        box-shadow: none;
+      }
+
+      .select2-arrow {
+        top: 0;
+      }
+    }
+
+    .civicase-view-header {
+      padding: 10px 20px;
+
+      h2 {
+        color: $brand-primary;
+        font-size: $font-size-h1;
+        margin-top: 10px;
+
+        .btn-info {
+          background: transparent;
+          border: none;
+          border-radius: 0;
+          color: $gray-darker;
+          font-size: $font-size-h1;
+          font-weight: $crm-font-weight-h3;
+          padding: 0 5px;
+        }
+      }
+
+      .case-id,
+      .civicase-dates{
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      .civicase-tags {
+        display: inline-block;
+        margin-left: 10px;
+
+        .label {
+          border-radius: $border-radius-tag;
+          padding: 0.02em 0.6em 0.1em;
+        }
+      }
+
+      .case-id strong {
+        color: $gray-darker; 
+      }
+
+      .case-action-menu {
+        margin-top: 10px;
+      }
+
+      .btn-group + .btn-group {
+        margin-left: 10px;
+      }
+    }
+
+    nav.civicase-view-tab-bar {
+      background: $brand-primary;
+      box-shadow: $navbar-shadow;
+      margin-bottom: 0;
+
+      li {
+        font-size: $font-size-medium;
+      }
+    }
+
+    .btn.dropdown-toggle i.fa-plus {
+      margin-right: 5px;
+    }
+
+    .btn-group .btn.btn-primary {
+      border-color: $brand-primary;
+      font-size: $font-size-base;
+    }
+
+    .case-tab-people .nav.nav-tabs > li:first-child {
+      margin-left: 0;
+    }
+
+    .case-people-subtab {
+      margin: 1em 0 0;
+
+      > div:first-child {
+        border-bottom: 1px solid $crm-background;
+        margin-bottom: 10px;
+        padding: 0 25px 10px;
+
+        label[for] {
+          color: $crm-copy;
+          font-weight: normal;
+        }
+
+        + .pull-right {
+          padding-right: 25px;
+        }
+
+        strong {
+          color: $gray-darker;
+        }
+      }
+
+      h3 {
+        font-size: $font-size-h2;
+        margin-bottom: 20px;
+      }
+
+      .case-action-dropdown {
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .civicase-alpha-pager {
+        padding: 0 15px 25px;
+
+        a {
+          font-weight: $crm-font-weight-h3;
+        }
+      }
+
+      table {
+        thead tr {
+          border-bottom: 1px solid $crm-dark-grayblue;
+          border-top: 1px solid $crm-background;
+
+          th {
+            color: $datepicker-gray-darker;
+            padding: 14px 15px;
+            vertical-align: middle;
+          }
+        }
+
+        tbody tr {
+          border-bottom: 1px solid $crm-background;
+
+          td {
+            padding: 13px 15px;
+            vertical-align: middle;
+          }
+
+          td:nth-child(3) {
+            color: $brand-primary;
+          }
+
+          td:last-child .btn-group .btn {
+            border: none;
+            padding: 0 5px;
+
+            &:active,
+            &:hover,
+            &:focus {
+              background: none;
+              box-shadow: none;
+              color: $brand-primary;
+            }
+          }
+        }
+      }
+
+      .pagination {
+        display: table;
+        margin: 15px;
+        text-align: left;
+      }
+    }
+  }
+}
