@@ -53,15 +53,15 @@
 
     h1 {
       @extend %title;
-      float: none;
-      width: 100%;
+      box-sizing: border-box;
       display: block;
+      float: none;
+      line-height: 50px !important;
+      margin: 0 0 20px !important;
+      padding: 0 15px !important;
       position: relative;
       top: 25px;
-      padding: 0 15px !important;
-      line-height: 50px !important;
-      box-sizing: border-box;
-      margin: 0 0 45px !important;
+      width: 100%;
       z-index: 1;
     }
   }
