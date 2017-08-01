@@ -1,52 +1,47 @@
-.noti-badge {
-  background: $brand-primary;
-  border-radius: $border-radius-base;
-  color: $crm-white;
-  display: inline-block;
-  font-size: $font-size-base;
-  line-height: 14px;
-  margin: 0 2px;
-  padding: 5px 8px;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
+.noti-badge-icon {
+  color: $crm-noti-badge-icon;
+  font-size: $font-size-h2;
+  margin-right: 10px;
 
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-  }
-  
   &:hover {
-    color: $crm-white;
-    opacity: 0.8;
+    color: $crm-copy;
     text-decoration: none;
   }
-}
 
-.noti-badge-active {
-  background: $crm-white;
-  color: $brand-primary;
+  .noti-badge {
+    background: $brand-primary;
+    border-radius: 50%;
+    color: $crm-white;
+    display: inline-block;
+    font-size: $font-size-noti-badge;
+    height: 16px;
+    line-height: 14px;
+    margin: -12px 0 0 -3px;
+    min-width: 16px;
+    padding: 1px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 16px;
+  }
 
-  &:hover {
+  .noti-badge-active {
     background: $crm-white;
     color: $brand-primary;
   }
-}
 
-.noti-badge-success {
-  background: $brand-success;
-  color: $crm-white;
-}
+  .noti-badge-success {
+    background: $brand-success;
+    color: $crm-white;
+  }
 
-.noti-badge-warning {
-  background: $brand-warning;
-  color: $crm-white;
-}
+  .noti-badge-warning {
+    background: $brand-warning;
+    color: $crm-white;
+  }
 
-.noti-badge-danger {
-  background: $brand-danger;
-  color: $crm-white;
+  .noti-badge-danger {
+    background: $brand-danger;
+    color: $crm-white;
+  }
 }
