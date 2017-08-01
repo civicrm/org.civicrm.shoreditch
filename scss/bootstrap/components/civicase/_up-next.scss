@@ -1,0 +1,65 @@
+.civicase-activity-stamp {
+  background: $gray-lighter;
+  border-radius: $border-radius-base;
+  color: $crm-copy;
+  font-size: $font-size-base;
+  height: 100%;
+  position: relative;
+
+  &.civicase-next-milestone {    
+    border-left: 6px solid $gray-darker;
+    border-right: 6px solid $gray-darker;
+  }
+  
+  .cb-dot {
+    background: $gray-darker;
+    border-color: $gray-lighter;
+    color: $crm-white;
+  }
+
+  .act-contacts-title {
+    color: $gray-darker;
+    font-weight: $crm-font-weight-h2;
+  }
+
+  .act-feed-inner {
+    padding-bottom: 55px;
+  }
+
+  .act-feed-item {
+    color: $crm-copy;
+
+    a {
+      color: $crm-copy;
+      word-wrap: break-word;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+
+    .btn-group-md {
+      bottom: 10px;
+      display: block;
+      left: 0;
+      padding: 0 15px;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .act-contacts-target .btn-info {
+    background: transparent;
+    border: none;
+    color: $gray-darker;
+  }
+
+  .btn-full {
+    margin-bottom: 10px;
+    width: 100%;
+  }  
+}
+
+.row-flex {
+  display: flex;
+}
