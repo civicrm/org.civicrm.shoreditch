@@ -1,38 +1,17 @@
-.crm-collapsible { 
-  .collapsible-title {
-    background: none;
-    border-bottom: none;
-    font-size: $font-size-medium;
-    font-weight: normal;
+.crm_collapsible-content{
+  .crm_collapsible-content__title {
     margin-bottom: 10px;
-    padding-left: 20px;
-    position: relative;
+    padding-left: 10px;
     text-transform: uppercase;
 
-    &:before {
-      content: $fa-var-angle-down;
-      font-family: 'FontAwesome'; 
-      font-size: $font-size-h3;
-      height: 20px;
-      left: 0;
-      line-height: 17px;
-      margin-right: 8px;
-      position: absolute;
-      text-align: center;
-      top: 0;
-      width: 20px;
+    .fa {
+      color: $gray-darker;
+      margin-right: 10px;
     }
   }
 
-  &.collapsed .collapsible-title:before {
-    content: $fa-var-angle-right;   
-  }
-
-  .crm-editable-enabled strong.ng-binding {
-    font-weight: $crm-font-weight-h5;
-  }
-
-  .crm-editable-enabled div.ng-binding {
+  .crm_collapsible-content__text {
+    padding-left: 10px;
     margin-bottom: 10px;
   }
 }
