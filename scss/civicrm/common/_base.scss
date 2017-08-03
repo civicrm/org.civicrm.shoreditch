@@ -7,9 +7,259 @@
 
   .description {
     color: $crm-copy;
+    font-size: 13px;
+    line-height: 18px;
   }
 
   .solid-border-top {
     border-color: $crm-background;
+  }
+
+  .crm-form-block {
+    border-radius: $panel-border-radius !important;
+  }
+
+  table td .btn-slide-active ul.panel {
+    background: $crm-white;
+    border-radius: $border-radius-base;
+    box-shadow: $crm-form-layout-shadow;
+    padding: 0;
+    top: 22px;
+
+    li {
+      background: $crm-white;
+      padding: 0;
+    }
+
+    li .crm-hover-button.action-item {
+      background: transparent !important;
+      color: $crm-copy !important;
+      line-height: 20px !important;
+      padding: 10px 20px;
+      text-align: left;
+      text-transform: capitalize;
+
+      &:hover {
+        background: $crm-background !important;
+        color: $crm-copy !important;
+      }
+    }
+
+    li:hover {
+      background: $crm-background !important;
+
+      .crm-hover-button.action-item {
+        background: $crm-background !important;
+        color: $crm-copy !important;
+      }
+    }
+  }
+
+  .select2-container {
+    .select2-choice {
+      background: $crm-white;
+      border-color: $crm-darker-grayblue;
+      border-radius: $border-radius-base;
+      box-shadow: none;
+
+      .select2-arrow {
+        background: $crm-white;
+        padding: 0 4px;
+      }
+
+      .select2-arrow b {
+        height: 18px;
+        margin-top: 2px;
+      }
+
+      abbr {
+        right: 28px;
+        top: 8px;
+      }
+    }
+
+    &.select2-dropdown-open {
+      .select2-choice {
+        border-color: $brand-primary;
+        box-shadonw: none;
+      }
+
+      &.select2-drop-above .select2-choice {
+        border-color: $crm-blue-light-color;
+        border-top: none;
+      }
+    }
+  }
+
+  .crm-section {
+    color: $crm-copy;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+
+    .label {
+      color: $gray-darker;
+      font-weight: $crm-font-weight-h3;
+      text-align: left;
+    }
+  }
+
+  a.crm-hover-button.action-item,
+  .crm-hover-button.btn-slide {
+    text-transform: capitalize;
+
+    &:hover {
+      color: $brand-primary !important;
+    }
+  }
+
+  span.btn-slide {
+    background: none;
+    display: inline-block;
+    padding-right: 0 !important;
+    text-indent: -500em;
+    width: 5px;
+
+    &:after {
+      @include fa-icon($font-size-base, $fa-var-ellipsis-v, $gray-darker);
+      background: none;
+      right: -2px;
+      text-indent: 0;
+      top: 4px;
+      width: 5px;
+    }
+
+    &:hover {
+      background: none;
+
+      &:after {
+        color: $brand-primary;
+      }
+    }
+
+    .panel {
+      text-indent: 0;
+    }
+  }
+
+  .dataTables_wrapper {
+    border-radius: $border-radius-child;
+    box-shadow: $box-shadow;
+    margin-bottom: 20px;
+
+    table.dataTable {
+      box-shadow: none !important;
+      max-width: 100%;
+
+      > thead > th {
+        line-height: 1.4em;
+        padding: 15px 20px;
+      }
+
+      > tbody > td {
+        line-height: 1.4em;
+        padding: 12px 20px;
+      }
+
+      > tbody > tr > td:last-child {
+        text-align: right;
+      }
+    }
+
+    .crm-datatable-pager-top {
+      background: $gray-lighter;
+      border-bottom: 1px solid $crm-background;
+      border-radius: $border-radius-child $border-radius-child 0 0;
+      font-size: $font-size-base;
+      padding-bottom: 39px;
+      padding-top: 10px;
+
+      .dataTables_length {
+        font-size: $font-size-base;
+        padding-left: 20px;
+      }
+
+      .dataTables_paginate {
+        padding-top: 0;
+      }
+    }
+
+    .crm-datatable-pager-bottom {
+      background: $crm-gray-lightest;
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      line-height: 1.8em;
+      padding-bottom: 39px;
+      padding-top: 10px;
+
+      .dataTables_info,
+      .dataTables_paginate {
+        font-size: $font-size-base;
+        padding-top: 0;
+      }
+    }
+
+    .dataTables_info {
+      color: $crm-copy;
+      padding-left: 20px;
+      width: 50%;
+    }
+  }
+}
+
+.page-civicrm {
+  #branding {
+    padding: 20px 0 0 !important;
+
+    .breadcrumb {
+      padding: 0 40px;
+    }
+
+    .breadcrumb a {
+      padding: 0 !important;
+    }
+
+    .add-shortcut {
+      visibility: hidden;
+    }
+
+    h1 {
+      &.page-title {
+        margin-top: -20px !important;
+        margin-bottom: 28px !important;
+        padding: 0 40px !important;
+        background: $crm-white;
+        color: $gray-darker;
+      }
+    }
+  }
+}
+
+.required {
+  &:after {
+    display: none;
+  }
+}
+
+.crm-search-tasks {
+  background-color: $crm-white;
+  border-radius: 0;
+  margin-bottom: 20px;
+  box-shadow: $box-shadow;
+
+  td {
+    padding: 10px 20px;
+  }
+
+  .font-size12pt {
+    font-size: $font-size-h2;
+    font-weight: 600;
+    color: $gray-darker;
+    padding-bottom: 10px;
+    width: auto !important;
+  }
+
+  .font-size11pt {
+    font-size: $font-size-base;
+    font-weight: 600;
+    color: $gray-darker;
   }
 }

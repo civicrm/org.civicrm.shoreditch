@@ -1,6 +1,7 @@
-.help {
-  border-radius: 0;
-  border: 0;
-  background-color: transparent;
-  color: $crm-copy;
+.help,
+#help {
+  background: $crm-light-green-color;
+  border: none;
+  color: $gray-darker;
+  padding: 5px 10px;
 }

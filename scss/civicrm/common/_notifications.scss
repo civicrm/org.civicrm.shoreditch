@@ -1,54 +1,109 @@
-#crm-notification-container {
+#crm-notification-container div {
+  &.ui-notify-message {
+    border-radius: $border-radius-base;
 
-  div {
-    &.ui-notify-message {
-      border-radius: 0;
+    div.icon {
+      display: none;
+    }
 
-      div.icon {
-        display: none;
-      }
-
-      &.error {
-        h1::before {
-          @include fa-icon(13px, '\f06a', $brand-danger);
-        }
-      }
-
-      &.alert {
-        h1::before {
-          @include fa-icon(13px, '\f06a', $brand-warning);
-        }
-      }
-
-      &.success {
-        h1::before {
-          @include fa-icon(13px, '\f00c', $brand-success);
-        }
-      }
-
-      &.info {
-        h1::before {
-          @include fa-icon(13px, '\f05a', $brand-info);
-        }
-      }
-
-      h1 {
-        padding-left: 0;
-
-        &::before {
-          margin-right: 5px;
-        }
-      }
-
-      &,
-      a.ui-notify-cross,
-      h1 {
-        color: $gray;
+    &.error {
+      h1::before {
+        @include fa-icon($font-size-base, $fa-var-alert, $brand-danger);
       }
     }
 
-    &.ui-notify-message-style {
-      background: #ffffff;
+    &.alert {
+      h1::before {
+        @include fa-icon($font-size-base, $fa-var-alert, $brand-warning);
+      }
+    }
+
+    &.success {
+      h1::before {
+        @include fa-icon($font-size-base, $fa-var-success, $brand-success);
+      }
+    }
+
+    &.info {
+      h1::before {
+        @include fa-icon($font-size-base, $fa-var-info-msg, $brand-info);
+      }
+    }
+
+    h1 {
+      font-size: $font-size-base;
+      font-weight: $crm-font-weight-h1;
+      padding-left: 0;
+
+      &::before {
+        margin-right: 5px;
+      }
+    }
+
+    &,
+    a.ui-notify-cross,
+    h1 {
+      color: $gray-darker;
+    }
+
+    a {
+      color: $brand-primary;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .notify-content {
+      ul {
+        margin: 0 15px;
+      }
+
+      .ui-state-default {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        color: $crm-white;
+        text-decoration: none;
+
+        .ui-button-text {
+          color: $crm-white;
+        }
+
+        .ui-icon {
+          margin-top: -6px;
+        }
+
+        &:hover {
+          background: $crm-blue-light;
+        }
+      }
     }
   }
+
+  &.ui-notify-message-style {
+    background: $crm-white;
+    box-shadow: $box-shadow;
+    color: $crm-copy;
+
+    p {
+      font-size: $font-size-base;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.crm-container .status {
+  padding: 15px;
+}
+
+#crm-main-content-wrapper form .messages.crm-error {
+  position: absolute;
+  visibility: hidden;
+}
+
+div.error,
+.error {
+  color: $brand-danger;
 }

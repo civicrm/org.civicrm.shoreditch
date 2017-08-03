@@ -1,5 +1,4 @@
 &.page-civicrm-admin-uf-group-add {
-
   #crm-main-content-wrapper .crm-submit-buttons,
   #crm-main-content-wrapper .crm-accordion-body .crm-form-block {
     box-shadow: none;
@@ -20,14 +19,207 @@
       thead th.sorting .DataTables_sort_icon {
         display: block;
       }
+    }
+  }
 
-      tr {
-        border: none;
-        border-bottom: $panel-border;
+  .crm-content-block table tr {
+    border: none;
+    border-bottom: $panel-border;
 
-        &.odd {
-          background: #FFFFFF;
+    &.odd {
+      background: $crm-white;
+    }
+  }
+}
+
+#mainTabContainer {
+  box-shadow: none;
+  padding: 0;
+
+  ul.ui-tabs-nav {
+    background: $gray-lighter;
+    padding: 5px 5px 0;
+
+    .ui-tabs-active {
+      background: $crm-white !important;
+      border-bottom: 2px solid $crm-white;
+    }
+
+    a {
+      font-size: $font-size-base;
+      font-family: $font-family-base;
+    }
+  }
+
+  .dataTables_wrapper {
+    overflow: visible;
+
+    thead tr {
+      background: none;
+
+      th {
+        color: $crm-h3-color;
+        font-family: $font-family-base;
+      }
+    }
+  }
+
+  .dataTables_wrapper ul.panel {
+    background: $gray-lighter;
+    border: 1px solid $table-border-color;
+
+    li {
+      background: none;
+    }
+  }
+}
+
+&.page-civicrm-admin-uf {
+  #crm-main-content-wrapper {
+    .help {
+      margin: 0 0 20px;
+    }
+
+    .crm-submit-buttons {
+      border-bottom: 1px solid $crm-background;
+
+      a.button {
+        background: $brand-primary;
+      }
+    }
+
+    #mainTabContainer {
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      box-shadow: $crm-form-item-shadow;
+    }
+
+    .ui-tabs-panel {
+      border: none;
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      font-family: $font-family-base;
+
+      .crm-content-block {
+        border-radius: 0 0 $border-radius-child $border-radius-child;
+      }
+
+      .crm-submit-buttons {
+        border-bottom: none;
+        box-shadow: none;
+      }
+
+      .dataTables_wrapper {
+        margin-bottom: 0;
+
+        td:last-child {
+          min-width: 112px;
         }
+      }
+    }
+
+    #user-profiles {
+      .crm-submit-buttons {
+        background: $crm-white !important;
+      }
+    }
+
+    a.action-item,
+    span.btn-slide {
+      color: $brand-primary;
+      background: none;
+    }
+  }
+}
+
+.CRM_UF_Form_Preview {
+  #crm-container-inner {
+    padding: 15px;
+  }
+
+  &#Preview {
+    .crm-submit-buttons {
+      background: $crm-white !important;
+
+      input.crm-form-submit {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        color: $crm-white !important;
+      }
+    }
+  }
+}
+
+.CRM_UF_Form_Group,
+.CRM_UF_Form_Field {
+  &#Group,
+  &#Field {
+    .crm-submit-buttons,
+    .action-link {
+      background: $crm-white !important;
+      box-shadow: none;
+    }
+
+    td.label {
+      padding: 15px 0 15px 0;
+
+      .helpicon {
+        padding: 0 5px;
+        margin-top: -2px;
+      }
+    }
+
+    td.html-adjust {
+      width: 100%;
+    }
+
+    td {
+      vertical-align: middle;
+      line-height: 1.5em;
+    }
+
+    table.form-layout {
+      padding: 0 25px;
+      display: flex;
+      box-sizing: border-box;
+    }
+
+    .crm-accordion-body {
+      table.form-layout {
+        padding: 0;
+      }
+
+      .crm-form-block {
+        box-shadow: none;
+      }
+    }
+
+    textarea {
+      vertical-align: middle;
+      line-height: 1.5em;
+    }
+
+    input[type=radio] {
+      &:checked {
+        +label[for] {
+          &:after {
+            top: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ui-dialog-content {
+  .CRM_UF_Form_Group,
+  .CRM_UF_Form_Field {
+    &#Group,
+    &#Field {
+      table.form-layout {
+        padding: 0;
+      }
+
+      .crm-accordion-body {
+        padding: 0 20px !important;
       }
     }
   }

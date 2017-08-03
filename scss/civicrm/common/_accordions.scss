@@ -5,13 +5,19 @@
 
   .crm-accordion-header {
     @extend %no-border-radius;
+    position: relative;
     line-height: 40px;
+    font-family: $font-family-base;
     padding-top: 0;
     padding-bottom: 0;
     background-image: none !important;
     background: $crm-accordion-header-color !important;
     color: $gray-darker;
-    font-weight: normal !important;
+    font-weight: 600;
+
+    &:not(.crm-master-accordion-header) {
+      font-size: 13px !important;
+    }
 
     &::before {
       @include fa-icon(.8em);
@@ -32,6 +38,9 @@
 
     .crm-close-accordion {
       margin-top: 5px;
+      position: absolute;
+      right: 5px;
+      top: -4px;
     }
 
     .helpicon {
@@ -65,9 +74,30 @@
     }
   }
 
+  .crm-accordion-header:not(.crm-master-accordion-header) {
+    font-weight: 600;
+  }
+
   .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
   .section {
     padding: 15px !important;
+
+    td {
+      &.label {
+        padding: 15px;
+        font-weight: 600;
+        text-align: left;
+        color: $gray-darker;
+
+        label {
+          padding: 0;
+        }
+      }
+
+      label {
+        position: relative;
+      }
+    }
   }
 
   .crm-accordion-body {
@@ -97,6 +127,14 @@
       color: $brand-primary;
       font-size: 13px;
       opacity: 1;
+    }
+
+    span,
+    div {
+      &.description {
+        display: block;
+        line-height: 1.5em;
+      }
     }
   }
 }

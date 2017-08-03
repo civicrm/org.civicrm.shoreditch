@@ -1,0 +1,1210 @@
+  .page-civicrm-contact {
+    #memberships,
+    #inactive-memberships {
+      border-radius: $panel-border-radius;
+      box-shadow: $box-shadow;
+      margin-bottom: 20px;
+
+      h3 {
+        background: $gray-lighter;
+        border-bottom: 1px solid $crm-background;
+        border-radius: $panel-border-radius $panel-border-radius 0 0;
+        color: $gray-darker;
+        font: $crm-font-weight-h3 $font-size-h2 $font-family-base;
+        margin: 0;
+        padding: 13px 20px;
+      }
+
+      .dataTables_wrapper {
+        box-shadow: none;
+      }
+
+      table {
+        background: transparent;
+        border: none;
+        border-radius: 0 0 $panel-border-radius $panel-border-radius;
+        font-family: $font-family-base;
+
+        thead tr {
+          border-bottom: 1px solid $crm-dark-grayblue;
+
+          th {
+            background: $gray-lighter;
+            border: none;
+            color: $gray-darker;
+            line-height: 1.5em;
+            padding: 15px 20px;
+            vertical-align: middle;
+
+            div {
+              padding: 0;
+            }
+          }
+        }
+
+        tbody tr {
+          background: transparent;
+          border-left: none;
+          border-right: none;
+          border-top: 1px solid $crm-background;
+
+          td {
+            background: $crm-white;
+            border: none;
+            color: $gray-dark;
+            line-height: 1.5em;
+            padding: 15px 20px;
+            vertical-align: middle;
+
+            &:last-child {
+              padding-left: 10px;
+              text-align: right;
+              width: 84px;
+
+              span {
+                display: inline-block;
+              }
+            }
+
+            .btn-slide {
+              padding-right: 0 !important;
+              text-indent: -9999px;
+              width: 7px;
+
+              &:after, .panel {
+                text-indent: 0;
+              }
+            }
+
+            a,
+            span.btn-slide {
+              color: $brand-primary !important;
+              text-transform: none;
+
+              &:hover {
+                background: none;
+              }
+
+              a {
+                color: $crm-copy !important;
+
+                &:hover {
+                  background: none;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            border-bottom-left-radius: $border-radius-base;
+            border-bottom-right-radius: $border-radius-base;
+
+            td {
+              &:first-child {
+                border-bottom-left-radius: $border-radius-base;
+              }
+
+              &:last-child {
+                border-bottom-right-radius: $border-radius-base;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #memberships table td {
+      &:not(:last-child) {
+        max-width: 85px;
+        overflow: hidden;
+        padding: 15px 10px 15px 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        max-width: 100px;
+      }
+    }
+
+    #inactive-memberships table td {
+      &:not(:last-child) {
+        max-width: 115px;
+        overflow: hidden;
+        padding: 15px 10px 15px 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        max-width: 88px;
+      }
+    }
+  }
+
+  .page-civicrm-contact-view {
+    .help {
+      background: $crm-light-green-color;
+      border: none;
+      border-radius: $border-radius-base;
+      color: $gray-darker;
+      margin-bottom: 20px;
+      white-space: normal;
+    }
+
+    .ui-widget-content {
+      &.ui-tabs-panel {
+        @include border-box();
+        padding-right: 15px !important;
+      }
+
+      .crm-button i {
+        top: 0.7em;
+      }
+
+      .crm-button-type-cancel {
+        i {
+          color: $gray-darker;
+        }
+
+        &:hover i {
+          color: $crm-white;
+        }
+      }
+
+      .crm-form-submit.cancel {
+        color: $gray-darker !important;
+
+        &:hover {
+          background: $gray-darker;
+          color: $crm-white !important;
+        }
+      }
+    }
+
+    .action-link {
+      margin-bottom: 30px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .CRM_Member_Form_MembershipRenewal {
+    .crm-button {
+      border: none;
+    }
+
+    .crm-button-type-cancel {
+      i {
+        color: $gray-darker !important;
+      }
+
+      &:hover i {
+        color: $crm-white !important;
+      }
+    }
+
+
+    .crm-button .crm-form-submit.cancel {
+      border: 1px solid $gray-darker;
+      color: $gray-darker !important;
+
+      &:hover {
+        background-color: $crm-copy;
+        border-color: $gray-darker;
+        color: $crm-white !important;
+      }
+    }
+
+    .crm-button .crm-i {
+      left: 0.7em;
+      top: 50%;
+      @include transform(translate(0, -50%));
+    }
+
+    #help {
+      margin-bottom: 15px;
+      padding: 10px;
+    }
+
+    #recordContribution td,
+    [class*=crm-membership-form-block-] td {
+      padding-left: 5px !important;
+    }
+  }
+
+  .CRM_Member_Form_Membership {
+    input,
+    select,
+    textarea,
+    .select2-container {
+      &.crm-inline-error,
+      &.crm-error,
+      &.error {
+        background: none !important;
+        border: 1px solid $brand-danger;
+        min-height: 30px;
+
+        &.select2-container {
+          padding: 0;
+        }
+      }
+    }
+
+    label,
+    span {
+      &.crm-inline-error,
+      &.crm-error {
+        background: $brand-danger !important;
+        color: $crm-white !important;
+        padding: 5px;
+        border-radius: 3px;
+        line-height: 1.5em;
+
+        &.crm-inline-error {
+          margin: 0 4px;
+        }
+
+        span {
+          background: none;
+          color: $crm-white;
+        }
+      }
+    }
+
+    .select2-container {
+      max-width: 230px;
+      width: 230px;
+      min-height: 30px;
+    }
+
+    select,
+    #from_email_address {
+      max-width: 230px;
+      padding-right: 30px !important;
+      max-height: 33px;
+      line-height: 1.5em;
+      padding: 0 5px !important;
+    }
+
+    #payment_information {
+      .content {
+        margin-left: 166px;
+      }
+
+      div {
+        &.label {
+          text-align: left;
+          min-width: 185px;
+        }
+      }
+
+      input {
+        margin-top: 0;
+      }
+
+      legend {
+        padding: 5px 20px;
+      }
+
+      .cvv2-section {
+        input,
+        .cvv2-icon {
+          float: left;
+        }
+      }
+
+      .crm-credit_card_type-icons {
+        margin-left: 40px;
+      }
+    }
+
+    .crm-membership-form-block {
+      table {
+        &.form-layout-compressed {
+          tr {
+            border-bottom: 0;
+
+            td {
+              border-bottom: 0;
+
+              &:not(.label) {
+                padding-left: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .label {
+        padding: 10px 20px;
+        width: 205px;
+        box-sizing: border-box;
+        height: 50px;
+        vertical-align: middle;
+        line-height: 1.5em;
+      }
+
+      .auto-renew-text {
+        padding: 10px 20px;
+        display: block;
+      }
+
+      span {
+        &.description {
+          display: block;
+          line-height: 1.5em;
+          margin-bottom: 5px;
+        }
+      }
+
+      textarea {
+        vertical-align: middle;
+        padding: 0 5px;
+      }
+
+      .crm-submit-buttons {
+        border: 0;
+        padding: 0 !important;
+      }
+
+      .crm-membership-form-block-membership_type_id {
+        select {
+          max-width: 230px;
+          padding-right: 30px !important;
+        }
+      }
+
+      .crm-membership-form-block-record_contribution {
+        & > td {
+          padding: 0;
+
+          legend {
+            padding: 10px 20px;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .crm-membership-form-block-soft-credit-type .crm-option-edit-link{
+        left: 0 !important;
+      }
+
+      #record_contribution {
+        position: relative;
+        bottom: 5px;
+      }
+
+      #record-different-contact {
+        .label {
+          padding-left: 0;
+        }
+
+        td {
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+
+      #recordContribution {
+        tr {
+          td {
+            &:nth-child(2) {
+              padding-left: 0;
+              width: 100%;
+            }
+
+            &.label {
+              width: 205px;
+              height: 50px;
+              vertical-align: middle;
+              box-sizing: border-box;
+            }
+          }
+        }
+
+        .crm-membership-form-block-contribution-contact {
+          .helpicon {
+            bottom: -1px;
+            left: 0;
+          }
+        }
+      }
+
+      #send-receipt {
+        td {
+          &.label {
+            min-width: 175px;
+          }
+        }
+      }
+
+      .crm-accordion-wrapper {
+        .crm-accordion-header {
+          background: $crm-background !important;
+        }
+
+        .crm-accordion-body {
+          padding: 15px 0 !important;
+
+          & > p {
+            &.description {
+              padding: 0px 20px  15px 20px;
+            }
+          }
+        }
+      }
+    }
+
+    table {
+      &.selector {
+        box-shadow: none;
+
+        thead {
+          th {
+            border-bottom: none;
+            background: $crm-background !important;
+            color: $gray-darker !important;
+            vertical-align: middle;
+            border: none;
+            padding: 10px;
+            line-height: 1.1em;
+
+            div {
+              padding: 0;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            background: $crm-white;
+            border: 1px solid $crm-background !important;
+
+            &.crm-child-row {
+              & > td {
+                padding: 0;
+
+                .crm-ajax-container {
+                  table {
+                    margin: 0;
+
+                    tbody {
+                      border-top: 1px solid $crm-dark-grayblue !important
+                    }
+
+                    th {
+                      border-bottom: none;
+                      background: $gray-lighter !important;
+                      color: $gray-darker;
+                      vertical-align: middle;
+                      border: none;
+                    }
+                  }
+                }
+              }
+            }
+
+            td {
+              border: none;
+              background: $crm-white;
+              color: $gray-dark;
+              padding: 10px 30px;
+              line-height: 1.1em;
+            }
+          }
+        }
+      }
+    }
+
+    table tr td {
+      vertical-align: middle;
+
+      .helpicon {
+        position: relative;
+        bottom: 2px;
+        left: 5px;
+      }
+    }
+  }
+
+
+
+  .CRM_Member_Form_MembershipView {
+
+    .action-link {
+      display: none;
+    }
+
+    table {
+      background: transparent;
+      border: none;
+      font-family: $font-family-base;
+      margin: 10px 0;
+      box-shadow: none !important;
+
+      &.crm-info-panel {
+        width: 105%;
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+
+      thead {
+        tr {
+          border: 1px solid $crm-background !important;
+
+          th {
+            border-bottom: none;
+            background: $gray-lighter !important;
+            color: $gray-darker !important;
+            vertical-align: middle;
+            border: none;
+            line-height: 1.1em;
+            height: 42px;
+
+            div {
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          background: $crm-white;
+          border: 1px solid $crm-background !important;
+          border-right: 0;
+          border-left: 0;
+
+          &.crm-child-row {
+            & > td {
+              padding: 0;
+
+              .crm-ajax-container {
+                table {
+                  margin: 0;
+
+                  tbody {
+                    border-top: 1px solid $crm-dark-grayblue !important
+                  }
+
+                  th {
+                    border-bottom: none;
+                    background: $gray-lighter !important;
+                    color: $gray-darker;
+                    vertical-align: middle;
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+
+          td {
+            border: none;
+            padding: 20px;
+            line-height: 1.1em;
+            background: $crm-white !important;
+
+            &.label {
+              border-bottom: none;
+              color: $gray-darker !important;
+              vertical-align: middle;
+
+              div {
+                padding: 0;
+              }
+            }
+
+            &:not(.label) {
+              color: $gray-dark;
+            }
+          }
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          &:first-child {
+            border-top: 0;
+          }
+        }
+      }
+    }
+
+    .crm-accordion-wrapper {
+      padding: 0;
+
+      .crm-accordion-header {
+        background: $crm-background !important;
+      }
+
+      .crm-accordion-body {
+        padding: 15px 0 !important;
+
+        & > p {
+          &.description {
+            padding: 0 20px;
+          }
+        }
+
+        tr td.label {
+          background: none !important;
+          padding: 10px 30px !important;
+        }
+      }
+    }
+
+    #related-contacts-memberships {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  .CRM_Member_Form_Search {
+    h3 {
+      background: $crm-white;
+      border-radius: $border-radius-base;
+      box-shadow: $box-shadow;
+      color: $datepicker-gray-darker;
+      font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
+      height: 50px;
+      line-height: 2.7em;
+      margin: 20px 0;
+      padding: 0 20px;
+    }
+
+    .crm-accordion-wrapper {
+      border-radius: $panel-border-radius !important;
+    }
+
+    .crm-accordion-header {
+      border-radius: $panel-border-radius $panel-border-radius 0 0 !important;
+    }
+
+    .crm-accordion-body,
+    .crm-search-tasks {
+      border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
+    }
+
+    .selector,
+    .report {
+      @include mx-expandable-table();
+    }
+
+    .report {
+      border-radius: $panel-border-radius;
+
+      tr {
+        &.columnheader-dark {
+          background: transparent !important;
+          border-radius: $panel-border-radius $panel-border-radius 0 0;
+
+          th:first-child {
+            border-top-left-radius: $panel-border-radius;
+          }
+
+          th:last-child {
+            border-top-right-radius: $panel-border-radius;
+          }
+        }
+
+        &.columnfooter {
+          border-top: 1px solid $crm-dark-grayblue !important;
+        }
+
+        th,
+        td {
+          font-family: $font-family-base;
+          font-size: $font-size-base !important;
+        }
+
+        th {
+          padding: 15px 20px !important;
+        }
+
+        td {
+          padding: 15px 20px !important;
+
+          strong {
+            color: $gray-darker;
+          }
+        }
+      }
+    }
+
+    .selector {
+      background-color: $crm-white;
+
+      thead.sticky {
+        background: transparent;
+      }
+
+      tbody tr:not(.crm-child-row) > td {
+        padding: 12px 10px !important;
+
+        &:first-child {
+          max-width: 10px;
+          padding-left: 20px !important;
+          padding-right: 5px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(7) {
+          max-width: 120px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+          max-width: 130px;
+          min-width: 130px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        &:last-child {
+          min-width: 82px !important;
+          padding-right: 20px !important;
+        }
+      }
+
+      tr:last-child td {
+        display: table-cell !important;
+        padding: 18px 20px 17px !important;
+      }
+    }
+  }
+
+  .page-civicrm-member-search {
+    .selector {
+      @include mx-expandable-table();
+    }
+
+    .CRM_Member_Form_Search {
+      .select2-container {
+        max-width: 230px;
+      }
+
+      .crm-accordion-body {
+        padding: 20px !important;
+
+        tr:first-child td {
+          padding-top: 0;
+        }
+
+        td {
+          padding-left: 0;
+        }
+
+        a.crm-clear-link {
+          position: relative;
+          top: -2px;
+        }
+
+        #_qf_Search_refresh {
+          background: $brand-primary;
+          border-color: $brand-primary;
+          border-radius: $border-radius-base;
+          color: $crm-white;
+          font-family: $font-family-base;
+          font-size: $font-size-base;
+          padding: 8px 12px;
+          text-shadow: none;
+          text-transform: uppercase;
+        }
+      }
+
+      #memberSearch .selector {
+        border-radius: $border-radius-child;
+
+        thead.sticky {
+          background: transparent;
+        }
+
+        th, td {
+          padding: 15px 10px 15px;
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            padding: 15px 5px 15px 20px !important;
+            text-align: left;
+          }
+
+          &:last-child {
+            min-width: 82px;
+            padding: 15px 20px 15px 5px !important;
+
+            .crm-hover-button:hover {
+              color: $brand-primary !important;
+            }
+          }
+
+          &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+            min-width: 110px;
+          }
+
+          &:nth-child(3),
+          &:nth-child(8) {
+            max-width: 95px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    [class*=CRM_Member_Form_Task_] {
+      .crm-form-block > .crm-submit-buttons > .crm-button:first-of-type {
+        margin-left: 0;
+      }
+
+      .form-layout-compressed td {
+        color: $crm-copy;
+        padding: 10px 20px;
+        vertical-align: top;
+
+        &.label {
+          color: $gray-darker;
+          font-size: $font-size-base;
+          font-weight: $crm-font-weight-h2;
+        }
+
+        label {
+          line-height: 30px;
+        }
+
+        .select2-container, input.crm-form-text {
+          margin: 0 15px 0 0 !important;
+        }
+      }
+
+      tr.columnheader {
+        border-left: none !important;
+        border-right: none !important;
+
+        th, td {
+          background: $gray-lighter !important;
+          border: none;
+          color: $gray-darker;
+          padding: 10px 20px;
+          vertical-align: middle;
+        }
+      }
+
+      tbody tr {
+        background: $crm-white;
+        border-right: none;
+
+        td {
+          border-right: none;
+          color: $crm-copy;
+          line-height: 1.5em;
+          padding: 15px 20px;
+        }
+
+        td .dateplugin {
+          display: inline-block;
+          font-weight: normal;
+          max-width: 150px;
+        }
+      }
+
+      input[type="checkbox"]:checked + label[for]:after {
+        margin-top: -4px;
+      }
+    }
+
+    .CRM_Member_Form_Task_Email .crm-contactEmail-form-block {
+      padding: 0 20px;
+
+      .status {
+        margin: 10px 0;
+        padding: 10px 25px !important;
+      }
+
+      .crm-submit-buttons {
+        margin: 0 !important;
+      }
+
+      .form-layout-compressed {
+        width: 100%;
+
+        tbody tr td {
+          padding: 10px 10px 10px 0;
+        }
+
+        .select2-container-multi {
+          width: 100% !important;
+        }
+      }
+
+      .crm-accordion-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+
+      .crm-html_email-accordion  .helpIcon {
+        margin-bottom: 15px;
+      }
+
+      .crm-contactEmail-form-block > .section .section {
+        padding: 0 !important;
+      }
+
+      .crm-accordion-body td {
+        padding-left: 5px !important
+      }
+
+      .spacer {
+        height: 20px;
+      }
+
+      .section {
+        padding: 15px 0 !important;
+      }
+
+      .crm-submit-buttons:last-child {
+        margin: 20px -20px 0 !important;
+        padding: 20px !important;
+      }
+
+      #saveDetails {
+        .label {
+          display: inline-block;
+          margin-right: 20px;
+        }
+
+        .content {
+          display: inline-block;
+        }
+      }
+    }
+
+    .CRM_Member_Form_Task_Batch {
+      padding-top: 4em;
+
+      .crm-member-task-batch-form-block {
+        position: relative;
+
+        .help {
+          border-radius: $border-radius-base;
+          padding: 10px;
+          position: absolute;
+          top: -75px;
+        }
+
+        table thead tr.columnheader {
+          th, td {
+            font: bold $font-size-base $font-family-base !important;
+            padding: 15px 10px;
+
+            &:first-child {
+              padding-left: 20px;
+            }
+
+            &:last-child {
+              padding-right: 20px;
+            }
+          }
+        }
+
+        table tbody tr {
+          border-bottom: 1px solid $crm-background;
+        }
+
+        table tbody tr td {
+          min-width: 85px;
+          padding: 15px 10px;
+
+          &:first-child {
+            padding-left: 20px;
+          }
+
+          &:last-child {
+            padding-right: 20px;
+          }
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 120px;
+          }
+
+          &:nth-child(3),
+          &:nth-child(5) {
+            min-width: 125px;
+            width: 125px;
+
+            .addon + .crm-clear-link {
+              left: -5px;
+              padding: 4px 0;
+              position: relative;
+            }
+          }
+
+          &:nth-child(4),
+          &:nth-child(6) {
+            max-width: 120px;
+            width: 120px;
+          }
+
+          .select2-container {
+            margin-top: 0 !important;
+            min-width: 100% !important;
+            width: 100% !important;
+          }
+        }
+
+        table + .crm-submit-buttons {
+          border-top: none !important;
+          padding: 0 0 15px !important;
+        }
+
+        .crm-button:first-of-type {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .CRM_Member_Form_Task_PDFLetter .crm-block {
+      h3 {
+        background: $brand-primary;
+        border-bottom: 1px solid $brand-primary;
+        border-radius: $border-radius-base $border-radius-base 0 0;
+        color: $crm-white;
+        font: $crm-font-weight-h4 $font-size-h2 $font-family-base;
+        line-height: 48px;
+        margin: 0 0 15px;
+        padding: 0 20px;
+      }
+
+      .no-popup {
+        margin: 10px 20px;
+      }
+
+      .form-layout-compressed td {
+        color: $crm-copy;
+        padding: 10px 20px;
+
+        label {
+          line-height: 30px;
+        }
+
+        .select2-container, input.crm-form-text {
+          margin: 0 15px 0 0 !important;
+        }
+      }
+
+      .crm-accordion-body .crm-form-block {
+        background: transparent;
+        box-shadow: none;
+        margin: 0 -16px;
+        padding: 0
+      }
+
+      .helpIcon {
+        margin-bottom: 10px;
+
+        .select2-chosen i {
+          line-height: 20px;
+          margin-top: -3px;
+        }
+      }
+
+      #saveDetails {
+        padding: 15px 5px !important;
+      }
+
+      #saveDetails .label {
+        float: left;
+        min-width: 136px;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .CRM_Member_Form_Task_Print {
+    padding: 0 15px;
+
+    table {
+      @extend %civihr-table;
+      border: none;
+      border-radius: $panel-border-radius;
+      margin: 30px 0 20px;
+
+      tr.columnheader {
+        border: none !important;
+        border-bottom: 1px solid $crm-dark-grayblue !important;
+      }
+
+      tr.crm-membership {
+        border-left: none;
+        border-right: none;
+      }
+
+      th,
+      td {
+        border: none !important;
+        line-height: 1.5em !important;
+        padding: 15px 20px !important;
+      }
+    }
+
+    .element-right {
+      margin-right: 0 !important;
+    }
+
+    .crm-button {
+      border: none;
+      margin: 0 0 0 15px;
+
+      i {
+        left: 0.7em;
+        line-height: 38px;
+        top: 0;
+      }
+
+      .default {
+        padding: 8px 12px 8px 25px !important;
+      }
+
+      &.crm-button_qf_Print_next i:before {
+        @include fa-icon($font-size-base, $fa-var-print, $crm-white);
+      }
+
+      &.crm-button-type-back i {
+        display: none;
+      }
+    }
+
+    .crm-button .cancel {
+      border: 1px solid $gray-darker;
+      color: $gray-darker !important;
+      padding: 7px 15px !important;
+
+      &:hover {
+        background: $gray-darker;
+        color: $crm-white !important;
+      }
+    }
+  }
+
+  .page-civicrm-member .CRM_Member_Form_Search h3:first-of-type {
+    margin-top: 0;
+  }

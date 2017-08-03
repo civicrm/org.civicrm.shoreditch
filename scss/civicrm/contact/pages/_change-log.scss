@@ -1,0 +1,63 @@
+#changeLog {
+  & > div.bold {
+    background: $gray-lighter;
+    border-bottom: 1px solid $crm-background;
+    border-top-left-radius: $panel-border-radius;
+    border-top-right-radius: $panel-border-radius;
+    box-shadow: $box-shadow;
+    color: $gray-darker;
+    font: $crm-font-weight-h1 $font-size-h2 $font-family-base;
+    padding: 13px 20px;
+  }
+
+  > p {
+    margin: 0;
+  }
+
+  .form-item {
+    border-radius: 0 0 $border-radius-child $border-radius-child;
+    box-shadow: $crm-form-item-shadow;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  table {
+    @include mx-expandable-table();
+    border-radius: $border-radius-child;
+    box-shadow: none !important;
+
+    .columnheader {
+      border-color: $crm-dark-grayblue;
+
+      th {
+        text-transform: capitalize;
+      }
+
+      th:first-child {
+        width: $crm-sm-th-width;
+      }
+    }
+
+    tbody tr {
+      td {
+        padding: 15px 20px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: $border-radius-base;
+        border-bottom-right-radius: $border-radius-base;
+
+        td {
+          &:first-child {
+            border-bottom-left-radius: $border-radius-base;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: $border-radius-base;
+          }
+        }
+      }
+    }
+  }
+}
