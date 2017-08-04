@@ -94,7 +94,8 @@
   }
 }
 
-.crm-container .status {
+.crm-container > .status,
+.crm-container :not(.crm-footer) .status {
   padding: 15px;
 }
 
