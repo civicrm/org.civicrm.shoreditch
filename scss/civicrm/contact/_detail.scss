@@ -261,7 +261,6 @@
   .crm-summary-block-wrap {
     float: left;
     width: calc(100% - $contact-avatar*2); // 100% - width of the image - margin
-    margin-top: 0;
   }
 
   #crm-contactname-content {
@@ -270,7 +269,7 @@
 
     .crm-summary-display_name {
       float: left;
-      padding: 22px 20px !important; // centering name vertically
+      padding: 22px 0; // centering name vertically
     }
 
     .crm-edit-help {

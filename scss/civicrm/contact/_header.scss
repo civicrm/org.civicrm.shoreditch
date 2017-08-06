@@ -11,7 +11,6 @@
   display: inline-block;
   vertical-align: top;
   height: 100%;
-  margin: 10px 0 0 10px;
 }
 
 .crm-summary-contactphoto {
@@ -46,6 +45,7 @@
     background: $crm-page-topbar-bg;
     color: $crm-white;
     min-height: 110px; // min-height is needed as we use float inside
+    padding-left: 20px;
     position: relative;
   }
 
@@ -98,7 +98,6 @@
 .crm-summary-display_name {
   font-size: 24px !important;
   font-weight: $headings-font-weight;
-  padding-left: 20px !important;
   padding-top: 12px;
 
   .crm-summary-link {

@@ -156,10 +156,6 @@
     }
 
     .ui-widget-content {
-      &.ui-tabs-panel {
-        @include border-box();
-        padding-right: 15px !important;
-      }
 
       .crm-button i {
         top: 0.7em;
