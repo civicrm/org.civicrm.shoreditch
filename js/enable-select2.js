@@ -14,7 +14,7 @@ CRM.$(function() {
    * during DOM changes
    */
   var observer = new MutationObserver(debounce(function() {
-    CRM.$('select:visible')
+    CRM.$('select:visible:not([class*="no-select2"])')
       .select2({
         containerCss: {
           display: 'inline-block'
