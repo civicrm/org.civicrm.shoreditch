@@ -53,6 +53,24 @@
 
       .ui-datepicker-title {
         padding: 0 30px;
+
+        .select2-container {
+          background: $crm-white;
+          margin: 0 5px;
+
+          .select2-choice {
+            font-weight: 400 !important;
+            background: none;
+            border-radius: 2px;
+            border: 1px solid $crm-darker-grayblue;
+            box-shadow: $crm-select2-box-shadow-inset;
+          }
+
+          .select2-arrow {
+            background: none;
+            padding: 0 5px;
+          }
+        }
       }
     }
 

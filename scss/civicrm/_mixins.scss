@@ -1,0 +1,39 @@
+/*
+* It use for calculate height and width the element
+*/
+
+@mixin calc($property, $expression, $content:null) {
+  #{$property}: -moz-calc(#{$expression}) $content;
+  #{$property}: -webkit-calc(#{$expression}) $content;
+  #{$property}: calc(#{$expression}) $content;
+}
+
+/*
+* Mixin for Box sizing
+*/
+
+@mixin border-box() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*
+* A transformation is an effect that lets an element change shape, size and position.
+*/
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+/*
+* The translate() CSS function moves the position of the element on the plane. This transformation is characterized by a vector whose coordinates define how much it moves in each direction.
+*/
+
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}

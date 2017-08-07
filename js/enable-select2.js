@@ -14,8 +14,14 @@ CRM.$(function() {
    * during DOM changes
    */
   var observer = new MutationObserver(debounce(function() {
-    CRM.$('select:visible:not([class^="ui-datepicker"])').select2();
-  }, 500));
+    CRM.$('select:visible:not([class*="no-select2"])')
+      .select2({
+        containerCss: {
+          display: 'inline-block'
+        }
+      })
+      .on('change', clearSelect2);
+  }, 50));
 
   observer.observe(document.querySelector('body'), {
     childList: true,
@@ -32,5 +38,22 @@ CRM.$(function() {
         fn.apply(me, args);
       }, delay);
     };
+  }
+
+  /**
+   * Walk through all select fields and hide it
+   * if there isn't any option
+  */
+  function clearSelect2() {
+    window.setTimeout(function() {
+      CRM.$('select').each(function(idx, item) {
+        var id = '#s2id_' + CRM.$(item).attr('id');
+        var optionsLength = CRM.$(item).find('option').length;
+
+        if (optionsLength === 0) {
+          CRM.$(id).remove();
+        }
+      });
+    }, 50);
   }
 });
