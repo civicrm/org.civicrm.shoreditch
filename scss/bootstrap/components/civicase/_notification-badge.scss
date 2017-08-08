@@ -1,0 +1,38 @@
+.crm_notification-badge {
+  background: $brand-primary;
+  border-radius: $border-radius-base;
+  color: $crm-white;
+  display: inline-block;
+  font-size: $font-size-base;
+  line-height: 14px;
+  padding: 5px 8px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover {
+    color: $crm-white;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
+.crm_notification-badge__info {
+  background: $brand-info;
+  color: $crm-white;
+}
+
+.crm_notification-badge__success {
+  background: $brand-success;
+  color: $crm-white;
+}
+
+.crm_notification-badge__warning {
+  background: $brand-warning;
+  color: $crm-white;
+}
+
+.crm_notification-badge__danger {
+  background: $brand-danger;
+  color: $crm-white;
+}
