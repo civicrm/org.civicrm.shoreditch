@@ -111,6 +111,10 @@
         font-size: 13px;
       }
     }
+
+    #customFields {
+      width: auto !important;
+    }
   }
 
   .crm-accordion-body {
@@ -341,10 +345,6 @@
           margin-right: 3px;
         }
       }
-    }
-
-    #customFields {
-      width: auto !important;
     }
   }
 
