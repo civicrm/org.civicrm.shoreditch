@@ -218,13 +218,13 @@
     }
 
     .add-shortcut {
-      visibility: hidden;
+      display: none;
     }
 
     h1 {
       &.page-title {
         margin-top: -20px !important;
-        margin-bottom: 28px !important;
+        margin-bottom: 46px !important;
         padding: 0 40px !important;
         background: $crm-white;
         color: $gray-darker;
