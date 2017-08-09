@@ -54,3 +54,73 @@
     }
   }
 }
+
+.page-civicrm-contact-search-advanced {
+  .CRM_Contact_Form_Task_Email {
+    .crm-contactEmail-form-block-recipient {
+      td {
+        &:first-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.CRM_Contact_Form_Task_Email {
+  .crm-contactEmail-form-block {
+    .form-layout-compressed {
+      width: 100%;
+
+      .crm-contactEmail-form-block-recipient {
+        td {
+          &.label {
+            font-weight: 600;
+            color: $gray-darker;
+          }
+
+          &:first-child {
+            &:after {
+              content: "*";
+              font-weight: bold;
+              margin: 0 5px;
+              color: $brand-danger;
+            }
+          }
+        }
+
+        .select2-container {
+          width: 100% !important;
+        }
+      }
+
+      td {
+        &.label {
+          padding-left: 30px !important;
+        }
+      }
+    }
+
+    .crm-html_email-accordion {
+      .helpIcon {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+    }
+
+    #s2id_fromEmailAddress,
+    #s2id_to {
+      &:after {
+        display: none;
+      }
+    }
+
+    .crm-contactEmail-form-block-template {
+      .crm-form-select {
+        padding-right: 30px !important;
+      }
+    }
+  }
+}

@@ -154,4 +154,66 @@
       }
     }
   }
+
+  .help {
+    padding: 0 0 10px 0;
+  }
+
+  .required {
+    &:after {
+      display: none;
+    }
+  }
+
+  h3 {
+    border-bottom: 0 !important;
+  }
+
+  h3,
+  td.label {
+    padding-left: 0;
+  }
+
+  input[type=checkbox]:checked+label[for]::after {
+    left: 2px;
+    top: 6px;
+  }
+
+  .CRM_Contact_Import_Form_DataSource {
+    .form-layout {
+      width: auto;
+
+      td.label {
+        display: table-cell;
+      }
+    }
+
+    input[type=radio] + label[for] {
+      margin-bottom: 5px;
+    }
+
+    #data-source-form-block {
+      td.label {
+        vertical-align: top !important;
+        padding-top: 20px;
+      }
+
+      br {
+        display: none;
+      }
+
+      .crm-import_sql-form-block-sqlQuery {
+        td.label {
+          display: table-cell;
+          vertical-align: top !important;
+          padding-top: 10px;
+        }
+
+        .crm-form-textarea {
+          display: block;
+          min-height: 100px;
+        }
+      }
+    }
+  }
 }

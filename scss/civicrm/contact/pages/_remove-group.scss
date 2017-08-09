@@ -1,0 +1,11 @@
+#RemoveFromGroup {
+  .crm-contact-task-removefromgroup-form-block {
+    > .form-layout-compressed {
+      margin-left: 20px !important;
+    }
+
+    .required:after {
+      display: none;
+    }
+  }
+}

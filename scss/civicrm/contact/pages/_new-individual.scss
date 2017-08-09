@@ -1,35 +1,28 @@
 .page-civicrm-contact-add {
+  .crm-search-form-block {
+    border-radius: $border-radius-child !important;
+  }
+
+  .crm-edit-address-form > tbody > tr:first-child td:last-child a:link {
+    color: $brand-danger;
+  }
+
   @media (min-device-width: $screen-sm-min) {
-    .crm-container {
-      .crm-contactDetails-accordion {
-        .contact_basic_information-section {
-          tr {
-            &:first-child {
-              td {
-                &:last-child {
-                  min-width: 150px;
-                }
-              }
-            }
+    .crm-container .crm-contactDetails-accordion {
+      border-radius: $border-radius-child $border-radius-child 0 0 !important;
 
-            td {
-              > input[type="text"] {
-                width: 100% !important;
-                min-width: 100% !important;
-              }
+      .crm-accordion-header {
+        border-radius: $border-radius-child $border-radius-child 0 0 !important;
+      }
 
-              &:last-child {
-                > .select2-container {
-                  width: auto !important;
-                  min-width: auto !important;
-                }
+      .contact_basic_information-section tr {
+        &:first-child td {
+          &:last-child {
+            min-width: 150px;
+          }
 
-                #s2id_suffix_id {
-                  width: 80px !important;
-                  min-width: 80px !important;
-                }
-              }
-            }
+          &:first-child {
+            min-width: 170px;
           }
         }
 
@@ -38,19 +31,39 @@
           padding-right: 40px !important;
         }
 
-        .select2-container,
-        .crm-form-select {
-            min-width: 120px !important;
+        td {
+          > input[type="text"] {
+            min-width: 100% !important;
+            width: 100% !important;
+          }
 
-            + .crm-option-edit-link {
-              position: relative;
-              left: -15px;
+          &:last-child {
+            > .select2-container {
+              min-width: auto !important;
+              width: auto !important;
             }
-        }
 
-        input[type='text'] {
-          width: auto !important;
+            #s2id_suffix_id {
+              min-width: 80px !important;
+              width: 80px !important;
+            }
+          }
         }
+      }
+
+      .select2-container,
+      .crm-form-select {
+        min-width: 120px !important;
+        width: 120px !important;
+
+        + .crm-option-edit-link {
+          left: -15px;
+          position: relative;
+        }
+      }
+
+      input[type='text'] {
+        width: auto !important;
       }
     }
   }
@@ -66,17 +79,27 @@
     }
 
     .crm-form-block.crm-form-block {
-      > .crm-submit-buttons {
-        &:nth-child(3) {
-          display: none;
+      > .crm-submit-buttons:nth-child(3) {
+        display: none;
+      }
+
+      [class*='add-more-link-'] {
+        padding: 15px;
+
+        .crm-hover-button {
+          background-color: $crm-copy !important;
+          color: $crm-white !important;
+          padding: 7px 19px;
+        }
+
+        .crm-hover-button:hover {
+          background-color: $crm-light-gray-color !important;
+        }
+
+        .crm-hover-button .crm-i {
+          margin-right: 10px;
         }
       }
-    }
-
-    #addMoreAddress1 {
-      height: auto;
-      zoom: 1;
-      overflow: auto;
     }
 
     .crm-button_qf_Contact_refresh_dedupe {
@@ -92,5 +115,242 @@
     #customFields {
       width: auto !important;
     }
+  }
+
+  .crm-accordion-body {
+    td {
+      label {
+        padding-left: 0 !important;
+      }
+
+      #s2id_employer_id {
+        width: 100% !important;
+      }
+
+      #s2id_preferred_language,
+      #s2id_preferred_mail_format {
+        float: left;
+      }
+
+      #s2id_contact_sub_type {
+        max-width: 180px;
+
+        .select2-search-field {
+          width: 20%;
+        }
+
+        .select2-choices {
+          padding-right: 20px;
+        }
+      }
+
+      #s2id_group {
+        max-width: 230px;
+      }
+    }
+  }
+  .contact_information-section {
+    table-layout: fixed;
+
+    tr {
+      &:first-child {
+        td {
+          &:first-child {
+
+          }
+        }
+      }
+    }
+
+    tr {
+      td {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          position: relative;
+          z-index: 1;
+          text-align: left;
+        }
+
+        &:nth-child(1) {
+          width: 435px;
+        }
+      }
+
+      &[id^="Email_Block_"] {
+        td {
+          &:nth-child(2) {
+            right: 10px;
+            width: 200px;
+          }
+
+          &:nth-child(3) {
+            left: 7px;
+            width: 200px;
+          }
+
+          &:nth-child(4) {
+            left: 7px;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  #commPrefs {
+    table {
+      tr {
+        &:nth-child(1) {
+          td {
+            padding-bottom: 10px;
+          }
+        }
+
+        &:nth-child(3) {
+          td:nth-child(4) {
+            position: relative;
+            top: 35px;
+            right: 35px;
+          }
+        }
+
+        td {
+          max-width: 270px;
+
+          select {
+            max-width: 200px;
+            padding-right: 30px !important;
+          }
+        }
+      }
+    }
+  }
+
+  #demographics {
+    .labels {
+      padding: 15px 0;
+
+      label {
+        float: left;
+      }
+    }
+  }
+
+  #customData1 {
+    .help {
+      padding: 15px;
+    }
+
+    table td {
+      padding-left: 0;
+      vertical-align: middle;
+    }
+  }
+
+  #tagtree {
+    li {
+      padding: 10px 0;
+
+      span {
+        background: none;
+      }
+
+      input[type=checkbox] {
+
+        &:checked + spab {
+          label[for]::before {
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+        }
+
+        + span {
+          label[for]::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            min-width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            margin-right: 10px;
+            margin-bottom: -5px;
+            background-color: #ffffff;
+            box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+            border: solid 1px $crm-darker-grayblue;
+          }
+        }
+
+        &:checked + spab {
+          label[for] {
+            position: relative;
+          }
+        }
+        &:checked + span {
+          label[for]::after {
+            @include fa-icon($font-size: 15px, $content: '\f00c', $color: $gray-darker);
+            display: inline-block;
+            position: absolute;
+            left: 1px;
+            top: 7px;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      .form-checkbox {
+        display: none !important;
+      }
+    }
+  }
+
+  #addressBlock {
+    #addMoreAddress1 {
+      height: auto;
+      zoom: 1;
+      overflow: auto;
+    }
+
+    #Address-Primary-html {
+      padding-bottom: 10px;
+
+      .select2-container {
+        min-width: 90px;
+        margin-right: 10px;
+      }
+    }
+
+    label[for*="[use_shared_address]"] {
+      margin-bottom: 10px;
+    }
+
+    table[id^="address_table_"] {
+      tr {
+        &:nth-child(5) {
+          .crm-address-element {
+            td {
+              width: 33.3%;
+            }
+          }
+        }
+      }
+    }
+
+    .crm-add-address-wrapper {
+      .button {
+        margin: 5px !important;
+
+        i {
+          margin-top: -3px;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+
+  .collapsible-title {
+    padding: 15px 20px;
+    border-bottom: 0;
+    font-size: 1.1em;
   }
 }

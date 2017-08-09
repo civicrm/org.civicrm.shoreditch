@@ -1,95 +1,63 @@
-.CRM_Contact_Form_Search_Advanced .crm-results-block {
+.CRM_Contact_Form_Search_Advanced .crm-results-block,
+.CRM_Contact_Form_Search_Basic .crm-results-block {
   @extend %block-with-shadow;
   margin-top: 20px;
 
   .crm-search-tasks {
-    border-radius: 0 !important;
+    background: $gray-lighter;
     border-bottom: solid 1px $crm-background;
-    margin-bottom: 15px !important;
-  }
+    border-radius: 0 !important;
+    box-shadow: none;
+    margin-bottom: 0 !important;
 
-  .crm-pager-nav {
-    padding-left: 0 !important;
-    a {
-      color: $brand-primary !important;
+    td {
+      padding: 10px;
+    }
 
-      &:hover {
-        color: $gray !important;
-      }
+    td .qill {
+      color: $crm-copy;
+    }
+
+    .select2-container {
+      margin: 0 !important;
     }
   }
 
-  .crm-tooltip-wrapper {
-    background-image: none !important;
+  .crm-pager {
+    margin: 0;
 
-    .crm-tooltip {
-      @extend %block-with-shadow;
-      background: $crm-dark-blue !important;
+    > .element-right {
+      margin-top: 7px;
+    }
 
-      .content,
-      .crm-table-group-summary tr td,
-      .label {
-        color: #ffffff !important;
-        font-weight: 600;
-      }
-
-      .crm-table-group-summary,
-      td {
-        background: $crm-dark-blue !important;
-
-        > div {
-          line-height: 30px;
-        }
-      }
-
-      .crm-section {
-        height: 30px !important;
-        margin-bottom: 0;
-        clear: both;
-      }
-
-      .crm-table-group-summary > tbody > tr:nth-child(1) > td {
-        font-size: 1.5em;
-      }
-
-      td,
-      tr {
-        border: 0 !important;
-        border-bottom: 0 !important;
-      }
+    + .float-right {
+      background: $crm-gray-lightest;
+      float: none !important;
+      padding: 4px 10px 10px !important;
+      text-align: right;
     }
   }
 
-  a {
-    &.crm-tooltip-down {
-      .crm-tooltip-wrapper {
-        &::before {
-          content: '';
-          position: relative;
-          top: 0;
-          left: 30px;
-          width: 0;
-          height: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-bottom: 10px solid $crm-dark-blue !important;
-        }
-      }
+  script + .crm-pager {
+    background: $crm-gray-lightest;
+  }
+
+  .sticky th {
+    line-height: 1.1em !important;
+    padding: 15px 20px !important;
+
+    &:not(:first-child):not(:nth-child(2)) {
+      padding-left: 0 !important;
     }
 
-    &:not(.crm-tooltip-down) {
-      .crm-tooltip-wrapper {
-        &::after {
-          content: '';
-          position: relative;
-          top: 0;
-          left: 30px;
-          width: 0;
-          height: 0;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-top: 10px solid $crm-dark-blue !important;
-        }
+    .sticky-header {
+      height: 30px;
+    }
+
+    &:last-child {
+      &,
+      span {
+        line-height: normal;
       }
     }
   }
@@ -97,21 +65,21 @@
   #alpha-filter,
   .crm-search-tasks,
   .crm-selection-reset {
-    background: #ffffff !important;
-    padding: 15px !important;
+    background: $crm-white !important;
+    padding: 15px 15px 5px !important;
   }
 
   #alpha-filter {
     float: left;
-    margin-bottom: 15px !important;
+    margin: 0 !important;
 
     a {
       color: $brand-primary;
     }
 
     + .crm-selection-reset {
-      margin-bottom: 15px !important;
       float: right;
+      margin-bottom: 10px !important;
       margin-top: 10px;
     }
   }
@@ -123,9 +91,51 @@
 
   table.selector {
     @extend %crm-table;
-    border-top: solid 1px $crm-background;
-    padding-top: 15px !important;
-    margin-top: 15px !important;
+    border-top: solid 1px $crm-dark-grayblue;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+    tr {
+      padding-left: 0 !important;
+
+      > th {
+        line-height: 1.5em !important;
+        padding: 14px 10px !important;
+        vertical-align: middle;
+      }
+
+      > th:first-child {
+        padding-left: 20px !important;
+      }
+
+      > td {
+        line-height: 1.5em;
+        padding: 12px 10px;
+        vertical-align: middle;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+      }
+
+      > td:not(:last-child),
+      > th:not(:last-child) {
+        .privacy-flag {
+          margin-left: 5px;
+          width: 27px;
+        }
+
+        > span {
+          align-items: center;
+          display: flex;
+        }
+      }
+    }
+
+    > tbody > tr > td:last-child {
+      padding-right: 20px;
+      text-align: right;
+    }
 
     tr.highlight > td {
       background: $gray-light !important;
@@ -137,42 +147,57 @@
       margin-top: 10px !important;
 
       li {
-        background: #ffffff !important;
+        background: $crm-white !important;
         padding: 0 !important;
+      }
 
-        a.crm-hover-button.action-item {
-          border: 0 !important;
-          border-radius: 0 !important;
-          line-height: 30px !important;
+      li a.crm-hover-button.action-item {
+        border: 0 !important;
+        border-radius: 0 !important;
+        color: $crm-copy !important;
+        font-weight: initial;
+
+        &:hover {
+          background-color: $crm-background !important;
           color: $crm-copy !important;
-          font-weight: initial;
-
-          &:hover {
-            background-color: $crm-background !important;
-          }
         }
       }
     }
 
     .crm-icon {
       background: none !important;
+      position: relative;
       text-indent: 0 !important;
+      top: -3px;
 
       &::before {
         text-indent: 0 !important;
       }
 
       &.Individual-icon::before {
-        @include fa-icon(13px, '\f007');
+        @include fa-icon($font-size-base, $fa-var-user);
       }
 
       &.Household-icon::before {
-        @include fa-icon(13px, '\f015');
+        @include fa-icon(13px, $fa-var-home);
       }
 
       &.Organization-icon::before {
-        @include fa-icon(13px, '\f1ad');
+        @include fa-icon(13px, $fa-var-building);
       }
     }
+  }
+
+  .font-size12pt {
+    font-size: $font-size-h2;
+    font-weight: $crm-font-weight-h2;
+    color: $gray-darker;
+    padding-bottom: 10px;
+  }
+
+  .font-size11pt {
+    font-size: $font-size-base;
+    font-weight: $crm-font-weight-h2;
+    color: $gray-darker;
   }
 }

@@ -3,15 +3,29 @@
   border-radius: 0;
   box-shadow: $box-shadow;
   margin: 15px 0;
-  color: $crm-copy;
+  font-size: 13px;
+
+  &,
+  a {
+    color: $gray-darker !important;
+  }
 
   > .element-right {
     margin-top: 3px;
   }
+
+  .crm-hover-button {
+    text-transform: capitalize !important;
+    position: relative;
+    top: -2px;
+  }
 }
 
 .ui-spinner {
-  border-radius: 0;
+  border-radius: 2px;
+  border: 1px solid $crm-darker-grayblue !important;
+  font-size: 13px;
+  color: $crm-copy;
 
   > a {
     background: none;

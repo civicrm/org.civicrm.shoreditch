@@ -1,0 +1,100 @@
+.page-civicrm-member-import {
+  .help {
+    padding: 0 20px;
+  }
+
+  #DataSource,
+  #MapField,
+  #Summary {
+    .crm-submit-buttons {
+      padding: 15px 10px !important;
+      border: none;
+      margin: 0 !important;
+    }
+  }
+
+  .form-layout {
+    padding: 20px;
+    display: block;
+    box-sizing: border-box;
+
+    #uploadFile,
+    #upload-file,
+    #fieldSeparator {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    #skipColumnHeader {
+      position: relative;
+      left: 80px;
+    }
+
+    input[type=radio] {
+      + label[for] {
+        margin-bottom: 15px;
+      }
+    }
+
+    .crm-import-datasource-form-block-fieldSeparator {
+      .helpicon {
+        position: relative;
+        bottom: 5px;
+      }
+    }
+  }
+
+  #map-field {
+    padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    table {
+      @include mx-expandable-table();
+      box-shadow: none !important;
+      margin-bottom: 20px;
+
+      th {
+        border-right: none !important;
+      }
+
+      td {
+        vertical-align: middle;
+        padding: 8px 10px 10px 10px !important;
+      }
+
+      tr {
+        border-color: $table-border-color !important;
+
+        th {
+          line-height: 30px !important;
+        }
+      }
+    }
+
+    .select2-container {
+      width: 250px !important;
+    }
+  }
+
+  #preview-counts,
+  #summary-counts {
+    @include mx-expandable-table();
+    box-shadow: none !important;
+    margin: 20px;
+    width: 96% !important;
+
+    th {
+      border-right: none !important;
+    }
+
+    td {
+      vertical-align: middle;
+      padding: 8px 10px 10px 10px !important;
+    }
+
+    tr {
+      border-color: $table-border-color !important;
+    }
+  }
+}

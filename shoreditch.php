@@ -136,8 +136,9 @@ function shoreditch_civicrm_coreResourceList(&$items, $region) {
  * Implements hook_civicrm_buildForm().
  */
 function shoreditch_civicrm_buildForm($formName) {
+  CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/enable-select2.js');
+
   if ($formName == 'CRM_Contact_Form_Search_Advanced') {
-    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/enable-select2.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/highlight-table-rows.js');
   }
 }
