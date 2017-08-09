@@ -1,0 +1,13 @@
+.crm_collapsible-content{
+  padding: 10px;
+
+  .crm_collapsible-content__title {
+    margin-bottom: 10px;    
+    text-transform: uppercase;
+
+    .fa {
+      color: $gray-darker;
+      margin-right: 10px;
+    }
+  }
+}
