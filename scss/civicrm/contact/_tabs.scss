@@ -1,44 +1,33 @@
 .crm-contact-page {
-  position: relative;
   padding: 4px;
+  position: relative;
 
   #mainTabContainer {
     background-color: transparent;
     padding: 0;
-    overflow: hidden;
 
     .ui-tabs-nav {
-      width: 15%;
-      float: left;
-      padding: 4px;
-
-      background: #FFFFFF;
-      padding: 0;
+      background: $crm-white;
       border-radius: 0;
       box-shadow: $box-shadow;
-
-      padding-bottom: 99999px;
+      float: left;
+      padding: 0 0 99999px;
       margin-bottom: -99999px;
+      width: 15%;
     }
 
     li.crm-tab-button {
-      display: block;
-      width: 100%;
-      font-size: 12px;
-      white-space: normal;
-
-      border: 0;
-      padding: 10px;
-      font-family: 'Open Sans';
-      font-size: 13px;
-      font-weight: 600;
       background: transparent;
+      border: 0;
       border-radius: 0;
-      top: 0;
       box-sizing: border-box;
-
-      padding: 0;
+      display: block;
+      font: $crm-font-weight-h2 $font-size-base $font-family-base;
       margin-bottom: 0;
+      padding: 0;
+      top: 0;
+      white-space: normal;
+      width: 100%;
 
       &.ui-tabs-active,
       &:hover {

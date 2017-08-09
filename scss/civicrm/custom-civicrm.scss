@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import '../bootstrap/overrides/variables';
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/overrides/variables';
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/variables';
@@ -15,6 +16,8 @@
 @import 'vacancies/vacancies';
 @import 'administer/administer';
 @import 'managers/manager';
+@import 'search/search';
+@import "dashboard/dashboard";
 
 body,
 %open-sans-font-family {

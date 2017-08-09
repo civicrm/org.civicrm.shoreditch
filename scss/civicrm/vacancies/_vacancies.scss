@@ -712,15 +712,9 @@
           }
         }
 
-        &-schedule_followup {
-          > td {
-            padding-bottom: 20px !important;
-          }
+        &-schedule_followup > td {
+          padding-bottom: 20px !important;
         }
-      }
-
-      .crm-accordion-body {
-        padding-left: 0 !important;
       }
     }
 

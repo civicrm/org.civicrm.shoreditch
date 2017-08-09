@@ -56,4 +56,14 @@
       padding-right: 0;
     }
   }
+
+  .spacer {
+    display: none;
+  }
+
+  #{$footer} {
+    td {
+      padding-left: 20px;
+    }
+  }
 }

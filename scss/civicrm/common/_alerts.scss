@@ -3,3 +3,7 @@
 .page-civicrm div#console {
   @extend .alert, .alert-warning;
 }
+
+.font-red {
+  color: $brand-danger !important;
+}

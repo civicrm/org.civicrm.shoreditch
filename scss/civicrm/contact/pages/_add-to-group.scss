@@ -1,0 +1,39 @@
+.CRM_Contact_Form_Task_AddToGroup {
+  .crm-contact-task-addtogroup-form-block {
+    > .form-layout {
+      > tbody > tr > td {
+        padding: 20px;
+      }
+
+      .label {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+  #id_existing_group {
+    > td {
+      padding: 20px;
+    }
+  }
+
+  #id_existing_group,
+  #id_new_group {
+    tr {
+      display: flex;
+    }
+  }
+
+  .crm-contact-task-addtogroup-form-block-description {
+    .label {
+      vertical-align: top;
+      display: table-cell;
+      text-align: left;
+    }
+
+    textarea {
+      width: 300px;
+      min-height: 100px;
+    }
+  }
+}

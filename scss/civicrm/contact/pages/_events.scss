@@ -1,0 +1,650 @@
+.CRM_Event_Form_Search {
+  .help {
+    background: $crm-light-green-color;
+    border: none;
+    border-radius: $border-radius-base;
+    padding: 10px;
+  }
+
+  .action-link {
+    line-height: 1em;
+    margin: 15px 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  table {
+    background: transparent;
+    border: none;
+    border-radius: $border-radius-child;
+    font-family: $font-family-base;
+
+    thead {
+      background: transparent !important;
+      border-bottom: 1px solid $crm-dark-grayblue;
+      border-radius: $border-radius-base $border-radius-base 0 0;
+
+      tr {
+        background: transparent !important;
+        border-radius: $border-radius-base $border-radius-base 0 0;
+      }
+
+      th {
+        background: $gray-lighter !important;
+        border: none;
+        color: $gray-darker !important;
+        line-height: 1.5em;
+        padding: 15px 10px;
+        vertical-align: middle;
+
+        div {
+          padding: 0;
+        }
+      }
+    }
+
+    tbody tr {
+      background: $crm-white;
+      border-bottom: 1px solid $crm-background;
+
+      td {
+        background: $crm-white;
+        border: none;
+        color: $gray-dark;
+        line-height: 1.5em;
+        max-width: 130px;
+        overflow: hidden;
+        padding: 10px;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+        white-space: nowrap;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
+        }
+
+        a.crm-hover-button.action-item:hover {
+          color: $brand-primary !important;
+        }
+      }
+
+      &:last-child {
+        border-radius: 0 0 $border-radius-base $border-radius-base;
+      }
+    }
+  }
+
+  p {
+    font-family: $font-family-base;
+  }
+}
+
+#Participant {
+  input,
+  select,
+  textarea,
+  .select2-container {
+    &.crm-inline-error,
+    &.crm-error,
+    &.error {
+      background: none !important;
+      border: 1px solid $brand-danger;
+      min-height: 30px;
+
+      &.select2-container {
+        padding: 0;
+      }
+    }
+  }
+
+  label {
+    &.crm-inline-error,
+    &.crm-error {
+      background: $brand-danger !important;
+      color: $crm-white !important;
+      padding: 5px;
+      border-radius: 3px;
+
+      &.crm-inline-error {
+        margin: 0 4px;
+      }
+
+      span {
+        background: none;
+        color: $crm-white;
+      }
+    }
+  }
+
+  input[type="radio"] + label {
+    line-height: 1.3em;
+  }
+
+  span {
+    &.crm-error {
+      background: $brand-danger !important;
+      color: $crm-white !important;
+      padding: 5px;
+      border-radius: 3px;
+      margin: 2px;
+
+      span {
+        background: none;
+        color: $crm-white;
+      }
+    }
+  }
+
+  &#Participant a.crm-option-edit-link {
+    left: 0;
+  }
+
+  textarea {
+    vertical-align: middle;
+    padding: 0px 5px;
+  }
+
+  .select2-container {
+    max-width: 230px;
+  }
+
+  .crm-participant-form-block {
+    table {
+      width: 100%;
+
+      &.form-layout-compressed {
+        tr {
+          &:nth-child(1) {
+            border-bottom: 0;
+
+            td {
+              border-bottom: 0;
+            }
+          }
+        }
+        tr {
+          td {
+            &:not(.label) {
+              width: 100%;
+            }
+
+            &.view-value {
+              padding: 10px 15px !important;
+            }
+
+            .select2-container {
+              &:after {
+                display: none;
+              }
+            }
+
+            table {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      &.form-layout {
+
+        #payment-info {
+          width: 100%;
+
+          table {
+            tr {
+              td,
+              th {
+                &:first-child {
+                  padding-left: 0;
+                }
+              }
+            }
+          }
+        }
+
+        .crm-event-eventfees-form-block-line_items {
+          & > td {
+            &:nth-child(2) {
+              width: 100%;
+
+              .total_amount-section {
+                padding: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    table {
+      box-shadow: none;
+    }
+
+    .label {
+      box-sizing: border-box;
+      font-size: $font-size-base;
+      line-height: 1.5em;
+      min-width: 210px;
+      padding: 15px 0;
+      text-align: left;
+    }
+
+    .auto-renew-text {
+      display: block;
+      padding: 10px 30px;
+    }
+
+    .crm-membership-form-block-record_contribution {
+      & > td {
+        padding: 0;
+
+        legend {
+          padding: 10px 30px;
+        }
+      }
+    }
+  }
+
+  .crm-event-eventfees-form-block-price_set_amount div[class*="-section"] {
+    .label {
+      box-sizing: border-box;
+      position: relative;
+      right: 225px;
+      width: 210px;
+    }
+
+    div[class*="-content"] {
+      bottom: 45px;
+      position: relative;
+    }
+
+    #pricesetTotal {
+      margin-bottom: 0;
+      margin-top: -95px;
+
+      #pricelabel {
+        position: relative;
+        top: 40px;
+      }
+    }
+  }
+
+  textarea {
+    height: 80px;
+    width: 100% !important;
+  }
+
+  #send_confirmation_receipt {
+    legend {
+      float: left;
+      margin: 15px 0;
+      padding: 10px 15px 10px 0;
+      width: 100%;
+    }
+
+    #notice {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .crm-contribution-amount {
+    a {
+      background-position: 0 50%;
+    }
+  }
+
+  .crm-participant-form-block-note td:nth-child(2) {
+    width: 100%;
+  }
+
+  .crm-event-eventfees-form-block-price_set_amount {
+    .view-value {
+      padding: 10px 15px 0;
+      width: 100%;
+    }
+
+    .price_set-section {
+      margin-bottom: 0;
+    }
+  }
+
+  .crm-event-eventfees-form-block-receipt_text {
+    td:not(.label) {
+      width: 100%;
+    }
+  }
+
+  #priceset,
+  #pricesetTotal {
+    .label {
+      padding-left: 0;
+      text-align: left;
+    }
+
+    .content {
+      clear: both;
+      margin: 0;
+    }
+
+    .price-set-option-content label:after {
+      top: 6px;
+    }
+  }
+
+  #payment_information {
+    & > td {
+      padding: 0;
+
+      legend {
+        padding: 10px 15px 10px 0;
+      }
+    }
+
+    .crm-section {
+      display: table;
+    }
+
+    .content {
+      margin-left: 0;
+      padding: 0 15px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .label {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: left;
+    }
+
+    input#cvv2 {
+      margin: 0;
+    }
+
+    div.crm-field-wrapper {
+      margin-bottom: 0;
+      display: table;
+    }
+  }
+
+  #billing-payment-block {
+    legend {
+      padding: 10px 15px 10px 0;
+    }
+
+    .label {
+      text-align: left;
+      width: 210px;
+    }
+  }
+
+  span.description {
+      display: block;
+      line-height: 1.5em;
+      margin-bottom: 5px;
+  }
+
+  .cvv2-section {
+    input,
+    .cvv2-section,
+    .crm-error {
+      float: left;
+    }
+  }
+
+  table#info,
+  .crm-event-participantview-form-block-fee_amount table,
+  table.selector,
+  .crm-event-eventfees-form-block-line_items table  {
+    @include mx-expandable-table();
+    box-shadow: none !important;
+  }
+}
+
+#ParticipantView {
+  .action-link {
+    display: none;
+  }
+
+  .crm-event-participant-view-form-block {
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+  }
+
+  .description {
+    margin: 20px 20px 10px;
+  }
+
+  table {
+    background: transparent;
+    border: none;
+    box-shadow: none !important;
+    font-family: $font-family-base;
+    margin: 10px 0;
+
+    &.selector {
+      display: block;
+      overflow-x: auto;
+
+      th, td {
+        white-space: nowrap;
+      }
+    }
+
+    thead tr {
+      border: 1px solid $crm-background !important;
+
+      th {
+        background: $gray-lighter !important;
+        border: none;
+        color: $gray-darker !important;
+        vertical-align: middle;
+
+        div {
+          padding: 0;
+        }
+      }
+    }
+
+    tbody tr {
+      background: $crm-white;
+      border: none;
+
+      &.crm-event-participantview-form-block-displayName td {
+        strong {
+          display: inline-block;
+          padding-top: 3px;
+        }
+
+        div {
+          float: right;
+        }
+      }
+
+      &.crm-child-row td {
+        padding: 0;
+      }
+
+      &.crm-child-row td .crm-ajax-container {
+        table {
+          margin: 0;
+
+          th {
+            background: $gray-lighter !important;
+            border: none;
+            color: $gray-darker;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      td {
+        background: $crm-white !important;
+        border: none;
+        line-height: 1.1em;
+        padding: 10px;
+
+        &.label {
+          border-bottom: none;
+          color: $gray-darker !important;
+          vertical-align: middle;
+
+          div {
+            padding: 0;
+          }
+        }
+
+        &:not(.label) {
+          color: $gray-dark;
+        }
+      }
+
+      td  > table {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  #paymentDetails_Information {
+    .helpicon {
+      left: 0;
+    }
+
+    td:not(.label) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  .crm-accordion-header {
+    font-size: $font-size-base !important;
+    font-family: $font-family-base;
+
+    + .crm-accordion-body {
+      padding: 20px !important;
+
+      td.label {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+  label[for="thankyou_date"] {
+    top: 7px;
+  }
+
+  label[for="thankyou_date_time"] {
+    top: 5px;
+  }
+
+  [id*="Food_Preference"] {
+    .crm-accordion-wrapper {
+      margin-left: -40px;
+      margin-right: -40px;
+
+      .crm-accordion-body {
+        padding: 20px 43px !important;
+      }
+    }
+
+    td {
+      box-sizing: border-box;
+      display: table-cell;
+      min-width: 170px;
+      vertical-align: middle;
+    }
+
+    .html-adjust {
+      width: 100%;
+    }
+  }
+
+  table#info,
+  .crm-event-participantview-form-block-fee_amount table,
+  table.selector {
+    @include mx-expandable-table();
+    box-shadow: none !important;
+  }
+}
+
+#ParticipantFeeSelection {
+  .crm-event-eventfees-form-block-line_items table {
+    @include mx-expandable-table();
+    box-shadow: none !important;
+  }
+
+  .crm-event-eventfees-form-block-price_set_amount {
+    td:first-child {
+      display: none;
+    }
+  }
+
+  #priceset {
+    display: table;
+
+    .crm-section {
+      display: table-row;
+    }
+
+    .crm-section .label,
+    .crm-section .content {
+      display: table-cell;
+      text-align: left;
+      min-width: 180px;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+
+    .crm-section .label {
+      width: 180px;
+    }
+
+    #pricevalue {
+      display: table-cell !important;
+    }
+  }
+
+  .priceset-group {
+    tr:nth-child(2) {
+      td:nth-child(1) {
+        display: none;
+      }
+
+      td:nth-child(2) {
+        display: flex;
+      }
+    }
+  }
+
+  .form-layout tr {
+    td {
+      display: table-cell;
+      text-align: left;
+      box-sizing: border-box;
+      padding-left: 0;
+
+      &.label {
+        min-width: 180px;
+      }
+    }
+  }
+
+  input[type="radio"] + label {
+    line-height: 1.3em;
+  }
+
+  textarea {
+    padding: 5px;
+    line-height: 1em;
+    vertical-align: middle;
+  }
+}

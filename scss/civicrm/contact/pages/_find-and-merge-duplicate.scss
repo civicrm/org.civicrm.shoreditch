@@ -1,39 +1,43 @@
 .page-civicrm-contact-deduperules {
   #crm-main-content-wrapper {
-    @include clearfix;
     margin-bottom: 30px;
+
+    &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
   }
 
   .help {
+    margin-bottom: 20px;
+
     + .crm-submit-buttons {
       display: none;
     }
   }
 
   .action-link {
-    line-height: normal;
     height: auto;
-    margin: 20px 0;
+    line-height: normal;
+    margin: 20px 15px 20px 0;
 
     .button {
       border: 0 !important;
+      box-shadow: $box-shadow;
     }
   }
 
   .crm-hover-button {
-    text-transform: lowercase;
     color: $brand-primary !important;
+    text-transform: lowercase;
   }
 
   #browseValues_ {
-    &Household,
-    &Individual,
-    &Organization {
-      @include clearfix;
-
-      .button {
-        margin: 10px 0 0 0;
-      }
+    &Household .button,
+    &Individual .button,
+    &Organization .button {
+      margin: 10px 0 20px;
     }
 
     &Individual,
@@ -42,13 +46,38 @@
     }
   }
 
+  #crm-main-content-wrapper div[id*="browseValues_"] {
+    table {
+      @include mx-expandable-table();
+
+      thead th {
+        padding: 15px 20px !important;
+      }
+
+      tbody td {
+        padding: 15px 20px !important;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    a.button {
+      box-shadow: $box-shadow;
+      background: $brand-primary !important;
+      border-color: $brand-primary !important;
+      color: $crm-white !important;
+
+      &:hover {
+        color: $gray-darker !important;
+      }
+    }
+  }
+
   table {
     &.mergecontact {
       @extend %civihr-table;
-
-      .DataTables_sort_icon {
-        display: inline-block !important;
-      }
     }
   }
 
@@ -93,6 +122,95 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+
+#DedupeRules {
+  box-shadow: $box-shadow;
+  margin: 15px 10px;
+
+  h3 {
+    background: $gray-lighter !important;
+    color: $crm-h3-color;
+    padding: 17px 25px;
+    margin: 0;
+    font-size: $font-size-h2;
+    font-weight: 600;
+  }
+
+  .crm-dedupe-rules-form-block {
+    box-shadow: none;
+
+    table {
+      &.form-layout {
+        & > tbody {
+          & > tr {
+            & > td {
+              &:nth-child(1) {
+                max-width: 120px;
+              }
+
+              &:nth-child(2) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .crm-dedupe-rules-form-block-fields {
+    table {
+      &.form-layout-compressed {
+        @include mx-expandable-table();
+
+        tr {
+          &.columnheader {
+            border: 1px solid $crm-background !important;
+
+            td {
+              font-size: 1em;
+
+              div {
+                padding: 0;
+              }
+            }
+          }
+
+          td {
+            width: 33.2%;
+
+            input[name*="weight_"],
+            input[name*="length_"] {
+              width: 50px !important;
+              min-width: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .help {
+    padding-left: 5px;
+  }
+}
+
+#DedupeFind {
+  .crm-submit-buttons .crm-button {
+    margin-left: 0;
+  }
+
+  table.form-layout-compressed {
+    margin: 0 15px;
+
+    td {
+      vertical-align: middle;
+      display: table-cell;
+      text-align: left;
     }
   }
 }
