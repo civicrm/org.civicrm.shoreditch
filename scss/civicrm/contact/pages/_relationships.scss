@@ -1,0 +1,312 @@
+.page-civicrm-contact {
+  #contact-summary-relationship-tab {
+    font-family: $font-family-base;
+
+    .action-link {
+      line-height: 20px;
+      margin-bottom: 20px;
+      margin-top: 0;
+      min-height: 20px;
+
+      a.button {
+        background: $brand-primary !important;
+        border-color: transparent !important;
+      }
+    }
+
+    h3 {
+      background: $gray-lighter;
+      border-bottom: 1px solid $crm-background;
+      color: $gray-darker;
+      font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
+      margin: 0 0 25px;
+      padding: 12px 20px;
+    }
+
+    .dataTables_wrapper {
+      border-radius: $border-radius-child;
+      box-shadow: $box-shadow;
+      margin: 20px 0;
+
+      table {
+        box-shadow: none !important;
+      }
+
+      .crm-datatable-pager-top {
+        background: $gray-lighter;
+        border-bottom: 1px solid $crm-background;
+        border-radius: $border-radius-child $border-radius-child 0 0;
+        padding-bottom: 39px;
+        padding-top: 10px;
+
+        .dataTables_paginate {
+          padding-top: 0;
+        }
+      }
+
+      .crm-datatable-pager-bottom {
+        background: $crm-gray-lightest;
+        border-radius: 0 0 $border-radius-child $border-radius-child;
+        line-height: 1.8em;
+        padding-bottom: 39px;
+        padding-top: 10px;
+
+        .dataTables_info,
+        .dataTables_paginate {
+          padding-top: 0;
+        }
+      }
+
+      .dataTables_paginate {
+        font: $font-size-base $font-family-base;
+        width: 48% !important;
+      }
+
+      .dataTables_length {
+        font: $font-size-base $font-family-base;
+        padding-left: 20px;
+      }
+
+      .dataTables_info {
+        font: $font-size-base $font-family-base;
+        line-height: 2.3em;
+        padding-left: 20px;
+        width: 49%;
+      }
+    }
+
+    div[id*="DataTables_Table_"] table.dataTable {
+      background: transparent;
+      border: none;
+      border-radius: $border-radius-child;
+      font-family: $font-family-base;
+      max-width: 100%;
+      width: 100% !important;
+
+      thead tr {
+        border-bottom: 1px solid $crm-dark-grayblue;
+        border-top-left-radius: $border-radius-base;
+        border-top-right-radius: $border-radius-base;
+
+        th {
+          background: $gray-lighter !important;
+          border: none;
+          color: $gray-darker;
+          font-weight: $crm-font-weight-h5;
+          line-height: 1.5em;
+          padding: 15px 20px;
+          vertical-align: middle;
+        }
+
+        th:first-child {
+          border-top-left-radius: $border-radius-base;
+        }
+
+        th:last-child {
+          border-top-right-radius: $border-radius-base;
+        }
+
+        th div {
+          padding: 0;
+        }
+      }
+
+      > tbody > tr {
+        background: $crm-white;
+        border-bottom: 1px solid $crm-background;
+        border-left: none;
+        border-right: none;
+
+        > td {
+          background: $crm-white;
+          border: none;
+          color: $gray-dark;
+          line-height: 1.1em;
+          max-width: 87px;
+          min-width: 76px;
+          padding: 15px 20px;
+          vertical-align: middle;
+
+          &:not(:first-child) {
+            padding: 15px 10px;
+          }
+
+          &:nth-child(1),
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(7) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &:nth-child(2) a:last-child {
+            display: inline-block;
+            line-height: 1.2em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 76%;
+          }
+
+          &:nth-child(3),
+          &:nth-child(4) {
+            max-width: 130px;
+            min-width: 130px;
+          }
+
+          &:last-child {
+            max-width: 100px;
+            padding: 10px 20px 10px 5px;
+            text-align: right;
+            width: 100px;
+
+            span {
+              display: inline-block;
+            }
+          }
+
+          &.dataTables_empty {
+            text-align: center;
+          }
+
+          a:not(.action-item) {
+            background: none;
+            color: $brand-primary;
+          }
+
+          .crm-table-group-summary td {
+            background: $crm-dark-blue !important;
+          }
+        }
+
+        > td .btn-slide,
+        > td .crm-hover-button {
+          background: none;
+          color: $brand-primary;
+          text-transform: capitalize;
+
+          &:hover a {
+            color: $crm-copy;
+          }
+        }
+      }
+
+      tbody > tr > td .btn-slide {
+        padding: 3px 0 !important;
+        text-indent: -600em;
+        width: 5px;
+
+        &:after, .panel {
+          text-indent: 0;
+        }
+      }
+    }
+
+    h3,
+    .accordion {
+      border-radius: $panel-border-radius;
+      box-shadow: $box-shadow;
+      margin-bottom: 10px;
+    }
+
+    #permission-legend {
+      color: $gray-darker;
+      font-size: $font-size-base;
+    }
+
+    .description {
+      background-color: $crm-light-green-color;
+      border-radius: $border-radius-child;
+      color: $crm-black-olive-color;
+      font-size: $font-size-base;
+      margin: 0 0 8px;
+      padding: 10px;
+    }
+
+    div[id*="s2id_autogen"] {
+      .select2-choice {
+        background: $crm-white;
+        border: 1px solid $crm-darker-grayblue;
+        border-radius: $border-radius-base;
+        box-shadow: $crm-select2-box-shadow-inset;
+      }
+
+      .select2-arrow {
+        background: none;
+        padding: 0 5px;
+      }
+    }
+
+    .font-red.label {
+      background: $gray-lighter;
+      border-bottom: 1px solid $crm-background;
+      border-radius: $panel-border-radius;
+      box-shadow: $box-shadow;
+      color: $gray-darker !important;
+      font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
+      margin: 0 0 10px;
+      padding: 12px 20px;
+    }
+
+    .crm-icon {
+      text-align: center;
+      text-indent: 0 !important;
+
+      &:before {
+        bottom: 2px;
+        font-size: $font-size-base !important;
+        position: relative;
+      }
+    }
+
+    .crm-icon.Individual-icon {
+      background: none;
+
+      &:before {
+        @include fa-icon($content: $fa-var-user);
+      }
+    }
+
+    .crm-icon.Organization-icon {
+      background: none;
+
+      &:before {
+        @include fa-icon($content: $fa-var-building-o);
+      }
+    }
+
+    .crm-icon.Household-icon {
+      background: none;
+
+      &:before {
+        @include fa-icon($content: $fa-var-home);
+      }
+    }
+  }
+
+  .ui-dialog .crm-relationship-view-block {
+    margin-bottom: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    table tbody td {
+      line-height: 1.5em;
+      padding: 7px 20px !important;
+    }
+
+    table tbody td label {
+        font-weight: 600;
+    }
+  }
+}
+
+.CRM_Contact_Form_Relationship {
+  td {
+    vertical-align: middle;
+  }
+
+  #is_active {
+    margin-left: 0 !important;
+  }
+}

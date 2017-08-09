@@ -1,12 +1,24 @@
 .page-civicrm-dedupe-exception {
   .action-link {
-    line-height: normal;
     height: auto;
-    margin: 20px 0;
+    line-height: normal;
+    margin: 10px 0;
 
     .crm-i {
       display: none;
     }
+  }
+
+  .crm-accordion-header {
+    border-radius: $panel-border-radius $panel-border-radius 0 0 !important;
+  }
+
+  .crm-main-content-wrapper.collapsed .crm-accordion-header {
+    border-radius: $panel-border-radius !important;
+  }
+
+  .crm-accordion-body {
+    border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
   }
 
   #dedupeExceptions {
@@ -14,10 +26,59 @@
   }
 
   .ui-toolbar {
-    background: transparent !important;
     border: 0;
-    margin: 20px 0 !important;
-    line-height: 25px;
     color: $crm-copy !important;
+    line-height: 2em;
+    padding: 10px 0 !important;
+
+    &:first-child {
+      background: $gray-lighter !important;
+      border-bottom: 1px solid $crm-background !important;
+    }
+
+    &:last-child {
+      background: $crm-gray-lightest !important;
+    }
+  }
+
+  .dataTables_wrapper {
+    margin: 20px 0 0;
+
+    .dataTables_length,
+    .dataTables_info {
+      float: left;
+      padding: 0 0 0 20px;
+    }
+
+    .dataTables_filter,
+    .dataTables_paginate {
+      margin: 0;
+      padding-right: 20px;
+      padding-top: 0;
+    }
+  }
+
+  .dataTables_filter input[type="search"] {
+    background-color: $crm-white;
+    border: 1px solid $crm-darker-grayblue;
+    border-radius: $border-radius-base;
+    box-shadow: $crm-search-input-shadow;
+    color: $gray-darker;
+    font-size: $font-size-base;
+    height: 30px;
+    line-height: 1.5;
+    padding: 4px 10px;
+    @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
+  }
+
+  table {
+    th {
+      background: $gray-lighter !important;
+      padding: 7px 20px !important;
+    }
+
+    td {
+      padding: 7px 20px !important;
+    }
   }
 }

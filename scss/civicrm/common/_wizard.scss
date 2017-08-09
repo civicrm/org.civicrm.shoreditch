@@ -1,0 +1,76 @@
+ul.wizard-bar {
+  width: 100%;
+  height: 60px !important;
+  background-color: $crm-white;
+  padding: 0 !important;
+  text-align: left !important;
+  border: 1px solid $crm-wizard-border !important;
+  overflow: hidden;
+
+  > li {
+    position: relative;
+    display: inline-block !important;
+    height: 62px !important;
+    line-height: 62px !important;
+    padding: 0 20px !important;
+    border-radius: 0 !important;
+    border: 0 !important;
+    font-size: $font-size-base !important;
+    font-weight: 600;
+    color: $gray-darker !important;
+    background-color: $crm-white !important;
+
+    &:first-child {
+      padding-left: 30px !important;
+    }
+
+    &:not(:first-child) {
+      padding-left: 50px !important;
+    }
+
+    &:before {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-top: 200px solid transparent;
+      border-bottom: 200px solid transparent;
+      border-left: 40px solid $crm-white;
+      position: absolute;
+      top: -167px;
+      right: -20px;
+      z-index: 11;
+    }
+
+    &:after {
+      content: '';
+      width: 0px;
+      height: 0px;
+      border-top: 200px solid transparent;
+      border-bottom: 200px solid transparent;
+      border-left: 40px solid $crm-wizard-border;
+      position: absolute;
+      top: -167px;
+      right: -21px;
+      z-index: 10;
+    }
+
+    &.current-step {
+      background-color: $crm-wizard-border !important;
+      color: $brand-primary !important;
+
+      &:before {
+        border-left-color: $crm-wizard-border;
+      }
+    }
+  }
+}
+
+#wizard-steps {
+  + h1,
+  + h2 {
+    &,
+    + .crm-submit-buttons {
+      display: none;
+    }
+  }
+}
