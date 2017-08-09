@@ -2,43 +2,52 @@
 @import '../bootstrap/overrides/style/modals';
 
 .crm-container.ui-dialog {
-  border-radius: 0;
   background: $gray-lighter;
+  box-shadow: none;
   max-height: 90%;
-  overflow-y: auto;
+  padding: 0;
 
   .help {
-    border-radius: 2px;
+    border-radius: $border-radius-base;
   }
 
   table {
     @extend %crm-table;
 
     td {
+      background: $crm-white;
       color: $crm-copy;
-      font-weight: 400;
+      font-weight: $badge-font-weight;
+    }
 
-      &:first-child {
-        font-weight: 600 !important;
+    td:first-child {
+      background: $crm-white;
+      color: $gray-darker;
+      font-weight: $crm-font-weight-h3 !important;
+
+      label {
         color: $gray-darker;
+        font-weight: $crm-font-weight-h3 !important;
       }
     }
   }
 
   .ui-dialog-titlebar {
     @extend .modal-header, %open-sans-font-family;
-    padding: 20px;
-    background: none !important;
     border: none !important;
-    border-bottom: 1px solid $crm-background !important;
+    border-bottom: 1px solid $crm-dark-grayblue !important;
+    box-shadow: $crm-contribute-form-shadow;
     color: $gray-darker !important;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 99999;
 
     .ui-dialog-title {
       @extend .modal-title, %open-sans-font-family;
-      font-size: 18px;
       background: none;
-      padding-left: 20px;
-      font-weight: 600;
+      font-size: $font-size-h2;
+      font-weight: $crm-font-weight-h2;
+      padding-left: 0;
     }
 
     > .ui-button {
@@ -66,10 +75,15 @@
 
   .ui-dialog-content {
     @extend .modal-body, %open-sans-font-family;
-    padding: 20px;
-    margin-top: 0;
+    @include calc(max-height, '100vh - 280px',!important);
+    background: $crm-white;
     height: auto !important;
-    background: $gray-lighter;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 20px;
+    position: static;
+    z-index: 1;
+
 
     a.button:not(.hr-job-info-close) {
       @extend .btn-primary;
@@ -78,11 +92,65 @@
     h3 {
       display: none;
     }
+
+    .crm-block {
+      box-shadow: none;
+      padding: 0 0 20px;
+    }
+
+    .crm-submit-buttons {
+      display: none;
+    }
+
+    table {
+      tr,
+      td,
+      th {
+        border-bottom: 0;
+      }
+    }
+
+    .crm-accordion-wrapper {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
 
   .ui-dialog-buttonpane {
     @extend .modal-footer, %open-sans-font-family;
-    background: #ffffff;
-    border-top: 0;
+    background: $gray-lighter;
+    border-top: 1px solid $crm-dark-grayblue !important;
+    box-shadow: $crm-contribute-form-shadow;
+    display: block;
+    margin-top: 0;
+    position: relative;
+    z-index: 99999;
+
+    .ui-dialog-buttonset {
+      margin: 0;
+      width: 100%;
+
+      button {
+        background: $brand-primary;
+        float: right;
+        margin-left: 10px;
+        margin-right: 0;
+
+        &[data-identifier*="cancel"] {
+          float: left;
+          margin-left: 0 !important;
+        }
+
+        &:hover {
+          color: $crm-white;
+          opacity: .8;
+        }
+
+        &,
+        .ui-button-text {
+          font-size: $font-size-base;
+        }
+      }
+    }
   }
 }

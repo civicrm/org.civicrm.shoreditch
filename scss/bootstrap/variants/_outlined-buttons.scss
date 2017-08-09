@@ -1,0 +1,45 @@
+@import "../mixins/button-outline-variant";
+@import "../mixins/hover";
+@import "../overrides/variables";
+
+.btn-default-outline {
+  @include button-outline-variant($crm-white);
+  color: $crm-white !important;
+  border-color: $crm-white !important;
+
+  .open &,
+  &:hover,
+  &:active {
+    background-color: $crm-white !important;
+    color: $crm-dark-blue !important;
+  }
+}
+
+.btn-primary-outline {
+  @include button-outline-variant($btn-primary-bg);
+}
+
+.btn-secondary-outline {
+  @include button-outline-variant($gray-darker, $gray-dark);
+  border-color: $gray-darker !important;
+
+  &:hover {
+    color: #ffffff !important;
+  }
+}
+
+.btn-info-outline {
+  @include button-outline-variant($btn-info-bg);
+}
+
+.btn-success-outline {
+  @include button-outline-variant($btn-success-bg);
+}
+
+.btn-warning-outline {
+  @include button-outline-variant($btn-warning-bg);
+}
+
+.btn-danger-outline {
+  @include button-outline-variant($btn-danger-bg);
+}

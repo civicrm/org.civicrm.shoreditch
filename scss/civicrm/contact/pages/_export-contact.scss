@@ -1,0 +1,147 @@
+.CRM_Export_Form_Select {
+  h2 {
+    padding-left: 20px;
+  }
+
+  .help {
+    padding: 20px;
+  }
+
+  .label {
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .label,
+  label,
+  .content {
+    color: $gray-darker;
+  }
+
+  label {
+    font-weight: normal !important;
+  }
+
+  #postal_mailing_export_postal_mailing_export {
+    margin-left: 0 !important;
+  }
+
+  #export-type {
+    padding: 0 20px;
+
+    h3 {
+      padding-left: 0;
+      color: $gray-darker;
+      font-size: $font-size-h3;
+    }
+  }
+
+  .crm-submit-buttons {
+    > .crm-button {
+      margin-left: 0 !important;
+      margin-right: 10px !important;
+    }
+  }
+
+  .crm-content-mergeOptions {
+    label[for="CIVICRM_QFID_0_6"] {
+      margin-left: -3px !important;
+    }
+  }
+
+  #wizard-steps {
+    + h2 {
+      top: 0;
+    }
+
+    .wizard-bar {
+      display: none;
+    }
+  }
+}
+
+.CRM_Export_Form_Map {
+  .help {
+    margin-bottom: 0;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .wizard-bar {
+    margin-bottom: 0 !important;
+  }
+
+  #map-field {
+    > table {
+      width: 100% !important;
+
+      .columnheader {
+        th {
+          font-size: $font-size-h2;
+        }
+
+        &-dark {
+          th {
+            font-size: $font-size-h3;
+          }
+        }
+
+        &,
+        &-dark {
+          th {
+            height: 47px;
+            line-height: 47px;
+            text-transform: none;
+            padding-left: 20px;
+            color: $gray-darker;
+            font-weight: 600;
+            background-color: $crm-accordion-header-color;
+            border: 0;
+            border-left: 1px solid $crm-accordion-header-color;
+            border-top: 1px solid $crm-background;
+            border-bottom: 1px solid $crm-dark-grayblue;
+          }
+        }
+      }
+
+      th,
+      td {
+        border-right: 0 !important;
+      }
+
+      td {
+        padding-left: 20px !important;
+      }
+
+      + div {
+        padding-left: 20px;
+
+        td {
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  #saveDetails {
+    .label {
+      width: 80px;
+      display: table-cell;
+      text-align: left;
+      vertical-align: middle;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .crm-form-text {
+      margin-top: 0 !important;
+    }
+  }
+
+  input[type=checkbox]:checked + label[for]::after {
+    left: 2px;
+    top: 7px;
+  }
+}

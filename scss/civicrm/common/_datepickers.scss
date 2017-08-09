@@ -8,7 +8,7 @@
     box-shadow: none !important;
   }
 
-  * {
+  *:not(b) {
     background: none !important;
   }
 

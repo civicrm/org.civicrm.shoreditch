@@ -11,7 +11,6 @@
   display: inline-block;
   vertical-align: top;
   height: 100%;
-  margin: 10px 0 0 10px;
 }
 
 .crm-summary-contactphoto {
@@ -28,25 +27,26 @@
 }
 
 .crm-contact-detail {
-  margin-right: 15px;
   color: $gray-lighter;
+  margin-right: 15px;
 
   strong {
-    color: #FFFFFF;
+    color: $crm-white;
   }
 }
 
 .crm-contact-detail-wrap {
-  margin-top: 8px;
   line-height: 20px;
+  margin-top: 8px;
 }
 
 #crm-container {
   div.crm-summary-contactname-block {
-    position: relative;
     background: $crm-page-topbar-bg;
-    color: #FFFFFF;
+    color: $crm-white;
     min-height: 110px; // min-height is needed as we use float inside
+    padding-left: 20px;
+    position: relative;
   }
 
   .crm-contact-page {
@@ -55,14 +55,14 @@
 }
 
 .crm-actions-ribbon {
-  color: #FFFFFF;
   background: $crm-page-topbar-bg-light;
-  padding: 15px 10px;
+  color: $crm-white;
   margin-bottom: 0 !important;
+  padding: 15px 20px;
 
   .button {
-    border: 0 !important;
     background-color: $brand-primary !important;
+    border: 0 !important;
 
     &.delete {
       background-color: $brand-danger !important;
@@ -73,22 +73,41 @@
   .crm-previous-action {
     .button {
       background-color: transparent !important;
-      border: 1px solid #FFFFFF !important;
-      padding-left: 4px !important;
+      border: 1px solid $crm-white !important;
+      padding: 7px 6px 7px 0 !important;
+      width: 90px;
 
       .crm-i {
         display: none;
       }
     }
   }
+
+  .button {
+    .crm-i {
+      top: 0;
+    }
+  }
+
+  .crm-i {
+    position: relative;
+    top: -2px;
+  }
 }
 
 .crm-summary-display_name {
   font-size: 24px !important;
-  font-weight: 600;
+  font-weight: $headings-font-weight;
   padding-top: 12px;
 
   .crm-summary-link {
     display: none;
+  }
+}
+
+.crm-inline-edit-field {
+  .select2-drop,
+  .select2-choice {
+    width: auto !important;
   }
 }
