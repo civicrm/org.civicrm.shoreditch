@@ -1,0 +1,10 @@
+@mixin crm-action-dot {
+  background-color: $gray-darker;
+  border-radius: $crm-action-dot-border-radius;
+  color: white;
+  font-size: $font-size-h2;
+  height: 2.3em;
+  line-height: 2.2em;
+  text-align: center;
+  width: 2.3em;
+}

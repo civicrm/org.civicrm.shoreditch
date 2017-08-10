@@ -5,6 +5,7 @@ $crm-box-shadow-sub-panel: 0 7px 16px 1px rgba(0,0,0,0.1);
 $crm-box-shadow-inset: inset 0 -1px 18px -3px rgba(148,148,148,0.62);
 $crm-select2-box-shadow-inset: inset 0 0 9px -5px rgb(51, 51, 51);
 $crm-modal-footer-shadow: inset 0 8px 21px -6px rgba(148, 148, 148, 0.4);
+$crm-action-card-milestone-shadow: -5px 0 0 #4D5663 inset, 5px 0 0 #4D5663 inset;
 
 //== CiviCRM Page
 //
@@ -67,6 +68,7 @@ $crm-dark-blue:             #586277 !default;
 $crm-dark-grayblue:         #D3DEE2 !default;
 $crm-darker-grayblue:       #C2CFD8 !default;
 $crm-white:                 #FFF !default;
+$crm-gray-darker:           #525966;
 
 $crm-dialog-container-border: #d3dee2;
 
@@ -128,6 +130,8 @@ $padding-base-horizontal: 10px !default;
 $border-radius-base:  2px !default;
 $border-radius-small: $border-radius-base !default;
 $border-radius-child: 4px !default;
+$crm-action-dot-border-radius: 50%;
+$border-radius-label: 20px;
 
 
 //== Tables
