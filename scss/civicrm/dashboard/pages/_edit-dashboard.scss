@@ -1,0 +1,100 @@
+#help {
+  clear: both;
+  margin-top: 30px;
+  border: none;
+  box-shadow: $box-shadow;
+  background-color: $crm-help-success;
+  color: $crm-copy;
+}
+
+.dashlets-header {
+  font-size: $font-size-h3;
+  margin-bottom: 20px;
+}
+
+#available-dashlets {
+  width: auto;
+  border: 1px dashed $crm-dasboard-header;
+  background-color: $crm-white;
+  min-height: 40px;
+  padding: 25px;
+
+  .portlet {
+    border: none;
+
+    .portlet-header {
+      background: $crm-accordion-header-color;
+      margin: 0;
+      color: $crm-dark-blue;
+      padding: 15px;
+      font-size: $font-size-medium;
+      border-color: $crm-dark-grayblue;
+      font-family: $font-family-base;
+      font-weight: 600;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+    }
+  }
+}
+
+div[id*="dashlets-header-col"] {
+  float: left;
+  margin: 0 !important;
+  width: 49% !important;
+  color: $crm-white;
+  font-family: $font-family-base;
+  font-size: $font-size-h3;
+  background: $crm-dasboard-header;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &[id*="col-1"] {
+    float: right;
+  }
+}
+
+div[id*="existing-dashlets-col"] {
+  float: left;
+  margin: 0 !important;
+  width: 49% !important;
+  border: none !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: $crm-white !important;
+  padding: 15px;
+
+  &[id*="col-1"] {
+    float: right;
+  }
+
+  .portlet {
+    border: none;
+    margin-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .portlet-header {
+      background: $crm-accordion-header-color;
+      margin: 0;
+      color: $crm-dark-blue;
+      padding: 15px;
+      font-size: $font-size-medium;
+      border-color: $crm-dark-grayblue;
+      font-family: $font-family-base;
+      font-weight: 600;
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+    }
+  }
+
+}
