@@ -1,10 +1,10 @@
 #help {
-  clear: both;
-  margin-top: 30px;
+  background-color: $crm-help-success;
   border: none;
   box-shadow: $box-shadow;
-  background-color: $crm-help-success;
+  clear: both;
   color: $crm-copy;
+  margin-top: 30px;
 }
 
 .dashlets-header {
@@ -13,43 +13,39 @@
 }
 
 #available-dashlets {
-  width: auto;
-  border: 1px dashed $crm-dasboard-header;
   background-color: $crm-white;
+  border: 1px dashed $crm-dasboard-header;
   min-height: 40px;
   padding: 25px;
+  width: auto;
 
   .portlet {
     border: none;
 
     .portlet-header {
+      @include prefix(border-radius, 2px, webkit moz);
       background: $crm-accordion-header-color;
-      margin: 0;
-      color: $crm-dark-blue;
-      padding: 15px;
-      font-size: $font-size-medium;
       border-color: $crm-dark-grayblue;
+      color: $crm-dark-blue;
       font-family: $font-family-base;
-      font-weight: 600;
-      border-radius: 2px;
-      -moz-border-radius: 2px;
-      -webkit-border-radius: 2px;
+      font-size: $font-size-medium;
+      font-weight: $crm-font-weight-h3;
+      margin: 0;
+      padding: 15px;
     }
   }
 }
 
 div[id*="dashlets-header-col"] {
-  float: left;
-  margin: 0 !important;
-  width: 49% !important;
+  @include border-box();
+  background: $crm-dasboard-header;
   color: $crm-white;
+  float: left;
   font-family: $font-family-base;
   font-size: $font-size-h3;
-  background: $crm-dasboard-header;
+  margin: 0 !important;
   padding: 15px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  width: 49% !important;
 
   &[id*="col-1"] {
     float: right;
@@ -57,15 +53,13 @@ div[id*="dashlets-header-col"] {
 }
 
 div[id*="existing-dashlets-col"] {
+  @include border-box();
+  background: $crm-white !important;
+  border: none !important;
   float: left;
   margin: 0 !important;
-  width: 49% !important;
-  border: none !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background: $crm-white !important;
   padding: 15px;
+  width: 49% !important;
 
   &[id*="col-1"] {
     float: right;
@@ -83,17 +77,15 @@ div[id*="existing-dashlets-col"] {
     }
 
     .portlet-header {
+      @include prefix(border-radius, 2px, webkit moz);
       background: $crm-accordion-header-color;
-      margin: 0;
-      color: $crm-dark-blue;
-      padding: 15px;
-      font-size: $font-size-medium;
       border-color: $crm-dark-grayblue;
+      color: $crm-dark-blue;
       font-family: $font-family-base;
-      font-weight: 600;
-      border-radius: 2px;
-      -moz-border-radius: 2px;
-      -webkit-border-radius: 2px;
+      font-size: $font-size-medium;
+      font-weight: $crm-font-weight-h3;
+      margin: 0;
+      padding: 15px;
     }
   }
 

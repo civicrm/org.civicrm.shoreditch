@@ -21,14 +21,13 @@
         border-bottom: 1px solid $crm-dark-grayblue;
 
         th {
-          border-bottom: none;
           background: $gray-lighter !important;
-          color: $gray-darker !important;
-          vertical-align: middle;
           border: none;
+          color: $gray-darker !important;
+          line-height: 1.5em;
           padding: 10px 15px;
           text-align: left;
-          line-height: 1.5em;
+          vertical-align: middle;
 
           div {
             padding: 0;
@@ -44,11 +43,11 @@
 
           td {
             background: $crm-white;
-            color: $gray-dark;
             border: none;
+            color: $gray-dark;
+            line-height: 1.5em;
             padding: 7px 15px;
             text-align: left;
-            line-height: 1.5em;
           }
         }
       }
@@ -213,7 +212,7 @@
       background-color: $gray-lighter;
       border-bottom: 1px solid $crm-dark-grayblue;
       border-top: 1px solid $crm-background;
-      font-size: 13px;
+      font-size: $font-size-base;
       margin: 0;
       padding: 11px 20px;
     }
