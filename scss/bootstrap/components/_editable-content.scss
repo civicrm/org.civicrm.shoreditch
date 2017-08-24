@@ -73,8 +73,7 @@
     }
 
     &:after {
-      content: $fa-var-pencil;
-      font-family: $font-family-fontawesome;
+      @include fa-icon($font-size-base,$fa-var-pencil);
       position: absolute;
       right: 0;
       text-align: center;
