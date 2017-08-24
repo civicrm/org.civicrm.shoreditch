@@ -1,31 +1,85 @@
-.crm-editable-enabled:not(.crm-editable-editing):hover {  
-  border: 1px solid $crm-darker-grayblue;
-  border-radius: $border-radius-base;
+.crm-editable-enabled {
   display: block;
-  padding: 1px 30px 1px 3px;
-  position: relative;  
+  position: relative;
 
-  &:before {
-    background-color: $crm-background;
-    border-left: 1px solid $crm-darker-grayblue;
-    border-radius: 0 $border-radius-base $border-radius-base 0;
-    bottom: 0;
-    content: "";
-    height: 100%;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    vertical-align: middle;
-    top: 0;
-    width: 30px;
+  .crm-editable-form {
+
+    button {
+      background-color: $gray-lighter;
+      border: 1px solid $crm-darker-grayblue;
+      border-radius: 0 0 0 $border-radius-base;
+      bottom: -29px;
+      color: $brand-primary;
+      height: 30px;
+      left: auto;
+      outline: none;
+      right: 32px;
+
+      .crm-i {
+        opacity: 1;
+      }
+
+      &[type=cancel] {
+        border-radius: 0 0 $border-radius-base;
+        border-left: 0;
+        color: $brand-danger;
+        right: 0;
+      }
+    }
+
+    select {
+      background: $crm-white;
+      border: 1px solid $crm-darker-grayblue;
+      border-radius: $border-radius-base $border-radius-base 0px;
+      outline: none;
+      width: 100%;
+    }
+
+    input {
+      border: 1px solid $crm-darker-grayblue;
+      border-radius: $border-radius-base $border-radius-base 0 $border-radius-base;
+      display: block;
+      outline: none;
+      width: 100% !important;
+    }
+
+    textarea {
+      border: 1px solid $crm-darker-grayblue;
+      border-radius: $border-radius-base $border-radius-base 0 $border-radius-base;
+      display: block;
+      outline: none;
+      width: 100% !important;
+    }
   }
-  &:after {
-    content: $fa-var-pencil;
-    font-family: $font-family-fontawesome;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: calc(50% - 7px);
-    width: 30px;
+
+  &:not(.crm-editable-editing):hover {
+    border: 1px solid $crm-darker-grayblue;
+    border-radius: $border-radius-base;
+    padding: 1px 30px 1px 3px;
+
+    &:before {
+      background-color: $crm-background;
+      border-left: 1px solid $crm-darker-grayblue;
+      border-radius: 0 $border-radius-base $border-radius-base 0;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      vertical-align: middle;
+      width: 30px;
+    }
+
+    &:after {
+      content: $fa-var-pencil;
+      font-family: $font-family-fontawesome;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: calc(50% - 9px);
+      width: 30px;
+    }
   }
 }
