@@ -1,55 +1,109 @@
-.column {
-  .widget-controls {
-    padding: 17px 10px;
+#civicrm-dashboard {
+  .column {
+    .widget-controls {
+      padding: 17px 10px;
 
-    h3 {
-      font-family: $font-family-base;
-      font-size: $font-size-h2;
+      h3 {
+        font-family: $font-family-base;
+        font-size: $font-size-h2;
+      }
     }
-  }
 
-  .widget-content {
-    padding: 0;
+    .widget-content {
+      padding: 0;
+    }
 
-    table {
-      background: transparent;
-      border: none;
-      font-family: $font-family-base;
-      margin: 7px 0;
+    .crm-activity-selector-dashlet {
+      display: grid;
 
-      thead {
-        border-bottom: 1px solid $crm-dark-grayblue;
+      .crm-accordion-header {
+        border-bottom: 1px solid $crm-background;
+        color: $gray-darker;
+        font-weight: $crm-font-weight-h1;
+      }
 
-        th {
-          background: $gray-lighter !important;
-          border: none;
-          color: $gray-darker !important;
-          line-height: 1.5em;
-          padding: 10px 15px;
-          text-align: left;
-          vertical-align: middle;
+      .crm-search_filters-accordion {
+        margin-bottom: 0;
 
-          div {
-            padding: 0;
+        .crm-inline-edit-field {
+          float: left;
+          margin-bottom: 20px;
+          width: 50%;
+
+          .select2-container {
+            width: 98% !important;
+          }
+
+          label {
+            display: block;
+            margin-bottom: 5px;
           }
         }
       }
 
-      tbody {
+      .dataTables_wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        margin-bottom: 0;
 
-        tr {
-          background: $crm-white;
-          border-bottom: 1px solid $crm-background;
+        .crm-datatable-pager-top {
+          border-radius: 0;
+        }
 
-          td {
-            background: $crm-white;
-            border: none;
-            color: $gray-dark;
-            line-height: 1.5em;
-            padding: 7px 15px;
-            text-align: left;
+        .crm-datatable-pager-bottom {
+          padding: 0 15px;
+          line-height: 1.5em;
+        }
+
+        .dataTables_paginate .ui-button {
+          padding: 10px;
+        }
+
+        .dataTables_info {
+          padding: 10px 0;
+          width: 49%;
+        }
+
+        div[id*="s2id_autogen"] {
+          .select2-choice {
+            background: none;
+            border: 1px solid $crm-darker-grayblue;
+            border-radius: $border-radius-small;
+            box-shadow: $crm-select2-box-shadow-inset;
+          }
+
+          .select2-arrow {
+            background: none;
+            padding: 0 5px;
           }
         }
+      }
+    }
+
+    #civicrm-getting-started {
+      h3 {
+        background-color: $gray-lighter;
+        border-bottom: 1px solid $crm-dark-grayblue;
+        border-top: 1px solid $crm-background;
+        font-size: $font-size-base;
+        margin: 0;
+        padding: 11px 20px;
+      }
+
+      table {
+        border: none;
+        margin: 7px 0;
+
+        tbody tr td {
+          border: none;
+          color: $gray-dark;
+          padding: 7px 15px;
+        }
+      }
+
+      #help {
+        border-radius: 0;
+        margin: 0;
       }
     }
   }
@@ -63,10 +117,6 @@
         border-color: $crm-dark-grayblue;
         border-bottom-color: $crm-white;
         border-radius: $border-radius-child $border-radius-child 0 0;
-      }
-
-      .ui-tabs-active a {
-        font-weight: $crm-font-weight-h3;
       }
 
       a {
@@ -99,7 +149,6 @@
         .crm-news-feed-item-preview,
         .crm-news-feed-item-title {
           color: $crm-dasboard-header;
-          font-family: $font-family-base;
           font-weight: $crm-font-weight-h1 !important;
         }
       }
@@ -115,119 +164,6 @@
           text-transform: capitalize;
         }
       }
-    }
-  }
-
-  .crm-activity-selector-dashlet {
-    display: grid;
-
-    .crm-accordion-header {
-      border-bottom: 1px solid $crm-background;
-      color: $gray-darker;
-      font-weight: $crm-font-weight-h1 !important;
-    }
-
-    .crm-search_filters-accordion {
-      margin-bottom: 0;
-
-      .crm-accordion-body {
-        padding: 20px 15px !important;
-      }
-
-      .crm-inline-edit-field {
-        float: left;
-        margin-bottom: 20px;
-        width: 50%;
-
-        .select2-container {
-          width: 98% !important;
-        }
-
-        label {
-          display: block;
-          margin-bottom: 5px;
-        }
-      }
-    }
-
-    .contact-activity-selector-dashlet {
-      
-      tr td,
-      tr th {
-        padding: 10px;
-      }
-    }
-
-    .dataTables_wrapper {
-      box-shadow: none;
-      border-radius: 0;
-      margin-bottom: 0;
-
-      table {
-        box-shadow: none;
-        width: 100% !important;
-      }
-
-      .crm-datatable-pager-top {
-        border-radius: 0;
-      }
-
-      .crm-datatable-pager-bottom {
-        padding: 0 15px;
-        line-height: 1.5em;
-      }
-
-      .dataTables_paginate {
-        width: 50% !important;
-      }
-
-      .dataTables_paginate .ui-button {
-        padding: 10px;
-      }
-
-      .dataTables_info {
-        padding: 10px 0;
-        width: 49%;
-      }
-
-      div[id*="s2id_autogen"] {
-        .select2-choice {
-          background: none;
-          border: 1px solid $crm-darker-grayblue;
-          border-radius: $border-radius-small;
-          box-shadow: $crm-select2-box-shadow-inset;
-        }
-
-        .select2-arrow {
-          background: none;
-          padding: 0 5px;
-        }
-      }
-    }
-  }
-
-  #civicrm-getting-started {
-
-    h3 {
-      background-color: $gray-lighter;
-      border-bottom: 1px solid $crm-dark-grayblue;
-      border-top: 1px solid $crm-background;
-      font-size: $font-size-base;
-      margin: 0;
-      padding: 11px 20px;
-    }
-    table tbody tr {
-      border-bottom: 0;
-
-      td:nth-child(2) {
-        padding-left: 0;
-      }
-    }
-
-    #help {
-      border-radius: 0; 
-      margin: 0;
-      padding: 15px 20px;
     }
   }
 }

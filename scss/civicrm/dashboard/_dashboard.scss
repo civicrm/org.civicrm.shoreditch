@@ -1,4 +1,4 @@
-.page-civicrm-dashboard {
+.crm-container {
   .crm-dashboard-controls {
     margin-top: 0;
 
@@ -11,7 +11,6 @@
     margin: 30px 0;
     
     a {
-    
       &.button {
         background: $brand-primary;
           
@@ -22,13 +21,7 @@
     }
   }
 
-  #civicrm-dashboard {
-    margin-top: 20px;
-    
-    @import 'pages/view-dashboard';
-  }
-
-  #configure-dashlet {
-    @import 'pages/edit-dashboard';
-  }
+  @import 'pages/view-dashboard';
+  @import 'pages/edit-dashboard';
+  
 }
