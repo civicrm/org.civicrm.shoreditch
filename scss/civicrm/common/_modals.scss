@@ -137,13 +137,31 @@
         margin-right: 0;
 
         &[data-identifier*="cancel"] {
+          background: $brand-danger;
           float: left;
           margin-left: 0 !important;
+        }
+
+        .ui-button-text {
+          display: inline-block;
+        }
+
+        .ui-button-icon-primary {
+          display: inline;
+          left: 0;
+          margin-top: 0px;
+          position: relative;
         }
 
         &:hover {
           color: $crm-white;
           opacity: .8;
+        }
+
+        &:active,
+        &:focus {
+          color: $crm-white;
+          text-shadow: none;
         }
 
         &,
