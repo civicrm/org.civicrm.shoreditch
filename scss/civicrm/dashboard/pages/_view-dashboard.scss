@@ -128,23 +128,8 @@
     [id*="civicrm-news-feed-"] {
       padding: 0 !important;
 
-      .crm-accordion-wrapper {
-        &.collapsed .crm-accordion-header:before {
-          color: $gray-darker;
-          content: $fa-caret-right;
-          font-size: $font-size-base;
-        }
-
-        &:not(.collapsed) .crm-accordion-header:before {
-          color: $gray-darker;
-          content: $fa-caret-down;
-          font-size: $font-size-base;
-        }
-      }
-
       .crm-accordion-header {
         background: $crm-white !important;
-        border-bottom: 1px solid $crm-dark-grayblue;
 
         .crm-news-feed-item-preview,
         .crm-news-feed-item-title {
@@ -154,12 +139,6 @@
       }
 
       .crm-accordion-body {
-        box-shadow: $crm-box-shadow-inset;
-        color: $crm-copy;
-        font-family: $font-family-base;
-        font-size: $font-size-base;
-        padding: 10px 15px !important;
-
         .crm-news-feed-item-link {
           text-transform: capitalize;
         }

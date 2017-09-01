@@ -5,42 +5,41 @@
 
   .crm-accordion-header {
     @extend %no-border-radius;
-    position: relative;
-    line-height: 40px;
-    font-family: $font-family-base;
-    padding-top: 0;
-    padding-bottom: 0;
-    background-image: none !important;
     background: $crm-accordion-header-color !important;
+    background-image: none !important;
     color: $gray-darker;
+    font-family: $font-family-base;
     font-weight: 600;
+    line-height: 18px;
+    padding: 16px 20px;
+    position: relative;
 
     &:not(.crm-master-accordion-header) {
       font-size: 13px !important;
     }
 
     &::before {
-      @include fa-icon(.8em);
+      @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
       padding-right: 10px;
     }
 
     &.crm-master-accordion-header {
       @extend %open-sans-font-family;
       background: $brand-primary !important;
-      color: #ffffff !important;
-      font-weight: 600 !important;
-      font-size: 18px;
+      color: $crm-white !important;
+      font-weight: $crm-font-weight-h3 !important;
+      font-size: $font-size-h2;
 
       &::before {
-        color: #ffffff;
+        color: $crm-white;
       }
     }
 
     .crm-close-accordion {
       margin-top: 5px;
       position: absolute;
-      right: 5px;
-      top: -4px;
+      right: 7px;
+      top: 7px;
     }
 
     .helpicon {
@@ -55,9 +54,11 @@
   }
 
   .crm-accordion-wrapper {
-    margin-bottom: 1px;
+    border-radius: 0;
+    margin-bottom: 0;
 
     &:not(.collapsed) {
+
       .crm-accordion-header {
         &::before {
           content: '\f107';
@@ -76,10 +77,12 @@
 
   .crm-accordion-header:not(.crm-master-accordion-header) {
     font-weight: 600;
+    border-bottom: 1px solid $crm-dark-grayblue;
   }
 
   .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
   .section {
+    box-shadow: $crm-box-shadow-inset;
     padding: 15px !important;
 
     td {
@@ -102,8 +105,11 @@
 
   .crm-accordion-body {
     @extend %no-border-radius;
+    background: $crm-white;
     border: 0;
-    background: #ffffff;
+    color: $crm-h3-color;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
 
     .form-item,
     .form-item > table {
