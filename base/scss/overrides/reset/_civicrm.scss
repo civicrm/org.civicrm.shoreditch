@@ -50,3 +50,62 @@ table {
 
   display: block;
 }
+
+.crm-button .crm-i {
+  left: .6em;
+  top: .6em;
+}
+
+// aligns icons inside buttons. changes from top -1 to top 2:
+.button .icon {
+  top: 2px;
+}
+
+.crm-button-type-next {
+  @include button-outline-variant(white, $brand-primary);
+
+  .crm-i { display: none; }
+}
+
+.crm-button-type-cancel,
+.crm-button-type-delete {
+  border-color: $gray-light;
+
+  input {
+    color: $text-color !important;
+  }
+}
+
+// fixes radio button's circle position
+.crm-form-radio + label {
+  &::before {
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &::after {
+    top: 8px;
+  }
+}
+
+// removes extra padding on select2 ul element added by bootstrap:
+.select2-container.crm-select2 .select2-choices {
+  padding-left: 0;
+}
+
+// This fixes the arrow dropdown width by removing 4 padding and and adding 8 width:
+.select2-container.crm-select2 .select2-choice .select2-arrow {
+  padding: 0;
+  width: 26px;
+}
+
+// removes fixed width for inputs added by CiviCRM:
+input.crm-form-text {
+  min-width: inherit;
+}
+
+.crm-weight-arrow img.order-icon {
+  height: 18px;
+  width: 13px;
+}
