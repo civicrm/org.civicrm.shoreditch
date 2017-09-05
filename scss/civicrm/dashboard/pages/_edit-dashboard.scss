@@ -5,7 +5,7 @@
   }
 
   .portlet-header {
-    @include prefix(border-radius, 2px, webkit moz);
+    @include prefix(border-radius, $border-radius-small, webkit moz);
     background: $crm-accordion-header-color;
     border-color: $crm-dark-grayblue;
     color: $crm-dark-blue;
