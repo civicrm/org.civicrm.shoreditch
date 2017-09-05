@@ -76,6 +76,18 @@ table {
   }
 }
 
+// changes the add icon from ^ to +:
+.icon.add-icon {
+  background: none;
+
+  &::before {
+    content: '\f067';
+    display: block;
+    font-family: FontAwesome;
+    text-indent: 0;
+  }
+}
+
 // fixes radio button's circle position
 .crm-form-radio + label {
   &::before {
