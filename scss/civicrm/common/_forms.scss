@@ -754,3 +754,7 @@ input.crm-form-date {
   border: 1px solid $gray-dark;
   vertical-align: bottom;
 }
+
+.CRM_Admin_Form_Options .form-layout-compressed td.label {
+  padding: 15px;
+}
