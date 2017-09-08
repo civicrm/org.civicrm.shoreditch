@@ -1,3 +1,13 @@
 &.page-civicrm-a {
   @include civihr_table();
+
+  table {
+    tr.forked {
+      font-weight: normal;
+    }
+  }
+
+  #crm-main-content-wrapper .crm-submit-buttons {
+    box-shadow: none;
+  }
 }
