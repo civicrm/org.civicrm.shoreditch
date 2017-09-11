@@ -117,7 +117,13 @@ input.crm-form-text {
   min-width: inherit;
 }
 
+// Fixes the Order column's arrows size. Makes them bigger:
 .crm-weight-arrow img.order-icon {
   height: 18px;
   width: 13px;
+}
+
+// Adds missing border on hovered buttons inside button groups:
+.btn-group .btn:hover {
+  border-color: $crm-darker-grayblue;
 }
