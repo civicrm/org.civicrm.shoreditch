@@ -121,3 +121,7 @@ input.crm-form-text {
   height: 18px;
   width: 13px;
 }
+
+.btn-group .btn:hover {
+  border-color: $crm-darker-grayblue;
+}
