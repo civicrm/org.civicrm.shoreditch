@@ -1711,3 +1711,33 @@ form.CRM_Contribute_Form_ContributionCharts {
     }
   }
 }
+
+.CRM_Financial_Form_Search {
+
+  .crm-submit-buttons {
+    height: auto;
+    line-height: normal;
+    margin: 20px 0;
+
+    > a.button {
+      background: $crm-copy;
+      float: none;
+
+      &:hover {
+        background: $crm-light-gray-color;
+        color: $crm-white;
+      }
+    }
+  }
+
+  .form-layout-compressed {
+    margin: 20px 0 0;
+
+    input.crm-form-submit {
+      @extend .btn, .btn-primary;
+      margin-left: 5px;
+      padding: 4px 10px;
+      text-shadow: none;
+    }
+  }
+}
