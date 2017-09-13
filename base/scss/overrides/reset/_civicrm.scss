@@ -120,9 +120,24 @@ table {
   width: 26px;
 }
 
+// Fixes the dropdown arrow width for crm form selects:
+.select2-container.crm-form-select {
+  .select2-arrow {
+    min-width: 24px;
+  }
+
+  .select2-arrow b {
+    margin-top: 0;
+  }
+}
+
 // removes fixed width for inputs added by CiviCRM:
 input.crm-form-text {
-  min-width: inherit;
+  @extend .form-control;
+
+  &[size] {
+    width: initial !important;
+  }
 }
 
 // Fixes the Order column's arrows size. Makes them bigger:
