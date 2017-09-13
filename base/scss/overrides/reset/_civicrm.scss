@@ -134,7 +134,10 @@ table {
 // removes fixed width for inputs added by CiviCRM:
 input.crm-form-text {
   @extend .form-control;
-  width: initial !important;
+
+  &[size] {
+    width: initial !important;
+  }
 }
 
 // Fixes the Order column's arrows size. Makes them bigger:
