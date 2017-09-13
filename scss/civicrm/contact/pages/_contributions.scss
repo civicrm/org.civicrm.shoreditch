@@ -1741,3 +1741,123 @@ form.CRM_Contribute_Form_ContributionCharts {
     }
   }
 }
+
+.CRM_Financial_Form_FinancialBatch {
+
+  .form-layout {
+    border-collapse: separate;
+    border-spacing: 20px 0;
+
+    td {
+      display: table-cell;
+      padding: 10px 5px;
+      text-align: left;
+      vertical-align: middle;
+    }
+  }
+
+  .crm-form-block.crm-form-block > .crm-submit-buttons {
+    margin-top: 0 !important;
+
+    > .crm-button:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  .crm-collapsible {
+
+    .collapsible-title {
+      @extend .crm-accordion-header;
+      margin-bottom: 0;
+
+      &::before {
+        @include fa-icon(.8em);
+        padding-right: 10px;
+      }
+    }
+
+    &:not(.collapsed) {
+      .collapsible-title::before {
+        content: '\f107';
+      }
+    }
+
+    &.collapsed {
+      .collapsible-title::before {
+        content: '\f105';
+      }
+    }
+  }
+}
+
+.CRM_Financial_Form_BatchTransaction {
+
+  .form-layout-compressed:not(table) {
+    margin: 20px 0 0;
+  }
+
+  table.form-layout-compressed {
+    border-collapse: separate !important;
+    border-spacing: 20px 10px !important;
+    width: 100%;
+
+    .crm-accordion-header,
+    .crm-accordion-body {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    td {
+      padding: 0;
+      vertical-align: top;
+    }
+  }
+
+  input.crm-form-submit {
+    @extend .btn, .btn-primary;
+    padding: 4px 10px;
+    text-shadow: none;
+  }
+
+  table.report.crm-batch_summary {
+    @include box-shadow($box-shadow);
+    border-radius: $border-radius-child;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100% !important;
+
+    td,
+    th {
+      border: none;
+      padding: 15px !important;
+    }
+
+    thead th {
+      background: $gray-lighter;
+     color: $gray-darker;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid $crm-background;
+
+      td {
+        background-color: $crm-white !important;
+        border: none !important;
+        color: $crm-copy;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .crm-form-block {
+    padding: 0 !important;
+  }
+
+  .crm-form-block.crm-form-block > .crm-submit-buttons {
+    margin-top: 0 !important;
+
+    > .crm-button:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
