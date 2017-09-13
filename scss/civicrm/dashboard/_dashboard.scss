@@ -1,25 +1,22 @@
-.crm-container {
-  .crm-dashboard-controls {
-    margin-top: 0;
+.crm-dashboard-controls {
+  margin-top: 0;
 
-    a {
-      color: $brand-primary !important;
-    }
+  a {
+    color: $brand-primary !important;
   }
-
-  .crm-submit-buttons {
-    margin: 30px 0;
-    
-    a.button {
-      background: $brand-primary;
-
-      i {
-        margin: 0;
-      }
-    }
-  }
-
-  @import 'pages/view-dashboard';
-  @import 'pages/edit-dashboard';
-  
 }
+
+.crm-submit-buttons {
+  margin: 30px 0;
+
+  a.button {
+    background: $brand-primary;
+
+    i {
+      margin: 0;
+    }
+  }
+}
+
+@import 'pages/view-dashboard';
+@import 'pages/edit-dashboard';

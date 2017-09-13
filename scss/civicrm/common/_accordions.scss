@@ -1,146 +1,144 @@
-.crm-container {
-  %no-border-radius {
-    border-radius: 0 !important;
+%no-border-radius {
+  border-radius: 0 !important;
+}
+
+.crm-accordion-header {
+  @extend %no-border-radius;
+  background: $crm-accordion-header-color !important;
+  background-image: none !important;
+  color: $gray-darker;
+  font-family: $font-family-base;
+  font-weight: 600;
+  line-height: 18px;
+  padding: 16px 20px;
+  position: relative;
+
+  &:not(.crm-master-accordion-header) {
+    font-size: 13px !important;
   }
 
-  .crm-accordion-header {
-    @extend %no-border-radius;
-    background: $crm-accordion-header-color !important;
-    background-image: none !important;
-    color: $gray-darker;
-    font-family: $font-family-base;
-    font-weight: 600;
-    line-height: 18px;
-    padding: 16px 20px;
-    position: relative;
+  &::before {
+    @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
+    padding-right: 10px;
+  }
 
-    &:not(.crm-master-accordion-header) {
-      font-size: 13px !important;
-    }
+  &.crm-master-accordion-header {
+    @extend %open-sans-font-family;
+    background: $brand-primary !important;
+    color: $crm-white !important;
+    font-weight: $crm-font-weight-h3 !important;
+    font-size: $font-size-h2;
 
     &::before {
-      @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
-      padding-right: 10px;
+      color: $crm-white;
     }
+  }
 
-    &.crm-master-accordion-header {
-      @extend %open-sans-font-family;
-      background: $brand-primary !important;
-      color: $crm-white !important;
-      font-weight: $crm-font-weight-h3 !important;
-      font-size: $font-size-h2;
+  .crm-close-accordion {
+    margin-top: 5px;
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
 
+  .helpicon {
+    padding-left: 15px;
+    color: $brand-primary;
+    opacity: 1;
+
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+
+.crm-accordion-wrapper {
+  border-radius: 0;
+  margin-bottom: 0;
+
+  &:not(.collapsed) {
+
+    .crm-accordion-header {
       &::before {
-        color: $crm-white;
-      }
-    }
-
-    .crm-close-accordion {
-      margin-top: 5px;
-      position: absolute;
-      right: 7px;
-      top: 7px;
-    }
-
-    .helpicon {
-      padding-left: 15px;
-      color: $brand-primary;
-      opacity: 1;
-
-      &:hover{
-        opacity: .8;
+        content: '\f107';
       }
     }
   }
 
-  .crm-accordion-wrapper {
-    border-radius: 0;
-    margin-bottom: 0;
-
-    &:not(.collapsed) {
-
-      .crm-accordion-header {
-        &::before {
-          content: '\f107';
-        }
-      }
-    }
-
-    &.collapsed {
-      .crm-accordion-header {
-        &::before {
-          content: '\f105';
-        }
+  &.collapsed {
+    .crm-accordion-header {
+      &::before {
+        content: '\f105';
       }
     }
   }
+}
 
-  .crm-accordion-header:not(.crm-master-accordion-header) {
-    font-weight: 600;
-    border-bottom: 1px solid $crm-dark-grayblue;
-  }
+.crm-accordion-header:not(.crm-master-accordion-header) {
+  font-weight: 600;
+  border-bottom: 1px solid $crm-dark-grayblue;
+}
 
-  .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
-  .section {
-    box-shadow: $crm-box-shadow-inset;
-    padding: 15px !important;
+.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
+.section {
+  box-shadow: $crm-box-shadow-inset;
+  padding: 15px !important;
 
-    td {
-      &.label {
-        padding: 15px;
-        font-weight: 600;
-        text-align: left;
-        color: $gray-darker;
-
-        label {
-          padding: 0;
-        }
-      }
+  td {
+    &.label {
+      padding: 15px;
+      font-weight: 600;
+      text-align: left;
+      color: $gray-darker;
 
       label {
-        position: relative;
+        padding: 0;
       }
+    }
+
+    label {
+      position: relative;
+    }
+  }
+}
+
+.crm-accordion-body {
+  @extend %no-border-radius;
+  background: $crm-white;
+  border: 0;
+  color: $crm-h3-color;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+
+  .form-item,
+  .form-item > table {
+    margin: 0;
+  }
+
+  td {
+    border-right-width: 0;
+  }
+
+  > table {
+    &,
+    td,
+    th,
+    tr {
+      background: none !important;
     }
   }
 
-  .crm-accordion-body {
-    @extend %no-border-radius;
-    background: $crm-white;
-    border: 0;
-    color: $crm-h3-color;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
+  .helpicon {
+    color: $brand-primary;
+    font-size: 13px;
+    opacity: 1;
+  }
 
-    .form-item,
-    .form-item > table {
-      margin: 0;
-    }
-
-    td {
-      border-right-width: 0;
-    }
-
-    > table {
-      &,
-      td,
-      th,
-      tr {
-        background: none !important;
-      }
-    }
-
-    .helpicon {
-      color: $brand-primary;
-      font-size: 13px;
-      opacity: 1;
-    }
-
-    span,
-    div {
-      &.description {
-        display: block;
-        line-height: 1.5em;
-      }
+  span,
+  div {
+    &.description {
+      display: block;
+      line-height: 1.5em;
     }
   }
 }
