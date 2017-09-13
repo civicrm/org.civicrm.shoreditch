@@ -109,64 +109,83 @@
   }
 }
 
-.CRM_Tag_Form_Tag {
-  #Tag {
+.CRM_Tag_Form_Tag #Tag,
+.tag-tree-wrapper {
+
+  table {
     background: $crm-white;
+    border: none;
     box-shadow: $box-shadow;
 
-    h3 {
-      background: $gray-lighter;
-      color: $gray-darker;
-      font-size: $font-size-h2;
-      font-family: $font-family-base;
-      vertical-align: middle;
+    thead th {
       border: none;
-      padding: 17px 20px;
       border-bottom: 1px solid $crm-dark-grayblue;
+      font-family: $font-family-base;
+      font-size: $font-size-h2;
+      font-weight: $crm-font-weight-h3;
+      padding: 17px 20px;
+      vertical-align: middle;
     }
 
-    #tagtree {
+    tbody td{
+      border: none;
       padding: 20px;
+    }
+  }
 
-      li {
-        margin: 10px 0;
+  .crm-form-text {
+    @extend %custom-form-control, %open-sans-font-family;
+    display: inline-block;
+    width: 230px;
+  }
 
-        span {
-          background: none;
-        }
+  #tagtree,
+  .tag-tree {
+    margin-left: -10px;
 
-        input[type=checkbox] {
-          display: none !important;
+    li {
+      margin: 10px;
 
-          &:checked + span label[for]::before,
-          + span label[for]::before {
-            margin-right: 5px;
-            vertical-align: middle;
-          }
-          + span label[for]::before {
-            content: '';
-            display: inline-block;
-            width: 16px;
-            min-width: 16px;
-            height: 16px;
-            border-radius: 2px;
-            background-color: $crm-white;
-            box-shadow: $crm-checkbox-shadow;
-            border: solid 1px $crm-darker-grayblue;
-          }
-          &:checked + span label[for] {
-            position: relative;
-          }
-          &:checked + span label[for]::after {
-            @include fa-icon($font-size: 15px, $content: '\f00c', $color: $gray-darker);
-            display: inline-block;
-            position: absolute;
-            left: 2px;
-            top: 8px;
-            margin-top: -6px;
-          }
-        }
+      div.jstree-wholerow-hovered,
+      div.jstree-wholerow-clicked {
+        background: none;
+      }
+
+      .crm-tag-item {
+        border: none;
+        color: $gray-darker;
+        font-weight: $crm-font-weight-h3;
+        padding: 0;
+      }
+
+      .jstree-checkbox {
+        background-color: $crm-white;
+        background-image: none;
+        border: 1px solid $crm-darker-grayblue;
+        border-radius: 2px;
+        box-shadow: $crm-checkbox-shadow;
+        content: '';
+        display: inline-block;
+        height: 16px;
+        margin-top: 4px;
+        min-width: 16px;
+        position: relative;
+        width: 16px;
+      }
+
+      .jstree-clicked .jstree-checkbox::after {
+        @include fa-icon($font-size: $font-size-medium, $content: $fa-var-success, $color: $gray-darker);
+        display: inline-block;
+        left: 1px;
+        line-height: $line-height-base;
+        position: absolute;
+        top: 4px;
+        margin-top: -6px;
       }
     }
+  }
+
+  .tag-info {
+    margin-right: 10px;
   }
 }
