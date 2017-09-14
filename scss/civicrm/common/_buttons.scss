@@ -61,14 +61,18 @@ $button-border-radius: 2px;
 
   .crm-submit-buttons {
     height: auto;
-    margin: 20px 0;
+    margin: 0;
 
-    &::after {
-      clear: both;
-      content: '';
-      display: block;
-      height: 0;
-      visibility: hidden;
+    .crm-button {
+      float: none !important;
+    }
+
+    span.crm-button {
+        display: inline-block;
+    }
+
+    a.button {
+      float: none;
     }
   }
 
