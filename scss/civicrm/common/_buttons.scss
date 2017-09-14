@@ -59,6 +59,19 @@ $button-border-radius: 2px;
     }
   }
 
+  .crm-submit-buttons {
+    height: auto;
+    margin: 20px 0;
+
+    &::after {
+      clear: both;
+      content: '';
+      display: block;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
   // "Toolbar" buttons
   $toolbar-top-space: 6px;
 
