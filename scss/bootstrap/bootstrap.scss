@@ -12,6 +12,8 @@
 
 @import "SCSSROOT/org.civicrm.shoreditch/base/scss/bootstrap";
 @import "overrides/style/*";
+@import "overrides/vendors/*";
+@import "overrides/crm/*";
 @import "variants/*";
 @import "components/*";
 @import "helper";

@@ -1,0 +1,7 @@
+// Fixes the dropdown arrow width for crm form selects:
+.crm-form-select {
+
+  .select2-arrow {
+    min-width: 26px;
+  }
+}
