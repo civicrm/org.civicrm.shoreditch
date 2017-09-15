@@ -1,0 +1,13 @@
+// Fixes radio button's circle position
+.crm-form-radio + label {
+
+  &::before {
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &::after {
+    top: 8px;
+  }
+}
