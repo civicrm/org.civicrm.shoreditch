@@ -53,7 +53,7 @@ gulp.task('watch', function () {
   gulp.watch(civicrmScssRoot.getWatchList(), ['sass']);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass']);
 
 /**
  * Apply the namespace on html and body elements
