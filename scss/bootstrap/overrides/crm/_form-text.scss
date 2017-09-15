@@ -1,5 +1,6 @@
 // Removes fixed with for text inputs when they have the size attribute:
 .crm-form-text {
+
   &[size] {
     min-width: inherit;
     width: initial;
