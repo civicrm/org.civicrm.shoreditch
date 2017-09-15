@@ -17,17 +17,17 @@ $control-height: 30px;
   %responsive {
     @media (min-device-width: $screen-sm-min) {
       min-width: 230px;
-      width: 230px !important;
+      width: 230px;
     }
 
     @media (max-device-width: $screen-sm-max) {
-      min-width: 270px !important;
-      width: 270px !important;
+      min-width: 270px;
+      width: 270px;
     }
 
     @media (max-device-width: $screen-xs-max) {
       margin: 0;
-      max-width: 270px !important;
+      max-width: 270px;
     }
   }
 

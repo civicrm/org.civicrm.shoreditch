@@ -22,8 +22,11 @@
 
   .crm-search-form-block .crm-accordion-wrapper,
   .crm-content-block .crm-results-block {
-    border-radius: $panel-border-radius;
     overflow: hidden;
+  }
+
+  .crm-accordion-wrapper.crm-advanced_search_form-accordion {
+    border-radius: $panel-border-radius;
   }
 
   .crm-search-form-block,

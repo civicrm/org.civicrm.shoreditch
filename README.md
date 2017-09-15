@@ -35,13 +35,10 @@ restricted to `#bootstrap-theme`.
 This extension includes an optional file `custom-civicrm.css` which can replace the default
 `civicrm.css`.  This uses the same CSS classes as traditional CiviCRM screens, but the
 look-and-feel matches the Bootstrap look-and-feel.  It is implemented with the same SCSS variables
-and mixins. To use it, figure out the URL for the CSS file:
+and mixins. To use it, navigate to **Administer -> System Settings -> Resource URLs** And click on
+"Shoreditch" as the Custom CSS Url option.
 
-```
-cv url -x shoreditch/css/custom-civicrm.css
-```
-
-And then put this URL in the setting `customCSSURL`, e.g.
+Or from the command line:
 
 ```
 cv api setting.create customCSSURL=$(cv url -x shoreditch/css/custom-civicrm.css --out=list)
