@@ -1,0 +1,41 @@
+.mobile {
+  date-picker {
+    .chr_uib-date-picker {
+      display: none
+    }
+
+    .chr_html5-date-picker {
+      position: relative;
+
+      > input {
+        -webkit-appearance: none;
+        line-height: normal !important;
+
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          display: none;
+        }
+      }
+
+      span {
+        background-color: #FFF;
+        border-left: 1px solid #949CAA !important;
+        height: 34px;
+        line-height: 20px;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40px;
+      }
+    }
+  }
+}
+
+body:not(.mobile) {
+  date-picker {
+    .chr_html5-date-picker {
+      display: none
+    }
+  }
+}
