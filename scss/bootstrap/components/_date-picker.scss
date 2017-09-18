@@ -17,9 +17,9 @@
         }
       }
 
-      span {
+      span.calendar-icon {
         background-color: #FFF;
-        border-left: 1px solid #949CAA !important;
+        border-left: 1px solid $crm-color-neutral !important;
         height: 34px;
         line-height: 20px;
         pointer-events: none;
@@ -28,6 +28,13 @@
         top: 0;
         width: 40px;
       }
+    }
+
+    .clear-date-btn {
+      position: absolute;
+      right: 60px;
+      top: 0.6em;
+      z-index: 2;
     }
   }
 }
