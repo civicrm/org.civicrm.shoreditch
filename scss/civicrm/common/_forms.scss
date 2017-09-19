@@ -709,14 +709,24 @@ $control-height: 30px;
     padding: 15px 20px;
   }
 
-  label.crm-error {
+  @mixin plain-old-text() {
     background: none;
     color: $gray-darker;
+  }
+
+  label.crm-error {
+
+    @include plain-old-text();
 
     span {
-      background: none;
-      color: $gray-darker;
+
+      @include plain-old-text();
     }
+  }
+
+  label span.crm-error-label {
+
+    @include plain-old-text();
   }
 
   #crm-main-content-wrapper input.crm-error,
@@ -724,7 +734,7 @@ $control-height: 30px;
     border-color: $brand-danger;
   }
 
-  span.crm-error {
+  span.crm-error:not(.crm-error-label) {
     color: $crm-white;
     background-color: $brand-danger;
   }
