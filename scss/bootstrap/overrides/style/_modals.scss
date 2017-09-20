@@ -45,3 +45,13 @@
     top: initial !important;
   }
 }
+
+.modal-backdrop {
+  z-index: 100000 !important; // Some current elements have z-index 99999
+}
+
+.modal {
+  z-index: 100001 !important;
+}
+
+@import "../../variants/modals-xs-screen";
