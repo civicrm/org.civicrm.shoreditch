@@ -1,4 +1,5 @@
 .panel {
+  // Removes margin right from last button inside panel footer:
   .panel-footer .button:last-child,
   .panel-footer .crm-button:last-child {
     margin-right: 0;
