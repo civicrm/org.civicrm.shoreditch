@@ -2,35 +2,35 @@
 @media (max-width: $screen-xs-min) {
 
   .modal-dialog:not(.modal-sm) {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100%;
     margin: 0;
     width: 100%;
-    height: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    border: none;
+
+    .close {
+      font-size: 30px;
+      pointer-events: auto;
+    }
 
     .modal-content {
-      height: 100%;
-      overflow-y: auto;
-      overflow-x: hidden;
       border: none;
       border-radius: 0;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
     .modal-header {
       pointer-events: none;
     }
 
-    .modal-header,
     .modal-body,
+    .modal-header,
     .modal-footer {
-      padding: 10px;
       border-radius: 0;
-    }
-
-    .close {
-      font-size: 30px;
-      pointer-events: auto;
+      padding: 10px;
     }
   }
 }
