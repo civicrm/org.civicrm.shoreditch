@@ -1,4 +1,4 @@
 // Hide slide button panel on page render:
-.btn-slide ul.panel {
+.btn-slide > ul.panel {
   display: none !important;
 }
