@@ -20,15 +20,6 @@
     padding: 20px;
   }
 
-  .crm-form-submit {
-    @extend %btn-civi-primary;
-    background: $btn-primary-bg;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    text-shadow: none;
-    text-transform: uppercase;
-  }
-
   .crm-contactDetails-accordion {
 
     .crm-accordion-header,

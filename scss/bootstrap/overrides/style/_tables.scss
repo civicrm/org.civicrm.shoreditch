@@ -63,3 +63,11 @@ table,
     border-top: 1px solid $crm-dark-grayblue;
   }
 }
+
+.panel {
+
+  .table,
+  .table-responsive {
+    margin-bottom: 0;
+  }
+}
