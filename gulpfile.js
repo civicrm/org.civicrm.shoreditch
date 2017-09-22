@@ -21,7 +21,7 @@ gulp.task('sass:bootstrap', ['sass:sync'], function () {
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: bootstrapNamespace + ' ',
-      exclude: [/^html/, /^body/, /\.ta-hidden-input/]
+      exclude: [/^html/, /^body/, /\.ta-hidden-input/, /\.mobile/]
     })]))
     .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
     .pipe(gulp.dest('css/'));
