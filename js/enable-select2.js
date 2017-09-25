@@ -11,6 +11,9 @@ CRM.$(function () {
    * we're using the "MutationObserver" to listen to DOM changes
    */
 
+  // Skips select2 for selects inside .no-select2 elements:
+  CRM.$('.no-select2 select').addClass('no-select2');
+
   /**
    * We're debouncing the callback to avoid calling the plugin multiple times
    * during DOM changes
