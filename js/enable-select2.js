@@ -1,4 +1,6 @@
-CRM.$(function() {
+/* globals MutationObserver */
+
+CRM.$(function () {
   'use strict';
 
   /**
@@ -13,7 +15,7 @@ CRM.$(function() {
    * We're debouncing the callback to avoid calling the plugin multiple times
    * during DOM changes
    */
-  var observer = new MutationObserver(debounce(function() {
+  var observer = new MutationObserver(debounce(function () {
     CRM.$('select:visible:not(.no-select2):not(.crm-form-multiselect)')
       .select2({
         containerCss: {
@@ -28,13 +30,13 @@ CRM.$(function() {
     subtree: true
   });
 
-  function debounce(fn, delay) {
+  function debounce (fn, delay) {
     var timer = null;
-    return function() {
+    return function () {
       var me = this;
       var args = arguments;
       clearTimeout(timer);
-      timer = setTimeout(function() {
+      timer = setTimeout(function () {
         fn.apply(me, args);
       }, delay);
     };
@@ -43,10 +45,10 @@ CRM.$(function() {
   /**
    * Walk through all select fields and hide it
    * if there isn't any option
-  */
-  function clearSelect2() {
-    window.setTimeout(function() {
-      CRM.$('select').each(function(idx, item) {
+   */
+  function clearSelect2 () {
+    window.setTimeout(function () {
+      CRM.$('select').each(function (idx, item) {
         var id = '#s2id_' + CRM.$(item).attr('id');
         var optionsLength = CRM.$(item).find('option').length;
 
