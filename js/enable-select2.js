@@ -32,8 +32,8 @@ CRM.$(function () {
         }
 
         select.select2({ containerCss: { display: 'inline-block' } })
-        .on('change', clearSelect2);
-    });
+          .on('change', clearSelect2);
+      });
   }, 50));
 
   observer.observe(document.querySelector('body'), {
