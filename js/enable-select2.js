@@ -17,26 +17,22 @@ CRM.$(function () {
    */
   var observer = new MutationObserver(debounce(function () {
     CRM.$('select:visible:not(.no-select2):not(.crm-form-multiselect)')
-    .each(function () {
-      var select = CRM.$(this);
-      var hasNoSelect2Parent = select.closest('.no-select2').length;
+      .each(function () {
+        var select = CRM.$(this);
+        var hasNoSelect2Parent = select.closest('.no-select2').length;
 
-      /**
-       * The parent selector does not work on the previous query. This query
-       * `:not(.no-select2) select`
-       * will still transform the select inputs into select2 components.
-       * By adding the condition inside a .each we fix this issue.
-       */
-      if (hasNoSelect2Parent) {
-        return;
-      }
-
-      select.select2({
-        containerCss: {
-          display: 'inline-block'
+        /**
+        * The parent selector does not work on the previous query. This query
+        * `:not(.no-select2) select`
+        * will still transform the select inputs into select2 components.
+        * By adding the condition inside a .each we fix this issue.
+        */
+        if (hasNoSelect2Parent) {
+          return;
         }
-      })
-      .on('change', clearSelect2);
+
+        select.select2({ containerCss: { display: 'inline-block' } })
+        .on('change', clearSelect2);
     });
   }, 50));
 
