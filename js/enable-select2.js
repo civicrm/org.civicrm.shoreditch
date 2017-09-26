@@ -1,4 +1,4 @@
-/* globals MutationObserver */
+/* globals MutationObserver, CRM */
 
 CRM.$(function () {
   'use strict';
@@ -11,21 +11,33 @@ CRM.$(function () {
    * we're using the "MutationObserver" to listen to DOM changes
    */
 
-  // Skips select2 for selects inside .no-select2 elements:
-  CRM.$('.no-select2 select').addClass('no-select2');
-
   /**
    * We're debouncing the callback to avoid calling the plugin multiple times
    * during DOM changes
    */
   var observer = new MutationObserver(debounce(function () {
     CRM.$('select:visible:not(.no-select2):not(.crm-form-multiselect)')
-      .select2({
+    .each(function () {
+      var select = CRM.$(this);
+      var hasNoSelect2Parent = select.closest('.no-select2').length;
+
+      /**
+       * The parent selector does not work on the previous query. This query
+       * `:not(.no-select2) select`
+       * will still transform the select inputs into select2 components.
+       * By adding the condition inside a .each we fix this issue.
+       */
+      if (hasNoSelect2Parent) {
+        return;
+      }
+
+      select.select2({
         containerCss: {
           display: 'inline-block'
         }
       })
       .on('change', clearSelect2);
+    });
   }, 50));
 
   observer.observe(document.querySelector('body'), {
