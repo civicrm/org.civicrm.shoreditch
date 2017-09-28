@@ -2,6 +2,7 @@
 @import '../bootstrap/overrides/style/modals';
 
 .crm-container.ui-dialog {
+  $ui-icon-margin: 7px;
   background: $gray-lighter;
   box-shadow: none;
   max-height: 90%;
@@ -52,7 +53,13 @@
 
     > .ui-button {
       &[type="button"] {
-        right: 20px !important;
+        right: 20px;
+        top: 20px + $ui-icon-margin;
+
+        .ui-icon {
+          margin-top: 0;
+          top: 0;
+        }
       }
 
       &.crm-dialog-titlebar-resize {
@@ -77,10 +84,12 @@
     @extend .modal-body, %open-sans-font-family;
     @include calc(max-height, '100vh - 280px',!important);
     background: $crm-white;
+    color: $gray-darker;
+    font-size: $font-size-base;
     height: auto !important;
     margin-bottom: 0;
     margin-top: 0;
-    padding: 20px;
+    padding: 30px;
     position: static;
     z-index: 1;
 
@@ -131,7 +140,10 @@
       width: 100%;
 
       button {
-        background: $brand-primary;
+        @include button-variant(
+          $btn-primary-color, $btn-primary-bg, $btn-primary-border
+        );
+
         float: right;
         margin-left: 10px;
         margin-right: 0;
@@ -141,7 +153,12 @@
           margin-left: 0 !important;
         }
 
-        &:hover {
+        &[data-op="no"] {
+          @include button-outline-variant($gray-dark);
+        }
+
+        &:hover,
+        &:focus {
           color: $crm-white;
           opacity: .8;
         }
@@ -149,6 +166,15 @@
         &,
         .ui-button-text {
           font-size: $font-size-base;
+        }
+
+        &.ui-button-text-icon-primary {
+          padding-left: $crm-btn-padding-base-horizontal + $ui-icon-margin;
+        }
+
+        .ui-button-icon-primary.ui-icon {
+          margin-top: -$ui-icon-margin;
+          margin-left: $ui-icon-margin;
         }
       }
     }
