@@ -2,7 +2,6 @@
 @import '../bootstrap/overrides/style/modals';
 
 .crm-container.ui-dialog {
-  $ui-icon-margin: 7px;
   background: $gray-lighter;
   box-shadow: none;
   max-height: 90%;
@@ -39,7 +38,7 @@
     border-bottom: 1px solid $crm-dark-grayblue !important;
     box-shadow: $crm-contribute-form-shadow;
     color: $gray-darker !important;
-    padding: 15px 20px;
+    padding: 13px 20px; // @TODO: use modal header padding variable
     position: relative;
     z-index: 99999;
 
@@ -48,18 +47,16 @@
       background: none;
       font-size: $font-size-h2;
       font-weight: $crm-font-weight-h2;
+      line-height: $font-size-h1;
       padding-left: 0;
     }
 
     > .ui-button {
       &[type="button"] {
+        margin-top: 0;
+        padding: 0;
+        top: 13px;
         right: 20px;
-        top: 20px + $ui-icon-margin;
-
-        .ui-icon {
-          margin-top: 0;
-          top: 0;
-        }
       }
 
       &.crm-dialog-titlebar-resize {
@@ -71,7 +68,12 @@
       }
 
       .ui-icon[class*=" fa-"] {
-        margin-left: -8px !important;
+        font-size: $font-size-h2;
+        height: $font-size-h1;
+        left: 0;
+        line-height: $font-size-h1;
+        margin: 0;
+        width: $font-size-h2;
       }
     }
 
@@ -144,6 +146,7 @@
           $btn-primary-color, $btn-primary-bg, $btn-primary-border
         );
 
+        $ui-icon-margin: 7px;
         float: right;
         margin-left: 10px;
         margin-right: 0;
@@ -173,7 +176,6 @@
         }
 
         .ui-button-icon-primary.ui-icon {
-          margin-top: -$ui-icon-margin;
           margin-left: $ui-icon-margin;
         }
       }
