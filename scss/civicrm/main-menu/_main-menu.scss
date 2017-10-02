@@ -61,14 +61,6 @@
     height: $crm-main-menu-height !important;
     line-height: $crm-main-menu-height;
     padding: 0 15px;
-
-    &.crm-link-home {
-      background: $brand-primary;
-
-      &.activetarget {
-        background: #2f92ab;
-      }
-    }
   }
 }
 
