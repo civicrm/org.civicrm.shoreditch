@@ -42,7 +42,7 @@
       border: none;
       color: $gray-dark;
       font-family: $font-family-base;
-      font-size: 13px;
+      font-size: $font-size-base;
       left: 10px;
       padding: 0;
       position: relative;
@@ -57,7 +57,7 @@
 
   > li.menumain {
     border: 0;
-    font-size: 13px;
+    font-size: $font-size-base;
     height: $crm-main-menu-height !important;
     line-height: $crm-main-menu-height;
     padding: 0 15px;
@@ -76,7 +76,7 @@
   }
 
   .menu-item {
-    font-size: 13px;
+    font-size: $font-size-base;
     padding: 6px 80px 6px 24px;
   }
 
@@ -98,7 +98,7 @@
     }
     
     .menu-separator {
-      border-color: #D3DEE2;
+      border-color: $crm-dark-grayblue;
     }
   }
 
@@ -133,7 +133,7 @@
   top: $crm-main-menu-height !important;
 
   .ui-menu-item {
-    font-size: 13px;
+    font-size: $font-size-base;
   }
 
   .ui-menu-item-wrapper {
