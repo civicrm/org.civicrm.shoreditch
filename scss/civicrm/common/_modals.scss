@@ -135,6 +135,7 @@
     border-top: 1px solid $crm-dark-grayblue !important;
     box-shadow: $crm-contribute-form-shadow;
     display: block;
+    margin-left: 0;
     margin-top: 0;
     position: relative;
     z-index: 99999;
@@ -148,8 +149,8 @@
           $btn-primary-color, $btn-primary-bg, $btn-primary-border
         );
 
-        $ui-icon-margin: 7px;
         float: right;
+        font-size: $font-size-base !important;
         margin-left: 10px;
         margin-right: 0;
 
@@ -168,18 +169,12 @@
           opacity: .8;
         }
 
-        &,
-        .ui-button-text {
-          font-size: $font-size-base;
-        }
+        .ui-button-icon.ui-icon {
+          margin: 0;
 
-        &.ui-button-text-icon-primary {
-          padding-left: $crm-btn-padding-base-horizontal + $ui-icon-margin;
-        }
-
-        .ui-button-icon-primary.ui-icon {
-          margin-top: -$ui-icon-margin;
-          margin-left: $ui-icon-margin;
+          &.fa-check {
+            padding-right: 1px;
+          }
         }
       }
     }
