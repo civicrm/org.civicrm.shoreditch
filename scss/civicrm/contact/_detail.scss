@@ -389,9 +389,7 @@
       }
 
       .crm-form-submit {
-        margin-top: 5px;
         min-width: initial;
-        padding: 7px 12px !important;
 
         &:hover {
           background-color: $brand-primary !important;
@@ -534,25 +532,9 @@
           display: none;
         }
 
-        input {
-          padding-left: 12px;
-          padding-right: 12px;
-
-          &.cancel {
-            border: 1px solid $gray-darker;
-            color: $gray-darker !important;
-
-            &:hover {
-              background-color: $gray-dark;
-              border-color: $gray-darker;
-              color: $crm-white !important;
-            }
-          }
-
-          &.default {
-            padding-left: 0;
-            padding-right: 0;
-          }
+        input.default {
+          padding-left: 0;
+          padding-right: 0;
         }
       }
 

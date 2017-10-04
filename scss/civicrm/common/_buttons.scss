@@ -59,6 +59,52 @@ $button-border-radius: 2px;
     }
   }
 
+  input.crm-form-submit {
+    background: $brand-primary;
+    border-color: $brand-primary;
+    border-radius: $panel-border-radius;
+    font-family: $font-family-base;
+    padding: 8px 12px;
+    text-shadow: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $crm-blue-light;
+    }
+
+    &.cancel {
+      background: $crm-white;
+      border: 1px solid $crm-copy;
+      color: $crm-cancel-color;
+
+      &:hover {
+        background: $crm-copy;
+        color: $crm-white;
+      }
+    }
+  }
+
+  .crm-button-type-cancel {
+
+    i {
+      color: $crm-cancel-color;
+    }
+
+    &:hover {
+      i {
+        color: $crm-white;
+      }
+    }
+
+    input.crm-form-submit {
+      color: $crm-cancel-color !important;
+
+      &:hover {
+        color: $crm-white !important;
+      }
+    }
+  }
+
   .crm-submit-buttons {
     height: auto;
     margin: 0;

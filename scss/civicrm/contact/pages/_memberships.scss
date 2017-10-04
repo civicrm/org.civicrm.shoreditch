@@ -170,15 +170,6 @@
           color: $crm-white;
         }
       }
-
-      .crm-form-submit.cancel {
-        color: $gray-darker !important;
-
-        &:hover {
-          background: $gray-darker;
-          color: $crm-white !important;
-        }
-      }
     }
 
     .action-link {
@@ -193,28 +184,6 @@
   .CRM_Member_Form_MembershipRenewal {
     .crm-button {
       border: none;
-    }
-
-    .crm-button-type-cancel {
-      i {
-        color: $gray-darker !important;
-      }
-
-      &:hover i {
-        color: $crm-white !important;
-      }
-    }
-
-
-    .crm-button .crm-form-submit.cancel {
-      border: 1px solid $gray-darker;
-      color: $gray-darker !important;
-
-      &:hover {
-        background-color: $crm-copy;
-        border-color: $gray-darker;
-        color: $crm-white !important;
-      }
     }
 
     .crm-button .crm-i {
