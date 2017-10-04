@@ -22,13 +22,13 @@
       a,
       a:active,
       a:hover {
-        color: $brand-primary;
+        color: $crm-wizard-active-font-color;
         padding: 15px 20px;
       }
 
       li.active a {
-        background: $gray-lighter;
-        color: $brand-primary;
+        background: $crm-wizard-active-bg-color;
+        color: $crm-wizard-active-font-color;
         position: relative;
 
         &:after,
@@ -45,12 +45,12 @@
         }
 
         &:after {
-          border-left-color: $gray-lighter;
+          border-left-color: $crm-wizard-active-bg-color;
           right: -7px;
         }
 
         &:before {
-          border-left-color: $crm-white;
+          border-left-color: #ffffff;
           left: 0;
         }
       }
@@ -64,7 +64,7 @@
 
         &:after,
         &:before {
-          background: $gray-lighter;
+          background: $crm-wizard-active-bg-color;
           content: '';
           height: 31px;
           position: absolute;
@@ -84,8 +84,12 @@
 
         &:hover {
           background: none;
-          color: $brand-primary;
+          color: $crm-wizard-active-font-color;
         }
+      }
+
+      li.completed a {
+        color: #00B0B9;
       }
     }
 
