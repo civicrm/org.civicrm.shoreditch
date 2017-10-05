@@ -32,7 +32,12 @@
   }
 
   #editMessageDetails {
+    box-shadow: none;
     padding: 0 !important;
+
+    .section {
+      box-shadow: none;
+    }
   }
 
   .crm-html_email-accordion > .crm-accordion-body,

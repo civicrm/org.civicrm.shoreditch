@@ -141,14 +141,22 @@
           margin-left: 0 !important;
         }
 
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
           color: $crm-white;
-          opacity: .8;
+          opacity: .8 !important;
+          outline: none;
+          text-shadow: none;
         }
 
         &,
         .ui-button-text {
           font-size: $font-size-base;
+        }
+
+        .ui-icon {
+          margin: 0;
         }
       }
     }

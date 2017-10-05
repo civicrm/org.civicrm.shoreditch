@@ -50,3 +50,103 @@ table {
 
   display: block;
 }
+
+.crm-button .crm-i {
+  left: .6em;
+  top: .6em;
+}
+
+// aligns icons inside buttons. changes from top -1 to top 2:
+.button .icon {
+  top: 2px;
+}
+
+// Makes next and upload buttons look like primary buttons:
+.crm-button-type-next,
+.crm-button-type-upload {
+  @include button-outline-variant(white, $brand-primary);
+
+  .crm-i { display: none; }
+}
+
+// Makes back, cancel, and delete buttons look like default buttons:
+.crm-button-type-back,
+.crm-button-type-cancel,
+.crm-button-type-delete {
+  border-color: $gray-light;
+
+  input {
+    color: $gray-darker !important;
+  }
+
+  input:hover {
+    color: $gray-dark !important;
+  }
+}
+
+// changes the add icon from ^ to +:
+.icon.add-icon {
+  background: none;
+
+  &::before {
+    content: '\f067';
+    display: block;
+    font-family: FontAwesome;
+    text-indent: 0;
+  }
+}
+
+// fixes radio button's circle position
+.crm-form-radio + label {
+  &::before {
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &::after {
+    top: 8px;
+  }
+}
+
+// removes extra padding on select2 ul element added by bootstrap:
+.select2-container.crm-select2 .select2-choices {
+  padding-left: 0;
+}
+
+// This fixes the arrow dropdown width by removing 4 padding and and adding 8 width:
+.select2-container.crm-select2 .select2-choice .select2-arrow {
+  padding: 0;
+  width: 26px;
+}
+
+// Fixes the dropdown arrow width for crm form selects:
+.select2-container.crm-form-select {
+  .select2-arrow {
+    min-width: 24px;
+  }
+
+  .select2-arrow b {
+    margin-top: 0;
+  }
+}
+
+// removes fixed width for inputs added by CiviCRM:
+input.crm-form-text {
+  @extend .form-control;
+
+  &[size] {
+    width: initial !important;
+  }
+}
+
+// Fixes the Order column's arrows size. Makes them bigger:
+.crm-weight-arrow img.order-icon {
+  height: 18px;
+  width: 13px;
+}
+
+// Adds missing border on hovered buttons inside button groups:
+.btn-group .btn:hover {
+  border-color: $crm-darker-grayblue;
+}
