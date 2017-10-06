@@ -325,18 +325,4 @@
     margin: 20px 0 15px;
     padding: 0 15px;
   }
-
-  .crm-submit-buttons .crm-form-submit {
-    background: $brand-primary;
-    border-color: $brand-primary;
-    border-radius: $panel-border-radius;
-    font-family: $font-family-base;
-    padding: 9px 15px;
-    text-shadow: none;
-    text-transform: uppercase;
-
-    &:hover {
-      background: $crm-blue-light;
-    }
-  }
 }

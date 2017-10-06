@@ -1,0 +1,13 @@
+.crm-select2 {
+
+  // Removes extra padding on select2 ul element added by bootstrap:
+  .select2-choices {
+    padding-left: 0;
+  }
+
+  // Fixes the arrow dropdown width by removing 4 padding and and adding 8 width:
+  .select2-arrow {
+    padding: 0;
+    width: 26px;
+  }
+}
