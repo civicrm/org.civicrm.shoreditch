@@ -1,0 +1,23 @@
+// Makes next and upload buttons look like primary buttons:
+.crm-button-type-next,
+.crm-button-type-upload {
+
+  @include button-outline-variant(white, $brand-primary);
+
+  .crm-i { display: none; }
+}
+
+// Makes back, cancel, and delete buttons look like default buttons:
+.crm-button-type-back,
+.crm-button-type-cancel,
+.crm-button-type-delete {
+  border-color: $gray-light;
+
+  input {
+    color: $gray-darker !important;
+  }
+
+  input:hover {
+    color: $gray-dark !important;
+  }
+}

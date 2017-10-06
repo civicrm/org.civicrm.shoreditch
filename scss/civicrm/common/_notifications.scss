@@ -10,6 +10,11 @@
       h1::before {
         @include fa-icon($font-size-base, $fa-var-alert, $brand-danger);
       }
+
+      // This removes an extra icon on the body of error notifications:
+      .notify-content .crm-i.fa-exclamation-triangle {
+        display: none;
+      }
     }
 
     &.alert {

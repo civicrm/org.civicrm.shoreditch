@@ -1,0 +1,10 @@
+.crm-error {
+  border-radius: $border-radius-small;
+  display: inline-block;
+  font-size: $font-size-small;
+  margin-top: $crm-gap-small;
+}
+
+input[type=file].error {
+  padding-left: $crm-gap-small;
+}
