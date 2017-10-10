@@ -1,6 +1,7 @@
 #civicrm-menu {
   font-family: $font-family-base;
   height: 32px;
+  z-index: 1000;
 
   #crm-qsearch {
     background-color: $crm-white !important;

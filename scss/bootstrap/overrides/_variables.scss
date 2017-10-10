@@ -115,6 +115,11 @@ $crm-font-weight-h6:          500 !default;
 
 $icon-font-path: "../vendor/bootstrap/fonts/bootstrap/" !default;
 
+//== Layout
+//
+//## Common layout spacings, margins, and paddings
+
+$crm-gap-small: 5px !default;
 
 //== Components
 //
@@ -205,6 +210,11 @@ $modal-lg:                    945px !default;
 $modal-md:                    555px !default;
 $modal-sm:                    360px !default;
 
+//== UI Modals
+//
+//##
+
+$ui-modal-header-padding: 13px 20px !default;
 
 //== Panels
 //
@@ -213,7 +223,7 @@ $modal-sm:                    360px !default;
 $panel-bg:                  transparent !default;
 $panel-body-padding:        15px 20px !default;
 $panel-heading-padding:     $panel-body-padding !default;
-$panel-footer-padding:      $panel-heading-padding !default;
+$panel-footer-padding:      20px !default;
 $panel-border-radius:       $border-radius-base + 1 !default;
 
 $panel-inner-border:        $gray-light !default;

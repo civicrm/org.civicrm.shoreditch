@@ -1,0 +1,8 @@
+.crm-form-select {
+  border-radius: $border-radius-small !important;
+
+  // Fixes the dropdown arrow width for crm form selects:
+  .select2-arrow {
+    min-width: 26px;
+  }
+}
