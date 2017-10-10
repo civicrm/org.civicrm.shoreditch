@@ -1,0 +1,36 @@
+// Modal for XS screens such as smartphones
+@media (max-width: $screen-xs-min) {
+
+  .modal-dialog:not(.modal-sm) {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+
+    .close {
+      font-size: 30px;
+      pointer-events: auto;
+    }
+
+    .modal-content {
+      border: none;
+      border-radius: 0;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .modal-header {
+      pointer-events: none;
+    }
+
+    .modal-body,
+    .modal-header,
+    .modal-footer {
+      border-radius: 0;
+      padding: 10px;
+    }
+  }
+}

@@ -1,32 +1,22 @@
 &.page-civicrm-a {
   @include civihr_table();
-
+  
   .crmCaseType {
-
-    .crm-button {
-      @extend %btn-civi;
-
-      &[crm-icon=fa-check] {
-        @extend %btn-civi-primary;
-        padding: 8px 19px !important;
-      }
-
-      &[crm-icon=fa-times] {
-        @extend %btn-civi-secondary-outline;
-        color: $gray !important;
-        border: solid 1px $gray-dark !important;
-        padding: 7px 19px !important;
-        margin: 0;
-
-        &:hover {
-          background: $gray-dark;
-          color: $crm-white !important;
-        }
-      }
-    }
-
+    
     .crm-block {
       padding: 20px;
     }
+
+    .ui-tabs {
+      box-shadow: none;
+
+      table.row-highlight {
+        box-shadow: none;        
+      }
+    }
+  }
+
+  table tr.forked {
+    font-weight: normal;
   }
 }

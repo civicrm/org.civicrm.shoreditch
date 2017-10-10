@@ -29,3 +29,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/**
+ * Apply uniform padding for all children
+ */
+@mixin uniform-padding($width) {
+  padding-left: $width/2;
+  padding-right: $width/2;
+
+  > * {
+    padding-left: $width/2 !important;
+    padding-right: $width/2 !important;
+  }
+}

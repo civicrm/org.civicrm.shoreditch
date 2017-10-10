@@ -21,7 +21,7 @@ gulp.task('sass:bootstrap', ['sass:sync'], function () {
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: bootstrapNamespace + ' ',
-      exclude: [/^html/, /^body/, /\.ta-hidden-input/]
+      exclude: [/^html/, /^body/, /\.ta-hidden-input/, /\.mobile/]
     })]))
     .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
     .pipe(gulp.dest('css/'));
@@ -53,7 +53,7 @@ gulp.task('watch', function () {
   gulp.watch(civicrmScssRoot.getWatchList(), ['sass']);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass']);
 
 /**
  * Apply the namespace on html and body elements
