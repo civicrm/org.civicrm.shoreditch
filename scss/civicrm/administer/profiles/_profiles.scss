@@ -139,10 +139,10 @@
     .crm-submit-buttons {
       background: $crm-white !important;
 
-      input.crm-form-submit {
+      .crm-button-type-cancel .crm-form-submit {
         background: $brand-primary;
         border-color: $brand-primary;
-        color: $crm-white !important;
+        color: $crm-white;
       }
     }
   }
