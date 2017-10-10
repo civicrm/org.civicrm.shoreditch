@@ -1,5 +1,20 @@
 &.page-civicrm-a {
   @include civihr_table();
+  
+  .crmCaseType {
+    
+    .crm-block {
+      padding: 20px;
+    }
+
+    .ui-tabs {
+      box-shadow: none;
+
+      table.row-highlight {
+        box-shadow: none;        
+      }
+    }
+  }
 
   table tr.forked {
     font-weight: normal;
