@@ -1,0 +1,67 @@
+#configure-dashlet {
+
+  .crm-submit-buttons {
+    margin: 0 0 20px;
+  }
+
+  .dashlets-header {
+    font-size: $font-size-h3;
+    margin-bottom: 20px;
+  }
+
+  .portlet-header {
+    @include prefix(border-radius, $border-radius-small, webkit moz);
+    background: $crm-accordion-header-color;
+    border-color: $crm-dark-grayblue;
+    color: $crm-dark-blue;
+    font-family: $font-family-base;
+    font-size: $font-size-medium;
+    font-weight: $crm-font-weight-h3;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  #available-dashlets {
+    background-color: $crm-white;
+    border: 1px dashed $crm-dasboard-header;
+    min-height: 40px;
+    padding: 25px;
+    width: auto;
+
+    .portlet {
+      border: none;
+    }
+  }
+
+  div[id*="dashlets-header-col"] {
+    @include border-box();
+    background: $crm-dasboard-header;
+    color: $crm-white;
+    margin-bottom: 0;
+    padding: 15px;
+    
+    &[id*="col-1"] {
+      float: right;
+      margin-left: 0 !important;
+    }
+  }
+
+  div[id*="existing-dashlets-col"] {
+    @include border-box();
+    background: $crm-white;
+    border: none;
+    padding: 15px;
+    
+    &[id*="col-1"] {
+      float: right;
+      margin-left: 0 !important;
+    }
+
+    .portlet {
+      border: none;
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}

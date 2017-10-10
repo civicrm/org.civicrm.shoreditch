@@ -18,10 +18,6 @@
       top: 12px;
     }
 
-    .ui-button .ui-icon {
-      top: 17px;
-    }
-
     .description {
       display: block;
     }
@@ -30,12 +26,6 @@
   .crm-container #crm-main-content-wrapper {
     .CRM_Price_Form_Set .crm-form-block,
     .CRM_Price_Form_Field .crm-form-block {
-      .crm-submit-buttons {
-        background-color: $crm-white !important;
-        border-bottom: 1px solid $gray-lighter;
-        border-radius: $panel-border-radius;
-        box-shadow: none;
-      }
 
       .form-layout {
         margin: 20px 0;
@@ -62,17 +52,6 @@
     #field_page, #option11_wrapper {
       margin-bottom: 0 !important;
       position: relative;
-
-      &:before{
-        box-shadow: $crm-form-layout-shadow;
-        content: "";
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: -1;
-      }
     }
 
     .action-link {

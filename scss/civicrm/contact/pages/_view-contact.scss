@@ -31,29 +31,6 @@
           border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
         }
 
-        .crm-accordion-body .crm-submit-buttons {
-          border-bottom: none;
-          margin-bottom: 0 !important;
-
-
-          .crm-hover-button {
-            background: $brand-primary;
-            border-radius: $border-radius-base;
-            color: $crm-white;
-            line-height: 1.5em;
-            padding: 5px 12px;
-
-            &.crm-custom-value-del {
-              background-color: $brand-danger;
-            }
-
-            i {
-              bottom: 2px;
-              position: relative;
-            }
-          }
-        }
-
         table.crm-info-panel {
           border: none;
           border-bottom: 1px solid $crm-background;
