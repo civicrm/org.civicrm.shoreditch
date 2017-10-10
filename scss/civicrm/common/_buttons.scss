@@ -9,7 +9,7 @@ $button-border-radius: 2px;
   @extend .btn, %open-sans-font-family;
   text-shadow: none;
   text-transform: uppercase;
-  opacity: 1 !important;
+  opacity: 1;
   font-size: 1em !important;
 }
 

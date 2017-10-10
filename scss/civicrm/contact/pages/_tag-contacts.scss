@@ -1,9 +1,7 @@
 .page-civicrm-tag {
 
-  #branding {
-    .page-title {
-      margin-bottom: 20px !important;
-    }
+  #branding .page-title {
+    margin-bottom: 20px !important;
   }
 
   .help {
@@ -36,25 +34,19 @@
     }
   }
 
-  .crm-submit-buttons {
-    margin: 0;
+  .crm-submit-buttons a.button {
+    background: $brand-primary;
 
-    .button {
-      background: $brand-primary !important;
-
-      &:hover {
-        opacity: .9;
-      }
+    &:hover {
+      color: $crm-white;
+      opacity: .9;
     }
   }
 
   .CRM_Tag_Form_Edit {
 
-    table {
-
-      &.form-layout-compressed {
-        margin: 0 25px;
-      }
+    table.form-layout-compressed {
+      margin: 0 25px;
     }
 
     div,

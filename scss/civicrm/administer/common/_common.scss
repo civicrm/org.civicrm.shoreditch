@@ -53,8 +53,23 @@ ul.civihr-popup {
     overflow-y: hidden;
   }
 
-  .action-link,
   .crm-submit-buttons {
+    background: $crm-white;
+    border-top: 1px solid $gray-lighter;
+    margin: 20px 20px 0;
+    padding: 20px 0 18px;
+    text-align: right;
+
+    a.button {
+      @extend %btn-civi-primary;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .action-link {
     @include civihr_panel();
     height: auto;
     line-height: normal;
