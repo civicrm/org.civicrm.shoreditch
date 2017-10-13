@@ -86,10 +86,10 @@
 
   td {
     &.label {
-      padding: 15px;
       font-weight: 600;
       text-align: left;
       color: $gray-darker;
+      padding-left: 0;
 
       label {
         padding: 0;
