@@ -7,9 +7,6 @@
   .crm-form-block {
     @include civihr_table;
 
-    background: none;
-    box-shadow: none;
-
 
     table.form-layout {
       @include civihr_panel();
