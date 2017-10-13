@@ -396,11 +396,18 @@ $control-height: 30px;
       background: none !important;
 
       &.label {
-        display: flex;
-        align-items: center;
+        padding-left: 20px;
+        text-align: left;
+        vertical-align: top;
+
+        label {
+          margin: 10.5px 0;
+        }
       }
 
       label {
+        display: inline-block;
+        line-height: initial;
         text-align: initial;
       }
 
@@ -475,6 +482,13 @@ $control-height: 30px;
       display: inline-block;
     }
 
+    td > input.crm-form-color {
+      border-color: $crm-darker-grayblue;
+      border-radius: $border-radius-base;
+      min-width: 30px !important;
+      width: 30px !important;
+    }
+
     .crm-form-date-wrapper {
       display: inline-block;
       margin: $control-spacing / 2 0 $control-spacing / 2 0 !important;
@@ -495,6 +509,7 @@ $control-height: 30px;
     border: solid 1px $gray-dark;
     border-radius: 0;
     box-shadow: none;
+    margin-top: 7.5px;
 
     &,
     .cke_top,
@@ -764,7 +779,36 @@ input.crm-form-date {
   border: 1px solid $gray-dark;
   vertical-align: bottom;
 }
+.CRM_Admin_Form_Options .form-layout-compressed {
 
-.CRM_Admin_Form_Options .form-layout-compressed td.label {
-  padding: 15px;
+  td.label {
+    padding-left: 0;
+  }
+
+  input[type=checkbox]:not(.old-radiocheckbox-style) {
+    position: relative;
+
+    &::before {
+      content: '';
+      cursor: pointer;
+      display: inline-block;
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: #ffffff;
+      box-shadow: $crm-checkbox-shadow;
+      border: solid 1px $crm-darker-grayblue;
+    }
+
+    &:checked::after {
+      @include fa-icon($font-size: 15px, $content: $fa-var-success, $color: $gray-darker);
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      margin-top: -6px;
+    }
+  }
 }
