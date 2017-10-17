@@ -36,21 +36,6 @@
   box-shadow: none;
   padding: 0;
 
-  ul.ui-tabs-nav {
-    background: $gray-lighter;
-    padding: 5px 5px 0;
-
-    .ui-tabs-active {
-      background: $crm-white !important;
-      border-bottom: 2px solid $crm-white;
-    }
-
-    a {
-      font-size: $font-size-base;
-      font-family: $font-family-base;
-    }
-  }
-
   .dataTables_wrapper {
     overflow: visible;
 
