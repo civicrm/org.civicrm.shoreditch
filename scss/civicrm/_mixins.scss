@@ -37,3 +37,68 @@
 @mixin translate ($x, $y) {
   @include transform(translate($x, $y));
 }
+
+/*
+* The styled-checkbox() CSS function designs individual checkbox
+*/
+
+@mixin styled-checkbox() {
+  height: 16px;
+  position: relative;
+
+  &::before {
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    background-color: $crm-white;
+    box-shadow: $crm-checkbox-shadow;
+    border: 1px solid $crm-darker-grayblue;
+  }
+
+  &:checked::after {
+    @include fa-icon($font-size: 15px, $content: $fa-var-check, $color: $gray-darker);
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    left: 2px;
+    top: 6px;
+    margin-top: -5px;
+  }
+}
+
+/*
+* The styled-checkbox() CSS function designs individual radio
+*/
+
+@mixin styled-radio() {
+  height: 14px;
+  position: relative;
+
+  &::before {
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: $crm-white;
+    box-shadow: $crm-checkbox-shadow;
+    border: solid 1px $crm-darker-grayblue;
+    border-radius: 50%;
+  }
+
+  &:checked::after {
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: $crm-copy;
+    border-radius: 50%;
+  }
+}
