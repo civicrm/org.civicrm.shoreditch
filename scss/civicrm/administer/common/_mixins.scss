@@ -3,7 +3,7 @@
  * @param $overflow {string} indicates whether table should wrap the overflowing text
  */
 @mixin civihr_table($overflow: 'false') {
-  table {
+  table:not(.form-layout-compressed) {
     max-width: 100%;
 
     tr {
