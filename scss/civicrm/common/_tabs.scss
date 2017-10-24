@@ -75,7 +75,7 @@
     border-radius: 0;
 
     table th,
-    table:not(.form-layout-compressed) th, {
+    table:not(.form-layout-compressed) th {
       background-color: $crm-white;
       border-bottom: 2px solid $crm-dark-grayblue;
     }
