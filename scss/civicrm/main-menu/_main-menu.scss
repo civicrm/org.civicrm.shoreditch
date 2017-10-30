@@ -57,6 +57,7 @@
 
   > li.menumain {
     border: 0;
+    cursor: pointer;
     font-size: $font-size-base;
     height: $crm-main-menu-height !important;
     line-height: $crm-main-menu-height;
@@ -96,7 +97,7 @@
       margin: 0 !important;
       padding: 0 !important;
     }
-    
+
     .menu-separator {
       border-color: $crm-dark-grayblue;
     }
