@@ -1,7 +1,20 @@
 (function ($, _) {
   $(document).ready(function () {
+    amendMarkupOfMenuItemsWithFontAwesomeIcons();
     customizeQuickSearchField();
   });
+
+  /**
+   * Amends the markup of any menu item with a FontAwesome icon
+   */
+  function amendMarkupOfMenuItemsWithFontAwesomeIcons() {
+    menuItemsWithFontAwesomeIcon().each(function () {
+      var $menuItem = jQuery(this);
+
+      $('.fa', $menuItem).addClass('menumain-icon');
+      wrapMenuItemLabelInHTML($menuItem);
+    });
+  }
 
   /**
    * Changes the placeholder text of the quicksearch field
@@ -54,6 +67,17 @@
   }
 
   /**
+   * Gets the list of the menu items with a FontAwesome icon
+   *
+   * @return {array}
+   */
+  function menuItemsWithFontAwesomeIcon () {
+    return $('.menumain[class*="crm"]').filter(function () {
+      return $('.fa', this).length > 0
+    });
+  }
+
+  /**
    * Removes the given custom class when the user clicks
    * outside the quick search field (if there is no ongoing search)
    *
@@ -62,7 +86,7 @@
   function removeCustomClassOnOutsideClick (customClass) {
     $(document).on('click', function (event) {
       if (hasUserClickedOutsideQuickSearchField(event.target) && !isQuickSearchOnGoing()) {
-        $('#crm-qsearch').removeClass(customClass);
+        $('#civicrm-menu').removeClass(customClass);
       }
     });
   }
@@ -79,15 +103,27 @@
   function toggleCustomClassToQuickSearchFieldOnHover (customClass) {
     $('#crm-qsearch').hover(
       function () {
-        $(this).addClass(customClass);
+        $('#civicrm-menu').addClass(customClass);
       },
       function () {
         var isSearchCriteriaPanelOpen = $('.crm-quickSearchField:visible', '#root-menu-div').length;
 
         if (!isQuickSearchOnGoing() && !isSearchCriteriaPanelOpen) {
-          $(this).removeClass(customClass);
+          $('#civicrm-menu').removeClass(customClass);
         }
       }
     );
+  }
+
+  /**
+   * Creates an HTML element out of the text node of the
+   * given menu item
+   *
+   * @param {object} $menuItem
+   */
+  function wrapMenuItemLabelInHTML ($menuItem) {
+    $menuItem.contents().filter(function () {
+      return this.nodeType === 3 && jQuery(this.parentElement).is($menuItem);
+    }).wrap('<span class="menumain-label" />')
   }
 }(CRM.$, CRM._));
