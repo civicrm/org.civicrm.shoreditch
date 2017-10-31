@@ -1,0 +1,31 @@
+.crm-contact-task-createsmartgroup-form-block {
+  h3 {
+    padding: 25px;
+  }
+
+  label[for="parents"] {
+    padding-left: 0;
+  }
+
+  label[for="group_type_2"] {
+    position: relative;
+    right: 15px;
+  }
+
+  .label {
+    text-align: left !important;
+  }
+
+  .crm-contact-task-createsmartgroup-form-block-description {
+    .label {
+      vertical-align: top;
+      display: table-cell;
+      text-align: left;
+    }
+
+    textarea {
+      width: 300px;
+      min-height: 100px;
+    }
+  }
+}

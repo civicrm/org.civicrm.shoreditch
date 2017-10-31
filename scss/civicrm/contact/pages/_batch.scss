@@ -1,0 +1,328 @@
+.page-civicrm-batch {
+  .crm-submit-buttons {
+    margin: 0;
+    margin-bottom: 25px;
+    margin-top: 15px;
+
+    #newBatch.button {
+      background: $crm-dark-gray-color;
+      border: transparent !important;
+      color: $crm-white !important;
+
+      &:hover {
+        color: $crm-white !important;
+      }
+    }
+  }
+
+  .crm-batch-search-form-block {
+    border-radius: $panel-border-radius !important;
+  }
+
+  .crm-batch-search-form-block,
+  .CRM_Batch_Form_Batch {
+    h3 {
+      background: $gray-lighter !important;
+      border-bottom: 1px solid $crm-dark-grayblue;
+      border-radius: $border-radius-child $border-radius-child 0 0;
+      color: $crm-h3-color;
+      font: $crm-font-weight-h3 $font-size-h2 $font-family-base;
+      margin: 0;
+      padding: 17px 25px;
+    }
+
+    div.messages {
+      margin: 0 20px;
+    }
+
+    table tr td {
+      padding: 15px 25px;
+      vertical-align: top;
+
+      &:nth-child(2) {
+        padding: 15px 0;
+      }
+
+      .crm-button {
+        i {
+          top: 15px;
+        }
+
+        .crm-form-submit {
+          padding: 8px 0 8px 12px;
+        }
+      }
+    }
+  }
+
+  .dataTables_wrapper {
+    border-radius: $panel-border-radius;
+    box-shadow: $box-shadow;
+
+    table thead {
+      border-top: none !important;
+    }
+
+    .crm-datatable-pager-top {
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
+
+      div[id*="s2id_autogen"] {
+        .select2-choice {
+          background: none;
+          border: 1px solid $crm-darker-grayblue;
+          border-radius: $border-radius-base;
+          box-shadow: $crm-select2-box-shadow-inset;
+        }
+
+        .select2-arrow {
+          background: none;
+          padding: 0 5px;
+
+          b {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .crm-datatable-pager-bottom,
+    .crm-datatable-pager-top {
+      display: flex;
+      padding: 10px 15px;
+
+      &.crm-datatable-pager-top {
+        background: $crm-accordion-header-color;
+      }
+
+      .dataTables_paginate {
+        float: right;
+        width: 50% !important;
+      }
+
+      .dataTables_length,
+      .dataTables_info {
+        float: left;
+        line-height: 25px;
+        padding: 0;
+        position: relative;
+        top: 3px;
+        width: 49%;
+      }
+    }
+
+    .crm-datatable-pager-bottom {
+      border-radius: 0 0 $panel-border-radius $panel-border-radius;
+
+      .dataTables_info {
+        color: $gray-darker;
+      }
+    }
+
+    .dataTable {
+      box-shadow: none !important;
+    }
+
+    thead {
+      border-top: 1px solid $crm-dark-grayblue;
+    }
+  }
+}
+
+.page-civicrm-batch #Batch {
+  box-shadow: $box-shadow;
+
+  .crm-submit-buttons {
+    border: none;
+    margin: 0 15px !important;
+  }
+
+  .crm-batch-form-block {
+    box-shadow: none;
+
+    td {
+      padding: 0 !important;
+      vertical-align: middle;
+
+      &.label label {
+        padding: 15px 0 5px 25px;
+      }
+    }
+
+    textarea {
+      line-height: 1.5em;
+      vertical-align: middle;
+    }
+  }
+}
+
+.page-civicrm-batch-entry #crm-main-content-wrapper {
+  padding-top: 5.5em;
+
+  .CRM_Batch_Form_Entry {
+    background: $crm-white;
+    border-radius: $panel-border-radius;
+    box-shadow: $crm-form-layout-shadow;
+    padding: 0;
+    position: relative;
+  }
+
+  .help {
+    background: $crm-light-green-color;
+    border: none;
+    color: $gray-darker;
+    padding: 10px;
+    position: absolute;
+    top: -5.6em;
+  }
+
+  .crm-button_qf_Entry_upload_force-save {
+    margin: 0 15px;
+  }
+
+  .status {
+    margin: 5px 15px;
+  }
+
+  #crm-batch-entry-table {
+    border-color: $crm-background;
+    display: block;
+    margin: 0 !important;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  table {
+    border: none !important;
+  }
+
+  .form-layout-compressed {
+    margin: 0 15px 20px;
+
+    .label {
+      color:  $crm-copy;
+      font-size: $font-size-base;
+    }
+
+    td.right {
+      color:  $crm-copy;
+      vertical-align: middle;
+    }
+  }
+
+  .crm-grid-table {
+    border: none !important;
+    border-radius: $border-radius-base;
+
+    .crm-grid-header {
+      border-bottom: 1px solid  $crm-dark-grayblue;
+      border-top: 1px solid  $crm-dark-grayblue;
+      border-top-left-radius: $border-radius-base;
+      border-top-right-radius: $border-radius-base;
+
+      .crm-grid-cell {
+        background: $gray-lighter;
+        border: none;
+        font: bold $font-size-base $font-family-base;
+        color: $gray-darker;
+        line-height: 1.5em;
+        min-width: 130px;
+        padding: 10px 15px;
+        vertical-align: middle;
+      }
+
+      .crm-grid-cell:first-child {
+        border-top-left-radius: $border-radius-base;
+        min-width: 10px;
+      }
+
+      .crm-grid-cell:last-child {
+        border-top-right-radius: $border-radius-base;
+      }
+    }
+
+    .crm-grid-row {
+      background: $crm-white;
+      border-bottom: 1px solid  $crm-background;
+      border-bottom-left-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+
+      &:last-child .crm-grid-cell {
+        &:first-child {
+          border-bottom-left-radius: $border-radius-base;
+        }
+
+        &:last-child {
+          border-bottom-right-radius: $border-radius-base;
+        }
+      }
+
+      .crm-grid-cell {
+        border: none;
+        padding: 10px;
+
+        span.batch-edit,
+        span.batch-valid,
+        span.batch-invalid {
+          line-height: 30px;
+        }
+      }
+
+      > .select2-container {
+        margin: 10px;
+      }
+
+      input.crm-form-text,
+      input.dateplugin {
+        @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
+        background-color: $crm-white;
+        background-image: none;
+        border: 1px solid $crm-darker-grayblue;
+        border-radius: $border-radius-base;
+        box-shadow: $crm-input-shadow;
+        color: $gray-darker;
+        font-size: $font-size-base;
+        height: 20px;
+        padding: 4px 10px;
+      }
+
+      input.dateplugin {
+        width: 85px !important;
+      }
+
+      [class*="crm-batch-join_date-"],
+      [class*="crm-batch-membership_"] {
+          display: block;
+          width: 150px !important;
+
+          .crm-clear-link {
+            margin-left: -5px !important;
+            padding: 4px 0;
+          }
+      }
+
+      .select2-container {
+        margin-bottom: 10px;
+
+        .select2-choice {
+          box-shadow: $crm-input-shadow;
+          height: 28px;
+          line-height: 28px;
+
+          .select2-arrow {
+            background: transparent;
+          }
+        }
+      }
+
+      .select2-container#s2id_field_1_membership_type_1 {
+        width: 120px !important;
+      }
+    }
+  }
+
+  .crm-submit-buttons {
+    height: auto;
+    margin: 20px 0 15px;
+    padding: 0 15px;
+  }
+}

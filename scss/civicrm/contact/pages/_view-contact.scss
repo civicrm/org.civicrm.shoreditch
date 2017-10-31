@@ -1,0 +1,76 @@
+.page-civicrm-contact-view {
+  #crm-main-content-wrapper {
+    overflow: hidden;
+  }
+
+  #crm-container {
+    .ui-widget-content {
+      font-family: $font-family-base;
+
+      a.button {
+        background: $brand-primary;
+        margin-left: 0 !important;
+      }
+
+      td.section-shown .crm-accordion-wrapper {
+        border-radius: $panel-border-radius;
+        box-shadow: $box-shadow;
+        margin: 15px 0;
+
+        &.collapsed .crm-accordion-header {
+          border-bottom: none;
+          border-radius: $panel-border-radius !important;
+        }
+
+        .crm-accordion-header {
+          border-bottom: 1px solid $crm-dark-grayblue;
+          border-radius: $panel-border-radius $panel-border-radius 0 0 !important;
+        }
+
+        .crm-accordion-body {
+          border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
+        }
+
+        table.crm-info-panel {
+          border: none;
+          border-bottom: 1px solid $crm-background;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        table.crm-info-panel td {
+          color: $crm-copy;
+          vertical-align: middle;
+        }
+
+        table.crm-info-panel td.label {
+          color: $gray-darker;
+          font-weight: $crm-font-weight-h1;
+        }
+
+        table.crm-info-panel td.html-adjust {
+          width: 100%;
+        }
+      }
+
+      table.no-border td {
+        border: none;
+      }
+    }
+  }
+
+  .modal-dialog td {
+    vertical-align: middle;
+  }
+
+  .help {
+    font-family: $font-family-base;
+    padding: 10px;
+  }
+
+  .action-link a.button {
+    font-size: $font-size-base !important;
+  }
+}

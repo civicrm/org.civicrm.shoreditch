@@ -48,29 +48,4 @@
     background: $crm-white;
     padding: 10px 20px;
   }
-
-  .ui-dialog-buttonpane {
-    background: $crm-white;
-    border-top: 1px solid $gray-lighter;
-    padding: 15px 10px;
-
-    .ui-button {
-      background: $crm-white;
-      border: 1px solid $crm-btn-border-color;
-      border-radius: $border-radius-small;
-      color: $gray-darker;
-      padding: 0;
-      text-align: center;
-      text-shadow: none;
-      text-transform: uppercase;
-    }
-
-    .ui-button .ui-button-text {
-      padding: 0.7em 1.3em;
-    }
-
-    .ui-button .ui-icon {
-      display: none;
-    }
-  }
 }

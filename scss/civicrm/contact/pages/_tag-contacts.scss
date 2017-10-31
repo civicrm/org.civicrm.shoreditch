@@ -1,0 +1,164 @@
+.page-civicrm-tag {
+
+  #branding .page-title {
+    margin-bottom: 20px !important;
+  }
+
+  .help {
+    background: $crm-light-green-color;
+    border: none;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+  }
+
+  .tabs-secondary {
+    float: left;
+  }
+
+  .ui-dialog-content td {
+    vertical-align: middle;
+  }
+
+  #page {
+    .crm-form-block td {
+      vertical-align: middle;
+      display: table-cell;
+      text-align: left;
+    }
+
+    .crm-tag-form-block-is_reserved,
+    .crm-tag-form-block-is_slectable {
+      td.label {
+        vertical-align: top;
+      }
+    }
+  }
+
+  .crm-submit-buttons a.button {
+    background: $brand-primary;
+
+    &:hover {
+      color: $crm-white;
+      opacity: .9;
+    }
+  }
+
+  .CRM_Tag_Form_Edit {
+
+    table.form-layout-compressed {
+      margin: 0 25px;
+    }
+
+    div,
+    span {
+      &.description {
+        line-height: 1.5em;
+        display: block;
+      }
+    }
+  }
+
+  #cat {
+    box-shadow: $box-shadow;
+    margin: 30px 0;
+
+    table {
+      @include mx-expandable-table();
+    }
+  }
+  a {
+    &.button  {
+      i {
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.CRM_Contact_Form_Task_AddToTag,
+.CRM_Contact_Form_Task_RemoveFromTag {
+
+  h3 {
+    padding-top: 20px;
+    padding-left: 25px;
+  }
+
+  table {
+
+    &.form-layout-compressed {
+      margin: 25px;
+    }
+  }
+
+  .listing-box {
+    max-height: 216px;
+    height: auto;
+
+    > div {
+      padding: 15px;
+      background-color: $crm-white;
+    }
+  }
+}
+
+.CRM_Tag_Form_Tag {
+  #Tag {
+    background: $crm-white;
+    box-shadow: $box-shadow;
+
+    h3 {
+      background: $gray-lighter;
+      color: $gray-darker;
+      font-size: $font-size-h2;
+      font-family: $font-family-base;
+      vertical-align: middle;
+      border: none;
+      padding: 17px 20px;
+      border-bottom: 1px solid $crm-dark-grayblue;
+    }
+
+    #tagtree {
+      padding: 20px;
+
+      li {
+        margin: 10px 0;
+
+        span {
+          background: none;
+        }
+
+        input[type=checkbox] {
+          display: none !important;
+
+          &:checked + span label[for]::before,
+          + span label[for]::before {
+            margin-right: 5px;
+            vertical-align: middle;
+          }
+          + span label[for]::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            min-width: 16px;
+            height: 16px;
+            border-radius: 2px;
+            background-color: $crm-white;
+            box-shadow: $crm-checkbox-shadow;
+            border: solid 1px $crm-darker-grayblue;
+          }
+          &:checked + span label[for] {
+            position: relative;
+          }
+          &:checked + span label[for]::after {
+            @include fa-icon($font-size: 15px, $content: '\f00c', $color: $gray-darker);
+            display: inline-block;
+            position: absolute;
+            left: 2px;
+            top: 8px;
+            margin-top: -6px;
+          }
+        }
+      }
+    }
+  }
+}

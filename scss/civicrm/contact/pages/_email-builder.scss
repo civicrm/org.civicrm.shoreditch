@@ -1,0 +1,37 @@
+.crmMailing {
+  #tab-mailing,
+  .ui-tabs-panel {
+    padding: 20px !important;
+  }
+
+  #tab-mailing {
+    .crm-accordion-header {
+      padding-left: 0;
+    }
+
+    .crm-accordion-body {
+      padding: 0 !important;
+      position: relative;
+      background-color: transparent;
+
+      [ng-controller="EmailBodyCtrl"] > div:first-child {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    .cke_top {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  .label {
+    text-align: left;
+
+    label {
+      font-weight: normal !important;
+    }
+  }
+}

@@ -15,7 +15,6 @@
     box-shadow: none !important;
     margin-top: 15px;
     padding-top: 10px;
-    border-top: 1px solid $gray-lighter;
   }
 
   .collapsible-title {
@@ -25,17 +24,23 @@
     font-size: 18px;
     font-weight: 600;
     padding: 0;
+    border: 0;
 
     &:hover {
       color: $gray-darker;
     }
 
     &:before {
-      content: "\f078";
-      font-size: 13px;
-      font-weight: normal;
-      font-family: "FontAwesome";
+      @include fa-icon(13px, '\f078');
       margin-right: 5px;
+    }
+  }
+
+  &.collapsed {
+    .collapsible-title {
+      &:before {
+        @include fa-icon(13px, '\f054');
+      }
     }
   }
 }

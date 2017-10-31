@@ -2,10 +2,6 @@
   .crm-report-field-form-block {
     box-shadow: $box-shadow;
     margin-bottom: 20px;
-
-    .crm-form-submit {
-      @extend %btn-civi, %btn-civi-secondary-outline;
-    }
   }
 
   .crm-tasks {
@@ -17,10 +13,6 @@
 
     td {
       border: 0 !important;
-
-      .crm-form-submit {
-        @extend %btn-civi, %btn-civi-secondary-outline;
-      }
     }
   }
 

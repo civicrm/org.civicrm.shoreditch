@@ -1,0 +1,178 @@
+.page-civicrm-contact {
+  .ui-widget-content .action-link .button {
+    box-shadow: $box-shadow;
+  }
+
+  #notes .dataTables_wrapper {
+    border-radius: $border-radius-child;
+    box-shadow: $box-shadow;
+    margin: 20px 0;
+
+    .ui-widget-header {
+      background: $gray-lighter;
+      border: none;
+      border-bottom: 1px solid $crm-background;
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+      line-height: 2em;
+      padding: 10px 20px;
+
+      .dataTables_length,
+      .dataTables_info {
+        padding: 0;
+      }
+
+      .dataTables_paginate {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    table + .ui-widget-header {
+      background: $crm-gray-lightest;
+    }
+
+    .select2-container {
+      background: $crm-white;
+
+      .select2-choice {
+        box-shadow: $crm-select2-box-shadow-inset;
+      }
+
+      &.select2-dropdown-open .select2-choice {
+        box-shadow: none;
+      }
+
+      .select2-arrow {
+        background: none;
+        padding: 0 5px;
+      }
+
+      .select2-search-choice-close {
+        right: 35px;
+      }
+    }
+
+    table {
+      background: transparent;
+      border: none;
+      font-family: $font-family-base;
+      width: 100% !important;
+
+      thead tr {
+        border-bottom: 1px solid $crm-dark-grayblue;
+
+        th {
+          background: $gray-lighter;
+          border: none;
+          color: $gray-darker;
+          padding: 16px 20px;
+          vertical-align: middle;
+        }
+
+        th div {
+          padding: 0;
+        }
+      }
+    }
+
+    table tbody tr {
+      background: $crm-white;
+      border-bottom: 1px solid $crm-background;
+      border-left: none;
+      border-right: none;
+
+      td {
+        background: $crm-white;
+        border: none;
+        color: $gray-dark;
+        line-height: 1.1em;
+        padding: 12px 15px !important;
+        vertical-align: middle;
+
+        &:first-child {
+          padding-left: 20px !important;
+        }
+
+        &:last-child {
+          padding: 12px 20px 12px 10px !important;
+          text-align: right;
+        }
+
+        a {
+          color: $brand-primary !important;
+
+          &.action-item {
+            text-transform: none;
+          }
+        }
+      }
+
+      td .btn-slide {
+        color: $brand-primary;
+        text-transform: none;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      td .btn-slide a {
+        color: $crm-copy !important;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+
+    table#options {
+      thead tr th {
+        &:first-child {
+          display: none;
+        }
+
+        &:nth-child(6) {
+          text-transform: none !important;
+        }
+      }
+
+      tbody tr td:first-child {
+        display: none;
+      }
+    }
+  }
+
+  #Note {
+    td {
+      vertical-align: middle;
+
+      &.label {
+        box-sizing: border-box;
+        width: 210px;
+      }
+
+      &:not(.label) {
+        padding: 0;
+        width: 100%;
+      }
+    }
+
+    #attachments tr {
+      &:nth-child(4),
+      &:nth-child(7) {
+        td.label {
+          padding: 0;
+        }
+      }
+    }
+
+    .crm-accordion-body {
+      padding-bottom: 0 !important;
+    }
+
+    .crm-accordion-header {
+      font-weight: 600 !important;
+    }
+  }
+}

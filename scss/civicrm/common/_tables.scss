@@ -2,8 +2,9 @@
   @extend %open-sans-font-family;
   $border-color: $table-border-color;
   border: 0;
+  border-radius: $border-radius-base;
 
-  tr, th {
+  tr {
     background: #ffffff !important;
   }
 
@@ -13,45 +14,64 @@
 
   th,
   .columnheader td {
-    color: $gray-darker !important;
     border-bottom: 0;
+    color: $gray-darker !important;
     font-weight: bold !important;
   }
 
+  .columnheader th {
+    background: $gray-lighter !important;
+  }
+
   td {
-    font-weight: 100 !important;
+    font-weight: $crm-font-weight-td !important;
   }
 
   th,
   tr,
   tr td {
     border: initial;
+    border-bottom: solid 1px $table-border-color;
     line-height: 35px;
     padding-left: 15px;
-    border-bottom: solid 1px $table-border-color;
+  }
+
+  tr:last-child {
+    background: transparent !important;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+    border-right: none;
+  }
+
+  thead {
+    background: $gray-lighter;
+
+    th.ui-state-default {
+      background-color: $gray-lighter;
+
+      &.sorting_disabled {
+        background: $gray-lighter;
+      }
+    }
+
+    > tr:first-child > th {
+      border-color: $crm-table-heading-border-color;
+    }
+  }
+
+  &:not(.table-bordered) > tbody > tr:first-child > td {
+    border-color: $crm-background;
   }
 
   td .crm-hover-button {
+    background: none !important;
     border: 0;
-    background-image: none !important;
 
     &,
     * {
+      color: $brand-primary !important;
       text-transform: capitalize !important;
-    }
-
-    &:not(:hover) {
-      &,
-      * {
-        color: $brand-primary !important;
-      }
-    }
-
-    &:hover {
-      &,
-      * {
-        color: $gray-dark !important;
-      }
     }
   }
 }
@@ -64,10 +84,18 @@
   }
 
   td {
-    background: #fff !important;
+    background: $crm-white !important;
 
     &.label {
       vertical-align: middle !important;
+    }
+
+    .crm-table-group-summary td {
+      background: $crm-dark-blue !important;
+
+      &:last-child {
+        text-align: left;
+      }
     }
   }
 
@@ -83,27 +111,27 @@
   }
 
   tr {
-    &:first-child {
-      th {
-        &:first-child {
-          border-top-left-radius: 2px;
-        }
+    &:first-child th {
+      &:first-child {
+        border-top-left-radius: $border-radius-base;
+      }
 
-        &:last-child {
-          border-top-right-radius: 2px;
-        }
+      &:last-child {
+        border-top-right-radius: $border-radius-base;
       }
     }
 
-    &:last-child {
-      td {
-        &:first-child {
-          border-bottom-left-radius: 2px;
-        }
+    &:last-child td {
+      .crm-hover-button:hover {
+        color: $brand-primary !important;
+      }
 
-        &:last-child {
-          border-bottom-right-radius: 2px;
-        }
+      &:first-child {
+        border-bottom-left-radius: $border-radius-base;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: $border-radius-base;
       }
     }
 
@@ -113,10 +141,202 @@
   }
 }
 
+@mixin mx-expandable-table {
+  @extend %civihr-table;
+  background: transparent;
+  border: none;
+  border-radius: $panel-border-radius;
+  font-family: $font-family-base;
+  width: 100% !important;
+
+  thead,
+  .columnheader {
+    th,
+    td {
+      background-color: $gray-lighter !important;
+      border: none !important;
+      color: $gray-darker !important;
+      line-height: 1.5em;
+      padding: 15px 20px !important;
+      text-transform: capitalize;
+      vertical-align: middle !important;
+
+      div {
+        padding: 0;
+      }
+    }
+
+    tr {
+      border-top-left-radius: $border-radius-small;
+      border-top-right-radius: $border-radius-small;
+      background: transparent !important;
+    }
+  }
+
+  .columnheader-dark {
+    border: none;
+    border-bottom: 1px solid $crm-dark-grayblue;
+
+    th {
+      border: none !important;
+      background-color: $gray-lighter !important;
+    }
+  }
+
+  tbody {
+    tr {
+      background: $crm-white;
+
+      td {
+        background: $crm-white !important;
+        border: none !important;
+        color: $gray-dark;
+        padding: 15px 20px;
+        line-height: 1.5em;
+        vertical-align: middle;
+      }
+
+      th {
+        background: $crm-background !important;
+        border: none;
+        color: $gray-darker !important;
+        padding: 15px 10px;
+        line-height: 1.5em;
+        vertical-align: middle;
+
+        div {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .crm-icon {
+    background: none !important;
+    text-indent: 0 !important;
+
+    &::before {
+      text-indent: 0 !important;
+    }
+
+    &.Individual-icon::before {
+      @include fa-icon(13px, '\f007');
+    }
+
+    &.Household-icon::before {
+      @include fa-icon(13px, '\f015');
+    }
+
+    &.Organization-icon::before {
+      @include fa-icon(13px, '\f1ad');
+    }
+  }
+
+  &.selector {
+    &.row-highlight {
+      tbody {
+        > tr {
+          &:hover {
+            background: $crm-white !important;
+          }
+        }
+      }
+    }
+
+    tr {
+      &:not(.crm-child-row) > td {
+        min-width: 10px;
+        padding: 15px 20px;
+        word-break: break-word;
+
+        &:first-child {
+          align-items: center;
+        }
+      }
+    }
+
+    .crm-expand-row {
+      position: relative;
+      background: none;
+
+      &:after {
+        @include fa-icon(13px, '\f054');
+        position: absolute;
+        left: 0;
+      }
+
+      &.expanded {
+        &:after {
+          @include fa-icon(13px, '\f078');
+        }
+      }
+    }
+
+    th {
+      background-color: $gray-lighter !important;
+    }
+
+    .crm-child-row {
+      border-bottom: none;
+
+      &,
+      > td {
+        padding: 0;
+      }
+
+      > td {
+        position: relative;
+
+        .crm-ajax-container {
+          border: 2px solid $crm-background;
+          margin-top: -1px;
+
+          table {
+            border: none;
+          }
+        }
+      }
+
+      #info {
+        tr {
+          border: 0 !important;
+        }
+
+        th {
+          text-transform: capitalize;
+        }
+
+        td,
+        th {
+          padding-left: 20px;
+        }
+
+        td {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+    .sticky {
+      tr:first-child {
+        border-bottom: 1px solid $crm-dark-grayblue;
+      }
+
+      th:first-child {
+        text-align: center;
+      }
+    }
+  }
+}
+
 .crm-container {
   > table,
   table.report-layout,
   table.selector,
+  table.row-highlight,
+  table.dataTable,
+  table.crm-multifield-selector,
   .ui-dialog table,
   .CRM_HRRecruitment_Form_Search > table,
   .CRM_Case_Form_Search .caseSelector,

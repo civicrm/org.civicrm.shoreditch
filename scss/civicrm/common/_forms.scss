@@ -17,17 +17,17 @@ $control-height: 30px;
   %responsive {
     @media (min-device-width: $screen-sm-min) {
       min-width: 230px;
-      width: 230px !important;
+      width: 230px;
     }
 
     @media (max-device-width: $screen-sm-max) {
-      min-width: 270px !important;
-      width: 270px !important;
+      min-width: 270px;
+      width: 270px;
     }
 
     @media (max-device-width: $screen-xs-max) {
       margin: 0;
-      max-width: 270px !important;
+      max-width: 270px;
     }
   }
 
@@ -53,8 +53,13 @@ $control-height: 30px;
       @media (min-width: 1330px) {
         //Compensate the ".select2-container" right margin
         position: relative;
-        left: -$control-spacing;
       }
+    }
+  }
+
+  @at-root .page-civicrm-contact-view & {
+    .select2-search:before {
+      top: 17px !important;
     }
   }
 
@@ -71,6 +76,16 @@ $control-height: 30px;
         > input:not([type='radio']):not([type='checkbox']) {
           margin: $control-spacing / 2 $control-spacing $control-spacing / 2 0 !important;
           bottom: initial !important;
+        }
+
+        > select,
+        > select.crm-form-multiselect {
+           margin: 1px 0 $control-spacing / 2 0 !important;
+
+           + .crm-error {
+            position: relative;
+            top: 7px;
+          }
         }
 
         &.view-value {
@@ -101,6 +116,11 @@ $control-height: 30px;
       display: inline-block;
     }
 
+    input.crm-form-file {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     textarea {
       @extend %responsive;
     }
@@ -127,7 +147,6 @@ $control-height: 30px;
         cursor: pointer;
         line-height: normal;
         border-radius: 0 !important;
-        border-color: $input-border !important;
         display: inline-block;
         width: auto !important;
         height: $control-height !important;
@@ -137,7 +156,7 @@ $control-height: 30px;
         padding-right: 10px !important;
         position: relative;
         top: 1px;
-        background: url('../svgs/drop-down-arrow.svg') no-repeat right !important;
+        background: url('../svgs/drop-down-arrow.svg') no-repeat right $crm-white !important;
 
         option {
           @extend %custom-form-control;
@@ -150,6 +169,7 @@ $control-height: 30px;
     label {
       @extend .control-label;
       font-weight: 600 !important;
+      font-size: 13px;
       color: $gray-darker;
     }
 
@@ -184,12 +204,13 @@ $control-height: 30px;
         }
 
         .select2-choices {
-          border-color: $input-border;
+          border: solid 1px $crm-darker-grayblue;
           border-radius: $border-radius-base;
-          box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: $crm-checkbox-shadow;
           box-sizing: border-box;
           font-family: inherit;
           line-height: inherit;
+          padding-right: 20px;
           width: 100%;
 
           &::before {
@@ -197,26 +218,26 @@ $control-height: 30px;
           }
 
           .select2-search-choice {
-            padding: 0 15px 0 5px;
+            background: none;
+            border-color: $brand-primary;
+            border-radius: 0;
             line-height: 20px;
             margin-top: 4px;
-            background: none;
-            border-radius: 0;
-            border-color: $brand-primary;
+            padding: 0 15px 0 5px;
 
             > div {
+              display: inline-block;
               line-height: normal;
               padding-right: 10px;
-              display: inline-block;
               vertical-align: text-bottom;
             }
 
             .select2-search-choice-close {
+              left: auto !important;
               line-height: inherit;
               padding-right: 5px;
               position: absolute;
               right: 0 !important;
-              left: auto !important;
               top: 1px;
             }
           }
@@ -227,18 +248,17 @@ $control-height: 30px;
 
             input {
               padding-left: 10px;
+              box-shadow: none;
             }
           }
         }
 
         &.select2-dropdown-open .select2-choices::before {
-          content: '\f002';
+          @include fa-icon($fa-var-search);
         }
 
-        &.select2-container-disabled {
-          .select2-choices {
+        &.select2-container-disabled .select2-choices {
             width: inherit;
-          }
         }
       }
 
@@ -246,13 +266,20 @@ $control-height: 30px;
         &,
         .select2-arrow,
         .select2-choice,
-        .select2-choices,
+        .select2-choices {
+          &,
+          &::before {
+            background: $input-bg-disabled !important;
+            border-color: $disabled-color !important;
+            color: $disabled-color !important;
+          }
+        }
+
         .select2-chosen {
           &,
           &::before {
             border-color: $disabled-color !important;
             color: $disabled-color !important;
-            background: $input-bg-disabled !important;
           }
         }
 
@@ -271,17 +298,17 @@ $control-height: 30px;
         abbr {
           top: 0;
         }
+
+        .select2-chosen {
+          font-size: $font-size-base;
+          font-weight: normal;
+          line-height: 27px;
+        }
       }
 
       &.select2-container-active {
-        .select2-choices {
-          box-shadow: none;
-        }
-
-        &:not(.select2-dropdown-open) {
-          span {
+        &:not(.select2-dropdown-open) span {
             color: $brand-primary;
-          }
         }
 
         &.select2-dropdown-open {
@@ -319,8 +346,6 @@ $control-height: 30px;
       }
 
       &.select2-dropdown-open {
-        height: 25px;
-
         .select2-arrow::before {
           content: '\f0d8';
         }
@@ -329,11 +354,16 @@ $control-height: 30px;
         .select2-choices {
           @extend .select2-drop;
         }
+
+        .select2-choices {
+          border: 1px solid $brand-primary !important;
+        }
       }
 
       .select2-search-choice-close {
         right: 35px;
         background: none;
+        background-image: none !important;
 
         &::before {
           @include fa-icon(13px, '\f057', $brand-primary);
@@ -352,6 +382,10 @@ $control-height: 30px;
         border: 0 !important;
         box-shadow: none !important;
       }
+
+      &.error {
+        background-image: none;
+      }
     }
 
     td td {
@@ -362,12 +396,19 @@ $control-height: 30px;
       background: none !important;
 
       &.label {
-        display: flex;
-        align-items: center;
+        padding-left: 20px;
+        text-align: left;
+        vertical-align: top;
 
         label {
-          text-align: initial;
+          margin: 10.5px 0;
         }
+      }
+
+      label {
+        display: inline-block;
+        line-height: initial;
+        text-align: initial;
       }
 
       label ~ input ~ label ~ input {
@@ -437,8 +478,15 @@ $control-height: 30px;
     td > input.crm-form-text {
       @extend %responsive;
       box-sizing: border-box;
-      height: $control-height;
+      min-height: $control-height;
       display: inline-block;
+    }
+
+    td > input.crm-form-color {
+      border-color: $crm-darker-grayblue;
+      border-radius: $border-radius-base;
+      min-width: 30px !important;
+      width: 30px !important;
     }
 
     .crm-form-date-wrapper {
@@ -461,11 +509,13 @@ $control-height: 30px;
     border: solid 1px $gray-dark;
     border-radius: 0;
     box-shadow: none;
+    margin-top: 7.5px;
 
+    &,
     .cke_top,
     .cke_bottom {
       background: $gray-lighter;
-      border-color: $gray-dark;
+      border-color: $crm-darker-grayblue;
     }
 
     .cke_toolgroup {
@@ -519,10 +569,16 @@ $control-height: 30px;
 
   &.select2-drop,
   &.select2-drop.select2-drop-above {
-    background: #ffffff !important;
-    border-radius: 0;
+    background: $crm-white !important;
     border-color: $brand-primary;
+    border-radius: $border-radius-base $border-radius-base 0 0;
     box-shadow: none;
+    margin-left: 0;
+    margin-top: -4px;
+
+    .select2-choice {
+      border-radius: 0 0 $border-radius-base $border-radius-base;
+    }
 
     .select2-input {
       border-color: $brand-primary !important;
@@ -538,16 +594,81 @@ $control-height: 30px;
     }
 
     .select2-results {
-      margin-right: 0;
+      margin: 4px 0 0 0;
+      color: $gray-darker;
+
+      li {
+        padding: 5px;
+        background: $crm-white;
+      }
 
       .select2-result-label {
         padding: 5px 10px;
         color: $gray-dark;
+
+        .crm-icon {
+          text-indent: 0 !important;
+          text-align: center;
+
+          &:before {
+            font-size: $font-size-base !important;
+            position: relative;
+            bottom: 2px;
+          }
+
+          &.Individual-icon {
+            background: none;
+            &:before {
+              @include fa-icon($content: "\f007");
+            }
+          }
+
+          &.Organization-icon {
+            background: none;
+            &:before {
+              @include fa-icon($content: "\f0f7");
+            }
+          }
+
+          &.Household-icon {
+            background: none;
+            &:before {
+              @include fa-icon($content: "\f015");
+            }
+          }
+        }
       }
 
       .select2-highlighted {
-        background: $gray-lighter;
+        background: $crm-background;
+        color: $gray-dark;
+
+        .crm-select2-row-description {
+          p {
+            color: $gray-dark;
+          }
+        }
       }
+
+      .select2-no-results {
+        padding: 4px;
+        margin: 0;
+        background: none;
+      }
+
+      select {
+        height: 30px;
+        background: $crm-white;
+        border: 1px solid $crm-darker-grayblue;
+      }
+    }
+  }
+
+  &.select2-drop {
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+
+    .select2-choice {
+      border-radius: $border-radius-base $border-radius-base 0 0;
     }
   }
 
@@ -598,6 +719,40 @@ $control-height: 30px;
   .crm-marker {
     color: $brand-danger;
   }
+
+  .help {
+    padding: 15px 20px;
+  }
+
+  @mixin plain-old-text() {
+    background: none;
+    color: $gray-darker;
+  }
+
+  label.crm-error {
+
+    @include plain-old-text();
+
+    span {
+
+      @include plain-old-text();
+    }
+  }
+
+  label span.crm-error-label {
+
+    @include plain-old-text();
+  }
+
+  #crm-main-content-wrapper input.crm-error,
+  #crm-main-content-wrapper input.error {
+    border-color: $brand-danger;
+  }
+
+  span.crm-error:not(.crm-error-label) {
+    color: $crm-white;
+    background-color: $brand-danger;
+  }
 }
 
 .crm-form-text:focus + .addon.fa-calendar {
@@ -606,13 +761,15 @@ $control-height: 30px;
 
 .addon.fa-calendar {
   background: $gray-lighter;
-  border: 1px solid $input-border;
-  border-left: 0;
+  border: 1px solid $crm-darker-grayblue;
   border-radius: 0 $border-radius-base $border-radius-base 0;
   color: $gray-darker;
   cursor: pointer;
   padding: 8px 10px 7px;
   vertical-align: bottom;
+  margin-left: -2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 input.dateplugin,
@@ -621,4 +778,37 @@ input.crm-form-date {
   height: 26px;
   border: 1px solid $gray-dark;
   vertical-align: bottom;
+}
+.CRM_Admin_Form_Options .form-layout-compressed {
+
+  td.label {
+    padding-left: 0;
+  }
+
+  input[type=checkbox]:not(.old-radiocheckbox-style) {
+    position: relative;
+
+    &::before {
+      content: '';
+      cursor: pointer;
+      display: inline-block;
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: #ffffff;
+      box-shadow: $crm-checkbox-shadow;
+      border: solid 1px $crm-darker-grayblue;
+    }
+
+    &:checked::after {
+      @include fa-icon($font-size: 15px, $content: $fa-var-success, $color: $gray-darker);
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      margin-top: -6px;
+    }
+  }
 }

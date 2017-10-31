@@ -1,0 +1,1639 @@
+.page-civicrm-contribute {
+  #branding h1.page-title {
+    margin-bottom: 20px !important;
+  }
+
+  #crm-container #crm-main-content-wrapper .crm-accordion-header {
+    font-weight: 600 !important;
+  }
+
+  .button {
+    text-transform: uppercase;
+    font-family: $font-family-base;
+  }
+
+  .CRM_Contribute_Form_Task_PDF {
+    background: $crm-white;
+    padding: 15px;
+
+    .status {
+      margin-top: -15px !important;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .help {
+      padding: 10px 0;
+    }
+  }
+
+  .CRM_Contribute_Form_Task_Delete {
+    background: $crm-white;
+    border-radius: $border-radius-small;
+    box-shadow: $crm-contribute-form-shadow;
+    margin-top: 15px;
+
+    + p {
+      margin: 0;
+    }
+
+    .form-item {
+      background: $crm-white;
+      border-radius: 0;
+      border-top: 1px solid $gray-lighter;
+      margin: 20px 20px 0;
+      min-height: 43px;
+      padding: 20px 0 10px;
+    }
+  }
+
+  .CRM_Contribute_Form_Task_Batch {
+    fieldset {
+      box-shadow: $box-shadow;
+    }
+
+    .help {
+      background: $crm-white;
+      border-radius: $border-radius-child $border-radius-child 0 0;
+      margin: 0;
+      padding: 15px 20px;
+    }
+
+    .crm-submit-buttons {
+      background: $crm-white;
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      margin: 0;
+      padding: 15px 10px 23px;
+    }
+
+    .columnheader {
+      border-color: $crm-dark-grayblue !important;
+      border-left: none !important;
+      border-right: none !important;
+
+      th,
+      td {
+        background: $gray-lighter;
+        border: none;
+        color: $gray-darker;
+        font: bold $font-size-base $font-family-base !important;
+        padding: 10px 20px;
+        vertical-align: middle;
+      }
+
+      .sticky-header {
+        display: none !important;
+      }
+    }
+
+    tbody {
+      tr {
+        background: $crm-white;
+        border-bottom: 1px solid $crm-background;
+        border-right: none;
+        line-height: 30px;
+      }
+
+      td {
+        border: none;
+        color: $crm-copy;
+        padding: 10px 20px;
+
+        &:nth-child(6) {
+          width: 200px;
+        }
+      }
+    }
+
+    .dateplugin {
+      margin-bottom: 5px;
+      max-width: 150px;
+    }
+
+    .six.crm-form-text {
+      max-width: 83px;
+    }
+
+    .addon.fa-calendar {
+      padding: 8px 10px 9px;
+    }
+
+    input[type="text"],
+    .select2-choice {
+      background: $crm-white;
+      border: 1px solid $crm-darker-grayblue;
+      border-radius: $border-radius-small;
+      box-shadow: $crm-input-shadow;
+      color: $gray-darker;
+      font-size: $font-size-base !important;
+      font-weight: normal !important;
+      height: 30px;
+      line-height: 30px;
+      padding: 0px 10px;
+      @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
+      vertical-align: middle;
+      width: 100%;
+
+      &:focus {
+        border-color: $brand-primary;
+      }
+    }
+
+    .select2-container {
+      .select2-choice {
+        width: 78%;
+      }
+
+      .select2-chosen {
+        color: $gray-darker;
+        font-size: $font-size-base;
+        margin-right: 0;
+      }
+
+      abbr {
+        background: none;
+      }
+
+      .select2-arrow {
+        background: none;
+        padding: 0 4px;
+
+        &:before {
+          color: $crm-copy;
+          content: $fa-var-caret-down;
+          display: block;
+          font-family: $font-family-fontawesome;
+          font-size: $font-size-base;
+          font-style: normal;
+          text-align: center;
+          text-rendering: auto;
+        }
+      }
+
+      &.select2-dropdown-open {
+        .select2-choices {
+          border-color: $brand-primary;
+        }
+
+        .select2-arrow {
+          background: none;
+          border-left: none;
+          filter: none;
+
+          &:before {
+            content: $fa-var-caret-up;
+          }
+        }
+      }
+    }
+  }
+
+  form[class*="CRM_Contribute_Form_"] {
+    h3 {
+      background: $gray-lighter;
+      color: $crm-h3-color;
+      font-family: $font-family-base;
+      font-size: $font-size-h2;
+      font-weight: $crm-font-weight-h3;
+      margin: 0;
+      padding: 17px 15px;
+    }
+
+    .status {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      p {
+        margin-top: 0;
+      }
+
+      + .help {
+        margin: 10px 0;
+        padding: 10px;
+      }
+    }
+
+    .label-left {
+      padding: 15px;
+      width: 205px;
+    }
+
+    .crm-accordion-body {
+      .crm-form-block {
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .label-left {
+        padding: 15px 0;
+        width: 220px;
+      }
+    }
+
+    .select2-container#s2id_format_id {
+      margin-right: 0 !important;
+    }
+
+    .crm-html_email-accordion .helpIcon {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+
+  .CRM_Contribute_Form_Task_Result {
+    .crm-form-submit {
+      margin: 20px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.page-civicrm-contribute-search {
+  .CRM_Contribute_Form_Search {
+    .crm-search-tasks {
+      background-color: $crm-white;
+      border-radius: 0 0 $panel-border-radius $panel-border-radius;
+    }
+
+    .crm-search-tasks input[type="radio"]:checked + label[for]:after {
+      top: 7px;
+    }
+
+    .crm-search-tasks td {
+      padding: 10px 20px;
+    }
+
+    .selector {
+      @include mx-expandable-table();
+
+      thead.sticky {
+        background: transparent;
+      }
+
+      th:not(:last-child) {
+        padding-right: 10px !important;
+      }
+
+      tr:not(.crm-child-row) {
+        > td {
+          max-width: 80px;
+          min-width: auto;
+          padding: 15px !important;
+          vertical-align: middle;
+          word-break: normal !important;
+
+          &:not(:last-child) {
+            padding-right: 10px !important;
+          }
+
+          &:not(:first-child) {
+            min-width: 50px;
+          }
+
+          &:first-child {
+            display: table-cell !important;
+            min-width: auto;
+            padding-left: 20px !important;
+          }
+
+          &:nth-child(2) {
+            align-items: center;
+            display: flex;
+            padding: 17px 15px !important;
+
+            a:nth-child(2) {
+              display: inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              width: 100px;
+            }
+          }
+
+          &:nth-child(4), &:nth-child(5),
+          &:nth-child(7), &:nth-child(9) {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &:nth-child(6) {
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &:last-child {
+            max-width: 140px;
+            width: 140px;
+          }
+
+          &.crm-contribution-amount .crm-expand-row:after {
+            top: 2px;
+          }
+        }
+
+        th {
+          background-color: $gray-lighter !important;
+
+          &:first-child .sticky-header {
+            padding-left: 20px !important;
+          }
+        }
+
+        .sticky-header {
+          background-color: $gray-lighter;
+          border-bottom: 1px solid $crm-dark-grayblue;
+          padding-bottom: 15px !important;
+          padding-top: 20px !important;
+          z-index: 20;
+
+          .crm-form-checkbox {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    #contributionSearch {
+      padding-top: 45px;
+      position: relative;
+
+      .crm-pager {
+        line-height: 1.7em;
+        padding: 7px 0;
+
+        > .element-right {
+          margin-top: 7px;
+        }
+      }
+
+      .crm-pager:first-child {
+        border-bottom: 1px solid $crm-background;
+        border-radius: $panel-border-radius $panel-border-radius 0 0;
+        margin-bottom: 0;
+      }
+
+      .description {
+        background: $crm-light-green-color;
+        border-radius: $border-radius-base;
+        color: $gray-darker;
+        padding: 10px 20px !important;
+        position: absolute;
+        top: 0;
+        width: calc(100% - 40px);
+      }
+
+      .crm-ajax-container {
+        border-width: 1px 2px 2px;
+      }
+
+      .selector {
+        border-radius: 0;
+        box-shadow: $crm-form-item-shadow;
+      }
+    }
+
+    table + .crm-pager {
+      border-radius: 0 0 $panel-border-radius $panel-border-radius;
+      border-top: 1px solid $crm-background;
+      box-shadow: $crm-form-item-shadow;
+      margin: 0;
+    }
+
+    .crm-accordion-header {
+      border-radius: $panel-border-radius $panel-border-radius 0 0 !important;
+    }
+
+    .crm-accordion-body {
+      border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
+
+      > .form-layout > tody > tr {
+        &:nth-child(2) > td {
+          width: 30%;
+
+          label {
+            display: block;
+          }
+        }
+
+        &:nth-child(5) > td:first-child .crm-form-text {
+          min-width: 100px !important;
+          width: 100px !important;
+        }
+
+        &:nth-child(14) > td {
+          width: 100%;
+        }
+
+        &:nth-child(11) > td:last-child > label:first-child {
+          padding-right: 10px;
+        }
+
+        .select2-container-multi {
+          max-width: 230px;
+        }
+
+        .crm-hover-button.crm-clear-link {
+          position: relative;
+          top: -2px;
+        }
+
+        &:nth-child(8) table tr td:first-child {
+          padding-right: 10px !important;
+          vertical-align: middle;
+        }
+
+        &:nth-child(14) td {
+          padding: 0;
+
+          .crm-accordion-body {
+            padding: 15px 30px !important;
+          }
+        }
+
+        &:last-child td {
+            border-top: 1px solid $crm-background;
+        }
+
+        td table td {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+
+  #PickProfile .crm-contribution-form-block {
+    padding-top: 20px;
+
+    td {
+      color: $crm-copy;
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: $screen-sm-min) {
+    .crm-accordion-body > .form-layout tbody tr {
+      display: block !important;
+
+      td {
+        display: block;
+        width: auto !important;
+
+        .float-left {
+          margin-left: 0 !important;
+          width: 100%;
+        }
+
+        input:not([type='radio']):not([type='checkbox']):not(.crm-form-submit),
+        .select2-container {
+          display: block;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.page-civicrm-contribute-add {
+  .CRM_Contribute_Form_Contribution {
+    .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
+      padding: 20px !important;
+    }
+
+    .crm-contribution-form-block {
+      > .form-layout-compressed .label {
+        padding-left: 20px !important;
+      }
+    }
+
+    .crm-contribution-form-block-pcp_details {
+      left: -169px;
+      position: relative;
+    }
+
+    .crm-link-credit-card-mode {
+      margin-top: 21px !important;
+
+      .action-item {
+        padding: 8px 20px !important;
+      }
+    }
+
+    .description {
+      font-family: $font-family-base;
+    }
+  }
+}
+
+.page-civicrm-contact-view-contribution {
+  #branding {
+    display: block;
+  }
+
+  #page {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 20px 0 40px;
+  }
+
+  .CRM_Contribute_Form_Contribution {
+    padding-top: 35px;
+  }
+
+  .crm-contribution-form-block {
+    position: relative;
+  }
+
+  .help {
+    border-radius: $border-radius-base $border-radius-base;
+    padding: 10px 20px !important;
+    position: absolute;
+    top: -55px;
+    width: calc(100% - 40px);
+  }
+
+  .description {
+    font-family: $font-family-base;
+  }
+
+  #Contribution {
+    > .crm-form-block > .form-layout-compressed td.label {
+      padding: 10px 20px !important;
+    }
+
+    div.label {
+      padding: 0 20px !important;
+      width: 190px;
+    }
+
+    td {
+      color: $crm-copy;
+
+      &.label {
+        width: 190px;
+      }
+    }
+
+    .crm-accordion-body {
+      padding: 15px 0 !important;
+
+      tr td {
+        color: $crm-copy;
+        padding: 0;
+      }
+
+      tr td:first-child label {
+        padding: 0 !important;
+      }
+
+      tr td:not(.label) {
+        width: 100%;
+      }
+
+      tr td .label {
+        padding: 10px 0 !important;
+      }
+
+      tr [id*="soft-credit-row"] td {
+        &:first-child {
+          padding-left: 0 !important;
+          padding-right: 10px !important;
+        }
+
+        label {
+          margin-right: 10px;
+          min-width: 205px;
+        }
+      }
+
+      table {
+        &.crm-contribution-form-table-credit_to_pcp,
+        &.crm-soft-credit-block {
+          tr td {
+            min-height: 40px;
+            padding: 0 10px 10px 0 !important;
+            vertical-align: middle !important;
+          }
+
+          .select2-container, input {
+            margin: 0 !important;
+          }
+        }
+      }
+
+      .crm-contribution-form-block-pcp_details {
+        left: -189px;
+      }
+
+      #id-premium td {
+        display: table-cell;
+
+        &:first-child {
+          min-width: 190px;
+          padding: 15px 20px 15px 0 !important;
+          width: 190px;
+        }
+      }
+    }
+
+    legend {
+      padding: 15px 20px !important;
+      margin: 0;
+    }
+
+    .crm-submit-buttons {
+      border-bottom: none;
+    }
+  }
+}
+
+.CRM_Contribute_Form_Search {
+  table {
+    background: transparent;
+    border: none;
+    font-family: $font-family-base;
+
+    thead th {
+      background: $gray-lighter !important;
+      border: none;
+      color: $gray-darker !important;
+      line-height: 1.5em !important;
+      padding: 15px !important;
+      vertical-align: middle;
+
+      div {
+        padding: 0;
+      }
+    }
+
+    tbody tr {
+      background: $crm-white;
+
+      td {
+        background: $crm-white;
+        border: none;
+        color: $gray-dark;
+        line-height: 1.5em !important;
+        padding: 15px 30px;
+      }
+    }
+
+    tbody tr th {
+      background: $crm-white !important;
+      border: none !important;
+      color: $gray-darker !important;
+      line-height: 1.5em;
+      padding: 15px 10px !important;
+      vertical-align: middle;
+
+      &.contriTotalLeft {
+        padding-left: 0;
+      }
+
+      div {
+        padding: 0;
+      }
+    }
+  }
+
+  .solid-border-top {
+    background: $gray-lighter;
+    border-radius: $border-radius-child $border-radius-child 0 0;
+    box-shadow: $box-shadow;
+    color: $gray-darker;
+    font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
+    line-height: 0;
+    padding: 15px 20px 11px;
+
+    .label {
+      color: $gray-darker;
+      font-weight: $crm-font-weight-h2;
+    }
+
+    + .form-layout-compressed {
+      border-bottom: 1px solid $crm-background;
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      box-shadow: $crm-form-item-shadow;
+      margin-bottom: 15px;
+    }
+  }
+
+  .dataTables_wrapper {
+    background: $crm-white;
+    border-radius: $border-radius-child;
+    box-shadow: $box-shadow;
+    margin-bottom: 20px;
+
+    .dataTables_length,
+    .dataTables_info {
+      padding-left: 20px;
+    }
+
+    .crm-datatable-pager-top {
+      background: $gray-lighter;
+      border-bottom: 1px solid $crm-background;
+      border-radius: $border-radius-child $border-radius-child 0 0;
+      padding-bottom: 39px;
+      padding-top: 10px;
+
+      .dataTables_paginate {
+        padding-top: 0;
+      }
+    }
+
+    .crm-datatable-pager-bottom {
+      background: $crm-gray-lightest;
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      line-height: 25px;
+      padding-bottom: 39px;
+      padding-top: 10px;
+
+      .dataTables_info,
+      .dataTables_paginate {
+        padding-top: 0;
+      }
+    }
+
+    table {
+      box-shadow: none !important;
+    }
+  }
+
+  .dataTables_length label,
+  .dataTables_info,
+  .dataTables_paginate .ui-button {
+    font-size: $font-size-base;
+  }
+
+  .selector {
+    @include mx-expandable-table();
+
+    .sticky th:first-child {
+      text-align: left !important;
+    }
+
+    tbody tr td {
+      &:nth-child(3) {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:nth-child(4) {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+
+    &.description {
+      display: block;
+      font-family: $font-family-base;
+      padding: 20px 5px !important;
+    }
+  }
+
+  table.crm-softcredit-selector {
+    width: 100% !important;
+
+    thead th {
+      background-color: $gray-lighter !important;
+      font-weight: bold;
+      padding: 15px 20px !important;
+      white-space: nowrap;
+    }
+  }
+
+  table.crm-softcredit-selector td {
+    padding: 15px 20px !important;
+    white-space: nowrap;
+
+    .crm-hover-button {
+      color: $brand-primary !important;
+      text-transform: capitalize;
+    }
+
+    .crm-hover-button:hover {
+      color: $crm-copy !important;
+    }
+  }
+}
+
+.ui-dialog-content .CRM_Contribute_Form_Contribution {
+  .custom-group-Donor_Information input[type="radio"]:checked + label[for]:after {
+    top: 15px;
+  }
+}
+
+.CRM_Contribute_Form_Contribution {
+  .crm-accordion-header {
+    font-family: $font-family-base;
+    font-weight: $crm-font-weight-h1 !important;
+  }
+
+  &#Contribution .crm-accordion-body {
+    padding: 15px 20px !important;
+  }
+
+  #customData,
+  #id-additionalDetail,
+  #paymentDetails_Information,
+  .AdditionalDetail,
+  .Premium,
+  .form-layout-compressed {
+    td:not(.label) {
+      padding: 0;
+    }
+
+    td.label {
+      min-width: 180px;
+    }
+  }
+
+  #payment_information {
+    legend {
+      font-size: $font-size-h2;
+      font-family: $font-family-base;
+      font-weight: 600;
+      color: $gray-darker;
+    }
+  }
+
+  .crm-submit-buttons {
+    .crm-button_qf_Contribution_upload {
+      margin-left: 0 !important;
+    }
+  }
+
+  .required {
+    &:after {
+      display: none;
+    }
+  }
+
+  .action-link .crm-hover-button {
+    color: $crm-copy !important;
+    border: 1px solid $crm-copy !important;
+    background-color: $crm-white !important;
+  }
+
+  .crm-contribution-form-block > .form-layout-compressed {
+    td {
+      padding: 10px 30px !important;
+      line-height: 1.5em;
+      vertical-align: middle;
+      min-height: 40px;
+
+      &:first-child {
+        padding-right: 0 !important;
+
+        label {
+          margin: 0;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+  .crm-form-select {
+    margin-right: 0 !important;
+
+    + .helpicon {
+      position: relative;
+      left: -3px;
+    }
+  }
+
+  td {
+    border-bottom: 0 !important;
+
+    &.label {
+      line-height: 1.5em;
+    }
+
+    label {
+      font-family: $font-family-base;
+    }
+  }
+
+  .crm-contribution-form-block-soft_credit_to {
+    td {
+      padding: 0 !important;
+    }
+  }
+
+  #softCredit {
+    td label {
+      width: 180px !important;
+    }
+  }
+
+  .crm-contribution-form-block-soft_credit_to,
+  .crm-contribution-pcp-block {
+    border-bottom: 0 !important;
+  }
+
+  .crm-contribution-form-block-thankyou_date label {
+    position: relative;
+    top: 7px;
+  }
+
+  .crm-contribution-form-block-payment_instrument_id .helpicon {
+    left: 0;
+  }
+
+  .crm-link-credit-card-mode {
+    margin: 10px 20px 0 0;
+
+    .action-item {
+      border-color: $gray-darker !important;
+      border-radius: $border-radius-base;
+      padding: 6px 15px;
+    }
+  }
+
+  #recurringPaymentBlock {
+    strong {
+      color: $gray-darker;
+    }
+
+    input,
+    .select2-container {
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+
+    .description {
+      display: block;
+      font-family: $font-family-base;
+      line-height: 1.5em;
+      margin-top: 5px;
+    }
+  }
+
+  legend {
+    padding: 10px 30px;
+  }
+
+  textarea {
+    padding: 0 5px;
+    vertical-align: middle;
+  }
+
+  .select2-container {
+    max-width: 230px;
+  }
+
+  #from_email_address {
+    padding-right: 30px !important;
+  }
+
+  div.description {
+    display: block;
+    font-family: $font-family-base;
+    line-height: 1.5em;
+    padding-bottom: 10px;
+  }
+
+  .credit_card_info-section,
+  .billing_name_address-section {
+    .label label {
+      display: inline-block;
+      text-align: left;
+      width: 105px;
+    }
+
+    .billing_middle_name-section label {
+      width: 120px;
+    }
+
+    .cvv2-section {
+      input,
+      .cvv2-icon {
+        float: left;
+      }
+    }
+  }
+
+  #id-additionalDetail {
+    input {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  input,
+  select,
+  textarea,
+  .select2-container {
+    &.crm-inline-error,
+    &.crm-error,
+    &.error {
+      background: none !important;
+      border: 1px solid $brand-danger;
+      min-height: 30px;
+
+      &.select2-container {
+        padding: 0;
+      }
+    }
+  }
+
+  label {
+    &.crm-inline-error,
+    &.crm-error {
+      background: $brand-danger !important;
+      color: $crm-white !important;
+      padding: 5px;
+      border-radius: 3px;
+
+      &.crm-inline-error {
+        margin: 0 4px;
+      }
+
+      span {
+        background: none;
+        color: $crm-white;
+      }
+    }
+  }
+
+  span {
+    &.crm-error {
+      background: $brand-danger !important;
+      color: $crm-white !important;
+      padding: 5px;
+      border-radius: 3px;
+      margin: 2px;
+
+      span {
+        background: none;
+        color: $crm-white;
+      }
+    }
+  }
+
+  .help {
+    padding: 15px 0;
+  }
+
+  .form-layout-compressed td.label,
+  legend {
+    padding-left: 0 !important;
+  }
+
+  .credit_card_info-group,
+  .billing_name_address-group {
+    input[type="text"] {
+      margin-top: 0 !important;
+    }
+
+    .label {
+      line-height: 29px;
+      text-align: left !important;
+
+      label {
+        width: auto;
+      }
+    }
+  }
+
+  .crm-contribution-form-block-soft_credit_to  {
+    label {
+      width: 180px !important;
+    }
+  }
+
+  .crm-contribution-form-block-note {
+    .label {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .crm-form-textarea {
+      min-height: 110px;
+    }
+  }
+
+  .crm-contribution-form-block-pcp_details {
+    left: -185px;
+    position: relative;
+  }
+
+  .crm-accordion-body td {
+    vertical-align: middle;
+
+    &.label {
+      box-sizing: border-box;
+      min-width: 185px;
+    }
+
+    &.label label {
+      padding-left: 10px;
+    }
+  }
+}
+
+.page-civicrm-contact-view .ui-dialog .CRM_Contribute_Form_Contribution {
+  .crm-link-credit-card-mode {
+    position: absolute;
+    right: 0;
+  }
+
+  .help {
+    padding: 10px;
+  }
+
+  #recurringPaymentBlock {
+    .crm-form-text,
+    .select2-container {
+      margin-top: 0;
+      min-width: 100px !important;
+      width: 150px !important;
+    }
+  }
+
+  .description {
+    font-family: $font-family-base;
+    margin-top: 10px;
+  }
+
+  #softCredit > .crm-accordion-body label {
+    display: block;
+  }
+}
+
+.CRM_Contribute_Form_ContributionView {
+  .action-link {
+    display: none;
+  }
+
+  table {
+    background: transparent;
+    border: none;
+    box-shadow: none !important;
+    font-family: $font-family-base;
+    margin: 10px 0;
+
+    &.crm-info-panel {
+      margin-left: -20px;
+      margin-right: -20px;
+      margin-top: -20px;
+      width: 105%;
+    }
+
+    thead tr {
+      border: 1px solid $crm-background !important;
+
+      th {
+        background: $gray-lighter !important;
+        border: none;
+        color: $gray-darker !important;
+        height: 42px;
+        line-height: 1.1em;
+        vertical-align: middle;
+
+        div {
+          padding: 0;
+        }
+      }
+    }
+
+    tbody tr {
+      background: $crm-white;
+      border: 1px solid $crm-background;
+      border-left: 0;
+      border-right: 0;
+
+      &.crm-child-row {
+        & > td {
+          padding: 0;
+
+          .crm-ajax-container table {
+            margin: 0;
+
+            tbody {
+              border-top: 1px solid $crm-dark-grayblue !important
+            }
+          }
+
+          .crm-ajax-container table th {
+            background: $gray-lighter !important;
+            border: none;
+            color: $gray-darker;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      td {
+        background: $crm-white !important;
+        border: none;
+        line-height: 1.1em;
+        padding: 20px;
+
+        &.label {
+          border-bottom: none;
+          color: $gray-darker !important;
+          vertical-align: middle;
+
+          div {
+            padding: 0;
+          }
+        }
+
+        &:not(.label) {
+          color: $gray-dark;
+        }
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
+
+  #paymentDetails_Information {
+    .helpicon {
+      left: 0;
+    }
+
+    td:not(.label) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  #Donor_Information__ {
+    padding: 0;
+
+    .crm-accordion-body {
+      padding: 20px 40px !important;
+    }
+  }
+
+  .crm-accordion-header {
+    font-size: 13px !important;
+    font-family: $font-family-base;
+
+    + .crm-accordion-body {
+      padding: 20px !important;
+
+      td.label {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+  label[for="thankyou_date"] {
+    top: 7px;
+  }
+
+  label[for="thankyou_date_time"] {
+    top: 5px;
+  }
+}
+
+#ContributionView {
+  [id*="Donor_Information_"] {
+    padding: 0;
+
+    .crm-accordion-wrapper .crm-accordion-body {
+      padding: 20px 43px !important;
+    }
+
+    td {
+      vertical-align: middle;
+      display: table-cell;
+      min-width: 170px;
+      box-sizing: border-box;
+    }
+
+    .html-adjust {
+      width: 100%;
+    }
+  }
+}
+
+.CRM_Contribute_Form_Task_Email {
+  .crm-contactEmail-form-block {
+    .form-layout-compressed {
+      background: $crm-white;
+      width: 100%;
+
+      .crm-contactEmail-form-block-recipient {
+        td {
+          &.label {
+            font-weight: 600;
+            color: $gray-darker;
+          }
+
+          &:first-child {
+            &:after {
+              content: "*";
+              font-weight: bold;
+              margin: 0 5px;
+              color: $brand-danger;
+            }
+          }
+        }
+
+        .select2-container {
+          width: 100% !important;
+        }
+      }
+
+      td {
+        &.label {
+          padding-left: 30px !important;
+        }
+      }
+    }
+
+    .crm-submit-buttons + .status {
+      margin: 15px 20px;
+    }
+
+    .crm-html_email-accordion {
+      .helpIcon {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+    }
+
+    #s2id_fromEmailAddress,
+    #s2id_to {
+      &:after {
+        display: none;
+      }
+    }
+
+    .crm-contactEmail-form-block-template {
+      .crm-form-select {
+        padding-right: 30px !important;
+      }
+    }
+  }
+
+  .crm-accordion-wrapper {
+    .crm-accordion-body {
+      td.label {
+        padding-left: 15px !important;
+      }
+    }
+  }
+}
+
+form.CRM_Contribute_Form_ContributionCharts {
+  .ui-tabs-nav {
+    background: $crm-white;
+    border: 0;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .ui-tabs-nav .crm-tab-button {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    height: 50px;
+    line-height: 50px;
+
+    &:hover {
+      background-color: $gray-lighter;
+    }
+
+    a {
+      color: $gray-darker;
+    }
+
+    &.ui-tabs-selected {
+      border-bottom: 3px solid $gray-darker;
+
+      a {
+        background: none;
+        color: $gray-darker;
+      }
+    }
+  }
+
+  .ui-tabs-nav .crm-tab-button + #chartData > #chartData {
+    box-shadow: $box-shadow;
+    padding: 20px;
+
+    table {
+      border: 0;
+      border-top: 1px solid $gray-lighter;
+      margin-top: 20px;
+    }
+  }
+
+  #chartData {
+    table {
+      box-shadow: none;
+
+      td {
+        padding: 10px 20px;
+      }
+    }
+
+    .chart {
+      border: none !important;
+
+      td {
+        border: none !important;
+      }
+    }
+  }
+
+  .ui-tabs {
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+
+    &:before {
+      border-radius: 0 0 $border-radius-base $border-radius-base;
+      box-shadow: $crm-tab-shadow;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  > h3 {
+    background: $gray-lighter;
+    border-radius: $border-radius-base $border-radius-base 0 0;
+    box-shadow: $box-shadow;
+    color: $datepicker-gray-darker;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px 0 0;
+    padding: 0 15px;
+  }
+
+  .spacer + h3 {
+    border-radius: $border-radius-base;
+
+    + div {
+      position: relative;
+    }
+  }
+
+  .crm-pager {
+    background: $crm-gray-lightest;
+    line-height: 1.7em;
+    padding: 7px 0;
+
+    > .element-right {
+      margin-top: 7px;
+    }
+  }
+
+  .crm-pager:first-child {
+    background: $gray-lighter;
+    border-bottom: 1px solid $crm-background;
+    border-radius: $panel-border-radius $panel-border-radius 0 0;
+    margin-bottom: 0;
+    margin-top: 75px;
+  }
+
+  p.description {
+    background: $crm-light-green-color;
+    border-radius: $border-radius-base;
+    color: $gray-darker;
+    margin: 15px 0;
+    padding: 10px 20px !important;
+    position: absolute;
+    top: -70px;
+    width: calc(100% - 40px);
+  }
+
+  table.selector {
+    border-radius: 0;
+    box-shadow: $crm-form-item-shadow !important;
+
+    thead th:not(:last-child) {
+      padding-right: 10px !important;
+    }
+
+    > tbody > tr > td {
+      min-width: 70px !important;
+
+      &:not(:last-child) {
+        padding-right: 10px !important;
+      }
+
+      &:nth-child(4), &:nth-child(5) {
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    + .crm-pager {
+      border-radius: 0 0 $panel-border-radius $panel-border-radius;
+      border-top: 1px solid $crm-background;
+      box-shadow: $crm-form-item-shadow;
+      margin-top: 0;
+    }
+  }
+
+  .selector,
+  .report {
+    @include mx-expandable-table();
+  }
+
+  .report {
+    border: solid 1px $crm-background;
+    margin-top: 20px;
+  }
+}
+
+.CRM_Contribute_Form_Task_Print {
+  padding: 0 15px;
+
+  .crm-form-block {
+    background: transparent;
+  }
+
+  table {
+    @extend %civihr-table;
+    border: none;
+    border-radius: $panel-border-radius;
+    margin: 30px 0 20px;
+
+    tr.columnheader {
+      border: none !important;
+      border-bottom: 1px solid $crm-dark-grayblue !important;
+    }
+
+    tr.crm-contribution {
+      border-left: none;
+      border-right: none;
+    }
+
+    th,
+    td {
+      border: none !important;
+      line-height: 1.5em !important;
+      padding: 15px 20px !important;
+    }
+
+    td.crm-contribution-contribution_source {
+      max-width: 300px;
+    }
+  }
+
+  .element-right {
+    margin-right: 0 !important;
+  }
+}
+
+.CRM_Financial_Form_Search {
+
+  .crm-submit-buttons {
+    height: auto;
+    line-height: normal;
+    margin: 20px 0;
+
+    > a.button {
+      background: $crm-copy;
+      float: none;
+
+      &:hover {
+        background: $crm-light-gray-color;
+        color: $crm-white;
+      }
+    }
+  }
+
+  .form-layout-compressed {
+    margin: 20px 0 0;
+
+    input.crm-form-submit {
+      margin-left: 5px;
+      padding: 4px 10px;
+      vertical-align: middle;
+      text-shadow: none;
+    }
+  }
+}

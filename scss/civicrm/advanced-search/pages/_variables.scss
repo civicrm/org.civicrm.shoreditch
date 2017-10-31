@@ -4,3 +4,14 @@ $display-settings-for-results: 'div.crm-search_criteria_basic-accordion:nth-chil
 $basic-criteria: 'div.crm-search_criteria_basic-accordion:nth-child(4) > div:nth-child(2)';
 $address-fields: '#location';
 $cases: '#case-search';
+$activities: '#activity';
+$relationship: '#relationship';
+$demographics: '#demographics';
+$notes: '#notes-search';
+$changelog: '#changelog';
+$mailings: '#mailingForm';
+$events: '#participantForm';
+$membership: '#memberForm';
+$contributions: '#contribution_recur';
+$pledges: '#pledgeForm';
+$footer: '.crm-search-form-block > .crm-advanced_search_form-accordion > .crm-accordion-body > .form-layout';

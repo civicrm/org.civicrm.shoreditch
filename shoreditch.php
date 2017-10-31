@@ -119,6 +119,7 @@ function shoreditch_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 function shoreditch_civicrm_coreResourceList(&$items, $region) {
   if ($region == 'html-header') {
     CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/bootstrap.css', -50, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/crm-ui.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/radio-checkbox.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/add-missing-date-addons.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/transition.js', 1000, 'html-header');
@@ -136,8 +137,16 @@ function shoreditch_civicrm_coreResourceList(&$items, $region) {
  * Implements hook_civicrm_buildForm().
  */
 function shoreditch_civicrm_buildForm($formName) {
+  CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/enable-select2.js');
+
   if ($formName == 'CRM_Contact_Form_Search_Advanced') {
-    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/enable-select2.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/highlight-table-rows.js');
+  }
+  elseif ($formName == 'CRM_Admin_Form_Setting_Url') {
+    $baseUrl = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.shoreditch');
+    $cssUrl = CRM_Utils_File::addTrailingSlash($baseUrl, '/') . 'css/custom-civicrm.css';
+    Civi::resources()
+      ->addScriptFile('org.civicrm.shoreditch', 'js/urlSettingsForm.js')
+      ->addVars('shoreditch', array('cssUrl' => $cssUrl));
   }
 }
