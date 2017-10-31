@@ -5,6 +5,30 @@
   height: auto;
   z-index: 1000;
 
+  .menumain-label {
+    display: block;
+    float: right;
+    max-width: 200px;
+    overflow: hidden;
+    transition: max-width 0.5s ease;
+  }
+
+  &.search-ongoing {
+    #crm-qsearch {
+      &:before {
+        opacity: 1;
+      }
+
+      .form-text {
+        width: 14em !important;
+      }
+    }
+
+    .menumain-label {
+      max-width: 0;
+    }
+  }
+
   #crm-qsearch {
     background: $gray-lighter !important;
     padding: 0 24px;
@@ -14,17 +38,6 @@
       color: $gray-dark;
       float: left;
       opacity: 0.4;
-    }
-
-    &.search-ongoing {
-
-      &:before {
-        opacity: 1;
-      }
-
-      .form-text {
-        width: 14em !important;
-      }
     }
 
     > form {
