@@ -9,7 +9,7 @@
    */
   function amendMarkupOfMenuItemsWithFontAwesomeIcons() {
     menuItemsWithFontAwesomeIcon().each(function () {
-      var $menuItem = jQuery(this);
+      var $menuItem = $(this);
 
       $('.fa', $menuItem).addClass('menumain-icon');
       wrapMenuItemLabelInHTML($menuItem);
@@ -96,7 +96,7 @@
    * so that custom behaviour can be applied to it
    *
    * The class is removed only when the element
-   * loses the hover AND it is empty (= there is no ongoing search)
+   * loses the hover AND it is empty (which means there is no ongoing search)
    *
    * @param {string} customClass
    */
@@ -116,8 +116,7 @@
   }
 
   /**
-   * Creates an HTML element out of the text node of the
-   * given menu item
+   * Creates an HTML element out of the text node of the given menu item
    *
    * @param {object} $menuItem
    */
