@@ -9,7 +9,7 @@ $button-border-radius: 2px;
   @extend .btn, %open-sans-font-family;
   text-shadow: none;
   text-transform: uppercase;
-  opacity: 1 !important;
+  opacity: 1;
   font-size: 1em !important;
 }
 
@@ -59,17 +59,77 @@ $button-border-radius: 2px;
     }
   }
 
+  input.crm-form-submit {
+    background: $brand-primary;
+    border-color: $brand-primary;
+    border-radius: $panel-border-radius;
+    font-family: $font-family-base;
+    padding: 8px 12px;
+    text-shadow: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $crm-blue-light;
+    }
+
+    &.cancel {
+      background: $crm-white;
+      border: 1px solid $crm-copy;
+      color: $crm-cancel-color;
+
+      &:hover {
+        background: $crm-copy;
+        color: $crm-white;
+      }
+    }
+  }
+
+  .crm-button-type-cancel {
+
+    i {
+      color: $crm-cancel-color;
+    }
+
+    &:hover {
+      i {
+        color: $crm-white;
+      }
+    }
+
+    input.crm-form-submit {
+      color: $crm-cancel-color !important;
+
+      &:hover {
+        color: $crm-white !important;
+      }
+    }
+  }
+
+  .crm-submit-buttons {
+    height: auto;
+    margin: 0;
+
+    .crm-button {
+      float: none !important;
+    }
+
+    span.crm-button {
+      display: inline-block;
+    }
+
+    a.button {
+      float: none;
+    }
+  }
+
   // "Toolbar" buttons
   $toolbar-top-space: 6px;
 
   .crm-form-block {
     &.crm-search-form-block > .crm-submit-buttons,
-    &.crm-form-block > .crm-submit-buttons {
+    &.crm-form-block > .crm-submit-buttons,
+    .form-item > .crm-submit-buttons {
       @extend %submit-buttons-civi;
-    }
-
-    .crm-button.crm-i-button input.crm-form-submit {
-      padding-left: 12px;
     }
 
     .crm-submit-buttons {
@@ -122,11 +182,11 @@ $button-border-radius: 2px;
   }
 
   .crm-option-edit-link.crm-hover-button,
-  .crm-hover-button:not(#addMorePermission),
+  .crm-hover-button:not(#addMorePermission):not(.open-inline-noreturn),
   .crm-clear-link {
     border: 0 !important;
     color: $gray-dark;
-    margin: 0;
+    margin: 0 !important;
   }
 
   .crm-accordion-header,
@@ -156,8 +216,7 @@ $button-border-radius: 2px;
 
   .crm-button-type-refresh,
   .crm-submit-buttons > .crm-button {
-    padding: 0 !important;
-    border: 0 !important;
+    border: 0;
 
     .crm-i {
       padding: 3px;
@@ -234,67 +293,16 @@ $button-border-radius: 2px;
     }
   }
 
-  ul.wizard-bar {
-    @extend .btn-group;
-    $height: 25px;
-    height: $height;
-    border: 0 !important;
-
-    > li {
-      display: inline-block !important;
-      height: $height !important;
-      line-height: $height !important;
-      box-shadow: none !important;
-      border-radius: 0 !important;
-
-      &:first-child {
-        border-top-left-radius: $button-border-radius !important;
-        border-bottom-left-radius: $button-border-radius !important;
-        border-top-right-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
-      }
-
-      &:last-child {
-        border-top-left-radius: 0 !important;
-        border-bottom-left-radius: 0 !important;
-        border-top-right-radius: $button-border-radius !important;
-        border-bottom-right-radius: $button-border-radius !important;
-      }
-
-      &:not(.current-step) {
-        @extend %btn, .btn-default;
-
-        &:hover {
-          color: $gray-darker !important;
-        }
-      }
-
-      &.current-step {
-        @extend %btn, .btn-secondary;
-        background: $gray-dark !important;
-        border-color: $gray-darker !important;
-
-        &:hover {
-          color: #ffffff !important;
-        }
-      }
-    }
-  }
-
-  #wizard-steps {
-    + h1,
-    + h2 {
-      position: relative;
-      top: -45px;
-    }
-  }
-
   .action-link {
     line-height: 45px;
 
     a {
       display: inline-block !important;
       float: none !important;
+
+      &.button {
+        box-shadow: $crm-form-layout-shadow;
+      }
     }
 
     .crm-i {
@@ -333,6 +341,15 @@ $button-border-radius: 2px;
     .crm-i {
       position: relative;
       top: -1px;
+    }
+  }
+}
+
+a {
+  &.button  {
+    i {
+      margin-top: -4px;
+      margin-right: 10px;
     }
   }
 }

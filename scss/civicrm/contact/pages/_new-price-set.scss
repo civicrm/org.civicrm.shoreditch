@@ -1,0 +1,160 @@
+.page-civicrm-admin-price {
+  &,
+  .ui-dialog-content {
+    table.form-layout td {
+      input.crm-form-text,
+      .crm-form-select,
+      .crm-form-textarea {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .crm-form-textarea {
+        min-height: 100px;
+      }
+    }
+
+    .ui-dialog-titlebar .ui-button .ui-icon {
+      top: 12px;
+    }
+
+    .description {
+      display: block;
+    }
+  }
+
+  .crm-container #crm-main-content-wrapper {
+    .CRM_Price_Form_Set .crm-form-block,
+    .CRM_Price_Form_Field .crm-form-block {
+
+      .form-layout {
+        margin: 20px 0;
+
+        td.label {
+          display: table-cell;
+          padding-left: 20px;
+          text-align: left;
+          vertical-align: middle;
+          width: 175px;
+        }
+
+        tr {
+          &:nth-child(6),
+          &:nth-child(8) {
+            td.label {
+              vertical-align: top;
+            }
+          }
+        }
+      }
+    }
+
+    #field_page, #option11_wrapper {
+      margin-bottom: 0 !important;
+      position: relative;
+    }
+
+    .action-link {
+      background: $crm-white !important;
+      padding: 20px !important;
+
+      &:first-child {
+        background: $gray-lighter !important;
+      }
+
+      &:last-child {
+        border-top: 1px solid $crm-background;
+      }
+    }
+
+    .dataTables_wrapper {
+      overflow: visible;
+    }
+
+    #option11, #option12, #option13,
+    #options {
+      @include mx-expandable-table();
+      box-shadow: none !important;
+
+      th {
+        border-bottom-color: $crm-dialog-container-border !important;
+
+        &:first-child {
+          padding-left: 20px !important;
+        }
+      }
+
+      tr td {
+        &:first-child {
+          padding-left: 20px !important;
+        }
+      }
+
+      .crmf-title {
+        padding-left: 20px;
+      }
+
+      td:last-child {
+        text-align: right;
+        padding-right: 20px;
+      }
+
+      .action-item {
+        text-transform: none;
+      }
+    }
+  }
+
+  .CRM_Price_Form_Field {
+    .form-layout tr {
+      td {
+        display: table-cell;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      td.description {
+        padding-left: 15px;
+      }
+
+      &.crm-price-field-form-block-is_display_amounts,
+      &.crm-price-field-form-block-weight,
+      &.crm-price-field-form-block-help_post,
+      &.crm-price-field-form-block-active_on,
+      &.crm-price-field-form-block-expire_on {
+        td {
+          vertical-align: top;
+        }
+      }
+
+      &.crm-price-field-form-block-active_on,
+      &.crm-price-field-form-block-expire_on {
+        input {
+          vertical-align: initial;
+        }
+      }
+    }
+
+    #showoption {
+      legend,
+      .description,
+      #optionFieldLink {
+        padding: 0 20px;
+      }
+    }
+
+    #optionField {
+      @include mx-expandable-table();
+      margin: 20px 0;
+
+      td {
+        padding: 10px 20px !important;
+
+        .crm-form-text {
+          min-width: 50px !important;
+          width: 50px !important;
+        }
+      }
+    }
+  }
+}

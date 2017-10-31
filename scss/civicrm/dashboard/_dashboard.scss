@@ -1,0 +1,10 @@
+.crm-dashboard-controls {
+  margin: 20px 0;
+
+  a {
+    color: $brand-primary !important;
+  }
+}
+
+@import 'pages/view-dashboard';
+@import 'pages/edit-dashboard';

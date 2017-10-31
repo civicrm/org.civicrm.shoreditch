@@ -1,11 +1,9 @@
 &.page-civicrm-admin-custom-group {
-
   #options table td:last-of-type {
-    width: 350px;
+    width: 250px;
   }
 
   #Group {
-
     .crm-form-block {
       background: none;
       box-shadow: none;
@@ -13,6 +11,319 @@
 
     .form-layout {
       @include civihr_panel;
+    }
+  }
+
+  .help {
+    margin-bottom: 20px !important;
+  }
+
+  #options {
+    border: none;
+    border-radius: $border-radius-child $border-radius-child 0 0;
+
+    thead tr {
+      border-bottom: 1px solid $crm-table-heading-border-color;
+    }
+
+    thead tr th {
+      background: $gray-lighter;
+      line-height: 1.5em !important;
+      padding: 15px;
+
+      &:first-child {
+        padding-left: 20px;
+      }
+
+      &:last-child {
+        padding-right: 20px;
+      }
+    }
+
+    tr td {
+      line-height: 1.5em !important;
+      padding: 12px 15px;
+
+      &.crm-editable {
+        max-width: 200px;
+      }
+
+      &:first-child {
+        padding-left: 20px;
+      }
+    }
+
+    tr td:last-child {
+      min-width: 245px;
+      padding-right: 20px;
+      text-align: right;
+    }
+
+    tr td .action-item {
+      color: $brand-primary;
+
+      &:hover,
+      &:focus {
+        background: none;
+        color: $brand-primary !important;
+      }
+    }
+  }
+
+  .crm-content-block {
+    border-radius: $border-radius-child;
+  }
+
+  #custom_group {
+    border-radius: $border-radius-child;
+    overflow: auto !important;
+
+    .action-link {
+      background: $crm-white !important;
+      border-top: 1px solid $crm-background;
+      box-shadow: none;
+      padding: 20px 15px !important;
+    }
+
+    .action-link .button {
+      box-shadow: none;
+    }
+  }
+
+  #field_page + .action-link {
+    background: $crm-white !important;
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+    box-shadow: $crm-form-item-shadow;
+    padding: 20px 15px !important;
+
+    .button {
+      box-shadow: none;
+    }
+  }
+
+  .CRM_Custom_Form_Preview .crm-submit-buttons {
+    box-shadow: none !important;
+  }
+
+  .dataTable > tbody > tr > td.crm-custom_option-links {
+    padding-right: 20px;
+    text-align: right;
+  }
+
+  .ui-dialog-content #field_page {
+    margin: -38px -20px;
+
+    .form-item {
+      padding: 0;
+    }
+
+    .dataTables_wrapper {
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+    }
+
+    .dataTables_wrapper .crm-datatable-pager-top,
+    .dataTables_wrapper .crm-datatable-pager-bottom {
+      border-radius: 0;
+    }
+  }
+}
+
+&.page-civicrm-admin-custom {
+
+  #crm-main-content-wrapper {
+
+    .help + .crm-submit-buttons,
+    .crm-submit-buttons:first-child {
+      border-bottom: 1px solid $gray-lighter;
+      border-top: 0;
+      border-radius: 2px 2px 0 0;
+    }
+
+    .crm-submit-buttons {
+      background-color: $crm-white !important;
+      border-radius: 0 0 2px 2px;
+    }
+  }
+
+  .form-layout {
+    box-shadow: none !important;
+    position: relative;
+
+    &:before {
+      box-shadow: $crm-form-layout-shadow;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    tr {
+      padding: 0;
+
+      &:first-child {
+        td {
+          padding-top: 20px;
+        }
+      }
+
+      &:last-child {
+        td {
+          padding-bottom: 20px;
+        }
+      }
+
+      &.crm-custom-field-form-block-is_required,
+      &.crm-custom-field-form-block-is_searchable,
+      &.crm-custom-field-form-block-is_view,
+      &.crm-custom-field-form-block-is_active {
+        .html-adjust {
+          br {
+            display: none;
+          }
+
+          .crm-form-checkbox {
+            margin-top: 4px;
+            margin-left: 0 !important;
+            vertical-align: top;
+          }
+        }
+      }
+
+      td {
+        display: table-cell;
+        text-align: left;
+        line-height: 1.1 !important;
+
+        &:last-child {
+          padding-right: 20px;
+        }
+
+        &.label {
+          padding-left: 20px;
+          vertical-align: middle;
+        }
+
+        input.crm-form-text,
+        .crm-form-select,
+        .crm-form-textarea,
+        .select2-container {
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }
+
+        .crm-form-textarea {
+          min-height: 100px;
+        }
+
+        .crm-error-label {
+          display: inline-block;
+          margin-top: 2px;
+        }
+
+        .description {
+          display: block;
+        }
+      }
+
+      &:nth-child(10),
+      &:last-child {
+        td.label {
+          vertical-align: top;
+        }
+      }
+    }
+
+    #showoption {
+      > td {
+        padding: 0;
+      }
+
+      #option_group {
+        td {
+          padding-top: 10px;
+        }
+      }
+    }
+
+    #multiple {
+      legend {
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+
+      > td {
+        padding: 0 20px;
+      }
+
+      .crm-form-text {
+        min-width: 150px !important;
+        width: 150px !important;
+      }
+
+      #optionField {
+        @include mx-expandable-table();
+        margin: 20px 0;
+
+        td {
+          padding: 10px 20px !important;
+        }
+      }
+    }
+  }
+
+  .ui-dialog-content {
+    tr td.html-adjust input[type="checkbox"] {
+      display: block;
+      position: absolute;
+
+      + .description,
+      + br + .description {
+        padding-left: 20px;
+      }
+    }
+
+    input[type="radio"] + label[for] {
+      line-height: 17px;
+    }
+
+    table.dataTable tr {
+      border-bottom: 1px solid $crm-background;
+    }
+
+    table.dataTable th {
+      line-height: 1.5em !important;
+      padding: 15px 20px !important;
+    }
+
+    table.dataTable td {
+      line-height: 1.5em !important;
+      padding: 12px 20px !important;
+      vertical-align: middle;
+    }
+
+    .form-layout-compressed td {
+      vertical-align: top;
+
+      .crm-form-date-wrapper {
+        margin-top: 0;
+      }
+    }
+
+    .form-layout tr td:first-child {
+      padding-left: 0;
+    }
+
+    .crm-info-panel td {
+      padding: 4px;
+    }
+
+    .crm-info-panel td.label label {
+      font-weight: $crm-font-weight-h3
     }
   }
 }

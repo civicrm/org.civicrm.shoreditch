@@ -1,5 +1,10 @@
 $box-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
 $crm-form-control-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
+$crm-nested-table-box-shadow: 0 1px 13px 0px rgba(144, 144, 144, 0.25);
+$crm-box-shadow-sub-panel: 0 7px 16px 1px rgba(0,0,0,0.1);
+$crm-box-shadow-inset: inset 0 -1px 18px -3px rgba(148,148,148,0.62);
+$crm-select2-box-shadow-inset: inset 0 0 9px -5px rgb(51, 51, 51);
+$crm-modal-footer-shadow: inset 0 8px 21px -6px rgba(148, 148, 148, 0.4);
 
 //== CiviCRM Page
 //
@@ -18,6 +23,9 @@ $crm-page-topbar-bg-light:     #656C80;
 $crm-page-topbar-color:        #fff !default;
 $crm-page-topbar-item-padding: 15px !default;
 $crm-accordion-header-color:   #f3f6f7;
+$crm-dasboard-header:          #5D677B;
+$crm-h3-color:                 #525966;
+$crm-wizard-border:            #eff3f5;
 
 //
 // Variables override
@@ -50,6 +58,7 @@ $brand-success:             #8EC68A !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #ECA67F !default;
 $brand-danger:              #E6807F !default;
+$crm-help-success:          #d1e5ce;
 $crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
@@ -75,6 +84,7 @@ $body-bg: $crm-background !default;
 $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-base:        "Open Sans", $font-family-sans-serif !default;
 
+$font-size-small:         12px !default;
 $font-size-base:          13px !default;
 $font-size-medium:        14px !default;
 $font-size-xs:            9px !default;
@@ -105,6 +115,11 @@ $crm-font-weight-h6:          500 !default;
 
 $icon-font-path: "../vendor/bootstrap/fonts/bootstrap/" !default;
 
+//== Layout
+//
+//## Common layout spacings, margins, and paddings
+
+$crm-gap-small: 5px !default;
 
 //== Components
 //
@@ -117,6 +132,7 @@ $padding-base-horizontal: 10px !default;
 
 $border-radius-base:  2px !default;
 $border-radius-small: $border-radius-base !default;
+$border-radius-child: 4px !default;
 
 
 //== Tables
@@ -194,6 +210,11 @@ $modal-lg:                    945px !default;
 $modal-md:                    555px !default;
 $modal-sm:                    360px !default;
 
+//== UI Modals
+//
+//##
+
+$ui-modal-header-padding: 13px 20px !default;
 
 //== Panels
 //
@@ -202,7 +223,7 @@ $modal-sm:                    360px !default;
 $panel-bg:                  transparent !default;
 $panel-body-padding:        15px 20px !default;
 $panel-heading-padding:     $panel-body-padding !default;
-$panel-footer-padding:      $panel-heading-padding !default;
+$panel-footer-padding:      20px !default;
 $panel-border-radius:       $border-radius-base + 1 !default;
 
 $panel-inner-border:        $gray-light !default;
@@ -334,4 +355,4 @@ $dl-horizontal-offset: 250px !default;
 $blockquote-small-color:      $crm-copy !default;
 $blockquote-border-color:     $brand-primary !default;
 
-$crm-ui-select-top-padding: 4px;
+$crm-ui-select-top-padding: 4px !default;
