@@ -18,8 +18,8 @@ $crm-page-sidebar-max-width:   170px !default;
 $crm-page-main-max-width:      1004px !default;
 $crm-page-main-padding:        16px !default;
 
-$crm-page-topbar-bg:           #586277 !default;
-$crm-page-topbar-bg-light:     #656C80;
+$crm-page-topbar-bg:           #222831 !default;
+$crm-page-topbar-bg-light:     #393E46;
 $crm-page-topbar-color:        #fff !default;
 $crm-page-topbar-item-padding: 15px !default;
 $crm-accordion-header-color:   #f3f6f7;
@@ -45,19 +45,19 @@ $os-font-path:   "../fonts/open-sans" !default;
 //## Gray and brand colors for use across Bootstrap.
 
 $crm-background:            #E8EEF0 !default;
-$crm-copy:                  #727E8A !default;
+$crm-copy:                  #4D4D69 !default;
 
-$gray-darker:               #4D5663 !default;
+$gray-darker:               #464354 !default;
 $gray-dark:                 $crm-copy !default;
 $gray-light:                $crm-background !default;
 $gray-lighter:              #F3F6F7 !default;
 $crm-gray-lightest:         #FAFAFB !default;
 
-$brand-primary:             #42AFCB !default;
-$brand-success:             #8EC68A !default;
-$brand-info:                #5bc0de !default;
-$brand-warning:             #ECA67F !default;
-$brand-danger:              #E6807F !default;
+$brand-primary:             #0071BD !default;
+$brand-success:             #4D994D !default;
+$brand-info:                #0071BD !default;
+$brand-warning:             #BF5900 !default;
+$brand-danger:              #CF3458 !default;
 $crm-help-success:          #d1e5ce;
 $crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
@@ -70,6 +70,22 @@ $crm-white:                 #FFF !default;
 
 $crm-dialog-container-border: #d3dee2;
 
+$btn-success-color:         $gray-darker !default;
+$btn-warning-color:         $gray-darker !default;
+
+
+$btn-success-bg:            #44CB7E !default;
+$label-success-bg:          $btn-success-bg !default;
+$panel-success-heading-bg:  $btn-success-bg !default;
+$progress-bar-success-bg:   $btn-success-bg !default;
+$state-success-border:      $btn-success-bg !default;
+
+
+$btn-warning-bg:            #E6AB5E !default;
+$label-warning-bg:          $btn-warning-bg !default;
+$panel-warning-heading-bg:  $btn-warning-bg !default;
+$progress-bar-warning-bg:   $btn-warning-bg !default;
+$state-warning-border:      $btn-warning-bg !default;
 //== Scaffolding
 //
 //## Settings for some of the most global styles.
@@ -242,13 +258,13 @@ $crm-panel-extra-padding:    5px 20px 10px 35px !default;
 $panel-default-text:        $gray-darker !default;
 $panel-default-heading-bg:  $gray-lighter !default;
 
-$panel-success-text:        $crm-white !default;
+$panel-success-text:        $gray-darker !default;
 $panel-success-heading-bg:  $brand-success !default;
 
 $panel-info-text:           $crm-white !default;
 $panel-info-heading-bg:     $brand-info !default;
 
-$panel-warning-text:        $crm-white !default;
+$panel-warning-text:        $gray-darker !default;
 $panel-warning-heading-bg:  $brand-warning !default;
 
 $panel-danger-text:         $crm-white !default;

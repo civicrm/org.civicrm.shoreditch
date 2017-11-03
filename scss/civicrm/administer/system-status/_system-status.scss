@@ -2,11 +2,11 @@
 #crm-container td.tasklist a {
 
   &:visited {
-    color: #8ec68a;
+    color: $brand-success;
   }
 
   &:link {
-    color: #e68074;
+    color: $brand-warning;
   }
 }
 
@@ -24,15 +24,17 @@
       margin: 0;
 
       &.crm-severity-error {
-        background: #E6807F;
+        background: $brand-danger;
       }
 
       &.crm-severity-warning {
-        background: #ECA67F;
+        background: $btn-warning-bg;
+        color: $gray-darker;
       }
 
       &.crm-severity-info {
-        background: #8EC68A;
+        background: $btn-success-bg;
+        color: $gray-darker;
       }
     }
 

@@ -33,11 +33,11 @@
 }
 
 .btn-success-outline {
-  @include button-outline-variant($btn-success-bg);
+  @include button-outline-variant($gray-darker, $bg-color: $btn-success-bg, $hover-color: $gray-darker);
 }
 
 .btn-warning-outline {
-  @include button-outline-variant($btn-warning-bg);
+  @include button-outline-variant($gray-darker, $bg-color: $btn-warning-bg, $hover-color: $gray-darker);
 }
 
 .btn-danger-outline {

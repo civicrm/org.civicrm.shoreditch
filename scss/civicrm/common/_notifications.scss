@@ -55,6 +55,16 @@
       color: $brand-primary;
       opacity: 0.8;
 
+      &.ui-button {
+        background: $brand-primary;
+        color: $crm-white;
+        text-decoration: none;
+
+        .ui-icon {
+          margin-top: 0;
+        }
+      }
+
       &:hover {
         opacity: 1;
       }

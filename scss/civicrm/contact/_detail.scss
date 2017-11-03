@@ -308,6 +308,10 @@
     i {
       margin-right: 6px;
     }
+
+    &:hover i {
+      color: $crm-white;
+    }
   }
 
   form.CRM_Contact_Form_Inline_ContactName {

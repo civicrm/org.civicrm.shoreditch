@@ -107,7 +107,7 @@
 }
 
 .nav-pills-horizontal-success {
-  @include nav-pills-horizontal-variant($brand-success, $crm-white);
+  @include nav-pills-horizontal-variant($btn-success-bg, $gray-darker);
 }
 
 .nav-pills-horizontal-info {
@@ -115,7 +115,7 @@
 }
 
 .nav-pills-horizontal-warning {
-  @include nav-pills-horizontal-variant($brand-warning, $crm-white);
+  @include nav-pills-horizontal-variant($btn-warning-bg, $gray-darker);
 }
 
 .nav-pills-horizontal-danger {

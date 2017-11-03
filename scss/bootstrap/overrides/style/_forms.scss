@@ -145,6 +145,8 @@ label {
   .checkbox-inline label  {
     color: $state-success-text;
   }
+
+  @include form-control-validation($state-success-text, $state-success-border, $state-success-bg);
 }
 
 .has-warning {
@@ -155,6 +157,8 @@ label {
   .checkbox-inline label  {
     color: $state-warning-text;
   }
+
+  @include form-control-validation($state-warning-text, $state-warning-border, $state-warning-bg);
 }
 
 .has-error {

@@ -181,6 +181,19 @@ $button-border-radius: 2px;
     @extend %btn;
   }
 
+  input[type=button],
+  a.button,
+  a.button:link {
+    background: $gray-dark;
+    color: $crm-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $crm-white;
+      opacity: 0.8;
+    }
+  }
   .crm-option-edit-link.crm-hover-button,
   .crm-hover-button:not(#addMorePermission):not(.open-inline-noreturn),
   .crm-clear-link {
@@ -294,7 +307,7 @@ $button-border-radius: 2px;
   }
 
   .action-link {
-    line-height: 45px;
+    height: auto;
 
     a {
       display: inline-block !important;

@@ -752,6 +752,10 @@ $control-height: 30px;
   span.crm-error:not(.crm-error-label) {
     color: $crm-white;
     background-color: $brand-danger;
+
+    a {
+      color: $crm-white;
+    }
   }
 }
 

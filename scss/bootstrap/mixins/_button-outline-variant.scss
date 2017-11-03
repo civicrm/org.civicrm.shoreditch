@@ -1,23 +1,23 @@
 // From Bootstrap 4 alpha
-@mixin button-outline-variant($color, $bg-color: $color) {
+@mixin button-outline-variant($color, $bg-color: $color, $hover-color: $crm-white) {
   color: $color;
   background-image: none;
   background-color: transparent;
-  border-color: $color;
+  border-color: $bg-color;
 
   &:focus,
   &.focus,
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: #fff;
+    color: $hover-color;
     background-color: $bg-color;
-        border-color: $color;
+    border-color: $bg-color;
   }
   @include hover {
-    color: #fff;
+    color: $hover-color;
     background-color: $bg-color;
-        border-color: $color;
+    border-color: $bg-color;
   }
 
   &.disabled,

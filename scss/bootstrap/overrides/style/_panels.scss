@@ -125,7 +125,7 @@
   }
 
   &.panel-strip-success {
-    border-left-color: $brand-success;
+    border-left-color: $btn-success-bg;
   }
 
   &.panel-strip-info {
@@ -133,7 +133,7 @@
   }
 
   &.panel-strip-warning {
-    border-left-color: $brand-warning;
+    border-left-color: $btn-warning-bg;
   }
 
   &.panel-strip-danger {
@@ -153,6 +153,10 @@
 }
 
 .panel-success {
+
+  > .panel-heading {
+    color: $gray-darker;
+  }
 
   > .panel-subheading {
     background: $panel-success-heading-bg;

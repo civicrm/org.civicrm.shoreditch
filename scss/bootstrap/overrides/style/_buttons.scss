@@ -65,6 +65,7 @@
 }
 
 .btn-success {
+  color: $gray-darker;
 
   &:hover {
     background-color: lighten(desaturate(adjust-hue($btn-success-bg, 0.6298), 0.0390), 5.4902);
@@ -79,6 +80,7 @@
 }
 
 .btn-warning {
+  color: $gray-darker;
 
   &:hover {
     background-color: lighten(desaturate(adjust-hue($btn-warning-bg, 0.6298), 0.0390), 5.4902);
@@ -95,7 +97,7 @@
 
 //== From Bootstrap 4 alpha
 .btn-secondary {
-  @include button-variant(#ffffff, $gray-dark, $gray-darker);
+  @include button-variant($crm-white, $gray-dark, $gray-dark);
   @include button-remove-border-color();
 
   &:hover {
