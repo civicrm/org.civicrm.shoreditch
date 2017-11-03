@@ -58,6 +58,14 @@ $brand-success:             #4D994D !default;
 $brand-info:                #0071BD !default;
 $brand-warning:             #BF5900 !default;
 $brand-danger:              #CF3458 !default;
+
+$brand-primary-dark:        #005A97 !default;
+$brand-secondary-dark:      #3D3D54 !default;
+$brand-success-dark:        #2C8452 !default;
+$brand-info-dark:           #005A97 !default;
+$brand-warning-dark:        #9F6A26 !default;
+$brand-danger-dark:         #A52946 !default;
+
 $crm-help-success:          #d1e5ce;
 $crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
@@ -70,6 +78,7 @@ $crm-white:                 #FFF !default;
 
 $crm-dialog-container-border: #d3dee2;
 
+$btn-outline-color:         #363342 !default;
 $btn-success-color:         $gray-darker !default;
 $btn-warning-color:         $gray-darker !default;
 
@@ -341,9 +350,12 @@ $pagination-disabled-bg:               $pagination-bg !default;
 $state-success-text:             $brand-success !default;
 $state-info-text:                $brand-info !default;
 $state-warning-text:             $brand-warning !default;
-$state-danger-text: $brand-danger !default;
+$state-danger-text:              $brand-danger !default;
 
-
+$alert-success-border:           $brand-success !default;
+$state-info-border:              $brand-info !default;
+$alert-warning-border:           $brand-warning !default;
+$alert-danger-border:            $brand-danger !default;
 //== Badges
 //
 //##

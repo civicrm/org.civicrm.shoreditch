@@ -1,5 +1,5 @@
 // From Bootstrap 4 alpha
-@mixin button-outline-variant($color, $bg-color: $color, $hover-color: $crm-white) {
+@mixin button-outline-variant($color, $bg-color: $color, $hover-bg: $bg-color) {
   color: $color;
   background-image: none;
   background-color: transparent;
@@ -10,14 +10,14 @@
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: $hover-color;
+    color: $crm-white;
     background-color: $bg-color;
     border-color: $bg-color;
   }
   @include hover {
-    color: $hover-color;
-    background-color: $bg-color;
-    border-color: $bg-color;
+    color: $crm-white;
+    background-color: $hover-bg;
+    border-color: $hover-bg;
   }
 
   &.disabled,

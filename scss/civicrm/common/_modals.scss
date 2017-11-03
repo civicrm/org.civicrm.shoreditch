@@ -165,8 +165,8 @@
         &:hover,
         &:active,
         &:focus {
+          background: $brand-primary-dark;
           color: $crm-white;
-          opacity: .8 !important;
           outline: none;
           text-shadow: none;
         }
