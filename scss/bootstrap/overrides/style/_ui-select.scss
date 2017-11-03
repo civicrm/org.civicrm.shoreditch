@@ -124,6 +124,10 @@
   .text-muted {
     color: #727E8A;
   }
+
+  .ui-select-search {
+    padding-right: 30px;
+  }
 }
 
 .ui-select-multiple:not([theme="civihr-ui-select"]) {
@@ -137,12 +141,30 @@
     text-transform: none;
   }
 
+  .ui-select-match {
+    display: inline-block;
+    max-width: 90%;
+  }
+  
   .ui-select-search {
     padding-left: 6px !important;
   }
 
   &:after {
-    @include dropdown-arrow();
+    content: '\f002';
+    bottom: 0;
+    font-family: "FontAwesome";
+    display: inline-block;
+    height: 100%;
+    line-height: $input-height-base;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 32px;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
