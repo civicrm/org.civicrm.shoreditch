@@ -386,6 +386,10 @@ $control-height: 30px;
       &.error {
         background-image: none;
       }
+
+      .crm-select2-icon .crm-icon {
+        @include contact-type-icons();
+      }
     }
 
     td td {
@@ -607,35 +611,7 @@ $control-height: 30px;
         color: $gray-dark;
 
         .crm-icon {
-          text-indent: 0 !important;
-          text-align: center;
-
-          &:before {
-            font-size: $font-size-base !important;
-            position: relative;
-            bottom: 2px;
-          }
-
-          &.Individual-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f007");
-            }
-          }
-
-          &.Organization-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f0f7");
-            }
-          }
-
-          &.Household-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f015");
-            }
-          }
+          @include contact-type-icons();
         }
       }
 

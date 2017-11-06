@@ -163,29 +163,6 @@
         }
       }
     }
-
-    .crm-icon {
-      background: none !important;
-      position: relative;
-      text-indent: 0 !important;
-      top: -3px;
-
-      &::before {
-        text-indent: 0 !important;
-      }
-
-      &.Individual-icon::before {
-        @include fa-icon($font-size-base, $fa-var-user);
-      }
-
-      &.Household-icon::before {
-        @include fa-icon(13px, $fa-var-home);
-      }
-
-      &.Organization-icon::before {
-        @include fa-icon(13px, $fa-var-building);
-      }
-    }
   }
 
   .font-size12pt {

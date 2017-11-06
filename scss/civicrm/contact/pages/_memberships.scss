@@ -635,15 +635,8 @@
 
   .CRM_Member_Form_Search {
     h3 {
-      background: $crm-white;
-      border-radius: $border-radius-base;
-      box-shadow: $box-shadow;
-      color: $datepicker-gray-darker;
-      font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
-      height: 50px;
-      line-height: 2.7em;
+      @include section-title();
       margin: 20px 0;
-      padding: 0 20px;
     }
 
     .crm-accordion-wrapper {

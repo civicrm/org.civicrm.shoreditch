@@ -7,3 +7,14 @@
   box-sizing: border-box;
   background: transparent;
 }
+
+@mixin section-title() {
+  background: $crm-white;
+  border-radius: $border-radius-base;
+  box-shadow: $box-shadow;
+  color: $datepicker-gray-darker;
+  font-family: $font-family-base;
+  font-size: $font-size-h2;
+  font-weight: $crm-font-weight-h2;
+  padding: 15px 20px;
+}

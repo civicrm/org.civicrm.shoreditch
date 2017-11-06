@@ -531,40 +531,5 @@
         padding: 0 5px;
       }
     }
-
-    .crm-icon {
-      text-align: center;
-      text-indent: 0 !important;
-
-      &:before {
-        bottom: 2px;
-        font-size: $font-size-base !important;
-        position: relative;
-      }
-    }
-
-    .crm-icon.Individual-icon {
-      background: none;
-
-      &:before {
-        @include fa-icon($content: $fa-var-user);
-      }
-    }
-
-    .crm-icon.Organization-icon {
-      background: none;
-
-      &:before {
-        @include fa-icon($content: $fa-var-building-o);
-      }
-    }
-
-    .crm-icon.Household-icon {
-      background: none;
-
-      &:before {
-        @include fa-icon($content: $fa-var-cutlery);
-      }
-    }
   }
 }
