@@ -106,18 +106,7 @@
     }
 
     &:after {
-      content: '\f002';
-      bottom: 0;
-      font-family: "FontAwesome";
-      display: inline-block;
-      height: 100%;
-      line-height: $input-height-base;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      width: 32px;
-      z-index: 1;
-      -webkit-font-smoothing: antialiased;
+      @include search-icon();
     }
   }
 
@@ -145,26 +134,13 @@
     display: inline-block;
     max-width: 90%;
   }
-  
+
   .ui-select-search {
     padding-left: 6px !important;
   }
 
   &:after {
-    content: '\f002';
-    bottom: 0;
-    font-family: "FontAwesome";
-    display: inline-block;
-    height: 100%;
-    line-height: $input-height-base;
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    width: 32px;
-    z-index: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+   @include search-icon();
   }
 }
 
