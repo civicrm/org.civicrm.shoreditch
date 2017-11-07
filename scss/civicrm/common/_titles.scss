@@ -8,13 +8,13 @@
   background: transparent;
 }
 
-@mixin section-title() {
-  background: $crm-white;
-  border-radius: $border-radius-base;
-  box-shadow: $box-shadow;
-  color: $datepicker-gray-darker;
+@mixin panel-header() {
+  background: $gray-lighter;
+  border-bottom: 1px solid $crm-dark-grayblue;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  color: $gray-darker;
   font-family: $font-family-base;
   font-size: $font-size-h2;
-  font-weight: $crm-font-weight-h2;
-  padding: 15px 20px;
+  line-height: 24px;
+  padding: 13px 20px;
 }
