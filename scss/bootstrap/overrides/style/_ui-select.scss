@@ -113,10 +113,6 @@
   .text-muted {
     color: #727E8A;
   }
-
-  .ui-select-search {
-    padding-right: 30px;
-  }
 }
 
 .ui-select-multiple:not([theme="civihr-ui-select"]) {
@@ -130,13 +126,9 @@
     text-transform: none;
   }
 
-  .ui-select-match {
-    display: inline-block;
-    max-width: 90%;
-  }
-
   .ui-select-search {
     padding-left: 6px !important;
+    width: 100px !important;
   }
 
   &:after {
