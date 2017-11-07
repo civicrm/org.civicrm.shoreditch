@@ -3,7 +3,10 @@
 
 h1, .h1 { font-weight: $crm-font-weight-h1; }
 h2, .h2 { font-weight: $crm-font-weight-h2; }
-h3, .h3 { font-weight: $crm-font-weight-h3; }
+h3, .h3 {
+  font-weight: $crm-font-weight-h3;
+  font-family: $font-family-base;
+}
 h4, .h4 { font-weight: $crm-font-weight-h4; }
 h5, .h5 { font-weight: $crm-font-weight-h5; }
 h6, .h6 { font-weight: $crm-font-weight-h6; }
