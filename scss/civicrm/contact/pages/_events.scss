@@ -26,6 +26,31 @@
     }
   }
 
+  .crm-button_qf_Search_refresh {
+    .crm-i {
+      top: 10px;
+    }
+
+    .crm-form-submit {
+      margin: 12.5px 0 0 !important;
+    }
+  }
+
+  .crm-event-search-form-block,
+  .crm-results-block {
+    border-radius: $border-radius-base;
+  }
+
+  .crm-event-search-form-block {
+    overflow: hidden;
+  }
+
+  .crm-results-block {
+    .crm-pager > .element-right {
+      margin-top: 1px !important;
+    }
+  }
+
   #searchForm {
     @include border-box();
     padding: 20px;
