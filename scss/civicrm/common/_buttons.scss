@@ -72,6 +72,11 @@ $button-border-radius: 2px;
       background: $crm-blue-light;
     }
 
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
     &.cancel {
       background: $crm-white;
       border: 1px solid $crm-copy;
