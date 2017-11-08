@@ -1,6 +1,6 @@
-.page-civicrm-contact-search-builder .crm-accordion-body {
+.page-civicrm-contact-search-builder #crm-container .crm-accordion-body {
   #map-field td {
-    padding: 10px 20px 4px !important;
+    padding: 10px 20px 4px;
   }
 
   h3 {
@@ -17,25 +17,20 @@
   .crm-search-builder-add-block {
     text-decoration: none;
 
-    input.submit-link {
-      color: $btn-primary-bg !important;
-      margin: 0 !important;
-    }
-
-    input.submit-link:active,
-    input.submit-link:focus {
-      outline: none;
+    .submit-link {
+      color: $brand-primary;
+      margin: 0;
     }
 
     &:before {
-      @include fa-icon(11px, $fa-var-plus);
+      @include fa-icon($font-size-base, $fa-var-plus);
 
-      color: $btn-primary-bg;
+      color: $brand-primary;
     }
   }
 
   #map-field .crm-search-builder-add-row td.form-item {
-    padding-bottom: 15px !important;
+    padding-bottom: 15px;
   }
 
   #crm-submit-buttons {
