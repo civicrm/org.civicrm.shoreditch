@@ -4,9 +4,7 @@
   }
 
   h3 {
-    @include panel-header;
-    border-top: 1px solid $crm-dark-grayblue;
-    font-size: $font-size-base;
+    @include section-title;
   }
 
   .crm-search-builder-add-row .form-item,
