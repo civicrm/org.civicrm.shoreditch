@@ -82,12 +82,9 @@
 
     #civicrm-getting-started {
       h3 {
-        background-color: $gray-lighter;
-        border-bottom: 1px solid $crm-dark-grayblue;
+        @include panel-header;
         border-top: 1px solid $crm-background;
         font-size: $font-size-base;
-        margin: 0;
-        padding: 11px 20px;
       }
 
       table {
