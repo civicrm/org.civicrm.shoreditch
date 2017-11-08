@@ -18,7 +18,6 @@
 
     &:before {
       @include fa-icon($font-size-base, $fa-var-plus);
-
       color: $brand-primary;
     }
   }
