@@ -4,13 +4,8 @@
   }
 
   h3 {
-    background: $crm-accordion-header-color;
-    border-bottom: 1px solid $crm-dark-grayblue;
-    border-top: 1px solid $crm-dark-grayblue;
-    color: $gray-darker;
-    font-size: 13px;
-    margin-bottom: 0;
-    padding: 15px 20px;
+    @include panel-header;
+    font-size: $font-size-base;
   }
 
   .crm-search-builder-add-row .form-item,
