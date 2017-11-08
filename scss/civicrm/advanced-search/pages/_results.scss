@@ -2,12 +2,13 @@
 .CRM_Contact_Form_Search_Basic .crm-results-block,
 .CRM_Event_Form_Search .crm-results-block {
   @extend %block-with-shadow;
+  border-radius: $border-radius-base;
   margin-top: 20px;
 
   .crm-search-tasks {
     background: $gray-lighter;
     border-bottom: solid 1px $crm-background;
-    border-radius: 0 !important;
+    border-radius: $border-radius-base $border-radius-base 0 0 !important;
     box-shadow: none;
     margin-bottom: 0 !important;
 
