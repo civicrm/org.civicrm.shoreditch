@@ -1,12 +1,42 @@
 .CRM_Contact_Form_Search_Advanced .crm-results-block,
-.CRM_Contact_Form_Search_Basic .crm-results-block {
+.CRM_Contact_Form_Search_Basic .crm-results-block,
+.CRM_Event_Form_Search .crm-results-block {
   @extend %block-with-shadow;
+  border-radius: $border-radius-base;
   margin-top: 20px;
 
+  .crm-search-results {
+    margin: 0;
+  }
+
+  table:not(.crm-table-group-summary) {
+    table-layout: fixed;
+
+    td:not(:last-child):not(:nth-child(2)):not(:nth-child(3)) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    td:nth-child(3) {
+      word-wrap: break-word;
+    }
+
+    th:first-child,
+    td:first-child {
+      width: 20px;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 28px;
+    }
+  }
+  
   .crm-search-tasks {
     background: $gray-lighter;
     border-bottom: solid 1px $crm-background;
-    border-radius: 0 !important;
+    border-radius: $border-radius-base $border-radius-base 0 0 !important;
     box-shadow: none;
     margin-bottom: 0 !important;
 
@@ -92,6 +122,7 @@
   table.selector {
     @extend %crm-table;
     border-top: solid 1px $crm-dark-grayblue;
+    clear: both;
     margin-top: 0 !important;
     padding-top: 0 !important;
 
@@ -99,8 +130,10 @@
       padding-left: 0 !important;
 
       > th {
+        background: $gray-lighter;
+        color: $gray-darker;
         line-height: 1.5em !important;
-        padding: 14px 10px !important;
+        padding: 15px 10px !important;
         vertical-align: middle;
       }
 
