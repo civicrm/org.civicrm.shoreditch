@@ -1,0 +1,15 @@
+.CRM_Contact_Form_Search_Custom .crm-search-form-block table.form-layout-compressed td {
+  padding: 2px 0;
+
+  &.label {
+    font-weight: bold;
+    padding: 4px 20px;
+    vertical-align: middle;
+    width: auto;
+  }
+
+  input.crm-form-submit {
+    @extend .btn-sm;
+    margin-left: 20px !important;
+  }
+}
