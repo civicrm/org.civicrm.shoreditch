@@ -11,7 +11,7 @@
     menuItemsWithFontAwesomeIcon().each(function () {
       var $menuItem = $(this);
 
-      $('.fa', $menuItem).addClass('menumain-icon');
+      $('.crm-i,.fa', $menuItem).addClass('menumain-icon');
       wrapMenuItemLabelInHTML($menuItem);
     });
   }
@@ -73,7 +73,7 @@
    */
   function menuItemsWithFontAwesomeIcon () {
     return $('.menumain[class*="crm"]').filter(function () {
-      return $('.fa', this).length > 0
+      return $('.crm-i,.fa', this).length > 0
     });
   }
 
