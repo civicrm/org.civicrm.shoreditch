@@ -133,7 +133,7 @@
    */
   function wrapMenuItemLabelInHTML ($menuItem) {
     $menuItem.contents().filter(function () {
-      return this.nodeType === 3 && jQuery(this.parentElement).is($menuItem);
+      return this.nodeType === 3 && $(this).parent().is($menuItem);
     }).wrap('<span class="menumain-label" />')
   }
 }(CRM.$, CRM._));
