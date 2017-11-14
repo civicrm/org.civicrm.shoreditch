@@ -1,5 +1,5 @@
 // From Bootstrap 4 alpha
-@mixin button-outline-variant($color, $bg-color: $color, $hover-bg: $bg-color) {
+@mixin button-outline-variant($color, $bg-color: $color, $hover-color: $crm-white) {
   color: $color;
   background-image: none;
   background-color: transparent;
@@ -15,9 +15,9 @@
     border-color: $bg-color;
   }
   @include hover {
-    color: $crm-white;
-    background-color: $hover-bg;
-    border-color: $hover-bg;
+    color: $hover-color;
+    background-color: darken($bg-color, 7%);
+    border-color: darken($bg-color, 7%);
   }
 
   &.disabled,

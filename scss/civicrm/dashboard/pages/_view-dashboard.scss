@@ -1,11 +1,16 @@
 #civicrm-dashboard {
   .column {
     .widget-controls {
+      background: $crm-copy;
       padding: 17px 10px;
 
       h3 {
         font-family: $font-family-base;
         font-size: $font-size-h2;
+      }
+
+      .crm-i {
+        opacity: 1;
       }
     }
 
@@ -82,12 +87,7 @@
 
     #civicrm-getting-started {
       h3 {
-        background-color: $gray-lighter;
-        border-bottom: 1px solid $crm-dark-grayblue;
-        border-top: 1px solid $crm-background;
-        font-size: $font-size-base;
-        margin: 0;
-        padding: 11px 20px;
+        @include section-title;
       }
 
       table {

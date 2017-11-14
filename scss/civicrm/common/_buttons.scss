@@ -69,7 +69,12 @@ $button-border-radius: 2px;
     text-transform: uppercase;
 
     &:hover {
-      background: $crm-blue-light;
+      background: darken($brand-primary,7%);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
     }
 
     &.cancel {
@@ -149,7 +154,7 @@ $button-border-radius: 2px;
 
           &:hover {
             color: $crm-white !important;
-            background: $brand-secondary-dark;
+            background: darken($crm-copy, 7%);
           }
         }
       }
@@ -183,14 +188,15 @@ $button-border-radius: 2px;
 
   input[type=button],
   a.button,
-  a.button:link {
+  a.button:link,
+  a.button:visited {
     background: $gray-dark;
     color: $crm-white;
 
     &:hover,
     &:focus,
     &:active {
-      background: $brand-secondary-dark;
+      background: darken($crm-copy, 7%);
       color: $crm-white;
     }
   }

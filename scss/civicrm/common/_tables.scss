@@ -1,3 +1,9 @@
+table {
+  .crm-icon {
+    @include contact-type-icons();
+  }
+}
+
 %crm-table {
   @extend %open-sans-font-family;
   $border-color: $table-border-color;
@@ -211,27 +217,6 @@
     }
   }
 
-  .crm-icon {
-    background: none !important;
-    text-indent: 0 !important;
-
-    &::before {
-      text-indent: 0 !important;
-    }
-
-    &.Individual-icon::before {
-      @include fa-icon(13px, '\f007');
-    }
-
-    &.Household-icon::before {
-      @include fa-icon(13px, '\f015');
-    }
-
-    &.Organization-icon::before {
-      @include fa-icon(13px, '\f1ad');
-    }
-  }
-
   &.selector {
     &.row-highlight {
       tbody {
@@ -325,6 +310,25 @@
 
       th:first-child {
         text-align: center;
+      }
+    }
+  }
+}
+
+.dataTables_wrapper {
+  .dataTables_paginate {
+    .paginate_button {
+      color: $gray-darker !important;
+
+      &:hover:not(.disabled),
+      &.current {
+        background: none;
+        border: none;
+        font-weight: 600;
+      }
+
+      &.disabled {
+        color: $crm-text-muted !important;
       }
     }
   }

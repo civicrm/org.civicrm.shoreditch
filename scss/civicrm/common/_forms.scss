@@ -269,9 +269,7 @@ $control-height: 30px;
         .select2-choices {
           &,
           &::before {
-            background: $input-bg-disabled !important;
-            border-color: $disabled-color !important;
-            color: $disabled-color !important;
+            color: $crm-text-muted !important;
           }
         }
 
@@ -279,12 +277,12 @@ $control-height: 30px;
           &,
           &::before {
             border-color: $disabled-color !important;
-            color: $disabled-color !important;
+            color: $crm-text-muted !important;
           }
         }
 
         .select2-arrow {
-          border-left: 1px solid;
+          border-left: 1px solid $crm-dark-grayblue;
         }
       }
 
@@ -385,6 +383,10 @@ $control-height: 30px;
 
       &.error {
         background-image: none;
+      }
+
+      .crm-select2-icon .crm-icon {
+        @include contact-type-icons();
       }
     }
 
@@ -607,35 +609,7 @@ $control-height: 30px;
         color: $gray-dark;
 
         .crm-icon {
-          text-indent: 0 !important;
-          text-align: center;
-
-          &:before {
-            font-size: $font-size-base !important;
-            position: relative;
-            bottom: 2px;
-          }
-
-          &.Individual-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f007");
-            }
-          }
-
-          &.Organization-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f0f7");
-            }
-          }
-
-          &.Household-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f015");
-            }
-          }
+          @include contact-type-icons();
         }
       }
 
@@ -713,6 +687,10 @@ $control-height: 30px;
 
     > .crm-i {
       color: $brand-primary !important;
+
+      &:hover {
+        color: darken($brand-primary, 7%) !important;
+      }
     }
   }
 

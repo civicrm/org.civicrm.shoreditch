@@ -3,6 +3,10 @@
 
   a {
     color: $brand-primary !important;
+
+    &:hover {
+      color: darken($brand-primary, 7%) !important;
+    }
   }
 }
 

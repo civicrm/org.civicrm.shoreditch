@@ -60,7 +60,7 @@
 .btn-primary {
 
   &:hover {
-    background-color: $brand-primary-dark;
+    background-color: darken($btn-primary-bg, 7%);
   }
 }
 
@@ -68,15 +68,15 @@
   color: $gray-darker;
 
   &:hover {
-    background-color: $brand-success-dark;
-    color: $crm-white;
+    background-color: darken($btn-success-bg, 7%);
+    color: $crm-black;
   }
 }
 
 .btn-info {
 
   &:hover {
-    background-color: $brand-info-dark;
+    background-color: darken($btn-info-bg, 7%);
   }
 }
 
@@ -84,15 +84,15 @@
   color: $gray-darker;
 
   &:hover {
-    background-color: $brand-warning-dark;
-    color: $crm-white;
+    background-color: darken($btn-warning-bg, 7%);
+    color: $crm-black;
   }
 }
 
 .btn-danger {
 
   &:hover {
-    background-color: $brand-danger-dark;
+    background-color: darken($btn-danger-bg, 7%);
   }
 }
 
@@ -103,6 +103,6 @@
   @include button-remove-border-color();
 
   &:hover {
-    background-color: $brand-secondary-dark;
+    background-color: darken($crm-copy, 7%);
   }
 }

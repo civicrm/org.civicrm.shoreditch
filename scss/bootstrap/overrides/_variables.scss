@@ -23,10 +23,10 @@ $crm-page-topbar-bg-light:     #393E46;
 $crm-page-topbar-color:        #fff !default;
 $crm-page-topbar-item-padding: 15px !default;
 $crm-accordion-header-color:   #f3f6f7;
-$crm-dasboard-header:          #5D677B;
+$crm-dasboard-header:          #4D4D69;
 $crm-h3-color:                 #525966;
 $crm-wizard-border:            #eff3f5;
-
+$crm-text-muted:               #9494A5;
 //
 // Variables override
 // --------------------------------------------------
@@ -52,6 +52,7 @@ $gray-dark:                 $crm-copy !default;
 $gray-light:                $crm-background !default;
 $gray-lighter:              #F3F6F7 !default;
 $crm-gray-lightest:         #FAFAFB !default;
+$crm-black:                 #000000 !default;
 
 $brand-primary:             #0071BD !default;
 $brand-success:             #4D994D !default;
@@ -59,15 +60,9 @@ $brand-info:                #0071BD !default;
 $brand-warning:             #BF5900 !default;
 $brand-danger:              #CF3458 !default;
 
-$brand-primary-dark:        #005A97 !default;
-$brand-secondary-dark:      #3D3D54 !default;
-$brand-success-dark:        #2C8452 !default;
-$brand-info-dark:           #005A97 !default;
-$brand-warning-dark:        #9F6A26 !default;
-$brand-danger-dark:         #A52946 !default;
 
 $crm-help-success:          #d1e5ce;
-$crm-brand-primary-light:   lighten(desaturate(adjust-hue($brand-primary, 4.9301), 34.7499), 45.6863) !default;
+$crm-brand-primary-light:   #2574A9 !default;
 $crm-brand-primary-lighter: lighten(desaturate(adjust-hue(#3ab1c9, -10.0699), 36.9721), 48.2353) !default;
 
 $crm-color-neutral:         #949caa !default; // gray shade
@@ -352,10 +347,21 @@ $state-info-text:                $brand-info !default;
 $state-warning-text:             $brand-warning !default;
 $state-danger-text:              $brand-danger !default;
 
-$alert-success-border:           $brand-success !default;
+$alert-success-border:           $btn-success-bg !default;
 $state-info-border:              $brand-info !default;
-$alert-warning-border:           $brand-warning !default;
+$alert-warning-border:           $btn-warning-bg !default;
 $alert-danger-border:            $brand-danger !default;
+
+$alert-success-bg:              lighten($btn-success-bg, 30%) !default;
+$alert-info-bg:                 lighten($brand-info, 30%) !default;
+$alert-warning-bg:              lighten($btn-warning-bg, 30%) !default;
+$alert-danger-bg:               lighten($brand-danger, 30%) !default;
+
+$alert-success-text:            $gray-darker !default;
+$alert-info-text:               $gray-darker !default;
+$alert-warning-text:            $gray-darker !default;
+$alert-danger-text:             $gray-darker !default;
+
 //== Badges
 //
 //##

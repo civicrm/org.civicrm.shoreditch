@@ -16,11 +16,11 @@
 }
 
 .btn-primary-outline {
-  @include button-outline-variant($btn-outline-color, $bg-color: $btn-primary-bg, $hover-bg: $brand-primary-dark);
+  @include button-outline-variant($btn-outline-color, $bg-color: $btn-primary-bg);
 }
 
 .btn-secondary-outline {
-  @include button-outline-variant($btn-outline-color, $bg-color: $crm-copy, $hover-bg: $brand-secondary-dark);
+  @include button-outline-variant($btn-outline-color, $bg-color: $crm-copy);
   border-color: $gray-darker !important;
 
   &:hover {
@@ -29,17 +29,17 @@
 }
 
 .btn-info-outline {
-  @include button-outline-variant($btn-outline-color, $bg-color: $btn-info-bg, $hover-bg: $brand-info-dark);
+  @include button-outline-variant($btn-outline-color, $bg-color: $btn-info-bg);
 }
 
 .btn-success-outline {
-  @include button-outline-variant($btn-outline-color, $bg-color: $btn-success-bg, $hover-bg: $brand-success-dark);
+  @include button-outline-variant($btn-outline-color, $bg-color: $btn-success-bg, $hover-color: $crm-black);
 }
 
 .btn-warning-outline {
-  @include button-outline-variant($btn-outline-color, $bg-color: $btn-warning-bg, $hover-bg: $brand-warning-dark);
+  @include button-outline-variant($btn-outline-color, $bg-color: $btn-warning-bg, $hover-color: $crm-black);
 }
 
 .btn-danger-outline {
-  @include button-outline-variant($btn-outline-color, $bg-color: $btn-danger-bg, $hover-bg: $brand-danger-dark);
+  @include button-outline-variant($btn-outline-color, $bg-color: $btn-danger-bg);
 }
