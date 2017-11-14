@@ -28,7 +28,18 @@
    */
   function customizeQuickSearchField () {
     changeQuickSearchFieldPlaceholder();
+    giveFocusToQuickSearchFieldWhenBlockGetsClick();
     manageCustomClassOfQuickSearchField();
+  }
+
+  /**
+   * It gives focus to the quicksearch field when a click is registered on the
+   * whole block (= on the icon as well) rather than just the field itself
+   */
+  function giveFocusToQuickSearchFieldWhenBlockGetsClick () {
+    $('#crm-qsearch').click(function () {
+      $('#sort_name_navigation').focus();
+    });
   }
 
   /**
