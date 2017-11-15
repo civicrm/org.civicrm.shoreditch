@@ -69,7 +69,7 @@ $button-border-radius: 2px;
     text-transform: uppercase;
 
     &:hover {
-      background: darken($brand-primary,7%);
+      background: darken($brand-primary, $crm-darken-percentage);
     }
 
     &:active,
@@ -154,7 +154,7 @@ $button-border-radius: 2px;
 
           &:hover {
             color: $crm-white !important;
-            background: darken($crm-copy, 7%);
+            background: darken($crm-copy, $crm-darken-percentage);
           }
         }
       }
@@ -196,7 +196,7 @@ $button-border-radius: 2px;
     &:hover,
     &:focus,
     &:active {
-      background: darken($crm-copy, 7%);
+      background: darken($crm-copy, $crm-darken-percentage);
       color: $crm-white;
     }
   }

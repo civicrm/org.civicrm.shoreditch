@@ -5,7 +5,7 @@
     color: $brand-primary !important;
 
     &:hover {
-      color: darken($brand-primary, 7%) !important;
+      color: darken($brand-primary, $crm-darken-percentage) !important;
     }
   }
 }

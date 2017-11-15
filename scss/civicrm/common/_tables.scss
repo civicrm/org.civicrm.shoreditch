@@ -62,7 +62,7 @@ table {
     }
 
     > tr:first-child > th {
-      border-color: $crm-table-heading-border-color;
+      border-color: $crm-dark-grayblue;
     }
   }
 
@@ -94,14 +94,6 @@ table {
 
     &.label {
       vertical-align: middle !important;
-    }
-
-    .crm-table-group-summary td {
-      background: $crm-dark-blue !important;
-
-      &:last-child {
-        text-align: left;
-      }
     }
   }
 
@@ -324,11 +316,11 @@ table {
       &.current {
         background: none;
         border: none;
-        font-weight: 600;
+        font-weight: $crm-font-weight-h3;
       }
 
       &.disabled {
-        color: $crm-text-muted !important;
+        color: $crm-placeholder !important;
       }
     }
   }

@@ -269,7 +269,7 @@ $control-height: 30px;
         .select2-choices {
           &,
           &::before {
-            color: $crm-text-muted !important;
+            color: $crm-placeholder !important;
           }
         }
 
@@ -277,7 +277,7 @@ $control-height: 30px;
           &,
           &::before {
             border-color: $disabled-color !important;
-            color: $crm-text-muted !important;
+            color: $crm-placeholder !important;
           }
         }
 
@@ -689,7 +689,7 @@ $control-height: 30px;
       color: $brand-primary !important;
 
       &:hover {
-        color: darken($brand-primary, 7%) !important;
+        color: darken($brand-primary, $crm-darken-percentage) !important;
       }
     }
   }

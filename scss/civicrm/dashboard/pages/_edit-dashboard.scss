@@ -23,7 +23,7 @@
   
   #available-dashlets {
     background-color: $crm-white;
-    border: 1px dashed $crm-dasboard-header;
+    border: 1px dashed $crm-copy;
     min-height: 40px;
     padding: 25px;
     width: auto;
@@ -35,7 +35,7 @@
 
   div[id*="dashlets-header-col"] {
     @include border-box();
-    background: $crm-dasboard-header;
+    background: $crm-copy;
     color: $crm-white;
     margin-bottom: 0;
     padding: 15px;

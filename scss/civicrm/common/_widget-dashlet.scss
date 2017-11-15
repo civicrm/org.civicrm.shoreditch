@@ -74,11 +74,11 @@
   }
 
   #help {
-    background-color: $crm-help-success;
+    background-color: $alert-success-bg;
     border: none;
     border-radius: 0;
     clear: both;
-    color: $crm-dasboard-header;
+    color: $gray-darker;
     margin: 0;
     padding: 15px;
   }
@@ -87,7 +87,7 @@
     background-color: $gray-lighter;
     border-bottom: 1px solid $crm-dark-grayblue;
     border-top: 1px solid $crm-background;
-    color: $crm-dasboard-header;
+    color: $crm-copy;
     font-family: $font-family-base;
     font-size: $font-size-medium;
     padding: 10px 15px;
@@ -123,18 +123,18 @@
 #configure-dashlet {
   #available-dashlets {
     background-color: $crm-white;
-    border: 1px dashed $crm-dasboard-header;
+    border: 1px dashed $crm-copy;
     min-height: 40px;
     padding: 25px;
     width: 96%;
   }
 
   #help {
-    background-color: $crm-help-success;
+    background-color: $alert-success-bg;
     border: none;
     border-radius: $border-radius-base;
     clear: both;
-    color: $crm-copy;
+    color: $gray-darker;
     margin-top: 30px;
   }
 
@@ -145,7 +145,7 @@
 
 #crm-container div[id*="dashlets-header-col"] {
   @include border-box();
-  background: $crm-dasboard-header;
+  background: $crm-copy;
   color: $crm-white;
   float: left;
   font: $crm-font-weight-h4 $font-size-h3 $font-family-base;

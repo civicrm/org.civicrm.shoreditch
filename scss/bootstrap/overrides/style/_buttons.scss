@@ -60,7 +60,7 @@
 .btn-primary {
 
   &:hover {
-    background-color: darken($btn-primary-bg, 7%);
+    background-color: darken($btn-primary-bg, $crm-darken-percentage);
   }
 }
 
@@ -68,7 +68,7 @@
   color: $gray-darker;
 
   &:hover {
-    background-color: darken($btn-success-bg, 7%);
+    background-color: darken($btn-success-bg, $crm-darken-percentage);
     color: $crm-black;
   }
 }
@@ -76,7 +76,7 @@
 .btn-info {
 
   &:hover {
-    background-color: darken($btn-info-bg, 7%);
+    background-color: darken($btn-info-bg, $crm-darken-percentage);
   }
 }
 
@@ -84,7 +84,7 @@
   color: $gray-darker;
 
   &:hover {
-    background-color: darken($btn-warning-bg, 7%);
+    background-color: darken($btn-warning-bg, $crm-darken-percentage);
     color: $crm-black;
   }
 }
@@ -92,7 +92,7 @@
 .btn-danger {
 
   &:hover {
-    background-color: darken($btn-danger-bg, 7%);
+    background-color: darken($btn-danger-bg, $crm-darken-percentage);
   }
 }
 
@@ -103,6 +103,6 @@
   @include button-remove-border-color();
 
   &:hover {
-    background-color: darken($crm-copy, 7%);
+    background-color: darken($crm-copy, $crm-darken-percentage);
   }
 }

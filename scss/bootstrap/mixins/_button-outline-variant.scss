@@ -16,8 +16,8 @@
   }
   @include hover {
     color: $hover-color;
-    background-color: darken($bg-color, 7%);
-    border-color: darken($bg-color, 7%);
+    background-color: darken($bg-color, $crm-darken-percentage);
+    border-color: darken($bg-color, $crm-darken-percentage);
   }
 
   &.disabled,

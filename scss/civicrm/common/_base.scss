@@ -6,7 +6,7 @@
     opacity: 1;
 
     &:hover {
-      color: darken($brand-primary, 7%);
+      color: darken($brand-primary, $crm-darken-percentage);
     }
   }
 

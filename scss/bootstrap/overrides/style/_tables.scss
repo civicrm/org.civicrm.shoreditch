@@ -3,7 +3,7 @@ table,
   margin-bottom: 0;
 
   th {
-    background: $crm-table-heading-bg;
+    background: $gray-lighter;
   }
 
   > thead {
@@ -26,7 +26,7 @@ table,
       > tr:first-child {
 
         > td {
-          border-color: $crm-table-heading-border-color;
+          border-color: $crm-dark-grayblue;
         }
       }
     }

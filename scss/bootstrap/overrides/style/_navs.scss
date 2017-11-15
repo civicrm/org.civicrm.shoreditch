@@ -3,7 +3,7 @@
   > li {
 
     > a {
-      color: $crm-nav-color;
+      color: $gray-darker;
       font-weight: 600;
     }
 
@@ -99,7 +99,7 @@
 
 // Contextual variations
 .nav-pills-horizontal-default {
-  @include nav-pills-horizontal-variant($crm-nav-stacked-bg, $crm-nav-color, false);
+  @include nav-pills-horizontal-variant($crm-nav-stacked-bg, $gray-darker, false);
 }
 
 .nav-pills-horizontal-primary {
@@ -161,7 +161,7 @@
 
       > a {
         background: transparent !important;
-        color: $crm-nav-color !important;
+        color: $gray-darker !important;
       }
     }
   }
@@ -189,9 +189,9 @@
 
         > a {
           background: $crm-nav-tabs-panel-heading-link-background !important;
-          border-color: $crm-nav-tabs-panel-heading-link-border-color !important;
+          border-color: $crm-white !important;
           border-width: $crm-nav-tabs-panel-heading-link-border-width;
-          color: $crm-nav-tabs-panel-heading-link-color !important;
+          color: $crm-white !important;
           font-weight: $crm-nav-tabs-panel-heading-link-weight;
           padding: $crm-nav-tabs-panel-heading-link-padding;
         }

@@ -165,7 +165,7 @@
         &:hover,
         &:active,
         &:focus {
-          background: darken($brand-primary, 7%);
+          background: darken($brand-primary, $crm-darken-percentage);
           color: $crm-white;
           outline: none;
           text-shadow: none;
