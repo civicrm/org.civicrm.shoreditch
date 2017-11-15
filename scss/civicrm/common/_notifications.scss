@@ -101,7 +101,18 @@
 
 .crm-container > .status,
 .crm-container :not(.crm-footer) .status {
-  padding: 15px;
+  background-color: $alert-warning-bg;
+  border-color: $brand-warning;
+  color: $gray-darker;
+  padding: 16px 20px;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 #crm-main-content-wrapper form .messages.crm-error {
