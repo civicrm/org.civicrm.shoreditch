@@ -1,15 +1,3 @@
-.page-civicrm-event-search {
-  [class*=CRM_Event_Form_Task_] {
-    .crm-form-block > .crm-submit-buttons > .crm-button:first-of-type {
-      margin-left: 0;
-    }
-
-    .status {
-      border: 0;
-    }
-  }
-}
-
 .CRM_Event_Form_Search {
   h3 {
     @include box-shadow($box-shadow);

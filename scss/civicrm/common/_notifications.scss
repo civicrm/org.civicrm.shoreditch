@@ -99,20 +99,29 @@
   }
 }
 
-.crm-container > .status,
-.crm-container :not(.crm-footer) .status {
-  background-color: $alert-warning-bg;
-  border-color: $brand-warning;
-  color: $gray-darker;
-  padding: 16px 20px;
+.crm-container {
+  > .status,
+  :not(.crm-footer) .status {
+    background-color: $alert-warning-bg;
+    border-color: $brand-warning;
+    color: $gray-darker;
+    padding: 16px 20px;
 
-  p {
-    &:first-child {
-      margin-top: 0;
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+  }
 
-    &:last-child {
-      margin-bottom: 0;
+  .crm-block,
+  form {
+    > .status {
+      border: 0;
     }
   }
 }
