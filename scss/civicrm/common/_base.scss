@@ -2,7 +2,7 @@ body {
   // Ensures that there is the same top padding regardless whether
   // the user can see the admin toolbar or not
 
-  &:not(.toolbar){
+  &:not(.toolbar) {
     padding-top: $crm-main-menu-height !important;
   }
 
