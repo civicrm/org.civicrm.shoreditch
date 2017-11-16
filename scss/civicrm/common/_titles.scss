@@ -10,7 +10,7 @@
 
 @mixin panel-header() {
   background: $gray-lighter;
-  border-bottom: 1px solid $crm-dark-grayblue;
+  border-bottom: 1px solid $crm-grayblue-dark;
   border-radius: $border-radius-base $border-radius-base 0 0;
   color: $gray-darker;
   font-family: $font-family-base;
@@ -21,9 +21,9 @@
 
 @mixin section-title() {
   background: $gray-lighter;
-  border-bottom: 1px solid $crm-dark-grayblue;
+  border-bottom: 1px solid $crm-grayblue-dark;
   border-radius: $border-radius-base $border-radius-base 0 0;
-  border-top: 1px solid $crm-dark-grayblue;
+  border-top: 1px solid $crm-grayblue-dark;
   color: $gray-darker;
   font-family: $font-family-base;
   font-size: $font-size-base;

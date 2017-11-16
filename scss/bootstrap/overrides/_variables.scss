@@ -33,17 +33,14 @@ $os-font-path:   "../fonts/open-sans" !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$crm-page-topbar-bg:        #222831 !default;
-$crm-page-topbar-bg-light:  #393E46;
-$crm-background:            #E8EEF0 !default;
-$crm-copy:                  #4D4D69 !default;
-
+$crm-gray-clay:             #222831 !default;
+$crm-gray-bright:           #393E46 !default;
 $gray-darker:               #464354 !default;
-$gray-dark:                 $crm-copy !default;
-$gray-light:                $crm-background !default;
+$gray-dark:                 #4D4D69 !default;
+$gray-light:                #E8EEF0 !default;
 $gray-lighter:              #F3F6F7 !default;
 $crm-gray-lightest:         #FAFAFB !default;
-$crm-prompt-gray:           #9494A5 !default
+$crm-gray-matte:            #9494A5 !default;
 
 $brand-primary:             #0071BD !default;
 $brand-success:             #44CB7E !default;
@@ -51,23 +48,31 @@ $brand-info:                #0071BD !default;
 $brand-warning:             #E6AB5E !default;
 $brand-danger:              #CF3458 !default;
 
-$brand-success-dark:        #4D994D !default;
-$brand-warning-dark:        #BF5900 !default;
-
-$crm-dark-blue:             #586277 !default;
-$crm-dark-grayblue:         #D3DEE2 !default;
-$crm-darker-grayblue:       #C2CFD8 !default;
+$crm-grayblue-dark:         #D3DEE2 !default;
+$crm-grayblue-darker:       #C2CFD8 !default;
 $crm-white:                 #FFFFFF !default;
 $crm-black:                 #000000 !default;
-$crm-color-neutral:         $crm-darker-grayblue !default;
-$crm-placeholder:           $crm-prompt-gray !default;
+
+
+//== CRM specific variables
+//
+//## colors & varialbes used for CiviCRM
+
+$crm-copy:                  $gray-dark !default;
+$crm-background:            $gray-light !default;
+
+$crm-color-neutral:         $crm-grayblue-darker !default;
+$crm-placeholder:           $crm-gray-matte !default;
 $crm-page-topbar-color:     $crm-white !default;
 $crm-page-sidebar-bg:       $crm-white !default;
+$crm-page-topbar-bg:        $crm-gray-clay !default;
+
+
+$crm-success-dark:          darken(desaturate(adjust-hue($brand-success, -26), 23.44), 8.04) !default;
+$crm-warning-dark:          darken(saturate(adjust-hue($brand-warning, -6), 26.88), 26.08) !default;
 
 $crm-accordion-header-color: $gray-lighter;
 
-$btn-success-color:         $gray-darker !default;
-$btn-warning-color:         $gray-darker !default;
 
 $crm-darken-percentage:     7% !default;
 $crm-lighten-percentage:    30% !default;
@@ -159,6 +164,8 @@ $btn-default-color:               $gray-darker;
 $btn-default-bg:                  $crm-white !default;
 $btn-default-border:              $btn-default-bg !default;
 
+$btn-success-color:         $gray-darker !default;
+$btn-warning-color:         $gray-darker !default;
 
 //== Forms
 //
@@ -166,7 +173,7 @@ $btn-default-border:              $btn-default-bg !default;
 
 $input-bg-disabled:         $gray-lighter !default;
 $input-color:               $gray-darker !default;
-$input-border:              $crm-darker-grayblue !default;
+$input-border:              $crm-grayblue-darker !default;
 
 $input-border-radius-large: $border-radius-base !default;
 $input-border-radius-small: $border-radius-base !default;
@@ -185,7 +192,7 @@ $crm-dropdown-padding:      11px 20px;
 //
 //##
 
-$label-default-bg:           $crm-darker-grayblue;
+$label-default-bg:           $crm-grayblue-darker;
 
 
 //== Modals
@@ -273,7 +280,7 @@ $nav-disabled-link-color:                 lighten(desaturate(adjust-hue($gray-da
 $nav-disabled-link-hover-color:           $nav-disabled-link-color !default;
 
 //== Tabs
-$nav-tabs-border-color:                   $crm-dark-grayblue !default;
+$nav-tabs-border-color:                   $crm-grayblue-dark !default;
 $nav-tabs-active-link-hover-bg:           $crm-white !default;
 $nav-tabs-active-link-hover-color:        $brand-primary !default;
 $nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default;
@@ -314,9 +321,9 @@ $pagination-disabled-bg:         $pagination-bg !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             $brand-success-dark !default;
+$state-success-text:             $crm-success-dark !default;
 $state-info-text:                $brand-info !default;
-$state-warning-text:             $brand-warning-dark !default;
+$state-warning-text:             $crm-warning-dark !default;
 $state-danger-text:              $brand-danger !default;
 
 $state-success-border:           $brand-success !default;

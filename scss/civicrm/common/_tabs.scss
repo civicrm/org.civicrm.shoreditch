@@ -7,7 +7,7 @@
 
   .ui-tabs-nav {
     background: $gray-lighter;
-    border-bottom: 1px solid $crm-dark-grayblue;
+    border-bottom: 1px solid $crm-grayblue-dark;
     border-radius: 0;
     padding: 10px 10px 0 10px;
 
@@ -19,7 +19,7 @@
     .ui-corner-top {
       background: $gray-lighter;
       border:  1px solid transparent;
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
       border-radius: $border-radius-base $border-radius-base 0 0;
       font-size: $font-size-base;
       font-family: $font-family-base;
@@ -60,7 +60,7 @@
 
       &.ui-tabs-active {
         background: $crm-white;
-        border: 1px solid $crm-dark-grayblue;
+        border: 1px solid $crm-grayblue-dark;
         border-bottom: 1px solid transparent;
 
         a {
@@ -71,13 +71,13 @@
   }
 
   .ui-tabs-panel {
-    border-bottom: 1px solid $crm-dark-grayblue;
+    border-bottom: 1px solid $crm-grayblue-dark;
     border-radius: 0;
 
     table th,
     table:not(.form-layout-compressed) th {
       background-color: $crm-white;
-      border-bottom: 2px solid $crm-dark-grayblue;
+      border-bottom: 2px solid $crm-grayblue-dark;
     }
   }
 }

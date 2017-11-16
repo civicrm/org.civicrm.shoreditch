@@ -26,7 +26,7 @@ table,
       > tr:first-child {
 
         > td {
-          border-color: $crm-dark-grayblue;
+          border-color: $crm-grayblue-dark;
         }
       }
     }
@@ -60,7 +60,7 @@ table,
   > .table,
   > .table-responsive > .table,
   > .panel-collapse > .table {
-    border-top: 1px solid $crm-dark-grayblue;
+    border-top: 1px solid $crm-grayblue-dark;
   }
 }
 

@@ -35,7 +35,7 @@
   .ui-dialog-titlebar {
     @extend .modal-header, %open-sans-font-family;
     border: none !important;
-    border-bottom: 1px solid $crm-dark-grayblue !important;
+    border-bottom: 1px solid $crm-grayblue-dark !important;
     box-shadow: $crm-contribute-form-shadow;
     color: $gray-darker !important;
     padding: $ui-modal-header-padding;
@@ -132,7 +132,7 @@
   .ui-dialog-buttonpane {
     @extend .modal-footer, %open-sans-font-family;
     background: $gray-lighter;
-    border-top: 1px solid $crm-dark-grayblue !important;
+    border-top: 1px solid $crm-grayblue-dark !important;
     box-shadow: $crm-contribute-form-shadow;
     display: block;
     margin-left: 0;

@@ -40,7 +40,7 @@
     font-family: $font-family-base;
 
     thead {
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
     }
 
     thead th {
@@ -85,7 +85,7 @@
 
   h3 {
     background-color: $gray-lighter;
-    border-bottom: 1px solid $crm-dark-grayblue;
+    border-bottom: 1px solid $crm-grayblue-dark;
     border-top: 1px solid $crm-background;
     color: $crm-copy;
     font-family: $font-family-base;
@@ -99,11 +99,11 @@
 
   .portlet-header {
     background: $crm-accordion-header-color;
-    border-color: $crm-dark-grayblue;
+    border-color: $crm-grayblue-dark;
     -webkit-border-radius: $border-radius-small;
     -moz-border-radius: $border-radius-small;
     border-radius: $border-radius-small;
-    color: $crm-dark-blue;
+    color: $gray-dark;
     font: $crm-font-weight-h1 $font-size-base $font-family-base;
     margin: 0;
     padding: 15px !important;
@@ -185,11 +185,11 @@
 
     .portlet-header {
       background: $crm-accordion-header-color;
-      border-color: $crm-dark-grayblue;
+      border-color: $crm-grayblue-dark;
       -webkit-border-radius: $border-radius-small;
       -moz-border-radius: $border-radius-small;
       border-radius: $border-radius-small;
-      color: $crm-dark-blue;
+      color: $gray-dark;
       font: $crm-font-weight-h1 $font-size-medium $font-family-base;
       margin: 0;
       padding: 15px;

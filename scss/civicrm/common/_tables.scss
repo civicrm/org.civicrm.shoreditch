@@ -62,7 +62,7 @@ table {
     }
 
     > tr:first-child > th {
-      border-color: $crm-dark-grayblue;
+      border-color: $crm-grayblue-dark;
     }
   }
 
@@ -173,7 +173,7 @@ table {
 
   .columnheader-dark {
     border: none;
-    border-bottom: 1px solid $crm-dark-grayblue;
+    border-bottom: 1px solid $crm-grayblue-dark;
 
     th {
       border: none !important;
@@ -297,7 +297,7 @@ table {
 
     .sticky {
       tr:first-child {
-        border-bottom: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
       }
 
       th:first-child {

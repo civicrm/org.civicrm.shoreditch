@@ -81,7 +81,7 @@
 
     .addon.fa-calendar {
       background-color: $gray-lighter;
-      border: 1px solid $crm-darker-grayblue;
+      border: 1px solid $crm-grayblue-darker;
       border-bottom-right-radius: $border-radius-base;
       border-top-right-radius: $border-radius-base;
       left: -2px;
@@ -293,14 +293,14 @@
     .select2-choice {
       background: none;
       background: $crm-white;
-      border: 1px solid $crm-darker-grayblue;
+      border: 1px solid $crm-grayblue-darker;
       border-radius: $border-radius-base;
       box-shadow: $crm-select2-box-shadow-inset;
       display: block !important;
       line-height: 30px;
 
       .select2-chosen {
-        color: $crm-dark-blue;
+        color: $gray-dark;
         font-family: $font-family-base;
       }
     }
@@ -427,7 +427,7 @@
 
       thead tr {
         background: none !important;
-        border-bottom: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
 
         th {
           background: $gray-lighter !important;
@@ -509,7 +509,7 @@
 
       .crm-accordion-header {
         background: $crm-white !important;
-        border-bottom: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
       }
     }
 
@@ -521,7 +521,7 @@
     div[id*="s2id_autogen"] {
       .select2-choice {
         background: $crm-white;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-select2-box-shadow-inset;
       }

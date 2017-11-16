@@ -23,7 +23,7 @@
   .CRM_Batch_Form_Batch {
     h3 {
       background: $gray-lighter !important;
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
       border-radius: $border-radius-child $border-radius-child 0 0;
       color: $gray-darker;
       font: $crm-font-weight-h3 $font-size-h2 $font-family-base;
@@ -69,7 +69,7 @@
       div[id*="s2id_autogen"] {
         .select2-choice {
           background: none;
-          border: 1px solid $crm-darker-grayblue;
+          border: 1px solid $crm-grayblue-darker;
           border-radius: $border-radius-base;
           box-shadow: $crm-select2-box-shadow-inset;
         }
@@ -123,7 +123,7 @@
     }
 
     thead {
-      border-top: 1px solid $crm-dark-grayblue;
+      border-top: 1px solid $crm-grayblue-dark;
     }
   }
 }
@@ -214,8 +214,8 @@
     border-radius: $border-radius-base;
 
     .crm-grid-header {
-      border-bottom: 1px solid  $crm-dark-grayblue;
-      border-top: 1px solid  $crm-dark-grayblue;
+      border-bottom: 1px solid  $crm-grayblue-dark;
+      border-top: 1px solid  $crm-grayblue-dark;
       border-top-left-radius: $border-radius-base;
       border-top-right-radius: $border-radius-base;
 
@@ -276,7 +276,7 @@
         @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
         background-color: $crm-white;
         background-image: none;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-input-shadow;
         color: $gray-darker;

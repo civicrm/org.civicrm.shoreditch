@@ -27,7 +27,7 @@
       font-family: $font-family-base;
 
       thead tr {
-        border-bottom: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
         line-height: 30px;
 
         th {
@@ -163,7 +163,7 @@
 
       .select2-choice {
         background: none;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-select2-box-shadow-inset;
         font-family: $font-family-base;
@@ -219,7 +219,7 @@
       @extend .collapsible-title;
       background: $gray-lighter;
       border: none;
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
       color: $gray-darker;
       font-family: $font-family-base;
       font-size: $font-size-h2;
@@ -338,7 +338,7 @@
 
       .select2-choice {
         background: none;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-select2-box-shadow-inset;
       }
@@ -354,7 +354,7 @@
     }
 
     .dataTable thead tr {
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
 
       th {
         background-color: $gray-lighter !important;

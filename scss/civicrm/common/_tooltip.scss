@@ -64,7 +64,7 @@
       }
 
       &:nth-child(2) {
-        border-top: 1px solid $crm-dark-grayblue !important;
+        border-top: 1px solid $crm-grayblue-dark !important;
       }
 
       > td {
@@ -92,7 +92,7 @@ a {
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid $crm-dark-grayblue !important;
+        border-bottom: 10px solid $crm-grayblue-dark !important;
       }
     }
   }
@@ -108,7 +108,7 @@ a {
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid $crm-dark-grayblue !important;
+        border-top: 10px solid $crm-grayblue-dark !important;
       }
     }
   }

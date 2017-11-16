@@ -47,7 +47,7 @@
 
   &::before {
     background-color: $crm-white;
-    border: 1px solid $crm-darker-grayblue;
+    border: 1px solid $crm-grayblue-darker;
     border-radius: $border-radius-base;
     box-shadow: $crm-checkbox-shadow;
     content: '';
@@ -77,7 +77,7 @@
 
   &::before {
     background-color: $crm-white;
-    border: solid 1px $crm-darker-grayblue;
+    border: solid 1px $crm-grayblue-darker;
     border-radius: 50%;
     box-shadow: $crm-checkbox-shadow;
     content: '';

@@ -93,7 +93,7 @@
   @include box-shadow($box-shadow);
 
   .panel-body:not(.panel-body-extra) {
-    border-top: 1px solid $crm-dark-grayblue;
+    border-top: 1px solid $crm-grayblue-dark;
   }
 
   > .panel-heading {

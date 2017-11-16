@@ -12,8 +12,8 @@
   .portlet-header {
     @include prefix(border-radius, $border-radius-small, webkit moz);
     background: $crm-accordion-header-color;
-    border-color: $crm-dark-grayblue;
-    color: $crm-dark-blue;
+    border-color: $crm-grayblue-dark;
+    color: $gray-dark;
     font-family: $font-family-base;
     font-size: $font-size-medium;
     font-weight: $crm-font-weight-h3;
