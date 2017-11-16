@@ -11,19 +11,11 @@ $crm-modal-footer-shadow: inset 0 8px 21px -6px rgba(148, 148, 148, 0.4);
 //##
 
 $crm-page-breakpoint-min:      1240px !default; // Unfortunately arbitrary
-
-$crm-page-sidebar-bg:          #fff !default;
 $crm-page-sidebar-max-width:   170px !default;
-
 $crm-page-main-max-width:      1004px !default;
 $crm-page-main-padding:        16px !default;
-
-$crm-page-topbar-bg:           #222831 !default;
-$crm-page-topbar-bg-light:     #393E46;
-$crm-page-topbar-color:        #fff !default;
 $crm-page-topbar-item-padding: 15px !default;
 
-$crm-placeholder:              #9494A5;
 //
 // Variables override
 // --------------------------------------------------
@@ -41,6 +33,8 @@ $os-font-path:   "../fonts/open-sans" !default;
 //
 //## Gray and brand colors for use across Bootstrap.
 
+$crm-page-topbar-bg:        #222831 !default;
+$crm-page-topbar-bg-light:  #393E46;
 $crm-background:            #E8EEF0 !default;
 $crm-copy:                  #4D4D69 !default;
 
@@ -49,6 +43,7 @@ $gray-dark:                 $crm-copy !default;
 $gray-light:                $crm-background !default;
 $gray-lighter:              #F3F6F7 !default;
 $crm-gray-lightest:         #FAFAFB !default;
+$crm-prompt-gray:           #9494A5 !default
 
 $brand-primary:             #0071BD !default;
 $brand-success:             #44CB7E !default;
@@ -56,8 +51,8 @@ $brand-info:                #0071BD !default;
 $brand-warning:             #E6AB5E !default;
 $brand-danger:              #CF3458 !default;
 
-$crm-darken-percentage:     7% !default;
-
+$brand-success-dark:        #4D994D !default;
+$brand-warning-dark:        #BF5900 !default;
 
 $crm-dark-blue:             #586277 !default;
 $crm-dark-grayblue:         #D3DEE2 !default;
@@ -65,11 +60,17 @@ $crm-darker-grayblue:       #C2CFD8 !default;
 $crm-white:                 #FFFFFF !default;
 $crm-black:                 #000000 !default;
 $crm-color-neutral:         $crm-darker-grayblue !default;
+$crm-placeholder:           $crm-prompt-gray !default;
+$crm-page-topbar-color:     $crm-white !default;
+$crm-page-sidebar-bg:       $crm-white !default;
 
-$crm-accordion-header-color:$gray-lighter;
+$crm-accordion-header-color: $gray-lighter;
 
 $btn-success-color:         $gray-darker !default;
 $btn-warning-color:         $gray-darker !default;
+
+$crm-darken-percentage:     7% !default;
+$crm-lighten-percentage:    30% !default;
 
 //== Scaffolding
 //
@@ -220,7 +221,7 @@ $panel-footer-padding:      20px !default;
 $panel-border-radius:       $border-radius-base + 1 !default;
 
 $panel-inner-border:        $gray-light !default;
-$panel-footer-bg:           #ffffff !default;
+$panel-footer-bg:           $crm-white !default;
 
 $crm-panel-heading-margin:  10px !default;
 
@@ -313,9 +314,9 @@ $pagination-disabled-bg:         $pagination-bg !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #4D994D !default;
+$state-success-text:             $brand-success-dark !default;
 $state-info-text:                $brand-info !default;
-$state-warning-text:             #BF5900 !default;
+$state-warning-text:             $brand-warning-dark !default;
 $state-danger-text:              $brand-danger !default;
 
 $state-success-border:           $brand-success !default;
@@ -324,10 +325,10 @@ $state-warning-border:           $brand-warning !default;
 $state-danger-border:            $brand-danger !default;
 
 
-$alert-success-bg:               lighten($brand-success, 30%) !default;
-$alert-info-bg:                  lighten($brand-info, 30%) !default;
-$alert-warning-bg:               lighten($brand-warning, 30%) !default;
-$alert-danger-bg:                lighten($brand-danger, 30%) !default;
+$alert-success-bg:               lighten($brand-success, $crm-lighten-percentage) !default;
+$alert-info-bg:                  lighten($brand-info, $crm-lighten-percentage) !default;
+$alert-warning-bg:               lighten($brand-warning, $crm-lighten-percentage) !default;
+$alert-danger-bg:                lighten($brand-danger, $crm-lighten-percentage) !default;
 
 $alert-success-text:             $gray-darker !default;
 $alert-info-text:                $gray-darker !default;
