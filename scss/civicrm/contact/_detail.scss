@@ -690,9 +690,13 @@
       }
     }
 
-    .crm-label,
     .label {
       display: none;
+    }
+
+    .crm-label,
+    .crm-content {
+      display: table-cell;
     }
 
     .crm-clear {
