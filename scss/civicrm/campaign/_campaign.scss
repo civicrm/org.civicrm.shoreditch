@@ -1,0 +1,43 @@
+.page-civicrm-campaign {
+  .crm-content-block {
+    @include box-shadow($box-shadow);
+
+    .dataTables_wrapper,
+    .crm-form-block {
+      box-shadow: none;
+    }
+
+    .dataTables_wrapper {
+      margin-bottom: 0;
+
+      > table {
+        thead th:nth-child(2),
+        tbody td:nth-child(2) {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    > #mainTabContainer {
+      border-radius: $border-radius-base;
+
+      .ui-tabs-nav {
+        border-radius: $border-radius-base $border-radius-base 0 0;
+      }
+
+      .ui-tabs-panel {
+        border-bottom: none;
+        padding: 0;
+
+        .action-link {
+          margin: 0;
+          padding: 20px;
+
+          a.button {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
