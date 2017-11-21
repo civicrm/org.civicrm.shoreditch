@@ -1,9 +1,8 @@
 .CRM_Export_Form_Select {
-  h2 {
-    padding-left: 20px;
-  }
+  padding-bottom: 5px;
 
   .help {
+    margin-bottom: 20px;
     padding: 20px;
   }
 
@@ -26,8 +25,19 @@
     margin-left: 0 !important;
   }
 
-  #export-type {
-    padding: 0 20px;
+  .crm-section {
+    margin-bottom: 0;
+    padding-bottom: 1em;
+
+    &.crm-export-mapping-section {
+      padding-bottom: 0;
+    }
+  }
+
+  .crm-exportOption-section {
+    background-color: $crm-white;
+    box-shadow: $crm-panel-element-shadow;
+    padding: 1em 20px;
 
     h3 {
       padding-left: 0;
@@ -36,10 +46,15 @@
     }
   }
 
-  .crm-submit-buttons {
-    > .crm-button {
-      margin-left: 0 !important;
-      margin-right: 10px !important;
+  .crm-form-block {
+    background-color: transparent;
+    box-shadow: none;
+
+    > .crm-submit-buttons {
+      box-shadow: $crm-panel-element-shadow;
+      margin: 0 !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
     }
   }
 
@@ -50,12 +65,11 @@
   }
 
   #wizard-steps {
-    + h2 {
-      top: 0;
-    }
+    background-color: $crm-white;
+    box-shadow: $crm-panel-element-shadow;
 
     .wizard-bar {
-      display: none;
+      margin: 0;
     }
   }
 }

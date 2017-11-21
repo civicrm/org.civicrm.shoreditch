@@ -21,7 +21,7 @@
   }
 
   #wizard-steps {
-    display: none;
+    margin: -30px -20px 0 -20px;
   }
 
   #dataSource {
@@ -92,6 +92,11 @@
   #Preview {
     > .crm-form-block.crm-form-block {
       padding: 20px 0 0 0 !important;
+    }
+
+    #wizard-steps {
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .help {
@@ -185,6 +190,7 @@
 
       td.label {
         display: table-cell;
+        padding-left: 0;
       }
     }
 
@@ -213,6 +219,12 @@
           display: block;
           min-height: 100px;
         }
+      }
+    }
+
+    #common-form-controls {
+      td.label {
+        padding-left: 0;
       }
     }
   }
