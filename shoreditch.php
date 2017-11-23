@@ -119,8 +119,6 @@ function shoreditch_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 function shoreditch_civicrm_coreResourceList(&$items, $region) {
   if ($region == 'html-header') {
     CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/bootstrap.css', -50, 'html-header');
-    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/radio-checkbox.js');
-    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/add-missing-date-addons.js');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/transition.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/scrollspy.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/dropdown.js', 1000, 'html-header');
@@ -129,6 +127,9 @@ function shoreditch_civicrm_coreResourceList(&$items, $region) {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/tab.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/button.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/noConflict.js', 1001, 'html-header');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/radio-checkbox.js');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/add-missing-date-addons.js');
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/main-menu.js');
   }
 }
 

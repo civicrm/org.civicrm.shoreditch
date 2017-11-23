@@ -38,7 +38,8 @@ gulp.task('sass:civicrm', ['sass:sync'], function () {
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',
-      exclude: [/tooltip/, /page-civicrm/, /crm-container/, /civicrm-menu/, /#root-menu-div/]
+      exclude: [/^body/, /tooltip/, /page-civicrm/, /crm-container/,
+        /civicrm-menu/, /#root-menu-div/]
     }), postcssDiscardDuplicates]))
     .pipe(gulp.dest('css/'));
 });
