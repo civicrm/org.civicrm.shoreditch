@@ -1,0 +1,71 @@
+.page-civicrm-survey {
+  &.page-civicrm-survey-add {
+    .help {
+      margin: 0px 20px;
+    }
+  }
+}
+
+.page-civicrm-survey-configure {
+  .crm-content-block {
+    @include box-shadow($box-shadow);
+
+    .crm-form-block {
+      box-shadow: none;
+    }
+
+    > #mainTabContainer {
+      border-radius: $border-radius-base;
+
+      .ui-tabs-nav {
+        border-radius: $border-radius-base $border-radius-base 0 0;
+      }
+
+      .ui-tabs-panel {
+        border-bottom: none;
+        padding: 0;
+
+        .crm-submit-buttons:first-of-type {
+          border-top: 0;
+          margin-top: 0 !important;
+        }
+      }
+
+      .crm-campaign-survey-results-form-block {
+        .form-layout-compressed {
+          margin: 0;
+          width: 100%;
+
+          td:not(.label) {
+            padding: 0;
+          }
+        }
+
+        fieldset {
+          legend {
+            @include section-title;
+            box-sizing: border-box;
+            width: 100%;
+          }
+
+          .add-remove-link {
+            padding: 20px;
+          }
+
+          .description {
+            padding-left: 20px;
+          }
+
+          table {
+            @extend %civihr-table;
+            box-shadow: none !important;
+
+            td:first-child {
+              padding-left: 20px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

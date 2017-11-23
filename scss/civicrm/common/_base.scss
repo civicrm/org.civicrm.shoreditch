@@ -263,3 +263,45 @@
     color: $gray-darker;
   }
 }
+
+.page-civicrm:not(.page-civicrm-contact-view) {
+  #crm-main-content-wrapper {
+    > .crm-content-block {
+      > #mainTabContainer {
+        @include box-shadow($box-shadow);
+        border-radius: $border-radius-base;
+
+        .help {
+          margin: 20px;
+        }
+
+        > .ui-tabs-nav {
+          border-radius: $border-radius-base $border-radius-base 0 0;
+        }
+
+        > .ui-tabs-panel {
+          border-bottom: none;
+          padding: 0;
+
+          .dataTables_wrapper,
+          .crm-form-block {
+            box-shadow: none;
+          }
+
+          > .dataTables_wrapper {
+            margin-bottom: 0;
+          }
+
+          .action-link {
+            margin: 0;
+            padding: 20px;
+
+            a.button {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
