@@ -18,6 +18,11 @@ body {
   a,
   a:link {
     color: $brand-primary;
+    opacity: 1;
+
+    &:hover {
+      color: darken($brand-primary, $crm-darken-percentage);
+    }
   }
 
   .description {
@@ -73,7 +78,7 @@ body {
   .select2-container {
     .select2-choice {
       background: $crm-white;
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
       border-radius: $border-radius-base;
       box-shadow: none;
 
@@ -175,7 +180,7 @@ body {
         padding: 12px 20px;
       }
 
-      > tbody > tr > td:last-child {
+      > tbody > tr > td:not(.dataTables_empty):last-child {
         text-align: right;
       }
     }
@@ -277,4 +282,8 @@ body {
     font-weight: 600;
     color: $gray-darker;
   }
+}
+
+.crm-footer .crm-error {
+  border-radius: 2px;
 }

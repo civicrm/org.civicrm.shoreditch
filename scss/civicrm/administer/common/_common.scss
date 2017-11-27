@@ -3,7 +3,6 @@
 @import "variables";
 @import "mixins";
 @import "table/table";
-@import "ui-tabs/ui-tabs";
 
 
 ul.civihr-popup {
@@ -53,8 +52,45 @@ ul.civihr-popup {
     overflow-y: hidden;
   }
 
-  .action-link,
   .crm-submit-buttons {
+    background: $crm-white;
+    border-top: 1px solid $gray-lighter;
+    margin: 20px 20px 0;
+    padding: 20px 0 18px;
+    text-align: right;
+
+    a.button {
+      @extend %btn-civi-primary;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .crm-button {
+      @extend %btn-civi;
+
+      &[crm-icon=fa-check] {
+        @extend %btn-civi-primary;
+        padding: 8px 19px;
+      }
+
+      &[crm-icon=fa-times] {
+        @extend %btn-civi-secondary-outline;
+        color: $gray;
+        border: solid 1px $gray-dark;
+        padding: 7px 19px;
+        margin: 0;
+
+        &:hover {
+          background: $gray-dark;
+          color: $crm-white;
+        }
+      }
+    }
+  }
+
+  .action-link {
     @include civihr_panel();
     height: auto;
     line-height: normal;

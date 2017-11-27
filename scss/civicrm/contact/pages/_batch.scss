@@ -5,7 +5,7 @@
     margin-top: 15px;
 
     #newBatch.button {
-      background: $crm-dark-gray-color;
+      background: $gray-dark;
       border: transparent !important;
       color: $crm-white !important;
 
@@ -23,9 +23,9 @@
   .CRM_Batch_Form_Batch {
     h3 {
       background: $gray-lighter !important;
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
       border-radius: $border-radius-child $border-radius-child 0 0;
-      color: $crm-h3-color;
+      color: $gray-darker;
       font: $crm-font-weight-h3 $font-size-h2 $font-family-base;
       margin: 0;
       padding: 17px 25px;
@@ -69,7 +69,7 @@
       div[id*="s2id_autogen"] {
         .select2-choice {
           background: none;
-          border: 1px solid $crm-darker-grayblue;
+          border: 1px solid $crm-grayblue-darker;
           border-radius: $border-radius-base;
           box-shadow: $crm-select2-box-shadow-inset;
         }
@@ -123,7 +123,7 @@
     }
 
     thead {
-      border-top: 1px solid $crm-dark-grayblue;
+      border-top: 1px solid $crm-grayblue-dark;
     }
   }
 }
@@ -214,8 +214,8 @@
     border-radius: $border-radius-base;
 
     .crm-grid-header {
-      border-bottom: 1px solid  $crm-dark-grayblue;
-      border-top: 1px solid  $crm-dark-grayblue;
+      border-bottom: 1px solid  $crm-grayblue-dark;
+      border-top: 1px solid  $crm-grayblue-dark;
       border-top-left-radius: $border-radius-base;
       border-top-right-radius: $border-radius-base;
 
@@ -276,7 +276,7 @@
         @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
         background-color: $crm-white;
         background-image: none;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-input-shadow;
         color: $gray-darker;
@@ -324,19 +324,5 @@
     height: auto;
     margin: 20px 0 15px;
     padding: 0 15px;
-  }
-
-  .crm-submit-buttons .crm-form-submit {
-    background: $brand-primary;
-    border-color: $brand-primary;
-    border-radius: $panel-border-radius;
-    font-family: $font-family-base;
-    padding: 9px 15px;
-    text-shadow: none;
-    text-transform: uppercase;
-
-    &:hover {
-      background: $crm-blue-light;
-    }
   }
 }

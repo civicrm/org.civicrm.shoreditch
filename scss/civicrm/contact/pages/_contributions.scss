@@ -7,9 +7,7 @@
     font-weight: 600 !important;
   }
 
-  .crm-form-submit,
-  .button,
-  .crm-form-submit {
+  .button {
     text-transform: uppercase;
     font-family: $font-family-base;
   }
@@ -26,15 +24,6 @@
 
     .help {
       padding: 10px 0;
-    }
-
-    .crm-form-submit {
-      background: $brand-primary;
-      border-color: $brand-primary;
-      padding: 7px;
-      border-radius: 2px;
-      margin-right: 0;
-      text-shadow: none;
     }
   }
 
@@ -55,31 +44,6 @@
       margin: 20px 20px 0;
       min-height: 43px;
       padding: 20px 0 10px;
-    }
-
-    .crm-form-submit {
-      background: $brand-primary;
-      border-color: $brand-primary;
-      color: $crm-white;
-      float: left;
-      min-width: 60px;
-      padding: 8px 12px;
-      text-shadow: none;
-
-      &:hover {
-        background: $crm-blue-light;
-      }
-
-      &.cancel {
-        background: $crm-white;
-        border: 1px solid $crm-copy;
-        color: $crm-cancel-color;
-
-        &:hover {
-          background: $crm-copy;
-          color: $crm-white;
-        }
-      }
     }
   }
 
@@ -103,7 +67,7 @@
     }
 
     .columnheader {
-      border-color: $crm-dark-grayblue !important;
+      border-color: $crm-grayblue-dark !important;
       border-left: none !important;
       border-right: none !important;
 
@@ -157,7 +121,7 @@
     input[type="text"],
     .select2-choice {
       background: $crm-white;
-      border: 1px solid $crm-darker-grayblue;
+      border: 1px solid $crm-grayblue-darker;
       border-radius: $border-radius-small;
       box-shadow: $crm-input-shadow;
       color: $gray-darker;
@@ -227,7 +191,7 @@
   form[class*="CRM_Contribute_Form_"] {
     h3 {
       background: $gray-lighter;
-      color: $crm-h3-color;
+      color: $gray-darker;
       font-family: $font-family-base;
       font-size: $font-size-h2;
       font-weight: $crm-font-weight-h3;
@@ -273,30 +237,6 @@
     .crm-html_email-accordion .helpIcon {
       margin-bottom: 20px;
       margin-right: 0;
-    }
-
-    .crm-form-submit {
-      background: $brand-primary;
-      border-color: $brand-primary;
-      border-radius: 3px;
-      margin-right: 0;
-      padding: 7px 12px;
-      text-shadow: none;
-
-      &:hover {
-        background: $crm-blue-light;
-      }
-    }
-
-    .crm-form-submit.cancel {
-      background: $crm-white;
-      border: 1px solid $crm-copy;
-      color: $gray-darker;
-
-      &:hover {
-        background: $crm-copy;
-        color: $crm-white;
-      }
     }
   }
 
@@ -407,7 +347,7 @@
 
         .sticky-header {
           background-color: $gray-lighter;
-          border-bottom: 1px solid $crm-dark-grayblue;
+          border-bottom: 1px solid $crm-grayblue-dark;
           padding-bottom: 15px !important;
           padding-top: 20px !important;
           z-index: 20;
@@ -471,18 +411,6 @@
 
     .crm-accordion-body {
       border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
-
-      #_qf_Search_refresh {
-        background: $brand-primary;
-        border-color: $brand-primary;
-        border-radius: $border-radius-base;
-        color: $crm-white;
-        font-size: $font-size-base;
-        font-family: $font-family-base;
-        padding: 8px 12px;
-        text-shadow: none;
-        text-transform: uppercase;
-      }
 
       > .form-layout > tody > tr {
         &:nth-child(2) > td {
@@ -586,10 +514,6 @@
     .crm-contribution-form-block-pcp_details {
       left: -169px;
       position: relative;
-    }
-
-    .crm-submit-buttons .crm-form-submit.cancel  {
-      padding-left: 12px;
     }
 
     .crm-link-credit-card-mode {
@@ -1302,7 +1226,7 @@
             margin: 0;
 
             tbody {
-              border-top: 1px solid $crm-dark-grayblue !important
+              border-top: 1px solid $crm-grayblue-dark !important
             }
           }
 
@@ -1659,7 +1583,7 @@ form.CRM_Contribute_Form_ContributionCharts {
 
     tr.columnheader {
       border: none !important;
-      border-bottom: 1px solid $crm-dark-grayblue !important;
+      border-bottom: 1px solid $crm-grayblue-dark !important;
     }
 
     tr.crm-contribution {
@@ -1682,32 +1606,34 @@ form.CRM_Contribute_Form_ContributionCharts {
   .element-right {
     margin-right: 0 !important;
   }
+}
 
-  .crm-form-submit {
-    background: $brand-primary;
-    border: none;
-    border-radius: $border-radius-base;
-    font-family: $font-family-base;
-    margin: 0;
-    padding: 9px 15px;
-    text-shadow: none;
-    text-transform: uppercase;
+.CRM_Financial_Form_Search {
 
-    &:hover {
-      background: $crm-blue-light;
-      color: $crm-white;
+  .crm-submit-buttons {
+    height: auto;
+    line-height: normal;
+    margin: 20px 0;
+
+    > a.button {
+      background: $crm-copy;
+      float: none;
+
+      &:hover {
+        background: $crm-light-gray-color;
+        color: $crm-white;
+      }
     }
   }
 
-  .crm-form-submit.cancel {
-    background: transparent;
-    border: 1px solid $gray-darker;
-    color: $gray-darker;
-    padding: 8px 15px;
+  .form-layout-compressed {
+    margin: 20px 0 0;
 
-    &:hover {
-      background: $gray-darker;
-      color: $crm-white;
+    input.crm-form-submit {
+      margin-left: 5px;
+      padding: 4px 10px;
+      vertical-align: middle;
+      text-shadow: none;
     }
   }
 }

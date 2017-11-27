@@ -1,0 +1,88 @@
+.crm-editable-enabled {
+  display: block;
+  position: relative;
+
+  .crm-i {
+    opacity: 1;
+  }
+
+  .crm-editable-form {
+
+    button {
+      background-color: $gray-lighter;
+      border: 1px solid $crm-grayblue-darker;
+      border-radius: 0 0 0 $border-radius-base;
+      bottom: -29px;
+      color: $brand-primary;
+      height: 30px;
+      left: auto;
+      outline: none;
+      right: 32px;
+
+      .crm-i {
+        opacity: 1;
+      }
+
+      &[type=cancel] {
+        border-radius: 0 0 $border-radius-base;
+        border-left: 0;
+        color: $brand-danger;
+        right: 0;
+      }
+    }
+
+    select {
+      background: $crm-white;
+      border: 1px solid $crm-grayblue-darker;
+      border-radius: $border-radius-base $border-radius-base 0px;
+      outline: none;
+      width: 100%;
+    }
+
+    input {
+      border: 1px solid $crm-grayblue-darker;
+      border-radius: $border-radius-base $border-radius-base 0 $border-radius-base;
+      display: block;
+      outline: none;
+      width: 100% !important;
+    }
+
+    textarea {
+      border: 1px solid $crm-grayblue-darker;
+      border-radius: $border-radius-base $border-radius-base 0 $border-radius-base;
+      display: block;
+      outline: none;
+      width: 100% !important;
+    }
+  }
+
+  &:not(.crm-editable-editing):hover {
+    border: 1px solid $crm-grayblue-darker;
+    border-radius: $border-radius-base;
+    padding: 1px 30px 1px 3px;
+
+    &:before {
+      background-color: $crm-background;
+      border-left: 1px solid $crm-grayblue-darker;
+      border-radius: 0 $border-radius-base $border-radius-base 0;
+      bottom: 0;
+      content: "";
+      height: 100%;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      vertical-align: middle;
+      width: 30px;
+    }
+
+    &:after {
+      @include fa-icon($font-size-base,$fa-var-pencil);
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: calc(50% - 9px);
+      width: 30px;
+    }
+  }
+}

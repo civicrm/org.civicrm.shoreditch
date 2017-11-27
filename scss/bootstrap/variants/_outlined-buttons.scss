@@ -11,16 +11,16 @@
   &:hover,
   &:active {
     background-color: $crm-white !important;
-    color: $crm-dark-blue !important;
+    color: $gray-dark !important;
   }
 }
 
 .btn-primary-outline {
-  @include button-outline-variant($btn-primary-bg);
+  @include button-outline-variant($gray-darker, $bg-color: $btn-primary-bg);
 }
 
 .btn-secondary-outline {
-  @include button-outline-variant($gray-darker, $gray-dark);
+  @include button-outline-variant($gray-darker, $bg-color: $crm-copy);
   border-color: $gray-darker !important;
 
   &:hover {
@@ -29,17 +29,17 @@
 }
 
 .btn-info-outline {
-  @include button-outline-variant($btn-info-bg);
+  @include button-outline-variant($gray-darker, $bg-color: $btn-info-bg);
 }
 
 .btn-success-outline {
-  @include button-outline-variant($btn-success-bg);
+  @include button-outline-variant($gray-darker, $bg-color: $btn-success-bg, $hover-color: $crm-black);
 }
 
 .btn-warning-outline {
-  @include button-outline-variant($btn-warning-bg);
+  @include button-outline-variant($gray-darker, $bg-color: $btn-warning-bg, $hover-color: $crm-black);
 }
 
 .btn-danger-outline {
-  @include button-outline-variant($btn-danger-bg);
+  @include button-outline-variant($gray-darker, $bg-color: $btn-danger-bg);
 }

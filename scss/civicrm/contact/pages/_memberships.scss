@@ -26,7 +26,7 @@
         font-family: $font-family-base;
 
         thead tr {
-          border-bottom: 1px solid $crm-dark-grayblue;
+          border-bottom: 1px solid $crm-grayblue-dark;
 
           th {
             background: $gray-lighter;
@@ -170,15 +170,6 @@
           color: $crm-white;
         }
       }
-
-      .crm-form-submit.cancel {
-        color: $gray-darker !important;
-
-        &:hover {
-          background: $gray-darker;
-          color: $crm-white !important;
-        }
-      }
     }
 
     .action-link {
@@ -193,28 +184,6 @@
   .CRM_Member_Form_MembershipRenewal {
     .crm-button {
       border: none;
-    }
-
-    .crm-button-type-cancel {
-      i {
-        color: $gray-darker !important;
-      }
-
-      &:hover i {
-        color: $crm-white !important;
-      }
-    }
-
-
-    .crm-button .crm-form-submit.cancel {
-      border: 1px solid $gray-darker;
-      color: $gray-darker !important;
-
-      &:hover {
-        background-color: $crm-copy;
-        border-color: $gray-darker;
-        color: $crm-white !important;
-      }
     }
 
     .crm-button .crm-i {
@@ -492,7 +461,7 @@
                     margin: 0;
 
                     tbody {
-                      border-top: 1px solid $crm-dark-grayblue !important
+                      border-top: 1px solid $crm-grayblue-dark !important
                     }
 
                     th {
@@ -588,7 +557,7 @@
                   margin: 0;
 
                   tbody {
-                    border-top: 1px solid $crm-dark-grayblue !important
+                    border-top: 1px solid $crm-grayblue-dark !important
                   }
 
                   th {
@@ -666,15 +635,9 @@
 
   .CRM_Member_Form_Search {
     h3 {
-      background: $crm-white;
-      border-radius: $border-radius-base;
-      box-shadow: $box-shadow;
-      color: $datepicker-gray-darker;
-      font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
-      height: 50px;
-      line-height: 2.7em;
-      margin: 20px 0;
-      padding: 0 20px;
+      @include box-shadow($box-shadow);
+      @include panel-header();
+      margin: 20px 0 0;
     }
 
     .crm-accordion-wrapper {
@@ -693,6 +656,11 @@
     .selector,
     .report {
       @include mx-expandable-table();
+      @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25) !important);
+    }
+
+    .form-item {
+      padding-top: 0;
     }
 
     .report {
@@ -704,16 +672,16 @@
           border-radius: $panel-border-radius $panel-border-radius 0 0;
 
           th:first-child {
-            border-top-left-radius: $panel-border-radius;
+            border-top-left-radius: 0;
           }
 
           th:last-child {
-            border-top-right-radius: $panel-border-radius;
+            border-top-right-radius: 0;
           }
         }
 
         &.columnfooter {
-          border-top: 1px solid $crm-dark-grayblue !important;
+          border-top: 1px solid $crm-grayblue-dark !important;
         }
 
         th,
@@ -741,6 +709,13 @@
 
       thead.sticky {
         background: transparent;
+
+        tr:first-child {
+          th:first-child,
+          th:last-child {
+            border-radius: 0;
+          }
+        }
       }
 
       tbody tr:not(.crm-child-row) > td {
@@ -1146,7 +1121,7 @@
 
       tr.columnheader {
         border: none !important;
-        border-bottom: 1px solid $crm-dark-grayblue !important;
+        border-bottom: 1px solid $crm-grayblue-dark !important;
       }
 
       tr.crm-membership {

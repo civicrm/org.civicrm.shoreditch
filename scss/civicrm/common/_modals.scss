@@ -35,7 +35,7 @@
   .ui-dialog-titlebar {
     @extend .modal-header, %open-sans-font-family;
     border: none !important;
-    border-bottom: 1px solid $crm-dark-grayblue !important;
+    border-bottom: 1px solid $crm-grayblue-dark !important;
     box-shadow: $crm-contribute-form-shadow;
     color: $gray-darker !important;
     padding: $ui-modal-header-padding;
@@ -132,7 +132,7 @@
   .ui-dialog-buttonpane {
     @extend .modal-footer, %open-sans-font-family;
     background: $gray-lighter;
-    border-top: 1px solid $crm-dark-grayblue !important;
+    border-top: 1px solid $crm-grayblue-dark !important;
     box-shadow: $crm-contribute-form-shadow;
     display: block;
     margin-left: 0;
@@ -146,11 +146,10 @@
 
       button {
         @include button-variant(
-          $btn-primary-color, $btn-primary-bg, $btn-primary-border
+            $btn-primary-color, $btn-primary-bg, $btn-primary-border
         );
 
         float: right;
-        font-size: $font-size-base !important;
         margin-left: 10px;
         margin-right: 0;
 
@@ -164,17 +163,25 @@
         }
 
         &:hover,
+        &:active,
         &:focus {
+          background: darken($brand-primary, $crm-darken-percentage);
           color: $crm-white;
-          opacity: .8;
+          outline: none;
+          text-shadow: none;
         }
 
-        .ui-button-icon.ui-icon {
+        .ui-icon {
           margin: 0;
 
           &.fa-check {
             padding-right: 1px;
           }
+        }
+
+        &,
+        .ui-button-text {
+          font-size: $font-size-base !important;
         }
       }
     }

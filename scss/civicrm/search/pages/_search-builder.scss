@@ -1,0 +1,38 @@
+.CRM_Contact_Form_Search_Builder {
+  #map-field {
+    tr {
+      td {
+        padding: 10px 20px 4px !important;
+      }
+
+      &.crm-search-builder-add-row {
+        td.form-item {
+          padding-bottom: 15px !important;
+        }
+      }
+    }
+  }
+
+  h3 {
+    @include section-title;
+  }
+
+  .crm-search-builder-add-row .form-item,
+  .crm-search-builder-add-block {
+    text-decoration: none;
+
+    .submit-link {
+      color: $brand-primary;
+      margin: 0;
+    }
+
+    &:before {
+      @include fa-icon($font-size-base, $fa-var-plus);
+      color: $brand-primary;
+    }
+  }
+
+  #crm-submit-buttons {
+    padding: 25px 20px;
+  }
+}

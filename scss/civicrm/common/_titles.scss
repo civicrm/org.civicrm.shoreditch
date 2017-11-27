@@ -7,3 +7,26 @@
   box-sizing: border-box;
   background: transparent;
 }
+
+@mixin panel-header() {
+  background: $gray-lighter;
+  border-bottom: 1px solid $crm-grayblue-dark;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  color: $gray-darker;
+  font-family: $font-family-base;
+  font-size: $font-size-h2;
+  line-height: 24px;
+  padding: 13px 20px;
+}
+
+@mixin section-title() {
+  background: $gray-lighter;
+  border-bottom: 1px solid $crm-grayblue-dark;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  border-top: 1px solid $crm-grayblue-dark;
+  color: $gray-darker;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: 24px;
+  padding: 11px 20px;
+}

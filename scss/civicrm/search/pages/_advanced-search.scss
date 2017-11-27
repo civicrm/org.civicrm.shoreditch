@@ -1,7 +1,7 @@
 .CRM_Contact_Form_Search_Advanced {
   @import 'variables';
   @import 'labels';
-
+  
   td input + label + br {
     display: none;
   }

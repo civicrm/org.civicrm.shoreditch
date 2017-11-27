@@ -9,7 +9,7 @@ $button-border-radius: 2px;
   @extend .btn, %open-sans-font-family;
   text-shadow: none;
   text-transform: uppercase;
-  opacity: 1 !important;
+  opacity: 1;
   font-size: 1em !important;
 }
 
@@ -59,6 +59,74 @@ $button-border-radius: 2px;
     }
   }
 
+  input.crm-form-submit {
+    background: $brand-primary;
+    border-color: $brand-primary;
+    border-radius: $panel-border-radius;
+    font-family: $font-family-base;
+    padding: 8px 12px;
+    text-shadow: none;
+    text-transform: uppercase;
+
+    &:hover {
+      background: darken($brand-primary, $crm-darken-percentage);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &.cancel {
+      background: $crm-white;
+      border: 1px solid $crm-copy;
+      color: $crm-cancel-color;
+
+      &:hover {
+        background: $crm-copy;
+        color: $crm-white;
+      }
+    }
+  }
+
+  .crm-button-type-cancel {
+
+    i {
+      color: $crm-cancel-color;
+    }
+
+    &:hover {
+      i {
+        color: $crm-white;
+      }
+    }
+
+    input.crm-form-submit {
+      color: $crm-cancel-color !important;
+
+      &:hover {
+        color: $crm-white !important;
+      }
+    }
+  }
+
+  .crm-submit-buttons {
+    height: auto;
+    margin: 0;
+
+    .crm-button {
+      float: none !important;
+    }
+
+    span.crm-button {
+      display: inline-block;
+    }
+
+    a.button {
+      float: none;
+    }
+  }
+
   // "Toolbar" buttons
   $toolbar-top-space: 6px;
 
@@ -70,7 +138,7 @@ $button-border-radius: 2px;
     }
 
     .crm-submit-buttons {
-      background: #ffffff !important;
+      background: $crm-white !important;
 
       .crm-i {
         display: none;
@@ -81,12 +149,12 @@ $button-border-radius: 2px;
         input {
           @extend .btn-secondary-outline;
           ///The default theme uses "!important"
-          color: $gray !important;
+          color: $crm-cancel-color !important;
           border: solid 1px $gray-dark;
 
           &:hover {
-            color: #ffffff !important;
-            background: $gray-dark;
+            color: $crm-white !important;
+            background: darken($crm-copy, $crm-darken-percentage);
           }
         }
       }
@@ -118,6 +186,20 @@ $button-border-radius: 2px;
     @extend %btn;
   }
 
+  input[type=button],
+  a.button,
+  a.button:link,
+  a.button:visited {
+    background: $gray-dark;
+    color: $crm-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: darken($crm-copy, $crm-darken-percentage);
+      color: $crm-white;
+    }
+  }
   .crm-option-edit-link.crm-hover-button,
   .crm-hover-button:not(#addMorePermission):not(.open-inline-noreturn),
   .crm-clear-link {
@@ -153,8 +235,7 @@ $button-border-radius: 2px;
 
   .crm-button-type-refresh,
   .crm-submit-buttons > .crm-button {
-    padding: 0 !important;
-    border: 0 !important;
+    border: 0;
 
     .crm-i {
       padding: 3px;
@@ -178,10 +259,6 @@ $button-border-radius: 2px;
   .crm-form-block > .crm-submit-buttons {
     min-height: 43px;
     margin-left: 0;
-
-    > .crm-button:first-of-type {
-      margin-left: 10px;
-    }
   }
 
   //"Expand all" and "configure pane" buttons;
@@ -232,7 +309,7 @@ $button-border-radius: 2px;
   }
 
   .action-link {
-    line-height: 45px;
+    height: auto;
 
     a {
       display: inline-block !important;

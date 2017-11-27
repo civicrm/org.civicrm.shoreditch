@@ -1,6 +1,7 @@
 // Main menu
 
 #civicrm-menu {
+  box-shadow: 0 3px 18px 0 rgba($gray-darker, 0.25);
   font-family: $font-family-base;
   height: auto;
   z-index: 1000;
@@ -14,10 +15,6 @@
 
   &.search-ongoing {
     #crm-qsearch {
-      &:before {
-        opacity: 1;
-      }
-
       .form-text {
         width: 14em !important;
       }
@@ -30,13 +27,13 @@
 
   #crm-qsearch {
     background: $gray-lighter !important;
+    margin-right: 15px;
     padding: 0 24px;
 
     &:before {
       @include fa-icon(1em, $fa-var-search);
-      color: $gray-dark;
+      color: $crm-gray-matte;
       float: left;
-      opacity: 0.4;
     }
 
     > form {
@@ -111,7 +108,7 @@
     }
 
     .menu-separator {
-      border-color: $crm-dark-grayblue;
+      border-color: $crm-grayblue-dark;
     }
   }
 
@@ -160,7 +157,7 @@
     }
 
     &:active {
-      background: $crm-dark-grayblue;
+      background: $crm-grayblue-dark;
     }
   }
 }

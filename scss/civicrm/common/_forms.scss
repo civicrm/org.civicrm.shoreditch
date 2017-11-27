@@ -156,7 +156,7 @@ $control-height: 30px;
         padding-right: 10px !important;
         position: relative;
         top: 1px;
-        background: url('../svgs/drop-down-arrow.svg') no-repeat right !important;
+        background: url('../svgs/drop-down-arrow.svg') no-repeat right $crm-white !important;
 
         option {
           @extend %custom-form-control;
@@ -204,7 +204,7 @@ $control-height: 30px;
         }
 
         .select2-choices {
-          border: solid 1px $crm-darker-grayblue;
+          border: solid 1px $crm-grayblue-darker;
           border-radius: $border-radius-base;
           box-shadow: $crm-checkbox-shadow;
           box-sizing: border-box;
@@ -269,9 +269,7 @@ $control-height: 30px;
         .select2-choices {
           &,
           &::before {
-            background: $input-bg-disabled !important;
-            border-color: $disabled-color !important;
-            color: $disabled-color !important;
+            color: $crm-placeholder !important;
           }
         }
 
@@ -279,12 +277,12 @@ $control-height: 30px;
           &,
           &::before {
             border-color: $disabled-color !important;
-            color: $disabled-color !important;
+            color: $crm-placeholder !important;
           }
         }
 
         .select2-arrow {
-          border-left: 1px solid;
+          border-left: 1px solid $crm-grayblue-dark;
         }
       }
 
@@ -332,7 +330,7 @@ $control-height: 30px;
 
       .select2-arrow {
         background: none;
-        border-color: $crm-darker-grayblue;
+        border-color: $crm-grayblue-darker;
         padding: 0 4px;
 
         > b {
@@ -386,6 +384,10 @@ $control-height: 30px;
       &.error {
         background-image: none;
       }
+
+      .crm-select2-icon .crm-icon {
+        @include contact-type-icons();
+      }
     }
 
     td td {
@@ -396,11 +398,18 @@ $control-height: 30px;
       background: none !important;
 
       &.label {
-        display: flex;
-        align-items: center;
+        padding-left: 20px;
+        text-align: left;
+        vertical-align: top;
+
+        label {
+          margin: 10.5px 0;
+        }
       }
 
       label {
+        display: inline-block;
+        line-height: initial;
         text-align: initial;
       }
 
@@ -475,6 +484,13 @@ $control-height: 30px;
       display: inline-block;
     }
 
+    td > input.crm-form-color {
+      border-color: $crm-grayblue-darker;
+      border-radius: $border-radius-base;
+      min-width: 30px !important;
+      width: 30px !important;
+    }
+
     .crm-form-date-wrapper {
       display: inline-block;
       margin: $control-spacing / 2 0 $control-spacing / 2 0 !important;
@@ -495,12 +511,13 @@ $control-height: 30px;
     border: solid 1px $gray-dark;
     border-radius: 0;
     box-shadow: none;
+    margin-top: 7.5px;
 
     &,
     .cke_top,
     .cke_bottom {
       background: $gray-lighter;
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
     }
 
     .cke_toolgroup {
@@ -592,35 +609,7 @@ $control-height: 30px;
         color: $gray-dark;
 
         .crm-icon {
-          text-indent: 0 !important;
-          text-align: center;
-
-          &:before {
-            font-size: $font-size-base !important;
-            position: relative;
-            bottom: 2px;
-          }
-
-          &.Individual-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f007");
-            }
-          }
-
-          &.Organization-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f0f7");
-            }
-          }
-
-          &.Household-icon {
-            background: none;
-            &:before {
-              @include fa-icon($content: "\f015");
-            }
-          }
+          @include contact-type-icons();
         }
       }
 
@@ -644,7 +633,7 @@ $control-height: 30px;
       select {
         height: 30px;
         background: $crm-white;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
       }
     }
   }
@@ -698,6 +687,10 @@ $control-height: 30px;
 
     > .crm-i {
       color: $brand-primary !important;
+
+      &:hover {
+        color: darken($brand-primary, $crm-darken-percentage) !important;
+      }
     }
   }
 
@@ -737,6 +730,10 @@ $control-height: 30px;
   span.crm-error:not(.crm-error-label) {
     color: $crm-white;
     background-color: $brand-danger;
+
+    a {
+      color: $crm-white;
+    }
   }
 }
 
@@ -746,7 +743,7 @@ $control-height: 30px;
 
 .addon.fa-calendar {
   background: $gray-lighter;
-  border: 1px solid $crm-darker-grayblue;
+  border: 1px solid $crm-grayblue-darker;
   border-radius: 0 $border-radius-base $border-radius-base 0;
   color: $gray-darker;
   cursor: pointer;
@@ -763,4 +760,37 @@ input.crm-form-date {
   height: 26px;
   border: 1px solid $gray-dark;
   vertical-align: bottom;
+}
+.CRM_Admin_Form_Options .form-layout-compressed {
+
+  td.label {
+    padding-left: 0;
+  }
+
+  input[type=checkbox]:not(.old-radiocheckbox-style) {
+    position: relative;
+
+    &::before {
+      content: '';
+      cursor: pointer;
+      display: inline-block;
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: #ffffff;
+      box-shadow: $crm-checkbox-shadow;
+      border: solid 1px $crm-grayblue-darker;
+    }
+
+    &:checked::after {
+      @include fa-icon($font-size: 15px, $content: $fa-var-success, $color: $gray-darker);
+      cursor: pointer;
+      display: inline-block;
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      margin-top: -6px;
+    }
+  }
 }

@@ -1,0 +1,130 @@
+#civicrm-dashboard {
+  .column {
+    .widget-controls {
+      background: $crm-copy;
+      padding: 17px 10px;
+
+      h3 {
+        font-family: $font-family-base;
+        font-size: $font-size-h2;
+      }
+
+      .crm-i {
+        opacity: 1;
+      }
+    }
+
+    .widget-content {
+      padding: 0;
+    }
+
+    .crm-activity-selector-dashlet {
+      display: grid;
+
+      .crm-accordion-header {
+        border-bottom: 1px solid $crm-background;
+        color: $gray-darker;
+        font-weight: $crm-font-weight-h1;
+      }
+
+      .crm-search_filters-accordion {
+        margin-bottom: 0;
+
+        .crm-inline-edit-field {
+          float: left;
+          margin-bottom: 20px;
+          width: 50%;
+
+          .select2-container {
+            width: 98% !important;
+          }
+
+          label {
+            display: block;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      .dataTables_wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        margin-bottom: 0;
+
+        .crm-datatable-pager-top {
+          border-radius: 0;
+        }
+
+        .crm-datatable-pager-bottom {
+          padding: 0 15px;
+          line-height: 1.5em;
+        }
+
+        .dataTables_paginate .ui-button {
+          padding: 10px;
+        }
+
+        .dataTables_info {
+          padding: 10px 0;
+          width: 49%;
+        }
+
+        div[id*="s2id_autogen"] {
+          .select2-choice {
+            background: none;
+            border: 1px solid $crm-grayblue-darker;
+            border-radius: $border-radius-small;
+            box-shadow: $crm-select2-box-shadow-inset;
+          }
+
+          .select2-arrow {
+            background: none;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+
+    #civicrm-getting-started {
+      h3 {
+        @include section-title;
+      }
+
+      table {
+        border: none;
+        margin: 7px 0;
+
+        tbody tr td {
+          border: none;
+          color: $gray-dark;
+          padding: 7px 15px;
+        }
+      }
+
+      #help {
+        border-radius: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  #civicrm-news-feed [id*="civicrm-news-feed-"] {
+    padding: 0 !important;
+
+    .crm-accordion-header {
+      background: $crm-white !important;
+
+      .crm-news-feed-item-preview,
+      .crm-news-feed-item-title {
+        color: $crm-copy;
+        font-weight: $crm-font-weight-h1 !important;
+      }
+    }
+
+    .crm-accordion-body {
+      .crm-news-feed-item-link {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
