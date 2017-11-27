@@ -13,14 +13,14 @@
 /**
  * Dropdown arrow
  */
-@mixin dropdown-arrow() {
-  content: '\f0d7';
-  border-left: 1px solid $input-border;
+@mixin search-icon() {
+  content: '\f002';
   bottom: 0;
   font-family: "FontAwesome";
   display: inline-block;
   height: 100%;
   line-height: $input-height-base;
+  pointer-events: none;
   position: absolute;
   right: 0;
   text-align: center;
