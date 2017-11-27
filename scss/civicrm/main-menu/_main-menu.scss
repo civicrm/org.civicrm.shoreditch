@@ -1,36 +1,175 @@
+// Main menu
+
 #civicrm-menu {
   box-shadow: 0 3px 18px 0 rgba($gray-darker, 0.25);
   font-family: $font-family-base;
-  height: 32px;
+  height: auto;
   z-index: 1000;
 
-  #crm-qsearch {
-    background-color: $crm-white !important;
-    line-height: 28px;
-    height: 30px !important;
-    padding: 1px 3px 1px 2px;
+  .menumain-label {
+    display: block;
+    float: right;
+    max-width: 200px;
+    overflow: hidden;
+  }
 
-    input {
-      background-color: $crm-white;
-      border-color: #c2cfd8;
-      border-radius: 2px;
+  &.search-ongoing {
+    #crm-qsearch {
+      .form-text {
+        width: 14em !important;
+      }
+    }
+
+    .menumain-label {
+      max-width: 0;
     }
   }
 
-  #sort_name_navigation {
-    width: 160px !important;
+  #crm-qsearch {
+    background: $gray-lighter !important;
+    margin-right: 15px;
+    padding: 0 24px;
+
+    &:before {
+      @include fa-icon(1em, $fa-var-search);
+      color: $crm-gray-matte;
+      float: left;
+    }
+
+    > form {
+      float: left;
+    }
+
+    #quickSearch {
+      > div {
+        width: 0;
+      }
+    }
+
+    .form-text {
+      background: transparent !important;
+      border: none;
+      color: $gray-dark;
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+      left: 10px;
+      padding: 0;
+      position: relative;
+      transition: width 0.5s ease-out;
+      width: 0 !important;
+
+      &:focus {
+        outline: 0;
+      }
+    }
   }
 
   > li.menumain {
-    border-right: 0;
-    height: 26px !important;
-    line-height: 26px;
+    border: 0;
+    cursor: pointer;
+    font-size: $font-size-base;
+    height: $crm-main-menu-height !important;
+    line-height: $crm-main-menu-height;
+    padding: 0 15px;
   }
 }
 
+// Sub menus of the main menu
+#root-menu-div {
+
+  [class^="shadowbox"] {
+    display: none;
+  }
+
+  .menu-div {
+    margin-top: 0 !important;
+  }
+
+  .menu-item {
+    font-size: $font-size-base;
+    padding: 6px 80px 6px 24px;
+  }
+
+  .menu-item-arrow {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .menu-ul {
+    border: 0;
+    box-shadow: $box-shadow;
+    font-family: $font-family-base;
+    padding: $crm-main-menu-sub-menu-padding;
+
+    li {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .menu-separator {
+      border-color: $crm-grayblue-dark;
+    }
+  }
+
+  .menu-div:first-of-type {
+    .crm-quickSearchField {
+      font-weight: 500;
+
+      > input[type="radio"] {
+        margin-right: 10px;
+      }
+    }
+
+    .menu-item {
+      &:hover {
+        background: $gray-light;
+      }
+    }
+
+    .menu-ul {
+      background: $gray-lighter;
+    }
+  }
+}
+
+#root-menu-div + .crm-quickSearch-results {
+  background: $gray-lighter;
+  border: 0;
+  box-shadow: $box-shadow;
+  font-family: $font-family-base;
+  left: 0 !important;
+  padding: $crm-main-menu-sub-menu-padding;
+  top: $crm-main-menu-height !important;
+
+  .ui-menu-item {
+    font-size: $font-size-base;
+  }
+
+  .ui-menu-item-wrapper {
+    color: $gray-dark;
+    padding: 6px 21px 6px 14px;
+
+    &.ui-state-active {
+      background: $gray-light;
+      border: none;
+      margin: 0;
+    }
+
+    &:active {
+      background: $crm-grayblue-dark;
+    }
+  }
+}
+
+// Shared styles
 #civicrm-menu > li.menumain.activetarget,
 #root-menu-div li.active {
-  background-color: $gray-lighter;
+  background: $gray-lighter;
+
+  &:active {
+    background: $gray-light;
+  }
 }
 
 #civicrm-menu,
@@ -43,37 +182,4 @@
 #root-menu-div .menu-item,
 #root-menu-div .menu-item a {
   color: $gray-darker;
-}
-
-#root-menu-div {
-
-  [class*="shadowbox"] {
-    display: none;
-  }
-
-  .fa.menu-item-arrow {
-    position: absolute;
-    right: 6px;
-    top: 10px;
-  }
-
-  .menu-ul {
-    border: 0;
-    box-shadow: 0 3px 10px 0 rgba(48, 40, 40, 0.25);
-    font-family: $font-family-base;
-
-    li {
-
-      &:not(.menu-separator) {
-        margin-top: 0 !important;
-        padding: 5px 15px 5px 5px !important;
-      }
-
-      &.menu-separator {
-        border-color: $crm-background;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-    }
-  }
 }
