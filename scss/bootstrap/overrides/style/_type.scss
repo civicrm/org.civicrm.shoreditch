@@ -45,7 +45,7 @@ h6, .h6 { font-weight: $crm-font-weight-h6; }
 }
 
 .page-header-success {
-  @include page-header-variant($brand-success);
+  @include page-header-variant($btn-success-bg,  $title-color: $gray-darker, $sm-color: $gray-darker);
 }
 
 .page-header-info {
@@ -53,7 +53,7 @@ h6, .h6 { font-weight: $crm-font-weight-h6; }
 }
 
 .page-header-warning {
-  @include page-header-variant($brand-warning);
+  @include page-header-variant($btn-warning-bg,  $title-color: $gray-darker, $sm-color: $gray-darker);
 }
 
 .page-header-danger {

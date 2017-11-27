@@ -13,7 +13,7 @@ $crm-text-angular-min-height: 120px;
     .btn {
       background: transparent;
       border: none;
-      color: #727E8A;
+      color: $crm-copy;
 
       &.active {
         color: $gray-darker;

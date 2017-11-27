@@ -1,0 +1,20 @@
+@mixin contact-type-icons {
+  background-image: none;
+  text-indent: 0;
+
+  &::before {
+    text-indent: 0;
+  }
+
+  &.Individual-icon::before {
+    @include fa-icon($font-size-base, $fa-var-user);
+  }
+
+  &.Household-icon::before {
+    @include fa-icon($font-size-base, $fa-var-home);
+  }
+
+  &.Organization-icon::before {
+    @include fa-icon($font-size-base, $fa-var-building);
+  }
+}

@@ -1,11 +1,16 @@
 #civicrm-dashboard {
   .column {
     .widget-controls {
+      background: $crm-copy;
       padding: 17px 10px;
 
       h3 {
         font-family: $font-family-base;
         font-size: $font-size-h2;
+      }
+
+      .crm-i {
+        opacity: 1;
       }
     }
 
@@ -67,7 +72,7 @@
         div[id*="s2id_autogen"] {
           .select2-choice {
             background: none;
-            border: 1px solid $crm-darker-grayblue;
+            border: 1px solid $crm-grayblue-darker;
             border-radius: $border-radius-small;
             box-shadow: $crm-select2-box-shadow-inset;
           }
@@ -82,12 +87,7 @@
 
     #civicrm-getting-started {
       h3 {
-        background-color: $gray-lighter;
-        border-bottom: 1px solid $crm-dark-grayblue;
-        border-top: 1px solid $crm-background;
-        font-size: $font-size-base;
-        margin: 0;
-        padding: 11px 20px;
+        @include section-title;
       }
 
       table {
@@ -108,40 +108,22 @@
     }
   }
 
-  #civicrm-news-feed {
-    .ui-widget-header {
-      border-bottom-color: $crm-dark-grayblue;
+  #civicrm-news-feed [id*="civicrm-news-feed-"] {
+    padding: 0 !important;
 
-      .ui-tabs-active {
-        border-bottom: 2px solid $crm-white;
-        border-color: $crm-dark-grayblue;
-        border-bottom-color: $crm-white;
-        border-radius: $border-radius-child $border-radius-child 0 0;
-      }
+    .crm-accordion-header {
+      background: $crm-white !important;
 
-      a {
-        font-family: $font-family-base;
-        font-weight: $crm-font-weight-h1;
+      .crm-news-feed-item-preview,
+      .crm-news-feed-item-title {
+        color: $crm-copy;
+        font-weight: $crm-font-weight-h1 !important;
       }
     }
 
-    [id*="civicrm-news-feed-"] {
-      padding: 0 !important;
-
-      .crm-accordion-header {
-        background: $crm-white !important;
-
-        .crm-news-feed-item-preview,
-        .crm-news-feed-item-title {
-          color: $crm-dasboard-header;
-          font-weight: $crm-font-weight-h1 !important;
-        }
-      }
-
-      .crm-accordion-body {
-        .crm-news-feed-item-link {
-          text-transform: capitalize;
-        }
+    .crm-accordion-body {
+      .crm-news-feed-item-link {
+        text-transform: capitalize;
       }
     }
   }

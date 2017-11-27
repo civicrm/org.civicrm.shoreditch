@@ -1,4 +1,5 @@
 #civicrm-menu {
+  box-shadow: 0 3px 18px 0 rgba($gray-darker, 0.25);
   font-family: $font-family-base;
   height: 32px;
   z-index: 1000;
@@ -24,14 +25,6 @@
     border-right: 0;
     height: 26px !important;
     line-height: 26px;
-
-    &.crm-link-home {
-      background: $brand-primary;
-
-      &.activetarget {
-        background: #2f92ab;
-      }
-    }
   }
 }
 
@@ -61,7 +54,7 @@
   .fa.menu-item-arrow {
     position: absolute;
     right: 6px;
-    top: 12px;
+    top: 10px;
   }
 
   .menu-ul {
@@ -77,7 +70,7 @@
       }
 
       &.menu-separator {
-        border-color: #D3DEE2;
+        border-color: $crm-background;
         margin: 0 !important;
         padding: 0 !important;
       }

@@ -25,6 +25,7 @@
   &.crm-master-accordion-header {
     @extend %open-sans-font-family;
     background: $brand-primary !important;
+    border-radius: $border-radius-base $border-radius-base 0 0 !important;
     color: $crm-white !important;
     font-weight: $crm-font-weight-h3 !important;
     font-size: $font-size-h2;
@@ -71,12 +72,19 @@
         content: '\f105';
       }
     }
+    .crm-master-accordion-header {
+      border-radius: $border-radius-base !important;
+    }
   }
 }
 
 .crm-accordion-header:not(.crm-master-accordion-header) {
   font-weight: 600;
-  border-bottom: 1px solid $crm-dark-grayblue;
+  border-bottom: 1px solid $crm-grayblue-dark;
+}
+
+.crm-master-accordion-header + .crm-accordion-body {
+  border-radius: 0 0 $border-radius-base $border-radius-base !important;
 }
 
 .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
@@ -106,7 +114,7 @@
   @extend %no-border-radius;
   background: $crm-white;
   border: 0;
-  color: $crm-h3-color;
+  color: $gray-darker;
   font-family: $font-family-base;
   font-size: $font-size-base;
 

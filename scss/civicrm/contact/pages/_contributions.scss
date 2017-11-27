@@ -67,7 +67,7 @@
     }
 
     .columnheader {
-      border-color: $crm-dark-grayblue !important;
+      border-color: $crm-grayblue-dark !important;
       border-left: none !important;
       border-right: none !important;
 
@@ -121,7 +121,7 @@
     input[type="text"],
     .select2-choice {
       background: $crm-white;
-      border: 1px solid $crm-darker-grayblue;
+      border: 1px solid $crm-grayblue-darker;
       border-radius: $border-radius-small;
       box-shadow: $crm-input-shadow;
       color: $gray-darker;
@@ -191,7 +191,7 @@
   form[class*="CRM_Contribute_Form_"] {
     h3 {
       background: $gray-lighter;
-      color: $crm-h3-color;
+      color: $gray-darker;
       font-family: $font-family-base;
       font-size: $font-size-h2;
       font-weight: $crm-font-weight-h3;
@@ -347,7 +347,7 @@
 
         .sticky-header {
           background-color: $gray-lighter;
-          border-bottom: 1px solid $crm-dark-grayblue;
+          border-bottom: 1px solid $crm-grayblue-dark;
           padding-bottom: 15px !important;
           padding-top: 20px !important;
           z-index: 20;
@@ -1226,7 +1226,7 @@
             margin: 0;
 
             tbody {
-              border-top: 1px solid $crm-dark-grayblue !important
+              border-top: 1px solid $crm-grayblue-dark !important
             }
           }
 
@@ -1583,7 +1583,7 @@ form.CRM_Contribute_Form_ContributionCharts {
 
     tr.columnheader {
       border: none !important;
-      border-bottom: 1px solid $crm-dark-grayblue !important;
+      border-bottom: 1px solid $crm-grayblue-dark !important;
     }
 
     tr.crm-contribution {

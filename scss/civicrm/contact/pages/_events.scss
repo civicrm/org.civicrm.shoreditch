@@ -1,9 +1,26 @@
 .CRM_Event_Form_Search {
+  h3 {
+    @include box-shadow($box-shadow);
+    @include panel-header();
+    border-radius: $border-radius-base $border-radius-base 0 0;
+    margin-bottom: 0;
+
+    a {
+      font-size: $font-size-base;
+    }
+  }
+
   .help {
     background: $crm-light-green-color;
     border: none;
     border-radius: $border-radius-base;
     padding: 10px;
+  }
+
+  .status {
+    background: lighten($btn-success-bg, 30%);
+    border-color: $btn-success-bg;
+    color: $gray-darker;
   }
 
   .action-link {
@@ -15,9 +32,33 @@
     }
   }
 
+  .crm-button_qf_Search_refresh {
+    .crm-i {
+      top: 10px;
+    }
+
+    .crm-form-submit {
+      margin: 12.5px 0 0 !important;
+    }
+  }
+
+  .crm-event-search-form-block {
+    overflow: hidden;
+  }
+
+  .crm-results-block {
+    .crm-pager > .element-right {
+      margin-top: 1px !important;
+    }
+  }
+
   #searchForm {
     @include border-box();
     padding: 20px;
+
+    table.form-layout td {
+      border: none;
+    }
   }
 
   .crm-contactDetails-accordion {
@@ -34,50 +75,57 @@
     }
   }
 
+  .form-item {
+    padding-top: 0;
+  }
+
+  .dataTables_wrapper,
+  .form-item table.row-highlight {
+    @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+
+    tr:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+
   table {
-    background: transparent;
-    border: none;
-    border-radius: $border-radius-child;
-    font-family: $font-family-base;
+    border-radius: 0 0 $border-radius-base $border-radius-base;
 
-    thead {
-      background: transparent !important;
-      border-bottom: 1px solid $crm-dark-grayblue;
-      border-radius: $border-radius-base $border-radius-base 0 0;
+    thead,
+    thead.sticky {
+      border-bottom: 1px solid $crm-grayblue-dark;
 
-      tr {
-        background: transparent !important;
-        border-radius: $border-radius-base $border-radius-base 0 0;
+      tr:first-child {
+        th:first-child,
+        th:last-child {
+          border-radius: 0;
+        }
       }
 
       th {
         background: $gray-lighter !important;
         border: none;
-        color: $gray-darker !important;
-        line-height: 1.5em;
+        line-height: normal;
         padding: 15px 10px;
-        vertical-align: middle;
+        white-space: nowrap;
 
-        div {
-          padding: 0;
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
         }
       }
     }
 
     tbody tr {
-      background: $crm-white;
-      border-bottom: none;
 
       td {
-        background: $crm-white;
-        border: none !important;
-        color: $gray-dark;
-        line-height: 1.5em;
-        max-width: 130px;
+        line-height: normal;
         padding: 10px;
-        text-overflow: ellipsis;
-        vertical-align: middle;
-        white-space: nowrap;
 
         &:first-child {
           padding-left: 20px;
@@ -678,5 +726,89 @@
     padding: 5px;
     line-height: 1em;
     vertical-align: middle;
+  }
+}
+
+.CRM_Event_Form_SearchEvent {
+  .float-right {
+    padding: 16px 14px 0 !important;
+  }
+
+  .crm-event-searchevent-form-block {
+    h3 {
+      @include panel-header();
+    }
+
+    .form-layout{
+      margin: 20px;
+    }
+  }
+
+  div#alpha-filter {
+    @include box-shadow($box-shadow);
+    background: $crm-white;
+    border-radius: $border-radius-base $border-radius-base 0 0;
+    margin-bottom: 0px;
+    padding: 15px 10px 10px;
+  }
+
+  .action-link {
+    margin-bottom: 20px;
+  }
+
+  .dataTables_wrapper {
+    @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+
+    thead {
+      tr {
+        border-bottom: 1px solid $crm-grayblue-dark;
+        border-top: 1px solid $crm-grayblue-dark;
+
+        th {
+          background-color: $gray-lighter;
+          border: none;
+          line-height: normal;
+          padding: 15px 10px;
+          white-space: nowrap;
+
+          &:first-child {
+            padding-left: 20px;
+          }
+
+          &:last-child {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          line-height: normal;
+          padding: 10px;
+
+          &:first-child {
+            padding-left: 20px;
+          }
+
+          &:nth-last-child(3) {
+            padding-right: 20px;
+          }
+
+          a.bold {
+            font-weight: $crm-font-weight-h3;
+          }
+        }
+
+        &:last-child {
+          border-radius: 0 0 $border-radius-base $border-radius-base;
+
+          td {
+            border: none;
+          }
+        }
+      }
+    }
   }
 }

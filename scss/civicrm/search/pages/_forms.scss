@@ -1,0 +1,16 @@
+.CRM_Contact_Form_Search_Basic .crm-basic-criteria-form-block {
+  .crm-accordion-body {
+    padding: 20px;
+
+    .label {
+      color: $gray-darker;
+      font-size: $font-size-base;
+      text-align: left;
+
+      &,
+      > label {
+        font-weight: normal !important;
+      }
+    }
+  }
+}
