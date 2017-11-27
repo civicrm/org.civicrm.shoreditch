@@ -80,7 +80,7 @@
 
 .crm-accordion-header:not(.crm-master-accordion-header) {
   font-weight: 600;
-  border-bottom: 1px solid $crm-dark-grayblue;
+  border-bottom: 1px solid $crm-grayblue-dark;
 }
 
 .crm-master-accordion-header + .crm-accordion-body {
@@ -114,7 +114,7 @@
   @extend %no-border-radius;
   background: $crm-white;
   border: 0;
-  color: $crm-h3-color;
+  color: $gray-darker;
   font-family: $font-family-base;
   font-size: $font-size-base;
 

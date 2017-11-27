@@ -17,6 +17,12 @@
     padding: 10px;
   }
 
+  .status {
+    background: lighten($btn-success-bg, 30%);
+    border-color: $btn-success-bg;
+    color: $gray-darker;
+  }
+
   .action-link {
     line-height: 1em;
     margin: 15px 0;
@@ -89,7 +95,7 @@
 
     thead,
     thead.sticky {
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
 
       tr:first-child {
         th:first-child,
@@ -755,8 +761,8 @@
 
     thead {
       tr {
-        border-bottom: 1px solid $crm-dark-grayblue;
-        border-top: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
+        border-top: 1px solid $crm-grayblue-dark;
 
         th {
           background-color: $gray-lighter;

@@ -53,10 +53,26 @@
 
     a {
       color: $brand-primary;
-      opacity: 0.8;
+
+      &.ui-button {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        color: $crm-white;
+        text-decoration: none;
+
+        .ui-icon {
+          margin-top: 0;
+        }
+
+        &:hover {
+          background: darken($brand-primary, $crm-darken-percentage);
+          border-color: darken($brand-primary, $crm-darken-percentage);
+          color: $crm-white;
+        }
+      }
 
       &:hover {
-        opacity: 1;
+        color: darken($brand-primary, $crm-darken-percentage);
       }
     }
 

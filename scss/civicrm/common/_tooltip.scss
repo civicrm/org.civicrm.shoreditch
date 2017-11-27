@@ -1,15 +1,18 @@
 .crm-tooltip-wrapper {
   background-image: none !important;
+  overflow: visible;
+  padding-bottom: 0;
 
   .crm-tooltip {
-    @extend %block-with-shadow;
-    background: $crm-dark-blue !important;
+    @include box-shadow($box-shadow);
+    background: $crm-white !important;
     border-radius: $border-radius-base;
+    padding: 0;
 
     .content,
     .crm-table-group-summary tr td,
     .label {
-      color: $crm-white !important;
+      color: $crm-copy !important;
       font-weight: 600;
     }
 
@@ -19,10 +22,11 @@
     }
 
     .crm-table-group-summary {
-      &,
+      background: $gray-lighter !important;
+
       tbody > tr,
       tr > td {
-        background: $crm-dark-blue !important;
+        background: $crm-white !important;
       }
 
       tbody > tr:first-child td {
@@ -50,8 +54,17 @@
     }
 
     .crm-table-group-summary > tbody > tr {
-      &:nth-child(1) > td {
-        font-size: 1.5em;
+      &:nth-child(1) { 
+        background: $gray-lighter !important;
+
+        & > td {
+          background: $gray-lighter !important;
+          font-size: $font-size-h2;
+        }
+      }
+
+      &:nth-child(2) {
+        border-top: 1px solid $crm-grayblue-dark !important;
       }
 
       > td {
@@ -79,7 +92,7 @@ a {
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid $crm-dark-blue !important;
+        border-bottom: 10px solid $crm-grayblue-dark !important;
       }
     }
   }
@@ -88,14 +101,14 @@ a {
     .crm-tooltip-wrapper {
       &::after {
         content: '';
-        position: relative;
-        top: 9px;
+        position: absolute;
+        bottom: -10px;
         left: 30px;
         width: 0;
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid $crm-dark-blue !important;
+        border-top: 10px solid $crm-grayblue-dark !important;
       }
     }
   }

@@ -3,6 +3,11 @@
   a,
   a:link {
     color: $brand-primary;
+    opacity: 1;
+
+    &:hover {
+      color: darken($brand-primary, $crm-darken-percentage);
+    }
   }
 
   .description {
@@ -58,7 +63,7 @@
   .select2-container {
     .select2-choice {
       background: $crm-white;
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
       border-radius: $border-radius-base;
       box-shadow: none;
 
@@ -262,4 +267,8 @@
     font-weight: 600;
     color: $gray-darker;
   }
+}
+
+.crm-footer .crm-error {
+  border-radius: 2px;
 }

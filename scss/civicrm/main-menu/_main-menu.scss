@@ -25,14 +25,6 @@
     border-right: 0;
     height: 26px !important;
     line-height: 26px;
-
-    &.crm-link-home {
-      background: $brand-primary;
-
-      &.activetarget {
-        background: #2f92ab;
-      }
-    }
   }
 }
 
@@ -78,7 +70,7 @@
       }
 
       &.menu-separator {
-        border-color: #D3DEE2;
+        border-color: $crm-background;
         margin: 0 !important;
         padding: 0 !important;
       }

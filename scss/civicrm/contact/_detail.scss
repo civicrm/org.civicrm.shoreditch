@@ -80,7 +80,7 @@
     }
 
     .select2-choice {
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
       border-radius: $border-radius-base;
       box-shadow: $crm-select2-box-shadow-inset;
     }
@@ -135,7 +135,7 @@
         background: transparent;
         border-bottom-left-radius: $panel-border-radius;
         border-bottom-right-radius: $panel-border-radius;
-        border-top: 1px solid $crm-dark-grayblue;
+        border-top: 1px solid $crm-grayblue-dark;
 
         td, th {
           &:first-child {
@@ -154,7 +154,7 @@
 
       .sticky {
         tr:first-child {
-          border-bottom: 1px solid $crm-dark-grayblue;
+          border-bottom: 1px solid $crm-grayblue-dark;
           border-top-left-radius: $border-radius-base;
           border-top-right-radius: $border-radius-base;
         }
@@ -230,7 +230,7 @@
 
         #info {
           th {
-            border-bottom: 1px solid $crm-dark-grayblue !important;
+            border-bottom: 1px solid $crm-grayblue-dark !important;
             text-transform: capitalize;
           }
 
@@ -308,6 +308,10 @@
     i {
       margin-right: 6px;
     }
+
+    &:hover i {
+      color: $crm-white;
+    }
   }
 
   form.CRM_Contact_Form_Inline_ContactName {
@@ -347,7 +351,7 @@
         }
 
         #household_name {
-          background: $crm-page-topbar-bg-light;
+          background: $crm-gray-bright;
           border-color: $crm-copy;
           color: $crm-white;
           height: 33px !important;
@@ -479,7 +483,7 @@
       input.crm-form-text,
       input.dateplugin {
         background: $crm-white;
-        border-color: $crm-darker-grayblue;
+        border-color: $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-input-shadow;
         color: $crm-copy;
@@ -756,7 +760,7 @@
 
     &#Demographics {
       input.dateplugin {
-        border-color: $crm-darker-grayblue;
+        border-color: $crm-grayblue-darker;
         margin-top: 0;
       }
 
