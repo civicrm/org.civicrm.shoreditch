@@ -2,7 +2,7 @@
   box-shadow: 0 3px 18px 0 rgba($gray-darker, 0.25);
   font-family: $font-family-base;
   height: 32px;
-  z-index: 1000;
+  z-index: 99999;
 
   #crm-qsearch {
     background-color: $crm-white !important;
