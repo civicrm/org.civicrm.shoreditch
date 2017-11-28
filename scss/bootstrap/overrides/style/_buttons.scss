@@ -60,45 +60,49 @@
 .btn-primary {
 
   &:hover {
-    background-color: lighten(desaturate(adjust-hue($btn-primary-bg, 0.6298), 0.0390), 5.4902);
+    background-color: darken($btn-primary-bg, $crm-darken-percentage);
   }
 }
 
 .btn-success {
+  color: $gray-darker;
 
   &:hover {
-    background-color: lighten(desaturate(adjust-hue($btn-success-bg, 0.6298), 0.0390), 5.4902);
+    background-color: darken($btn-success-bg, $crm-darken-percentage);
+    color: $crm-black;
   }
 }
 
 .btn-info {
 
   &:hover {
-    background-color: lighten(desaturate(adjust-hue($btn-info-bg, 0.6298), 0.0390), 5.4902);
+    background-color: darken($btn-info-bg, $crm-darken-percentage);
   }
 }
 
 .btn-warning {
+  color: $gray-darker;
 
   &:hover {
-    background-color: lighten(desaturate(adjust-hue($btn-warning-bg, 0.6298), 0.0390), 5.4902);
+    background-color: darken($btn-warning-bg, $crm-darken-percentage);
+    color: $crm-black;
   }
 }
 
 .btn-danger {
 
   &:hover {
-    background-color: lighten(desaturate(adjust-hue($btn-danger-bg, 0.6298), 0.0390), 5.4902);
+    background-color: darken($btn-danger-bg, $crm-darken-percentage);
   }
 }
 
 
 //== From Bootstrap 4 alpha
 .btn-secondary {
-  @include button-variant(#ffffff, $gray-dark, $gray-darker);
+  @include button-variant($crm-white, $gray-dark, $gray-dark);
   @include button-remove-border-color();
 
   &:hover {
-    background-color: lighten(desaturate(adjust-hue($gray-dark, 0.6298), 0.0390), 5.4902);
+    background-color: darken($crm-copy, $crm-darken-percentage);
   }
 }

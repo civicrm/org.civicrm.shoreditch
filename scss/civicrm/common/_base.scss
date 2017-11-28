@@ -1,8 +1,28 @@
+body {
+  // Ensures that there is the same top padding regardless whether
+  // the user can see the admin toolbar or not
+
+  &:not(.toolbar) {
+    padding-top: $crm-main-menu-height !important;
+  }
+
+  .toolbar-menu {
+    height: $crm-main-menu-height !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
 .crm-container {
 
   a,
   a:link {
     color: $brand-primary;
+    opacity: 1;
+
+    &:hover {
+      color: darken($brand-primary, $crm-darken-percentage);
+    }
   }
 
   .description {
@@ -58,7 +78,7 @@
   .select2-container {
     .select2-choice {
       background: $crm-white;
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
       border-radius: $border-radius-base;
       box-shadow: none;
 
@@ -264,44 +284,6 @@
   }
 }
 
-.page-civicrm:not(.page-civicrm-contact-view) {
-  #crm-main-content-wrapper {
-    > .crm-content-block {
-      > #mainTabContainer {
-        @include box-shadow($box-shadow);
-        border-radius: $border-radius-base;
-
-        .help {
-          margin: 20px;
-        }
-
-        > .ui-tabs-nav {
-          border-radius: $border-radius-base $border-radius-base 0 0;
-        }
-
-        > .ui-tabs-panel {
-          border-bottom: none;
-          padding: 0;
-
-          .dataTables_wrapper,
-          .crm-form-block {
-            box-shadow: none;
-          }
-
-          > .dataTables_wrapper {
-            margin-bottom: 0;
-          }
-
-          .action-link {
-            margin: 0;
-            padding: 20px;
-
-            a.button {
-              box-shadow: none;
-            }
-          }
-        }
-      }
-    }
-  }
+.crm-footer .crm-error {
+  border-radius: 2px;
 }

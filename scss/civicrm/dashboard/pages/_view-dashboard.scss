@@ -1,11 +1,16 @@
 #civicrm-dashboard {
   .column {
     .widget-controls {
+      background: $crm-copy;
       padding: 17px 10px;
 
       h3 {
         font-family: $font-family-base;
         font-size: $font-size-h2;
+      }
+
+      .crm-i {
+        opacity: 1;
       }
     }
 
@@ -67,7 +72,7 @@
         div[id*="s2id_autogen"] {
           .select2-choice {
             background: none;
-            border: 1px solid $crm-darker-grayblue;
+            border: 1px solid $crm-grayblue-darker;
             border-radius: $border-radius-small;
             box-shadow: $crm-select2-box-shadow-inset;
           }
@@ -111,7 +116,7 @@
 
       .crm-news-feed-item-preview,
       .crm-news-feed-item-title {
-        color: $crm-dasboard-header;
+        color: $crm-copy;
         font-weight: $crm-font-weight-h1 !important;
       }
     }

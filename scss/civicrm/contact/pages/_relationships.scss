@@ -84,7 +84,7 @@
       width: 100% !important;
 
       thead tr {
-        border-bottom: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
         border-top-left-radius: $border-radius-base;
         border-top-right-radius: $border-radius-base;
 
@@ -174,10 +174,6 @@
             background: none;
             color: $brand-primary;
           }
-
-          .crm-table-group-summary td {
-            background: $crm-dark-blue !important;
-          }
         }
 
         > td .btn-slide,
@@ -227,7 +223,7 @@
     div[id*="s2id_autogen"] {
       .select2-choice {
         background: $crm-white;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-select2-box-shadow-inset;
       }

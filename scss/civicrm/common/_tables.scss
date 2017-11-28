@@ -61,7 +61,7 @@ table {
     }
 
     > tr:first-child > th {
-      border-color: $crm-table-heading-border-color;
+      border-color: $crm-grayblue-dark;
     }
   }
 
@@ -93,14 +93,6 @@ table {
 
     &.label {
       vertical-align: middle !important;
-    }
-
-    .crm-table-group-summary td {
-      background: $crm-dark-blue !important;
-
-      &:last-child {
-        text-align: left;
-      }
     }
   }
 
@@ -180,7 +172,7 @@ table {
 
   .columnheader-dark {
     border: none;
-    border-bottom: 1px solid $crm-dark-grayblue;
+    border-bottom: 1px solid $crm-grayblue-dark;
 
     th {
       border: none !important;
@@ -304,11 +296,30 @@ table {
 
     .sticky {
       tr:first-child {
-        border-bottom: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
       }
 
       th:first-child {
         text-align: center;
+      }
+    }
+  }
+}
+
+.dataTables_wrapper {
+  .dataTables_paginate {
+    .paginate_button {
+      color: $gray-darker !important;
+
+      &:hover:not(.disabled),
+      &.current {
+        background: none;
+        border: none;
+        font-weight: $crm-font-weight-h3;
+      }
+
+      &.disabled {
+        color: $crm-placeholder !important;
       }
     }
   }
@@ -330,22 +341,5 @@ table {
   #DataTables_Table_0,
   #DataTables_Table_1 {
     @extend %civihr-table;
-  }
-}
-
-.dataTables_wrapper {
-  > table {
-    thead th,
-    tbody td {
-      padding: 12px 10px;
-
-      &:first-child:not(.hiddenElement) {
-        padding-left: 20px;
-      }
-
-      &:last-child:not(.hiddenElement) {
-        padding-right: 20px;
-      }
-    }
   }
 }

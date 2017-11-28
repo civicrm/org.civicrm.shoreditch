@@ -122,7 +122,7 @@
       vertical-align: middle;
       border: none;
       padding: 17px 20px;
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
     }
 
     #tagtree {
@@ -152,7 +152,7 @@
             border-radius: 2px;
             background-color: $crm-white;
             box-shadow: $crm-checkbox-shadow;
-            border: solid 1px $crm-darker-grayblue;
+            border: solid 1px $crm-grayblue-darker;
           }
           &:checked + span label[for] {
             position: relative;

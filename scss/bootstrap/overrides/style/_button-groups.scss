@@ -16,12 +16,12 @@
 
     // Adds missing border color on button hover:
     &:hover {
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
     }
 
     &.active {
       background-color: $gray;
-      color: #FFF;
+      color: $crm-white;
     }
   }
 }

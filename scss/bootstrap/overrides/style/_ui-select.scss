@@ -106,23 +106,12 @@
     }
 
     &:after {
-      content: '\f002';
-      bottom: 0;
-      font-family: "FontAwesome";
-      display: inline-block;
-      height: 100%;
-      line-height: $input-height-base;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      width: 32px;
-      z-index: 1;
-      -webkit-font-smoothing: antialiased;
+      @include search-icon();
     }
   }
 
   .text-muted {
-    color: #727E8A;
+    color: $crm-copy;
   }
 }
 
@@ -139,10 +128,11 @@
 
   .ui-select-search {
     padding-left: 6px !important;
+    width: 100px !important;
   }
 
   &:after {
-    @include dropdown-arrow();
+   @include search-icon();
   }
 }
 
