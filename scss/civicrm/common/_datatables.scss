@@ -1,0 +1,16 @@
+.dataTables_wrapper {
+  > table {
+    thead th,
+    tbody td {
+      padding: 12px 10px;
+
+      &:first-child:not(.hiddenElement) {
+        padding-left: 20px;
+      }
+
+      &:last-child:not(.hiddenElement) {
+        padding-right: 20px;
+      }
+    }
+  }
+}
