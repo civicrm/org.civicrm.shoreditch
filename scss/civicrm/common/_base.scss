@@ -296,10 +296,7 @@ a.sorting,
 a.sorting_asc,
 a.sorting_desc {
   background: none;
-}
-a.sorting,
-a.sorting_asc,
-a.sorting_desc {
+
   &::before {
     left: 0;
     position: absolute;
