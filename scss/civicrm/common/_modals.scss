@@ -49,6 +49,7 @@
       font-weight: $crm-font-weight-h2;
       line-height: $font-size-h1;
       padding-left: 0;
+      width: 80%;
     }
 
     > .ui-button {
@@ -133,6 +134,7 @@
     @extend .modal-footer, %open-sans-font-family;
     background: $gray-lighter;
     border-top: 1px solid $crm-grayblue-dark !important;
+    border-radius: 0 0 $border-radius-base $border-radius-base;
     box-shadow: $crm-contribute-form-shadow;
     display: block;
     margin-left: 0;

@@ -238,39 +238,6 @@
     table {
       width: 100%;
 
-      &.form-layout-compressed {
-        tr {
-          &:nth-child(1) {
-            border-bottom: 0;
-
-            td {
-              border-bottom: 0;
-            }
-          }
-        }
-        tr {
-          td {
-            &:not(.label) {
-              width: 100%;
-            }
-
-            &.view-value {
-              padding: 10px 15px !important;
-            }
-
-            .select2-container {
-              &:after {
-                display: none;
-              }
-            }
-
-            table {
-              width: 100%;
-            }
-          }
-        }
-      }
-
       &.form-layout {
 
         #payment-info {
@@ -306,13 +273,10 @@
       box-shadow: none;
     }
 
-    .label {
-      box-sizing: border-box;
-      font-size: $font-size-base;
-      line-height: 1.5em;
+    .label,
+    td {
       min-width: 210px;
-      padding: 15px 0;
-      text-align: left;
+      padding: 0;
     }
 
     .auto-renew-text {
@@ -396,9 +360,19 @@
     }
   }
 
+  .crm-event-eventfees-form-block-send_receipt {
+    input[type=checkbox] {
+      @include styled-checkbox();
+    }
+  }
+
   .crm-event-eventfees-form-block-receipt_text {
     td:not(.label) {
       width: 100%;
+    }
+
+    textarea {
+      margin-bottom: 20px;
     }
   }
 
@@ -811,4 +785,9 @@
       }
     }
   }
+}
+
+.crm-participant-form-block-delete {
+  background-color: $alert-warning-bg;
+  color: $gray-darker;
 }

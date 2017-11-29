@@ -200,12 +200,19 @@ $button-border-radius: 2px;
       color: $crm-white;
     }
   }
+
   .crm-option-edit-link.crm-hover-button,
   .crm-hover-button:not(#addMorePermission):not(.open-inline-noreturn),
   .crm-clear-link {
     border: 0 !important;
-    color: $gray-dark;
     margin: 0 !important;
+  }
+
+  a.crm-selection-reset {
+    &,
+    &:link {
+      color: $gray-dark;
+    }
   }
 
   .crm-accordion-header,
