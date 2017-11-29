@@ -69,6 +69,10 @@ table {
     > tr:first-child > th {
       border-color: $crm-grayblue-dark;
     }
+
+    div.sticky-header {
+      border-bottom: 1px solid $crm-grayblue-dark;
+    }
   }
 
   &:not(.table-bordered) > tbody > tr:first-child > td {
