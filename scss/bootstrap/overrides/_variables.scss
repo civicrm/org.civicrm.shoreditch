@@ -1,10 +1,7 @@
 $box-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
 $crm-form-control-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
-$crm-nested-table-box-shadow: 0 1px 13px 0px rgba(144, 144, 144, 0.25);
-$crm-box-shadow-sub-panel: 0 7px 16px 1px rgba(0,0,0,0.1);
-$crm-box-shadow-inset: inset 0 -1px 18px -3px rgba(148,148,148,0.62);
+$crm-box-shadow-inset: inset 0px 10px 8px -10px rgba(0,0,0,0.15), inset 0px -11px 8px -9px rgba(0,0,0,0.15);
 $crm-select2-box-shadow-inset: inset 0 0 9px -5px rgb(51, 51, 51);
-$crm-modal-footer-shadow: inset 0 8px 21px -6px rgba(148, 148, 148, 0.4);
 
 //== CiviCRM Page
 //
@@ -370,3 +367,5 @@ $blockquote-small-color:         $crm-copy !default;
 $blockquote-border-color:        $brand-primary !default;
 
 $crm-ui-select-top-padding:      4px !default;
+
+$hr-border: $crm-grayblue-dark !default;

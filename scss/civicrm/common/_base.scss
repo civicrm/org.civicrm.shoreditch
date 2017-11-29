@@ -36,7 +36,7 @@ body {
   }
 
   .crm-form-block {
-    border-radius: $panel-border-radius !important;
+    border-radius: $border-radius-base !important;
   }
 
   table td .btn-slide-active ul.panel {
@@ -286,4 +286,32 @@ body {
 
 .crm-footer .crm-error {
   border-radius: 2px;
+}
+
+hr {
+  background-color: $hr-border;
+}
+
+a.sorting,
+a.sorting_asc,
+a.sorting_desc {
+  background: none;
+
+  &::before {
+    left: 0;
+    position: absolute;
+    top: 3px;
+  }
+}
+
+a.sorting::before {
+  @include fa-icon($font-size-base, $fa-var-sort, $crm-grayblue-darker);
+}
+
+a.sorting_asc::before {
+  @include fa-icon($font-size-base, $fa-var-sort-asc, $brand-primary);
+}
+
+a.sorting_desc::before {
+  @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
 }

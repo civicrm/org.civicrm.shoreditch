@@ -9,6 +9,13 @@
     margin: 0;
   }
 
+  input {
+    &.select-row,
+    &.select-rows {
+      @include styled-checkbox();
+    }
+  }
+
   table:not(.crm-table-group-summary) {
     table-layout: fixed;
 
@@ -61,7 +68,6 @@
     }
 
     + .float-right {
-      background: $crm-gray-lightest;
       float: none !important;
       padding: 4px 10px 10px !important;
       text-align: right;
@@ -135,6 +141,12 @@
         line-height: 1.5em !important;
         padding: 15px 10px !important;
         vertical-align: middle;
+
+        a.sorting,
+        a.sorting_asc,
+        a.sorting_desc {
+          color: $gray-darker;
+        }
       }
 
       > th:first-child {
@@ -148,6 +160,10 @@
 
         &:first-child {
           padding-left: 20px;
+        }
+
+        a.action-item {
+          display: inline-block;
         }
       }
 

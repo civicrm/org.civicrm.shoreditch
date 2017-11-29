@@ -62,7 +62,7 @@ $button-border-radius: 2px;
   input.crm-form-submit {
     background: $brand-primary;
     border-color: $brand-primary;
-    border-radius: $panel-border-radius;
+    border-radius: $border-radius-base;
     font-family: $font-family-base;
     padding: 8px 12px;
     text-shadow: none;
@@ -200,12 +200,19 @@ $button-border-radius: 2px;
       color: $crm-white;
     }
   }
+
   .crm-option-edit-link.crm-hover-button,
   .crm-hover-button:not(#addMorePermission):not(.open-inline-noreturn),
   .crm-clear-link {
     border: 0 !important;
-    color: $gray-dark;
     margin: 0 !important;
+  }
+
+  a.crm-selection-reset {
+    &,
+    &:link {
+      color: $gray-dark;
+    }
   }
 
   .crm-accordion-header,

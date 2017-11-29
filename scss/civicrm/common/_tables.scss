@@ -52,6 +52,12 @@ table {
   thead {
     background: $gray-lighter;
 
+    a.sorting,
+    a.sorting_asc,
+    a.sorting_desc {
+      background: none;
+    }
+
     th.ui-state-default {
       background-color: $gray-lighter;
 
@@ -63,6 +69,10 @@ table {
     > tr:first-child > th {
       border-color: $crm-grayblue-dark;
     }
+
+    div.sticky-header {
+      border-bottom: 1px solid $crm-grayblue-dark;
+    }
   }
 
   &:not(.table-bordered) > tbody > tr:first-child > td {
@@ -72,11 +82,19 @@ table {
   td .crm-hover-button {
     background: none !important;
     border: 0;
+    color: $brand-primary;
+    text-transform: capitalize;
 
-    &,
-    * {
-      color: $brand-primary !important;
-      text-transform: capitalize !important;
+    &:hover {
+      color: darken($brand-primary, $crm-darken-percentage);
+    }
+
+    &.crm-clear-link {
+      color: $brand-danger;
+
+      &:hover {
+        color: darken($brand-danger, $crm-darken-percentage);
+      }
     }
   }
 }
