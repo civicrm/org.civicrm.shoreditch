@@ -315,3 +315,23 @@ a.sorting_asc::before {
 a.sorting_desc::before {
   @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
 }
+
+#alpha-filter {
+  li {
+    color: $crm-gray-matte;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $crm-font-weight-h3;
+
+    a,
+    a:link {
+      border-bottom: none;
+      color: $brand-primary;
+      font-weight: $crm-font-weight-h3;
+
+      &:hover {
+        color: darken($brand-primary, $crm-darken-percentage);
+      }
+    }
+  }
+}

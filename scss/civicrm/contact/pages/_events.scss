@@ -711,10 +711,67 @@
   .crm-event-searchevent-form-block {
     h3 {
       @include panel-header();
+      margin-bottom: 0;
     }
 
-    .form-layout{
-      margin: 20px;
+    .form-layout {
+      > tbody {
+        > tr {
+         > td {
+            padding: 10px;
+
+            .crm-button_qf_SearchEvent_refresh {
+              float: right !important;
+              margin: 0;
+
+              .crm-i {
+                display: none;
+              }
+
+              .crm-form-submit {
+                margin: 0 !important;
+              }
+            }
+
+            &:first-child {
+              padding-left: 20px;
+            }
+
+            &:last-child {
+              padding-right: 20px;
+            }
+          }
+
+          &:first-child td {
+            padding-top: 20px;
+          }
+
+          &:last-child td {
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+      .crm-event-searchevent-form-block-title {
+        input[type=text] {
+          width: 410px;
+        }
+      }
+
+      #s2id_event_type_id {
+        margin-left: 5px !important;
+        width: 410px !important;
+      }
+
+      .description {
+        color: $crm-gray-matte;
+        font-style: normal;
+        margin-bottom: 20px;
+      }
+
+      input + label {
+        line-height: 135%;
+      }
     }
   }
 
@@ -727,7 +784,7 @@
   }
 
   .action-link {
-    margin-bottom: 20px;
+    margin: 20px 0;
   }
 
   .dataTables_wrapper {
