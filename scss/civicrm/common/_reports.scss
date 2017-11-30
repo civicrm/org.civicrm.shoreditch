@@ -1,0 +1,54 @@
+.page-civicrm-report-list {
+  .crm-report-instanceList-form-block {
+
+    .crm-accordion-wrapper {
+      &:first-of-type {
+        .crm-accordion-header:first-of-type {
+          border-radius: $border-radius-base $border-radius-base 0 0 !important;
+        }
+      }
+
+      &:not(:last-of-type) {
+        .crm-accordion-body {
+          border-bottom: 1px solid $crm-grayblue-dark;
+        }
+      }
+    }
+
+    .crm-accordion-header + .crm-accordion-body {
+      padding: 0 !important;
+
+      .report-layout {
+
+        tr {
+          &:not(:last-child) td {
+            border-bottom: 1px solid $gray-light !important;
+          }
+
+          &:last-child td {
+            border-bottom: none !important;
+          }
+        }
+
+        td {
+          line-height: normal;
+          padding: 12px 10px !important;
+          vertical-align: middle !important;
+
+          &:first-child {
+            padding-left: 20px !important;
+          }
+
+          &:last-child {
+            padding-right: 20px !important;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .action-link:first-of-type {
+    margin-top: 0;
+  }
+}
