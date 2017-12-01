@@ -98,6 +98,10 @@ body {
       }
     }
 
+    .select2-default {
+      color: $input-color-placeholder !important;
+    }
+
     &.select2-dropdown-open {
       .select2-choice {
         border-color: $brand-primary;
@@ -314,4 +318,13 @@ a.sorting_asc::before {
 
 a.sorting_desc::before {
   @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
+}
+
+.crm-profile-selector-preview-pane {
+  border-color: $crm-grayblue-dark;
+  margin-top: 10px;
+
+  .crm-submit-buttons {
+    display: none;
+  }
 }

@@ -24,21 +24,6 @@ label {
   fieldset[disabled] & {
     color: $crm-grayblue-darker;
   }
-
-  &[type="text"] {
-    &::-webkit-input-placeholder {
-      color: $crm-grayblue-dark;
-    }
-
-    &::-moz-placeholder {
-      color: $crm-grayblue-dark;
-      opacity: 1;
-    }
-
-    &:-ms-input-placeholder {
-      color: $crm-grayblue-dark;
-    }
-  }
 }
 
 // Wrapper for a custom error message
