@@ -4,7 +4,7 @@
     @include civihr_table();
 
     table.report {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       width: 100%;
     }

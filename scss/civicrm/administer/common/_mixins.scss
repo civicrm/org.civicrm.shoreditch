@@ -51,10 +51,10 @@
 }
 
 /*
- * Since different elements may be a CiviHR Panel, this mixin prevents duplicating much code.
+ * Since different elements may be a CiviCRM Panel, this mixin prevents duplicating much code.
  */
-@mixin civihr_panel() {
-  background: #FFFFFF;
+@mixin civicrm-panel() {
+  background: $crm-white;
   box-shadow: $box-shadow;
-  border-radius: 2px;
+  border-radius: $border-radius-base;
 }

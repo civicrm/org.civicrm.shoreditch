@@ -6,7 +6,7 @@
     box-shadow: none;
 
     table.form-layout-compressed {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       width: 100%;
 
@@ -23,7 +23,7 @@
 
     #bySMTP,
     #bySendmail {
-      @include civihr_panel;
+      @include civicrm-panel;
 
       overflow: hidden;
 

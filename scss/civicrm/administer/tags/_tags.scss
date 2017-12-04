@@ -5,11 +5,11 @@
     box-shadow: none;
 
     #option11 {
-      @include civihr_panel();
+      @include civicrm-panel;
     }
 
     .crm-submit-buttons {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       padding: 0;
     }

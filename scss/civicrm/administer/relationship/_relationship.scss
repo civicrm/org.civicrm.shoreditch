@@ -1,7 +1,7 @@
 &.page-civicrm-admin-reltype {
 
   .action-link {
-    @include civihr_panel();
+    @include civicrm-panel;
 
     margin: 0;
     padding: 10px;
@@ -11,7 +11,7 @@
   }
 
   #option11 {
-    @include civihr_panel();
+    @include civicrm-panel;
   }
 
   #ltype {

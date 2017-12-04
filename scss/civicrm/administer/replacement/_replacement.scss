@@ -5,7 +5,7 @@
     box-shadow: none;
 
     .crm-submit-buttons {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       margin: 0 !important;
       padding: 10px !important;
@@ -21,7 +21,7 @@
 
     & > table.form-layout-compressed {
       @include civihr_table();
-      @include civihr_panel();
+      @include civicrm-panel;
 
       margin: 0;
       width: 100%;

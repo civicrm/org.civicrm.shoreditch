@@ -91,7 +91,7 @@ ul.civihr-popup {
   }
 
   .action-link {
-    @include civihr_panel();
+    @include civicrm-panel;
     height: auto;
     line-height: normal;
     min-height: inherit;

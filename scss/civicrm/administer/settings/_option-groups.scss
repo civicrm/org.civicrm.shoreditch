@@ -2,7 +2,7 @@
 
   #browseValues {
     @include civihr_table;
-    @include civihr_panel;
+    @include civicrm-panel;
   }
 }
 

@@ -1,7 +1,7 @@
 &.page-civicrm-admin-setting-preferences-date {
 
   #crm-main-content-wrapper .form-item {
-    @include civihr_panel();
+    @include civicrm-panel;
     @include civihr_table();
 
     padding: 0;

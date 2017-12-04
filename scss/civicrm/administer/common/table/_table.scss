@@ -1,5 +1,5 @@
 .crm-content-block {
-  @include civihr_panel();
+  @include civicrm-panel;
   @include civihr_table();
 
   .action-link,
