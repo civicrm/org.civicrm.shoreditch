@@ -6,9 +6,9 @@
     max-width: 100%;
 
     tr {
-      background: #FFFFFF;
+      background: $crm-white;
       border: none;
-      border-bottom: $panel-border;
+      border-bottom: 1px solid $gray-light;
 
       & > td,
       & > th {
@@ -33,17 +33,6 @@
         .DataTables_sort_icon {
           display: block;
         }
-      }
-    }
-
-    thead > tr {
-      background: #F4F7F8;
-    }
-
-    &.row-highlight {
-
-      tr:hover {
-        background: #FCFDFD !important;
       }
     }
   }

@@ -40,7 +40,7 @@
       .string-override-table .columnheader {
         background: $gray-lighter !important;
         border: none;
-        border-bottom: $panel-border;
+        border-bottom: 1px solid $gray-light;
 
         &:hover {
           background: $gray-lighter !important;

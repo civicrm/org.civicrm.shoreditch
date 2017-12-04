@@ -24,7 +24,7 @@
 
   .crm-content-block table tr {
     border: none;
-    border-bottom: $panel-border;
+    border-bottom: 1px solid $gray-light;
 
     &.odd {
       background: $crm-white;
