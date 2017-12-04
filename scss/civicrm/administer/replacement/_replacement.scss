@@ -20,7 +20,7 @@
     }
 
     & > table.form-layout-compressed {
-      @include civihr_table();
+      @include civicrm-table;
       @include civicrm-panel;
 
       margin: 0;

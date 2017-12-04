@@ -1,7 +1,7 @@
 &.page-civicrm-admin-job {
 
   #ltype {
-    @include civihr_table();
+    @include civicrm-table;
 
     table tr th {
       white-space: nowrap;

@@ -2,7 +2,7 @@
 
   #crm-main-content-wrapper .form-item {
     @include civicrm-panel;
-    @include civihr_table();
+    @include civicrm-table;
 
     padding: 0;
   }

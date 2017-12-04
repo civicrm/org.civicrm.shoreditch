@@ -15,7 +15,7 @@
   }
 
   #ltype {
-    @include civihr_table();
+    @include civicrm-table;
 
     table {
 

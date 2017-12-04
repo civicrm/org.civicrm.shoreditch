@@ -3,6 +3,6 @@
 
   #ltype {
     @include civicrm-panel;
-    @include civihr_table();
+    @include civicrm-table;
   }
 }

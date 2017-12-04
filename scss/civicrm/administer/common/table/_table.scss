@@ -1,6 +1,6 @@
 .crm-content-block {
   @include civicrm-panel;
-  @include civihr_table();
+  @include civicrm-table;
 
   .action-link,
   .crm-submit-buttons {

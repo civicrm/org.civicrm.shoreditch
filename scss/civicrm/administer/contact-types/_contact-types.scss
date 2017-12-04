@@ -3,7 +3,7 @@
   #crm-main-content-wrapper {
 
     div:nth-of-type(2) {
-      @include civihr_table();
+      @include civicrm-table;
     }
 
     #option11 {

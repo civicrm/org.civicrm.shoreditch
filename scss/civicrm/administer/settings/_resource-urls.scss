@@ -5,7 +5,7 @@
 &.page-civicrm-admin-setting-uf {
 
   .crm-form-block {
-    @include civihr_table;
+    @include civicrm-table;
 
 
     table.form-layout {

@@ -1,7 +1,7 @@
 &.page-civicrm-admin-extensions {
 
   #mainTabContainer {
-    @include civihr_table();
+    @include civicrm-table;
 
     #extensions-addnew,
     #extensions-main {

@@ -1,8 +1,7 @@
 /*
- * Adds CiviHR table-specific styles for all children tables
- * @param $overflow {string} indicates whether table should wrap the overflowing text
+ * Adds CiviCRM table-specific styles for all children tables of admin part
  */
-@mixin civihr_table($overflow: 'false') {
+@mixin civicrm-table() {
   table:not(.form-layout-compressed) {
     max-width: 100%;
 
