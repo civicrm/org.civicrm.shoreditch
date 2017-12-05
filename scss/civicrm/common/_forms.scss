@@ -180,6 +180,7 @@ $control-height: 30px;
     input[type=text],
     textarea {
       @extend %custom-form-control, %open-sans-font-family;
+      @include placeholder;
     }
 
     // "Select2" Drop-downs

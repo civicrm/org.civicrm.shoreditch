@@ -331,10 +331,6 @@ $button-border-radius: 2px;
       line-height: normal !important;
     }
 
-    &:first-of-type a {
-      vertical-align: top !important;
-    }
-
     &:not(:first-of-type) a {
       vertical-align: bottom !important;
     }

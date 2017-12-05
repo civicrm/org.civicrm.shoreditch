@@ -1,0 +1,76 @@
+.page-civicrm-survey {
+  .CRM_Campaign_Form_Survey_Main {
+    .help {
+      margin: 0px 20px;
+    }
+    .crm-campaign-survey-new_campaign_link {
+      text-transform: capitalize;
+    }
+
+    input[type=checkbox] {
+      @include styled-checkbox();
+    }
+  }
+}
+
+.page-civicrm-survey-configure {
+  .crm-content-block {
+    > #mainTabContainer {
+      .ui-tabs-panel {
+        .crm-submit-buttons:first-of-type {
+          border-top: 0;
+          margin-top: 0 !important;
+        }
+      }
+
+      .crm-campaign-survey-results-form-block {
+        .form-layout-compressed {
+          margin: 0;
+          width: 100%;
+
+          td {
+            vertical-align: middle;
+
+            &:not(.label) {
+              padding: 0;
+            }
+
+            #create_report {
+              @include styled-checkbox;
+            }
+          }
+        }
+
+        fieldset {
+          legend {
+            @include section-title;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: 100%;
+          }
+
+          .add-remove-link {
+            padding: 20px;
+          }
+
+          .description {
+            padding-left: 20px;
+          }
+
+          table {
+            @extend %civihr-table;
+            box-shadow: none !important;
+
+            td:first-child {
+              padding-left: 20px !important;
+            }
+          }
+
+          input[type=radio] {
+            @include styled-radio;
+          }
+        }
+      }
+    }
+  }
+}
