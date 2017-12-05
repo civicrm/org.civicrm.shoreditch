@@ -3,6 +3,7 @@
  */
 @mixin civicrm-table() {
   table:not(.form-layout-compressed) {
+    box-shadow: none;
     max-width: 100%;
 
     tr {
@@ -12,10 +13,11 @@
 
       & > td,
       & > th {
-        color: $gray-dark;
         background: transparent;
         border: none;
-        padding: 15px 10px;
+        color: $gray-dark;
+        line-height: 18px;
+        padding: 16px 10px;
         vertical-align: middle;
 
         &:first-child {

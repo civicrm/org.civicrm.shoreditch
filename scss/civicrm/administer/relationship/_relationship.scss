@@ -1,26 +1,13 @@
 &.page-civicrm-admin-reltype {
-
-  .action-link {
-    @include civicrm-panel;
-
-    margin: 0;
-    padding: 10px;
-    height: auto;
-    line-height: normal;
-    text-align: right;
-  }
-
-  #option11 {
-    @include civicrm-panel;
+  .dataTables_wrapper {
+    margin-bottom: 0;
   }
 
   #ltype {
     @include civicrm-table;
 
     table {
-
       tr {
-
         td {
           background: $crm-white !important;
         }

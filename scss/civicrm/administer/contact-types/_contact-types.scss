@@ -6,8 +6,8 @@
       @include civicrm-table;
     }
 
-    #option11 {
-      @include civicrm-panel;
+    .dataTables_wrapper {
+      margin-bottom: 0;
     }
   }
 }

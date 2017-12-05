@@ -6,17 +6,15 @@
 
     .crm-submit-buttons {
       @include civicrm-panel;
+    }
 
-      margin: 0 !important;
-      padding: 10px !important;
-      min-height: auto;
-      height: auto;
-      text-align: right;
+    .action-item {
+      display: inline-block;
+      margin: 10px 0 !important;
+    }
 
-      & > span.crm-button {
-        float: none !important;
-        display: inline-block;;
-      }
+    .crm-form-checkbox {
+      @include styled-checkbox;
     }
 
     & > table.form-layout-compressed {
@@ -32,7 +30,6 @@
 
       .crm-form-textarea {
         padding: 5px;
-        border: 1px solid $gray-darker;
         width: 100% !important;
         min-height: 40px;
       }

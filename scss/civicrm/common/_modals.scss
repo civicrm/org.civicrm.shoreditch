@@ -7,10 +7,6 @@
   max-height: 90%;
   padding: 0;
 
-  .help {
-    border-radius: $border-radius-base;
-  }
-
   table {
     @extend %crm-table;
 
