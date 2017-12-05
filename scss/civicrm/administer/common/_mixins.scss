@@ -1,22 +1,23 @@
 /*
- * Adds CiviHR table-specific styles for all children tables
- * @param $overflow {string} indicates whether table should wrap the overflowing text
+ * Adds CiviCRM table-specific styles for all children tables of admin part
  */
-@mixin civihr_table($overflow: 'false') {
+@mixin civicrm-table() {
   table:not(.form-layout-compressed) {
+    box-shadow: none;
     max-width: 100%;
 
     tr {
-      background: #FFFFFF;
+      background: $crm-white;
       border: none;
-      border-bottom: $panel-border;
+      border-bottom: 1px solid $gray-light;
 
       & > td,
       & > th {
-        color: $gray-dark;
         background: transparent;
         border: none;
-        padding: 15px 10px;
+        color: $gray-dark;
+        line-height: 18px;
+        padding: 16px 10px;
         vertical-align: middle;
 
         &:first-child {
@@ -36,25 +37,14 @@
         }
       }
     }
-
-    thead > tr {
-      background: #F4F7F8;
-    }
-
-    &.row-highlight {
-
-      tr:hover {
-        background: #FCFDFD !important;
-      }
-    }
   }
 }
 
 /*
- * Since different elements may be a CiviHR Panel, this mixin prevents duplicating much code.
+ * Since different elements may be a CiviCRM Panel, this mixin prevents duplicating much code.
  */
-@mixin civihr_panel() {
-  background: #FFFFFF;
+@mixin civicrm-panel() {
+  background: $crm-white;
   box-shadow: $box-shadow;
-  border-radius: 2px;
+  border-radius: $border-radius-base;
 }

@@ -1,6 +1,5 @@
 // Styles that may apply to more than one page
 //
-@import "variables";
 @import "mixins";
 @import "table/table";
 
@@ -35,10 +34,6 @@ ul.civihr-popup {
 }
 
 #crm-main-content-wrapper {
-  #activity_type,
-  #custom_group {
-    overflow: scroll;
-  }
 
   #ltype {
     background: transparent !important;
@@ -48,8 +43,6 @@ ul.civihr-popup {
   .dataTables_wrapper {
     background: transparent !important;
     box-shadow: none;
-    overflow-x: scroll;
-    overflow-y: hidden;
   }
 
   .crm-submit-buttons {
@@ -91,20 +84,15 @@ ul.civihr-popup {
   }
 
   .action-link {
-    @include civihr_panel();
-    height: auto;
-    line-height: normal;
-    min-height: inherit;
+    background: $gray-lighter;
+    margin: 0;
+    padding: 20px;
     text-align: right;
 
-    // overriding !importants in most of the places - what the hell
-    background: $gray-lighter !important;
-    margin: 0 !important;
-    padding: 10px !important;
-
-    & > span.crm-button, & > a.button {
-      display: inline-block;
-      float: none !important;
+    > span.crm-button,
+    > a.button {
+      box-shadow: none;
+      margin: 0 0 0 10px;
     }
   }
 
@@ -114,9 +102,6 @@ ul.civihr-popup {
   }
 
   .help {
-    background: $crm-light-green-color;
-    border-radius: $border-radius-base;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 20px;
   }
 }

@@ -3,8 +3,8 @@
 &.page-civicrm-admin-pdfformats {
 
   #reminder, #ltype {
-    @include civihr_panel();
-    @include civihr_table();
+    @include civicrm-panel;
+    @include civicrm-table;
   }
 
   #option11_wrapper {

@@ -6,7 +6,7 @@
 
     table.advmultiselect,
     p.description {
-      @include civihr_panel();
+      @include civicrm-panel;
     }
 
     table.advmultiselect {

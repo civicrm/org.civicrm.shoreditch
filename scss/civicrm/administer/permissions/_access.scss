@@ -1,10 +1,10 @@
 &.page-civicrm-admin-access {
 
   #crm-container {
-    @include civihr_table();
+    @include civicrm-table;
 
     table.report {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       width: 100%;
     }

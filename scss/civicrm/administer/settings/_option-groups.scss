@@ -1,8 +1,8 @@
 &.page-civicrm-admin-options {
 
   #browseValues {
-    @include civihr_table;
-    @include civihr_panel;
+    @include civicrm-table;
+    @include civicrm-panel;
   }
 }
 
@@ -11,7 +11,7 @@
 &.page-civicrm-admin-setting-misc {
 
   .crm-form-block {
-    @include civihr_table(true);
+    @include civicrm-table;
 
     .crm-submit-buttons {
       box-shadow: none;

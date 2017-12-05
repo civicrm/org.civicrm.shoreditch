@@ -10,13 +10,6 @@
     }
   }
 
-  .help {
-    background: $crm-light-green-color;
-    border: none;
-    border-radius: $border-radius-base;
-    padding: 10px;
-  }
-
   .status {
     background: lighten($btn-success-bg, 30%);
     border-color: $btn-success-bg;

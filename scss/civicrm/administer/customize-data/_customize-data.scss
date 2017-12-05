@@ -10,12 +10,8 @@
     }
 
     .form-layout {
-      @include civihr_panel;
+      @include civicrm-panel;
     }
-  }
-
-  .help {
-    margin-bottom: 20px !important;
   }
 
   #options {

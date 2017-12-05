@@ -5,23 +5,21 @@
     box-shadow: none;
 
     .crm-submit-buttons {
-      @include civihr_panel();
+      @include civicrm-panel;
+    }
 
-      margin: 0 !important;
-      padding: 10px !important;
-      min-height: auto;
-      height: auto;
-      text-align: right;
+    .action-item {
+      display: inline-block;
+      margin: 10px 0 !important;
+    }
 
-      & > span.crm-button {
-        float: none !important;
-        display: inline-block;;
-      }
+    .crm-form-checkbox {
+      @include styled-checkbox;
     }
 
     & > table.form-layout-compressed {
-      @include civihr_table();
-      @include civihr_panel();
+      @include civicrm-table;
+      @include civicrm-panel;
 
       margin: 0;
       width: 100%;
@@ -32,7 +30,6 @@
 
       .crm-form-textarea {
         padding: 5px;
-        border: 1px solid $gray-darker;
         width: 100% !important;
         min-height: 40px;
       }
@@ -40,7 +37,7 @@
       .string-override-table .columnheader {
         background: $gray-lighter !important;
         border: none;
-        border-bottom: $panel-border;
+        border-bottom: 1px solid $gray-light;
 
         &:hover {
           background: $gray-lighter !important;
