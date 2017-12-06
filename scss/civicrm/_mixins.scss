@@ -100,3 +100,25 @@
     width: 8px;
   }
 }
+
+/*
+* The advanced-multiselect() CSS function designs table structure for multiselects
+*/
+@mixin advanced-multiselect() {
+  border: 0;
+
+  .crm-form-multiselect {
+    @extend %custom-form-control;
+    height: 140px;
+  }
+
+  input[type=button] {
+    margin: -10px 5px 0 !important;
+  }
+
+  td {
+    border: none;
+    vertical-align: middle;
+    padding: 0 5px 0 0;
+  }
+}

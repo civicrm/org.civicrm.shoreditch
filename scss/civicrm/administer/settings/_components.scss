@@ -4,17 +4,8 @@
     background: none;
     box-shadow: none;
 
-    table.advmultiselect,
     p.description {
       @include civicrm-panel;
-    }
-
-    table.advmultiselect {
-      width: 100%;
-
-      td {
-        border: none;
-      }
     }
 
     p.description {
