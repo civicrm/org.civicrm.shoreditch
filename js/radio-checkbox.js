@@ -20,9 +20,11 @@ CRM.$(function() {
         $this.attr('id', new Date().valueOf());
       }
 
-      if (!label.length) {
+      if (!label.length && !CRM.$('.page-civicrm-event').length) {
         // There's no sibling label. Let's just show the checkbox / radio button, in order to avoid feature loss
         $this.show();
+      } else if(!label.length && CRM.$('.page-civicrm-event').length){
+        $this.after('<label for=\"' + $this.attr('id') + '\"></label>');
       } else if (!label.attr('for')) {
         // Add the "for" attribute on the sibling label, matching the input's id
         label.attr('for', $this.attr('id'));
