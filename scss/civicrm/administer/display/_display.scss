@@ -7,8 +7,18 @@
 
   .crm-form-block {
 
-    .crm-submit-buttons {
-      box-shadow: none !important;
+    h3,
+    legend {
+      @include section-title;
+    }
+
+    legend {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .help {
+      margin: 0;
     }
 
     table.form-layout {

@@ -12,10 +12,14 @@
   }
 
   .crm-form-textarea {
-    padding: 5px;
-    border: 1px solid $gray-darker;
     width: 300px;
-    min-height: 40px;
+    min-height: 140px;
+  }
+
+  .crm-preferences-address-form-block-description {
+    td {
+      padding: 20px;
+    }
   }
 
   #address_standardization_provider,
