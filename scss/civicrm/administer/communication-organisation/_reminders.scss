@@ -3,7 +3,6 @@
 &.page-civicrm-admin-pdfformats {
 
   #reminder, #ltype {
-    @include civicrm-panel;
     @include civicrm-table;
   }
 
