@@ -237,3 +237,7 @@
     box-shadow: $crm-checkbox-shadow;
   }
 }
+
+&-add #crm-container .crm-form-block.crm-form-block>.crm-submit-buttons {
+  margin-top: 20px !important;
+}
