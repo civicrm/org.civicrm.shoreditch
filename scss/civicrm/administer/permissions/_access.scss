@@ -18,12 +18,16 @@
   }
 }
 
-.page-civicrm-acl {
+.page-civicrm-acl,
+.page-civicrm-admin-options-acl-role {
   #crm-main-content-wrapper {
     #wizard-steps {
       @include civicrm-panel;
     } 
   }
+}
+
+.page-civicrm-acl {
   .dataTables_wrapper {
     @include civicrm-table;
   }
