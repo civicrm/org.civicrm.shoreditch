@@ -1,4 +1,4 @@
-.crm-content-block {
+@mixin table-block() {
   @include civicrm-panel;
   @include civicrm-table;
 

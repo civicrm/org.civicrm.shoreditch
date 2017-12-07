@@ -34,7 +34,9 @@
 }
 
 .page-civicrm-acl-entityrole {
-  @import "../common/table/table";
+  .crm-content-block {
+    @include table-block;
+  }
 
   .dataTables_wrapper {
     border-radius: 0;

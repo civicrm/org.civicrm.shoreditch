@@ -1,6 +1,8 @@
 // Styles that may apply to more than one page
 //
-@import "table/table";
+.crm-content-block {
+  @include table-block;
+}
 
 ul.civihr-popup {
   background: $crm-white;
