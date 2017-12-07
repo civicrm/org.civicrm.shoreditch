@@ -1,5 +1,4 @@
 .page-civicrm-admin-access {
-
   #crm-container {
     @include civicrm-table;
 
@@ -12,7 +11,6 @@
 }
 
 .page-civicrm-admin-synchuser {
-
   .crm-form-block {
     .help {
       display: none;
@@ -21,7 +19,6 @@
 }
 
 .page-civicrm-acl {
-
   #crm-main-content-wrapper {
     #wizard-steps {
       @include civicrm-panel;
@@ -32,13 +29,12 @@
   }
 }
 
-.page-civicrm-acl-entityrole,
- {
+.page-civicrm-acl-entityrole {
   @import "../common/table/table";
+
   .dataTables_wrapper {
     border-radius: 0;
     box-shadow: none;
     margin: 0;
   }
 }
-
