@@ -1,0 +1,8 @@
+/*
+* It use for calculate height and width the element
+*/
+@mixin calc($property, $expression, $content:null) {
+  #{$property}: -moz-calc(#{$expression}) $content;
+  #{$property}: -webkit-calc(#{$expression}) $content;
+  #{$property}: calc(#{$expression}) $content;
+}
