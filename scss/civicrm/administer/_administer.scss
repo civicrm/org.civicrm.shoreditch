@@ -1,3 +1,8 @@
+@import "common/mixins";
+
+
+@import "permissions/access";
+
 .page-civicrm-admin,
 .page-civicrm-a {
   @import "common/common";
@@ -17,7 +22,6 @@
   @import "communication-organisation/message-templates";
   @import "communication-organisation/reminders";
   @import "localization/languages";
-  @import "permissions/access";
 
   @import "settings/components";
   @import "settings/extensions";

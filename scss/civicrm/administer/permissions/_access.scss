@@ -1,4 +1,4 @@
-&.page-civicrm-admin-access {
+.page-civicrm-admin-access {
 
   #crm-container {
     @include civicrm-table;
@@ -11,14 +11,34 @@
   }
 }
 
-&.page-civicrm-admin-synchuser {
+.page-civicrm-admin-synchuser {
 
   .crm-form-block {
-    background: none;
-    box-shadow: none;
-
     .help {
       display: none;
     }
   }
 }
+
+.page-civicrm-acl {
+
+  #crm-main-content-wrapper {
+    #wizard-steps {
+      @include civicrm-panel;
+    } 
+  }
+  .dataTables_wrapper {
+    @include civicrm-table;
+  }
+}
+
+.page-civicrm-acl-entityrole,
+ {
+  @import "../common/table/table";
+  .dataTables_wrapper {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
