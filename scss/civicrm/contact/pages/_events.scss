@@ -451,7 +451,7 @@
   .crm-event-participantview-form-block-fee_amount table,
   table.selector,
   .crm-event-eventfees-form-block-line_items table  {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
   }
 }
@@ -618,14 +618,14 @@
   table#info,
   .crm-event-participantview-form-block-fee_amount table,
   table.selector {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
   }
 }
 
 #ParticipantFeeSelection {
   .crm-event-eventfees-form-block-line_items table {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
   }
 

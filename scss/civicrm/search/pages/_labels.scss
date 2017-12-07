@@ -92,7 +92,7 @@ a.crm-clear-link {
 
     @media (max-width: $screen-sm-min) {
       > tr {
-        @include mx-responsive-search;
+        @include responsive-search;
       }
     }
   }
@@ -248,7 +248,7 @@ a.crm-clear-link {
 
 
     @media (max-width: $screen-sm-min) {
-      @include mx-responsive-search;
+      @include responsive-search;
 
       td {
         margin-bottom: 10px;

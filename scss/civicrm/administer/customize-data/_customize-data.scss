@@ -262,7 +262,7 @@
       }
 
       #optionField {
-        @include mx-expandable-table();
+        @include expandable-table;
         margin: 20px 0;
 
         td {

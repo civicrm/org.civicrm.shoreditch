@@ -262,7 +262,7 @@
     }
 
     .selector {
-      @include mx-expandable-table();
+      @include expandable-table;
 
       thead.sticky {
         background: transparent;
@@ -765,7 +765,7 @@
   }
 
   .selector {
-    @include mx-expandable-table();
+    @include expandable-table;
 
     .sticky th:first-child {
       text-align: left !important;
@@ -1549,7 +1549,7 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   .selector,
   .report {
-    @include mx-expandable-table();
+    @include expandable-table;
   }
 
   .report {

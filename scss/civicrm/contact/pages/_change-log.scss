@@ -23,7 +23,7 @@
   }
 
   table {
-    @include mx-expandable-table();
+    @include expandable-table;
     border-radius: $border-radius-child;
     box-shadow: none !important;
 

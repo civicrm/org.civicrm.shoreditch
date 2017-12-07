@@ -650,7 +650,7 @@
 
     .selector,
     .report {
-      @include mx-expandable-table();
+      @include expandable-table;
       @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25) !important);
     }
 
@@ -755,7 +755,7 @@
 
   .page-civicrm-member-search {
     .selector {
-      @include mx-expandable-table();
+      @include expandable-table;
     }
 
     .CRM_Member_Form_Search {

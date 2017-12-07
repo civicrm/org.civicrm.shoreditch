@@ -302,7 +302,7 @@
   }
 
   #DataTables_Table_0 {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
 
     .crm-group-group_links {
