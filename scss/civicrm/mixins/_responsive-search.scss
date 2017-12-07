@@ -1,0 +1,19 @@
+@mixin responsive-search {
+  flex-direction: column;
+
+  td {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+
+    .crm-form-text,
+    .crm-select2,
+    .select2-container-multi,
+    #groupselect,
+    > div {
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}

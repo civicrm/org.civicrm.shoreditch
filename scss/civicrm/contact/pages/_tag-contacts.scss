@@ -68,7 +68,7 @@
     margin: 30px 0;
 
     table {
-      @include mx-expandable-table();
+      @include expandable-table;
     }
   }
   a {

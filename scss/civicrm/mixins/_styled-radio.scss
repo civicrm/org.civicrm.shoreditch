@@ -1,0 +1,32 @@
+/*
+* The styled-checkbox() CSS function designs individual radio
+*/
+@mixin styled-radio() {
+  height: 14px;
+  position: relative;
+
+  &::before {
+    background-color: $crm-white;
+    border: solid 1px $crm-grayblue-darker;
+    border-radius: 50%;
+    box-shadow: $crm-checkbox-shadow;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+  }
+
+  &:checked::after {
+    background-color: $crm-copy;
+    border-radius: 50%;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    left: 4px;
+    height: 8px;
+    position: absolute;
+    top: 4px;
+    width: 8px;
+  }
+}
