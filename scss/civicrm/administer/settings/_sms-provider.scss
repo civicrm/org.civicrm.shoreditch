@@ -1,0 +1,10 @@
+&.page-civicrm-admin-sms-provider {
+  .crm-container {
+    #ltype {
+      tr.columnheader {
+        border: none;
+        border-bottom: 1px solid $gray-light;
+      }
+    }
+  }
+}

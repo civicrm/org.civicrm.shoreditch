@@ -2,6 +2,8 @@
 
   #mainTabContainer {
     @include civicrm-table;
+    border-radius: none !important;
+    box-shadow: none !important;
 
     #extensions-addnew,
     #extensions-main {
@@ -15,7 +17,6 @@
         td:not(:first-of-type) {
           width: 70px;
           text-overflow: clip;
-          overflow: scroll;
         }
 
         tr.hiddenElement {
@@ -26,7 +27,6 @@
 
             td {
               text-overflow: clip;
-              overflow: scroll;
               width: auto;
 
               &.label {

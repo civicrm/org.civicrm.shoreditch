@@ -9,11 +9,13 @@
 
 
     table.form-layout {
-      @include civicrm-panel;
-
       td:first-of-type {
         width: 30%;
       }
+    }
+
+    input[type=radio] + label {
+      line-height: 135%;
     }
 
     table.form-layout-compressed {

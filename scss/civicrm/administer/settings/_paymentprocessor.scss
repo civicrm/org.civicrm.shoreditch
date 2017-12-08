@@ -1,0 +1,31 @@
+&.page-civicrm-admin-paymentprocessor {
+  @include civicrm-table;
+
+  .crm-container {
+    #ltype {
+      tr.columnheader {
+        border: none;
+        border-bottom: 1px solid $gray-light;
+      }
+    }
+
+    .CRM_Admin_Form_PaymentProcessor {
+      h3 {
+        @include box-shadow($box-shadow);
+        @include panel-header;
+        margin-bottom: 0;
+      }
+
+      .crm-paymentProcessor-form-block {
+        @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+        border-radius: 0 0 $border-radius-base $border-radius-base !important;
+
+        legend {
+          @include section-title;
+          box-sizing: border-box;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

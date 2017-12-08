@@ -31,6 +31,16 @@ body {
     line-height: 18px;
   }
 
+  pre {
+    background-color: $crm-gray-lightest;
+    border: 1px solid $input-border;
+    color: $gray-darker;
+    font-size: $font-size-base;
+    line-height: normal;
+    margin: 0;
+    padding: 5px;
+  }
+
   .solid-border-top {
     border-color: $crm-background;
   }
@@ -299,7 +309,7 @@ hr {
 a.sorting,
 a.sorting_asc,
 a.sorting_desc {
-  background: none;
+  background: none !important;
 
   &::before {
     left: 0;

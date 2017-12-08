@@ -24,8 +24,12 @@
   @import "settings/extensions";
   @import "settings/scheduled-jobs";
   @import "settings/resource-urls";
+  @import "settings/sms-provider";
   @import "settings/smtp";
   @import "settings/option-groups";
+  @import "settings/mapping";
+  @import "settings/paymentprocessor";
+  @import "settings/connection";
 
   @import "civi-case/case-types";
 }
