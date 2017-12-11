@@ -1,0 +1,8 @@
+&.page-civicrm-admin-pcp {
+  .CRM_PCP_Form_PCP {
+    h3 {
+      @include panel-header;
+      margin-bottom: 0;
+    }
+  }
+}

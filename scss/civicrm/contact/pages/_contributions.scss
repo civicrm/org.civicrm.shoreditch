@@ -246,6 +246,57 @@
   }
 }
 
+.page-civicrm-contribute-campaign,
+.page-civicrm-pcp-info,
+.page-civicrm-contribute-transact {
+  .crm-form-block {
+    legend {
+      @include panel-header;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .label {
+      padding-left: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    select {
+      font-size: $font-size-base !important;
+    }
+
+    .crm-contribution-form-block-title {
+      padding-top: 14px;
+    }
+  }
+}
+
+.page-civicrm-contribute-transact {
+  .crm-form-block {
+    legend {
+      @include section-title;
+    }
+
+    fieldset {
+      margin-bottom: 10px;
+    }
+
+    .crm-section:not(.intro_text-section) {
+      margin-bottom: 10px !important;
+    }
+
+    .intro_text-section {
+      padding: 20px;
+    }
+  }
+
+  #page {
+    clear: both;
+  }
+}
+
 .page-civicrm-contribute-search {
   .CRM_Contribute_Form_Search {
     .crm-search-tasks {

@@ -1,0 +1,31 @@
+&.page-civicrm-admin-contribute {
+  .crm-contribution-search_contribution-form-block {
+    margin-bottom: 20px;
+
+    h3 {
+      @include panel-header;
+    }
+
+    .form-layout-compressed {
+      margin-left: 20px;
+    }
+  }
+
+  .crm-container {
+    div#alpha-filter {
+      @include box-shadow($box-shadow);
+      background: $crm-white;
+      border-bottom: 1px solid $crm-grayblue-dark;
+      border-radius: $border-radius-base $border-radius-base 0 0;
+      margin-bottom: 0px;
+      margin-top: 10px;
+      padding: 15px 10px 10px;
+    }
+  }
+  #crm-main-content-wrapper {
+    .dataTables_wrapper {
+      @include civicrm-table;
+      @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+    }
+  }
+}

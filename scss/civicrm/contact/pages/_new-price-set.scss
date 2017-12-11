@@ -23,6 +23,19 @@
     }
   }
 
+  .crm-price-set-preview-block {
+    legend {
+      @include panel-header;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .price_set-section {
+      margin: 0;
+      padding: 0 20px;
+    }
+  }
+
   .crm-container #crm-main-content-wrapper {
     .CRM_Price_Form_Set .crm-form-block,
     .CRM_Price_Form_Field .crm-form-block {
@@ -52,19 +65,6 @@
     #field_page, #option11_wrapper {
       margin-bottom: 0 !important;
       position: relative;
-    }
-
-    .action-link {
-      background: $crm-white !important;
-      padding: 20px !important;
-
-      &:first-child {
-        background: $gray-lighter !important;
-      }
-
-      &:last-child {
-        border-top: 1px solid $crm-background;
-      }
     }
 
     .dataTables_wrapper {
