@@ -14,4 +14,8 @@
   .select2-search-choice-close {
     margin-right: 5px;
   }
+
+  &.form-control.select2-dropdown-open {
+    border-color: $brand-primary;
+  }
 }
