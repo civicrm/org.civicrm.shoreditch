@@ -2,13 +2,16 @@
 
   .select2-choices {
     padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .select2-choice {
+    > .select2-chosen {
+      font-size: $font-size-base;
+    }
   }
 
   .select2-search-choice-close {
     margin-right: 5px;
-  }
-
-  .select2-choices {
-    margin-bottom: 0;
   }
 }
