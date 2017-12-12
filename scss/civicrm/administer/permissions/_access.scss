@@ -1,24 +1,46 @@
-&.page-civicrm-admin-access {
-
+.page-civicrm-admin-access {
   #crm-container {
-    @include civihr_table();
+    @include civicrm-table;
 
     table.report {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       width: 100%;
     }
   }
 }
 
-&.page-civicrm-admin-synchuser {
-
+.page-civicrm-admin-synchuser {
   .crm-form-block {
-    background: none;
-    box-shadow: none;
-
     .help {
       display: none;
     }
+  }
+}
+
+.page-civicrm-acl,
+.page-civicrm-admin-options-acl-role {
+  #crm-main-content-wrapper {
+    #wizard-steps {
+      @include civicrm-panel;
+    } 
+  }
+}
+
+.page-civicrm-acl {
+  .dataTables_wrapper {
+    @include civicrm-table;
+  }
+}
+
+.page-civicrm-acl-entityrole {
+  .crm-content-block {
+    @include table-block;
+  }
+
+  .dataTables_wrapper {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
   }
 }

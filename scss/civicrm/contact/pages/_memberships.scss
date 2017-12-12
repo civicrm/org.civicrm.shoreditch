@@ -147,12 +147,7 @@
 
   .page-civicrm-contact-view {
     .help {
-      background: $crm-light-green-color;
-      border: none;
-      border-radius: $border-radius-base;
-      color: $gray-darker;
       margin-bottom: 20px;
-      white-space: normal;
     }
 
     .ui-widget-content {
@@ -655,7 +650,7 @@
 
     .selector,
     .report {
-      @include mx-expandable-table();
+      @include expandable-table;
       @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25) !important);
     }
 
@@ -760,7 +755,7 @@
 
   .page-civicrm-member-search {
     .selector {
-      @include mx-expandable-table();
+      @include expandable-table;
     }
 
     .CRM_Member_Form_Search {
@@ -971,8 +966,6 @@
         position: relative;
 
         .help {
-          border-radius: $border-radius-base;
-          padding: 10px;
           position: absolute;
           top: -75px;
         }

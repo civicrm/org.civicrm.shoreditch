@@ -2,7 +2,7 @@
 &.page-civicrm-hours-location {
 
   #ltype {
-    @include civihr_panel();
-    @include civihr_table();
+    @include civicrm-panel;
+    @include civicrm-table;
   }
 }

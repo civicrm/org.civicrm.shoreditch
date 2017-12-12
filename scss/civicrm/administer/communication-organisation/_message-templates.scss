@@ -1,20 +1,12 @@
 &.page-civicrm-admin-messagetemplates {
 
-  #mainTabContainer {
-    @include civihr_table();
+  .crm-content-block {
+    box-shadow: none;
 
-    #option11_wrapper,
-    #option12_wrapper {
-      padding: 0 10px;
-    }
-
-    .action-link {
-      height: auto;
-      padding-left: 10px;
-    }
-
-    .help {
-      padding: 0 10px;
+    #mainTabContainer {
+      .spacer {
+        display: none;
+      }
     }
   }
 }

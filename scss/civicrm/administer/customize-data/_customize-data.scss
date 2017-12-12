@@ -10,12 +10,8 @@
     }
 
     .form-layout {
-      @include civihr_panel;
+      @include civicrm-panel;
     }
-  }
-
-  .help {
-    margin-bottom: 20px !important;
   }
 
   #options {
@@ -266,7 +262,7 @@
       }
 
       #optionField {
-        @include mx-expandable-table();
+        @include expandable-table;
         margin: 20px 0;
 
         td {

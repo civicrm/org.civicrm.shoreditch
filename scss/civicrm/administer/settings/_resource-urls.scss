@@ -5,11 +5,11 @@
 &.page-civicrm-admin-setting-uf {
 
   .crm-form-block {
-    @include civihr_table;
+    @include civicrm-table;
 
 
     table.form-layout {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       td:first-of-type {
         width: 30%;
@@ -22,7 +22,7 @@
     }
 
     .form-item {
-      @include civihr_panel;
+      @include civicrm-panel;
 
       padding: 10px;
     }

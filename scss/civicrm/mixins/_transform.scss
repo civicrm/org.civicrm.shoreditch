@@ -1,0 +1,10 @@
+/*
+* A transformation is an effect that lets an element change shape, size and position.
+*/
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}

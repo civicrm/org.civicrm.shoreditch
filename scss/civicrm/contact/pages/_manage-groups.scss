@@ -302,7 +302,7 @@
   }
 
   #DataTables_Table_0 {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
 
     .crm-group-group_links {
@@ -378,10 +378,6 @@
 
   .ui-dialog .CRM_Group_Form_Edit .crm-form-block {
     padding: 0 13px;
-
-    .help {
-      padding: 10px;
-    }
 
     table tr {
       border-bottom: 0 !important;
@@ -528,10 +524,6 @@
 
 .page-civicrm-group-add .CRM_Group_Form_Edit .crm-group-form-block  {
   padding: 15px;
-
-  .help {
-    padding: 5px;
-  }
 
   textarea {
     line-height: 1.5em;

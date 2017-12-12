@@ -699,15 +699,6 @@ $control-height: 30px;
     color: $brand-danger;
   }
 
-  .help {
-    padding: 15px 20px;
-  }
-
-  @mixin plain-old-text() {
-    background: none;
-    color: $gray-darker;
-  }
-
   label.crm-error {
 
     @include plain-old-text();

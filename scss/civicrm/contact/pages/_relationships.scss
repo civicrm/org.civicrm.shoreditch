@@ -212,11 +212,9 @@
     }
 
     .description {
-      background-color: $crm-light-green-color;
-      border-radius: $border-radius-child;
-      color: $crm-black-olive-color;
-      font-size: $font-size-base;
-      margin: 0 0 8px;
+      background-color: $alert-success-bg;
+      border-radius: $border-radius-base;
+      color: $gray-darker;
       padding: 10px;
     }
 
