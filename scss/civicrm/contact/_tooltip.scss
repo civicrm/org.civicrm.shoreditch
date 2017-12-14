@@ -13,11 +13,11 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #FFF;
+    border-bottom: 10px solid $crm-white;
   }
 
   .crm-contact-actions-list-inner {
-    background-color: #FFF;
+    background-color: $crm-white;
     padding: 10px 0 !important;
 
     .crm-contact_actions-list {

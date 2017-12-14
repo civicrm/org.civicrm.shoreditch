@@ -45,7 +45,7 @@
   div.crm-clear,
   div.crm-summary-row,
   div.crm-summary-row div.crm-label {
-    background-color: #FFF !important;
+    background-color: $crm-white !important;
   }
 
   // Fix the row width when has the .container class
@@ -552,7 +552,7 @@
 
       .delete-button {
         background: $brand-danger !important;
-        color: #FFF !important;
+        color: $crm-white !important;
         border-color: $brand-danger !important;
 
         float: right !important;
@@ -831,7 +831,7 @@ input[type="text"] {
   padding: 0 10px;
 
   color: $gray-dark;
-  background-color: #fff;
+  background-color: $crm-white;
   background-image: none;
   border: 1px solid $gray-dark;
 }
