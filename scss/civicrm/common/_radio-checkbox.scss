@@ -29,7 +29,7 @@
       width: 14px;
       min-width: 14px;
       height: 14px;
-      background-color: #ffffff;
+      background-color: $crm-white;
       box-shadow: $crm-checkbox-shadow;
       border: solid 1px $crm-grayblue-darker;
       border-radius: 50%;
@@ -60,7 +60,7 @@
       min-width: 16px;
       height: 16px;
       border-radius: 2px;
-      background-color: #ffffff;
+      background-color: $crm-white;
       box-shadow: $crm-checkbox-shadow;
       border: solid 1px $crm-grayblue-darker;
     }

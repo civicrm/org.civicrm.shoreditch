@@ -26,7 +26,7 @@ $button-border-radius: 2px;
 }
 
 %submit-buttons-civi {
-  background: #ffffff !important;
+  background: $crm-white !important;
   border-top: 1px solid $gray-lighter;
   margin: 20px 20px 0 !important;
   padding: 20px 0 10px !important
@@ -247,7 +247,7 @@ $button-border-radius: 2px;
     .crm-i {
       padding: 3px;
       background-color: transparent !important;
-      color: #ffffff;
+      color: $crm-white;
     }
   }
 
@@ -259,7 +259,7 @@ $button-border-radius: 2px;
 
   .crm-button-type-refresh {
     .crm-i {
-      color: #ffffff;
+      color: $crm-white;
     }
   }
 
@@ -301,7 +301,7 @@ $button-border-radius: 2px;
       &:hover {
         &,
         &::before {
-          color: #ffffff !important;
+          color: $crm-white !important;
         }
       }
 
