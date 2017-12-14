@@ -1,0 +1,13 @@
+.crm-footer {
+  a,
+  a:link {
+    color: darken($brand-primary, $crm-darken-percentage);
+  }
+  .crm-error {
+    border-radius: 2px;
+  }
+}
+
+#civicrm-footer {
+  border-top: 1px solid $crm-grayblue-dark;
+}
