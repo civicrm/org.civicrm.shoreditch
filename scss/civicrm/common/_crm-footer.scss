@@ -3,8 +3,9 @@
   a:link {
     color: darken($brand-primary, $crm-darken-percentage);
   }
+
   .crm-error {
-    border-radius: 2px;
+    border-radius: $border-radius-base;
   }
 }
 
