@@ -1,4 +1,6 @@
-.crm-footer {
+#civicrm-footer {
+  border-top: 1px solid $crm-grayblue-dark;
+
   a,
   a:link {
     color: darken($brand-primary, $crm-darken-percentage);
@@ -6,9 +8,9 @@
 
   .crm-error {
     border-radius: $border-radius-base;
-  }
-}
 
-#civicrm-footer {
-  border-top: 1px solid $crm-grayblue-dark;
+    a {
+      color: $crm-white;
+    }
+  }
 }
