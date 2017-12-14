@@ -26,18 +26,14 @@
   }
 
   .crm-section {
+    background-color: $crm-white;
+    box-shadow: $crm-panel-element-shadow;
     margin-bottom: 0;
-    padding-bottom: 20px;
+    padding: 20px;
 
     &.crm-export-mapping-section {
       padding-bottom: 0;
     }
-  }
-
-  .crm-section {
-    background-color: $crm-white;
-    box-shadow: $crm-panel-element-shadow;
-    padding: 20px;
 
     h3 {
       padding-left: 0;
@@ -52,9 +48,6 @@
 
     > .crm-submit-buttons {
       box-shadow: $crm-panel-element-shadow;
-      margin: 0 !important;
-      padding-left: 20px !important;
-      padding-right: 20px !important;
     }
   }
 

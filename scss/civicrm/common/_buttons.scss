@@ -28,8 +28,8 @@ $button-border-radius: 2px;
 %submit-buttons-civi {
   background: #ffffff !important;
   border-top: 1px solid $gray-lighter;
-  margin: 20px 20px 0 !important;
-  padding: 20px 0 10px !important
+  margin: 0;
+  padding: 20px;
 }
 
 .crm-container {
@@ -64,9 +64,14 @@ $button-border-radius: 2px;
     border-color: $brand-primary;
     border-radius: $border-radius-base;
     font-family: $font-family-base;
+    margin-right: 0;
     padding: 8px 12px;
     text-shadow: none;
     text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
 
     &:hover {
       background: darken($brand-primary, $crm-darken-percentage);
@@ -113,11 +118,16 @@ $button-border-radius: 2px;
   .crm-submit-buttons {
     height: auto;
     margin: 0;
+    padding: 20px;
 
     .crm-button {
       float: none !important;
       margin-left: 0;
-      margin-right: 10px;
+      margin-right: 0;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
     }
 
     span.crm-button {
@@ -266,7 +276,7 @@ $button-border-radius: 2px;
   }
 
   .crm-form-block > .crm-submit-buttons {
-    min-height: 43px;
+    min-height: 0;
     margin-left: 0;
   }
 

@@ -17,7 +17,7 @@
   }
 
   #wizard-steps {
-    margin: -30px -20px 0 -20px;
+    margin: -20px -20px 0 -20px;
   }
 
   #dataSource {
@@ -26,14 +26,14 @@
 
   .crm-form-block.crm-form-block {
     box-shadow: none;
-    padding: 0 !important;
 
     td {
       color: $crm-copy;
     }
 
     > .crm-submit-buttons {
-      margin: 20px 0 0 0 !important;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     h2 {
@@ -96,7 +96,8 @@
     }
 
     .help {
-      margin: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     h2 {
