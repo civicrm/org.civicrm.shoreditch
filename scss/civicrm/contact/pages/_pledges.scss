@@ -1,6 +1,6 @@
 #Search.CRM_Pledge_Form_Search {
   table.selector {
-    @include mx-expandable-table();
+    @include expandable-table;
     margin-bottom: 20px;
 
     thead.sticky {
@@ -123,7 +123,7 @@
     &[disabled],
     &[readonly] {
       background: $gray-lighter !important;
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
       color: $gray-darker;
       cursor: not-allowed;
       margin-right: 5px !important;

@@ -23,13 +23,13 @@
 }
 
 .crm_notification-badge__success {
-  background: $brand-success;
-  color: $crm-white;
+  background: $btn-success-bg;
+  color: $gray-darker;
 }
 
 .crm_notification-badge__warning {
-  background: $brand-warning;
-  color: $crm-white;
+  background: $btn-warning-bg;
+  color: $gray-darker;
 }
 
 .crm_notification-badge__danger {

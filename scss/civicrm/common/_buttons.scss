@@ -62,14 +62,14 @@ $button-border-radius: 2px;
   input.crm-form-submit {
     background: $brand-primary;
     border-color: $brand-primary;
-    border-radius: $panel-border-radius;
+    border-radius: $border-radius-base;
     font-family: $font-family-base;
     padding: 8px 12px;
     text-shadow: none;
     text-transform: uppercase;
 
     &:hover {
-      background: $crm-blue-light;
+      background: darken($brand-primary, $crm-darken-percentage);
     }
 
     &:active,
@@ -140,7 +140,7 @@ $button-border-radius: 2px;
     }
 
     .crm-submit-buttons {
-      background: #ffffff !important;
+      background: $crm-white !important;
 
       .crm-i {
         display: none;
@@ -151,12 +151,12 @@ $button-border-radius: 2px;
         input {
           @extend .btn-secondary-outline;
           ///The default theme uses "!important"
-          color: $gray !important;
+          color: $crm-cancel-color !important;
           border: solid 1px $gray-dark;
 
           &:hover {
-            color: #ffffff !important;
-            background: $gray-dark;
+            color: $crm-white !important;
+            background: darken($crm-copy, $crm-darken-percentage);
           }
         }
       }
@@ -188,12 +188,33 @@ $button-border-radius: 2px;
     @extend %btn;
   }
 
+  input[type=button],
+  a.button,
+  a.button:link,
+  a.button:visited {
+    background: $gray-dark;
+    color: $crm-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: darken($crm-copy, $crm-darken-percentage);
+      color: $crm-white;
+    }
+  }
+
   .crm-option-edit-link.crm-hover-button,
   .crm-hover-button:not(#addMorePermission):not(.open-inline-noreturn),
   .crm-clear-link {
     border: 0 !important;
-    color: $gray-dark;
     margin: 0 !important;
+  }
+
+  a.crm-selection-reset {
+    &,
+    &:link {
+      color: $gray-dark;
+    }
   }
 
   .crm-accordion-header,
@@ -310,10 +331,6 @@ $button-border-radius: 2px;
 
     .crm-i {
       line-height: normal !important;
-    }
-
-    &:first-of-type a {
-      vertical-align: top !important;
     }
 
     &:not(:first-of-type) a {

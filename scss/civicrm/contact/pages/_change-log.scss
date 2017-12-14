@@ -23,12 +23,12 @@
   }
 
   table {
-    @include mx-expandable-table();
+    @include expandable-table;
     border-radius: $border-radius-child;
     box-shadow: none !important;
 
     .columnheader {
-      border-color: $crm-dark-grayblue;
+      border-color: $crm-grayblue-dark;
 
       th {
         text-transform: capitalize;

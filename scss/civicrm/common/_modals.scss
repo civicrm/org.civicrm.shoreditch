@@ -7,10 +7,6 @@
   max-height: 90%;
   padding: 0;
 
-  .help {
-    border-radius: $border-radius-base;
-  }
-
   table {
     @extend %crm-table;
 
@@ -35,7 +31,7 @@
   .ui-dialog-titlebar {
     @extend .modal-header, %open-sans-font-family;
     border: none !important;
-    border-bottom: 1px solid $crm-dark-grayblue !important;
+    border-bottom: 1px solid $crm-grayblue-dark !important;
     box-shadow: $crm-contribute-form-shadow;
     color: $gray-darker !important;
     padding: $ui-modal-header-padding;
@@ -49,6 +45,7 @@
       font-weight: $crm-font-weight-h2;
       line-height: $font-size-h1;
       padding-left: 0;
+      width: 80%;
     }
 
     > .ui-button {
@@ -132,7 +129,8 @@
   .ui-dialog-buttonpane {
     @extend .modal-footer, %open-sans-font-family;
     background: $gray-lighter;
-    border-top: 1px solid $crm-dark-grayblue !important;
+    border-top: 1px solid $crm-grayblue-dark !important;
+    border-radius: 0 0 $border-radius-base $border-radius-base;
     box-shadow: $crm-contribute-form-shadow;
     display: block;
     margin-left: 0;
@@ -165,8 +163,8 @@
         &:hover,
         &:active,
         &:focus {
+          background: darken($brand-primary, $crm-darken-percentage);
           color: $crm-white;
-          opacity: .8 !important;
           outline: none;
           text-shadow: none;
         }

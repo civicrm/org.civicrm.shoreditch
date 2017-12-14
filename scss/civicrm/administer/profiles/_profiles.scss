@@ -24,7 +24,7 @@
 
   .crm-content-block table tr {
     border: none;
-    border-bottom: $panel-border;
+    border-bottom: 1px solid $gray-light;
 
     &.odd {
       background: $crm-white;
@@ -43,7 +43,7 @@
       background: none;
 
       th {
-        color: $crm-h3-color;
+        color: $gray-darker;
         font-family: $font-family-base;
       }
     }
@@ -61,9 +61,6 @@
 
 &.page-civicrm-admin-uf {
   #crm-main-content-wrapper {
-    .help {
-      margin: 0 0 20px;
-    }
 
     .crm-submit-buttons {
       border-bottom: 1px solid $crm-background;
@@ -74,8 +71,7 @@
     }
 
     #mainTabContainer {
-      border-radius: 0 0 $border-radius-child $border-radius-child;
-      box-shadow: $crm-form-item-shadow;
+      box-shadow: none !important;
     }
 
     .ui-tabs-panel {

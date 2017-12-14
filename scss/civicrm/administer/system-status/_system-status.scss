@@ -2,11 +2,11 @@
 #crm-container td.tasklist a {
 
   &:visited {
-    color: #8ec68a;
+    color: $brand-success;
   }
 
   &:link {
-    color: #e68074;
+    color: $brand-warning;
   }
 }
 
@@ -16,7 +16,7 @@
   padding: 20px !important;
 
   .crm-status-item {
-    background: #FFFFFF;
+    background: $crm-white;
     margin-bottom: 15px;
 
     h3 {
@@ -24,15 +24,17 @@
       margin: 0;
 
       &.crm-severity-error {
-        background: #E6807F;
+        background: $brand-danger;
       }
 
       &.crm-severity-warning {
-        background: #ECA67F;
+        background: $btn-warning-bg;
+        color: $gray-darker;
       }
 
       &.crm-severity-info {
-        background: #8EC68A;
+        background: $btn-success-bg;
+        color: $gray-darker;
       }
     }
 
@@ -42,7 +44,7 @@
     }
 
     button {
-      background: #FFFFFF;
+      background: $crm-white;
       box-shadow: $box-shadow;
       padding: 5px 10px;
       border: none;
@@ -52,12 +54,12 @@
     .hush-menu {
 
       ul {
-        background: #FFFFFF;
+        background: $crm-white;
         list-style: none;
         box-shadow: $box-shadow;
 
         & > li {
-          background: #FFFFFF;
+          background: $crm-white;
           padding: 10px;
           color: $gray-dark;
           border: none;

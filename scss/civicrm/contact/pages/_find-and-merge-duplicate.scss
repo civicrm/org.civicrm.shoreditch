@@ -48,7 +48,7 @@
 
   #crm-main-content-wrapper div[id*="browseValues_"] {
     table {
-      @include mx-expandable-table();
+      @include expandable-table;
 
       thead th {
         padding: 15px 20px !important;
@@ -133,7 +133,7 @@
 
   h3 {
     background: $gray-lighter !important;
-    color: $crm-h3-color;
+    color: $gray-darker;
     padding: 17px 25px;
     margin: 0;
     font-size: $font-size-h2;
@@ -165,7 +165,7 @@
   .crm-dedupe-rules-form-block-fields {
     table {
       &.form-layout-compressed {
-        @include mx-expandable-table();
+        @include expandable-table;
 
         tr {
           &.columnheader {
@@ -192,10 +192,6 @@
         }
       }
     }
-  }
-
-  .help {
-    padding-left: 5px;
   }
 }
 

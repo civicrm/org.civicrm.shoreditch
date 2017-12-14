@@ -21,10 +21,6 @@
       margin-left: -15px;
       margin-right: -15px;
     }
-
-    .help {
-      padding: 10px 0;
-    }
   }
 
   .CRM_Contribute_Form_Task_Delete {
@@ -67,7 +63,7 @@
     }
 
     .columnheader {
-      border-color: $crm-dark-grayblue !important;
+      border-color: $crm-grayblue-dark !important;
       border-left: none !important;
       border-right: none !important;
 
@@ -121,7 +117,7 @@
     input[type="text"],
     .select2-choice {
       background: $crm-white;
-      border: 1px solid $crm-darker-grayblue;
+      border: 1px solid $crm-grayblue-darker;
       border-radius: $border-radius-small;
       box-shadow: $crm-input-shadow;
       color: $gray-darker;
@@ -191,7 +187,7 @@
   form[class*="CRM_Contribute_Form_"] {
     h3 {
       background: $gray-lighter;
-      color: $crm-h3-color;
+      color: $gray-darker;
       font-family: $font-family-base;
       font-size: $font-size-h2;
       font-weight: $crm-font-weight-h3;
@@ -209,7 +205,6 @@
 
       + .help {
         margin: 10px 0;
-        padding: 10px;
       }
     }
 
@@ -267,7 +262,7 @@
     }
 
     .selector {
-      @include mx-expandable-table();
+      @include expandable-table;
 
       thead.sticky {
         background: transparent;
@@ -347,7 +342,7 @@
 
         .sticky-header {
           background-color: $gray-lighter;
-          border-bottom: 1px solid $crm-dark-grayblue;
+          border-bottom: 1px solid $crm-grayblue-dark;
           padding-bottom: 15px !important;
           padding-top: 20px !important;
           z-index: 20;
@@ -379,10 +374,10 @@
       }
 
       .description {
-        background: $crm-light-green-color;
+        background: $alert-success-bg;
         border-radius: $border-radius-base;
         color: $gray-darker;
-        padding: 10px 20px !important;
+        padding: 10px !important;
         position: absolute;
         top: 0;
         width: calc(100% - 40px);
@@ -550,7 +545,6 @@
   }
 
   .help {
-    border-radius: $border-radius-base $border-radius-base;
     padding: 10px 20px !important;
     position: absolute;
     top: -55px;
@@ -771,7 +765,7 @@
   }
 
   .selector {
-    @include mx-expandable-table();
+    @include expandable-table;
 
     .sticky th:first-child {
       text-align: left !important;
@@ -1153,10 +1147,6 @@
     right: 0;
   }
 
-  .help {
-    padding: 10px;
-  }
-
   #recurringPaymentBlock {
     .crm-form-text,
     .select2-container {
@@ -1226,7 +1216,7 @@
             margin: 0;
 
             tbody {
-              border-top: 1px solid $crm-dark-grayblue !important
+              border-top: 1px solid $crm-grayblue-dark !important
             }
           }
 
@@ -1516,11 +1506,11 @@ form.CRM_Contribute_Form_ContributionCharts {
   }
 
   p.description {
-    background: $crm-light-green-color;
+    background: $alert-success-bg;
     border-radius: $border-radius-base;
     color: $gray-darker;
     margin: 15px 0;
-    padding: 10px 20px !important;
+    padding: 10px;
     position: absolute;
     top: -70px;
     width: calc(100% - 40px);
@@ -1559,7 +1549,7 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   .selector,
   .report {
-    @include mx-expandable-table();
+    @include expandable-table;
   }
 
   .report {
@@ -1583,7 +1573,7 @@ form.CRM_Contribute_Form_ContributionCharts {
 
     tr.columnheader {
       border: none !important;
-      border-bottom: 1px solid $crm-dark-grayblue !important;
+      border-bottom: 1px solid $crm-grayblue-dark !important;
     }
 
     tr.crm-contribution {

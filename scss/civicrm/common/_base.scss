@@ -1,8 +1,28 @@
+body {
+  // Ensures that there is the same top padding regardless whether
+  // the user can see the admin toolbar or not
+
+  &:not(.toolbar) {
+    padding-top: $crm-main-menu-height !important;
+  }
+
+  .toolbar-menu {
+    height: $crm-main-menu-height !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
 .crm-container {
 
   a,
   a:link {
     color: $brand-primary;
+    opacity: 1;
+
+    &:hover {
+      color: darken($brand-primary, $crm-darken-percentage);
+    }
   }
 
   .description {
@@ -16,7 +36,7 @@
   }
 
   .crm-form-block {
-    border-radius: $panel-border-radius !important;
+    border-radius: $border-radius-base !important;
   }
 
   table td .btn-slide-active ul.panel {
@@ -58,7 +78,7 @@
   .select2-container {
     .select2-choice {
       background: $crm-white;
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
       border-radius: $border-radius-base;
       box-shadow: none;
 
@@ -76,6 +96,10 @@
         right: 28px;
         top: 8px;
       }
+    }
+
+    .select2-default {
+      color: $input-color-placeholder !important;
     }
 
     &.select2-dropdown-open {
@@ -262,4 +286,36 @@
     font-weight: 600;
     color: $gray-darker;
   }
+}
+
+.crm-footer .crm-error {
+  border-radius: 2px;
+}
+
+hr {
+  background-color: $hr-border;
+}
+
+a.sorting,
+a.sorting_asc,
+a.sorting_desc {
+  background: none;
+
+  &::before {
+    left: 0;
+    position: absolute;
+    top: 3px;
+  }
+}
+
+a.sorting::before {
+  @include fa-icon($font-size-base, $fa-var-sort, $crm-grayblue-darker);
+}
+
+a.sorting_asc::before {
+  @include fa-icon($font-size-base, $fa-var-sort-asc, $brand-primary);
+}
+
+a.sorting_desc::before {
+  @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
 }

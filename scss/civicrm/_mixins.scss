@@ -1,102 +1,17 @@
-/*
-* It use for calculate height and width the element
-*/
-
-@mixin calc($property, $expression, $content:null) {
-  #{$property}: -moz-calc(#{$expression}) $content;
-  #{$property}: -webkit-calc(#{$expression}) $content;
-  #{$property}: calc(#{$expression}) $content;
-}
-
-/*
-* Mixin for Box sizing
-*/
-
-@mixin border-box() {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/*
-* A transformation is an effect that lets an element change shape, size and position.
-*/
-
-@mixin transform($transforms) {
-  -moz-transform: $transforms;
-  -ms-transform: $transforms;
-  -o-transform: $transforms;
-  -webkit-transform: $transforms;
-  transform: $transforms;
-}
-
-/*
-* The translate() CSS function moves the position of the element on the plane. This transformation is characterized by a vector whose coordinates define how much it moves in each direction.
-*/
-
-@mixin translate ($x, $y) {
-  @include transform(translate($x, $y));
-}
-
-/*
-* The styled-checkbox() CSS function designs individual checkbox
-*/
-@mixin styled-checkbox() {
-  height: 16px;
-  position: relative;
-
-  &::before {
-    background-color: $crm-white;
-    border: 1px solid $crm-darker-grayblue;
-    border-radius: $border-radius-base;
-    box-shadow: $crm-checkbox-shadow;
-    content: '';
-    cursor: pointer;
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-  }
-
-  &:checked::after {
-    @include fa-icon($font-size: 15px, $content: $fa-var-check, $color: $gray-darker);
-    cursor: pointer;
-    display: inline-block;
-    left: 2px;
-    margin-top: -5px;
-    position: absolute;
-    top: 6px;
-  }
-}
-
-/*
-* The styled-checkbox() CSS function designs individual radio
-*/
-@mixin styled-radio() {
-  height: 14px;
-  position: relative;
-
-  &::before {
-    background-color: $crm-white;
-    border: solid 1px $crm-darker-grayblue;
-    border-radius: 50%;
-    box-shadow: $crm-checkbox-shadow;
-    content: '';
-    cursor: pointer;
-    display: inline-block;
-    height: 14px;
-    width: 14px;
-  }
-
-  &:checked::after {
-    background-color: $crm-copy;
-    border-radius: 50%;
-    content: '';
-    cursor: pointer;
-    display: inline-block;
-    left: 4px;
-    height: 8px;
-    position: absolute;
-    top: 4px;
-    width: 8px;
-  }
-}
+@import 'mixins/advanced-multiselect';
+@import 'mixins/border-box';
+@import 'mixins/calc';
+@import 'mixins/civicrm-table';
+@import 'mixins/civicrm-panel';
+@import 'mixins/contact-type-icons';
+@import 'mixins/expandable-table';
+@import 'mixins/panel-header';
+@import 'mixins/plain-old-text';
+@import 'mixins/responsive-search';
+@import 'mixins/section-title';
+@import 'mixins/styled-checkbox';
+@import 'mixins/styled-radio';
+@import 'mixins/table-block';
+@import 'mixins/table-header';
+@import 'mixins/transform';
+@import 'mixins/translate';

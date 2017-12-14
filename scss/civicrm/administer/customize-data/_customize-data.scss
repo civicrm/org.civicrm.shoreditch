@@ -10,12 +10,8 @@
     }
 
     .form-layout {
-      @include civihr_panel;
+      @include civicrm-panel;
     }
-  }
-
-  .help {
-    margin-bottom: 20px !important;
   }
 
   #options {
@@ -23,7 +19,7 @@
     border-radius: $border-radius-child $border-radius-child 0 0;
 
     thead tr {
-      border-bottom: 1px solid $crm-table-heading-border-color;
+      border-bottom: 1px solid $crm-grayblue-dark;
     }
 
     thead tr th {
@@ -266,7 +262,7 @@
       }
 
       #optionField {
-        @include mx-expandable-table();
+        @include expandable-table;
         margin: 20px 0;
 
         td {

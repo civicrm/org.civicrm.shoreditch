@@ -73,11 +73,11 @@
 
     #option11, #option12, #option13,
     #options {
-      @include mx-expandable-table();
+      @include expandable-table;
       box-shadow: none !important;
 
       th {
-        border-bottom-color: $crm-dialog-container-border !important;
+        border-bottom-color: $crm-grayblue-dark !important;
 
         &:first-child {
           padding-left: 20px !important;
@@ -144,7 +144,7 @@
     }
 
     #optionField {
-      @include mx-expandable-table();
+      @include expandable-table;
       margin: 20px 0;
 
       td {

@@ -13,9 +13,11 @@
 }
 
 .badge-success {
-  background: $brand-success;
+  background: $btn-success-bg;
+  color: $gray-darker;
 }
 
 .badge-warning {
-  background: $brand-warning;
+  background: $btn-warning-bg;
+  color: $gray-darker;
 }

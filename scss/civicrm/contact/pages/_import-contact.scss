@@ -1,10 +1,6 @@
 .page-civicrm-import-contact,
 .page-civicrm-import-activity,
 .page-civicrm-import-custom {
-  @mixin table-header {
-    font-weight: bold !important;
-    color: $gray-darker;
-  }
 
   &.page-civicrm-import-custom {
     #upload-file {
@@ -158,10 +154,6 @@
         }
       }
     }
-  }
-
-  .help {
-    padding: 0 0 10px 0;
   }
 
   .required {

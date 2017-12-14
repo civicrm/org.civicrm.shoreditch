@@ -27,7 +27,7 @@
       font-family: $font-family-base;
 
       thead tr {
-        border-bottom: 1px solid $crm-dark-grayblue;
+        border-bottom: 1px solid $crm-grayblue-dark;
         line-height: 30px;
 
         th {
@@ -163,7 +163,7 @@
 
       .select2-choice {
         background: none;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-select2-box-shadow-inset;
         font-family: $font-family-base;
@@ -219,7 +219,7 @@
       @extend .collapsible-title;
       background: $gray-lighter;
       border: none;
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
       color: $gray-darker;
       font-family: $font-family-base;
       font-size: $font-size-h2;
@@ -302,7 +302,7 @@
   }
 
   #DataTables_Table_0 {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
 
     .crm-group-group_links {
@@ -338,7 +338,7 @@
 
       .select2-choice {
         background: none;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
         border-radius: $border-radius-base;
         box-shadow: $crm-select2-box-shadow-inset;
       }
@@ -354,10 +354,10 @@
     }
 
     .dataTable thead tr {
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
 
       th {
-        background: $gray-lighter !important;
+        background-color: $gray-lighter !important;
       }
     }
 
@@ -378,10 +378,6 @@
 
   .ui-dialog .CRM_Group_Form_Edit .crm-form-block {
     padding: 0 13px;
-
-    .help {
-      padding: 10px;
-    }
 
     table tr {
       border-bottom: 0 !important;
@@ -457,16 +453,6 @@
     @extend %search-filter-block;
   }
 
-  #alpha-filter {
-    background-color: #ffffff !important;
-    box-shadow: $box-shadow;
-    padding: 5px 20px !important;
-
-    li a {
-      color: $crm-copy;
-    }
-  }
-
   table.selector {
     span.privacy-flag {
       position: relative;
@@ -538,10 +524,6 @@
 
 .page-civicrm-group-add .CRM_Group_Form_Edit .crm-group-form-block  {
   padding: 15px;
-
-  .help {
-    padding: 5px;
-  }
 
   textarea {
     line-height: 1.5em;

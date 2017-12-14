@@ -31,7 +31,7 @@
       height: 14px;
       background-color: #ffffff;
       box-shadow: $crm-checkbox-shadow;
-      border: solid 1px $crm-darker-grayblue;
+      border: solid 1px $crm-grayblue-darker;
       border-radius: 50%;
     }
     &:checked + label[for]::after {
@@ -62,7 +62,7 @@
       border-radius: 2px;
       background-color: #ffffff;
       box-shadow: $crm-checkbox-shadow;
-      border: solid 1px $crm-darker-grayblue;
+      border: solid 1px $crm-grayblue-darker;
     }
     &:checked + label[for] {
       position: relative;

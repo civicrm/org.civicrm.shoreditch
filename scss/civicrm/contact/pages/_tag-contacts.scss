@@ -5,10 +5,7 @@
   }
 
   .help {
-    background: $crm-light-green-color;
-    border: none;
     margin-bottom: 20px;
-    padding: 15px 20px;
   }
 
   .tabs-secondary {
@@ -17,6 +14,14 @@
 
   .ui-dialog-content td {
     vertical-align: middle;
+  }
+
+  .tag-info {
+    right: 20px;
+  }
+
+  .tag-tree {
+    width: 50%;
   }
 
   #page {
@@ -63,7 +68,7 @@
     margin: 30px 0;
 
     table {
-      @include mx-expandable-table();
+      @include expandable-table;
     }
   }
   a {
@@ -114,7 +119,7 @@
       vertical-align: middle;
       border: none;
       padding: 17px 20px;
-      border-bottom: 1px solid $crm-dark-grayblue;
+      border-bottom: 1px solid $crm-grayblue-dark;
     }
 
     #tagtree {
@@ -144,7 +149,7 @@
             border-radius: 2px;
             background-color: $crm-white;
             box-shadow: $crm-checkbox-shadow;
-            border: solid 1px $crm-darker-grayblue;
+            border: solid 1px $crm-grayblue-darker;
           }
           &:checked + span label[for] {
             position: relative;

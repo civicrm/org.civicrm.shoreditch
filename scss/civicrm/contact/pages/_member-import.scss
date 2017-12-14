@@ -1,7 +1,4 @@
 .page-civicrm-member-import {
-  .help {
-    padding: 0 20px;
-  }
 
   #DataSource,
   #MapField,
@@ -56,7 +53,7 @@
     margin-right: -20px;
 
     table {
-      @include mx-expandable-table();
+      @include expandable-table;
       box-shadow: none !important;
       margin-bottom: 20px;
 
@@ -85,7 +82,7 @@
 
   #preview-counts,
   #summary-counts {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
     margin: 20px;
     width: 96% !important;

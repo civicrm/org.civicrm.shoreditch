@@ -22,22 +22,7 @@ label {
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
-    color: $crm-darker-grayblue;
-  }
-
-  &[type="text"] {
-    &::-webkit-input-placeholder {
-      color: $crm-dark-grayblue;
-    }
-
-    &::-moz-placeholder {
-      color: $crm-dark-grayblue;
-      opacity: 1;
-    }
-
-    &:-ms-input-placeholder {
-      color: $crm-dark-grayblue;
-    }
+    color: $crm-grayblue-darker;
   }
 }
 
@@ -106,7 +91,7 @@ label {
 // We also define "active" class that can be assigned to form group and give it the appropriate interactive style.
 .form-inline-tabs {
   .form-group {
-    border: 1px solid $crm-darker-grayblue;
+    border: 1px solid $crm-grayblue-darker;
     box-shadow: $crm-form-control-shadow;
     line-height: 1em;
     min-width: 180px;
@@ -145,6 +130,8 @@ label {
   .checkbox-inline label  {
     color: $state-success-text;
   }
+
+  @include form-control-validation($state-success-text, $state-success-border, $state-success-bg);
 }
 
 .has-warning {
@@ -155,6 +142,8 @@ label {
   .checkbox-inline label  {
     color: $state-warning-text;
   }
+
+  @include form-control-validation($state-warning-text, $state-warning-border, $state-warning-bg);
 }
 
 .has-error {

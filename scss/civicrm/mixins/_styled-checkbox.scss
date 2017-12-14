@@ -1,0 +1,29 @@
+/*
+* The styled-checkbox() CSS function designs individual checkbox
+*/
+@mixin styled-checkbox() {
+  height: 16px;
+  position: relative;
+
+  &::before {
+    background-color: $crm-white;
+    border: 1px solid $crm-grayblue-darker;
+    border-radius: $border-radius-base;
+    box-shadow: $crm-checkbox-shadow;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+  }
+
+  &:checked::after {
+    @include fa-icon($font-size: 15px, $content: $fa-var-check, $color: $gray-darker);
+    cursor: pointer;
+    display: inline-block;
+    left: 2px;
+    margin-top: -5px;
+    position: absolute;
+    top: 6px;
+  }
+}

@@ -11,7 +11,6 @@
             }
 
             tbody {
-                background-color: $crm-brand-primary-light;
 
                 .btn {
                     background-color: inherit;
@@ -24,10 +23,6 @@
                     &:focus {
                         background-color: $gray-lighter;
                         outline: 0 none;
-                    }
-
-                    &:hover {
-                        background: $crm-brand-primary-lighter;
                     }
 
                     &.active {

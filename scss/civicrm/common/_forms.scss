@@ -180,6 +180,7 @@ $control-height: 30px;
     input[type=text],
     textarea {
       @extend %custom-form-control, %open-sans-font-family;
+      @include placeholder;
     }
 
     // "Select2" Drop-downs
@@ -204,7 +205,7 @@ $control-height: 30px;
         }
 
         .select2-choices {
-          border: solid 1px $crm-darker-grayblue;
+          border: solid 1px $crm-grayblue-darker;
           border-radius: $border-radius-base;
           box-shadow: $crm-checkbox-shadow;
           box-sizing: border-box;
@@ -269,9 +270,7 @@ $control-height: 30px;
         .select2-choices {
           &,
           &::before {
-            background: $input-bg-disabled !important;
-            border-color: $disabled-color !important;
-            color: $disabled-color !important;
+            color: $crm-placeholder !important;
           }
         }
 
@@ -279,12 +278,12 @@ $control-height: 30px;
           &,
           &::before {
             border-color: $disabled-color !important;
-            color: $disabled-color !important;
+            color: $crm-placeholder !important;
           }
         }
 
         .select2-arrow {
-          border-left: 1px solid;
+          border-left: 1px solid $crm-grayblue-dark;
         }
       }
 
@@ -332,7 +331,7 @@ $control-height: 30px;
 
       .select2-arrow {
         background: none;
-        border-color: $crm-darker-grayblue;
+        border-color: $crm-grayblue-darker;
         padding: 0 4px;
 
         > b {
@@ -487,7 +486,7 @@ $control-height: 30px;
     }
 
     td > input.crm-form-color {
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
       border-radius: $border-radius-base;
       min-width: 30px !important;
       width: 30px !important;
@@ -519,7 +518,7 @@ $control-height: 30px;
     .cke_top,
     .cke_bottom {
       background: $gray-lighter;
-      border-color: $crm-darker-grayblue;
+      border-color: $crm-grayblue-darker;
     }
 
     .cke_toolgroup {
@@ -635,7 +634,7 @@ $control-height: 30px;
       select {
         height: 30px;
         background: $crm-white;
-        border: 1px solid $crm-darker-grayblue;
+        border: 1px solid $crm-grayblue-darker;
       }
     }
   }
@@ -689,20 +688,15 @@ $control-height: 30px;
 
     > .crm-i {
       color: $brand-primary !important;
+
+      &:hover {
+        color: darken($brand-primary, $crm-darken-percentage) !important;
+      }
     }
   }
 
   .crm-marker {
     color: $brand-danger;
-  }
-
-  .help {
-    padding: 15px 20px;
-  }
-
-  @mixin plain-old-text() {
-    background: none;
-    color: $gray-darker;
   }
 
   label.crm-error {
@@ -728,6 +722,10 @@ $control-height: 30px;
   span.crm-error:not(.crm-error-label) {
     color: $crm-white;
     background-color: $brand-danger;
+
+    a {
+      color: $crm-white;
+    }
   }
 }
 
@@ -737,7 +735,7 @@ $control-height: 30px;
 
 .addon.fa-calendar {
   background: $gray-lighter;
-  border: 1px solid $crm-darker-grayblue;
+  border: 1px solid $crm-grayblue-darker;
   border-radius: 0 $border-radius-base $border-radius-base 0;
   color: $gray-darker;
   cursor: pointer;
@@ -774,7 +772,7 @@ input.crm-form-date {
       border-radius: 2px;
       background-color: #ffffff;
       box-shadow: $crm-checkbox-shadow;
-      border: solid 1px $crm-darker-grayblue;
+      border: solid 1px $crm-grayblue-darker;
     }
 
     &:checked::after {
