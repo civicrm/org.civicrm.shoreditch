@@ -27,17 +27,17 @@
 
   .crm-section {
     margin-bottom: 0;
-    padding-bottom: 1em;
+    padding-bottom: 20px;
 
     &.crm-export-mapping-section {
       padding-bottom: 0;
     }
   }
 
-  .crm-exportOption-section {
+  .crm-section {
     background-color: $crm-white;
     box-shadow: $crm-panel-element-shadow;
-    padding: 1em 20px;
+    padding: 20px;
 
     h3 {
       padding-left: 0;
