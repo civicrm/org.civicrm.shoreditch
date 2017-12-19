@@ -73,6 +73,11 @@
   .ui-state-default {
     border: 0 !important;
   }
+
+  .ui-state-disabled .ui-state-default {
+    color: $datepicker-gray;
+    padding: 7px;
+  }
 }
 
 #bootstrap-theme .input-group-addon.fa-calendar {
