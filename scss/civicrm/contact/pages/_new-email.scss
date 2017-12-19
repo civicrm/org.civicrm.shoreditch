@@ -80,15 +80,6 @@
             font-weight: 600;
             color: $gray-darker;
           }
-
-          &:first-child {
-            &:after {
-              content: "*";
-              font-weight: bold;
-              margin: 0 5px;
-              color: $brand-danger;
-            }
-          }
         }
 
         .select2-container {
