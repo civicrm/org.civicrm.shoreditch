@@ -50,6 +50,7 @@
           }
 
           .add-remove-link {
+            font-size: $font-size-base;
             padding: 20px;
           }
 
@@ -63,6 +64,18 @@
 
             td:first-child {
               padding-left: 20px !important;
+            }
+
+            a {
+              .crm-i.fa-trash {
+                color: $brand-danger;
+              }
+
+              &:hover {
+                .crm-i.fa-trash {
+                  color: darken($brand-danger, $crm-darken-percentage);
+                }
+              }
             }
           }
 
