@@ -3,7 +3,7 @@
 
   &,
   * {
-    @extend %open-sans-font-family;
+    @include open_sans_font_family();
     border-radius: 0;
     box-shadow: none !important;
   }
@@ -55,7 +55,8 @@
     }
 
     select {
-      @extend .form-control, %open-sans-font-family;
+      @extend .form-control;
+      font-family: 'Open Sans';
       display: inline-block;
       width: 75px;
       font-size: .8em;
@@ -75,7 +76,7 @@
   }
 
   .ui-state-disabled .ui-state-default {
-    color: $datepicker-gray;
+    color: $crm-gray-matte;
     padding: 7px;
   }
 }
