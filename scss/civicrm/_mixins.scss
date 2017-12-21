@@ -1,4 +1,12 @@
 /*
+* Use Open Sans as primary font.
+*/
+
+@mixin open_sans_font_family() {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+/*
 * It use for calculate height and width the element
 */
 
