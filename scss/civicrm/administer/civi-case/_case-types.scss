@@ -7,14 +7,6 @@
       padding: 20px;
     }
 
-    input[type=checkbox] {
-      @include styled-checkbox();
-    }
-
-    input[type=radio] {
-      @include styled-radio();
-    }
-
     .ui-tabs {
       box-shadow: none;
       border-top: 1px solid $crm-background;

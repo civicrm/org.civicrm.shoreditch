@@ -99,7 +99,7 @@ a.crm-clear-link {
 
   input[type='checkbox'],
   input[type='radio'] {
-    margin-top: 15px;
+    margin-top: 5px;
   }
 
   label + .crm-hover-button {
@@ -150,10 +150,7 @@ a.crm-clear-link {
 
   input[type='radio'] {
     float: left;
-  }
-
-  input[type=checkbox]:checked+label[for]::after {
-    left: 2px !important;
+    margin-top: 5px;
   }
 
   td {

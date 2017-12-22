@@ -6,10 +6,6 @@
     .crm-campaign-survey-new_campaign_link {
       text-transform: capitalize;
     }
-
-    input[type=checkbox] {
-      @include styled-checkbox();
-    }
   }
 }
 
@@ -33,10 +29,6 @@
 
             &:not(.label) {
               padding: 0;
-            }
-
-            #create_report {
-              @include styled-checkbox;
             }
           }
         }
@@ -77,10 +69,6 @@
                 }
               }
             }
-          }
-
-          input[type=radio] {
-            @include styled-radio;
           }
         }
       }
