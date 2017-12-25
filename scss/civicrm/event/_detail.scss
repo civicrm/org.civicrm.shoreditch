@@ -225,9 +225,6 @@
   }
 
   .replace-plain {
-    //border: 1px solid $crm-border-color;
-    //border-radius: 2px;
-    //box-shadow: $crm-checkbox-shadow;
     @extend %custom-form-control, %open-sans-font-family;
     height: auto !important;
     line-height: normal !important;
