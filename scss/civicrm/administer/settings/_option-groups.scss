@@ -3,6 +3,7 @@
   #browseValues {
     @include civicrm-table;
     @include civicrm-panel;
+    overflow: hidden;
   }
 }
 

@@ -1,4 +1,7 @@
 &.page-civicrm-admin-extensions {
+  .help {
+    margin: 20px;
+  }
 
   #mainTabContainer {
     @include civicrm-table;
