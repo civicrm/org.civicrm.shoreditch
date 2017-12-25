@@ -7,7 +7,7 @@
     background: $brand-primary;
     border: 0;
     border-radius: $border-radius-base;
-    color: $crm-pure-white-color;
+    color: $crm-white;
     font-family: $font-family-base;
     height: 36px;
     line-height: 1;
@@ -130,7 +130,7 @@
       }
 
       td {
-        color: $crm-columnheader-title-color;
+        color: $datepicker-gray-dark;
         font-size: 13px;
       }
 
@@ -162,48 +162,41 @@
   }
 
   .crm-collapsible {
-    padding: 20px;
+    &:not(.collapsed) .collapsible-title:before {
+      content: '\f107';
+    }
 
-    &.collapsed .collapsible-title {
-      box-shadow: $crm-accordion-shadow;
+    &.collapsed .collapsible-title:before {
+      content: '\f105';
+    }
 
-      &:before {
-        content: $fa-chevron-right;
-      }
+    .collapsible-title + div,
+    #confirm_screen_settings {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
+    .collapsible-title + table {
+      margin: 20px 0;
+      width: 100%;
     }
 
     .collapsible-title {
-      background-color: $crm-collapsible-title-background;
-      background-image: none;
-      border: 0;
-      color: $crm-pure-white-color;
-      font-size: 18px;
+      @extend %no-border-radius;
+      background: $crm-accordion-header-color !important;
+      background-image: none !important;
+      color: $gray-darker;
+      font-family: $font-family-base;
+      font-size: 13px !important;
       font-weight: 600;
-      margin-bottom: -30px;
-      padding: 16px 20px 16px 43px;
+      line-height: 18px;
+      margin-bottom: 0;
+      padding: 16px 20px;
       position: relative;
-      z-index: 2;
 
       &:before {
-        content: $fa-chevron-down;
-        display: block;
-        font-family: $font-family-fontawesome;
-        font-size: 13px;
-        left: 20px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      &:hover {
-        color: rgba($crm-pure-white-color, .5);
-      }
-
-      + * {
-        box-shadow: $crm-accordion-shadow;
-        display: block;
-        padding-bottom: 20px;
-        padding-top: 20px;
+        @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
+        padding-right: 10px;
       }
     }
   }
@@ -232,9 +225,14 @@
   }
 
   .replace-plain {
-    border: 1px solid $crm-border-color;
-    border-radius: 2px;
-    box-shadow: $crm-checkbox-shadow;
+    //border: 1px solid $crm-border-color;
+    //border-radius: 2px;
+    //box-shadow: $crm-checkbox-shadow;
+    @extend %custom-form-control, %open-sans-font-family;
+    height: auto !important;
+    line-height: normal !important;
+    min-height: 30px;
+    width: 300px;
   }
 }
 
