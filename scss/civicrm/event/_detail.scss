@@ -145,7 +145,7 @@
 
     .collapsible-title {
       @include accordion-header;
-      font-size: 13px !important;
+      font-size: $font-size-base;
       margin-bottom: 0;
     }
   }
