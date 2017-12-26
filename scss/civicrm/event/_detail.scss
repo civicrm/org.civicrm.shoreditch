@@ -1,42 +1,4 @@
 #crm-container {
-  input[type=radio]:not(.old-radiocheckbox-style):checked+label[for]::after {
-    top: 7px;
-  }
-
-  button {
-    background: $brand-primary;
-    border: 0;
-    border-radius: $border-radius-base;
-    color: $crm-white;
-    font-family: $font-family-base;
-    height: 36px;
-    line-height: 1;
-    padding: 11px 12px;
-    text-shadow: none;
-    text-transform: uppercase;
-    vertical-align: middle;
-
-    &:hover {
-      background: darken($brand-primary, $crm-darken-percentage);
-    }
-
-    &:active,
-    &:focus {
-      outline: none;
-    }
-
-    &.cancel {
-      background: $crm-white;
-      border: 1px solid $crm-copy;
-      color: $crm-cancel-color;
-
-      &:hover {
-        background: $crm-copy;
-        color: $crm-white;
-      }
-    }
-  }
-
   .crm-actions-ribbon {
     margin-bottom: 20px;
   }
@@ -182,22 +144,9 @@
     }
 
     .collapsible-title {
-      @extend %no-border-radius;
-      background: $crm-accordion-header-color !important;
-      background-image: none !important;
-      color: $gray-darker;
-      font-family: $font-family-base;
+      @include accordion-header;
       font-size: 13px !important;
-      font-weight: 600;
-      line-height: 18px;
       margin-bottom: 0;
-      padding: 16px 20px;
-      position: relative;
-
-      &:before {
-        @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
-        padding-right: 10px;
-      }
     }
   }
 
@@ -223,16 +172,9 @@
       margin: 0;
     }
   }
-
-  .replace-plain {
-    @extend %custom-form-control, %open-sans-font-family;
-    height: auto !important;
-    line-height: normal !important;
-    min-height: 30px;
-    width: 300px;
-  }
 }
 
 &-add #crm-container .crm-form-block.crm-form-block>.crm-submit-buttons {
   margin-top: 20px !important;
 }
+
