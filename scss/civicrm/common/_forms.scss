@@ -548,7 +548,7 @@ $control-height: 30px;
     .cke_combo_button {
       border-radius: 0 !important;
       border: solid 1px $gray-dark !important;
-      background: #ffffff !important;
+      background: $crm-white !important;
 
       &,
       &:active {
@@ -748,7 +748,7 @@ $control-height: 30px;
 
 input.dateplugin,
 input.crm-form-date {
-  background: #ffffff;
+  background: $crm-white;
   height: 26px;
   border: 1px solid $gray-dark;
   vertical-align: bottom;
@@ -770,7 +770,7 @@ input.crm-form-date {
       min-width: 16px;
       height: 16px;
       border-radius: 2px;
-      background-color: #ffffff;
+      background-color: $crm-white;
       box-shadow: $crm-checkbox-shadow;
       border: solid 1px $crm-grayblue-darker;
     }
