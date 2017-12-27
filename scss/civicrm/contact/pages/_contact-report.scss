@@ -6,6 +6,10 @@
     margin: 20px 0;
   }
 
+  .crm-submit-buttons {
+    @extend %submit-buttons-civi;
+  }
+
   .crm-hover-button {
     &:hover {
       background: none !important;
