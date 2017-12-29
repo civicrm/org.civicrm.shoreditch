@@ -2,6 +2,8 @@
   > table {
     thead th,
     tbody td {
+      border: initial;
+      border-bottom: solid 1px $table-border-color;
       padding: 12px 10px;
 
       &:first-child:not(.hiddenElement) {
@@ -14,6 +16,14 @@
     }
 
     thead {
+      tr {
+        th {
+          a.button {
+            color: $crm-white !important;
+          }
+        }
+      }
+
       .sorting,
       .sorting_asc,
       .sorting_desc {
@@ -39,5 +49,15 @@
         @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
       }
     }
+  }
+
+  .dataTables_length,
+  .dataTables_info,
+  .dataTables_paginate {
+    font-size: $font-size-base;
+  }
+
+  .paging_full_numbers {
+    width: auto !important;
   }
 }
