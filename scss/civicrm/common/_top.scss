@@ -29,7 +29,7 @@
     }
     line-height: 20px;
     background: $crm-page-topbar-bg !important;
-    color: #ffffff !important;
+    color: $crm-white !important;
 
     .breadcrumb {
       @extend %breadcrumb;
@@ -37,7 +37,7 @@
       color: transparent;
 
       > a {
-        color: #ffffff;
+        color: $crm-white;
         font-size: $font-size;
         position: relative;
         left: -10px;
@@ -81,7 +81,7 @@
     z-index: 2;
 
     a {
-      color: #ffffff;
+      color: $crm-white;
     }
   }
 }
