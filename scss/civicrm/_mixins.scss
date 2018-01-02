@@ -1,8 +1,8 @@
 /*
-* Use Open Sans as primary font.
+* Force Open Sans font family
 */
 
-@mixin open_sans_font_family() {
+@mixin open-sans-font-family() {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 

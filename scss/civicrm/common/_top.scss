@@ -1,10 +1,10 @@
 %title {
-  @include open_sans_font_family();
+  @include open-sans-font-family();
   font-weight: 600 !important;
 }
 
 .page-civicrm {
-  @include open_sans_font_family();
+  @include open-sans-font-family();
 
   #toolbar {
     box-shadow: none !important;

@@ -34,7 +34,7 @@
 
   .ui-dialog-titlebar {
     @extend .modal-header;
-    @include open_sans_font_family();
+    @include open-sans-font-family();
     border: none !important;
     border-bottom: 1px solid $crm-grayblue-dark !important;
     box-shadow: $crm-contribute-form-shadow;
@@ -45,7 +45,7 @@
 
     .ui-dialog-title {
       @extend .modal-title;
-      @include open_sans_font_family();
+      @include open-sans-font-family();
       background: none;
       font-size: $font-size-h2;
       font-weight: $crm-font-weight-h2;
@@ -88,7 +88,7 @@
 
   .ui-dialog-content {
     @extend .modal-body;
-    @include open_sans_font_family();
+    @include open-sans-font-family();
     @include calc(max-height, '100vh - 280px',!important);
     background: $crm-white;
     color: $gray-darker;
@@ -134,7 +134,7 @@
 
   .ui-dialog-buttonpane {
     @extend .modal-footer;
-    @include open_sans_font_family();
+    @include open-sans-font-family();
     background: $gray-lighter;
     border-top: 1px solid $crm-grayblue-dark !important;
     box-shadow: $crm-contribute-form-shadow;

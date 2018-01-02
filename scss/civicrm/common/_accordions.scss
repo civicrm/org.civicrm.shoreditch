@@ -23,7 +23,6 @@
   }
 
   &.crm-master-accordion-header {
-    @include open_sans_font_family();
     background: $brand-primary !important;
     border-radius: $border-radius-base $border-radius-base 0 0 !important;
     color: $crm-white !important;

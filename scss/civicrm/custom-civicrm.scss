@@ -19,5 +19,5 @@
 @import "dashboard/dashboard";
 
 body {
-  @include open_sans_font_family();
+  @include open-sans-font-family();
 }

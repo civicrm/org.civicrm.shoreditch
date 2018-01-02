@@ -4,7 +4,7 @@ $control-height: 30px;
 
 %custom-form-control {
   @extend .form-control;
-  @include open_sans_font_family();
+  @include open-sans-font-family();
   height: $control-height;
   line-height: $control-height;
   box-sizing: border-box;
@@ -142,7 +142,7 @@ $control-height: 30px;
 
     select {
       @extend %responsive;
-      @include open_sans_font_family();
+      @include open-sans-font-family();
 
       &:not([multiple]) {
         @extend %custom-form-control;
@@ -182,7 +182,7 @@ $control-height: 30px;
     input[type=text],
     textarea {
       @extend %custom-form-control;
-      @include open_sans_font_family();
+      @include open-sans-font-family();
     }
 
     // "Select2" Drop-downs
@@ -539,7 +539,7 @@ $control-height: 30px;
     }
 
     .cke_combo_text {
-      @include open_sans_font_family();
+      @include open-sans-font-family();
       border-right: solid 1px $gray-dark;
       margin: 0;
       padding-right: 7px;

@@ -3,7 +3,7 @@
 
   &,
   * {
-    @include open_sans_font_family();
+    @include open-sans-font-family();
     border-radius: 0;
     box-shadow: none !important;
   }
@@ -56,7 +56,7 @@
 
     select {
       @extend .form-control;
-      font-family: 'Open Sans';
+      @include open-sans-font-family();
       display: inline-block;
       width: 75px;
       font-size: .8em;
