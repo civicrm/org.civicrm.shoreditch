@@ -1,14 +1,2 @@
-.page-civicrm-campaign {
-  .crm-content-block {
-    .dataTables_wrapper {
-      > table {
-        thead th:nth-child(2),
-        tbody td:nth-child(2) {
-          padding-left: 20px;
-        }
-      }
-    }
-  }
-}
-
+@import "pages/campaign";
 @import "pages/survey";

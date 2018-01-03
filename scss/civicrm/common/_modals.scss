@@ -14,6 +14,10 @@
       background: $crm-white;
       color: $crm-copy;
       font-weight: $badge-font-weight;
+
+      .status {
+        line-height: normal;
+      }
     }
 
     td:first-child {
