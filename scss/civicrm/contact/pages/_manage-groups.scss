@@ -243,10 +243,6 @@
       .font-italic {
         font-style: normal;
       }
-
-      input[type="checkbox"]:checked + label[for]:after {
-        top: 8px;
-      }
     }
   }
 
