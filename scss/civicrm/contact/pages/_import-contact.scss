@@ -166,11 +166,6 @@
     padding-left: 0;
   }
 
-  input[type=checkbox]:checked+label[for]::after {
-    left: 2px;
-    top: 6px;
-  }
-
   .CRM_Contact_Import_Form_DataSource {
     .form-layout {
       width: auto;
