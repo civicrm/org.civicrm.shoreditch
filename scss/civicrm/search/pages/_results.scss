@@ -9,13 +9,6 @@
     margin: 0;
   }
 
-  input {
-    &.select-row,
-    &.select-rows {
-      @include styled-checkbox();
-    }
-  }
-
   table:not(.crm-table-group-summary) {
     table-layout: fixed;
 

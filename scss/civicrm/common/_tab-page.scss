@@ -14,12 +14,17 @@
           margin: 20px;
         }
 
+        .messages.no-popup {
+          margin: 20px 20px 0;
+        }
+
         > .ui-tabs-nav {
           border-radius: $border-radius-base $border-radius-base 0 0;
         }
 
         > .ui-tabs-panel {
           border-bottom: none;
+          min-height: auto;
           padding: 0;
 
           .dataTables_wrapper,
@@ -27,8 +32,16 @@
             box-shadow: none;
           }
 
-          > .dataTables_wrapper {
+          .dataTables_wrapper {
             margin-bottom: 0;
+
+            tr.columnheader {
+              border: none;
+
+              th {
+                border-bottom-width: 1px;
+              }
+            }
           }
 
           .action-link {

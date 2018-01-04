@@ -13,10 +13,6 @@
       margin: 10px 0 !important;
     }
 
-    .crm-form-checkbox {
-      @include styled-checkbox;
-    }
-
     & > table.form-layout-compressed {
       @include civicrm-table;
       @include civicrm-panel;

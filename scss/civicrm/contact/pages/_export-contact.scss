@@ -135,9 +135,4 @@
       margin-top: 0 !important;
     }
   }
-
-  input[type=checkbox]:checked + label[for]::after {
-    left: 2px;
-    top: 7px;
-  }
 }

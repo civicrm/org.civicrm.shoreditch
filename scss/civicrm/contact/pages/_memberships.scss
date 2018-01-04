@@ -887,10 +887,6 @@
           max-width: 150px;
         }
       }
-
-      input[type="checkbox"]:checked + label[for]:after {
-        margin-top: -4px;
-      }
     }
 
     .CRM_Member_Form_Task_Email .crm-contactEmail-form-block {

@@ -131,38 +131,6 @@
         span {
           background: none;
         }
-
-        input[type=checkbox] {
-          display: none !important;
-
-          &:checked + span label[for]::before,
-          + span label[for]::before {
-            margin-right: 5px;
-            vertical-align: middle;
-          }
-          + span label[for]::before {
-            content: '';
-            display: inline-block;
-            width: 16px;
-            min-width: 16px;
-            height: 16px;
-            border-radius: 2px;
-            background-color: $crm-white;
-            box-shadow: $crm-checkbox-shadow;
-            border: solid 1px $crm-grayblue-darker;
-          }
-          &:checked + span label[for] {
-            position: relative;
-          }
-          &:checked + span label[for]::after {
-            @include fa-icon($font-size: 15px, $content: '\f00c', $color: $gray-darker);
-            display: inline-block;
-            position: absolute;
-            left: 2px;
-            top: 8px;
-            margin-top: -6px;
-          }
-        }
       }
     }
   }
