@@ -4,7 +4,7 @@
 
     table.report {
       @include civicrm-panel;
-
+      overflow: hidden;
       width: 100%;
     }
   }
