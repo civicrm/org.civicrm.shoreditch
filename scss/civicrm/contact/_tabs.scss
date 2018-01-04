@@ -159,7 +159,12 @@
       float: right;
       width: calc(100% - 220px);
 
-      #contactsummary, #hrjob-contract, .job-roles, .absence-tab-page, #civitasks, #cividocuments {
+      .absence-tab-page,
+      .job-roles,
+      #cividocuments,
+      #civitasks,
+      #contactsummary,
+      #hrjob-contract {
         padding: 15px 15px 0 0 !important;
       }
     }
