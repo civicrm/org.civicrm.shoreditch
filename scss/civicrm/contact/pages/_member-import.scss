@@ -27,10 +27,8 @@
       left: 80px;
     }
 
-    input[type=radio] {
-      + label[for] {
-        margin-bottom: 15px;
-      }
+    input[type=radio] + label[for] {
+      margin-bottom: 5px;
     }
 
     .crm-import-datasource-form-block-fieldSeparator {

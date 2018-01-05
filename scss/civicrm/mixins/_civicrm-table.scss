@@ -3,6 +3,7 @@
  */
 @mixin civicrm-table() {
   table:not(.form-layout-compressed) {
+    border-top: 1px solid $crm-grayblue-dark;
     box-shadow: none;
     max-width: 100%;
 
