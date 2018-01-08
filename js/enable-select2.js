@@ -16,7 +16,10 @@ CRM.$(function () {
    * during DOM changes
    */
   var observer = new MutationObserver(debounce(function () {
-    CRM.$('select:visible:not(.no-select2):not(.crm-form-multiselect)')
+    /*
+     * Skip CKEditor element (.cke_dialog_ui_input_select)
+     */
+    CRM.$('select:visible:not(.no-select2):not(.crm-form-multiselect, .cke_dialog_ui_input_select)')
       .each(function () {
         var select = CRM.$(this);
         var hasNoSelect2Parent = select.closest('.no-select2').length;
