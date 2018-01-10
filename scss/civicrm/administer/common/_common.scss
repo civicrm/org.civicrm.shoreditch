@@ -43,6 +43,7 @@ ul.civihr-popup {
   .dataTables_wrapper {
     background: transparent !important;
     box-shadow: none;
+    margin: 0;
   }
 
   .crm-submit-buttons {
@@ -84,7 +85,6 @@ ul.civihr-popup {
   }
 
   .action-link {
-    background: $gray-lighter;
     margin: 0;
     padding: 20px;
     text-align: right;

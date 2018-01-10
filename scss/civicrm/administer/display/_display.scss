@@ -23,12 +23,6 @@
 
     table.form-layout {
 
-      td {
-        input[type=radio] + label {
-          line-height: 135%;
-        }
-      }
-
       tr > td:nth-of-type(2) > label {
         padding-right: 10px;
       }

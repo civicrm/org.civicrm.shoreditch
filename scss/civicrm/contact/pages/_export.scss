@@ -1,13 +1,10 @@
 .CRM_Export_Form_Select {
-  padding-bottom: 5px;
 
   .help {
     margin-bottom: 20px;
-    padding: 20px;
   }
 
   .label {
-    text-align: left;
     font-size: 13px;
   }
 
@@ -51,18 +48,10 @@
     }
   }
 
-  .crm-content-mergeOptions {
-    label[for="CIVICRM_QFID_0_6"] {
-      margin-left: -3px !important;
-    }
-  }
-
   #wizard-steps {
-    background-color: $crm-white;
-    box-shadow: $crm-panel-element-shadow;
-
     .wizard-bar {
-      margin: 0;
+      @include box-shadow($box-shadow);
+      border-radius: $border-radius-base;
     }
   }
 }
@@ -85,6 +74,8 @@
       width: 100% !important;
 
       .columnheader {
+        border: none;
+
         th {
           font-size: $font-size-h2;
         }
@@ -98,16 +89,11 @@
         &,
         &-dark {
           th {
-            height: 47px;
-            line-height: 47px;
+            @include panel-header;
             text-transform: none;
-            padding-left: 20px;
             color: $gray-darker;
-            font-weight: 600;
-            background-color: $crm-accordion-header-color;
-            border: 0;
-            border-left: 1px solid $crm-accordion-header-color;
-            border-top: 1px solid $crm-background;
+            font-weight: $crm-font-weight-h3;
+            border: none;
             border-bottom: 1px solid $crm-grayblue-dark;
           }
         }
@@ -145,10 +131,5 @@
     .crm-form-text {
       margin-top: 0 !important;
     }
-  }
-
-  input[type=checkbox]:checked + label[for]::after {
-    left: 2px;
-    top: 7px;
   }
 }
