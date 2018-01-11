@@ -1,9 +1,9 @@
-.page-civicrm .ui-datepicker {
+.ui-datepicker {
   background: #ffffff !important;
 
   &,
   * {
-    @extend %open-sans-font-family;
+    @include open-sans-font-family();
     border-radius: 0;
     box-shadow: none !important;
   }
@@ -55,7 +55,8 @@
     }
 
     select {
-      @extend .form-control, %open-sans-font-family;
+      @extend .form-control;
+      @include open-sans-font-family();
       display: inline-block;
       width: 75px;
       font-size: .8em;
@@ -72,6 +73,11 @@
 
   .ui-state-default {
     border: 0 !important;
+  }
+
+  .ui-state-disabled .ui-state-default {
+    color: $crm-gray-matte;
+    padding: 7px;
   }
 }
 

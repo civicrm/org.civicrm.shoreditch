@@ -6,7 +6,8 @@
 $button-border-radius: 2px;
 
 %btn-civi {
-  @extend .btn, %open-sans-font-family;
+  @extend .btn;
+  @include open-sans-font-family();
   text-shadow: none;
   text-transform: uppercase;
   opacity: 1;
