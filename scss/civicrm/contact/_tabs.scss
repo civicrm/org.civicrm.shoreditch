@@ -156,6 +156,7 @@
     }
 
     .ui-tabs-panel {
+      box-sizing: border-box;
       float: right;
       width: calc(100% - 220px);
 
