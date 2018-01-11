@@ -35,9 +35,13 @@ $crm-text-angular-min-height: 120px;
     box-shadow: none !important;
     min-height: $crm-text-angular-min-height;
 
-    &.ta-scroll-window > .ta-bind {
-      min-height: $crm-text-angular-min-height;
-      outline: 0;
+    &.ta-scroll-window {
+      height: auto;
+
+      & > .ta-bind {
+        min-height: $crm-text-angular-min-height;
+        outline: 0;
+      }
     }
   }
 }
