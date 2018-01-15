@@ -1,0 +1,44 @@
+//This is due to no proper selector on config list page
+#id_Customize_Data_and_Screens,
+#id_Communications,
+#id_Localization,
+#id_Users_and_Permissions,
+#id_System_Settings,
+#id_CiviContribute,
+#id_CiviMember,
+#id_CiviEvent,
+#id_CiviMail,
+#id_CiviCase,
+#id_CiviReport,
+#id_CiviCampaign {
+  &_show {
+    padding: 0;
+
+    .form-layout {
+      border: none;
+
+      tr {
+        border: none;
+      }
+    }
+  }
+
+  legend {
+    @include section-title;
+    border-bottom: none;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+
+    a {
+      img {
+        display: none;
+      }
+
+      &::before {
+        @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
+        padding-right: 10px;
+      }
+    }
+  }
+}
