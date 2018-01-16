@@ -13,7 +13,13 @@
       float: left;
       padding: 0 0 99999px;
       margin-bottom: -99999px;
-      width: 15%;
+      width: 200px;
+
+      &~.ui-tabs-panel {
+        .container-fluid {
+          max-width: $container-large-desktop;
+        }
+      }
     }
 
     li.crm-tab-button {
@@ -150,10 +156,16 @@
     }
 
     .ui-tabs-panel {
+      box-sizing: border-box;
       float: right;
-      width: 84%;
+      width: calc(100% - 220px);
 
-      #contactsummary, #hrjob-contract, #hrjobroles, #civitasks, #cividocuments {
+      .absence-tab-page,
+      .job-roles,
+      #cividocuments,
+      #civitasks,
+      #contactsummary,
+      #hrjob-contract {
         padding: 15px 15px 0 0 !important;
       }
     }
