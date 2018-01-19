@@ -1,7 +1,6 @@
 @at-root .mobile {
   input[type="date"][uib-datepicker-popup] {
     line-height: normal;
-    width: 100% !important;
 
     &::-webkit-inner-spin-button,
     &::-webkit-clear-button {
