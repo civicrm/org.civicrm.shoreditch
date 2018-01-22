@@ -3,6 +3,7 @@
   #browseValues {
     @include civicrm-table;
     @include civicrm-panel;
+    overflow: hidden;
   }
 }
 
@@ -13,17 +14,16 @@
   .crm-form-block {
     @include civicrm-table;
 
-    .crm-submit-buttons {
-      box-shadow: none;
-      margin: 0 !important;
-    }
-
     .form-layout {
       margin: 10px 0;
     }
 
+    h3 {
+      @include section-title;
+    }
+
     .description {
-      padding: 10px;
+      padding: 20px;
     }
   }
 }

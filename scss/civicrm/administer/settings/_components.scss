@@ -1,15 +1,13 @@
 &.page-civicrm-admin-setting-component {
 
   .crm-form-block {
-    background: none;
-    box-shadow: none;
 
-    p.description {
-      @include civicrm-panel;
+    .advmultiselect {
+      margin-left: 20px;
     }
 
     p.description {
-      padding: 10px;
+      padding-left: 20px;
     }
   }
 }
