@@ -4,7 +4,10 @@
 .page-civicrm-a {
   @import "common/common";
 
+  @import "system-status/administer-list";
+  @import "system-status/configtask";
   @import "system-status/system-status";
+
   @import "customize-data/customize-data";
   @import "profiles/profiles";
   @import "tags/tags";
@@ -24,8 +27,12 @@
   @import "settings/extensions";
   @import "settings/scheduled-jobs";
   @import "settings/resource-urls";
+  @import "settings/sms-provider";
   @import "settings/smtp";
   @import "settings/option-groups";
+  @import "settings/mapping";
+  @import "settings/paymentprocessor";
+  @import "settings/connection";
 
   @import "civi-case/case-types";
 }

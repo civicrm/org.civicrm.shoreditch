@@ -7,6 +7,16 @@
       text-transform: capitalize;
     }
   }
+
+  .CRM_Campaign_Form_Search {
+    .crm-results-block {
+      .crm-pager {
+        > .element-right {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
 }
 
 .page-civicrm-survey-configure {

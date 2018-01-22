@@ -1,0 +1,14 @@
+&.page-civicrm-admin-sms-provider {
+  .crm-container {
+    .crm-content-block {
+      overflow: hidden;
+    }
+
+    #ltype {
+      tr.columnheader {
+        border: none;
+        border-bottom: 1px solid $gray-light;
+      }
+    }
+  }
+}

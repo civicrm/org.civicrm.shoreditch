@@ -2,43 +2,18 @@
   .crm-form-block {
     @include civicrm-table;
 
-    background: none;
-    box-shadow: none;
-
     table.form-layout-compressed {
-      @include civicrm-panel;
-
-      width: 100%;
-
       .crm-smtp-form-block-outBound_option {
-
-        td:last-of-type {
-
-          label {
-            padding-right: 15px;
-          }
+        td {
+          vertical-align: middle;
         }
       }
     }
 
-    #bySMTP,
-    #bySendmail {
-      @include civicrm-panel;
-
-      overflow: hidden;
-
-      legend {
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 15px 10px;
-      }
-
-      table.form-layout-compressed {
-        background: none;
-        box-shadow: none;
-        margin: 0;
-      }
+    legend {
+      @include section-title;
+      box-sizing: border-box;
+      width: 100%;
     }
   }
 }

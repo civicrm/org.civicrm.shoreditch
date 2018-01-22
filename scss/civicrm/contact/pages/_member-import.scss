@@ -4,9 +4,15 @@
   #MapField,
   #Summary {
     .crm-submit-buttons {
-      padding: 15px 10px !important;
+      padding: 15px 20px !important;
       border: none;
       margin: 0 !important;
+    }
+  }
+
+  #DataSource {
+    td.label {
+      padding-left: 0;
     }
   }
 

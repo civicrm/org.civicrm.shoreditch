@@ -12,6 +12,10 @@
       border: none;
       border-bottom: 1px solid $gray-light;
 
+      &.columnheader {
+        background: $gray-lighter;
+      }
+
       & > td,
       & > th {
         background: transparent;

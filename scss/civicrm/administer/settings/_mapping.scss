@@ -1,0 +1,25 @@
+&.page-civicrm-admin-mapping {
+  @include civicrm-table;
+
+  .form-item {
+    padding: 0;
+  }
+
+  #crm-container {
+    tr.columnheader {
+      background: $gray-lighter;
+      border: none;
+      border-bottom: 1px solid $gray-light;
+    }
+  }
+}
+
+&.page-civicrm-admin-setting-mapping {
+  .form-layout-compressed {
+    tr {
+      td:first-child {
+        padding-left: 20px;
+      }
+    }
+  }
+}
