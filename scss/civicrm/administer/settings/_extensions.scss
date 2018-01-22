@@ -38,6 +38,12 @@
             }
           }
         }
+
+        tr.extension-installed {
+          td {
+            background: $crm-gray-lightest !important;
+          }
+        }
       }
 
       table#option12 td:last-of-type {

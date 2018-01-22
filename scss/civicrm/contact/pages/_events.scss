@@ -195,10 +195,6 @@
     }
   }
 
-  input[type="radio"] + label {
-    line-height: 1.3em;
-  }
-
   span {
     &.crm-error {
       background: $brand-danger !important;
@@ -350,12 +346,6 @@
 
     .price_set-section {
       margin-bottom: 0;
-    }
-  }
-
-  .crm-event-eventfees-form-block-send_receipt {
-    input[type=checkbox] {
-      @include styled-checkbox();
     }
   }
 
@@ -683,10 +673,6 @@
         min-width: 180px;
       }
     }
-  }
-
-  input[type="radio"] + label {
-    line-height: 1.3em;
   }
 
   textarea {
