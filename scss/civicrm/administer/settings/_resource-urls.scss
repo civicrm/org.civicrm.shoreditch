@@ -9,8 +9,6 @@
 
 
     table.form-layout {
-      @include civicrm-panel;
-
       td:first-of-type {
         width: 30%;
       }

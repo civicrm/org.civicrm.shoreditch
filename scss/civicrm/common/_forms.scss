@@ -133,10 +133,6 @@ $control-height: 30px;
     input[type="radio"] {
       margin: 0 5px 0 0;
       vertical-align: middle;
-
-      &:not(:first-of-type) {
-        margin-left: 15px !important;
-      }
     }
 
     div.form-item {
@@ -761,32 +757,5 @@ input.crm-form-date {
 
   td.label {
     padding-left: 0;
-  }
-
-  input[type=checkbox]:not(.old-radiocheckbox-style) {
-    position: relative;
-
-    &::before {
-      content: '';
-      cursor: pointer;
-      display: inline-block;
-      width: 16px;
-      min-width: 16px;
-      height: 16px;
-      border-radius: 2px;
-      background-color: $crm-white;
-      box-shadow: $crm-checkbox-shadow;
-      border: solid 1px $crm-grayblue-darker;
-    }
-
-    &:checked::after {
-      @include fa-icon($font-size: 15px, $content: $fa-var-success, $color: $gray-darker);
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      left: 2px;
-      top: 7px;
-      margin-top: -6px;
-    }
   }
 }

@@ -1,0 +1,32 @@
+&.page-civicrm-admin-configtask {
+  #crm-container {
+    @include civicrm-table;
+
+    .description {
+      margin-bottom: 20px;
+    }
+
+    table.selector {
+      @include box-shadow($box-shadow);
+
+      tr.columnheader {
+        border: none;
+
+        td {
+          @include section-title;
+          background: $gray-lighter !important;
+        }
+      }
+    }
+
+    td.tasklist a {
+      &:visited {
+        color: $crm-success-dark;
+      }
+
+      &:link {
+        color: $crm-warning-dark;
+      }
+    }
+  } 
+}

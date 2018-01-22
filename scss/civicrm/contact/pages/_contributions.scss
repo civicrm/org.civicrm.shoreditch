@@ -253,10 +253,6 @@
       border-radius: 0 0 $panel-border-radius $panel-border-radius;
     }
 
-    .crm-search-tasks input[type="radio"]:checked + label[for]:after {
-      top: 7px;
-    }
-
     .crm-search-tasks td {
       padding: 10px 20px;
     }
@@ -821,12 +817,6 @@
     .crm-hover-button:hover {
       color: $crm-copy !important;
     }
-  }
-}
-
-.ui-dialog-content .CRM_Contribute_Form_Contribution {
-  .custom-group-Donor_Information input[type="radio"]:checked + label[for]:after {
-    top: 15px;
   }
 }
 
