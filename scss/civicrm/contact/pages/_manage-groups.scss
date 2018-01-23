@@ -445,10 +445,6 @@
     }
   }
 
-  .crm-search-tasks {
-    @extend %search-filter-block;
-  }
-
   table.selector {
     span.privacy-flag {
       position: relative;
