@@ -7,12 +7,10 @@
   
   /**
    * Adapts civicrm's menu to wordpress' admin bar
-   * Sets civicrm's menu css top to wordpress' admin bar height
    * It's z-index just above wp admin bar and under civicrm's notification
    */
   function adaptToWordpressAdminBar() {
     if ($('#wpadminbar').length > 0) {
-      $('#civicrm-menu').css('top', $('#wpadminbar').css('height'));
       $('#civicrm-menu').css('z-index', 999998);
     }
   }
