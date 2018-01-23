@@ -162,9 +162,11 @@ table {
       color: $gray-darker !important;
 
       &:hover:not(.disabled),
-      &.current {
+      &.current,
+      &:active {
         background: none;
-        border: none;
+        border: 1px solid transparent;
+        box-shadow: none;
         font-weight: $crm-font-weight-h3;
       }
 

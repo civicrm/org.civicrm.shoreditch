@@ -17,4 +17,62 @@
       }
     }
   }
+
+  .CRM_Campaign_Form_Task_Interview {
+    .float-right {
+      margin-bottom: 16px;
+      margin-right: 14px;
+    }
+
+    .dataTables_length {
+      margin-left: 20px;
+    }
+
+    .dataTables_info {
+      padding-top: 11px;
+    }
+
+    .crm-copy-fields {
+      border-bottom: 1px solid $gray-light;
+      border-top: 1px solid $gray-light;
+    }
+
+    .civireport-criteria {
+      .form-layout-compressed {
+        @extend %crm-table;
+        width: 100%;
+
+        th {
+          background: $gray-lighter;
+        }
+
+        td,th {
+          padding: 8px 10px;
+        }
+      }
+
+      .add-remove-link {
+        margin: 20px 10px;
+
+        a {
+          font-size: $font-size-base;
+        }
+      }
+    }
+
+    .crm-copy-fields {
+      tr {
+        td {
+          a.button {
+            background: transparent;
+            color: $brand-primary;
+            float: none !important;
+            padding-left: 0;
+            padding-right: 0;
+            text-transform: capitalize;  
+          }
+        }
+      }
+    }
+  }
 }
