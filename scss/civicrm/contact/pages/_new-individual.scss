@@ -1,4 +1,4 @@
-.page-civicrm-contact-add {
+#{civi-page('contact-add')} {
   .crm-search-form-block {
     border-radius: $border-radius-child !important;
   }

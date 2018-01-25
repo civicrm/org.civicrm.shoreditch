@@ -1,4 +1,4 @@
-&.page-civicrm-admin-extensions {
+&#{civi-page('admin-extensions')} {
   .help {
     margin: 20px;
   }

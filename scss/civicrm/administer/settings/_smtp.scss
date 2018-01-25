@@ -1,4 +1,4 @@
-&.page-civicrm-admin-setting-smtp {
+&#{civi-page('admin-setting-smtp')} {
   .crm-form-block {
     @include civicrm-table;
 

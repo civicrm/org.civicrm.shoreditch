@@ -1,4 +1,4 @@
-.page-civicrm-admin-access {
+#{civi-page('admin-access')} {
   #crm-container {
     @include civicrm-table;
 
@@ -10,7 +10,7 @@
   }
 }
 
-.page-civicrm-admin-synchuser {
+#{civi-page('admin-synchuser')} {
   .crm-form-block {
     .help {
       display: none;
@@ -18,8 +18,8 @@
   }
 }
 
-.page-civicrm-acl,
-.page-civicrm-admin-options-acl-role {
+#{civi-page('acl')},
+#{civi-page('admin-options-acl-role')} {
   #crm-main-content-wrapper {
     #wizard-steps {
       @include civicrm-panel;
@@ -27,13 +27,13 @@
   }
 }
 
-.page-civicrm-acl {
+#{civi-page('acl')} {
   .dataTables_wrapper {
     @include civicrm-table;
   }
 }
 
-.page-civicrm-acl-entityrole {
+#{civi-page('acl-entityrole')} {
   .crm-content-block {
     @include table-block;
   }

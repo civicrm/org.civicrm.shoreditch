@@ -1,4 +1,4 @@
-&.page-civicrm-admin-configtask {
+&#{civi-page('admin-configtask')} {
   #crm-container {
     @include civicrm-table;
 

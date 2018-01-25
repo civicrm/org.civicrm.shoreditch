@@ -1,4 +1,4 @@
-&.page-civicrm-admin-job {
+&#{civi-page('admin-job')} {
 
   #ltype {
     @include civicrm-table;
@@ -34,7 +34,7 @@
   }
 }
 
-&.page-civicrm-admin-joblog {
+&#{civi-page('admin-joblog')} {
   h3 {
     @include panel-header;
     margin-bottom: 0;

@@ -1,4 +1,4 @@
-&.page-civicrm-admin-options-wordreplacements {
+&#{civi-page('admin-options-wordreplacements')} {
 
   #crm-container .crm-form-block {
     background: transparent;

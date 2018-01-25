@@ -1,4 +1,4 @@
-.page-civicrm-contact {
+#{civi-page('contact')} {
   #GroupContact {
     h3 {
       background: $brand-primary;
@@ -187,7 +187,7 @@
   }
 }
 
-.page-civicrm-group {
+#{civi-page('group')} {
   .help {
     margin: 20px 0;
 
@@ -518,7 +518,7 @@
   }
 }
 
-.page-civicrm-group-add .CRM_Group_Form_Edit .crm-group-form-block  {
+#{civi-page('group-add')} .CRM_Group_Form_Edit .crm-group-form-block  {
   padding: 15px;
 
   textarea {

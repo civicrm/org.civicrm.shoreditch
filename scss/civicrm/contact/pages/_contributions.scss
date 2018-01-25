@@ -1,4 +1,4 @@
-.page-civicrm-contribute {
+#{civi-page('contribute')} {
   #branding h1.page-title {
     margin-bottom: 20px !important;
   }
@@ -246,7 +246,7 @@
   }
 }
 
-.page-civicrm-contribute-search {
+#{civi-page('contribute-search')} {
   .CRM_Contribute_Form_Search {
     .crm-search-tasks {
       background-color: $crm-white;
@@ -490,7 +490,7 @@
   }
 }
 
-.page-civicrm-contribute-add {
+#{civi-page('contribute-add')} {
   .CRM_Contribute_Form_Contribution {
     .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
       padding: 20px !important;
@@ -521,7 +521,7 @@
   }
 }
 
-.page-civicrm-contact-view-contribution {
+#{civi-page('contact-view-contribution')} {
   #branding {
     display: block;
   }
@@ -1131,7 +1131,7 @@
   }
 }
 
-.page-civicrm-contact-view .ui-dialog .CRM_Contribute_Form_Contribution {
+#{civi-page('contact-view')} .ui-dialog .CRM_Contribute_Form_Contribution {
   .crm-link-credit-card-mode {
     position: absolute;
     right: 0;

@@ -1,4 +1,4 @@
-&.page-civicrm-admin-messagetemplates {
+&#{civi-page('admin-messagetemplates')} {
 
   .crm-content-block {
     box-shadow: none;

@@ -1,4 +1,4 @@
-&.page-civicrm-admin-custom-group {
+&#{civi-page('admin-custom-group')} {
   #options table td:last-of-type {
     width: 250px;
   }
@@ -126,7 +126,7 @@
   }
 }
 
-&.page-civicrm-admin-custom {
+&#{civi-page('admin-custom')} {
 
   #crm-main-content-wrapper {
 

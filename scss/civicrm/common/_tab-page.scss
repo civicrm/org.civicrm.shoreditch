@@ -3,7 +3,7 @@
 * ie /civicrm/tag?reset=1
 */
 
-.page-civicrm:not(.page-civicrm-contact-view) {
+.page-civicrm:not(#{civi-page('contact-view')}) {
   #crm-main-content-wrapper {
     > .crm-content-block {
       > #mainTabContainer {

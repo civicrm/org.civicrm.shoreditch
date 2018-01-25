@@ -1,6 +1,6 @@
-&.page-civicrm-admin-setting-localization,
-&.page-civicrm-admin-setting-preferences-address,
-&.page-civicrm-admin-setting-date {
+&#{civi-page('admin-setting-localization')},
+&#{civi-page('admin-setting-preferences-address')},
+&#{civi-page('admin-setting-date')} {
 
   .crm-form-block > .spacer {
     display: none;
