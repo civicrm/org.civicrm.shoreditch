@@ -1,6 +1,7 @@
 .page-civicrm-import-contact,
 .page-civicrm-import-activity,
-.page-civicrm-import-custom {
+.page-civicrm-import-custom,
+.page-civicrm-event-import {
 
   &.page-civicrm-import-custom {
     #upload-file {
@@ -25,13 +26,15 @@
   }
 
   .crm-form-block.crm-form-block {
-    box-shadow: none;
+    .crm-form-block {
+      box-shadow: none;
+    }
 
     td {
       color: $crm-copy;
     }
 
-    > .crm-submit-buttons {
+    .crm-submit-buttons {
       padding-left: 0;
       padding-right: 0;
     }
@@ -88,6 +91,10 @@
   #Preview {
     > .crm-form-block.crm-form-block {
       padding: 20px 0 0 0 !important;
+
+      .crm-submit-buttons {
+        padding: 20px;
+      }
     }
 
     #wizard-steps {
@@ -172,7 +179,8 @@
     padding-left: 0;
   }
 
-  .CRM_Contact_Import_Form_DataSource {
+  .CRM_Contact_Import_Form_DataSource,
+  .CRM_Event_Import_Form_DataSource {
     .form-layout {
       width: auto;
 
