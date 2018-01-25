@@ -1,9 +1,9 @@
-.page-civicrm-import-contact,
-.page-civicrm-import-activity,
-.page-civicrm-import-custom,
-.page-civicrm-event-import {
+#{civi-page('import-contact')},
+#{civi-page('import-activity')},
+#{civi-page('import-custom')},
+#{civi-page('event-import')} {
 
-  &.page-civicrm-import-custom {
+  &#{civi-page('import-custom')} {
     #upload-file {
       > .crm-submit-buttons {
         @extend %submit-buttons-civi;

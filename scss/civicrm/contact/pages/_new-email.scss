@@ -1,4 +1,4 @@
-.page-civicrm-activity-email {
+#{civi-page('activity-email')} {
   .crm-submit-buttons:first-child {
     display: none;
   }
@@ -55,7 +55,7 @@
   }
 }
 
-.page-civicrm-contact-search-advanced {
+#{civi-page('contact-search-advanced')} {
   .CRM_Contact_Form_Task_Email {
     .crm-contactEmail-form-block-recipient {
       td {

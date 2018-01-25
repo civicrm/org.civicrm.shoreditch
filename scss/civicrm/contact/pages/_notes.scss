@@ -1,4 +1,4 @@
-.page-civicrm-contact {
+#{civi-page('contact')} {
   .ui-widget-content .action-link .button {
     box-shadow: $box-shadow;
   }

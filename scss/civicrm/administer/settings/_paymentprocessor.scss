@@ -1,4 +1,4 @@
-&.page-civicrm-admin-paymentprocessor {
+&#{civi-page('admin-paymentprocessor')} {
   @include civicrm-table;
 
   .crm-container {
