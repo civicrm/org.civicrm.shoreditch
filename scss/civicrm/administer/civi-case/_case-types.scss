@@ -1,4 +1,4 @@
-&.page-civicrm-a {
+&#{civi-page('a')} {
   @include civicrm-table;
   
   .crmCaseType {

@@ -1,4 +1,4 @@
-.page-civicrm-activity {
+#{civi-page('activity')} {
   .CRM_Activity_Form_Activity {
     .crm-activity-form-block {
       padding: 20px;
@@ -274,7 +274,7 @@
   }
 }
 
-.page-civicrm-contact {
+#{civi-page('contact')} {
   .crm-activityLinks .select2-container {
     .select2-choice {
       background: none;

@@ -1,4 +1,4 @@
-.page-civicrm-contact-view {
+#{civi-page('contact-view')} {
   #crm-main-content-wrapper {
     overflow: hidden;
   }

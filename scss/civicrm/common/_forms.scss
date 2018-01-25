@@ -52,7 +52,7 @@ $control-height: 30px;
   }
 
   //Page specific
-  @at-root .page-civicrm-contact & {
+  @at-root #{civi-page('contact')} & {
     td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
       @media (min-width: 1330px) {
         //Compensate the ".select2-container" right margin
@@ -61,7 +61,7 @@ $control-height: 30px;
     }
   }
 
-  @at-root .page-civicrm-contact-view & {
+  @at-root #{civi-page('contact-view')} & {
     .select2-search:before {
       top: 17px !important;
     }

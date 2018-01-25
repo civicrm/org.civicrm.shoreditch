@@ -1,4 +1,4 @@
-.page-civicrm-survey {
+#{civi-page('survey')} {
   .CRM_Campaign_Form_Survey_Main {
     .help {
       margin: 0px 20px;
@@ -19,7 +19,7 @@
   }
 }
 
-.page-civicrm-survey-configure {
+#{civi-page('survey-configure')} {
   .crm-content-block {
     > #mainTabContainer {
       .ui-tabs-panel {
