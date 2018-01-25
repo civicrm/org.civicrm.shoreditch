@@ -1,9 +1,0 @@
-// @NOTE there is no mention of the CMS, so we can decouple 
-// the function invocation with the implementation logic
-//
-// (i.e. if in the future we switch cms, or we have a way to identify
-// the page without using the CMS, nothing will change in terms of how
-// the function is called and how it is invoked)
-@function civi-page($pageName) {
-  @return unquote('.page-civicrm-#{$pageName}');
-}
