@@ -1,0 +1,15 @@
+@mixin input-text() {
+  background: $crm-white;
+  border-color: $crm-grayblue-darker;
+  border-radius: $border-radius-base;
+  box-shadow: $crm-input-shadow;
+  color: $crm-copy;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  margin-top: 0;
+  padding: 1px 10px;
+
+  &:focus {
+    border-color: $brand-primary;
+  }
+}

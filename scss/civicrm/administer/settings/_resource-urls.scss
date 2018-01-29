@@ -1,16 +1,14 @@
-&.page-civicrm-admin-setting-url,
-&.page-civicrm-admin-setting-mapping,
-&.page-civicrm-admin-setting-path,
-&.page-civicrm-admin-setting-debug,
-&.page-civicrm-admin-setting-uf {
+&#{civi-page('admin-setting-url')},
+&#{civi-page('admin-setting-mapping')},
+&#{civi-page('admin-setting-path')},
+&#{civi-page('admin-setting-debug')},
+&#{civi-page('admin-setting-uf')} {
 
   .crm-form-block {
-    @include civihr_table;
+    @include civicrm-table;
 
 
     table.form-layout {
-      @include civihr_panel();
-
       td:first-of-type {
         width: 30%;
       }
@@ -22,7 +20,7 @@
     }
 
     .form-item {
-      @include civihr_panel;
+      @include civicrm-panel;
 
       padding: 10px;
     }

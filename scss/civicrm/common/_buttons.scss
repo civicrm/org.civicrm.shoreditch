@@ -6,7 +6,8 @@
 $button-border-radius: 2px;
 
 %btn-civi {
-  @extend .btn, %open-sans-font-family;
+  @extend .btn;
+  @include open-sans-font-family();
   text-shadow: none;
   text-transform: uppercase;
   opacity: 1;
@@ -21,15 +22,14 @@ $button-border-radius: 2px;
 }
 
 %btn-civi-secondary-outline {
-  @extend .btn-secondary-outline;
   border-radius: $button-border-radius;
 }
 
 %submit-buttons-civi {
-  background: #ffffff !important;
+  background: $crm-white !important;
   border-top: 1px solid $gray-lighter;
-  margin: 20px 20px 0 !important;
-  padding: 20px 0 10px !important
+  margin: 0;
+  padding: 20px;
 }
 
 .crm-container {
@@ -62,11 +62,16 @@ $button-border-radius: 2px;
   input.crm-form-submit {
     background: $brand-primary;
     border-color: $brand-primary;
-    border-radius: $panel-border-radius;
+    border-radius: $border-radius-base;
     font-family: $font-family-base;
+    margin-right: 0;
     padding: 8px 12px;
     text-shadow: none;
     text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
 
     &:hover {
       background: darken($brand-primary, $crm-darken-percentage);
@@ -113,9 +118,16 @@ $button-border-radius: 2px;
   .crm-submit-buttons {
     height: auto;
     margin: 0;
+    padding: 20px;
 
     .crm-button {
       float: none !important;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
     }
 
     span.crm-button {
@@ -147,7 +159,6 @@ $button-border-radius: 2px;
       .crm-button-type-cancel,
       .crm-button-type-back {
         input {
-          @extend .btn-secondary-outline;
           ///The default theme uses "!important"
           color: $crm-cancel-color !important;
           border: solid 1px $gray-dark;
@@ -200,12 +211,19 @@ $button-border-radius: 2px;
       color: $crm-white;
     }
   }
+
   .crm-option-edit-link.crm-hover-button,
   .crm-hover-button:not(#addMorePermission):not(.open-inline-noreturn),
   .crm-clear-link {
     border: 0 !important;
-    color: $gray-dark;
     margin: 0 !important;
+  }
+
+  a.crm-selection-reset {
+    &,
+    &:link {
+      color: $gray-dark;
+    }
   }
 
   .crm-accordion-header,
@@ -240,7 +258,7 @@ $button-border-radius: 2px;
     .crm-i {
       padding: 3px;
       background-color: transparent !important;
-      color: #ffffff;
+      color: $crm-white;
     }
   }
 
@@ -252,19 +270,19 @@ $button-border-radius: 2px;
 
   .crm-button-type-refresh {
     .crm-i {
-      color: #ffffff;
+      color: $crm-white;
     }
   }
 
   .crm-form-block > .crm-submit-buttons {
-    min-height: 43px;
+    min-height: 0;
     margin-left: 0;
   }
 
   //"Expand all" and "configure pane" buttons;
   .crm-search-form-block > a,
   .crm-search-form-block > span {
-    @extend .btn, .btn-secondary-outline;
+    @extend .btn;
     float: right;
     border: 0;
     margin-top: $toolbar-top-space;
@@ -294,7 +312,7 @@ $button-border-radius: 2px;
       &:hover {
         &,
         &::before {
-          color: #ffffff !important;
+          color: $crm-white !important;
         }
       }
 
@@ -322,10 +340,6 @@ $button-border-radius: 2px;
 
     .crm-i {
       line-height: normal !important;
-    }
-
-    &:first-of-type a {
-      vertical-align: top !important;
     }
 
     &:not(:first-of-type) a {

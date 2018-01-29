@@ -1,4 +1,6 @@
-.CRM_Contact_Form_Search_Basic .crm-basic-criteria-form-block {
+.CRM_Contact_Form_Search_Basic .crm-basic-criteria-form-block,
+.CRM_Campaign_Form_Search,
+.CRM_Campaign_Form_Gotv .crm-search-form-block {
   .crm-accordion-body {
     padding: 20px;
 
@@ -10,6 +12,17 @@
       &,
       > label {
         font-weight: normal !important;
+      }
+    }
+
+    .crm-submit-buttons {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    table.form-layout {
+      .crm-form-submit {
+        margin: 0 !important;
       }
     }
   }

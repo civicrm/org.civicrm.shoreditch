@@ -1,15 +1,15 @@
-&.page-civicrm-admin-tag #crm-main-content-wrapper {
+&#{civi-page('admin-tag')} #crm-main-content-wrapper {
 
   .crm-content-block {
     background: none;
     box-shadow: none;
 
     #option11 {
-      @include civihr_panel();
+      @include civicrm-panel;
     }
 
     .crm-submit-buttons {
-      @include civihr_panel();
+      @include civicrm-panel;
 
       padding: 0;
     }

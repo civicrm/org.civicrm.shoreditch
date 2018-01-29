@@ -1,0 +1,11 @@
+table.advmultiselect {
+  @include advanced-multiselect;
+}
+
+table.form-layout-compressed {
+  td > {
+    table.advmultiselect {
+      @include advanced-multiselect;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-.page-civicrm-activity {
+#{civi-page('activity')} {
   .CRM_Activity_Form_Activity {
     .crm-activity-form-block {
       padding: 20px;
@@ -122,13 +122,6 @@
 }
 
 .ui-dialog-content .CRM_Activity_Form_Activity {
-  .crm-core-form-recurringentity-block-ends,
-  .crm-core-form-recurringentity-block-absolute_date {
-    input[type="radio"]:checked + label[for]:after {
-      top: 15px;
-    }
-  }
-
   .crm-activity-form-block-followup_activity_type_id {
     input.crm-form-text,
     .dateplugin {
@@ -190,13 +183,6 @@
       &.label {
         padding-bottom: 5px !important;
       }
-    }
-  }
-
-  #recurring-entity-block {
-    input[type=checkbox]:checked+label[for]::after {
-      left: 2px;
-      top: 7px;
     }
   }
 
@@ -288,7 +274,7 @@
   }
 }
 
-.page-civicrm-contact {
+#{civi-page('contact')} {
   .crm-activityLinks .select2-container {
     .select2-choice {
       background: none;

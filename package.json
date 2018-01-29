@@ -10,14 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "civicrm-scssroot": "git://github.com/totten/civicrm-scssroot.git#v0.1.1",
-    "gulp": "^3.9.0",
-    "gulp-postcss": "~6.1.1",
-    "node-sass": "3.4.2",
-    "gulp-sass": "^2.1.0",
-    "gulp-sass-bulk-import": "^0.3.2",
-    "gulp-strip-css-comments": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-bulk-import": "^1.0.1",
+    "gulp-strip-css-comments": "^2.0.0",
     "gulp-transform-selectors": "0.0.2",
-    "postcss-discard-duplicates": "~2.0.1",
-    "postcss-prefix-selector": "~1.4.0"
+    "postcss-discard-duplicates": "^2.1.0",
+    "postcss-prefix-selector": "^1.6.0"
   }
 }

@@ -1,8 +1,8 @@
-&.page-civicrm-admin-locationtype,
-&.page-civicrm-hours-location {
+&#{civi-page('admin-locationtype')},
+&#{civi-page('hours-location')} {
 
   #ltype {
-    @include civihr_panel();
-    @include civihr_table();
+    @include civicrm-panel;
+    @include civicrm-table;
   }
 }

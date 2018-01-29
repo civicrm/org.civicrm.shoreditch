@@ -51,7 +51,7 @@
     }
 
     > table {
-      @include mx-expandable-table();
+      @include expandable-table;
       margin-top: 20px;
       box-shadow: none !important;
 

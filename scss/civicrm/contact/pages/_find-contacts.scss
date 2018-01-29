@@ -1,4 +1,4 @@
-.page-civicrm-contact-search {
+#{civi-page('contact-search')} {
   #searchForm {
     .crm-form-block {
       padding: 0 !important;

@@ -1,6 +1,6 @@
 #Search.CRM_Pledge_Form_Search {
   table.selector {
-    @include mx-expandable-table();
+    @include expandable-table;
     margin-bottom: 20px;
 
     thead.sticky {

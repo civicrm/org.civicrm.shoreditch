@@ -1,10 +1,6 @@
-&.page-civicrm-admin-setting-localization,
-&.page-civicrm-admin-setting-preferences-address,
-&.page-civicrm-admin-setting-date {
-
-  .help {
-    margin: 0;
-  }
+&#{civi-page('admin-setting-localization')},
+&#{civi-page('admin-setting-preferences-address')},
+&#{civi-page('admin-setting-date')} {
 
   .crm-form-block > .spacer {
     display: none;
@@ -16,10 +12,14 @@
   }
 
   .crm-form-textarea {
-    padding: 5px;
-    border: 1px solid $gray-darker;
     width: 300px;
-    min-height: 40px;
+    min-height: 140px;
+  }
+
+  .crm-preferences-address-form-block-description {
+    td {
+      padding: 20px;
+    }
   }
 
   #address_standardization_provider,

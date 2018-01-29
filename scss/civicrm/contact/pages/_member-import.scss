@@ -1,15 +1,18 @@
-.page-civicrm-member-import {
-  .help {
-    padding: 0 20px;
-  }
+#{civi-page('member-import')} {
 
   #DataSource,
   #MapField,
   #Summary {
     .crm-submit-buttons {
-      padding: 15px 10px !important;
+      padding: 15px 20px !important;
       border: none;
       margin: 0 !important;
+    }
+  }
+
+  #DataSource {
+    td.label {
+      padding-left: 0;
     }
   }
 
@@ -30,10 +33,8 @@
       left: 80px;
     }
 
-    input[type=radio] {
-      + label[for] {
-        margin-bottom: 15px;
-      }
+    input[type=radio] + label[for] {
+      margin-bottom: 5px;
     }
 
     .crm-import-datasource-form-block-fieldSeparator {
@@ -50,7 +51,7 @@
     margin-right: -20px;
 
     table {
-      @include mx-expandable-table();
+      @include expandable-table;
       box-shadow: none !important;
       margin-bottom: 20px;
 
@@ -79,7 +80,7 @@
 
   #preview-counts,
   #summary-counts {
-    @include mx-expandable-table();
+    @include expandable-table;
     box-shadow: none !important;
     margin: 20px;
     width: 96% !important;

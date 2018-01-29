@@ -1,4 +1,4 @@
-.page-civicrm-batch {
+#{civi-page('batch')} {
   .crm-submit-buttons {
     margin: 0;
     margin-bottom: 25px;
@@ -128,7 +128,7 @@
   }
 }
 
-.page-civicrm-batch #Batch {
+#{civi-page('batch')} #Batch {
   box-shadow: $box-shadow;
 
   .crm-submit-buttons {
@@ -155,7 +155,7 @@
   }
 }
 
-.page-civicrm-batch-entry #crm-main-content-wrapper {
+#{civi-page('batch-entry')} #crm-main-content-wrapper {
   padding-top: 5.5em;
 
   .CRM_Batch_Form_Entry {
@@ -167,10 +167,6 @@
   }
 
   .help {
-    background: $crm-light-green-color;
-    border: none;
-    color: $gray-darker;
-    padding: 10px;
     position: absolute;
     top: -5.6em;
   }

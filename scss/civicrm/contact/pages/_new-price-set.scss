@@ -1,4 +1,4 @@
-.page-civicrm-admin-price {
+#{civi-page('admin-price')} {
   &,
   .ui-dialog-content {
     table.form-layout td {
@@ -73,7 +73,7 @@
 
     #option11, #option12, #option13,
     #options {
-      @include mx-expandable-table();
+      @include expandable-table;
       box-shadow: none !important;
 
       th {
@@ -144,7 +144,7 @@
     }
 
     #optionField {
-      @include mx-expandable-table();
+      @include expandable-table;
       margin: 20px 0;
 
       td {

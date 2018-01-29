@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'functions';
 @import 'mixins';
 @import '../bootstrap/overrides/variables';
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/overrides/variables';
@@ -17,8 +18,8 @@
 @import 'administer/administer';
 @import 'managers/manager';
 @import "dashboard/dashboard";
+@import "campaign/campaign";
 
-body,
-%open-sans-font-family {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+body {
+  @include open-sans-font-family();
 }

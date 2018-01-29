@@ -1,4 +1,4 @@
-&.page-civicrm-admin-uf-group-add {
+&#{civi-page('admin-uf-group-add')} {
   #crm-main-content-wrapper .crm-submit-buttons,
   #crm-main-content-wrapper .crm-accordion-body .crm-form-block {
     box-shadow: none;
@@ -24,7 +24,7 @@
 
   .crm-content-block table tr {
     border: none;
-    border-bottom: $panel-border;
+    border-bottom: 1px solid $gray-light;
 
     &.odd {
       background: $crm-white;
@@ -48,22 +48,10 @@
       }
     }
   }
-
-  .dataTables_wrapper ul.panel {
-    background: $gray-lighter;
-    border: 1px solid $table-border-color;
-
-    li {
-      background: none;
-    }
-  }
 }
 
-&.page-civicrm-admin-uf {
+&#{civi-page('admin-uf')} {
   #crm-main-content-wrapper {
-    .help {
-      margin: 0 0 20px;
-    }
 
     .crm-submit-buttons {
       border-bottom: 1px solid $crm-background;
@@ -74,8 +62,7 @@
     }
 
     #mainTabContainer {
-      border-radius: 0 0 $border-radius-child $border-radius-child;
-      box-shadow: $crm-form-item-shadow;
+      box-shadow: none !important;
     }
 
     .ui-tabs-panel {
@@ -180,16 +167,6 @@
     textarea {
       vertical-align: middle;
       line-height: 1.5em;
-    }
-
-    input[type=radio] {
-      &:checked {
-        +label[for] {
-          &:after {
-            top: 7px;
-          }
-        }
-      }
     }
   }
 }
