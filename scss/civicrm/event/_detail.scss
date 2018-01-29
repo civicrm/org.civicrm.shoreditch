@@ -130,11 +130,11 @@
 
   .crm-collapsible {
     &:not(.collapsed) .collapsible-title:before {
-      content: '\f107';
+      content: $fa-var-angle-down;
     }
 
     &.collapsed .collapsible-title:before {
-      content: '\f105';
+      content: $fa-var-angle-right;
     }
 
     .collapsible-title + div,
