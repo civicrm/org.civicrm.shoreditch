@@ -6,7 +6,8 @@
 $button-border-radius: 2px;
 
 %btn-civi {
-  @extend .btn, %open-sans-font-family;
+  @extend .btn;
+  @include open-sans-font-family();
   text-shadow: none;
   text-transform: uppercase;
   opacity: 1;
@@ -21,7 +22,6 @@ $button-border-radius: 2px;
 }
 
 %btn-civi-secondary-outline {
-  @extend .btn-secondary-outline;
   border-radius: $button-border-radius;
 }
 
@@ -159,7 +159,6 @@ $button-border-radius: 2px;
       .crm-button-type-cancel,
       .crm-button-type-back {
         input {
-          @extend .btn-secondary-outline;
           ///The default theme uses "!important"
           color: $crm-cancel-color !important;
           border: solid 1px $gray-dark;
@@ -283,7 +282,7 @@ $button-border-radius: 2px;
   //"Expand all" and "configure pane" buttons;
   .crm-search-form-block > a,
   .crm-search-form-block > span {
-    @extend .btn, .btn-secondary-outline;
+    @extend .btn;
     float: right;
     border: 0;
     margin-top: $toolbar-top-space;
