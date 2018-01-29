@@ -45,7 +45,7 @@
   div.crm-clear,
   div.crm-summary-row,
   div.crm-summary-row div.crm-label {
-    background-color: #FFF !important;
+    background-color: $crm-white !important;
   }
 
   // Fix the row width when has the .container class
@@ -432,15 +432,6 @@
       border: 0;
     }
 
-    input[type=checkbox]:checked + label[for]:after {
-      height: 17px;
-      line-height: 17px;
-      left: 2px;
-      margin-top: 2px !important;
-      top: 0 !important;
-      width: 17px;
-    }
-
     [id*='Email_Block'],
     .crm-phone-is_primary {
       input[type="checkbox"],
@@ -480,19 +471,7 @@
       input[type="text"],
       input.crm-form-text,
       input.dateplugin {
-        background: $crm-white;
-        border-color: $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-input-shadow;
-        color: $crm-copy;
-        font-family: $font-family-base;
-        font-size: $font-size-base;
-        margin-top: 0;
-        padding: 1px 10px;
-
-        &:focus {
-          border-color: $brand-primary;
-        }
+        @include input-text;
       }
 
       .crm-label > label,
@@ -550,7 +529,7 @@
 
       .delete-button {
         background: $brand-danger !important;
-        color: #FFF !important;
+        color: $crm-white !important;
         border-color: $brand-danger !important;
 
         float: right !important;
@@ -762,20 +741,8 @@
         margin-top: 0;
       }
 
-      input[type=radio] {
-        &:checked + label[for]:after {
-          top: 7px;
-        }
-      }
-
       .crm-clear-link {
         padding: 4px 0px;
-      }
-    }
-
-    &#CustomData input[type=radio] {
-      &:checked + label[for]:after {
-        top: 7px;
       }
     }
   }
@@ -829,7 +796,7 @@ input[type="text"] {
   padding: 0 10px;
 
   color: $gray-dark;
-  background-color: #fff;
+  background-color: $crm-white;
   background-image: none;
   border: 1px solid $gray-dark;
 }
@@ -931,14 +898,6 @@ input[type="text"] {
 
   #customData .label label {
     line-height: normal;
-  }
-
-  input[type=radio] + label[for] {
-    line-height: normal;
-
-    &:after {
-      top: 7px;
-    }
   }
 
   .Premium td {

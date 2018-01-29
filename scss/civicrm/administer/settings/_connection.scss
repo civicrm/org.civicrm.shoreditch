@@ -1,0 +1,8 @@
+.crm-connection-block {
+  @include civicrm-table;
+
+  h3 {
+    @include panel-header;
+    margin-bottom: 0;
+  }
+}

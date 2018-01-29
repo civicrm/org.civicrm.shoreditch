@@ -1,28 +1,15 @@
-&.page-civicrm-admin-reltype {
-
-  .action-link {
-    @include civihr_panel();
-
-    margin: 0;
-    padding: 10px;
-    height: auto;
-    line-height: normal;
-    text-align: right;
-  }
-
-  #option11 {
-    @include civihr_panel();
+&#{civi-page('admin-reltype')} {
+  .dataTables_wrapper {
+    margin-bottom: 0;
   }
 
   #ltype {
-    @include civihr_table();
+    @include civicrm-table;
 
     table {
-
       tr {
-
         td {
-          background: #FFFFFF !important;
+          background: $crm-white !important;
         }
       }
     }

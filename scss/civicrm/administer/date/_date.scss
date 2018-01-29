@@ -1,8 +1,8 @@
-&.page-civicrm-admin-setting-preferences-date {
+&#{civi-page('admin-setting-preferences-date')} {
 
   #crm-main-content-wrapper .form-item {
-    @include civihr_panel();
-    @include civihr_table();
+    @include civicrm-panel;
+    @include civicrm-table;
 
     padding: 0;
   }

@@ -1,77 +1,90 @@
-// Configuration Checklist
-#crm-container td.tasklist a {
-
-  &:visited {
-    color: $brand-success;
-  }
-
-  &:link {
-    color: $brand-warning;
-  }
-}
-
 // System Status
-#crm-status-list .ui-tabs .ui-tabs-panel {
-  // override !important in higher level style
-  padding: 20px !important;
+#crm-status-list {
+  @include civicrm-panel;
 
-  .crm-status-item {
-    background: #FFFFFF;
-    margin-bottom: 15px;
+  .ui-tabs .ui-tabs-panel {
+    padding: 20px;
 
-    h3 {
-      padding: 10px;
-      margin: 0;
+    .crm-status-item {
+      background: $crm-white;
 
-      &.crm-severity-error {
-        background: $brand-danger;
+      &:not(:last-of-type) {
+        margin-bottom: 15px;
       }
 
-      &.crm-severity-warning {
-        background: $btn-warning-bg;
-        color: $gray-darker;
+      h3 {
+        font-family: $font-family-base;
+        margin: 0;
+        opacity: 1;
+        padding: 10px;
+
+        &.crm-severity-error {
+          background: $brand-danger;
+        }
+
+        &.crm-severity-warning {
+          background: $btn-warning-bg;
+          color: $gray-darker;
+        }
+
+        &.crm-severity-info {
+          background: $btn-success-bg;
+          color: $gray-darker;
+        }
+
+        &.crm-severity-notice {
+          background: $brand-primary;
+        }
       }
 
-      &.crm-severity-info {
-        background: $btn-success-bg;
-        color: $gray-darker;
+      .crm-status-message-body {
+        margin: 0;
+        padding: 15px;
       }
-    }
 
-    .crm-status-message-body {
-      margin: 0;
-      padding: 15px;
-    }
+      button {
+        @include box-shadow($box-shadow);
+        background: $crm-white;
+        border: none;
+        border-radius: $border-radius-base;
+        cursor: pointer;
+        padding: 5px 10px;
+      }
 
-    button {
-      background: #FFFFFF;
-      box-shadow: $box-shadow;
-      padding: 5px 10px;
-      border: none;
-      border-radius: 3px;
-    }
-
-    .hush-menu {
-
-      ul {
-        background: #FFFFFF;
-        list-style: none;
-        box-shadow: $box-shadow;
-
-        & > li {
-          background: #FFFFFF;
-          padding: 10px;
-          color: $gray-dark;
-          border: none;
+      .crm-status-item-actions {
+        button {
+          @include button-variant($crm-white, $gray-dark, $gray-dark);
+          @include button-remove-border-color();
 
           &:hover {
-            background: $gray-light;
-            border: none;
+            background-color: darken($crm-copy, $crm-darken-percentage);
           }
+        }
+      }
 
-          // remove jquery's margin: -1px;
-          &.ui-state-focus {
-            margin: 0;
+      .hush-menu {
+        ul {
+          @include box-shadow($box-shadow);
+          background: $crm-white;
+          border: none;
+          list-style: none;
+          z-index: 1;
+
+          & > li {
+            background: $crm-white;
+            padding: 10px;
+            color: $gray-dark;
+            border: none;
+
+            &:hover {
+              background: $gray-light;
+              border: none;
+            }
+
+            // remove jquery's margin: -1px;
+            &.ui-state-focus {
+              margin: 0;
+            }
           }
         }
       }

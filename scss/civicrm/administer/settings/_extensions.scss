@@ -1,7 +1,12 @@
-&.page-civicrm-admin-extensions {
+&#{civi-page('admin-extensions')} {
+  .help {
+    margin: 20px;
+  }
 
   #mainTabContainer {
-    @include civihr_table();
+    @include civicrm-table;
+    border-radius: none !important;
+    box-shadow: none !important;
 
     #extensions-addnew,
     #extensions-main {
@@ -15,24 +20,28 @@
         td:not(:first-of-type) {
           width: 70px;
           text-overflow: clip;
-          overflow: scroll;
         }
 
         tr.hiddenElement {
-          background: #FFFFFF;
+          background: $crm-white;
 
           table.crm-info-panel {
             width: 100%;
 
             td {
               text-overflow: clip;
-              overflow: scroll;
               width: auto;
 
               &.label {
                 width: 150px;
               }
             }
+          }
+        }
+
+        tr.extension-installed {
+          td {
+            background: $crm-gray-lightest !important;
           }
         }
       }

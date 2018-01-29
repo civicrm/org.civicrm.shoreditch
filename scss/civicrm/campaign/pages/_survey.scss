@@ -1,0 +1,87 @@
+#{civi-page('survey')} {
+  .CRM_Campaign_Form_Survey_Main {
+    .help {
+      margin: 0px 20px;
+    }
+    .crm-campaign-survey-new_campaign_link {
+      text-transform: capitalize;
+    }
+  }
+
+  .CRM_Campaign_Form_Search {
+    .crm-results-block {
+      .crm-pager {
+        > .element-right {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+#{civi-page('survey-configure')} {
+  .crm-content-block {
+    > #mainTabContainer {
+      .ui-tabs-panel {
+        .crm-submit-buttons:first-of-type {
+          border-top: 0;
+          margin-top: 0 !important;
+        }
+      }
+
+      .crm-campaign-survey-results-form-block {
+        .form-layout-compressed {
+          margin: 0;
+          width: 100%;
+
+          td {
+            vertical-align: middle;
+
+            &:not(.label) {
+              padding: 0;
+            }
+          }
+        }
+
+        fieldset {
+          legend {
+            @include section-title;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: 100%;
+          }
+
+          .add-remove-link {
+            font-size: $font-size-base;
+            padding: 20px;
+          }
+
+          .description {
+            padding-left: 20px;
+          }
+
+          table {
+            @extend %civihr-table;
+            box-shadow: none !important;
+
+            td:first-child {
+              padding-left: 20px !important;
+            }
+
+            a {
+              .crm-i.fa-trash {
+                color: $brand-danger;
+              }
+
+              &:hover {
+                .crm-i.fa-trash {
+                  color: darken($brand-danger, $crm-darken-percentage);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

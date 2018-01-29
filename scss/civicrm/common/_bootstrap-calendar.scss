@@ -113,14 +113,14 @@ $datepicker-gray-darker: #525966;
 
         &.ui-state-active {
           background-color: $brand-primary !important;
-          color: #fff !important;
+          color: $crm-white !important;
         }
       }
 
       &.ui-datepicker-days-cell-over.ui-datepicker-today {
         a.ui-state-highlight {
           background-color: $brand-primary !important;
-          color: #fff !important;
+          color: $crm-white !important;
         }
       }
     }
