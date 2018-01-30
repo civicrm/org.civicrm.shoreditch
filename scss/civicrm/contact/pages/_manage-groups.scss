@@ -445,8 +445,14 @@
     }
   }
 
-  .crm-search-tasks {
-    @extend %search-filter-block;
+  #alpha-filter {
+    background-color: #ffffff !important;
+    box-shadow: $box-shadow;
+    padding: 5px 20px !important;
+
+    li a {
+      color: $crm-copy;
+    }
   }
 
   table.selector {

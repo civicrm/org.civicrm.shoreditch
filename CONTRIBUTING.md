@@ -23,7 +23,7 @@ If you'd like to contribute to the project, please make sure to familiarize with
 * Reference any issues or pull requests that you think is useful to mention
 
 ### Submitting a PR
-When your work is complete and you have tested it locally, you can open a PR against the `develop` branch.
+When your work is complete and you have tested it locally, you can open a PR against the `master` branch.
 
 In the PR give a description of what you changed (and why!), and attach before & after screenshots to show the effects of your changes.
 
