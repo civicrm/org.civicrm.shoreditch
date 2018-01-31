@@ -1,3 +1,10 @@
+.jstree-default {
+  .jstree-wholerow-hovered,
+  .jstree-wholerow-clicked {
+    background: $gray-light;
+  }
+}
+
 .jstree-contextmenu {
   &.vakata-context {
     @include box-shadow($box-shadow);
