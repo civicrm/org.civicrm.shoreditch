@@ -1,5 +1,6 @@
 .replace-plain {
-  @extend %custom-form-control;
+  @extend .form-control;
+  box-sizing: border-box;
   height: auto !important;
   line-height: normal !important;
   min-height: 30px;
