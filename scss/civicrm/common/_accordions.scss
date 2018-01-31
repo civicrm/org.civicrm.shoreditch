@@ -3,23 +3,10 @@
 }
 
 .crm-accordion-header {
-  @extend %no-border-radius;
-  background: $crm-accordion-header-color !important;
-  background-image: none !important;
-  color: $gray-darker;
-  font-family: $font-family-base;
-  font-weight: 600;
-  line-height: 18px;
-  padding: 16px 20px;
-  position: relative;
+  @include accordion-header;
 
   &:not(.crm-master-accordion-header) {
     font-size: 13px !important;
-  }
-
-  &::before {
-    @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
-    padding-right: 10px;
   }
 
   &.crm-master-accordion-header {
