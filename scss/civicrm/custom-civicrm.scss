@@ -21,7 +21,6 @@
 @import "campaign/campaign";
 @import "event/event";
 
-body,
-%open-sans-font-family {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+body {
+  @include open-sans-font-family();
 }

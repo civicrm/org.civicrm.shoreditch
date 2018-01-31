@@ -13,7 +13,7 @@
 If you are doing development on this extension, then you may need to build
 new CSS files. This requires the toolchain for SCSS=>CSS compilation.
 
-First of all you need [NodeJS](https://nodejs.org/). Please be aware that currently Shoreditch *does not* support NodeJS v6 or higher! It is recommended that you install NodeJS **v5.12.0** (you can use [nvm](https://github.com/creationix/nvm) for managing multiple node versions on the same machine.
+First of all you need [NodeJS](https://nodejs.org/). Please be aware that currently Shoreditch *does not* support NodeJS v9 or higher! It is recommended that you install NodeJS LTS version **v8.9.4** (you can use [nvm](https://github.com/creationix/nvm) for managing multiple node versions on the same machine.
 
 Once you have NodeJS installed, run
 
