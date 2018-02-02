@@ -1,0 +1,9 @@
+.crm-icon-picker-button {
+  @include input-text;
+  height: 19px;
+  padding: 4px 10px;
+
+  .ui-icon {
+    margin-top: 0;
+  }
+}
