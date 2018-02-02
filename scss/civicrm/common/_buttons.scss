@@ -382,3 +382,38 @@ a {
     }
   }
 }
+
+button {
+  background: $brand-primary;
+  border: 0;
+  border-radius: $border-radius-base;
+  color: $crm-white;
+  font-family: $font-family-base;
+  height: 36px;
+  line-height: 1;
+  padding: 11px 12px;
+  text-shadow: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &:hover {
+    background: darken($brand-primary, $crm-darken-percentage);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &.cancel {
+    background: $crm-white;
+    border: 1px solid $crm-copy;
+    color: $crm-cancel-color;
+
+    &:hover {
+      background: $crm-copy;
+      color: $crm-white;
+    }
+  }
+}
+

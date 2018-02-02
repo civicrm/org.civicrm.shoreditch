@@ -19,6 +19,7 @@
 @import 'managers/manager';
 @import "dashboard/dashboard";
 @import "campaign/campaign";
+@import "event/event";
 
 body {
   @include open-sans-font-family();
