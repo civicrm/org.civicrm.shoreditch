@@ -1,4 +1,4 @@
-&.page-civicrm-admin-uf-group-add {
+&#{civi-page('admin-uf-group-add')} {
   #crm-main-content-wrapper .crm-submit-buttons,
   #crm-main-content-wrapper .crm-accordion-body .crm-form-block {
     box-shadow: none;
@@ -48,18 +48,9 @@
       }
     }
   }
-
-  .dataTables_wrapper ul.panel {
-    background: $gray-lighter;
-    border: 1px solid $table-border-color;
-
-    li {
-      background: none;
-    }
-  }
 }
 
-&.page-civicrm-admin-uf {
+&#{civi-page('admin-uf')} {
   #crm-main-content-wrapper {
 
     .crm-submit-buttons {
@@ -176,16 +167,6 @@
     textarea {
       vertical-align: middle;
       line-height: 1.5em;
-    }
-
-    input[type=radio] {
-      &:checked {
-        +label[for] {
-          &:after {
-            top: 7px;
-          }
-        }
-      }
     }
   }
 }

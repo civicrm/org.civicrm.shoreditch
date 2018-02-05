@@ -1,5 +1,9 @@
-&.page-civicrm-admin-sms-provider {
+&#{civi-page('admin-sms-provider')} {
   .crm-container {
+    .crm-content-block {
+      overflow: hidden;
+    }
+
     #ltype {
       tr.columnheader {
         border: none;

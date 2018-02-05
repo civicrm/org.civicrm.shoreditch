@@ -1,10 +1,13 @@
 @import "permissions/access";
 
-.page-civicrm-admin,
-.page-civicrm-a {
+#{civi-page('admin')},
+#{civi-page('a')} {
   @import "common/common";
 
+  @import "system-status/administer-list";
+  @import "system-status/configtask";
   @import "system-status/system-status";
+
   @import "customize-data/customize-data";
   @import "profiles/profiles";
   @import "tags/tags";

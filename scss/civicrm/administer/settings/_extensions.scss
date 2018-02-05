@@ -1,4 +1,7 @@
-&.page-civicrm-admin-extensions {
+&#{civi-page('admin-extensions')} {
+  .help {
+    margin: 20px;
+  }
 
   #mainTabContainer {
     @include civicrm-table;
@@ -33,6 +36,12 @@
                 width: 150px;
               }
             }
+          }
+        }
+
+        tr.extension-installed {
+          td {
+            background: $crm-gray-lightest !important;
           }
         }
       }

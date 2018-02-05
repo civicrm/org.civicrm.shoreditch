@@ -1,4 +1,4 @@
-.page-civicrm-contact-add {
+#{civi-page('contact-add')} {
   .crm-search-form-block {
     border-radius: $border-radius-child !important;
   }
@@ -250,48 +250,6 @@
 
       span {
         background: none;
-      }
-
-      input[type=checkbox] {
-
-        &:checked + spab {
-          label[for]::before {
-            margin-right: 5px;
-            vertical-align: middle;
-          }
-        }
-
-        + span {
-          label[for]::before {
-            content: '';
-            display: inline-block;
-            width: 16px;
-            min-width: 16px;
-            height: 16px;
-            border-radius: 2px;
-            margin-right: 10px;
-            margin-bottom: -5px;
-            background-color: $crm-white;
-            box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
-            border: solid 1px $crm-grayblue-darker;
-          }
-        }
-
-        &:checked + spab {
-          label[for] {
-            position: relative;
-          }
-        }
-        &:checked + span {
-          label[for]::after {
-            @include fa-icon($font-size: 15px, $content: '\f00c', $color: $gray-darker);
-            display: inline-block;
-            position: absolute;
-            left: 1px;
-            top: 7px;
-            margin-top: -5px;
-          }
-        }
       }
 
       .form-checkbox {

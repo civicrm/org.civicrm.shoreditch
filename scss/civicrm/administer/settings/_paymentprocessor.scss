@@ -1,7 +1,11 @@
-&.page-civicrm-admin-paymentprocessor {
+&#{civi-page('admin-paymentprocessor')} {
   @include civicrm-table;
 
   .crm-container {
+    .crm-content-block {
+      overflow: hidden;
+    }
+
     #ltype {
       tr.columnheader {
         border: none;

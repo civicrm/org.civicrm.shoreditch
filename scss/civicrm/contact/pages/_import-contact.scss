@@ -1,8 +1,9 @@
-.page-civicrm-import-contact,
-.page-civicrm-import-activity,
-.page-civicrm-import-custom {
+#{civi-page('import-contact')},
+#{civi-page('import-activity')},
+#{civi-page('import-custom')},
+#{civi-page('event-import')} {
 
-  &.page-civicrm-import-custom {
+  &#{civi-page('import-custom')} {
     #upload-file {
       > .crm-submit-buttons {
         @extend %submit-buttons-civi;
@@ -17,7 +18,7 @@
   }
 
   #wizard-steps {
-    display: none;
+    margin: -20px -20px 0 -20px;
   }
 
   #dataSource {
@@ -25,15 +26,17 @@
   }
 
   .crm-form-block.crm-form-block {
-    box-shadow: none;
-    padding: 0 !important;
+    .crm-form-block {
+      box-shadow: none;
+    }
 
     td {
       color: $crm-copy;
     }
 
-    > .crm-submit-buttons {
-      margin: 20px 0 0 0 !important;
+    .crm-submit-buttons {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     h2 {
@@ -88,10 +91,20 @@
   #Preview {
     > .crm-form-block.crm-form-block {
       padding: 20px 0 0 0 !important;
+
+      .crm-submit-buttons {
+        padding: 20px;
+      }
+    }
+
+    #wizard-steps {
+      margin-left: 0;
+      margin-right: 0;
     }
 
     .help {
-      margin: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     h2 {
@@ -166,17 +179,14 @@
     padding-left: 0;
   }
 
-  input[type=checkbox]:checked+label[for]::after {
-    left: 2px;
-    top: 6px;
-  }
-
-  .CRM_Contact_Import_Form_DataSource {
+  .CRM_Contact_Import_Form_DataSource,
+  .CRM_Event_Import_Form_DataSource {
     .form-layout {
       width: auto;
 
       td.label {
         display: table-cell;
+        padding-left: 0;
       }
     }
 
@@ -205,6 +215,12 @@
           display: block;
           min-height: 100px;
         }
+      }
+    }
+
+    #common-form-controls {
+      td.label {
+        padding-left: 0;
       }
     }
   }

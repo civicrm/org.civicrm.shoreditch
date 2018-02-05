@@ -1,4 +1,4 @@
-.page-civicrm-tag {
+#{civi-page('tag')} {
 
   #branding .page-title {
     margin-bottom: 20px !important;
@@ -17,7 +17,44 @@
   }
 
   .tag-info {
+    border: 1px solid $crm-grayblue-dark;
+    border-radius: $border-radius-base;
+    box-shadow: none;
+    color: $gray-darker;
+    font-size: $font-size-base;
     right: 20px;
+
+    .tdl {
+      color: $gray-darker;
+      font-weight: $crm-font-weight-h3;
+    }
+
+    .button {
+      &:hover {
+        .fa-trash {
+          color: $crm-white;
+        }
+      }
+    }
+
+    .clear-tag-selection {
+      color: $brand-danger;
+      opacity: 1;
+
+      .fa-ban {
+        &:before {
+          @include fa-icon($font-size-base,$fa-var-close, $brand-danger);
+        }
+      }
+
+      &:hover {
+        .fa-ban {
+          &:before {
+            color: darken($brand-danger, $crm-darken-percentage);
+          }
+        }
+      }
+    }
   }
 
   .tag-tree {
@@ -43,8 +80,8 @@
     background: $brand-primary;
 
     &:hover {
+      background: darken($brand-primary, $crm-darken-percentage);
       color: $crm-white;
-      opacity: .9;
     }
   }
 
@@ -130,38 +167,6 @@
 
         span {
           background: none;
-        }
-
-        input[type=checkbox] {
-          display: none !important;
-
-          &:checked + span label[for]::before,
-          + span label[for]::before {
-            margin-right: 5px;
-            vertical-align: middle;
-          }
-          + span label[for]::before {
-            content: '';
-            display: inline-block;
-            width: 16px;
-            min-width: 16px;
-            height: 16px;
-            border-radius: 2px;
-            background-color: $crm-white;
-            box-shadow: $crm-checkbox-shadow;
-            border: solid 1px $crm-grayblue-darker;
-          }
-          &:checked + span label[for] {
-            position: relative;
-          }
-          &:checked + span label[for]::after {
-            @include fa-icon($font-size: 15px, $content: '\f00c', $color: $gray-darker);
-            display: inline-block;
-            position: absolute;
-            left: 2px;
-            top: 8px;
-            margin-top: -6px;
-          }
         }
       }
     }

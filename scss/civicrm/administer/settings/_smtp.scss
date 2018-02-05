@@ -1,22 +1,11 @@
-&.page-civicrm-admin-setting-smtp {
+&#{civi-page('admin-setting-smtp')} {
   .crm-form-block {
     @include civicrm-table;
 
     table.form-layout-compressed {
-
-      td {
-        input[type=radio] + label {
-          line-height: 135%;
-        }
-      }
-
       .crm-smtp-form-block-outBound_option {
         td {
           vertical-align: middle;
-
-          &.label {
-            padding-top: 0;
-          }
         }
       }
     }

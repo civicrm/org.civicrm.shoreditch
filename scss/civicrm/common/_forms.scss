@@ -3,7 +3,8 @@
 $control-height: 30px;
 
 %custom-form-control {
-  @extend .form-control, %open-sans-font-family;
+  @extend .form-control;
+  @include open-sans-font-family();
   height: $control-height;
   line-height: $control-height;
   box-sizing: border-box;
@@ -31,6 +32,10 @@ $control-height: 30px;
     }
   }
 
+  input.crm-form-text {
+    @include input-text;
+  }
+
   &.select2-container,
   &.select2-choice {
     @extend %responsive;
@@ -48,7 +53,7 @@ $control-height: 30px;
   }
 
   //Page specific
-  @at-root .page-civicrm-contact & {
+  @at-root #{civi-page('contact')} & {
     td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
       @media (min-width: 1330px) {
         //Compensate the ".select2-container" right margin
@@ -57,7 +62,7 @@ $control-height: 30px;
     }
   }
 
-  @at-root .page-civicrm-contact-view & {
+  @at-root #{civi-page('contact-view')} & {
     .select2-search:before {
       top: 17px !important;
     }
@@ -129,10 +134,6 @@ $control-height: 30px;
     input[type="radio"] {
       margin: 0 5px 0 0;
       vertical-align: middle;
-
-      &:not(:first-of-type) {
-        margin-left: 15px !important;
-      }
     }
 
     div.form-item {
@@ -140,7 +141,8 @@ $control-height: 30px;
     }
 
     select {
-      @extend %responsive, %open-sans-font-family;
+      @extend %responsive;
+      @include open-sans-font-family();
 
       &:not([multiple]) {
         @extend %custom-form-control;
@@ -179,7 +181,8 @@ $control-height: 30px;
     input[type=search],
     input[type=text],
     textarea {
-      @extend %custom-form-control, %open-sans-font-family;
+      @extend %custom-form-control;
+      @include open-sans-font-family();
       @include placeholder;
     }
 
@@ -537,7 +540,7 @@ $control-height: 30px;
     }
 
     .cke_combo_text {
-      @extend %open-sans-font-family;
+      @include open-sans-font-family();
       border-right: solid 1px $gray-dark;
       margin: 0;
       padding-right: 7px;
@@ -757,32 +760,5 @@ input.crm-form-date {
 
   td.label {
     padding-left: 0;
-  }
-
-  input[type=checkbox]:not(.old-radiocheckbox-style) {
-    position: relative;
-
-    &::before {
-      content: '';
-      cursor: pointer;
-      display: inline-block;
-      width: 16px;
-      min-width: 16px;
-      height: 16px;
-      border-radius: 2px;
-      background-color: $crm-white;
-      box-shadow: $crm-checkbox-shadow;
-      border: solid 1px $crm-grayblue-darker;
-    }
-
-    &:checked::after {
-      @include fa-icon($font-size: 15px, $content: $fa-var-success, $color: $gray-darker);
-      cursor: pointer;
-      display: inline-block;
-      position: absolute;
-      left: 2px;
-      top: 7px;
-      margin-top: -6px;
-    }
   }
 }

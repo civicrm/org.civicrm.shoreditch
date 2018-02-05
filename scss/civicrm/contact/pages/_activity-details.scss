@@ -1,4 +1,4 @@
-.page-civicrm-report-instance {
+#{civi-page('report-instance')} {
   .crm-report-field-form-block {
     box-shadow: $box-shadow;
     margin-bottom: 20px;

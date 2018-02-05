@@ -66,9 +66,7 @@
 
   // Summary tab
   &#contact-summary {
-    float: left !important;
     padding: 20px !important;
-    width: calc(85% - 40px) !important;
   }
 
   // Contributions tab
@@ -434,15 +432,6 @@
       border: 0;
     }
 
-    input[type=checkbox]:checked + label[for]:after {
-      height: 17px;
-      line-height: 17px;
-      left: 2px;
-      margin-top: 2px !important;
-      top: 0 !important;
-      width: 17px;
-    }
-
     [id*='Email_Block'],
     .crm-phone-is_primary {
       input[type="checkbox"],
@@ -482,19 +471,7 @@
       input[type="text"],
       input.crm-form-text,
       input.dateplugin {
-        background: $crm-white;
-        border-color: $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-input-shadow;
-        color: $crm-copy;
-        font-family: $font-family-base;
-        font-size: $font-size-base;
-        margin-top: 0;
-        padding: 1px 10px;
-
-        &:focus {
-          border-color: $brand-primary;
-        }
+        @include input-text;
       }
 
       .crm-label > label,
@@ -764,20 +741,8 @@
         margin-top: 0;
       }
 
-      input[type=radio] {
-        &:checked + label[for]:after {
-          top: 7px;
-        }
-      }
-
       .crm-clear-link {
         padding: 4px 0px;
-      }
-    }
-
-    &#CustomData input[type=radio] {
-      &:checked + label[for]:after {
-        top: 7px;
       }
     }
   }
@@ -933,14 +898,6 @@ input[type="text"] {
 
   #customData .label label {
     line-height: normal;
-  }
-
-  input[type=radio] + label[for] {
-    line-height: normal;
-
-    &:after {
-      top: 7px;
-    }
   }
 
   .Premium td {

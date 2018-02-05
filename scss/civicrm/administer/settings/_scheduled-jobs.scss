@@ -1,4 +1,4 @@
-&.page-civicrm-admin-job {
+&#{civi-page('admin-job')} {
 
   #ltype {
     @include civicrm-table;
@@ -27,14 +27,15 @@
       border-radius: 0 0 $border-radius-base $border-radius-base !important;
 
       .crm-form-time {
-        @extend %custom-form-control, %open-sans-font-family;
+        @extend %custom-form-control;
+        @include open-sans-font-family();
         margin: 10px 0;
       }
     }
   }
 }
 
-&.page-civicrm-admin-joblog {
+&#{civi-page('admin-joblog')} {
   h3 {
     @include panel-header;
     margin-bottom: 0;

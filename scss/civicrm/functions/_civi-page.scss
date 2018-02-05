@@ -1,0 +1,6 @@
+/**
+* This function is used to generate page names based on CMS currently in used for styling.
+*/
+@function civi-page($pageName) {
+  @return unquote('.page-civicrm-#{$pageName}');
+}
