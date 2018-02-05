@@ -1,4 +1,4 @@
-.page-civicrm-contribute {
+#{civi-page('contribute')} {
   #branding h1.page-title {
     margin-bottom: 20px !important;
   }
@@ -246,9 +246,9 @@
   }
 }
 
-.page-civicrm-contribute-campaign,
-.page-civicrm-pcp-info,
-.page-civicrm-contribute-transact {
+#{civi-page('contribute-campaign')},
+#{civi-page('pcp-info')},
+#{civi-page('contribute-transact')} {
   .crm-form-block {
     legend {
       @include panel-header;
@@ -273,7 +273,7 @@
   }
 }
 
-.page-civicrm-contribute-transact {
+#{civi-page('contribute-transact')} {
   .crm-form-block {
     legend {
       @include section-title;
@@ -297,15 +297,11 @@
   }
 }
 
-.page-civicrm-contribute-search {
+#{civi-page('contribute-search')} {
   .CRM_Contribute_Form_Search {
     .crm-search-tasks {
       background-color: $crm-white;
       border-radius: 0 0 $panel-border-radius $panel-border-radius;
-    }
-
-    .crm-search-tasks input[type="radio"]:checked + label[for]:after {
-      top: 7px;
     }
 
     .crm-search-tasks td {
@@ -545,7 +541,7 @@
   }
 }
 
-.page-civicrm-contribute-add {
+#{civi-page('contribute-add')} {
   .CRM_Contribute_Form_Contribution {
     .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
       padding: 20px !important;
@@ -576,7 +572,7 @@
   }
 }
 
-.page-civicrm-contact-view-contribution {
+#{civi-page('contact-view-contribution')} {
   #branding {
     display: block;
   }
@@ -872,12 +868,6 @@
     .crm-hover-button:hover {
       color: $crm-copy !important;
     }
-  }
-}
-
-.ui-dialog-content .CRM_Contribute_Form_Contribution {
-  .custom-group-Donor_Information input[type="radio"]:checked + label[for]:after {
-    top: 15px;
   }
 }
 
@@ -1192,7 +1182,7 @@
   }
 }
 
-.page-civicrm-contact-view .ui-dialog .CRM_Contribute_Form_Contribution {
+#{civi-page('contact-view')} .ui-dialog .CRM_Contribute_Form_Contribution {
   .crm-link-credit-card-mode {
     position: absolute;
     right: 0;

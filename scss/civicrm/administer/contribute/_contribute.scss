@@ -1,5 +1,5 @@
-&.page-civicrm-admin-contribute,
-&.page-civicrm-admin-pcp {
+&#{civi-page('admin-contribute')},
+&#{civi-page('admin-pcp')} {
   .crm-container {
     div#alpha-filter {
       @include box-shadow($box-shadow);
@@ -20,7 +20,7 @@
   }
 }
 
-&.page-civicrm-admin-contribute {
+&#{civi-page('admin-contribute')} {
   .crm-contribution-search_contribution-form-block {
     margin-bottom: 20px;
 
