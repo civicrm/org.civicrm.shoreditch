@@ -132,8 +132,10 @@
    * @param {object} $menuItem
    */
   function wrapMenuItemLabelInHTML ($menuItem) {
-    $menuItem.contents().filter(function () {
-      return this.nodeType === 3 && $(this).parent().is($menuItem);
-    }).wrap('<span class="menumain-label" />')
+    var itemLabel = $('.crm-i, .fa', $menuItem)[0].nextSibling;
+
+    if (itemLabel.nodeType === Node.TEXT_NODE) {
+      $(itemLabel).wrap('<span class="menumain-label" />');
+    }
   }
 }(CRM.$, CRM._));
