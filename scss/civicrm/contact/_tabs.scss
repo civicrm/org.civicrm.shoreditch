@@ -78,8 +78,8 @@
           content: "\f05a";
         }
 
-        &[title="Absences"]::before {
-          content: "\f273";
+        &[title="Leave"]::before {
+          content: "\f0b1";
         }
 
         &[title="Appraisals"]::before {
@@ -177,7 +177,7 @@
   }
 
   .ui-dialog {
-    background: #FFFFFF;
+    background: $crm-white;
   }
 
   /* overriding ui-widget-content class from jquery-ui.css */

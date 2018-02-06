@@ -1,0 +1,6 @@
+/*
+* The translate() CSS function moves the position of the element on the plane. This transformation is characterized by a vector whose coordinates define how much it moves in each direction.
+*/
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}

@@ -1,11 +1,23 @@
-&.page-civicrm-admin-menu {
+&#{civi-page('admin-menu')} {
 
   .crm-content-block {
 
     #new-menu-item {
       background: $gray-lighter;
       margin: 0;
-      padding: 10px;
+      padding: 20px;
+
+      #newMenuItem {
+        margin-left: 0 !important;
+      }
+    }
+
+    .nav-reset {
+      padding: 20px;
+    }
+
+    .spacer {
+      display: none;
     }
 
     #navigation-tree {

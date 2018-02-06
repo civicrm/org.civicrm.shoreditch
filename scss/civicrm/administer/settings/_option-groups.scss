@@ -1,29 +1,29 @@
-&.page-civicrm-admin-options {
+&#{civi-page('admin-options')} {
 
   #browseValues {
-    @include civihr_table;
-    @include civihr_panel;
+    @include civicrm-table;
+    @include civicrm-panel;
+    overflow: hidden;
   }
 }
 
 
-&.page-civicrm-admin-setting-preferences-multisite,
-&.page-civicrm-admin-setting-misc {
+&#{civi-page('admin-setting-preferences-multisite')},
+&#{civi-page('admin-setting-misc')} {
 
   .crm-form-block {
-    @include civihr_table(true);
-
-    .crm-submit-buttons {
-      box-shadow: none;
-      margin: 0 !important;
-    }
+    @include civicrm-table;
 
     .form-layout {
       margin: 10px 0;
     }
 
+    h3 {
+      @include section-title;
+    }
+
     .description {
-      padding: 10px;
+      padding: 20px;
     }
   }
 }

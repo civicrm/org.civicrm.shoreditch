@@ -1,0 +1,46 @@
+/*
+ * Adds CiviCRM table-specific styles for all children tables of admin part
+ */
+@mixin civicrm-table() {
+  table:not(.form-layout-compressed) {
+    border-top: 1px solid $crm-grayblue-dark;
+    box-shadow: none;
+    max-width: 100%;
+
+    tr {
+      background: $crm-white;
+      border: none;
+      border-bottom: 1px solid $gray-light;
+
+      &.columnheader {
+        background: $gray-lighter;
+      }
+
+      & > td,
+      & > th {
+        background: transparent;
+        border: none;
+        color: $gray-dark;
+        line-height: 18px;
+        padding: 16px 10px;
+        vertical-align: middle;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
+        }
+      }
+
+      & > th {
+        color: $gray-darker;
+
+        .DataTables_sort_icon {
+          display: block;
+        }
+      }
+    }
+  }
+}

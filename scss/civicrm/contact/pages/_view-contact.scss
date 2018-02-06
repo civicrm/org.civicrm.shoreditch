@@ -1,4 +1,4 @@
-.page-civicrm-contact-view {
+#{civi-page('contact-view')} {
   #crm-main-content-wrapper {
     overflow: hidden;
   }
@@ -63,11 +63,6 @@
 
   .modal-dialog td {
     vertical-align: middle;
-  }
-
-  .help {
-    font-family: $font-family-base;
-    padding: 10px;
   }
 
   .action-link a.button {

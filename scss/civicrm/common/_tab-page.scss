@@ -1,0 +1,59 @@
+/* 
+* This style is for pages which does has outer container as tabs.
+* ie /civicrm/tag?reset=1
+*/
+
+.page-civicrm:not(#{civi-page('contact-view')}) {
+  #crm-main-content-wrapper {
+    > .crm-content-block {
+      > #mainTabContainer {
+        @include box-shadow($box-shadow);
+        border-radius: $border-radius-base;
+
+        .help {
+          margin: 20px;
+        }
+
+        .messages.no-popup {
+          margin: 20px 20px 0;
+        }
+
+        > .ui-tabs-nav {
+          border-radius: $border-radius-base $border-radius-base 0 0;
+        }
+
+        > .ui-tabs-panel {
+          border-bottom: none;
+          min-height: auto;
+          padding: 0;
+
+          .dataTables_wrapper,
+          .crm-form-block {
+            box-shadow: none;
+          }
+
+          .dataTables_wrapper {
+            margin-bottom: 0;
+
+            tr.columnheader {
+              border: none;
+
+              th {
+                border-bottom-width: 1px;
+              }
+            }
+          }
+
+          .action-link {
+            margin: 0;
+            padding: 20px;
+
+            a.button {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
