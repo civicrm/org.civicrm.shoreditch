@@ -1,6 +1,6 @@
 # org.civicrm.shoreditch (developmental)
 
-The "Shoreditch" extension is a theme for CiviCRM based on a contemporary [flat design](https://en.wikipedia.org/wiki/Flat_design) and
+The "Shoreditch" extension is a theme for CiviCRM(Drupal based installation) based on a contemporary [flat design](https://en.wikipedia.org/wiki/Flat_design) and
 [Bootstrap(S)CSS](http://getbootstrap.com/css/).  It includes two major components:
 
  * "`bootstrap.css`" is a build of Bootstrap based on the standard Bootstrap style-guide. It can be used with other CiviCRM extensions which satisfy the Bootstrap style-guide.
