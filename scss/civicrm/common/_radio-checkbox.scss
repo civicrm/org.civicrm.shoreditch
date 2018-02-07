@@ -1,109 +1,17 @@
 .crm-container {
   input[type=checkbox],
   input[type=radio] {
-    display: none;
+    margin: 0 4px 0 0;
+    vertical-align: middle;
 
     + label[for] {
+      font-weight: $crm-font-weight-h3;
       margin-right: 10px;
     }
   }
+
   input[type=checkbox] + label[for],
   input[type=radio] + label[for] {
     cursor: pointer;
-  }
-
-  // New custom look for checkboxes and radio buttons
-  input[type=radio]:not(.old-radiocheckbox-style) {
-    + label[for] {
-      position: relative;
-    }
-
-    &:checked + label[for]::before,
-    + label[for]::before {
-      margin-right: 5px;
-      vertical-align: middle;
-    }
-    + label[for]::before {
-      content: '';
-      display: inline-block;
-      width: 14px;
-      min-width: 14px;
-      height: 14px;
-      background-color: #ffffff;
-      box-shadow: $crm-checkbox-shadow;
-      border: solid 1px $crm-grayblue-darker;
-      border-radius: 50%;
-    }
-    &:checked + label[for]::after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      top: 6px;
-      left: 4px;
-      width: 8px;
-      min-width: 8px;
-      height: 8px;
-      background-color: $crm-copy;
-      border-radius: 50%;
-    }
-  }
-  input[type=checkbox]:not(.old-radiocheckbox-style) {
-    &:checked + label[for]::before,
-    + label[for]::before {
-      margin-right: 5px;
-      vertical-align: middle;
-    }
-    + label[for]::before {
-      content: '';
-      display: inline-block;
-      width: 16px;
-      min-width: 16px;
-      height: 16px;
-      border-radius: 2px;
-      background-color: #ffffff;
-      box-shadow: $crm-checkbox-shadow;
-      border: solid 1px $crm-grayblue-darker;
-    }
-    &:checked + label[for] {
-      position: relative;
-    }
-    &:checked + label[for]::after {
-      @include fa-icon($font-size: 15px, $content: '\f00c', $color: $gray-darker);
-      display: inline-block;
-      position: absolute;
-      left: 2px;
-      top: 6px;
-      margin-top: -3px;
-    }
-  }
-
-  // (Temporary) Old custom look for checkboxes and radio buttons
-  input[type=radio].old-radiocheckbox-style,
-  input[type=checkbox].old-radiocheckbox-style {
-    &:checked + label[for]::before,
-    + label[for]::before {
-      margin-right: 5px;
-      vertical-align: middle;
-    }
-  }
-
-  input[type=radio].old-radiocheckbox-style {
-    + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f10c', $color: $gray);
-    }
-
-    &:checked + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f192', $color: $gray);
-    }
-  }
-
-  input[type=checkbox].old-radiocheckbox-style {
-    + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f096', $color: $gray);
-    }
-
-    &:checked + label[for]::before {
-      @include fa-icon($font-size: 15px, $content: '\f046', $color: $gray);
-    }
   }
 }

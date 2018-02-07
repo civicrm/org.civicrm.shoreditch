@@ -1,4 +1,4 @@
-.page-civicrm-survey {
+#{civi-page('survey')} {
   .CRM_Campaign_Form_Survey_Main {
     .help {
       margin: 0px 20px;
@@ -6,14 +6,20 @@
     .crm-campaign-survey-new_campaign_link {
       text-transform: capitalize;
     }
+  }
 
-    input[type=checkbox] {
-      @include styled-checkbox();
+  .CRM_Campaign_Form_Search {
+    .crm-results-block {
+      .crm-pager {
+        > .element-right {
+          margin-top: 0px;
+        }
+      }
     }
   }
 }
 
-.page-civicrm-survey-configure {
+#{civi-page('survey-configure')} {
   .crm-content-block {
     > #mainTabContainer {
       .ui-tabs-panel {
@@ -34,10 +40,6 @@
             &:not(.label) {
               padding: 0;
             }
-
-            #create_report {
-              @include styled-checkbox;
-            }
           }
         }
 
@@ -50,6 +52,7 @@
           }
 
           .add-remove-link {
+            font-size: $font-size-base;
             padding: 20px;
           }
 
@@ -64,10 +67,18 @@
             td:first-child {
               padding-left: 20px !important;
             }
-          }
 
-          input[type=radio] {
-            @include styled-radio;
+            a {
+              .crm-i.fa-trash {
+                color: $brand-danger;
+              }
+
+              &:hover {
+                .crm-i.fa-trash {
+                  color: darken($brand-danger, $crm-darken-percentage);
+                }
+              }
+            }
           }
         }
       }

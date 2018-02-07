@@ -1,16 +1,5 @@
-&.page-civicrm-admin-contribute {
-  .crm-contribution-search_contribution-form-block {
-    margin-bottom: 20px;
-
-    h3 {
-      @include panel-header;
-    }
-
-    .form-layout-compressed {
-      margin-left: 20px;
-    }
-  }
-
+&#{civi-page('admin-contribute')},
+&#{civi-page('admin-pcp')} {
   .crm-container {
     div#alpha-filter {
       @include box-shadow($box-shadow);
@@ -22,10 +11,25 @@
       padding: 15px 10px 10px;
     }
   }
+
   #crm-main-content-wrapper {
     .dataTables_wrapper {
       @include civicrm-table;
       @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+    }
+  }
+}
+
+&#{civi-page('admin-contribute')} {
+  .crm-contribution-search_contribution-form-block {
+    margin-bottom: 20px;
+
+    h3 {
+      @include panel-header;
+    }
+
+    .form-layout-compressed {
+      margin-left: 20px;
     }
   }
 }

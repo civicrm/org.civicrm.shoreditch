@@ -1,0 +1,12 @@
+.listing-box,
+.listing-box-tall {
+  border-color: $crm-grayblue-dark;
+  border-radius: $border-radius-base;
+  padding: 5px;
+
+  .odd-row,
+  .even-row {
+    background: transparent;
+    color: $gray-darker;
+  }
+}

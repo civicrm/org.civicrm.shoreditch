@@ -1,8 +1,8 @@
-&.page-civicrm-admin-setting-url,
-&.page-civicrm-admin-setting-mapping,
-&.page-civicrm-admin-setting-path,
-&.page-civicrm-admin-setting-debug,
-&.page-civicrm-admin-setting-uf {
+&#{civi-page('admin-setting-url')},
+&#{civi-page('admin-setting-mapping')},
+&#{civi-page('admin-setting-path')},
+&#{civi-page('admin-setting-debug')},
+&#{civi-page('admin-setting-uf')} {
 
   .crm-form-block {
     @include civicrm-table;
@@ -12,10 +12,6 @@
       td:first-of-type {
         width: 30%;
       }
-    }
-
-    input[type=radio] + label {
-      line-height: 135%;
     }
 
     table.form-layout-compressed {

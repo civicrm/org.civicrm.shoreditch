@@ -1,3 +1,4 @@
+@import 'mixins/accordion';
 @import 'mixins/advanced-multiselect';
 @import 'mixins/border-box';
 @import 'mixins/calc';
@@ -5,13 +6,14 @@
 @import 'mixins/civicrm-panel';
 @import 'mixins/contact-type-icons';
 @import 'mixins/expandable-table';
+@import 'mixins/input-text';
+@import 'mixins/open-sans-font-family';
 @import 'mixins/panel-header';
 @import 'mixins/plain-old-text';
 @import 'mixins/responsive-search';
 @import 'mixins/section-title';
-@import 'mixins/styled-checkbox';
-@import 'mixins/styled-radio';
 @import 'mixins/table-block';
 @import 'mixins/table-header';
 @import 'mixins/transform';
 @import 'mixins/translate';
+
