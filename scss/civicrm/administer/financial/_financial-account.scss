@@ -1,0 +1,18 @@
+&#{civi-page('admin-financial-financialaccount')},
+&#{civi-page('admin-financial-financialtype')} {
+  #ltype {
+    p {
+      display: none;
+    }
+
+    .form-item {
+      padding: 0;
+    }
+  }
+
+  #crm-main-content-wrapper {
+    .dataTables_wrapper {
+      margin-bottom: 0;
+    }
+  }
+}

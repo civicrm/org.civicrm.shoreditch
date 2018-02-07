@@ -1,6 +1,18 @@
 @import '../bootstrap/components/editable-content';
 
-.crm-editable-enabled:not(.crm-editable-editing):hover:after {
-  line-height: normal;
-  top: calc(50% - 6px);
+.crm-editable-enabled {
+  button {
+    cursor: pointer;
+  }
+
+  textarea,
+  input,
+  select {
+    box-sizing: border-box;
+  }
+
+  &:not(.crm-editable-editing):hover:after {
+    line-height: normal;
+    top: calc(50% - 6px);
+  }
 }
