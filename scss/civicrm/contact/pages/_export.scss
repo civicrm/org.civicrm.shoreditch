@@ -1,4 +1,7 @@
 .CRM_Export_Form_Select {
+  h3 {
+    font-family: $font-family-base;
+  }
 
   .help {
     margin-bottom: 20px;
@@ -23,13 +26,13 @@
   }
 
   .crm-section {
+    @include box-shadow($box-shadow);
     background-color: $crm-white;
-    box-shadow: $crm-panel-element-shadow;
     margin-bottom: 0;
     padding: 20px;
 
     &.crm-export-mapping-section {
-      padding-bottom: 0;
+      padding: 0;
     }
 
     h3 {
@@ -44,7 +47,8 @@
     box-shadow: none;
 
     > .crm-submit-buttons {
-      box-shadow: $crm-panel-element-shadow;
+      @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+      border-radius: 0 0 $border-radius-base $border-radius-base;
     }
   }
 
