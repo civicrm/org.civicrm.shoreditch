@@ -1,13 +1,17 @@
 {
   "name": "org.civicrm.shoreditch",
-  "version": "1.0.0",
   "description": "A CiviCRM theme based on Bootstrap",
-  "main": "index.js",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/civicrm/org.civicrm.shoreditch"
+  },
+  "bugs": {
+    "url": "https://github.com/civicrm/org.civicrm.shoreditch/issues"
+  },
   "scripts": {
     "precommit": "lint-staged"
   },
-  "author": "",
-  "license": "ISC",
   "lint-staged": {
     "*.js": [
       "semistandard --fix",
