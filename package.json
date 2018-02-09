@@ -4,10 +4,16 @@
   "description": "A CiviCRM theme based on Bootstrap",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "precommit": "lint-staged"
   },
   "author": "",
   "license": "ISC",
+  "lint-staged": {
+    "*.js": [
+      "semistandard --fix",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "civicrm-scssroot": "git://github.com/totten/civicrm-scssroot.git#v0.1.1",
     "gulp": "^3.9.1",
