@@ -30,6 +30,9 @@
     "lint-staged": "^6.1.0",
     "postcss-discard-duplicates": "^2.1.0",
     "postcss-prefix-selector": "^1.6.0",
-    "semistandard": "^12.0.0"
+    "semistandard": "^12.0.0",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "stylelint-scss": "^2.3.0"
   }
 }
