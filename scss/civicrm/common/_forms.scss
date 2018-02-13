@@ -78,7 +78,8 @@ $control-height: 30px;
         > select,
         > span:not(.crm-form-date-wrapper) input,
         > span:not(.crm-form-date-wrapper) select,
-        > input:not([type='radio']):not([type='checkbox']) {
+        > input:not([type='radio']):not([type='checkbox']),
+        > textarea {
           margin: $control-spacing / 2 $control-spacing $control-spacing / 2 0 !important;
           bottom: initial !important;
         }
@@ -580,7 +581,6 @@ $control-height: 30px;
     border-radius: $border-radius-base $border-radius-base 0 0;
     box-shadow: none;
     margin-left: 0;
-    margin-top: -4px;
 
     .select2-choice {
       border-radius: 0 0 $border-radius-base $border-radius-base;
@@ -642,6 +642,9 @@ $control-height: 30px;
     }
   }
 
+  &.select2-drop:not(.select2-drop-above) {
+    margin-top: -4px;
+  }
   &.select2-drop {
     border-radius: 0 0 $border-radius-base $border-radius-base;
 
