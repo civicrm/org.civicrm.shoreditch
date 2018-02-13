@@ -190,4 +190,10 @@ table {
   #DataTables_Table_1 {
     @extend %civihr-table;
   }
+
+  &.ui-dialog {
+    table {
+      box-shadow: none !important;
+    }
+  }
 }

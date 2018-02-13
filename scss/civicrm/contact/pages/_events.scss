@@ -827,3 +827,11 @@
   background-color: $alert-warning-bg;
   color: $gray-darker;
 }
+
+.CRM_Event_Form_Task_Cancel {
+  .status.no-popup {
+    border: 1px solid $brand-warning;
+    border-radius: $border-radius-base;
+    margin: 0 20px 20px;
+  }
+}

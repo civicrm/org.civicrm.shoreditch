@@ -47,12 +47,22 @@
 
     &,
     a.ui-notify-cross,
-    h1 {
+    h1,
+    td {
       color: $gray-darker;
+    }
+
+    td {
+      font-size: $font-size-base;
     }
 
     a {
       color: $brand-primary;
+
+      &,
+      &:link {
+        text-decoration: none;
+      }
 
       &.ui-button {
         background: $brand-primary;
@@ -112,6 +122,10 @@
       line-height: 20px;
       margin-bottom: 10px;
     }
+  }
+
+  td {
+    border-color: $crm-grayblue-dark;
   }
 }
 

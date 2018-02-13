@@ -4,8 +4,6 @@
   }
 
   #newLocation {
-    padding-bottom: 20px;
-
     .crm-submit-buttons {
       padding-left: 5px;
     }
@@ -59,7 +57,6 @@
 
     tr {
       background-color: transparent;
-      border-top: 1px solid $select2-inner-background;
       display: block;
       margin: 0 -20px;
       padding: 0px 20px 0px 20px;
@@ -159,15 +156,8 @@
     }
   }
 
-  .form-layout td.label,
-  .form-layout-compressed td.label,
-  .crm-accordion-body td.label,
-  .crm-form-block td.label {
-    vertical-align: middle;
-
-    label {
-      margin: 0;
-    }
+  .description {
+    color: $crm-gray-matte;
   }
 }
 
