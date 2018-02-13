@@ -1,9 +1,9 @@
-&.page-civicrm-admin-setting-preferences-display,
-&.page-civicrm-admin-setting-search,
-&.page-civicrm-admin-setting-localization,
-&.page-civicrm-admin-setting-preferences-address,
-&.page-civicrm-admin-setting-date,
-&.page-civicrm-admin-setting-case {
+&#{civi-page('admin-setting-preferences-display')},
+&#{civi-page('admin-setting-search')},
+&#{civi-page('admin-setting-localization')},
+&#{civi-page('admin-setting-preferences-address')},
+&#{civi-page('admin-setting-date')},
+&#{civi-page('admin-setting-case')} {
 
   .crm-form-block {
 
@@ -23,12 +23,6 @@
 
     table.form-layout {
 
-      td {
-        input[type=radio] + label {
-          line-height: 135%;
-        }
-      }
-
       tr > td:nth-of-type(2) > label {
         padding-right: 10px;
       }
@@ -36,7 +30,7 @@
   }
 }
 
-&.page-civicrm-admin-setting-preferences-display {
+&#{civi-page('admin-setting-preferences-display')} {
 
   table.form-layout {
 

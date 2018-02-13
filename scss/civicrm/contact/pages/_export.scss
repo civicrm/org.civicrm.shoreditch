@@ -1,10 +1,13 @@
 .CRM_Export_Form_Select {
-  h2 {
-    padding-left: 20px;
+  h3 {
+    font-family: $font-family-base;
+  }
+
+  .help {
+    margin-bottom: 20px;
   }
 
   .label {
-    text-align: left;
     font-size: 13px;
   }
 
@@ -22,8 +25,15 @@
     margin-left: 0 !important;
   }
 
-  #export-type {
-    padding: 0 20px;
+  .crm-section {
+    @include box-shadow($box-shadow);
+    background-color: $crm-white;
+    margin-bottom: 0;
+    padding: 20px;
+
+    &.crm-export-mapping-section {
+      padding: 0;
+    }
 
     h3 {
       padding-left: 0;
@@ -32,26 +42,20 @@
     }
   }
 
-  .crm-submit-buttons {
-    > .crm-button {
-      margin-left: 0 !important;
-      margin-right: 10px !important;
-    }
-  }
+  .crm-form-block {
+    background-color: transparent;
+    box-shadow: none;
 
-  .crm-content-mergeOptions {
-    label[for="CIVICRM_QFID_0_6"] {
-      margin-left: -3px !important;
+    > .crm-submit-buttons {
+      @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+      border-radius: 0 0 $border-radius-base $border-radius-base;
     }
   }
 
   #wizard-steps {
-    + h2 {
-      top: 0;
-    }
-
     .wizard-bar {
-      display: none;
+      @include box-shadow($box-shadow);
+      border-radius: $border-radius-base;
     }
   }
 }
@@ -74,6 +78,8 @@
       width: 100% !important;
 
       .columnheader {
+        border: none;
+
         th {
           font-size: $font-size-h2;
         }
@@ -87,16 +93,11 @@
         &,
         &-dark {
           th {
-            height: 47px;
-            line-height: 47px;
+            @include panel-header;
             text-transform: none;
-            padding-left: 20px;
             color: $gray-darker;
-            font-weight: 600;
-            background-color: $crm-accordion-header-color;
-            border: 0;
-            border-left: 1px solid $crm-accordion-header-color;
-            border-top: 1px solid $crm-background;
+            font-weight: $crm-font-weight-h3;
+            border: none;
             border-bottom: 1px solid $crm-grayblue-dark;
           }
         }
@@ -134,10 +135,5 @@
     .crm-form-text {
       margin-top: 0 !important;
     }
-  }
-
-  input[type=checkbox]:checked + label[for]::after {
-    left: 2px;
-    top: 7px;
   }
 }

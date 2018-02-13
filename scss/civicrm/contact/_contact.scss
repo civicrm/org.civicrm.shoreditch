@@ -1,4 +1,4 @@
-.page-civicrm-contact-view {
+#{civi-page('contact-view')} {
   @import 'tabs';
   @import 'header';
   @import 'detail';
@@ -12,7 +12,7 @@
 @import 'pages/dedupe-exception';
 @import 'pages/contact-report';
 @import 'pages/reports';
-@import 'pages/export-contact';
+@import 'pages/export';
 @import 'pages/new-activity';
 @import 'pages/task-delete';
 @import 'pages/contact-preferences';

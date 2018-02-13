@@ -1,18 +1,10 @@
-&.page-civicrm-a {
+&#{civi-page('a')} {
   @include civicrm-table;
   
   .crmCaseType {
     
     .crm-block {
       padding: 20px;
-    }
-
-    input[type=checkbox] {
-      @include styled-checkbox();
-    }
-
-    input[type=radio] {
-      @include styled-radio();
     }
 
     .ui-tabs {

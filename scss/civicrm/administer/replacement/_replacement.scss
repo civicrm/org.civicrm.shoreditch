@@ -1,4 +1,4 @@
-&.page-civicrm-admin-options-wordreplacements {
+&#{civi-page('admin-options-wordreplacements')} {
 
   #crm-container .crm-form-block {
     background: transparent;
@@ -11,10 +11,6 @@
     .action-item {
       display: inline-block;
       margin: 10px 0 !important;
-    }
-
-    .crm-form-checkbox {
-      @include styled-checkbox;
     }
 
     & > table.form-layout-compressed {

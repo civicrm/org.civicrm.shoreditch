@@ -1,8 +1,7 @@
-.page-civicrm-report-list,
-.page-civicrm-report-template {
+#{civi-page('report-list')},
+#{civi-page('report-template')} {
   .crm-report-instanceList-form-block,
   .crm-report-templateList-form-block {
-
     .crm-accordion-wrapper {
       &:first-of-type {
         .crm-accordion-header:first-of-type {

@@ -1,4 +1,4 @@
-.page-civicrm-contact {
+#{civi-page('contact')} {
   #GroupContact {
     h3 {
       background: $brand-primary;
@@ -187,7 +187,7 @@
   }
 }
 
-.page-civicrm-group {
+#{civi-page('group')} {
   .help {
     margin: 20px 0;
 
@@ -242,10 +242,6 @@
     table tr td {
       .font-italic {
         font-style: normal;
-      }
-
-      input[type="checkbox"]:checked + label[for]:after {
-        top: 8px;
       }
     }
   }
@@ -449,8 +445,14 @@
     }
   }
 
-  .crm-search-tasks {
-    @extend %search-filter-block;
+  #alpha-filter {
+    background-color: #ffffff !important;
+    box-shadow: $box-shadow;
+    padding: 5px 20px !important;
+
+    li a {
+      color: $crm-copy;
+    }
   }
 
   table.selector {
@@ -522,7 +524,7 @@
   }
 }
 
-.page-civicrm-group-add .CRM_Group_Form_Edit .crm-group-form-block  {
+#{civi-page('group-add')} .CRM_Group_Form_Edit .crm-group-form-block  {
   padding: 15px;
 
   textarea {

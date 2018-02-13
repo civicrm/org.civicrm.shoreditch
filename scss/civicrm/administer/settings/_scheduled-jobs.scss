@@ -1,35 +1,43 @@
-&.page-civicrm-admin-job {
+&#{civi-page('admin-job')} {
 
   #ltype {
     @include civicrm-table;
 
-    table tr th {
+    .disabled {
+      &,
+      td {
+        color: $crm-gray-matte !important;
+      }
+    }
+
+    th {
       white-space: nowrap;
+    }
+  }
 
-      &:first-of-type {
-        width: 35% !important;
-      }
-
-      &:nth-of-type(2) {
-        width: 25%;
-      }
-
-      &:nth-of-type(3),
-      &:nth-of-type(4) {
-        width: 10%;
-        min-width: 100px;
-      }
-
-      &:first-of-type {
-        width: 20%;
-        min-width: 200px;
-      }
+  .CRM_Admin_Form_Job {
+    h3 {
+      @include box-shadow($box-shadow);
+      @include panel-header;
+      margin-bottom: 0;
     }
 
-    table tr td {
-      vertical-align: top;
-      text-overflow: clip;
-      white-space: normal;
+    .crm-job-form-block {
+      @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+      border-radius: 0 0 $border-radius-base $border-radius-base !important;
+
+      .crm-form-time {
+        @extend %custom-form-control;
+        @include open-sans-font-family();
+        margin: 10px 0;
+      }
     }
+  }
+}
+
+&#{civi-page('admin-joblog')} {
+  h3 {
+    @include panel-header;
+    margin-bottom: 0;
   }
 }
