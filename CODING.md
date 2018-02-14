@@ -31,6 +31,16 @@ gulp
 ## Guidelines for `custom-civicrm.css`
 Any style changes that are aimed at making the core screens look like they are part of the Bootstrap theme, should go here.
 
+### Disable stylelint rules
+Any .scss file under the `civicrm/` folder must have this annotation at the very top
+
+```scss
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+```
+
+in order to tell [stylelint](https://stylelint.io/) to be more a bit more lax when enforcing style conventions
+
+
 *TBD*
 
 ## Guidelines for `bootstrap.css`
