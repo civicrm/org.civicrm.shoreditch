@@ -141,6 +141,6 @@ body[class*='page-civicrm-report-'] {
   }
 
   .crm-submit-buttons {
-    @extend %submit-buttons-civi;
+    @include civicrm-submit-buttons;
   }
 }
