@@ -25,13 +25,6 @@ $button-border-radius: 2px;
   border-radius: $button-border-radius;
 }
 
-%submit-buttons-civi {
-  background: $crm-white !important;
-  border-top: 1px solid $gray-light;
-  margin: 0;
-  padding: 20px;
-}
-
 .crm-container {
   margin-left: 0 !important;
 
@@ -146,7 +139,7 @@ $button-border-radius: 2px;
     &.crm-search-form-block > .crm-submit-buttons,
     &.crm-form-block > .crm-submit-buttons,
     .form-item > .crm-submit-buttons {
-      @extend %submit-buttons-civi;
+      @include civicrm-submit-buttons;
     }
 
     .crm-submit-buttons {

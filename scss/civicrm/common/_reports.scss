@@ -1,6 +1,7 @@
-#{civi-page('report-list')} {
-  .crm-report-instanceList-form-block {
-
+#{civi-page('report-list')},
+#{civi-page('report-template')} {
+  .crm-report-instanceList-form-block,
+  .crm-report-templateList-form-block {
     .crm-accordion-wrapper {
       &:first-of-type {
         .crm-accordion-header:first-of-type {
@@ -42,6 +43,16 @@
           &:last-child {
             padding-right: 20px !important;
             text-align: right;
+
+            &.crm-report-templateList-description {
+              text-align: left;
+            }
+          }
+
+          &.crm-report-templateList-title {
+            div {
+              float: right;
+            }
           }
         }
       }

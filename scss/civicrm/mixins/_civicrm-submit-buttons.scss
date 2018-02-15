@@ -1,0 +1,6 @@
+@mixin civicrm-submit-buttons() {
+  background: $crm-white !important;
+  border-top: 1px solid $gray-light;
+  margin: 0;
+  padding: 20px;
+}

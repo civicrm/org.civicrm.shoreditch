@@ -1,4 +1,49 @@
-#{civi-page('report-instance')} {
+body[class*='page-civicrm-report-'] {
+
+  #crm-container {
+    .ui-tabs-panel {
+      padding: 0;
+    }
+
+    .report-contents {
+      border: none;
+      width: auto;
+    }
+
+    table.report-layout {
+      td {
+        border-bottom: 1px solid $gray-light;
+      }
+    }
+
+    .crm-report-form-block {
+      .report-layout {
+        @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+
+        th,
+        td {
+          line-height: 18px;
+          padding: 16px 10px;
+
+          &:first-child {
+            padding-left: 20px;
+          }
+
+          &:last-child {
+            padding-right: 20px;
+          }
+        }
+      }
+
+      h3 {
+        @include box-shadow($box-shadow);
+        @include panel-header;
+        margin-bottom: 0;
+        margin-top: 20px;
+      }
+    }
+  }
+
   .crm-report-field-form-block {
     box-shadow: $box-shadow;
     margin-bottom: 20px;
@@ -7,7 +52,7 @@
   .crm-tasks {
     background: $crm-white;
     box-shadow: $box-shadow;
-    border-radius: 0;
+    border-radius: $border-radius-base;
     margin: 20px 0;
     padding-left: 11px;
 
@@ -17,17 +62,30 @@
   }
 
   #report-tab {
+    &-col-groups {
+      tr {
+        td {
+          border: none;
+          padding: 8px 10px 0;
+
+          &:first-child {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+
     &-format,
     &-email,
     &-access {
-      padding: 20px !important;
 
       h3 {
-        @extend .collapsible-title;
+        @include section-title;
       }
     }
 
     &-email,
+    &-format,
     .crm-report-instanceForm-form-block-permission {
       .report-label {
         vertical-align: middle !important;
@@ -51,10 +109,11 @@
     &-order-by-elements {
       #optionField {
         @extend %civihr-table;
+        box-shadow: none !important;
 
         .form-link {
           &:before {
-            @include fa-icon($content: '\f00d');
+            @include fa-icon($content: $fa-var-times);
           }
         }
       }
@@ -81,17 +140,7 @@
     }
   }
 
-  .civireport-criteria {
-    > .criteria-group {
-      margin: 0 20px;
-    }
-
-    .report-label {
-      text-align: left !important;
-    }
-  }
-
   .crm-submit-buttons {
-    @extend %submit-buttons-civi;
+    @include civicrm-submit-buttons;
   }
 }
