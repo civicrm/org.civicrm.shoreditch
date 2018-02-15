@@ -30,7 +30,9 @@
     ],
     "rules": {
       "selector-class-pattern": null,
-      "max-nesting-depth": 3
+      "max-nesting-depth": 3,
+      "no-extra-semicolons": true,
+      "no-duplicate-selectors": true
     }
   },
   "devDependencies": {
