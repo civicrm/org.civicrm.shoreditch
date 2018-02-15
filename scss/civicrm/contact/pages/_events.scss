@@ -829,6 +829,10 @@
 }
 
 .CRM_Event_Form_Task_Cancel {
+  .crm-form-block {
+    padding-top: 20px;
+  }
+
   .status.no-popup {
     border: 1px solid $brand-warning;
     border-radius: $border-radius-base;
