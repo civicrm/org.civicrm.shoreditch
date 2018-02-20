@@ -112,6 +112,13 @@
       line-height: 20px;
       margin-bottom: 10px;
     }
+
+    table td,
+    table th {
+      background: $crm-white;
+      color: $gray-dark;
+      border-color: $gray-light;
+    }
   }
 }
 
