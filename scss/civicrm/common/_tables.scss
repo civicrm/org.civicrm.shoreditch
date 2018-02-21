@@ -1,4 +1,5 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 table {
   .crm-icon {
     @include contact-type-icons();

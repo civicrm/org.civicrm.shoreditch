@@ -1,4 +1,5 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .CRM_Event_Form_Search {
   h3 {
     @include box-shadow($box-shadow);
