@@ -1,4 +1,7 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 $contact-avatar: 90px;
+$crm-control-height: 30px;
 
 $crm-main-menu-height: 60px;
 $crm-main-menu-sub-menu-padding: 10px 0 16px;
@@ -12,7 +15,7 @@ $crm-search-input-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 $crm-tab-shadow: 0 9px 9px 0 rgba(48, 40, 40, 0.25);
 
 $crm-blue-light: #58b7d1;
-$crm-blue-light-color: #5897FB;
+$crm-blue-light-color: #5897fb;
 $crm-cancel-color: #363342;
 $crm-light-gray-color: #818c97;
 

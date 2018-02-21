@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-uf-group-add')} {
   #crm-main-content-wrapper .crm-submit-buttons,
   #crm-main-content-wrapper .crm-accordion-body .crm-form-block {
@@ -14,7 +16,7 @@
     box-shadow: none;
 
     table {
-      border: none;
+      border: 0;
 
       thead th.sorting .DataTables_sort_icon {
         display: block;
@@ -23,7 +25,7 @@
   }
 
   .crm-content-block table tr {
-    border: none;
+    border: 0;
     border-bottom: 1px solid $gray-light;
 
     &.odd {
@@ -52,7 +54,6 @@
 
 &#{civi-page('admin-uf')} {
   #crm-main-content-wrapper {
-
     .crm-submit-buttons {
       border-bottom: 1px solid $crm-background;
 
@@ -66,7 +67,7 @@
     }
 
     .ui-tabs-panel {
-      border: none;
+      border: 0;
       border-radius: 0 0 $border-radius-child $border-radius-child;
       font-family: $font-family-base;
 
@@ -75,7 +76,7 @@
       }
 
       .crm-submit-buttons {
-        border-bottom: none;
+        border-bottom: 0;
         box-shadow: none;
       }
 
@@ -96,8 +97,8 @@
 
     a.action-item,
     span.btn-slide {
-      color: $brand-primary;
       background: none;
+      color: $brand-primary;
     }
   }
 }
@@ -130,28 +131,14 @@
       box-shadow: none;
     }
 
-    td.label {
-      padding: 15px 0 15px 0;
-
-      .helpicon {
-        padding: 0 5px;
-        margin-top: -2px;
-      }
-    }
-
     td.html-adjust {
       width: 100%;
     }
 
-    td {
-      vertical-align: middle;
-      line-height: 1.5em;
-    }
-
     table.form-layout {
-      padding: 0 25px;
-      display: flex;
       box-sizing: border-box;
+      display: flex;
+      padding: 0 25px;
     }
 
     .crm-accordion-body {
@@ -165,8 +152,8 @@
     }
 
     textarea {
-      vertical-align: middle;
       line-height: 1.5em;
+      vertical-align: middle;
     }
   }
 }

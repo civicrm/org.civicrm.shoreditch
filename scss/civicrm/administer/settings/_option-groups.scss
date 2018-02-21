@@ -1,5 +1,6 @@
-&#{civi-page('admin-options')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+&#{civi-page('admin-options')} {
   #browseValues {
     @include civicrm-table;
     @include civicrm-panel;
@@ -10,9 +11,16 @@
 
 &#{civi-page('admin-setting-preferences-multisite')},
 &#{civi-page('admin-setting-misc')} {
-
   .crm-form-block {
     @include civicrm-table;
+
+    table:not(.form-layout-compressed) {
+      tr {
+        > td {
+          vertical-align: top;
+        }
+      }
+    }
 
     .form-layout {
       margin: 10px 0;
@@ -22,7 +30,7 @@
       @include section-title;
     }
 
-    .description {
+    h3 + .description {
       padding: 20px;
     }
   }

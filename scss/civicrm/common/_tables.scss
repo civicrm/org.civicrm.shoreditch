@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 table {
   .crm-icon {
     @include contact-type-icons();
@@ -5,8 +7,8 @@ table {
 }
 
 %crm-table {
-  @include open-sans-font-family();
   $border-color: $table-border-color;
+  @include open-sans-font-family();
   border: 0;
   border-radius: $border-radius-base;
 
@@ -39,10 +41,10 @@ table {
 
   tr:last-child {
     background: transparent !important;
-    border-bottom: none;
-    border-left: none;
+    border-bottom: 0;
+    border-left: 0;
     border-radius: 0 0 $border-radius-base $border-radius-base;
-    border-right: none;
+    border-right: 0;
   }
 
   thead {
@@ -112,7 +114,7 @@ table {
 
   &.form-layout {
     //For "New Activity" page
-    tr[class^="crm-activity-form"] > td:not(.label):not(.view-value) {
+    tr[class^='crm-activity-form'] > td:not(.label):not(.view-value) {
       padding: 0;
     }
 
@@ -194,6 +196,12 @@ table {
   &.ui-dialog {
     table {
       box-shadow: none !important;
+
+      &.form-layout-compressed {
+        tr td {
+          line-height: initial;
+        }
+      }
     }
   }
 }

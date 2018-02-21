@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 body {
   // Ensures that there is the same top padding regardless whether
   // the user can see the admin toolbar or not
@@ -14,7 +16,6 @@ body {
 }
 
 .crm-container {
-
   a,
   a:link {
     color: $brand-primary;
@@ -115,12 +116,11 @@ body {
     &.select2-dropdown-open {
       .select2-choice {
         border-color: $brand-primary;
-        box-shadonw: none;
       }
 
       &.select2-drop-above .select2-choice {
         border-color: $crm-blue-light-color;
-        border-top: none;
+        border-top: 0;
       }
     }
   }
@@ -133,7 +133,6 @@ body {
     .label {
       color: $gray-darker;
       font-weight: $crm-font-weight-h3;
-      text-align: left;
     }
   }
 
@@ -153,7 +152,7 @@ body {
     text-indent: -500em;
     width: 5px;
 
-    &:after {
+    &::after {
       @include fa-icon($font-size-base, $fa-var-ellipsis-v, $gray-darker);
       background: none;
       right: -2px;
@@ -165,7 +164,7 @@ body {
     &:hover {
       background: none;
 
-      &:after {
+      &::after {
         color: $brand-primary;
       }
     }
@@ -257,18 +256,18 @@ body {
 
     h1 {
       &.page-title {
-        margin-top: -20px !important;
-        margin-bottom: 46px !important;
-        padding: 0 40px !important;
         background: $crm-white;
         color: $gray-darker;
+        margin-bottom: 46px !important;
+        margin-top: -20px !important;
+        padding: 0 40px !important;
       }
     }
   }
 }
 
 .required {
-  &:after {
+  &::after {
     display: none;
   }
 }
@@ -276,25 +275,25 @@ body {
 .crm-search-tasks {
   background-color: $crm-white;
   border-radius: 0;
-  margin-bottom: 20px;
   box-shadow: $box-shadow;
+  margin-bottom: 20px;
 
   td {
     padding: 10px 20px;
   }
 
   .font-size12pt {
+    color: $gray-darker;
     font-size: $font-size-h2;
     font-weight: 600;
-    color: $gray-darker;
     padding-bottom: 10px;
     width: auto !important;
   }
 
   .font-size11pt {
+    color: $gray-darker;
     font-size: $font-size-base;
     font-weight: 600;
-    color: $gray-darker;
   }
 }
 
