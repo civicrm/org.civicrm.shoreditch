@@ -115,11 +115,13 @@
       margin-bottom: 10px;
     }
 
-    table td,
-    table th {
-      background: $crm-white;
-      border-color: $gray-light;
-      color: $gray-dark;
+    table {
+      td,
+      th {
+        background: $crm-white;
+        border-color: $gray-light;
+        color: $gray-dark;
+      }
     }
   }
 }
