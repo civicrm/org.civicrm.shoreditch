@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 #Search.CRM_Pledge_Form_Search {
   table.selector {
     @include expandable-table;
@@ -98,25 +99,6 @@
   span.description {
     display: block;
     line-height: 1.5em;
-  }
-
-  td {
-    display: table-cell;
-    line-height: 1.5em;
-    padding: 5px;
-    vertical-align: middle;
-
-    &.label {
-      box-sizing: border-box;
-      padding: 17px 0;
-      text-align: left;
-      vertical-align: top;
-      width: 185px;
-    }
-  }
-
-  #id-paymentReminders tr:not([class*='crm-contribution-form-block']) td {
-    padding: 5px;
   }
 
   .crm-pledge-form-block-installments  #eachPaymentAmount {

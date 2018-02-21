@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 &#{civi-page('admin-custom-group')} {
   #options table td:last-of-type {
     width: 250px;
@@ -15,7 +16,7 @@
   }
 
   #options {
-    border: none;
+    border: 0;
     border-radius: $border-radius-child $border-radius-child 0 0;
 
     thead tr {
@@ -127,14 +128,12 @@
 }
 
 &#{civi-page('admin-custom')} {
-
   #crm-main-content-wrapper {
-
     .help + .crm-submit-buttons,
     .crm-submit-buttons:first-child {
       border-bottom: 1px solid $gray-lighter;
-      border-top: 0;
       border-radius: 2px 2px 0 0;
+      border-top: 0;
     }
 
     .crm-submit-buttons {
@@ -147,9 +146,9 @@
     box-shadow: none !important;
     position: relative;
 
-    &:before {
+    &::before {
       box-shadow: $crm-form-layout-shadow;
-      content: "";
+      content: '';
       height: 100%;
       left: 0;
       position: absolute;
@@ -183,33 +182,28 @@
           }
 
           .crm-form-checkbox {
-            margin-top: 4px;
             margin-left: 0 !important;
+            margin-top: 4px;
             vertical-align: top;
           }
         }
       }
 
       td {
-        display: table-cell;
-        text-align: left;
-        line-height: 1.1 !important;
-
         &:last-child {
           padding-right: 20px;
         }
 
         &.label {
           padding-left: 20px;
-          vertical-align: middle;
         }
 
         input.crm-form-text,
         .crm-form-select,
         .crm-form-textarea,
         .select2-container {
-          margin-top: 0 !important;
           margin-bottom: 0 !important;
+          margin-top: 0 !important;
         }
 
         .crm-form-textarea {
@@ -273,7 +267,7 @@
   }
 
   .ui-dialog-content {
-    tr td.html-adjust input[type="checkbox"] {
+    tr td.html-adjust input[type='checkbox'] {
       display: block;
       position: absolute;
 
@@ -315,7 +309,7 @@
     }
 
     .crm-info-panel td.label label {
-      font-weight: $crm-font-weight-h3
+      font-weight: $crm-font-weight-h3;
     }
   }
 }

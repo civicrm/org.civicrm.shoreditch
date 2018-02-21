@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 .CRM_Event_Form_Search {
   h3 {
     @include box-shadow($box-shadow);
@@ -50,21 +51,15 @@
     padding: 20px;
 
     table.form-layout td {
-      border: none;
+      border: 0;
     }
   }
 
   .crm-contactDetails-accordion {
-
     .crm-accordion-header,
     .crm-accordion-body {
       margin-left: -24px;
       margin-right: -24px;
-
-      table td {
-        display: table-cell;
-        vertical-align: middle;
-      }
     }
   }
 
@@ -74,11 +69,11 @@
 
   .dataTables_wrapper,
   .form-item table.row-highlight {
-    @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+    @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
 
     tr:last-child {
       td {
-        border-bottom: none;
+        border-bottom: 0;
       }
     }
   }
@@ -99,7 +94,7 @@
 
       th {
         background: $gray-lighter !important;
-        border: none;
+        border: 0;
         line-height: normal;
         padding: 15px 10px;
         white-space: nowrap;
@@ -115,7 +110,6 @@
     }
 
     tbody tr {
-
       td {
         line-height: normal;
         padding: 10px;
@@ -134,10 +128,6 @@
 
         label {
           line-height: 17px;
-        }
-
-        .crm-hover-button.crm-clear-link {
-          vertical-align: bottom;
         }
 
         .crm-absolute-date-range > span,
@@ -180,9 +170,9 @@
     &.crm-inline-error,
     &.crm-error {
       background: $brand-danger !important;
+      border-radius: 3px;
       color: $crm-white !important;
       padding: 5px;
-      border-radius: 3px;
 
       &.crm-inline-error {
         margin: 0 4px;
@@ -198,10 +188,10 @@
   span {
     &.crm-error {
       background: $brand-danger !important;
-      color: $crm-white !important;
-      padding: 5px;
       border-radius: 3px;
+      color: $crm-white !important;
       margin: 2px;
+      padding: 5px;
 
       span {
         background: none;
@@ -215,8 +205,8 @@
   }
 
   textarea {
+    padding: 0 5px;
     vertical-align: middle;
-    padding: 0px 5px;
   }
 
   .select2-container {
@@ -225,10 +215,10 @@
 
   .crm-participant-form-block {
     table {
+      box-shadow: none;
       width: 100%;
 
       &.form-layout {
-
         #payment-info {
           width: 100%;
 
@@ -245,7 +235,7 @@
         }
 
         .crm-event-eventfees-form-block-line_items {
-          & > td {
+          > td {
             &:nth-child(2) {
               width: 100%;
 
@@ -258,23 +248,13 @@
       }
     }
 
-    table {
-      box-shadow: none;
-    }
-
-    .label,
-    td {
-      min-width: 210px;
-      padding: 0;
-    }
-
     .auto-renew-text {
       display: block;
       padding: 10px 30px;
     }
 
     .crm-membership-form-block-record_contribution {
-      & > td {
+      > td {
         padding: 0;
 
         legend {
@@ -284,7 +264,7 @@
     }
   }
 
-  .crm-event-eventfees-form-block-price_set_amount div[class*="-section"] {
+  .crm-event-eventfees-form-block-price_set_amount div[class*='-section'] {
     .label {
       box-sizing: border-box;
       position: relative;
@@ -292,7 +272,7 @@
       width: 210px;
     }
 
-    div[class*="-content"] {
+    div[class*='-content'] {
       bottom: 45px;
       position: relative;
     }
@@ -306,11 +286,6 @@
         top: 40px;
       }
     }
-  }
-
-  textarea {
-    height: 80px;
-    width: 100% !important;
   }
 
   #send_confirmation_receipt {
@@ -332,10 +307,6 @@
     a {
       background-position: 0 50%;
     }
-  }
-
-  .crm-participant-form-block-note td:nth-child(2) {
-    width: 100%;
   }
 
   .crm-event-eventfees-form-block-price_set_amount {
@@ -371,13 +342,13 @@
       margin: 0;
     }
 
-    .price-set-option-content label:after {
+    .price-set-option-content label::after {
       top: 6px;
     }
   }
 
   #payment_information {
-    & > td {
+    > td {
       padding: 0;
 
       legend {
@@ -390,16 +361,16 @@
     }
 
     .content {
+      display: table-cell;
       margin-left: 0;
       padding: 0 15px;
-      display: table-cell;
       vertical-align: middle;
     }
 
     .label {
       display: table-cell;
-      vertical-align: middle;
       text-align: left;
+      vertical-align: middle;
     }
 
     input#cvv2 {
@@ -407,8 +378,8 @@
     }
 
     div.crm-field-wrapper {
-      margin-bottom: 0;
       display: table;
+      margin-bottom: 0;
     }
   }
 
@@ -423,12 +394,6 @@
     }
   }
 
-  span.description {
-      display: block;
-      line-height: 1.5em;
-      margin-bottom: 5px;
-  }
-
   .cvv2-section {
     input,
     .cvv2-section,
@@ -440,7 +405,7 @@
   table#info,
   .crm-event-participantview-form-block-fee_amount table,
   table.selector,
-  .crm-event-eventfees-form-block-line_items table  {
+  .crm-event-eventfees-form-block-line_items table {
     @include expandable-table;
     box-shadow: none !important;
   }
@@ -463,7 +428,7 @@
 
   table {
     background: transparent;
-    border: none;
+    border: 0;
     box-shadow: none !important;
     font-family: $font-family-base;
     margin: 10px 0;
@@ -472,7 +437,8 @@
       display: block;
       overflow-x: auto;
 
-      th, td {
+      th,
+      td {
         white-space: nowrap;
       }
     }
@@ -482,7 +448,7 @@
 
       th {
         background: $gray-lighter !important;
-        border: none;
+        border: 0;
         color: $gray-darker !important;
         vertical-align: middle;
 
@@ -494,7 +460,7 @@
 
     tbody tr {
       background: $crm-white;
-      border: none;
+      border: 0;
 
       &.crm-event-participantview-form-block-displayName td {
         strong {
@@ -517,7 +483,7 @@
 
           th {
             background: $gray-lighter !important;
-            border: none;
+            border: 0;
             color: $gray-darker;
             vertical-align: middle;
           }
@@ -526,12 +492,12 @@
 
       td {
         background: $crm-white !important;
-        border: none;
+        border: 0;
         line-height: 1.1em;
         padding: 10px;
 
         &.label {
-          border-bottom: none;
+          border-bottom: 0;
           color: $gray-darker !important;
           vertical-align: middle;
 
@@ -563,8 +529,8 @@
   }
 
   .crm-accordion-header {
-    font-size: $font-size-base !important;
     font-family: $font-family-base;
+    font-size: $font-size-base !important;
 
     + .crm-accordion-body {
       padding: 20px !important;
@@ -575,15 +541,15 @@
     }
   }
 
-  label[for="thankyou_date"] {
+  label[for='thankyou_date'] {
     top: 7px;
   }
 
-  label[for="thankyou_date_time"] {
+  label[for='thankyou_date_time'] {
     top: 5px;
   }
 
-  [id*="Food_Preference"] {
+  [id*='Food_Preference'] {
     .crm-accordion-wrapper {
       margin-left: -40px;
       margin-right: -40px;
@@ -634,10 +600,10 @@
 
     .crm-section .label,
     .crm-section .content {
-      display: table-cell;
-      text-align: left;
-      min-width: 180px;
       box-sizing: border-box;
+      display: table-cell;
+      min-width: 180px;
+      text-align: left;
       vertical-align: top;
     }
 
@@ -664,10 +630,10 @@
 
   .form-layout tr {
     td {
-      display: table-cell;
-      text-align: left;
       box-sizing: border-box;
+      display: table-cell;
       padding-left: 0;
+      text-align: left;
 
       &.label {
         min-width: 180px;
@@ -676,8 +642,8 @@
   }
 
   textarea {
-    padding: 5px;
     line-height: 1em;
+    padding: 5px;
     vertical-align: middle;
   }
 }
@@ -696,7 +662,7 @@
     .form-layout {
       > tbody {
         > tr {
-         > td {
+          > td {
             padding: 10px;
 
             .crm-button_qf_SearchEvent_refresh {
@@ -758,7 +724,7 @@
     @include box-shadow($box-shadow);
     background: $crm-white;
     border-radius: $border-radius-base $border-radius-base 0 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding: 15px 10px 10px;
   }
 
@@ -767,7 +733,7 @@
   }
 
   .dataTables_wrapper {
-    @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+    @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
 
     thead {
       tr {
@@ -776,7 +742,7 @@
 
         th {
           background-color: $gray-lighter;
-          border: none;
+          border: 0;
           line-height: normal;
           padding: 15px 10px;
           white-space: nowrap;
@@ -815,7 +781,7 @@
           border-radius: 0 0 $border-radius-base $border-radius-base;
 
           td {
-            border: none;
+            border: 0;
           }
         }
       }

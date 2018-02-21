@@ -1,11 +1,11 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 .CRM_Contact_Form_Task_Email {
   .status {
     padding: 10px 25px !important;
-    margin-bottom: 20px;
   }
 
   .crm-contactEmail-form-block-recipient {
-    label[for="to"] {
+    label[for='to'] {
       padding-left: 0;
     }
   }
@@ -27,16 +27,13 @@
     }
   }
 
-  .crm-button_qf_Email_upload {
-    margin-left: 20px !important;
-  }
-
   #editMessageDetails {
     box-shadow: none;
     padding: 0 !important;
 
     .section {
       box-shadow: none;
+      padding-left: 0 !important;
     }
   }
 
@@ -49,12 +46,6 @@
   #follow-up {
     td.label {
       padding-left: 5px !important;
-    }
-  }
-
-  #editMessageDetails {
-    .section {
-      padding-left: 0 !important;
     }
   }
 }

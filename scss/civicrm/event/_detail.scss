@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 #crm-container {
   .crm-actions-ribbon {
     margin-bottom: 20px;
@@ -31,6 +32,13 @@
     }
   }
 
+  .crm-event-manage-eventinfo-form-block,
+  .crm-event-manage-fee-form-block {
+    .crm-submit-buttons:first-of-type {
+      border-top: 0;
+    }
+  }
+
   #priceSet .message {
     margin-right: 15px;
   }
@@ -47,8 +55,8 @@
     > legend {
       @include section-title;
       display: block;
-      width: 100%;
       margin-left: -20px;
+      width: 100%;
     }
 
     table {
@@ -59,7 +67,7 @@
       background-color: transparent;
       display: block;
       margin: 0 -20px;
-      padding: 0px 20px 0px 20px;
+      padding: 0 20px;
     }
 
     td {
@@ -74,14 +82,14 @@
     }
 
     .columnheader {
-      display: block;
       background-color: $gray-lighter;
       border-bottom: 1px solid $crm-grayblue-dark;
       border-left: 0;
       border-radius: 0;
       border-right: 0;
+      display: block;
       margin: 20px -20px 0;
-      padding: 6px 20px 4px 20px;
+      padding: 6px 20px 4px;
 
       br {
         display: none;
@@ -120,11 +128,11 @@
   }
 
   .crm-collapsible {
-    &:not(.collapsed) .collapsible-title:before {
+    &:not(.collapsed) .collapsible-title::before {
       content: $fa-var-angle-down;
     }
 
-    &.collapsed .collapsible-title:before {
+    &.collapsed .collapsible-title::before {
       content: $fa-var-angle-right;
     }
 

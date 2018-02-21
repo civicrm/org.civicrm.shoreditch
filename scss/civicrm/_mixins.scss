@@ -1,7 +1,9 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 @import 'mixins/accordion';
 @import 'mixins/advanced-multiselect';
 @import 'mixins/border-box';
 @import 'mixins/calc';
+@import 'mixins/civicrm-form-control';
 @import 'mixins/civicrm-table';
 @import 'mixins/civicrm-panel';
 @import 'mixins/civicrm-submit-buttons';

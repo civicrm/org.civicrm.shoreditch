@@ -1,3 +1,4 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 #{civi-page('batch')} {
   .crm-submit-buttons {
     margin: 0;
@@ -17,6 +18,15 @@
 
   .crm-batch-search-form-block {
     border-radius: $panel-border-radius !important;
+
+    table.form-layout-compressed {
+      tr {
+        td {
+          padding: 20px;
+          vertical-align: top;
+        }
+      }
+    }
   }
 
   .crm-batch-search-form-block,
@@ -36,16 +46,9 @@
     }
 
     table tr td {
-      padding: 15px 25px;
-      vertical-align: top;
-
-      &:nth-child(2) {
-        padding: 15px 0;
-      }
-
       .crm-button {
         i {
-          top: 15px;
+          top: 7px;
         }
 
         .crm-form-submit {
@@ -60,13 +63,13 @@
     box-shadow: $box-shadow;
 
     table thead {
-      border-top: none !important;
+      border-top: 0 !important;
     }
 
     .crm-datatable-pager-top {
       border-radius: $panel-border-radius $panel-border-radius 0 0;
 
-      div[id*="s2id_autogen"] {
+      div[id*='s2id_autogen'] {
         .select2-choice {
           background: none;
           border: 1px solid $crm-grayblue-darker;
@@ -132,21 +135,11 @@
   box-shadow: $box-shadow;
 
   .crm-submit-buttons {
-    border: none;
-    margin: 0 15px !important;
+    border: 0;
   }
 
   .crm-batch-form-block {
     box-shadow: none;
-
-    td {
-      padding: 0 !important;
-      vertical-align: middle;
-
-      &.label label {
-        padding: 15px 0 5px 25px;
-      }
-    }
 
     textarea {
       line-height: 1.5em;
@@ -188,25 +181,25 @@
   }
 
   table {
-    border: none !important;
+    border: 0 !important;
   }
 
   .form-layout-compressed {
     margin: 0 15px 20px;
 
     .label {
-      color:  $crm-copy;
+      color: $crm-copy;
       font-size: $font-size-base;
     }
 
     td.right {
-      color:  $crm-copy;
+      color: $crm-copy;
       vertical-align: middle;
     }
   }
 
   .crm-grid-table {
-    border: none !important;
+    border: 0 !important;
     border-radius: $border-radius-base;
 
     .crm-grid-header {
@@ -217,9 +210,9 @@
 
       .crm-grid-cell {
         background: $gray-lighter;
-        border: none;
-        font: bold $font-size-base $font-family-base;
+        border: 0;
         color: $gray-darker;
+        font: bold $font-size-base $font-family-base;
         line-height: 1.5em;
         min-width: 130px;
         padding: 10px 15px;
@@ -253,7 +246,7 @@
       }
 
       .crm-grid-cell {
-        border: none;
+        border: 0;
         padding: 10px;
 
         span.batch-edit,
@@ -285,15 +278,15 @@
         width: 85px !important;
       }
 
-      [class*="crm-batch-join_date-"],
-      [class*="crm-batch-membership_"] {
-          display: block;
-          width: 150px !important;
+      [class*='crm-batch-join_date-'],
+      [class*='crm-batch-membership_'] {
+        display: block;
+        width: 150px !important;
 
-          .crm-clear-link {
-            margin-left: -5px !important;
-            padding: 4px 0;
-          }
+        .crm-clear-link {
+          margin-left: -5px !important;
+          padding: 4px 0;
+        }
       }
 
       .select2-container {

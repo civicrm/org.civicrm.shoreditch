@@ -1,19 +1,20 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 &#{civi-page('admin-setting-localization')},
 &#{civi-page('admin-setting-preferences-address')},
 &#{civi-page('admin-setting-date')} {
-
   .crm-form-block > .spacer {
     display: none;
   }
 
   tr > td:nth-of-type(2) > label {
+    display: inline-block;
     padding-right: 10px;
     width: 230px;
   }
 
   .crm-form-textarea {
-    width: 300px;
     min-height: 140px;
+    width: 300px;
   }
 
   .crm-preferences-address-form-block-description {
