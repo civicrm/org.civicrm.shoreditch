@@ -1,0 +1,11 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+@mixin input-fields-container {
+  .form-layout,
+  .form-layout-compressed,
+  .crm-accordion-body,
+  .crm-form-block,
+  #task-section {
+    @content;
+  }
+}
