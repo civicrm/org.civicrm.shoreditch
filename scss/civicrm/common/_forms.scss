@@ -105,7 +105,8 @@
   .form-layout,
   .form-layout-compressed,
   .crm-accordion-body,
-  .crm-form-block {
+  .crm-form-block,
+  #task-section {
     input.crm-form-text,
     input.dateplugin {
       @extend %responsive;
