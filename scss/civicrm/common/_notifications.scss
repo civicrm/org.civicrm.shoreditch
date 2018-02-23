@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #crm-notification-container div {
   &.ui-notify-message {
     border-radius: $border-radius-base;
@@ -111,6 +113,15 @@
       font-size: $font-size-base;
       line-height: 20px;
       margin-bottom: 10px;
+    }
+
+    table {
+      td,
+      th {
+        background: $crm-white;
+        border-color: $gray-light;
+        color: $gray-dark;
+      }
     }
   }
 }
