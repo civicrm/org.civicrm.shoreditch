@@ -146,6 +146,10 @@
         &[title="Cases"]::before {
           content: "\f0f6";
         }
+
+        &[title="Communications"]::before {
+          content: "\f0c0";
+        }
       }
 
       a,
