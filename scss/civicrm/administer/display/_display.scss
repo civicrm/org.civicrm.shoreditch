@@ -1,12 +1,12 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-setting-preferences-display')},
 &#{civi-page('admin-setting-search')},
 &#{civi-page('admin-setting-localization')},
 &#{civi-page('admin-setting-preferences-address')},
 &#{civi-page('admin-setting-date')},
 &#{civi-page('admin-setting-case')} {
-
   .crm-form-block {
-
     h3,
     legend {
       @include section-title;
@@ -22,7 +22,6 @@
     }
 
     table.form-layout {
-
       tr > td:nth-of-type(2) > label {
         padding-right: 10px;
       }
@@ -31,24 +30,20 @@
 }
 
 &#{civi-page('admin-setting-preferences-display')} {
-
   table.form-layout {
-
     tr.crm-preferences-display-form-block-contact_view_options,
     tr.crm-preferences-display-form-block-advanced_search_options,
     tr.crm-preferences-display-form-block-user_dashboard_options,
     tr.crm-preferences-display-form-block-contact_smart_group_display {
-
-      & > td:nth-of-type(2) > label {
+      > td:nth-of-type(2) > label {
+        display: inline-block;
         padding-right: 10px;
         width: 230px !important;
       }
     }
 
     tr.crm-preferences-display-form-block-contact_edit_options {
-
       table {
-
         td {
           width: 210px !important;
 
@@ -56,30 +51,14 @@
             list-style: none;
             margin: 10px 0;
 
-            & > li {
-              border-radius: 0;
+            > li {
               background: $gray-lighter;
-              padding: 5px !important;
+              border-radius: 0;
               max-width: 200px;
+              padding: 5px !important;
 
               .crm-grip {
                 margin-right: 10px;
-              }
-            }
-          }
-
-          &:not(:first-of-type) {
-
-            & > ul > li {
-              cursor: move; /* fallback if grab cursor is unsupported */
-              cursor: grab;
-              cursor: -moz-grab;
-              cursor: -webkit-grab;
-
-              &:active {
-                cursor: grabbing;
-                cursor: -moz-grabbing;
-                cursor: -webkit-grabbing;
               }
             }
           }
@@ -88,14 +67,13 @@
     }
 
     tr.crm-preferences-display-form-block-editor_id {
-
       select {
         margin-top: 0 !important;
         vertical-align: top;
       }
 
       .crm-button {
-        border: none;
+        border: 0;
         padding: 0;
       }
 
@@ -111,7 +89,6 @@
 
     tr.crm-preferences-display-form-block-display_name_format,
     tr.crm-preferences-display-form-block-sort_name_format {
-
       .crm-form-textarea {
         min-height: 150px;
         padding: 10px;

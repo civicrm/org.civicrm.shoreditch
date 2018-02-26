@@ -1,8 +1,7 @@
-// Bootstrap calendar
-// =======================
-$select2-inner-background: #f1f5f6;
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 $contact-avatar: 90px;
+$crm-control-height: 30px;
 
 $crm-main-menu-height: 60px;
 $crm-main-menu-sub-menu-padding: 10px 0 16px;
@@ -14,19 +13,13 @@ $crm-form-layout-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
 $crm-input-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2) inset;
 $crm-search-input-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 $crm-tab-shadow: 0 9px 9px 0 rgba(48, 40, 40, 0.25);
-$crm-panel-element-shadow: 0 3px 18px 0px rgba(0, 0, 0, .1);
 
-$crm-black-olive-color: #3E3E3E;
 $crm-blue-light: #58b7d1;
-$crm-blue-light-color: #5897FB;
+$crm-blue-light-color: #5897fb;
 $crm-cancel-color: #363342;
-$crm-dark-gray-color: #70716b;
-$crm-green-color: #B0D730;
 $crm-light-gray-color: #818c97;
 
 $font-family-fontawesome: 'FontAwesome';
-
-$crm-font-weight-td: 100 !default;
 
 $crm-min-width: 1005px;
 $crm-max-width: 1504px;

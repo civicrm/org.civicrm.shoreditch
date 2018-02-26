@@ -1,0 +1,17 @@
+@mixin accordion-header() {
+  @extend %no-border-radius;
+  background: $crm-accordion-header-color !important;
+  background-image: none !important;
+  color: $gray-darker;
+  font-family: $font-family-base;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding: 16px 20px;
+  position: relative;
+
+  &::before {
+    @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
+    padding-right: 10px;
+  }
+}

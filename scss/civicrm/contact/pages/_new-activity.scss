@@ -1,12 +1,9 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('activity')} {
   .CRM_Activity_Form_Activity {
-    .crm-activity-form-block {
-      padding: 20px;
-    }
-
     .crm-form-block > .crm-submit-buttons {
-      border-top: none;
-      margin: 0 0 20px !important;
+      border-top: 0;
 
       > .crm-button {
         margin-left: 0 !important;
@@ -14,53 +11,16 @@
       }
     }
 
-    .helpicon {
-      left: 7px;
-      position: relative;
-      top: -3px;
-    }
-
     table.form-layout tr {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15px;
-      padding: 0 20px;
-
-      &.crm-activity-form-block-attachment,
-      &.crm-activity-form-block-recurring_activity,
-      &.crm-activity-form-block-schedule_followup {
-        margin-bottom: 0;
-
-        > td {
-          display: block;
-        }
-      }
-
-      > td {
-        padding: 0;
-
-        &:not(.label) {
-          color: $crm-copy;
-        }
-
-        .dateplugin {
-          margin: 0 !important;
-        }
+      td.view-value {
+        padding-right: 20px;
       }
 
       > td > .select2-container,
       > td > .crm-form-text {
-        margin-bottom: 0 !important;
-        margin-top: 5px !important;
-
-        &:after {
+        &::after {
           display: none;
         }
-      }
-
-      .crm-accordion-body tr,
-      .crm-accordion-body tr td.label {
-        padding: 0;
       }
     }
 
@@ -88,13 +48,6 @@
       position: relative;
     }
 
-    .crm-accordion-wrapper,
-    .crm-accordion-header,
-    .crm-accordion-body {
-      margin-left: -20px;
-      margin-right: -20px;
-    }
-
     #s2id_activity_type_id,
     #s2id_source_contact_id,
     #s2id_target_contact_id,
@@ -109,10 +62,6 @@
       input {
         min-width: 500px !important;
       }
-    }
-
-    .crm-activity-form-block-assignee_contact_id td:last-child {
-      padding: 0 !important;
     }
   }
 
@@ -168,7 +117,7 @@
   .crm-activity-form-block-attachment,
   .crm-activity-form-block-recurring_activity,
   .crm-activity-form-block-schedule_followup {
-    & > td {
+    > td {
       padding: 0;
     }
   }
@@ -200,22 +149,12 @@
     }
   }
 
-  .crm-form-block {
-    padding: 20px;
-  }
-
-  .crm-option-edit-link {
-    position: relative;
-    top: -8px;
-    left: initial !important;
-  }
-
   .crm-is-multi-activity-wrapper {
     label {
       padding: 15px 0;
       position: relative;
 
-      &:after {
+      &::after {
         left: 1px !important;
         top: 22px !important;
       }
@@ -223,7 +162,7 @@
   }
 
   .required {
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -242,17 +181,14 @@
   .form-layout {
     td {
       &.label {
-        display: table-cell;
-        text-align: left;
-        vertical-align: middle;
         padding-left: 0 !important;
       }
 
       input.crm-form-text,
       .crm-form-select,
       .crm-form-textarea {
-        margin-top: 0 !important;
         margin-bottom: 0 !important;
+        margin-top: 0 !important;
       }
 
       .crm-form-textarea {
@@ -403,9 +339,9 @@
       }
     }
 
-    div[id*="DataTables_Table_"] table.dataTable  {
+    div[id*='DataTables_Table_'] table.dataTable {
       background: transparent;
-      border: none;
+      border: 0;
       display: block;
       font-family: $font-family-base;
       overflow-x: auto;
@@ -417,7 +353,7 @@
 
         th {
           background: $gray-lighter !important;
-          border: none;
+          border: 0;
           color: $gray-darker;
           line-height: 1.5em;
           padding: 15px 20px;
@@ -432,11 +368,11 @@
       > tbody > tr {
         background: $crm-white;
         border-bottom: 1px solid $crm-background;
-        border-right: none;
+        border-right: 0;
 
         > td {
           background: $crm-white;
-          border: none;
+          border: 0;
           color: $gray-dark;
           line-height: 1.1em;
           overflow: hidden;
@@ -478,7 +414,7 @@
         width: 100% !important;
       }
 
-      @media screen and (min-width: $crm-min-width ) and (max-width: $crm-max-width) {
+      @media screen and (min-width: $crm-min-width) and (max-width: $crm-max-width) {
         width: auto !important;
       }
     }
@@ -504,7 +440,7 @@
       font-size: $font-size-base;
     }
 
-    div[id*="s2id_autogen"] {
+    div[id*='s2id_autogen'] {
       .select2-choice {
         background: $crm-white;
         border: 1px solid $crm-grayblue-darker;

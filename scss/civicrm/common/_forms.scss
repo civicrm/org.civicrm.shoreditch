@@ -1,137 +1,60 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/forms';
 @import '../bootstrap/overrides/style/forms';
-$control-height: 30px;
 
-%custom-form-control {
-  @extend .form-control;
-  @include open-sans-font-family();
-  height: $control-height;
-  line-height: $control-height;
-  box-sizing: border-box;
+%arrow {
+  @include fa-icon($font-size-base, $fa-var-caret-down);
+  display: block;
+  text-align: center;
+}
+
+%control-half-width {
+  @media (min-width: 1065px) {
+    min-width: 115px;
+  }
+
+  @media (max-width: 1064px) {
+    min-width: 30% !important;
+    width: 30% !important;
+  }
+}
+
+%responsive {
+  @media (min-device-width: $screen-sm-min) {
+    min-width: 230px;
+    width: 230px;
+  }
+
+  @media (max-device-width: $screen-sm-max) {
+    min-width: 270px;
+    width: 270px;
+  }
+
+  @media (max-device-width: $screen-xs-max) {
+    margin: 0;
+    max-width: 270px;
+  }
 }
 
 .crm-container {
   $disabled-color: lighten($gray-dark, 25);
-  $control-width: 230px;
   $control-spacing: 15px;
 
-  %responsive {
-    @media (min-device-width: $screen-sm-min) {
-      min-width: 230px;
-      width: 230px;
-    }
-
-    @media (max-device-width: $screen-sm-max) {
-      min-width: 270px;
-      width: 270px;
-    }
-
-    @media (max-device-width: $screen-xs-max) {
-      margin: 0;
-      max-width: 270px;
-    }
-  }
-
-  input.crm-form-text {
-    @include input-text;
-  }
-
-  &.select2-container,
-  &.select2-choice {
-    @extend %responsive;
-  }
-
-  %control-half-width {
-    @media (min-width: 1065px) {
-      min-width: $control-width / 2;
-    }
-
-    @media (max-width: 1064px) {
-      min-width: 30% !important;
-      width: 30% !important;
-    }
-  }
-
-  //Page specific
-  @at-root #{civi-page('contact')} & {
-    td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
-      @media (min-width: 1330px) {
-        //Compensate the ".select2-container" right margin
-        position: relative;
-      }
-    }
-  }
-
-  @at-root #{civi-page('contact-view')} & {
-    .select2-search:before {
-      top: 17px !important;
-    }
-  }
-
-  table {
-    &.form-layout,
-    &.form-layout-compressed {
-
-      td {
-        > div.select2-container,
-        > div.select2-container ~ a,
-        > select,
-        > span:not(.crm-form-date-wrapper) input,
-        > span:not(.crm-form-date-wrapper) select,
-        > input:not([type='radio']):not([type='checkbox']) {
-          margin: $control-spacing / 2 $control-spacing $control-spacing / 2 0 !important;
-          bottom: initial !important;
-        }
-
-        > select,
-        > select.crm-form-multiselect {
-           margin: 1px 0 $control-spacing / 2 0 !important;
-
-           + .crm-error {
-            position: relative;
-            top: 7px;
-          }
-        }
-
-        &.view-value {
-          > div.cke {
-            width: 95%;
-          }
-        }
-      }
-
-      tr td.label + td {
-        > input:not([type="radio"]):not([type="checkbox"]),
-        > div.select2-container {
-          @extend %responsive;
-          margin-right: 0 !important;
-        }
-      }
-    }
-  }
-
-  .form-layout,
-  .form-layout-compressed,
-  .crm-accordion-body,
-  .crm-form-block {
+  @include input-fields-container {
     input.crm-form-text,
-    input.dateplugin,
-    textarea {
+    input.dateplugin {
       @extend %responsive;
       display: inline-block;
     }
 
     input.crm-form-file {
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0;
     }
 
-    textarea {
-      @extend %responsive;
-    }
 
-    input[type="checkbox"],
-    input[type="radio"] {
+    input[type='checkbox'],
+    input[type='radio'] {
       margin: 0 5px 0 0;
       vertical-align: middle;
     }
@@ -145,56 +68,56 @@ $control-height: 30px;
       @include open-sans-font-family();
 
       &:not([multiple]) {
-        @extend %custom-form-control;
-        cursor: pointer;
-        line-height: normal;
-        border-radius: 0 !important;
-        display: inline-block;
-        width: auto !important;
-        height: $control-height !important;
-        appearance: none;
+        @include civicrm-form-control;
         -moz-appearance: none;
         -webkit-appearance: none;
+        appearance: none;
+        background: url('../svgs/drop-down-arrow.svg') no-repeat right $crm-white !important;
+        cursor: pointer;
+        display: inline-block;
+        height: $crm-control-height !important;
+        line-height: normal;
         padding-right: 10px !important;
         position: relative;
         top: 1px;
-        background: url('../svgs/drop-down-arrow.svg') no-repeat right $crm-white !important;
+        width: auto !important;
 
         option {
-          @extend %custom-form-control;
-          padding-top: 5px 0;
+          @include civicrm-form-control;
           border: 0;
+          padding-top: 5px 0;
         }
       }
     }
 
     label {
       @extend .control-label;
-      font-weight: 600 !important;
-      font-size: 13px;
       color: $gray-darker;
+      font-size: $font-size-base;
+      font-weight: $crm-font-weight-h3 !important;
     }
 
     input[type=email],
     input[type=number],
     input[type=password],
     input[type=search],
-    input[type=text],
-    textarea {
-      @extend %custom-form-control;
+    input[type=text] {
+      @include civicrm-form-control;
       @include open-sans-font-family();
       @include placeholder;
+    }
+
+    textarea {
+      @extend .form-control;
+      @include open-sans-font-family();
+      @include placeholder;
+      box-sizing: border-box;
+      width: unset;
     }
 
     // "Select2" Drop-downs
     .select2-container,
     .crm-form-select {
-      %arrow {
-        @include fa-icon(13px, '\f0d7');
-        display: block;
-        text-align: center;
-      }
-
       &.select2-container-multi {
         .select2-choices,
         .select2-choices::before {
@@ -219,6 +142,7 @@ $control-height: 30px;
 
           &::before {
             line-height: 22px;
+            top: 4px;
           }
 
           .select2-search-choice {
@@ -251,8 +175,9 @@ $control-height: 30px;
             padding: 0;
 
             input {
-              padding-left: 10px;
               box-shadow: none;
+              margin: -2px 0 0;
+              padding-left: 10px;
             }
           }
         }
@@ -262,7 +187,7 @@ $control-height: 30px;
         }
 
         &.select2-container-disabled .select2-choices {
-            width: inherit;
+          width: inherit;
         }
       }
 
@@ -291,10 +216,10 @@ $control-height: 30px;
       }
 
       .select2-choice {
-        @extend %custom-form-control;
+        @include civicrm-form-control;
         box-sizing: inherit;
-        height: $control-height;
-        line-height: $control-height;
+        height: $crm-control-height;
+        line-height: $crm-control-height;
         padding: 0 10px;
 
         abbr {
@@ -310,7 +235,7 @@ $control-height: 30px;
 
       &.select2-container-active {
         &:not(.select2-dropdown-open) span {
-            color: $brand-primary;
+          color: $brand-primary;
         }
 
         &.select2-dropdown-open {
@@ -349,7 +274,7 @@ $control-height: 30px;
 
       &.select2-dropdown-open {
         .select2-arrow::before {
-          content: '\f0d8';
+          content: $fa-var-caret-up;
         }
 
         .select2-choice,
@@ -363,21 +288,17 @@ $control-height: 30px;
       }
 
       .select2-search-choice-close {
-        right: 35px;
         background: none;
         background-image: none !important;
+        right: 35px;
 
         &::before {
-          @include fa-icon(13px, '\f057', $brand-primary);
-          line-height: inherit;
-          vertical-align: middle;
-          text-align: right;
+          @include fa-icon($font-size-base, $fa-var-times-circle, $brand-primary);
           display: block;
+          line-height: inherit;
+          text-align: right;
+          vertical-align: middle;
         }
-      }
-
-      &.select2-container-multi .select2-choices .select2-search-field input {
-        margin: 0;
       }
 
       .select2-input {
@@ -394,27 +315,11 @@ $control-height: 30px;
       }
     }
 
-    td td {
-      padding: 0;
-    }
-
     td {
       background: none !important;
 
       &.label {
         padding-left: 20px;
-        text-align: left;
-        vertical-align: top;
-
-        label {
-          margin: 10.5px 0;
-        }
-      }
-
-      label {
-        display: inline-block;
-        line-height: initial;
-        text-align: initial;
       }
 
       label ~ input ~ label ~ input {
@@ -430,11 +335,11 @@ $control-height: 30px;
       > .select2-container {
         @extend %responsive;
         // Needed in order to render correctly in PhantomJS
-        width: initial !important;
         height: auto !important;
+        width: initial !important;
       }
 
-      > input[type="text"]:not(:only-of-type) {
+      > input[type='text']:not(:only-of-type) {
         @extend %control-half-width;
       }
 
@@ -446,19 +351,15 @@ $control-height: 30px;
         }
 
         > div {
-          display: flex;
           align-items: baseline;
+          display: flex;
 
           > input:not(:only-child) {
-            width: 20%;
             flex-grow: 1;
+            width: 20%;
           }
         }
       }
-    }
-
-    input + label {
-      display: inline-block;
     }
 
     input.crm-form-text:not(.crm-form-date) {
@@ -466,11 +367,6 @@ $control-height: 30px;
     }
 
     table:not(.form-layout-compressed) {
-      .select2-container,
-      input.crm-form-text {
-        margin-top: 5px;
-      }
-
       .crm-age-range input {
         @extend %control-half-width;
         margin: 0 $control-spacing;
@@ -481,11 +377,11 @@ $control-height: 30px;
     label ~ input.crm-form-text,
     td .crm-field-wrapper input.crm-form-text:only-child,
     td .crm-form-date-wrapper input.crm-form-text:only-child,
-    td > input.crm-form-text {
+    td input.crm-form-text {
       @extend %responsive;
       box-sizing: border-box;
-      min-height: $control-height;
       display: inline-block;
+      min-height: $crm-control-height;
     }
 
     td > input.crm-form-color {
@@ -497,10 +393,9 @@ $control-height: 30px;
 
     .crm-form-date-wrapper {
       display: inline-block;
-      margin: $control-spacing / 2 0 $control-spacing / 2 0 !important;
       position: relative;
 
-      & ~ .crm-form-date-wrapper {
+      ~ .crm-form-date-wrapper {
         float: right;
       }
 
@@ -511,11 +406,64 @@ $control-height: 30px;
     }
   }
 
+  input.crm-form-text {
+    @include input-text;
+  }
+
+  input[type='file'] {
+    display: inline-block;
+  }
+
+  &.select2-container,
+  &.select2-choice {
+    @extend %responsive;
+  }
+
+  table {
+    &.form-layout,
+    &.form-layout-compressed {
+      td {
+        padding: 4px;
+
+        > div.select2-container,
+        > div.select2-container ~ a,
+        > select,
+        > span:not(.crm-form-date-wrapper) input,
+        > span:not(.crm-form-date-wrapper) select,
+        > input:not([type='radio']):not([type='checkbox']),
+        > textarea {
+          bottom: initial !important;
+        }
+
+        > select,
+        > select.crm-form-multiselect {
+          + .crm-error {
+            position: relative;
+            top: 7px;
+          }
+        }
+
+        &.view-value {
+          > div.cke {
+            width: 95%;
+          }
+        }
+      }
+
+      tr td.label + td {
+        > input:not([type='radio']):not([type='checkbox']),
+        > div.select2-container {
+          @extend %responsive;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+
   .cke {
     border: solid 1px $gray-dark;
     border-radius: 0;
     box-shadow: none;
-    margin-top: 7.5px;
 
     &,
     .cke_top,
@@ -526,8 +474,8 @@ $control-height: 30px;
 
     .cke_toolgroup {
       background: none;
-      border-radius: 0;
       border: 0;
+      border-radius: 0;
       box-shadow: none;
 
       a {
@@ -549,9 +497,9 @@ $control-height: 30px;
     }
 
     .cke_combo_button {
-      border-radius: 0 !important;
-      border: solid 1px $gray-dark !important;
       background: $crm-white !important;
+      border: solid 1px $gray-dark !important;
+      border-radius: 0 !important;
 
       &,
       &:active {
@@ -564,8 +512,8 @@ $control-height: 30px;
     }
 
     .cke_combo_open {
-      padding: 0 10px;
       margin: 0 !important;
+      padding: 0 10px;
     }
   }
 
@@ -580,16 +528,15 @@ $control-height: 30px;
     border-radius: $border-radius-base $border-radius-base 0 0;
     box-shadow: none;
     margin-left: 0;
-    margin-top: -4px;
 
     .select2-choice {
       border-radius: 0 0 $border-radius-base $border-radius-base;
     }
 
     .select2-input {
-      border-color: $brand-primary !important;
       background: none !important;
-      height: $control-height !important;
+      border-color: $brand-primary !important;
+      height: $crm-control-height !important;
     }
 
     .select2-search::before {
@@ -600,17 +547,17 @@ $control-height: 30px;
     }
 
     .select2-results {
-      margin: 4px 0 0 0;
       color: $gray-darker;
+      margin: 4px 0 0;
 
       li {
-        padding: 5px;
         background: $crm-white;
+        padding: 5px;
       }
 
       .select2-result-label {
-        padding: 5px 10px;
         color: $gray-dark;
+        padding: 5px 10px;
 
         .crm-icon {
           @include contact-type-icons();
@@ -629,17 +576,21 @@ $control-height: 30px;
       }
 
       .select2-no-results {
-        padding: 4px;
-        margin: 0;
         background: none;
+        margin: 0;
+        padding: 4px;
       }
 
       select {
-        height: 30px;
         background: $crm-white;
         border: 1px solid $crm-grayblue-darker;
+        height: 30px;
       }
     }
+  }
+
+  &.select2-drop:not(.select2-drop-above) {
+    margin-top: -4px;
   }
 
   &.select2-drop {
@@ -650,9 +601,8 @@ $control-height: 30px;
     }
   }
 
-
   .permission-delete-link {
-    border: none !important;
+    border: 0 !important;
     padding: 0 !important;
 
     &:hover,
@@ -661,28 +611,28 @@ $control-height: 30px;
     }
 
     > .icon {
-      margin-left: 0;
       background-image: none !important;
-      text-indent: 0 !important;
       display: inline !important;
-
+      margin-left: 0;
+      text-indent: 0 !important;
+      
       &:hover,
       &:focus {
         background: none !important;
       }
 
-      &:after {
-        @include fa-icon(13px, '\f014');
-        top: -3px;
-        position: relative;
-        font-weight: normal;
+      &::after {
+        @include fa-icon($font-size-base, $fa-var-trash-o);
         color: $brand-danger !important;
+        font-weight: normal;
+        position: relative;
+        top: -3px;
       }
     }
   }
 
   .crm-option-edit-link.crm-hover-button {
-    border: none !important;
+    border: 0 !important;
 
     &:hover,
     &:focus {
@@ -723,8 +673,8 @@ $control-height: 30px;
   }
 
   span.crm-error:not(.crm-error-label) {
-    color: $crm-white;
     background-color: $brand-danger;
+    color: $crm-white;
 
     a {
       color: $crm-white;
@@ -742,22 +692,20 @@ $control-height: 30px;
   border-radius: 0 $border-radius-base $border-radius-base 0;
   color: $gray-darker;
   cursor: pointer;
+  margin-left: -2px;
   padding: 8px 10px 7px;
   vertical-align: bottom;
-  margin-left: -2px;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
 }
 
 input.dateplugin,
 input.crm-form-date {
   background: $crm-white;
-  height: 26px;
   border: 1px solid $gray-dark;
+  height: 26px;
   vertical-align: bottom;
 }
-.CRM_Admin_Form_Options .form-layout-compressed {
 
+.CRM_Admin_Form_Options .form-layout-compressed {
   td.label {
     padding-left: 0;
   }

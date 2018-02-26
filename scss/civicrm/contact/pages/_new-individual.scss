@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact-add')} {
   .crm-search-form-block {
     border-radius: $border-radius-child !important;
@@ -32,7 +34,7 @@
         }
 
         td {
-          > input[type="text"] {
+          > input[type='text'] {
             min-width: 100% !important;
             width: 100% !important;
           }
@@ -55,11 +57,6 @@
       .crm-form-select {
         min-width: 120px !important;
         width: 120px !important;
-
-        + .crm-option-edit-link {
-          left: -15px;
-          position: relative;
-        }
       }
 
       input[type='text'] {
@@ -127,11 +124,6 @@
         width: 100% !important;
       }
 
-      #s2id_preferred_language,
-      #s2id_preferred_mail_format {
-        float: left;
-      }
-
       #s2id_contact_sub_type {
         max-width: 180px;
 
@@ -149,18 +141,9 @@
       }
     }
   }
+
   .contact_information-section {
     table-layout: fixed;
-
-    tr {
-      &:first-child {
-        td {
-          &:first-child {
-
-          }
-        }
-      }
-    }
 
     tr {
       td {
@@ -168,31 +151,8 @@
         &:nth-child(3),
         &:nth-child(4) {
           position: relative;
-          z-index: 1;
           text-align: left;
-        }
-
-        &:nth-child(1) {
-          width: 435px;
-        }
-      }
-
-      &[id^="Email_Block_"] {
-        td {
-          &:nth-child(2) {
-            right: 10px;
-            width: 200px;
-          }
-
-          &:nth-child(3) {
-            left: 7px;
-            width: 200px;
-          }
-
-          &:nth-child(4) {
-            left: 7px;
-            width: 200px;
-          }
+          z-index: 1;
         }
       }
     }
@@ -210,8 +170,8 @@
         &:nth-child(3) {
           td:nth-child(4) {
             position: relative;
-            top: 35px;
             right: 35px;
+            top: 35px;
           }
         }
 
@@ -261,24 +221,24 @@
   #addressBlock {
     #addMoreAddress1 {
       height: auto;
-      zoom: 1;
       overflow: auto;
+      zoom: 1;
     }
 
     #Address-Primary-html {
       padding-bottom: 10px;
 
       .select2-container {
-        min-width: 90px;
         margin-right: 10px;
+        min-width: 90px;
       }
     }
 
-    label[for*="[use_shared_address]"] {
+    label[for*='[use_shared_address]'] {
       margin-bottom: 10px;
     }
 
-    table[id^="address_table_"] {
+    table[id^='address_table_'] {
       tr {
         &:nth-child(5) {
           .crm-address-element {
@@ -295,16 +255,16 @@
         margin: 5px !important;
 
         i {
-          margin-top: -3px;
           margin-right: 3px;
+          margin-top: -3px;
         }
       }
     }
   }
 
   .collapsible-title {
-    padding: 15px 20px;
     border-bottom: 0;
     font-size: 1.1em;
+    padding: 15px 20px;
   }
 }

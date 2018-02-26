@@ -5,6 +5,10 @@
     height: auto;
   }
 
+  .crm-submit-buttons {
+    @include civicrm-submit-buttons;
+  }
+
   .crm-hover-button {
     &:hover {
       background: none !important;

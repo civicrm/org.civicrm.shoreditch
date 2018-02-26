@@ -49,12 +49,27 @@
 
     &,
     a.ui-notify-cross,
-    h1 {
+    h1,
+    td {
       color: $gray-darker;
+    }
+
+    table {
+      table-layout: fixed;
+    }
+
+    td {
+      font-size: $font-size-base;
+      word-wrap: break-word;
     }
 
     a {
       color: $brand-primary;
+
+      &,
+      &:link {
+        text-decoration: none;
+      }
 
       &.ui-button {
         background: $brand-primary;
@@ -123,6 +138,10 @@
         color: $gray-dark;
       }
     }
+  }
+
+  td {
+    border-color: $crm-grayblue-dark;
   }
 }
 

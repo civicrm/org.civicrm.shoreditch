@@ -11,7 +11,7 @@ $button-border-radius: 2px;
   text-shadow: none;
   text-transform: uppercase;
   opacity: 1;
-  font-size: 1em !important;
+  font-size: $font-size-base;
 }
 
 %btn-civi-primary {
@@ -23,13 +23,6 @@ $button-border-radius: 2px;
 
 %btn-civi-secondary-outline {
   border-radius: $button-border-radius;
-}
-
-%submit-buttons-civi {
-  background: $crm-white !important;
-  border-top: 1px solid $gray-lighter;
-  margin: 0;
-  padding: 20px;
 }
 
 .crm-container {
@@ -146,7 +139,7 @@ $button-border-radius: 2px;
     &.crm-search-form-block > .crm-submit-buttons,
     &.crm-form-block > .crm-submit-buttons,
     .form-item > .crm-submit-buttons {
-      @extend %submit-buttons-civi;
+      @include civicrm-submit-buttons;
     }
 
     .crm-submit-buttons {
@@ -379,6 +372,40 @@ a {
     i {
       margin-top: -4px;
       margin-right: 10px;
+    }
+  }
+}
+
+button {
+  background: $brand-primary;
+  border: 0;
+  border-radius: $border-radius-base;
+  color: $crm-white;
+  font-family: $font-family-base;
+  height: 36px;
+  line-height: 1;
+  padding: 11px 12px;
+  text-shadow: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &:hover {
+    background: darken($brand-primary, $crm-darken-percentage);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &.cancel {
+    background: $crm-white;
+    border: 1px solid $crm-copy;
+    color: $crm-cancel-color;
+
+    &:hover {
+      background: $crm-copy;
+      color: $crm-white;
     }
   }
 }

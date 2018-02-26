@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 /*
 * The advanced-multiselect() CSS function designs table structure for multiselects
 */
@@ -5,7 +7,7 @@
   border: 0;
 
   .crm-form-multiselect {
-    @extend %custom-form-control;
+    @include civicrm-form-control;
     height: 140px;
   }
 
@@ -14,8 +16,8 @@
   }
 
   td {
-    border: none;
-    vertical-align: middle;
+    border: 0;
     padding: 0 5px 0 0;
+    vertical-align: middle;
   }
 }

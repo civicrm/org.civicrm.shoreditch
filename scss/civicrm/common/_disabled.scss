@@ -1,0 +1,11 @@
+.crm-container {
+  .disabled,
+  .disabled td,
+  .cancelled,
+  .cancelled td,
+  li.disabled a.ui-tabs-anchor,
+  li.crm-count-0 a.ui-tabs-anchor,
+  li.crm-count-0 a.ui-tabs-anchor em {
+    color: $crm-gray-matte !important;
+  }
+}

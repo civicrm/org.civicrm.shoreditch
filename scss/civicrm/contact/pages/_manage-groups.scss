@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+
 #{civi-page('contact')} {
   #GroupContact {
     h3 {
@@ -23,7 +25,7 @@
 
     table {
       background: transparent;
-      border: none;
+      border: 0;
       font-family: $font-family-base;
 
       thead tr {
@@ -32,7 +34,7 @@
 
         th {
           background: $gray-lighter;
-          border: none;
+          border: 0;
           color: $gray-darker;
           padding: 10px 20px;
           vertical-align: middle;
@@ -53,14 +55,14 @@
 
       tbody tr {
         background: $crm-white;
-        border-left: none;
-        border-right: none;
+        border-left: 0;
+        border-right: 0;
         border-top: 1px solid $crm-background;
         line-height: 30px;
 
         td {
           background: $crm-white;
-          border: none;
+          border: 0;
           color: $gray-dark;
           padding: 10px 20px;
 
@@ -150,8 +152,8 @@
     }
 
     #_qf_GroupContact_next {
-      background: $brand-primary url(../images/plus-icon.png) 8px 11px no-repeat;
-      border: none;
+      background: $brand-primary url('../images/plus-icon.png') 8px 11px no-repeat;
+      border: 0;
       height: 27px;
       line-height: 27px;
       padding: 1px 10px 3px 20px;
@@ -212,13 +214,13 @@
 
   .crm-group-search-form-block {
     margin-bottom: 30px !important;
-    padding: 20px !important;
     overflow: hidden;
+    padding: 20px !important;
 
     h3 {
       @extend .collapsible-title;
       background: $gray-lighter;
-      border: none;
+      border: 0;
       border-bottom: 1px solid $crm-grayblue-dark;
       color: $gray-darker;
       font-family: $font-family-base;
@@ -235,7 +237,7 @@
       padding: 0;
     }
 
-    table tr td:nth-child(5) label[for*="group_status"] {
+    table tr td:nth-child(5) label[for*='group_status'] {
       margin-top: 7px;
     }
 
@@ -312,7 +314,7 @@
       text-transform: capitalize;
       width: 5px;
 
-      &:after,
+      &::after,
       .panel {
         text-indent: 0;
       }
@@ -328,8 +330,8 @@
     }
   }
 
-  #crm-main-content-wrapper div[id*="DataTables_Table_"] {
-    div[id*="s2id_autogen"] {
+  #crm-main-content-wrapper div[id*='DataTables_Table_'] {
+    div[id*='s2id_autogen'] {
       background: $crm-white;
 
       .select2-choice {
@@ -360,12 +362,12 @@
     span .show-children {
       background: none;
 
-      &.collapsed:after {
+      &.collapsed::after {
         @include fa-icon($content: $fa-var-chevron-right);
         margin-left: -15px;
       }
 
-      &.expanded:after {
+      &.expanded::after {
         @include fa-icon($content: $fa-var-chevron-down);
         margin-left: -15px;
       }
@@ -384,16 +386,7 @@
 
       td.label,
       td.report-label {
-        padding: 0;
-        text-align: left;
-
-        label[for='parents'] {
-          left: -19px;
-          position: relative;
-        }
-
         label {
-          margin: 0 !important;
           padding: 8px 0;
         }
       }
@@ -407,7 +400,7 @@
       min-height: 70px;
     }
 
-    #s2id_visibility:after {
+    #s2id_visibility::after {
       display: none;
     }
 
@@ -446,7 +439,7 @@
   }
 
   #alpha-filter {
-    background-color: #ffffff !important;
+    background-color: $crm-white !important;
     box-shadow: $box-shadow;
     padding: 5px 20px !important;
 
@@ -476,8 +469,8 @@
       border-color: $brand-primary;
       border-radius: $border-radius-base;
       color: $crm-white;
-      font-size: $font-size-base;
       font-family: $font-family-base;
+      font-size: $font-size-base;
       opacity: 0.8;
       padding: 8px 12px;
       text-shadow: none;
@@ -490,17 +483,6 @@
   }
 
   .CRM_Group_Form_Edit .crm-group-form-block {
-    .label,
-    .report-label {
-      text-align: left !important;
-      vertical-align: middle;
-
-      label[for='parents'] {
-        left: -19px;
-        position: relative;
-      }
-    }
-
     .crm-form-textarea {
       min-height: 70px;
     }
@@ -524,25 +506,14 @@
   }
 }
 
-#{civi-page('group-add')} .CRM_Group_Form_Edit .crm-group-form-block  {
+#{civi-page('group-add')} .CRM_Group_Form_Edit .crm-group-form-block {
   padding: 15px;
 
   textarea {
     line-height: 1.5em;
   }
 
-  td {
-    vertical-align: middle;
-
-    &.label {
-      label {
-        margin: 0;
-        padding: 15px 0;
-      }
-    }
-  }
-
-  #s2id_visibility:after {
+  #s2id_visibility::after {
     display: none;
   }
 }

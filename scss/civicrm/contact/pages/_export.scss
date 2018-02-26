@@ -1,4 +1,9 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .CRM_Export_Form_Select {
+  h3 {
+    font-family: $font-family-base;
+  }
 
   .help {
     margin-bottom: 20px;
@@ -23,19 +28,23 @@
   }
 
   .crm-section {
+    @include box-shadow($box-shadow);
     background-color: $crm-white;
-    box-shadow: $crm-panel-element-shadow;
     margin-bottom: 0;
     padding: 20px;
 
+    &.crm-exportOption-section {
+      border-radius: $border-radius-base $border-radius-base 0 0;
+    }
+
     &.crm-export-mapping-section {
-      padding-bottom: 0;
+      padding: 0;
     }
 
     h3 {
-      padding-left: 0;
       color: $gray-darker;
       font-size: $font-size-h3;
+      padding-left: 0;
     }
   }
 
@@ -44,7 +53,8 @@
     box-shadow: none;
 
     > .crm-submit-buttons {
-      box-shadow: $crm-panel-element-shadow;
+      @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+      border-radius: 0 0 $border-radius-base $border-radius-base;
     }
   }
 
@@ -58,7 +68,7 @@
 
 .CRM_Export_Form_Map {
   .help {
-    margin-bottom: 0;
+    margin-bottom: 20px;
 
     p {
       margin-bottom: 10px;
@@ -66,6 +76,7 @@
   }
 
   .wizard-bar {
+    border-radius: $border-radius-base $border-radius-base 0 0;
     margin-bottom: 0 !important;
   }
 
@@ -74,7 +85,7 @@
       width: 100% !important;
 
       .columnheader {
-        border: none;
+        border: 0;
 
         th {
           font-size: $font-size-h2;
@@ -90,11 +101,11 @@
         &-dark {
           th {
             @include panel-header;
-            text-transform: none;
+            border: 0;
+            border-bottom: 1px solid $crm-grayblue-dark;
             color: $gray-darker;
             font-weight: $crm-font-weight-h3;
-            border: none;
-            border-bottom: 1px solid $crm-grayblue-dark;
+            text-transform: none;
           }
         }
       }
@@ -118,14 +129,18 @@
     }
   }
 
+  .crm-submit-buttons {
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+  }
+
   #saveDetails {
     .label {
-      width: 80px;
       display: table-cell;
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
       text-align: left;
       vertical-align: middle;
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
+      width: 80px;
     }
 
     .crm-form-text {

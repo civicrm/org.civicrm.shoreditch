@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('admin-price')} {
   &,
   .ui-dialog-content {
@@ -5,8 +7,8 @@
       input.crm-form-text,
       .crm-form-select,
       .crm-form-textarea {
-        margin-top: 0 !important;
         margin-bottom: 0 !important;
+        margin-top: 0 !important;
       }
 
       .crm-form-textarea {
@@ -23,20 +25,24 @@
     }
   }
 
+  .crm-price-set-preview-block {
+    legend {
+      @include panel-header;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .price_set-section {
+      margin: 0;
+      padding: 0 20px;
+    }
+  }
+
   .crm-container #crm-main-content-wrapper {
     .CRM_Price_Form_Set .crm-form-block,
     .CRM_Price_Form_Field .crm-form-block {
-
       .form-layout {
         margin: 20px 0;
-
-        td.label {
-          display: table-cell;
-          padding-left: 20px;
-          text-align: left;
-          vertical-align: middle;
-          width: 175px;
-        }
 
         tr {
           &:nth-child(6),
@@ -49,29 +55,19 @@
       }
     }
 
-    #field_page, #option11_wrapper {
+    #field_page,
+    #option11_wrapper {
       margin-bottom: 0 !important;
       position: relative;
-    }
-
-    .action-link {
-      background: $crm-white !important;
-      padding: 20px !important;
-
-      &:first-child {
-        background: $gray-lighter !important;
-      }
-
-      &:last-child {
-        border-top: 1px solid $crm-background;
-      }
     }
 
     .dataTables_wrapper {
       overflow: visible;
     }
 
-    #option11, #option12, #option13,
+    #option11,
+    #option12,
+    #option13,
     #options {
       @include expandable-table;
       box-shadow: none !important;
@@ -95,8 +91,8 @@
       }
 
       td:last-child {
-        text-align: right;
         padding-right: 20px;
+        text-align: right;
       }
 
       .action-item {

@@ -1,0 +1,38 @@
+.jstree-default {
+  .jstree-wholerow-hovered,
+  .jstree-wholerow-clicked {
+    background: $gray-light;
+  }
+}
+
+.jstree-contextmenu {
+  &.vakata-context {
+    @include box-shadow($box-shadow);
+    background: $crm-white;
+    border: 1px solid $crm-background;
+    border-radius: $border-radius-base;
+    padding: 0;
+
+    li {
+      > a {
+        border-radius: 0;
+        color: $gray-dark;
+
+        .vakata-contextmenu-sep {
+          display: none;
+        }
+
+        &:hover {
+          background: $gray-light;
+          box-shadow: none;
+        }
+      }
+
+      &.vakata-context-hover {
+        > a {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}

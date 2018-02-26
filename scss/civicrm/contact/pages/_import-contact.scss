@@ -6,7 +6,7 @@
   &#{civi-page('import-custom')} {
     #upload-file {
       > .crm-submit-buttons {
-        @extend %submit-buttons-civi;
+        @include civicrm-submit-buttons;
         min-height: 43px;
         margin: 20px 0 0 0 !important;
 
@@ -56,8 +56,6 @@
     }
 
     .label {
-      text-align: left !important;
-      vertical-align: middle !important;
       width: 180px;
     }
   }

@@ -1,0 +1,12 @@
+&#{civi-page('admin-pcp')} {
+  .CRM_PCP_Form_PCP {
+    h3 {
+      @include panel-header;
+      margin-bottom: 0;
+    }
+
+    table.form-layout-compressed {
+      margin: 20px;
+    }
+  }
+}
