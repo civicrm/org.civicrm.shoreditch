@@ -1,24 +1,31 @@
-body[class*='page-civicrm-report-'] {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
 
+body[class*='page-civicrm-report-'] {
   #crm-container {
     .ui-tabs-panel {
       padding: 0;
     }
 
     .report-contents {
-      border: none;
-      width: auto;
+      border: 0;
     }
 
     table.report-layout {
       td {
         border-bottom: 1px solid $gray-light;
+
+        &.report-contents-right {
+          border-color: $gray-light;
+        }
       }
     }
 
     .crm-report-form-block {
       .report-layout {
-        @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+        @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+        border-top: 1px solid $crm-grayblue-dark;
+        position: relative;
+        z-index: 0;
 
         th,
         td {
@@ -26,10 +33,12 @@ body[class*='page-civicrm-report-'] {
           padding: 16px 10px;
 
           &:first-child {
+            border-left: 0;
             padding-left: 20px;
           }
 
           &:last-child {
+            border-right: 0;
             padding-right: 20px;
           }
         }
@@ -38,8 +47,23 @@ body[class*='page-civicrm-report-'] {
       h3 {
         @include box-shadow($box-shadow);
         @include panel-header;
+        border-bottom: 0;
         margin-bottom: 0;
         margin-top: 20px;
+      }
+
+      br {
+        display: none;
+      }
+
+      .crm-pager {
+        @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+        margin: 0;
+        padding-bottom: 5px;
+
+        .crm-pager-nav {
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -50,14 +74,18 @@ body[class*='page-civicrm-report-'] {
   }
 
   .crm-tasks {
+    @include box-shadow($box-shadow);
     background: $crm-white;
-    box-shadow: $box-shadow;
     border-radius: $border-radius-base;
-    margin: 20px 0;
-    padding-left: 11px;
+    margin: 20px 0 0;
+    padding: 16px;
 
     td {
       border: 0 !important;
+
+      td {
+        padding: 0;
+      }
     }
   }
 
@@ -65,7 +93,7 @@ body[class*='page-civicrm-report-'] {
     &-col-groups {
       tr {
         td {
-          border: none;
+          border: 0;
           padding: 8px 10px 0;
 
           &:first-child {
@@ -78,17 +106,8 @@ body[class*='page-civicrm-report-'] {
     &-format,
     &-email,
     &-access {
-
       h3 {
         @include section-title;
-      }
-    }
-
-    &-email,
-    &-format,
-    .crm-report-instanceForm-form-block-permission {
-      .report-label {
-        vertical-align: middle !important;
       }
     }
 
@@ -112,7 +131,7 @@ body[class*='page-civicrm-report-'] {
         box-shadow: none !important;
 
         .form-link {
-          &:before {
+          &::before {
             @include fa-icon($content: $fa-var-times);
           }
         }

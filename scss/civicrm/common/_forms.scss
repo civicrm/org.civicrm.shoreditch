@@ -1,112 +1,47 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/forms';
 @import '../bootstrap/overrides/style/forms';
 
+%arrow {
+  @include fa-icon($font-size-base, $fa-var-caret-down);
+  display: block;
+  text-align: center;
+}
+
+%control-half-width {
+  @media (min-width: 1065px) {
+    min-width: 115px;
+  }
+
+  @media (max-width: 1064px) {
+    min-width: 30% !important;
+    width: 30% !important;
+  }
+}
+
+%responsive {
+  @media (min-device-width: $screen-sm-min) {
+    min-width: 230px;
+    width: 230px;
+  }
+
+  @media (max-device-width: $screen-sm-max) {
+    min-width: 270px;
+    width: 270px;
+  }
+
+  @media (max-device-width: $screen-xs-max) {
+    margin: 0;
+    max-width: 270px;
+  }
+}
+
 .crm-container {
   $disabled-color: lighten($gray-dark, 25);
-  $control-width: 230px;
   $control-spacing: 15px;
 
-  %responsive {
-    @media (min-device-width: $screen-sm-min) {
-      min-width: 230px;
-      width: 230px;
-    }
-
-    @media (max-device-width: $screen-sm-max) {
-      min-width: 270px;
-      width: 270px;
-    }
-
-    @media (max-device-width: $screen-xs-max) {
-      margin: 0;
-      max-width: 270px;
-    }
-  }
-
-  input.crm-form-text {
-    @include input-text;
-  }
-
-  &.select2-container,
-  &.select2-choice {
-    @extend %responsive;
-  }
-
-  %control-half-width {
-    @media (min-width: 1065px) {
-      min-width: $control-width / 2;
-    }
-
-    @media (max-width: 1064px) {
-      min-width: 30% !important;
-      width: 30% !important;
-    }
-  }
-
-  //Page specific
-  @at-root #{civi-page('contact')} & {
-    td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
-      @media (min-width: 1330px) {
-        //Compensate the ".select2-container" right margin
-        position: relative;
-      }
-    }
-  }
-
-  @at-root #{civi-page('contact-view')} & {
-    .select2-search::before {
-      top: 17px !important;
-    }
-  }
-
-  table {
-    &.form-layout,
-    &.form-layout-compressed {
-      td {
-        padding: 4px;
-
-        > div.select2-container,
-        > div.select2-container ~ a,
-        > select,
-        > span:not(.crm-form-date-wrapper) input,
-        > span:not(.crm-form-date-wrapper) select,
-        > input:not([type='radio']):not([type='checkbox']),
-        > textarea {
-          bottom: initial !important;
-        }
-
-        > select,
-        > select.crm-form-multiselect {
-          + .crm-error {
-            position: relative;
-            top: 7px;
-          }
-        }
-
-        &.view-value {
-          > div.cke {
-            width: 95%;
-          }
-        }
-      }
-
-      tr td.label + td {
-        > input:not([type='radio']):not([type='checkbox']),
-        > div.select2-container {
-          @extend %responsive;
-          margin-right: 0 !important;
-        }
-      }
-    }
-  }
-
-  .form-layout,
-  .form-layout-compressed,
-  .form-item,
-  .crm-accordion-body,
-  .crm-form-block {
+  @include input-fields-container {
     input.crm-form-text,
     input.dateplugin {
       @extend %responsive;
@@ -134,9 +69,10 @@
 
       &:not([multiple]) {
         @include civicrm-form-control;
+        -moz-appearance: none;
+        -webkit-appearance: none;
         appearance: none;
         background: url('../svgs/drop-down-arrow.svg') no-repeat right $crm-white !important;
-        border-radius: 0 !important;
         cursor: pointer;
         display: inline-block;
         height: $crm-control-height !important;
@@ -182,12 +118,6 @@
     // "Select2" Drop-downs
     .select2-container,
     .crm-form-select {
-      %arrow {
-        @include fa-icon(13px, '\f0d7');
-        display: block;
-        text-align: center;
-      }
-
       &.select2-container-multi {
         .select2-choices,
         .select2-choices::before {
@@ -212,6 +142,7 @@
 
           &::before {
             line-height: 22px;
+            top: 4px;
           }
 
           .select2-search-choice {
@@ -245,6 +176,7 @@
 
             input {
               box-shadow: none;
+              margin: -2px 0 0;
               padding-left: 10px;
             }
           }
@@ -474,6 +406,60 @@
     }
   }
 
+  input.crm-form-text {
+    @include input-text;
+  }
+
+  input[type='file'] {
+    display: inline-block;
+  }
+
+  &.select2-container,
+  &.select2-choice {
+    @extend %responsive;
+  }
+
+  table {
+    &.form-layout,
+    &.form-layout-compressed {
+      td {
+        padding: 4px;
+
+        > div.select2-container,
+        > div.select2-container ~ a,
+        > select,
+        > span:not(.crm-form-date-wrapper) input,
+        > span:not(.crm-form-date-wrapper) select,
+        > input:not([type='radio']):not([type='checkbox']),
+        > textarea {
+          bottom: initial !important;
+        }
+
+        > select,
+        > select.crm-form-multiselect {
+          + .crm-error {
+            position: relative;
+            top: 7px;
+          }
+        }
+
+        &.view-value {
+          > div.cke {
+            width: 95%;
+          }
+        }
+      }
+
+      tr td.label + td {
+        > input:not([type='radio']):not([type='checkbox']),
+        > div.select2-container {
+          @extend %responsive;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+
   .cke {
     border: solid 1px $gray-dark;
     border-radius: 0;
@@ -614,7 +600,6 @@
       border-radius: $border-radius-base $border-radius-base 0 0;
     }
   }
-
 
   .permission-delete-link {
     border: 0 !important;

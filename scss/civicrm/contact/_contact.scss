@@ -1,7 +1,13 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact-view')} {
   @import 'tabs';
   @import 'header';
   @import 'detail';
+
+  .select2-search::before {
+    top: 17px !important;
+  }
 }
 
 @import 'pages/new-individual';

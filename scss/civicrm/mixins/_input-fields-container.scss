@@ -1,0 +1,16 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+/*
+* This mixin holds all selectors which contains input elements like textarea/textbox/selecbox.
+* Using selectors instead of global style prevents shoreditch theme to apply style in drupal theme and civicrm public pages.
+*/
+@mixin input-fields-container {
+  .form-layout,
+  .form-layout-compressed,
+  .form-item,
+  .crm-accordion-body,
+  .crm-form-block,
+  #task-section {
+    @content;
+  }
+}
