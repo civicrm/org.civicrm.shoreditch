@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('campaign')} {
   .crm-content-block {
     .dataTables_wrapper {
@@ -32,11 +34,6 @@
       padding-top: 11px;
     }
 
-    .crm-copy-fields {
-      border-bottom: 1px solid $gray-light;
-      border-top: 1px solid $gray-light;
-    }
-
     .civireport-criteria {
       .form-layout-compressed {
         @extend %crm-table;
@@ -46,7 +43,8 @@
           background: $gray-lighter;
         }
 
-        td,th {
+        td,
+        th {
           padding: 8px 10px;
         }
       }
@@ -60,9 +58,28 @@
       }
     }
 
+    .form-item {
+      overflow-x: scroll;
+    }
+
     .crm-copy-fields {
+      border-bottom: 1px solid $gray-light;
+      border-top: 1px solid $gray-light;
+
       tr {
+        td,
+        th {
+          line-height: normal;
+        }
+
         td {
+          &.compressed {
+            input {
+              font-size: $font-size-base;
+              font-weight: normal;
+            }
+          }
+
           a.button {
             background: transparent;
             color: $brand-primary;
