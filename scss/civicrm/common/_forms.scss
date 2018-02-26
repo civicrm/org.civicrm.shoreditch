@@ -3,9 +3,42 @@
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/forms';
 @import '../bootstrap/overrides/style/forms';
 
+%arrow {
+  @include fa-icon($font-size-base, $fa-var-caret-down);
+  display: block;
+  text-align: center;
+}
+
+%control-half-width {
+  @media (min-width: 1065px) {
+    min-width: 115px;
+  }
+
+  @media (max-width: 1064px) {
+    min-width: 30% !important;
+    width: 30% !important;
+  }
+}
+
+%responsive {
+  @media (min-device-width: $screen-sm-min) {
+    min-width: 230px;
+    width: 230px;
+  }
+
+  @media (max-device-width: $screen-sm-max) {
+    min-width: 270px;
+    width: 270px;
+  }
+
+  @media (max-device-width: $screen-xs-max) {
+    margin: 0;
+    max-width: 270px;
+  }
+}
+
 .crm-container {
   $disabled-color: lighten($gray-dark, 25);
-  $control-width: 230px;
   $control-spacing: 15px;
 
   @include input-fields-container {
@@ -85,12 +118,6 @@
     // "Select2" Drop-downs
     .select2-container,
     .crm-form-select {
-      %arrow {
-        @include fa-icon(13px, '\f0d7');
-        display: block;
-        text-align: center;
-      }
-
       &.select2-container-multi {
         .select2-choices,
         .select2-choices::before {
@@ -379,23 +406,6 @@
     }
   }
 
-  %responsive {
-    @media (min-device-width: $screen-sm-min) {
-      min-width: 230px;
-      width: 230px;
-    }
-
-    @media (max-device-width: $screen-sm-max) {
-      min-width: 270px;
-      width: 270px;
-    }
-
-    @media (max-device-width: $screen-xs-max) {
-      margin: 0;
-      max-width: 270px;
-    }
-  }
-
   input.crm-form-text {
     @include input-text;
   }
@@ -407,17 +417,6 @@
   &.select2-container,
   &.select2-choice {
     @extend %responsive;
-  }
-
-  %control-half-width {
-    @media (min-width: 1065px) {
-      min-width: $control-width / 2;
-    }
-
-    @media (max-width: 1064px) {
-      min-width: 30% !important;
-      width: 30% !important;
-    }
   }
 
   table {
@@ -602,7 +601,6 @@
     }
   }
 
-
   .permission-delete-link {
     border: 0 !important;
     padding: 0 !important;
@@ -683,21 +681,6 @@
     }
   }
 
-  //Page specific
-  @at-root #{civi-page('contact')} & {
-    td:not(.html-adjust) .select2-container + select + .crm-option-edit-link {
-      @media (min-width: 1330px) {
-        //Compensate the ".select2-container" right margin
-        position: relative;
-      }
-    }
-  }
-
-  @at-root #{civi-page('contact-view')} & {
-    .select2-search::before {
-      top: 17px !important;
-    }
-  }
 }
 
 .crm-form-text:focus + .addon.fa-calendar {
