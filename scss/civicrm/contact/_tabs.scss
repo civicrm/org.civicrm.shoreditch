@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .crm-contact-page {
   padding: 4px;
   position: relative;
@@ -11,11 +13,11 @@
       border-radius: 0;
       box-shadow: $box-shadow;
       float: left;
-      padding: 0 0 99999px;
       margin-bottom: -99999px;
+      padding: 0 0 99999px;
       width: 200px;
 
-      &~.ui-tabs-panel {
+      ~.ui-tabs-panel {
         .container-fluid {
           max-width: $container-large-desktop;
         }
@@ -56,106 +58,106 @@
         // ICONS
         // ==============
         &::before {
-          content: "\f12e";
-          margin-right: 10px;
-          font-family: "FontAwesome";
+          content: '\f12e';
+          font-family: 'FontAwesome';
           font-weight: normal;
+          margin-right: 10px;
         }
 
-        &[title="Contact Summary"]::before {
-          content: "\f007";
+        &[title='Contact Summary']::before {
+          content: '\f007';
         }
 
-        &[title="Job Contract"]::before {
-          content: "\f016";
+        &[title='Job Contract']::before {
+          content: '\f016';
         }
 
-        &[title="Job Roles"]::before {
-          content: "\f022";
+        &[title='Job Roles']::before {
+          content: '\f022';
         }
 
-        &[title="Personal Details"]::before {
-          content: "\f05a";
+        &[title='Personal Details']::before {
+          content: '\f05a';
         }
 
-        &[title="Leave"]::before {
-          content: "\f0b1";
+        &[title='Leave']::before {
+          content: '\f0b1';
         }
 
-        &[title="Appraisals"]::before {
-          content: "\f200";
+        &[title='Appraisals']::before {
+          content: '\f200';
         }
 
-        &[title="Assignments"]::before {
-          content: "\f0f2";
+        &[title='Assignments']::before {
+          content: '\f0f2';
         }
 
-        &[title="Tasks"]::before {
-          content: "\f03a";
+        &[title='Tasks']::before {
+          content: '\f03a';
         }
 
-        &[title="Documents"]::before {
-          content: "\f0c5";
+        &[title='Documents']::before {
+          content: '\f0c5';
         }
 
-        &[title="Identification"]::before {
-          content: "\f09d";
+        &[title='Identification']::before {
+          content: '\f09d';
         }
 
-        &[title="Immigration"]::before {
-          content: "\f072";
+        &[title='Immigration']::before {
+          content: '\f072';
         }
 
-        &[title="Emergency Contacts"]::before {
-          content: "\f0fa";
+        &[title='Emergency Contacts']::before {
+          content: '\f0fa';
         }
 
-        &[title="Managers"]::before,
-        &[title="Relationships"]::before {
-          content: "\f0e8";
+        &[title='Managers']::before,
+        &[title='Relationships']::before {
+          content: '\f0e8';
         }
 
-        &[title="Bank Details"]::before {
-          content: "\f19c";
+        &[title='Bank Details']::before {
+          content: '\f19c';
         }
 
-        &[title="Career History"]::before {
-          content: "\f1da";
+        &[title='Career History']::before {
+          content: '\f1da';
         }
 
-        &[title="Medical & Disability"]::before {
-          content: "\f193";
+        &[title='Medical & Disability']::before {
+          content: '\f193';
         }
 
-        &[title="Qualifications"]::before {
-          content: "\f0a3";
+        &[title='Qualifications']::before {
+          content: '\f0a3';
         }
 
-        &[title="Notes"]::before {
-          content: "\f040";
+        &[title='Notes']::before {
+          content: '\f040';
         }
 
-        &[title="Groups"]::before {
-          content: "\f0c0";
+        &[title='Groups']::before {
+          content: '\f0c0';
         }
 
-        &[title="Change Log"]::before {
-          content: "\f187";
+        &[title='Change Log']::before {
+          content: '\f187';
         }
 
-        &[title="Cases"]::before {
-          content: "\f0f6";
+        &[title='Cases']::before {
+          content: '\f0f6';
         }
 
-        &[title="Communications"]::before {
-          content: "\f0c0";
+        &[title='Communications']::before {
+          content: '\f0c0';
         }
       }
 
       a,
       em {
-        cursor: default;
         color: $gray-darker !important;
+        cursor: default;
       }
     }
 
@@ -178,15 +180,11 @@
   /* override of jquery-ui.css that creates weird white background */
   .ui-widget-content {
     background: transparent;
+    border: 0 !important;
+    color: #222;
   }
 
   .ui-dialog {
     background: $crm-white;
-  }
-
-  /* overriding ui-widget-content class from jquery-ui.css */
-  .ui-widget-content {
-    border: 0 !important;
-    color: #222222;
   }
 }
