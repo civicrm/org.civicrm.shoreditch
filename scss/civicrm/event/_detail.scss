@@ -163,7 +163,7 @@
 }
 
 
-.crm-container {
+#{civi-dialog()} {
   .crm-scheduleReminder-form-block {
     .crm-html_email-accordion,
     .crm-plaint_text_email-accordion {
@@ -173,11 +173,7 @@
     }
   }
 
-  .section {
-    box-shadow: none;
-
-    .section {
-      padding: 0 !important;
-    }
+  #editMessageDetails {
+    padding: 20px 0;
   }
 }

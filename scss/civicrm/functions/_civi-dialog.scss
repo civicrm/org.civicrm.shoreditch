@@ -1,0 +1,8 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+/**
+* This function is used to generate dialogbox selector.
+*/
+@function civi-dialog() {
+  @return unquote('.crm-container[role=\'dialog\']');
+}

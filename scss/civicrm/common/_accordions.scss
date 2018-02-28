@@ -72,8 +72,7 @@
   border-radius: 0 0 $border-radius-base $border-radius-base !important;
 }
 
-.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
-.section {
+.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
   box-shadow: $crm-box-shadow-inset;
   padding: 15px !important;
 
