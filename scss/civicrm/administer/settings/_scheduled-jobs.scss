@@ -24,7 +24,7 @@
     }
 
     .crm-job-form-block {
-      @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+      @include box-shadow($crm-form-layout-shadow-lower);
       border-radius: 0 0 $border-radius-base $border-radius-base !important;
 
       .crm-form-time {

@@ -9,7 +9,7 @@
     }
 
     .crm-badge-layout-form-block {
-      @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+      @include box-shadow($crm-form-layout-shadow-lower);
 
       .crm-badge-layout-form-block-elements {
         div[id*='s2id_font_size_'],

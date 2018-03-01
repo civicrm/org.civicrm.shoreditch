@@ -22,7 +22,7 @@ body[class*='page-civicrm-report-'] {
 
     .crm-report-form-block {
       .report-layout {
-        @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+        @include box-shadow($crm-form-layout-shadow-lower);
         border-top: 1px solid $crm-grayblue-dark;
         position: relative;
         z-index: 0;
@@ -57,7 +57,7 @@ body[class*='page-civicrm-report-'] {
       }
 
       .crm-pager {
-        @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+        @include box-shadow($crm-form-layout-shadow-lower);
         margin: 0;
         padding-bottom: 5px;
 
