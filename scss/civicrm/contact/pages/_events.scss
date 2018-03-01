@@ -70,7 +70,7 @@
 
   .dataTables_wrapper,
   .form-item table.row-highlight {
-    @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+    @include box-shadow($crm-form-layout-shadow-lower);
 
     tr:last-child {
       td {
@@ -735,7 +735,7 @@
   }
 
   .dataTables_wrapper {
-    @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+    @include box-shadow($crm-form-layout-shadow-lower);
 
     thead {
       tr {

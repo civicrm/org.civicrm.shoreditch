@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 // Styles that may apply to more than one page
 //
 .crm-content-block {
@@ -34,7 +36,6 @@ ul.civihr-popup {
 }
 
 #crm-main-content-wrapper {
-
   #ltype {
     background: transparent !important;
     box-shadow: none !important;
@@ -50,7 +51,6 @@ ul.civihr-popup {
     background: $crm-white;
     border-top: 1px solid $gray-lighter;
     margin: 0;
-    text-align: right;
 
     a.button {
       @extend %btn-civi-primary;
@@ -70,10 +70,10 @@ ul.civihr-popup {
 
       &[crm-icon=fa-times] {
         @extend %btn-civi-secondary-outline;
-        color: $gray;
         border: solid 1px $gray-dark;
-        padding: 7px 19px;
+        color: $gray;
         margin: 0;
+        padding: 7px 19px;
 
         &:hover {
           background: $gray-dark;
@@ -86,12 +86,11 @@ ul.civihr-popup {
   .action-link {
     margin: 0;
     padding: 20px;
-    text-align: right;
 
     > span.crm-button,
     > a.button {
       box-shadow: none;
-      margin: 0 0 0 10px;
+      margin: 0 10px 0 0;
     }
   }
 

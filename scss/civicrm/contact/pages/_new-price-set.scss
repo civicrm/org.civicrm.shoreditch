@@ -42,7 +42,7 @@
     .CRM_Price_Form_Set .crm-form-block,
     .CRM_Price_Form_Field .crm-form-block {
       .form-layout {
-        margin: 20px 0;
+        margin: 0 0 20px;
 
         tr {
           &:nth-child(6),
@@ -69,31 +69,7 @@
     #option12,
     #option13,
     #options {
-      @include expandable-table;
-      box-shadow: none !important;
-
-      th {
-        border-bottom-color: $crm-grayblue-dark !important;
-
-        &:first-child {
-          padding-left: 20px !important;
-        }
-      }
-
-      tr td {
-        &:first-child {
-          padding-left: 20px !important;
-        }
-      }
-
-      .crmf-title {
-        padding-left: 20px;
-      }
-
-      td:last-child {
-        padding-right: 20px;
-        text-align: right;
-      }
+      @include civicrm-table;
 
       .action-item {
         text-transform: none;
@@ -103,31 +79,8 @@
 
   .CRM_Price_Form_Field {
     .form-layout tr {
-      td {
-        display: table-cell;
-        text-align: left;
-        vertical-align: top;
-      }
-
       td.description {
         padding-left: 15px;
-      }
-
-      &.crm-price-field-form-block-is_display_amounts,
-      &.crm-price-field-form-block-weight,
-      &.crm-price-field-form-block-help_post,
-      &.crm-price-field-form-block-active_on,
-      &.crm-price-field-form-block-expire_on {
-        td {
-          vertical-align: top;
-        }
-      }
-
-      &.crm-price-field-form-block-active_on,
-      &.crm-price-field-form-block-expire_on {
-        input {
-          vertical-align: initial;
-        }
       }
     }
 
