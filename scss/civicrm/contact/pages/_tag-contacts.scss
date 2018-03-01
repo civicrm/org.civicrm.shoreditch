@@ -1,5 +1,6 @@
-#{civi-page('tag')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+#{civi-page('tag')} {
   #branding .page-title {
     margin-bottom: 20px !important;
   }
@@ -24,6 +25,10 @@
     font-size: $font-size-base;
     right: 20px;
 
+    h4 {
+      margin-top: 0;
+    }
+
     .tdl {
       color: $gray-darker;
       font-weight: $crm-font-weight-h3;
@@ -42,14 +47,14 @@
       opacity: 1;
 
       .fa-ban {
-        &:before {
+        &::before {
           @include fa-icon($font-size-base,$fa-var-close, $brand-danger);
         }
       }
 
       &:hover {
         .fa-ban {
-          &:before {
+          &::before {
             color: darken($brand-danger, $crm-darken-percentage);
           }
         }
@@ -61,11 +66,25 @@
     width: 50%;
   }
 
+  .ui-tabs {
+    div.tag-tree-wrapper {
+      min-height: 300px;
+    }
+
+    input[name='filter_tag_tree'] {
+      margin: 0 0 20px 20px;
+
+      + .crm-hover-button {
+        margin: 0 0 20px !important;
+      }
+    }
+  }
+
   #page {
     .crm-form-block td {
-      vertical-align: middle;
       display: table-cell;
       text-align: left;
+      vertical-align: middle;
     }
 
     .crm-tag-form-block-is_reserved,
@@ -86,7 +105,6 @@
   }
 
   .CRM_Tag_Form_Edit {
-
     table.form-layout-compressed {
       margin: 0 25px;
     }
@@ -94,8 +112,8 @@
     div,
     span {
       &.description {
-        line-height: 1.5em;
         display: block;
+        line-height: 1.5em;
       }
     }
   }
@@ -108,8 +126,9 @@
       @include expandable-table;
     }
   }
+
   a {
-    &.button  {
+    &.button {
       i {
         margin-right: 3px;
       }
@@ -119,26 +138,24 @@
 
 .CRM_Contact_Form_Task_AddToTag,
 .CRM_Contact_Form_Task_RemoveFromTag {
-
   h3 {
-    padding-top: 20px;
     padding-left: 25px;
+    padding-top: 20px;
   }
 
   table {
-
     &.form-layout-compressed {
       margin: 25px;
     }
   }
 
   .listing-box {
-    max-height: 216px;
     height: auto;
+    max-height: 216px;
 
     > div {
-      padding: 15px;
       background-color: $crm-white;
+      padding: 15px;
     }
   }
 }
@@ -150,13 +167,13 @@
 
     h3 {
       background: $gray-lighter;
-      color: $gray-darker;
-      font-size: $font-size-h2;
-      font-family: $font-family-base;
-      vertical-align: middle;
-      border: none;
-      padding: 17px 20px;
+      border: 0;
       border-bottom: 1px solid $crm-grayblue-dark;
+      color: $gray-darker;
+      font-family: $font-family-base;
+      font-size: $font-size-h2;
+      padding: 17px 20px;
+      vertical-align: middle;
     }
 
     #tagtree {
