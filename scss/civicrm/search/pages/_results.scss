@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 .CRM_Contact_Form_Search_Advanced .crm-results-block,
 .CRM_Contact_Form_Search_Basic .crm-results-block,
 .CRM_Event_Form_Search .crm-results-block,
@@ -58,14 +60,15 @@
     margin: 0;
 
     > .element-right {
+      margin-right: 20px !important;
       margin-top: 7px;
     }
+  }
 
-    + .float-right {
-      float: none !important;
-      padding: 4px 10px 10px !important;
-      text-align: right;
-    }
+  .float-right {
+    float: none !important;
+    padding: 10px 20px 20px !important;
+    text-align: right;
   }
 
   script + .crm-pager {
@@ -205,15 +208,15 @@
   }
 
   .font-size12pt {
+    color: $gray-darker;
     font-size: $font-size-h2;
     font-weight: $crm-font-weight-h2;
-    color: $gray-darker;
     padding-bottom: 10px;
   }
 
   .font-size11pt {
+    color: $gray-darker;
     font-size: $font-size-base;
     font-weight: $crm-font-weight-h2;
-    color: $gray-darker;
   }
 }
