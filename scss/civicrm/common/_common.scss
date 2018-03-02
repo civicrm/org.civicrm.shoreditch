@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+
 @import 'buttons';
 @import 'disabled';
 @import 'tables';
@@ -35,3 +37,4 @@
 @import 'crm-footer';
 @import 'jstree';
 @import 'icon-picker-button';
+@import 'ui-spinner-input';

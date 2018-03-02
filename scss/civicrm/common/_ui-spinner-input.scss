@@ -1,0 +1,14 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+@include input-fields-container {
+  input.ui-spinner-input {
+    border: 0;
+    box-shadow: none;
+    height: auto;
+    line-height: normal;
+    margin: 0.2em 2em 0.2em 0.4em;
+    padding: 0.222em 0;
+    text-align: center;
+    width: auto;
+  }
+}
