@@ -146,7 +146,7 @@ function shoreditch_civicrm_buildForm($formName) {
     $baseUrl = CRM_Extension_System::singleton()->getMapper()->keyToUrl('org.civicrm.shoreditch');
     $filesVarUrl = '[civicrm.files]/';
     $filesUrl = Civi::paths()->getUrl($filesVarUrl, 'absolute');
-    $baseVarUrl= str_replace($filesUrl, $filesVarUrl, $baseUrl);
+    $baseVarUrl = str_replace($filesUrl, $filesVarUrl, $baseUrl);
     $cssUrl = CRM_Utils_File::addTrailingSlash($baseVarUrl, '/') . 'css/custom-civicrm.css';
     Civi::resources()
       ->addScriptFile('org.civicrm.shoreditch', 'js/urlSettingsForm.js')
