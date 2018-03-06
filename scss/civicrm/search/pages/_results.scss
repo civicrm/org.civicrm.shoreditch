@@ -3,7 +3,8 @@
 .CRM_Contact_Form_Search_Advanced .crm-results-block,
 .CRM_Contact_Form_Search_Basic .crm-results-block,
 .CRM_Event_Form_Search .crm-results-block,
-.CRM_Campaign_Form_Search .crm-results-block {
+.CRM_Campaign_Form_Search .crm-results-block,
+.CRM_Grant_Form_Search .crm-results-block {
   @extend %block-with-shadow;
   border-radius: $border-radius-base;
   margin-top: 20px;
