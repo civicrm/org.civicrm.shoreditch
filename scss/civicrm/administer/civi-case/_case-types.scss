@@ -35,6 +35,10 @@
 
       .ui-tabs-panel {
         padding: 0 !important;
+
+        div[ng-include] table {
+          border-top: 0;
+        }
       }
     }
   }
