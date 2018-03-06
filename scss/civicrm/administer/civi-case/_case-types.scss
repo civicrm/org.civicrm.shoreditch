@@ -1,15 +1,16 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('a')} {
   @include civicrm-table;
-  
+
   .crmCaseType {
-    
     .crm-block {
       padding: 20px;
     }
 
     .ui-tabs {
-      box-shadow: none;
       border-top: 1px solid $crm-background;
+      box-shadow: none;
 
       table.row-highlight {
         box-shadow: none;
@@ -44,7 +45,7 @@
 
   #crm-main-content-wrapper {
     .crm-submit-buttons {
-      border-top: none;
+      border-top: 0;
     }
   }
 }
