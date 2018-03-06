@@ -36,7 +36,7 @@
       .ui-tabs-panel {
         padding: 0 !important;
 
-        div[ng-include] table {
+        table:first-child {
           border-top: 0;
         }
       }
