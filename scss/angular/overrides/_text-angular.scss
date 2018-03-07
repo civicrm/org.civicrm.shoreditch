@@ -39,7 +39,7 @@ $crm-text-angular-min-height: 120px;
     padding-right: $padding-small-horizontal;
 
     &.active {
-      color: $gray-darker;
+      color: $gray-darker !important;
     }
 
     &:hover:not(:disabled) {
