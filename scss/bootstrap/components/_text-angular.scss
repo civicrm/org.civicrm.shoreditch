@@ -31,12 +31,19 @@ $crm-text-angular-min-height: 120px;
   padding: 10px;
 
   .btn {
-    background: transparent;
+    background: transparent !important;
     border: 0;
+    box-shadow: none;
     color: $crm-copy;
+    padding-left: $padding-small-horizontal;
+    padding-right: $padding-small-horizontal;
 
     &.active {
       color: $gray-darker;
+    }
+
+    &:hover:not(:disabled) {
+      color: $gray-dark;
     }
 
     .fa {
