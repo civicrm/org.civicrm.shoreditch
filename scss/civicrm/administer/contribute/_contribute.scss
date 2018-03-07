@@ -34,4 +34,15 @@
       margin-left: 20px;
     }
   }
+
+  .crm-contribution-page-configure-actions,
+  .crm-contribution-online-contribution-actions,
+  .crm-contribution-search-contribution-actions,
+  .crm-contribution-page-more {
+    .btn-slide {
+      padding-right: 15px !important;
+      text-indent: initial;
+      width: auto;
+    }
+  }
 }
