@@ -4,44 +4,44 @@ $crm-text-angular-min-height: 120px;
   border: 1px solid $gray-light;
   padding: 0;
 
-  [text-angular-toolbar] {
-    background-color: #f4f7f8;
-    border: 0;
-    margin-left: 0;
-    padding: 10px;
-
-    .btn {
-      background: transparent;
-      border: none;
-      color: $crm-copy;
-
-      &.active {
-        color: $gray-darker;
-      }
-
-      i.fa {
-        font-size: $font-size-small;
-        font-weight: 700;
-      }
-    }
-  }
-
   .ta-editor {
-    border: none !important;
+    border: 0 !important;
   }
 
   .form-control {
-    border: none;
+    border: 0;
     box-shadow: none !important;
     min-height: $crm-text-angular-min-height;
 
     &.ta-scroll-window {
       height: auto;
 
-      & > .ta-bind {
+      > .ta-bind {
         min-height: $crm-text-angular-min-height;
         outline: 0;
       }
+    }
+  }
+}
+
+[text-angular-toolbar] {
+  background-color: #f4f7f8;
+  border: 0;
+  margin-left: 0;
+  padding: 10px;
+
+  .btn {
+    background: transparent;
+    border: 0;
+    color: $crm-copy;
+
+    &.active {
+      color: $gray-darker;
+    }
+
+    .fa {
+      font-size: $font-size-small;
+      font-weight: 700;
     }
   }
 }
