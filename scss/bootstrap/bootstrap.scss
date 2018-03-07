@@ -8,6 +8,7 @@
 @import 'mixins/*';
 
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/bootstrap';
+@import '../angular/overrides/*';
 @import 'overrides/style/*';
 @import 'overrides/vendors/*';
 @import 'overrides/crm/*';
