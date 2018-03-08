@@ -1,6 +1,9 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 // System Status
 #crm-status-list {
   @include civicrm-panel;
+  overflow: hidden;
 
   .ui-tabs .ui-tabs-panel {
     padding: 20px;
@@ -18,6 +21,9 @@
         opacity: 1;
         padding: 10px;
 
+        &.crm-severity-alert,
+        &.crm-severity-critical,
+        &.crm-severity-emergency,
         &.crm-severity-error {
           background: $brand-danger;
         }
@@ -27,7 +33,8 @@
           color: $gray-darker;
         }
 
-        &.crm-severity-info {
+        &.crm-severity-info,
+        &.crm-severity-debug {
           background: $btn-success-bg;
           color: $gray-darker;
         }
@@ -38,16 +45,19 @@
       }
 
       .crm-status-message-body {
+        color: $gray-dark;
+        font-size: $font-size-base;
         margin: 0;
         padding: 15px;
       }
 
       button {
-        @include box-shadow($box-shadow);
         background: $crm-white;
-        border: none;
+        border: 0;
         border-radius: $border-radius-base;
+        color: $gray-dark;
         cursor: pointer;
+        height: auto;
         padding: 5px 10px;
       }
 
@@ -55,6 +65,9 @@
         button {
           @include button-variant($crm-white, $gray-dark, $gray-dark);
           @include button-remove-border-color();
+          font-size: $font-size-base;
+          margin: 10px 10px 0 0;
+          padding: 11px 12px;
 
           &:hover {
             background-color: darken($crm-copy, $crm-darken-percentage);
@@ -66,19 +79,20 @@
         ul {
           @include box-shadow($box-shadow);
           background: $crm-white;
-          border: none;
+          border: 0;
           list-style: none;
+          top: 22px;
           z-index: 1;
 
-          & > li {
+          > li {
             background: $crm-white;
-            padding: 10px;
+            border: 0;
             color: $gray-dark;
-            border: none;
+            padding: 10px;
 
             &:hover {
               background: $gray-light;
-              border: none;
+              border: 0;
             }
 
             // remove jquery's margin: -1px;
