@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-configtask')} {
   #crm-container {
     @include civicrm-table;
@@ -8,9 +10,11 @@
 
     table.selector {
       @include box-shadow($box-shadow);
+      border-radius: $border-radius-base;
+      overflow: hidden;
 
       tr.columnheader {
-        border: none;
+        border: 0;
 
         td {
           @include section-title;
@@ -25,7 +29,7 @@
       }
 
       &:link {
-        color: $crm-warning-dark;
+        color: $brand-danger;
       }
     }
   } 
