@@ -1,76 +1,117 @@
-[uib-datepicker-popup-wrap] {
+$light: #fff;
+$crm-font-weight-regular: 400;
+$crm-font-weight-light: 300;
+$crm-grayish-blue: #f4f7f8 !default;
+$crm-grizzly: #dcdddd !default;
 
-    > .dropdown-menu {
-        padding: 10px;
+$crm-uib-datepicker-header-font-weight: 700;
+$crm-uib-datepicker-header-font-size: 12px;
+$crm-uib-datepicker-header-color: #464354;
+$crm-uib-datepicker-border: 0;
+$crm-uib-datepicker-body-bg-color: transparent;
+$crm-uib-datepicker-body-font-color: #464354;
+$crm-uib-datepicker-today-bg-color: transparent;
+$crm-uib-datepicker-today-font-color: $brand-primary;
+$crm-uib-datepicker-active-border-radius: 50%;
+$crm-uib-datepicker-cell-padding: 7px 2px;
 
-        table {
-            border: 0;
+[uib-datepicker-popup] {
+  border-color: $input-border;
 
-            &:focus {
-                outline: 0 none;
-            }
 
-            tbody {
+  .form-control {
+    border-color: $input-border;
+  }
+}
 
-                .btn {
-                    background-color: inherit;
-                    border-radius: 50%;
-                    font-weight: 400;
-                    padding: 7px;
-                    line-height: 1;
-                    width: auto !important;
+.uib-left,
+.uib-right,
+.uib-title {
+  border: 0;
+  color: $crm-uib-datepicker-header-color;
 
-                    &:focus {
-                        background-color: $gray-lighter;
-                        outline: 0 none;
-                    }
+  &:hover {
+    background: transparent;
+  }
+}
 
-                    &.active {
-                        background-color: $brand-primary;
+.uib-left,
+.uib-right {
+  i {
+    font-weight: $crm-font-weight-light;
+  }
+}
 
-                        > span {
-                            color: $crm-white;
-                        }
-                    }
-                }
-            }
+.uib-title {
+  strong {
+    font-size: $crm-uib-datepicker-header-font-size;
+    font-weight: $crm-uib-datepicker-header-font-weight;
+  }
+}
 
-            td, th {
-                background: transparent;
-                border: 0;
-                padding: 7px;
-                vertical-align: middle;
-            }
+.uib-daypicker {
+  outline: 0;
 
-            th {
-                font-weight: 700;
-                text-transform: uppercase;
+  th {
+    background: $light;
+    color: $gray;
+    padding: 7px;
+  }
 
-                strong {
-                    font-weight: 700;
-                }
-            }
+  tbody {
+    background: $crm-uib-datepicker-body-bg-color;
+    border-top: 0;
+    box-shadow: 0;
+  }
+}
 
-            thead {
+.uib-day {
+  padding: $crm-uib-datepicker-cell-padding;
 
-                small {
-                    color: $headings-color;
-                    font-size: em(11);
-                }
-            }
-        }
+  .text-muted {
+    color: $crm-grizzly;
+  }
 
-        .btn {
-            @include box-shadow(none);
+  .text-info {
+    background-color: $crm-uib-datepicker-today-bg-color;
+    border-radius: 50%;
+    color: $crm-uib-datepicker-today-font-color;
+    padding: 5px 7px !important;
+  }
 
-            border-width: 0;
-            font-size: em(12);
-            font-weight: 600;
-            text-transform: uppercase;
-        }
+  .btn-default {
+    background: transparent;
+    border: 0;
+    color: $crm-uib-datepicker-body-font-color;
+    line-height: 1;
+    min-width: 0;
+    padding: 7px;
 
-        .text-muted {
-            color: #CCCCCC;
-        }
+    span {
+      padding: 5px;
     }
+
+    &.active {
+      background-color: $brand-primary;
+      border-radius: $crm-uib-datepicker-active-border-radius;
+      box-shadow: none;
+      color: $light;
+
+      .text-info {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.uib-datepicker-popup {
+  border: $crm-uib-datepicker-border;
+  padding: 10px;
+}
+
+[uib-datepicker-popup-wrap] {
+  + .input-group-btn > button {
+    border-color: $input-border;
+    color: $crm-color-neutral;
+  }
 }
