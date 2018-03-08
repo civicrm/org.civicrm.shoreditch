@@ -376,18 +376,18 @@ $hr-border: $crm-grayblue-dark !default;
 //
 //##
 
-$crm-uib-datepicker-active-bg-color: $crm-white;
-$crm-uib-datepicker-active-border-radius: 50%;
-$crm-uib-datepicker-arrow-font-width: 300;
-$crm-uib-datepicker-border: 0;
-$crm-uib-datepicker-body-bg-color: transparent;
-$crm-uib-datepicker-body-font-color: $gray-darker;
-$crm-uib-datepicker-cell-padding: 7px 3px;
-$crm-uib-datepicker-header-bg-color: $crm-white;
-$crm-uib-datepicker-header-font-color: $gray-darker;
-$crm-uib-datepicker-header-font-size: $font-size-small;
-$crm-uib-datepicker-header-font-weight: $crm-font-weight-h5;
-$crm-uib-datepicker-muted-cell-color: #dcdddd;
-$crm-uib-datepicker-today-bg-color: transparent;
-$crm-uib-datepicker-today-font-color: $brand-primary;
-$crm-uib-datepicker-active-cell-padding: 7px;
+$crm-uib-datepicker-active-bg-color: $crm-white !default;
+$crm-uib-datepicker-active-border-radius: 50% !default;
+$crm-uib-datepicker-arrow-font-width: 300 !default;
+$crm-uib-datepicker-border: 0 !default;
+$crm-uib-datepicker-body-bg-color: transparent !default;
+$crm-uib-datepicker-body-font-color: $gray-darker !default;
+$crm-uib-datepicker-cell-padding: 7px 3px !default;
+$crm-uib-datepicker-header-bg-color: $crm-white !default;
+$crm-uib-datepicker-header-font-color: $gray-darker !default;
+$crm-uib-datepicker-header-font-size: $font-size-small !default;
+$crm-uib-datepicker-header-font-weight: $crm-font-weight-h5 !default;
+$crm-uib-datepicker-muted-cell-color: #dcdddd !default;
+$crm-uib-datepicker-today-bg-color: transparent !default;
+$crm-uib-datepicker-today-font-color: $brand-primary !default;
+$crm-uib-datepicker-active-cell-padding: 7px !default;
