@@ -63,7 +63,8 @@
    * @return {boolean}
    */
   function isQuickSearchOnGoing () {
-    return !!$('#sort_name_navigation').val().trim();
+    var input = $('#sort_name_navigation');
+    return (input.length>0) ? !!$('#sort_name_navigation').val().trim() : false;
   }
 
   /**
