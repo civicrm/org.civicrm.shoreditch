@@ -30,8 +30,7 @@ $button-border-radius: 2px;
 .crm-container {
   margin-left: 0 !important;
 
-  %btn,
-  .crm-profile-selector-preview {
+  %btn {
     @extend %btn-civi;
 
     /**
@@ -338,12 +337,26 @@ $button-border-radius: 2px;
     }
   }
 
-  .crm-profile-selector-preview {
-    padding: 4px 12px;
+  .crm-profile-selector-preview,
+  .crm-profile-selector-edit,
+  .crm-profile-selector-copy,
+  .crm-profile-selector-create {
+    border: 0;
+    height: auto;
+    line-height: normal;
+    padding: 6px 12px;
 
     .crm-i {
       position: relative;
       top: -1px;
+    }
+
+    &:not([disabled]) {
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      opacity: 0.65;
     }
   }
 }
