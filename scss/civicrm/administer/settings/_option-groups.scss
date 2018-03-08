@@ -12,8 +12,6 @@
 &#{civi-page('admin-setting-preferences-multisite')},
 &#{civi-page('admin-setting-misc')} {
   .crm-form-block {
-    @include civicrm-table;
-
     table:not(.form-layout-compressed) {
       tr {
         > td {
@@ -23,7 +21,7 @@
     }
 
     .form-layout {
-      margin: 10px 0;
+      margin: 0 0 10px;
     }
 
     h3 {

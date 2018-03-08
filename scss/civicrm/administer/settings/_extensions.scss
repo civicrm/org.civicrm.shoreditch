@@ -1,6 +1,8 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-extensions')} {
   .help {
-    margin: 20px;
+    margin: 0 20px 20px;
   }
 
   #mainTabContainer {
@@ -10,16 +12,16 @@
 
     #extensions-addnew,
     #extensions-main {
+      border: 0;
       padding: 0 !important;
-      border: none;
 
       table#option11,
       table#option12 {
-        border-top: none;
+        border-top: 0;
 
         td:not(:first-of-type) {
-          width: 70px;
           text-overflow: clip;
+          width: 70px;
         }
 
         tr.hiddenElement {
@@ -48,6 +50,15 @@
 
       table#option12 td:last-of-type {
         width: 140px;
+      }
+
+      .crm-extensions-upgrade {
+        background-color: $alert-warning-bg;
+        border-color: $brand-warning;
+        border-radius: $border-radius-base;
+        color: $gray-darker;
+        margin-top: 10px;
+        padding: 10px 20px;
       }
     }
   }
