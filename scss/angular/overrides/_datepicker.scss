@@ -21,7 +21,7 @@
 .uib-left,
 .uib-right {
   i {
-    font-weight: $crm-uib-datepicker-arrow-font-width;
+    font-weight: $crm-uib-datepicker-arrow-font-weight;
   }
 }
 
@@ -79,7 +79,7 @@
       background-color: $brand-primary;
       border-radius: $crm-uib-datepicker-active-border-radius;
       box-shadow: none;
-      color: $crm-uib-datepicker-active-bg-color;
+      color: $crm-uib-datepicker-active-font-color;
 
       .text-info {
         color: inherit;
