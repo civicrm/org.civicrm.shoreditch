@@ -2,6 +2,8 @@
 
 &#{civi-page('admin-setting-component')} {
   .crm-form-block {
+    overflow: hidden;
+
     .advmultiselect {
       margin-left: 20px;
     }

@@ -1,5 +1,6 @@
 .crm-connection-block {
   @include civicrm-table;
+  overflow: hidden;
 
   h3 {
     @include panel-header;

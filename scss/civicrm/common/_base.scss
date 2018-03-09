@@ -26,6 +26,10 @@ body {
     }
   }
 
+  .status-overdue {
+    color: $brand-danger !important;
+  }
+
   .description {
     color: $crm-gray-matte;
     font-size: 13px;

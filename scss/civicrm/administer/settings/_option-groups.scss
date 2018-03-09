@@ -12,6 +12,8 @@
 &#{civi-page('admin-setting-preferences-multisite')},
 &#{civi-page('admin-setting-misc')} {
   .crm-form-block {
+    overflow: hidden;
+
     table:not(.form-layout-compressed) {
       tr {
         > td {
