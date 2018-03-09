@@ -5,6 +5,10 @@
 
   .crm-content-block {
     overflow: hidden;
+
+    .status.no-popup {
+      margin: 0;
+    }
   }
 
   .form-item {
