@@ -1,20 +1,8 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 #{civi-page('batch')} {
-  .crm-submit-buttons {
-    margin: 0;
-    margin-bottom: 25px;
-    margin-top: 15px;
-
-    #newBatch.button {
-      background: $gray-dark;
-      border: transparent !important;
-      color: $crm-white !important;
-
-      &:hover {
-        color: $crm-white !important;
-      }
-    }
+  .action-link {
+    margin: 20px 0;
   }
 
   .crm-batch-search-form-block {
@@ -259,20 +247,6 @@
 
       > .select2-container {
         margin: 10px;
-      }
-
-      input.crm-form-text,
-      input.dateplugin {
-        @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
-        background-color: $crm-white;
-        background-image: none;
-        border: 1px solid $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-input-shadow;
-        color: $gray-darker;
-        font-size: $font-size-base;
-        height: 20px;
-        padding: 4px 10px;
       }
 
       input.dateplugin {

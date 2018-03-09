@@ -1544,20 +1544,8 @@ form.CRM_Contribute_Form_ContributionCharts {
 }
 
 .CRM_Financial_Form_Search {
-  .crm-submit-buttons {
-    height: auto;
-    line-height: normal;
-    margin: 20px 0;
-
-    > a.button {
-      background: $crm-copy;
-      float: none;
-
-      &:hover {
-        background: $crm-light-gray-color;
-        color: $crm-white;
-      }
-    }
+  .action-link {
+    margin: 0 0 20px;
   }
 
   .form-layout-compressed {
