@@ -1,103 +1,101 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-#crm-container {
-  .crm-tooltip-wrapper {
-    background: none;
-    overflow: visible;
-    padding-bottom: 0;
+.crm-tooltip-wrapper {
+  background: none !important;
+  overflow: visible !important;
+  padding-bottom: 0 !important;
 
-    .crm-tooltip {
-      @include box-shadow($box-shadow);
-      background: $crm-white;
-      border-radius: $border-radius-base;
-      padding: 0;
+  .crm-tooltip {
+    @include box-shadow($box-shadow);
+    background: $crm-white;
+    border-radius: $border-radius-base;
+    padding: 0;
 
-      .crm-table-group-summary tr td {
-        font-weight: $crm-font-weight-h3;
+    .crm-table-group-summary tr td {
+      font-weight: $crm-font-weight-h3;
+    }
+
+    .crm-table-group-summary {
+      background: $gray-lighter !important;
+
+      > div {
+        line-height: 30px;
       }
 
-      .crm-table-group-summary {
-        background: $gray-lighter;
-
-        > div {
-          line-height: 30px;
-        }
-
-        .label,
-        .content {
-          font-size: 13px;
-          line-height: 17px;
-          margin-bottom: 10px;
-        }
-
-        .content {
-          color: $gray-dark;
-          font-weight: normal;
-        }
-
-        .label {
-          color: $gray-darker;
-        }
+      .label,
+      .content {
+        font-size: 13px;
+        line-height: 17px;
+        margin-bottom: 10px;
       }
 
-      .crm-section {
-        clear: both;
-        margin-bottom: 0;
-        min-height: 30px !important;
+      .content {
+        color: $gray-dark;
+        font-weight: normal;
       }
 
-      .crm-table-group-summary > tbody > tr {
-        &:nth-child(1) {
-          > td {
-            background: $gray-lighter !important;
-            color: $gray-darker;
-            font-size: $font-size-h2;
-          }
-        }
+      .label {
+        color: $gray-darker;
+      }
+    }
 
-        &:nth-child(2) > td {
-          border-top: 1px solid $crm-grayblue-dark !important;
-          width: 50%;
-        }
+    .crm-section {
+      clear: both;
+      margin-bottom: 0;
+      min-height: 30px !important;
+    }
 
+    .crm-table-group-summary > tbody > tr {
+      &:nth-child(1) {
         > td {
-          vertical-align: top;
-          white-space: normal;
+          background: $gray-lighter !important;
+          color: $gray-darker !important;
+          font-size: $font-size-h2;
         }
+      }
+
+      &:nth-child(2) > td {
+        border-top: 1px solid $crm-grayblue-dark !important;
+        width: 50% !important;
+      }
+
+      > td {
+        vertical-align: top !important;
+        white-space: normal !important;
+      }
+    }
+  }
+}
+
+a {
+  &.crm-tooltip-down {
+    .crm-tooltip-wrapper {
+      &::before {
+        border-bottom: 10px solid $crm-grayblue-dark !important;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        content: '';
+        height: 0;
+        left: 30px;
+        position: relative;
+        top: -9px;
+        width: 0;
       }
     }
   }
 
-  a {
-    &.crm-tooltip-down {
-      .crm-tooltip-wrapper {
-        &::before {
-          border-bottom: 10px solid $crm-grayblue-dark !important;
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          content: '';
-          height: 0;
-          left: 30px;
-          position: relative;
-          top: -9px;
-          width: 0;
-        }
-      }
-    }
-
-    &:not(.crm-tooltip-down) {
-      .crm-tooltip-wrapper {
-        &::after {
-          border-left: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-top: 10px solid $crm-grayblue-dark !important;
-          bottom: -10px;
-          content: '';
-          height: 0;
-          left: 30px;
-          position: absolute;
-          width: 0;
-        }
+  &:not(.crm-tooltip-down) {
+    .crm-tooltip-wrapper {
+      &::after {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid $crm-grayblue-dark !important;
+        bottom: -10px;
+        content: '';
+        height: 0;
+        left: 30px;
+        position: absolute;
+        width: 0;
       }
     }
   }
