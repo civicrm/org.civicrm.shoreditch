@@ -60,4 +60,14 @@
       }
     }
   }
+
+  .CRM_Grant_Form_Task_Delete {
+    .crm-grant-task-delete-form-block {
+      padding-top: 20px;
+
+      .status.no-popup {
+        margin: $crm-status-bar-no-top;
+      }
+    }
+  }
 }
