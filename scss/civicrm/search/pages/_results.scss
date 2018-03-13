@@ -4,7 +4,8 @@
 .CRM_Contact_Form_Search_Basic .crm-results-block,
 .CRM_Event_Form_Search .crm-results-block,
 .CRM_Campaign_Form_Search .crm-results-block,
-.CRM_Grant_Form_Search .crm-results-block {
+.CRM_Grant_Form_Search .crm-results-block,
+.CRM_Pledge_Form_Search .crm-results-block {
   @extend %block-with-shadow;
   border-radius: $border-radius-base;
   margin-top: 20px;
@@ -13,30 +14,6 @@
     margin: 0;
   }
 
-  table:not(.crm-table-group-summary) {
-    table-layout: fixed;
-
-    td:not(:last-child):not(:nth-child(2)):not(:nth-child(3)) {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    td:nth-child(3) {
-      word-wrap: break-word;
-    }
-
-    th:first-child,
-    td:first-child {
-      width: 20px;
-    }
-
-    th:nth-child(2),
-    td:nth-child(2) {
-      width: 28px;
-    }
-  }
-  
   .crm-search-tasks {
     background: $gray-lighter;
     border-bottom: solid 1px $crm-background;
@@ -67,9 +44,7 @@
   }
 
   .float-right {
-    float: none !important;
     padding: 10px 20px 20px !important;
-    text-align: right;
   }
 
   script + .crm-pager {
@@ -78,11 +53,7 @@
 
   .sticky th {
     line-height: 1.1em !important;
-    padding: 15px 20px !important;
-
-    &:not(:first-child):not(:nth-child(2)) {
-      padding-left: 0 !important;
-    }
+    padding: 15px 10px !important;
 
     .sticky-header {
       height: 30px;
@@ -150,7 +121,6 @@
       > td {
         line-height: 1.5em;
         padding: 12px 10px;
-        vertical-align: middle;
 
         &:first-child {
           padding-left: 20px;

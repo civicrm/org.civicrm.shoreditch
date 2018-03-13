@@ -1464,27 +1464,7 @@ form.CRM_Contribute_Form_ContributionCharts {
     border-radius: 0;
     box-shadow: $crm-form-item-shadow !important;
 
-    thead th:not(:last-child) {
-      padding-right: 10px !important;
-    }
-
-    > tbody > tr > td {
-      min-width: 70px !important;
-
-      &:not(:last-child) {
-        padding-right: 10px !important;
-      }
-
-      &:nth-child(4),
-      &:nth-child(5) {
-        max-width: 150px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-    }
-
-    + .crm-pager {
+    > tbody > tr > td + .crm-pager {
       border-radius: 0 0 $panel-border-radius $panel-border-radius;
       border-top: 1px solid $crm-background;
       box-shadow: $crm-form-item-shadow;
