@@ -1,9 +1,15 @@
 [uib-datepicker-popup] {
   border-color: $input-border;
 
-
   .form-control {
     border-color: $input-border;
+  }
+}
+
+[uib-datepicker-popup-wrap] {
+  + .input-group-btn > button {
+    border-color: $input-border;
+    color: $crm-color-neutral;
   }
 }
 
@@ -93,13 +99,7 @@
   padding: 10px;
 }
 
-[uib-datepicker-popup-wrap] {
-  + .input-group-btn > button {
-    border-color: $input-border;
-    color: $crm-color-neutral;
-  }
-}
-
+// In mobile the native html date picker is displayed which is a [type='date'] element.
 @at-root .mobile {
   [type='date'][uib-datepicker-popup] {
     line-height: normal;
