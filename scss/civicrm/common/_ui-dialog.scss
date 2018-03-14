@@ -1,5 +1,5 @@
 .crm-container.ui-dialog {
-  border: none;
+  border: 0;
   border-radius: $border-radius-small;
   box-shadow: $box-shadow;
   color: $gray-darker;
@@ -9,7 +9,7 @@
   .ui-dialog-header,
   .ui-dialog-titlebar {
     background: $gray-lighter;
-    border: none;
+    border: 0;
     color: $gray-darker;
     font-size: $font-size-h2;
     font-weight: $crm-font-weight-h2;
@@ -26,24 +26,24 @@
       outline: 0;
     }
 
-    .ui-button .ui-icon {
+    .ui-button-icon.ui-icon {
       background: none;
       overflow: visible;
       text-indent: 0;
       top: 0;
     }
 
-    .ui-button .ui-icon.ui-icon-closethick::after {
+    .ui-button-icon.ui-icon.ui-icon-closethick::after {
       @include fa-icon(13px, '\f00d');
     }
 
-    .ui-button .ui-icon.ui-icon-newwin::after {
+    .ui-button-icon.ui-icon.ui-icon-newwin::after {
       @include fa-icon(13px, '\f2d0');
     }
   }
 
   .ui-dialog-content#bootstrap-theme,
-  .ui-dialog-content[id*="crm-ajax-dialog"] {
+  .ui-dialog-content[id*='crm-ajax-dialog'] {
     background: $crm-white;
     padding: 10px 20px;
   }

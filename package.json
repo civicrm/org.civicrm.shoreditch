@@ -30,6 +30,7 @@
     ],
     "rules": {
       "selector-class-pattern": null,
+      "selector-max-id": 1,
       "max-nesting-depth": 3,
       "no-extra-semicolons": true,
       "no-duplicate-selectors": true
