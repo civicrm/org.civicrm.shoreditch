@@ -1,0 +1,58 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('batchtransaction')} {
+  .crm-container {
+    p {
+      display: none;
+    }
+
+    .CRM_Financial_Form_BatchTransaction {
+      #batch-summary {
+        @include expandable-table;
+
+        thead {
+          tr {
+            border-bottom: 1px solid $crm-grayblue-dark !important;
+          }
+        }
+      }
+
+      .crm-submit-buttons {
+        padding: 20px 0 0;
+      }
+    }
+
+    .form-layout-compressed {
+      input.crm-form-submit {
+        margin-left: 5px;
+        padding: 4px 10px;
+        vertical-align: middle;
+      }
+    }
+
+    #ltype {
+      .dataTables_length { 
+        .select2-container {
+          width: auto !important;
+        } 
+      }
+
+      .dataTables_wrapper {
+        margin-bottom: 0;
+      }
+    }
+
+    .crm-batch_transaction_search-accordion {
+      margin-bottom: 20px;
+
+      .float-left {
+        display: table-cell;
+        float: none !important;
+
+        + .float-left {
+          padding-left: 10px !important;
+        }
+      }
+    }
+  }
+}

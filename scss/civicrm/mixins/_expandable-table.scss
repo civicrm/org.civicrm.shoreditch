@@ -103,6 +103,7 @@
         @include fa-icon($font-size-base, $fa-var-chevron-right);
         left: 0;
         position: absolute;
+        top: 2px;
       }
 
       &.expanded {

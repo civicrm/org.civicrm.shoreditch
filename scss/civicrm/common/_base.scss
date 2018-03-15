@@ -142,6 +142,7 @@ body {
 
   a.crm-hover-button.action-item,
   .crm-hover-button.btn-slide {
+    padding: 0 5px;
     text-transform: capitalize;
 
     &:hover {
@@ -161,7 +162,7 @@ body {
       background: none;
       right: -2px;
       text-indent: 0;
-      top: 4px;
+      top: 0;
       width: 5px;
     }
 
