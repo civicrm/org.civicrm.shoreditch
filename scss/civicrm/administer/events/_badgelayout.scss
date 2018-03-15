@@ -15,13 +15,13 @@
         div[id*='s2id_font_size_'],
         div[id*='s2id_font_style_'],
         div[id*='s2id_text_alignment_'] {
-          min-width: 100px !important;
+          min-width: $crm-sm-input-width !important;
         }
       }
 
       .six {
-        min-width: 100px;
-        width: 100px;
+        min-width: $crm-sm-input-width;
+        width: $crm-sm-input-width;
       }
     }
   }

@@ -468,8 +468,8 @@
         }
 
         &:nth-child(5) > td:first-child .crm-form-text {
-          min-width: 100px !important;
-          width: 100px !important;
+          min-width: $crm-sm-input-width !important;
+          width: $crm-sm-input-width !important;
         }
 
         &:nth-child(14) > td {
@@ -1094,7 +1094,7 @@
     .crm-form-text,
     .select2-container {
       margin-top: 0;
-      min-width: 100px !important;
+      min-width: $crm-sm-input-width !important;
       width: 150px !important;
     }
   }
