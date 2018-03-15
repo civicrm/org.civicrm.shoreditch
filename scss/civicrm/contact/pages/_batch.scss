@@ -187,52 +187,43 @@
     }
   }
 
+  .crm-form-time {
+    @include civicrm-form-control;
+    display: inline-block;
+  }
+
+  .six,
+  .crm-form-time {
+    min-width: $crm-sm-input-width;
+    width: $crm-sm-input-width;
+  }
+
   .crm-grid-table {
-    border: 0 !important;
-    border-radius: $border-radius-base;
+    border: 0;
 
     .crm-grid-header {
-      border-bottom: 1px solid  $crm-grayblue-dark;
-      border-top: 1px solid  $crm-grayblue-dark;
-      border-top-left-radius: $border-radius-base;
-      border-top-right-radius: $border-radius-base;
+      border-bottom: 1px solid $crm-grayblue-dark;
+      border-top: 1px solid $crm-grayblue-dark;
 
       .crm-grid-cell {
         background: $gray-lighter;
         border: 0;
         color: $gray-darker;
-        font: bold $font-size-base $font-family-base;
-        line-height: 1.5em;
-        min-width: 130px;
-        padding: 10px 15px;
-        vertical-align: middle;
-      }
+        font-size: $font-size-base;
+        font-weight: $crm-font-weight-h3;
+        line-height: 18px;
+        padding: 12px 10px;
+        vertical-align: top;
 
-      .crm-grid-cell:first-child {
-        border-top-left-radius: $border-radius-base;
-        min-width: 10px;
-      }
-
-      .crm-grid-cell:last-child {
-        border-top-right-radius: $border-radius-base;
+        &:first-child {
+          min-width: 10px;
+        }
       }
     }
 
     .crm-grid-row {
       background: $crm-white;
-      border-bottom: 1px solid  $crm-background;
-      border-bottom-left-radius: $border-radius-base;
-      border-bottom-right-radius: $border-radius-base;
-
-      &:last-child .crm-grid-cell {
-        &:first-child {
-          border-bottom-left-radius: $border-radius-base;
-        }
-
-        &:last-child {
-          border-bottom-right-radius: $border-radius-base;
-        }
-      }
+      border-bottom: 1px solid $crm-background;
 
       .crm-grid-cell {
         border: 0;
@@ -242,6 +233,10 @@
         span.batch-valid,
         span.batch-invalid {
           line-height: 30px;
+        }
+
+        .crm-form-date-wrapper {
+          width: 370px;
         }
       }
 

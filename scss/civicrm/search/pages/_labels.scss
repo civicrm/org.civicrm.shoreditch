@@ -1,10 +1,12 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 label {
-  position: relative;
   padding: 0 !important;
+  position: relative;
 }
 
 input[type='checkbox'] + label {
-  &:after {
+  &::after {
     left: 2px !important;
     top: 0 !important;
   }
@@ -25,22 +27,22 @@ a.crm-clear-link {
       display: flex;
 
       td {
-        width: calc(100% / 3);
         box-sizing: border-box;
-        padding-right: 15px;
         padding-left: 0;
+        padding-right: 15px;
+        width: calc(100% / 3);
 
         input:not([type='radio']):not([type='checkbox']),
         .select2-container {
-          width: 100% !important;
           flex: 1 auto;
           margin-top: 0 !important;
+          width: 100% !important;
         }
 
         .helpicon {
+          left: 12px;
           position: relative;
           top: -15px;
-          left: 12px;
         }
       }
 
@@ -61,8 +63,8 @@ a.crm-clear-link {
                 vertical-align: top !important;
 
                 .helpicon {
-                  top: -30px;
                   left: 25px;
+                  top: -30px;
                 }
               }
             }
@@ -122,20 +124,20 @@ a.crm-clear-link {
   }
 
   label {
+    align-items: center;
+    display: flex;
     float: left;
     line-height: 20px;
     margin-right: 15px;
-    display: flex;
-    align-items: center;
 
-    &:after {
-      top: 6px !important;
+    &::after {
       left: 4px !important;
+      top: 6px !important;
     }
   }
 
   label:first-of-type {
-    & ~ div:not(.select2-container) {
+    ~ div:not(.select2-container) {
       clear: left;
     }
   }
@@ -157,8 +159,8 @@ a.crm-clear-link {
     position: relative;
 
     .helpicon {
-      position: absolute;
       padding: 0 10px;
+      position: absolute;
 
       &::before {
         position: absolute;
@@ -191,8 +193,8 @@ a.crm-clear-link {
       top: 8px;
 
       &::before {
-        position: relative;
         left: initial;
+        position: relative;
       }
     }
   }
@@ -226,20 +228,20 @@ a.crm-clear-link {
 #{$display-settings-for-results} {
   tr {
     td {
-      width: calc(100% / 3);
       box-sizing: border-box;
-      padding-right: 15px;
       padding-left: 0;
+      padding-right: 15px;
+      width: calc(100% / 3);
 
       input:not([type='radio']):not([type='checkbox']),
       .select2-container {
-        width: 100% !important;
         flex: 1 auto;
+        width: 100% !important;
       }
 
       .helpicon {
-        padding-right: 10px;
         padding-left: 5px;
+        padding-right: 10px;
       }
     }
 
@@ -281,11 +283,11 @@ a.crm-clear-link {
   }
 
   tr {
-    width: 100%;
+    align-items: flex-start;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    width: 100%;
 
     td:nth-child(1) {
       margin-right: 35px;
@@ -293,15 +295,10 @@ a.crm-clear-link {
   }
 
   .crm-field-wrapper {
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
-
-    > input:not([type='text']):not([type='number']) {
-      flex: 1 10 auto;
-      min-width: initial !important;
-    }
 
     > input:not([type='text']):not([type='number']) {
       flex: 1 0 auto;
@@ -311,7 +308,7 @@ a.crm-clear-link {
     > label {
       flex: 0 1 105px;
 
-      & ~ label {
+      ~ label {
         flex: 1 1 auto;
       }
     }
@@ -321,7 +318,7 @@ a.crm-clear-link {
 #{$address-fields},
 #{$mailings} {
   input[type='checkbox'] + label {
-    &:after {
+    &::after {
       top: 7px !important;
     }
   }
@@ -332,36 +329,36 @@ a.crm-clear-link {
     td {
       &:nth-child(1) {
         .crm-field-wrapper {
-          flex-direction: column;
           align-items: flex-start;
+          flex-direction: column;
 
           label,
           input:not([type='radio']):not([type='checkbox']),
           .select2-container {
-            width: 100% !important;
             flex: 1 auto;
+            width: 100% !important;
           }
         }
       }
 
       &:nth-child(2) {
         .crm-field-wrapper {
-          flex-direction: column;
           align-items: flex-start;
+          flex-direction: column;
 
           &:nth-child(2) {
             display: block;
 
             .crm-form-text {
-              min-width: 100px !important;
-              max-width: 100px !important;
+              max-width: $crm-sm-input-width !important;
+              min-width: $crm-sm-input-width !important;
             }
 
-            [for="postal-code-range-toggle"] {
-              position: relative;
+            [for='postal-code-range-toggle'] {
               margin-left: 5px;
+              position: relative;
 
-              &:after {
+              &::after {
                 left: 2px;
                 top: 2px;
               }
@@ -374,7 +371,7 @@ a.crm-clear-link {
         width: 230px !important;
       }
 
-      label[for="prox_distance"] {
+      label[for='prox_distance'] {
         flex: auto !important;
       }
 
@@ -383,9 +380,9 @@ a.crm-clear-link {
         width: 100%;
 
         .crm-field-wrapper {
+          align-items: flex-start;
           flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-start;
 
           .select2-container {
             width: 100% !important;
@@ -393,8 +390,8 @@ a.crm-clear-link {
 
           .postal_code_range-wrapper {
             .crm-form-text {
-              width: 1% !important;
               min-width: 1% !important;
+              width: 1% !important;
             }
           }
         }
@@ -489,7 +486,7 @@ a.crm-clear-link {
 
 .crm-accordion-body {
   .select2-container {
-      width: 230px !important;
+    width: 230px !important;
   }
 
   @media (max-width: $screen-sm-min) {
@@ -506,9 +503,9 @@ a.crm-clear-link {
 
     input:not([type='radio']):not([type='checkbox']),
     .select2-container {
-      width: 100% !important;
       flex: 1 auto;
       margin-right: 0 !important;
+      width: 100% !important;
     }
 
     .float-left + .float-left {
@@ -526,7 +523,7 @@ a.crm-clear-link {
         }
       }
 
-      [for="mailing_bounce_types"] {
+      [for='mailing_bounce_types'] {
         display: block;
       }
 

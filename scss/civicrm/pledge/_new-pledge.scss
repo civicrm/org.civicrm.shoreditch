@@ -4,8 +4,8 @@
   .crm-container {
     .CRM_Pledge_Form_Pledge {
       .six {
-        min-width: 100px !important;
-        width: 100px !important;
+        min-width: $crm-sm-input-width !important;
+        width: $crm-sm-input-width !important;
       }
 
       .accordion + br {
