@@ -128,7 +128,6 @@
   }
 
   .ui-dialog-content {
-    @extend .modal-body; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
     @include open-sans-font-family();
     @include calc(max-height, '100vh - 280px',!important);
 
@@ -171,8 +170,7 @@
     }
   }
 
-  .ui-dialog-content#bootstrap-theme,
-  .ui-dialog-content[id*='crm-ajax-dialog'] {
+  .ui-dialog-content#bootstrap-theme {
     background: $crm-white;
     padding: 10px 20px;
   }
