@@ -1399,6 +1399,7 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   .ui-tabs {
     border-radius: 0 0 $border-radius-base $border-radius-base;
+    position: relative;
 
     &::before {
       border-radius: 0 0 $border-radius-base $border-radius-base;
@@ -1409,6 +1410,7 @@ form.CRM_Contribute_Form_ContributionCharts {
       position: absolute;
       top: 0;
       width: 100%;
+      z-index: -1;
     }
   }
 
