@@ -113,6 +113,14 @@
       @include placeholder;
       box-sizing: border-box;
       width: unset;
+
+      &.big {
+        width: 35em;
+      }
+
+      &.huge {
+        width: 45em;
+      }
     }
 
     // "Select2" Drop-downs
