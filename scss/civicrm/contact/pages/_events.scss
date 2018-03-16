@@ -655,6 +655,17 @@
     padding: 16px 14px 0 !important;
   }
 
+  .crm-configure-actions,
+  .crm-event-participants,
+  .crm-event-links,
+  .crm-event-more {
+    .btn-slide {
+      padding-right: 15px !important;
+      text-indent: initial;
+      width: auto;
+    }
+  }
+
   .crm-event-searchevent-form-block {
     h3 {
       @include panel-header();

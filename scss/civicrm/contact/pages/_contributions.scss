@@ -275,6 +275,24 @@
   }
 }
 
+#{civi-page('pcp-info')} {
+  .CRM_PCP_Form_Campaign {
+    .content {
+      padding-bottom: 5px;
+    }
+
+    .crm-contribution-form-block-page_text,
+    .crm-contribution-form-block-is_active {
+      padding-bottom: 15px;
+    }
+
+    .crm-contribution-form-block-is_honor_roll {
+      padding-top: 15px;
+    }
+  }
+
+}
+
 #{civi-page('contribute-transact')} {
   .crm-form-block {
     legend {
