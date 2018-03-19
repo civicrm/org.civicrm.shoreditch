@@ -27,29 +27,17 @@
     .crm-activity-selector-dashlet {
       display: grid;
 
+      .crm-search_filters-accordion {
+        .select2-container {
+          min-width: auto;
+          width: auto;
+        }
+      }
+
       .crm-accordion-header {
         border-bottom: 1px solid $crm-background;
         color: $gray-darker;
         font-weight: $crm-font-weight-h1;
-      }
-
-      .crm-search_filters-accordion {
-        margin-bottom: 0;
-
-        .crm-inline-edit-field {
-          float: left;
-          margin-bottom: 20px;
-          width: 50%;
-
-          .select2-container {
-            width: 98% !important;
-          }
-
-          label {
-            display: block;
-            margin-bottom: 5px;
-          }
-        }
       }
 
       .dataTables_wrapper {

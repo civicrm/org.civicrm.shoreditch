@@ -30,6 +30,10 @@
       div {
         padding: 0;
       }
+
+      &.right {
+        text-align: left;
+      }
     }
 
     tr {
@@ -58,6 +62,7 @@
         border: 0 !important;
         line-height: 18px;
         padding: 15px 10px;
+        text-align: left;
 
         &:first-child {
           padding-left: 20px;
@@ -65,6 +70,11 @@
 
         &:last-child {
           padding-right: 20px;
+          text-align: right;
+        }
+
+        &.right {
+          text-align: left;
         }
       }
 
@@ -136,6 +146,7 @@
 
           table {
             border: 0;
+            box-shadow: none;
           }
         }
       }
