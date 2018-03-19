@@ -139,6 +139,10 @@ $datepicker-gray-darker: #525966;
     }
   }
 
+  /*
+   * .ui-state-disabled - for the disabled dates from last and next month
+   * [data-handler] - for the dates which are not disabled i.e. current month dates
+   */
   [data-handler],
   .ui-state-disabled {
     background-color: $gray-lighter !important;
