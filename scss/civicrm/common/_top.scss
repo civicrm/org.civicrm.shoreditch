@@ -19,22 +19,12 @@
     overflow: visible !important;
     padding: 20px 40px 0 !important;
 
-    %breadcrumb-divider {
-      content: '>';
-      display: inline-block;
-      font-size: 0.6em;
-    }
-
-    %breadcrumb {
+    .breadcrumb {
+      color: transparent;
       float: left;
+      left: 10px;
       position: relative;
       top: -5px;
-    }
-
-    .breadcrumb {
-      @extend %breadcrumb;
-      color: transparent;
-      left: 10px;
 
       > a {
         color: $crm-white;
@@ -44,7 +34,9 @@
         position: relative;
 
         &:not(:last-of-type)::after {
-          @extend %breadcrumb-divider;
+          content: '>';
+          display: inline-block;
+          font-size: 0.6em;
           position: absolute;
           right: -10px;
         }

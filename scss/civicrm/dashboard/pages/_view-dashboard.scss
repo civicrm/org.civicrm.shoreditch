@@ -27,9 +27,11 @@
     .crm-activity-selector-dashlet {
       display: grid;
 
-      .select2-container {
-        min-width: auto;
-        width: auto;
+      .crm-search_filters-accordion {
+        .select2-container {
+          min-width: auto;
+          width: auto;
+        }
       }
 
       .crm-accordion-header {
