@@ -5,7 +5,8 @@
 .CRM_Event_Form_Search .crm-results-block,
 .CRM_Campaign_Form_Search .crm-results-block,
 .CRM_Grant_Form_Search .crm-results-block,
-.CRM_Pledge_Form_Search .crm-results-block {
+.CRM_Pledge_Form_Search .crm-results-block,
+.CRM_Contribute_Form_Search .crm-results-block {
   @extend %block-with-shadow;
   border-radius: $border-radius-base;
   margin-top: 20px;
@@ -103,9 +104,8 @@
       > th {
         background: $gray-lighter;
         color: $gray-darker;
-        line-height: 1.5em !important;
+        line-height: 18px !important;
         padding: 15px 10px !important;
-        vertical-align: middle;
 
         a.sorting,
         a.sorting_asc,
@@ -121,6 +121,7 @@
       > td {
         line-height: 1.5em;
         padding: 12px 10px;
+        text-align: left;
 
         &:first-child {
           padding-left: 20px;
