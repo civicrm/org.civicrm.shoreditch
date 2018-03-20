@@ -12,8 +12,8 @@
 }
 
 .btn-default {
-
   &:hover {
+    background-color: $btn-default-bg;
     color: $gray-dark;
   }
 }
@@ -48,17 +48,7 @@
   margin-right: 5px;
 }
 
-
-// Variations hover
-.btn-default {
-
-  &:hover {
-    background-color: $btn-default-bg;
-  }
-}
-
 .btn-primary {
-
   &:hover {
     background-color: darken($btn-primary-bg, $crm-darken-percentage);
   }
@@ -74,7 +64,6 @@
 }
 
 .btn-info {
-
   &:hover {
     background-color: darken($btn-info-bg, $crm-darken-percentage);
   }
@@ -90,12 +79,14 @@
 }
 
 .btn-danger {
-
   &:hover {
     background-color: darken($btn-danger-bg, $crm-darken-percentage);
   }
 }
 
+.btn .caret {
+  margin: 0 5px;
+}
 
 //== From Bootstrap 4 alpha
 .btn-secondary {
