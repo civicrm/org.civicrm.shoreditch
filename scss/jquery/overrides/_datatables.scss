@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+
 .dataTables_wrapper {
   > table {
     thead th,
@@ -18,7 +20,7 @@
     thead {
       tr {
         th {
-          a.button {
+          .button {
             color: $crm-white !important;
           }
         }
