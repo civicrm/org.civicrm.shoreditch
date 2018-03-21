@@ -58,7 +58,7 @@
 .uib-day,
 .uib-month,
 .uib-year {
-  padding: 7px;
+  padding: $crm-uib-datepicker-cell-padding;
 
   .text-muted {
     color: $crm-uib-datepicker-muted-cell-color;
@@ -77,6 +77,10 @@
     line-height: 1;
     min-width: 0;
     padding: $crm-uib-datepicker-active-cell-padding;
+
+    span {
+      padding: $crm-uib-datepicker-cell-padding-span !important;
+    }
 
     &.active {
       background-color: $brand-primary;
