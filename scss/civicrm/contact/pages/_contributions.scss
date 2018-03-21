@@ -350,6 +350,8 @@
           th {
             background: none;
             color: $gray-dark;
+            font-weight: $crm-font-weight-h3;
+            text-transform: capitalize;
 
             &.contriTotalLeft,
             &.contriTotalRight {
@@ -366,6 +368,10 @@
   .CRM_Contribute_Form_Contribution {
     .crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
       padding: 20px !important;
+    }
+
+    .accordion + br {
+      display: none;
     }
 
     .crm-link-credit-card-mode {
