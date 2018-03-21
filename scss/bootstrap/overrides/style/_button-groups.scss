@@ -3,7 +3,8 @@
     box-shadow: none;
   }
 
-  label {
+  label,
+  label:hover {
     border-color: $input-border;
   }
 
