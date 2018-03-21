@@ -46,6 +46,13 @@
     input.dateplugin {
       @extend %responsive;
       display: inline-block;
+
+      &.six,
+      &.eight,
+      &.crm-form-time {
+        min-width: $crm-sm-input-width;
+        width: $crm-sm-input-width;
+      }
     }
 
     input.crm-form-file {
@@ -327,6 +334,7 @@
       background: none !important;
 
       &.label {
+        color: $gray-darker;
         padding-left: 20px;
       }
 
@@ -372,6 +380,13 @@
 
     input.crm-form-text:not(.crm-form-date) {
       @extend %responsive;
+
+      &.six,
+      &.eight,
+      &.crm-form-time {
+        min-width: $crm-sm-input-width;
+        width: $crm-sm-input-width;
+      }
     }
 
     table:not(.form-layout-compressed) {
@@ -443,14 +458,6 @@
           bottom: initial !important;
         }
 
-        > select,
-        > select.crm-form-multiselect {
-          + .crm-error {
-            position: relative;
-            top: 7px;
-          }
-        }
-
         &.view-value {
           > div.cke {
             width: 95%;
@@ -463,6 +470,13 @@
         > div.select2-container {
           @extend %responsive;
           margin-right: 0 !important;
+
+          &.six,
+          &.eight,
+          &.crm-form-time {
+            min-width: $crm-sm-input-width;
+            width: $crm-sm-input-width;
+          }
         }
       }
     }

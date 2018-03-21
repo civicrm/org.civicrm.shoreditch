@@ -53,6 +53,20 @@
         display: none;
       }
     }
+
+    .crm-friend-manage-form-block-thankyou_text {
+      td {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .crm-contribution-contributionpage-pcp-form-block {
+    .crm-contribution-contributionpage-pcp-form-block-link_text {
+      td {
+        padding-bottom: 20px;
+      }
+    }
   }
 
   #priceSet .message {
@@ -88,6 +102,14 @@
     .description {
       display: block;
       padding: 20px;
+    }
+  }
+
+  fieldset#map-field {
+    table {
+      td:not(:last-child) {
+        width: 300px;
+      }
     }
   }
 
@@ -141,15 +163,17 @@
     }
   }
 
-  #Registration .crm-submit-buttons {
-    padding: 8px 20px 20px;
+  #Registration {
+    .crm-submit-buttons {
+      padding: 8px 20px 20px;
 
-    #_qf_Registration_upload_done-bottom {
-      padding-left: 26px;
-    }
+      #_qf_Registration_upload_done-bottom {
+        padding-left: 26px;
+      }
 
-    .fa-check-circle {
-      padding-top: 4px;
+      .fa-check-circle {
+        padding-top: 4px;
+      }
     }
   }
 
