@@ -45,6 +45,7 @@
     background: $crm-uib-datepicker-header-bg-color;
     color: $gray;
     padding: 7px;
+    vertical-align: middle;
   }
 
   tbody {
@@ -78,7 +79,7 @@
     padding: $crm-uib-datepicker-active-cell-padding;
 
     span {
-      padding: 5px !important;
+      padding: $crm-uib-datepicker-cell-padding-span !important;
     }
 
     &.active {
@@ -96,7 +97,7 @@
 
 .uib-datepicker-popup {
   border: $crm-uib-datepicker-border;
-  padding: 10px;
+  padding: 10px !important;
 }
 
 // In mobile the native html date picker is displayed which is a [type='date'] element.

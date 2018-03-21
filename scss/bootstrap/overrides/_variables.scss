@@ -7,10 +7,10 @@ $crm-select2-box-shadow-inset: inset 0 0 9px -5px rgb(51, 51, 51);
 //
 //##
 
-$crm-page-breakpoint-min: 1240px !default; // Unfortunately arbitrary
-$crm-page-sidebar-max-width: 170px !default;
-$crm-page-main-max-width: 1004px !default;
-$crm-page-main-padding: 16px !default;
+$crm-page-breakpoint-min:      1240px !default; // Unfortunately arbitrary
+$crm-page-sidebar-max-width:   170px !default;
+$crm-page-main-max-width:      1004px !default;
+$crm-page-main-padding:        16px !default;
 $crm-page-topbar-item-padding: 15px !default;
 
 //
@@ -22,57 +22,57 @@ $crm-page-topbar-item-padding: 15px !default;
 //
 //##
 $icon-font-path: '../base/fonts/' !default;
-$fa-font-path: '../fonts/font-awesome' !default;
-$os-font-path: '../fonts/open-sans' !default;
+$fa-font-path:   '../fonts/font-awesome' !default;
+$os-font-path:   '../fonts/open-sans' !default;
 
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$crm-gray-clay: #222831 !default;
-$crm-gray-bright: #393e46 !default;
-$gray-darker: #464354 !default;
-$gray-dark: #4d4d69 !default;
-$gray-light: #e8eef0 !default;
-$gray-lighter: #f3f6f7 !default;
-$crm-gray-lightest: #fafafb !default;
-$crm-gray-matte: #9494a5 !default;
+$crm-gray-clay:             #222831 !default;
+$crm-gray-bright:           #393e46 !default;
+$gray-darker:               #464354 !default;
+$gray-dark:                 #4d4d69 !default;
+$gray-light:                #e8eef0 !default;
+$gray-lighter:              #f3f6f7 !default;
+$crm-gray-lightest:         #fafafb !default;
+$crm-gray-matte:            #9494a5 !default;
 
-$brand-primary: #0071bd !default;
-$brand-success: #44cb7e !default;
-$brand-info: #0071bd !default;
-$brand-warning: #e6ab5e !default;
-$brand-danger: #cf3458 !default;
+$brand-primary:             #0071bd !default;
+$brand-success:             #44cb7e !default;
+$brand-info:                #0071bd !default;
+$brand-warning:             #e6ab5e !default;
+$brand-danger:              #cf3458 !default;
 
-$crm-grayblue-dark: #d3dee2 !default;
-$crm-grayblue-darker: #c2cfd8 !default;
-$crm-white: #fff !default;
-$crm-black: #000 !default;
+$crm-grayblue-dark:         #d3dee2 !default;
+$crm-grayblue-darker:       #c2cfd8 !default;
+$crm-white:                 #fff !default;
+$crm-black:                 #000 !default;
 
 
 //== CRM specific variables
 //
 //## colors & varialbes used for CiviCRM
 
-$crm-copy: $gray-dark !default;
-$crm-background: $gray-light !default;
+$crm-copy:                  $gray-dark !default;
+$crm-background:            $gray-light !default;
 
-$crm-color-neutral: $crm-grayblue-darker !default;
-$crm-placeholder: $crm-gray-matte !default;
-$crm-page-topbar-color: $crm-white !default;
-$crm-page-sidebar-bg: $crm-white !default;
-$crm-page-topbar-bg: $crm-gray-clay !default;
+$crm-color-neutral:         $crm-grayblue-darker !default;
+$crm-placeholder:           $crm-gray-matte !default;
+$crm-page-topbar-color:     $crm-white !default;
+$crm-page-sidebar-bg:       $crm-white !default;
+$crm-page-topbar-bg:        $crm-gray-clay !default;
 
 
-$crm-success-dark: darken(desaturate(adjust-hue($brand-success, -26), 23.44), 8.04) !default;
-$crm-warning-dark: darken(saturate(adjust-hue($brand-warning, -6), 26.88), 26.08) !default;
+$crm-success-dark:          darken(desaturate(adjust-hue($brand-success, -26), 23.44), 8.04) !default;
+$crm-warning-dark:          darken(saturate(adjust-hue($brand-warning, -6), 26.88), 26.08) !default;
 
 $crm-accordion-header-color: $gray-lighter;
 
 
-$crm-darken-percentage: 7% !default;
-$crm-lighten-percentage: 30% !default;
+$crm-darken-percentage:     7% !default;
+$crm-lighten-percentage:    30% !default;
 
 //== Scaffolding
 //
@@ -84,32 +84,32 @@ $body-bg: $crm-background !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$font-family-base: 'Open Sans', $font-family-sans-serif !default;
+$font-family-sans-serif:  'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-base:        'Open Sans', $font-family-sans-serif !default;
 
-$font-size-small: 12px !default;
-$font-size-base: 13px !default;
-$font-size-medium: 14px !default;
-$font-size-xs: 9px !default;
+$font-size-small:         12px !default;
+$font-size-base:          13px !default;
+$font-size-medium:        14px !default;
+$font-size-xs:            9px !default;
 $crm-font-size-base-unitless: 13;
 
-$font-size-h1: 24px !default;
-$font-size-h2: 18px !default;
-$font-size-h3: 16px !default;
-$font-size-h4: $font-size-medium !default;
-$font-size-h5: $font-size-base !default;
+$font-size-h1:            24px !default;
+$font-size-h2:            18px !default;
+$font-size-h3:            16px !default;
+$font-size-h4:            $font-size-medium !default;
+$font-size-h5:            $font-size-base !default;
 
-$line-height-base: 1.53846153846154 !default; // 20/13
+$line-height-base:        1.53846153846154 !default; // 20/13
 
-$headings-font-weight: 500 !default;
-$headings-color: $gray-darker !default;
+$headings-font-weight:    500 !default;
+$headings-color:          $gray-darker !default;
 
-$crm-font-weight-h1: 600 !default;
-$crm-font-weight-h2: 600 !default;
-$crm-font-weight-h3: 600 !default;
-$crm-font-weight-h4: 500 !default;
-$crm-font-weight-h5: 700 !default;
-$crm-font-weight-h6: 500 !default;
+$crm-font-weight-h1:          600 !default;
+$crm-font-weight-h2:          600 !default;
+$crm-font-weight-h3:          600 !default;
+$crm-font-weight-h4:          500 !default;
+$crm-font-weight-h5:          700 !default;
+$crm-font-weight-h6:          500 !default;
 
 
 //== Iconography
@@ -122,56 +122,56 @@ $icon-font-path: '../vendor/bootstrap/fonts/bootstrap/' !default;
 //
 //## Common layout spacings, margins, and paddings
 
-$crm-gap-small: 5px !default;
+$crm-gap-small:               5px !default;
 
 //== Components
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-$padding-base-vertical: 4px !default;
-$padding-small-vertical: 2px !default;
+$padding-base-vertical:       4px !default;
+$padding-small-vertical:      2px !default;
 
-$padding-base-horizontal: 10px !default;
+$padding-base-horizontal:     10px !default;
 
-$border-radius-base: 2px !default;
-$border-radius-small: $border-radius-base !default;
-$border-radius-child: 4px !default;
+$border-radius-base:          2px !default;
+$border-radius-small:         $border-radius-base !default;
+$border-radius-child:         4px !default;
 
 
 //== Tables
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding: 10px 20px !default;
-$table-bg: $crm-white !default;
-$table-border-color: $gray-light !default;
+$table-cell-padding:          10px 20px !default;
+$table-bg:                    $crm-white !default;
+$table-border-color:          $gray-light !default;
 
 
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-weight: 500 !default;
+$btn-font-weight:                 500 !default;
 
 $crm-btn-padding-base-horizontal: 19px;
-$crm-btn-padding-base-vertical: 7px;
-$crm-btn-padding-small-vertical: 5px;
+$crm-btn-padding-base-vertical:   7px;
+$crm-btn-padding-small-vertical:  5px;
 
-$btn-default-color: $gray-darker;
-$btn-default-bg: $crm-white !default;
-$btn-default-border: $btn-default-bg !default;
+$btn-default-color:               $gray-darker;
+$btn-default-bg:                  $crm-white !default;
+$btn-default-border:              $btn-default-bg !default;
 
-$btn-success-color: $gray-darker !default;
-$btn-warning-color: $gray-darker !default;
+$btn-success-color:         $gray-darker !default;
+$btn-warning-color:         $gray-darker !default;
 
 //== Forms
 //
 //##
 
-$input-bg-disabled: $gray-lighter !default;
-$input-color: $gray-darker !default;
-$input-border: $crm-grayblue-darker !default;
-$input-color-placeholder: $crm-gray-matte !default;
+$input-bg-disabled:         $gray-lighter !default;
+$input-color:               $gray-darker !default;
+$input-border:              $crm-grayblue-darker !default;
+$input-color-placeholder:   $crm-gray-matte !default;
 
 $input-border-radius-large: $border-radius-base !default;
 $input-border-radius-small: $border-radius-base !default;
@@ -180,34 +180,34 @@ $input-border-radius-small: $border-radius-base !default;
 //
 //## Dropdown menu container and contents.
 
-$dropdown-link-hover-bg: $gray-lighter !default;
-$dropdown-header-color: $gray-darker !default;
+$dropdown-link-hover-bg:    $gray-lighter !default;
+$dropdown-header-color:     $gray-darker !default;
 
-$crm-dropdown-padding: 11px 20px;
+$crm-dropdown-padding:      11px 20px;
 
 
 //== Labels
 //
 //##
 
-$label-default-bg: $crm-grayblue-darker;
+$label-default-bg:           $crm-grayblue-darker;
 
 
 //== Modals
 //
 //##
 
-$modal-inner-padding: 20px 30px !default;
-$modal-title-padding: 10px 29px !default;
-$crm-modal-footer-padding: 20px !default;
-$crm-modal-sm-title-padding: 10px 20px !default;
+$modal-inner-padding:         20px 30px !default;
+$modal-title-padding:         10px 29px !default;
+$crm-modal-footer-padding:    20px !default;
+$crm-modal-sm-title-padding:  10px 20px !default;
 $crm-modal-sm-footer-padding: 10px !default;
 
-$modal-footer-border-color: $gray-light !default;
+$modal-footer-border-color:   $gray-light !default;
 
-$modal-lg: 945px !default;
-$modal-md: 555px !default;
-$modal-sm: 360px !default;
+$modal-lg:                    945px !default;
+$modal-md:                    555px !default;
+$modal-sm:                    360px !default;
 
 //== UI Modals
 //
@@ -219,39 +219,39 @@ $ui-modal-header-padding: 13px 20px !default;
 //
 //##
 
-$panel-bg: transparent !default;
-$panel-body-padding: 15px 20px !default;
-$panel-heading-padding: $panel-body-padding !default;
-$panel-footer-padding: 20px !default;
-$panel-border-radius: $border-radius-base + 1 !default;
+$panel-bg:                  transparent !default;
+$panel-body-padding:        15px 20px !default;
+$panel-heading-padding:     $panel-body-padding !default;
+$panel-footer-padding:      20px !default;
+$panel-border-radius:       $border-radius-base + 1 !default;
 
-$panel-inner-border: $gray-light !default;
-$panel-footer-bg: $crm-white !default;
+$panel-inner-border:        $gray-light !default;
+$panel-footer-bg:           $crm-white !default;
 
-$crm-panel-heading-margin: 10px !default;
+$crm-panel-heading-margin:  10px !default;
 
 //== Subheading
 $crm-panel-subheading-padding: $panel-heading-padding !default;
 
 //== Abstract and collapsible extra
 $crm-panel-abstract-padding: 8px 20px !default;
-$crm-panel-extra-padding: 5px 20px 10px 35px !default;
+$crm-panel-extra-padding:    5px 20px 10px 35px !default;
 
 //== Contextual variations
-$panel-default-text: $gray-darker !default;
-$panel-default-heading-bg: $gray-lighter !default;
+$panel-default-text:        $gray-darker !default;
+$panel-default-heading-bg:  $gray-lighter !default;
 
-$panel-success-text: $gray-darker !default;
-$panel-success-heading-bg: $brand-success !default;
+$panel-success-text:        $gray-darker !default;
+$panel-success-heading-bg:  $brand-success !default;
 
-$panel-info-text: $crm-white !default;
-$panel-info-heading-bg: $brand-info !default;
+$panel-info-text:           $crm-white !default;
+$panel-info-heading-bg:     $brand-info !default;
 
-$panel-warning-text: $gray-darker !default;
-$panel-warning-heading-bg: $brand-warning !default;
+$panel-warning-text:        $gray-darker !default;
+$panel-warning-heading-bg:  $brand-warning !default;
 
-$panel-danger-text: $crm-white !default;
-$panel-danger-heading-bg: $brand-danger !default;
+$panel-danger-text:         $crm-white !default;
+$panel-danger-heading-bg:   $brand-danger !default;
 
 //== Nested panel
 $crm-panel-nested-indent: 20px;
@@ -272,102 +272,102 @@ $grid-gutter-width: 16px !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding: 10px 20px !default;
+$nav-link-padding:                        10px 20px !default;
 
-$nav-disabled-link-color: lighten(desaturate(adjust-hue($gray-darker, -13.6364), 1.1598), 46.4706) !default;
-$nav-disabled-link-hover-color: $nav-disabled-link-color !default;
+$nav-disabled-link-color:                 lighten(desaturate(adjust-hue($gray-darker, -13.6364), 1.1598), 46.4706) !default;
+$nav-disabled-link-hover-color:           $nav-disabled-link-color !default;
 
 //== Tabs
-$nav-tabs-border-color: $crm-grayblue-dark !default;
-$nav-tabs-active-link-hover-bg: $crm-white !default;
-$nav-tabs-active-link-hover-color: $brand-primary !default;
+$nav-tabs-border-color:                   $crm-grayblue-dark !default;
+$nav-tabs-active-link-hover-bg:           $crm-white !default;
+$nav-tabs-active-link-hover-color:        $brand-primary !default;
 $nav-tabs-active-link-hover-border-color: $nav-tabs-border-color !default;
-$crm-nav-tab-content-padding: $panel-body-padding !default;
+$crm-nav-tab-content-padding:             $panel-body-padding !default;
 
-$crm-nav-stacked-bg: $crm-white;
-$crm-nav-stacked-link-padding: 15px 20px !default;
-$crm-nav-stacked-border-radius: 0 !default;
+$crm-nav-stacked-bg:                      $crm-white;
+$crm-nav-stacked-link-padding:            15px 20px !default;
+$crm-nav-stacked-border-radius:           0 !default;
 
 //== Nav tabs placed in a panel heading
-$crm-nav-tabs-panel-heading-border: 0 !default;
-$crm-nav-tabs-panel-heading-margin: -10px 0 !default;
-$crm-nav-tabs-panel-heading-link-background: transparent !default;
-$crm-nav-tabs-panel-heading-link-border-width: 0 !default;
+$crm-nav-tabs-panel-heading-border:                  0 !default;
+$crm-nav-tabs-panel-heading-margin:                  -10px 0 !default;
+$crm-nav-tabs-panel-heading-link-background:         transparent !default;
+$crm-nav-tabs-panel-heading-link-border-width:       0 !default;
 $crm-nav-tabs-panel-heading-link-border-hover-width: 0 0 3px 0 !default;
 
-$crm-nav-tabs-panel-heading-link-padding: 15px 15px 12px !default;
-$crm-nav-tabs-panel-heading-link-weight: 600 !default;
+$crm-nav-tabs-panel-heading-link-padding:            15px 15px 12px !default;
+$crm-nav-tabs-panel-heading-link-weight:             600 !default;
 
 
 //== Pagination
 //
 //##
 
-$pagination-color: $gray-dark !default;
-$pagination-bg: transparent !default;
+$pagination-color:               $gray-dark !default;
+$pagination-bg:                  transparent !default;
 
-$pagination-hover-color: $gray-darker !default;
-$pagination-hover-bg: $pagination-bg !default;
+$pagination-hover-color:         $gray-darker !default;
+$pagination-hover-bg:            $pagination-bg !default;
 
-$pagination-active-color: $gray-darker !default;
-$pagination-active-bg: $pagination-bg !default;
+$pagination-active-color:        $gray-darker !default;
+$pagination-active-bg:           $pagination-bg !default;
 
-$pagination-disabled-color: $gray-light !default;
-$pagination-disabled-bg: $pagination-bg !default;
+$pagination-disabled-color:      $gray-light !default;
+$pagination-disabled-bg:         $pagination-bg !default;
 
 //== Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text: $crm-success-dark !default;
-$state-info-text: $brand-info !default;
-$state-warning-text: $crm-warning-dark !default;
-$state-danger-text: $brand-danger !default;
+$state-success-text:             $crm-success-dark !default;
+$state-info-text:                $brand-info !default;
+$state-warning-text:             $crm-warning-dark !default;
+$state-danger-text:              $brand-danger !default;
 
-$state-success-border: $brand-success !default;
-$state-info-border: $brand-info !default;
-$state-warning-border: $brand-warning !default;
-$state-danger-border: $brand-danger !default;
+$state-success-border:           $brand-success !default;
+$state-info-border:              $brand-info !default;
+$state-warning-border:           $brand-warning !default;
+$state-danger-border:            $brand-danger !default;
 
 
-$alert-success-bg: lighten($brand-success, $crm-lighten-percentage) !default;
-$alert-info-bg: lighten($brand-info, $crm-lighten-percentage) !default;
-$alert-warning-bg: lighten($brand-warning, $crm-lighten-percentage) !default;
-$alert-danger-bg: lighten($brand-danger, $crm-lighten-percentage) !default;
+$alert-success-bg:               lighten($brand-success, $crm-lighten-percentage) !default;
+$alert-info-bg:                  lighten($brand-info, $crm-lighten-percentage) !default;
+$alert-warning-bg:               lighten($brand-warning, $crm-lighten-percentage) !default;
+$alert-danger-bg:                lighten($brand-danger, $crm-lighten-percentage) !default;
 
-$alert-success-text: $gray-darker !default;
-$alert-info-text: $gray-darker !default;
-$alert-warning-text: $gray-darker !default;
-$alert-danger-text: $gray-darker !default;
+$alert-success-text:             $gray-darker !default;
+$alert-info-text:                $gray-darker !default;
+$alert-warning-text:             $gray-darker !default;
+$alert-danger-text:              $gray-darker !default;
 
 //== Badges
 //
 //##
 
-$badge-bg: $brand-primary !default;
-$badge-font-weight: 400 !default;
-$badge-line-height: 1.1 !default;
+$badge-bg:                       $brand-primary !default;
+$badge-font-weight:              400 !default;
+$badge-line-height:              1.1 !default;
 
-$crm-badge-min-width: 25px;
+$crm-badge-min-width:            25px;
 
 
 //== Breadcrumbs
 //
 //##
 
-$breadcrumb-separator: '>' !default;
+$breadcrumb-separator:           '>' !default;
 
 
 //== Type
 //
 //##
 
-$dl-horizontal-offset: 250px !default;
+$dl-horizontal-offset:           250px !default;
 
-$blockquote-small-color: $crm-copy !default;
-$blockquote-border-color: $brand-primary !default;
+$blockquote-small-color:         $crm-copy !default;
+$blockquote-border-color:        $brand-primary !default;
 
-$crm-ui-select-top-padding: 4px !default;
+$crm-ui-select-top-padding:      4px !default;
 
 $hr-border: $crm-grayblue-dark !default;
 
@@ -376,18 +376,19 @@ $hr-border: $crm-grayblue-dark !default;
 //
 //##
 
-$crm-uib-datepicker-active-border-radius: 50% !default;
-$crm-uib-datepicker-active-cell-padding: 7px !default;
-$crm-uib-datepicker-active-font-color: $crm-white !default;
-$crm-uib-datepicker-arrow-font-weight: 300 !default;
-$crm-uib-datepicker-border: 0 !default;
-$crm-uib-datepicker-body-bg-color: transparent !default;
-$crm-uib-datepicker-body-font-color: $gray-darker !default;
-$crm-uib-datepicker-cell-padding: 7px 3px !default;
-$crm-uib-datepicker-header-bg-color: $crm-white !default;
-$crm-uib-datepicker-header-font-color: $gray-darker !default;
-$crm-uib-datepicker-header-font-size: $font-size-small !default;
-$crm-uib-datepicker-header-font-weight: $crm-font-weight-h5 !default;
-$crm-uib-datepicker-muted-cell-color: #dcdddd !default;
-$crm-uib-datepicker-today-bg-color: transparent !default;
-$crm-uib-datepicker-today-font-color: $brand-primary !default;
+$crm-uib-datepicker-active-border-radius:  50% !default;
+$crm-uib-datepicker-active-cell-padding:   7px !default;
+$crm-uib-datepicker-active-font-color:     $crm-white !default;
+$crm-uib-datepicker-arrow-font-weight:     300 !default;
+$crm-uib-datepicker-border:                0 !default;
+$crm-uib-datepicker-body-bg-color:         transparent !default;
+$crm-uib-datepicker-body-font-color:       $gray-darker !default;
+$crm-uib-datepicker-cell-padding:          7px !default;
+$crm-uib-datepicker-cell-padding-span:     0 !default;
+$crm-uib-datepicker-header-bg-color:       $crm-white !default;
+$crm-uib-datepicker-header-font-color:     $gray-darker !default;
+$crm-uib-datepicker-header-font-size:      $font-size-small !default;
+$crm-uib-datepicker-header-font-weight:    $crm-font-weight-h5 !default;
+$crm-uib-datepicker-muted-cell-color:      #dcdddd !default;
+$crm-uib-datepicker-today-bg-color:        transparent !default;
+$crm-uib-datepicker-today-font-color:      $brand-primary !default;
