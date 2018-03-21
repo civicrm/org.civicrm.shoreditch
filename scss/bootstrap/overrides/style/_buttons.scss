@@ -4,10 +4,12 @@
   padding: $crm-btn-padding-base-vertical $crm-btn-padding-base-horizontal;
   text-transform: uppercase;
 
-  // Remove the inner shadow
+  // Remove the outer shadow/glowing
+  &:focus,
   &:active,
   &.active {
     @include box-shadow(none);
+    outline: none !important;
   }
 }
 
