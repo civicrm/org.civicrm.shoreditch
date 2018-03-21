@@ -565,6 +565,14 @@
   .report {
     @include expandable-table;
     @include box-shadow($crm-form-layout-shadow-lower !important);
+
+    tbody {
+      tr:last-child {
+        td {
+          text-align: left;
+        }
+      }
+    }
   }
 
   .form-item {

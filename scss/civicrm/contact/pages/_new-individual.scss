@@ -186,12 +186,9 @@
   }
 
   #demographics {
-    .labels {
-      padding: 15px 0;
-
-      label {
-        float: left;
-      }
+    .form-item,
+    .fields {
+      margin: 0;
     }
   }
 

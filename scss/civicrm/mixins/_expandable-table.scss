@@ -70,7 +70,6 @@
 
         &:last-child {
           padding-right: 20px;
-          text-align: right;
         }
 
         &.right {
@@ -81,6 +80,10 @@
       td {
         background: $crm-white !important;
         color: $gray-dark;
+
+        &:last-child {
+          text-align: right;
+        }
       }
 
       th {

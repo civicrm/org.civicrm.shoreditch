@@ -1,0 +1,21 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+/**
+* This mixin helps to control width of textboxes, dates and small fields to be same as Vanilla CiviCRM.
+*
+* @require {variable} $crm-sm-input-width Variable for small width
+* @example
+*   .crm-form-text.six,
+*   .crm-form-text.eight,
+*   .crm-form-text.crm-form-time {
+*     min-width: 100px;
+*   }
+*/
+@mixin civicrm-input-small() {
+  &.six,
+  &.eight,
+  &.crm-form-time {
+    min-width: $crm-sm-input-width;
+    width: $crm-sm-input-width;
+  }
+}
