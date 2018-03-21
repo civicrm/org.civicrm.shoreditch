@@ -45,14 +45,8 @@
     input.crm-form-text,
     input.dateplugin {
       @extend %responsive;
+      @include civicrm-input-small;
       display: inline-block;
-
-      &.six,
-      &.eight,
-      &.crm-form-time {
-        min-width: $crm-sm-input-width;
-        width: $crm-sm-input-width;
-      }
     }
 
     input.crm-form-file {
@@ -380,13 +374,7 @@
 
     input.crm-form-text:not(.crm-form-date) {
       @extend %responsive;
-
-      &.six,
-      &.eight,
-      &.crm-form-time {
-        min-width: $crm-sm-input-width;
-        width: $crm-sm-input-width;
-      }
+      @include civicrm-input-small;
     }
 
     table:not(.form-layout-compressed) {
@@ -469,14 +457,8 @@
         > input:not([type='radio']):not([type='checkbox']),
         > div.select2-container {
           @extend %responsive;
+          @include civicrm-input-small;
           margin-right: 0 !important;
-
-          &.six,
-          &.eight,
-          &.crm-form-time {
-            min-width: $crm-sm-input-width;
-            width: $crm-sm-input-width;
-          }
         }
       }
     }
