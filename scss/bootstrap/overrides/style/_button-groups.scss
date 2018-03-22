@@ -1,16 +1,5 @@
 .btn-group {
-  label,
-  label:hover {
-    border-color: $input-border;
-  }
-
-  .active {
+  .btn.active {
     background-color: $gray;
-    border-color: transparent;
-    color: $crm-white;
-  }
-
-  button:not([class*='-outline']) {
-    border-color: transparent;
   }
 }
