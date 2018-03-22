@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact')} {
   #contact-summary-relationship-tab {
     font-family: $font-family-base;
@@ -17,16 +19,17 @@
     h3 {
       background: $gray-lighter;
       border-bottom: 1px solid $crm-background;
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
       color: $gray-darker;
       font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
-      margin: 0 0 25px;
+      margin: 0;
       padding: 12px 20px;
     }
 
     .dataTables_wrapper {
-      border-radius: $border-radius-child;
-      box-shadow: $box-shadow;
-      margin: 20px 0;
+      @include box-shadow($crm-form-layout-shadow-lower);
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      margin: 0 0 20px;
 
       table {
         box-shadow: none !important;
@@ -35,8 +38,8 @@
       .crm-datatable-pager-top {
         background: $gray-lighter;
         border-bottom: 1px solid $crm-background;
-        border-radius: $border-radius-child $border-radius-child 0 0;
-        padding-bottom: 39px;
+        border-radius: 0;
+        padding-bottom: 20px;
         padding-top: 10px;
 
         .dataTables_paginate {
@@ -48,7 +51,7 @@
         background: $crm-gray-lightest;
         border-radius: 0 0 $border-radius-child $border-radius-child;
         line-height: 1.8em;
-        padding-bottom: 39px;
+        padding-bottom: 15px;
         padding-top: 10px;
 
         .dataTables_info,
@@ -75,9 +78,9 @@
       }
     }
 
-    div[id*="DataTables_Table_"] table.dataTable {
+    div[id*='DataTables_Table_'] table.dataTable {
       background: transparent;
-      border: none;
+      border: 0;
       border-radius: $border-radius-child;
       font-family: $font-family-base;
       max-width: 100%;
@@ -90,7 +93,7 @@
 
         th {
           background: $gray-lighter !important;
-          border: none;
+          border: 0;
           color: $gray-darker;
           font-weight: $crm-font-weight-h5;
           line-height: 1.5em;
@@ -114,12 +117,12 @@
       > tbody > tr {
         background: $crm-white;
         border-bottom: 1px solid $crm-background;
-        border-left: none;
-        border-right: none;
+        border-left: 0;
+        border-right: 0;
 
         > td {
           background: $crm-white;
-          border: none;
+          border: 0;
           color: $gray-dark;
           line-height: 1.1em;
           max-width: 87px;
@@ -193,7 +196,8 @@
         text-indent: -600em;
         width: 5px;
 
-        &:after, .panel {
+        &::after,
+        .panel {
           text-indent: 0;
         }
       }
@@ -201,8 +205,11 @@
 
     h3,
     .accordion {
-      border-radius: $panel-border-radius;
       box-shadow: $box-shadow;
+    }
+
+    .accordion {
+      border-radius: $panel-border-radius;
       margin-bottom: 10px;
     }
 
@@ -212,13 +219,11 @@
     }
 
     .description {
-      background-color: $alert-success-bg;
-      border-radius: $border-radius-base;
-      color: $gray-darker;
+      background-color: $crm-white;
       padding: 10px;
     }
 
-    div[id*="s2id_autogen"] {
+    div[id*='s2id_autogen'] {
       .select2-choice {
         background: $crm-white;
         border: 1px solid $crm-grayblue-darker;
@@ -233,13 +238,8 @@
     }
 
     .font-red.label {
-      background: $gray-lighter;
-      border-bottom: 1px solid $crm-background;
-      border-radius: $panel-border-radius;
-      box-shadow: $box-shadow;
-      color: $gray-darker !important;
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
       font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
-      margin: 0 0 10px;
       padding: 12px 20px;
     }
   }
@@ -255,7 +255,7 @@
     }
 
     table tbody td label {
-        font-weight: 600;
+      font-weight: 600;
     }
   }
 }

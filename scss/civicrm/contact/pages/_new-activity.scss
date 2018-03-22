@@ -267,13 +267,6 @@
   }
 
   #mainTabContainer .crm-activity-selector-activity {
-    .crm-accordion-header {
-      border-radius: $border-radius-base $border-radius-base 0 0;
-      font-size: $font-size-h2 !important;
-      padding-bottom: 3px;
-      padding-top: 6px;
-    }
-
     .crm-accordion-body {
       padding: 6px 15px !important;
     }
@@ -335,86 +328,6 @@
       }
     }
 
-    div[id*='DataTables_Table_'] table.dataTable {
-      background: transparent;
-      border: 0;
-      display: block;
-      font-family: $font-family-base;
-      overflow-x: auto;
-      width: auto;
-
-      thead tr {
-        background: none !important;
-        border-bottom: 1px solid $crm-grayblue-dark;
-
-        th {
-          background: $gray-lighter !important;
-          border: 0;
-          color: $gray-darker;
-          line-height: 1.5em;
-          padding: 15px 20px;
-          vertical-align: middle;
-
-          div {
-            padding: 0;
-          }
-        }
-      }
-
-      > tbody > tr {
-        background: $crm-white;
-        border-bottom: 1px solid $crm-background;
-        border-right: 0;
-
-        > td {
-          background: $crm-white;
-          border: 0;
-          color: $gray-dark;
-          line-height: 1.1em;
-          overflow: hidden;
-          padding: 15px 20px;
-          text-overflow: ellipsis;
-          vertical-align: middle;
-          white-space: nowrap;
-
-          &:last-child {
-            max-width: 130px;
-          }
-
-          a {
-            color: $brand-primary !important;
-          }
-        }
-
-        > td:nth-child(3),
-        > td:nth-child(4),
-        > td:nth-child(5) {
-          overflow: visible;
-          white-space: normal;
-
-          a:last-child {
-            display: inline-block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 83%;
-          }
-        }
-
-        > td:nth-child(2) .crm-editable-enabled {
-          width: 150px !important;
-        }
-      }
-
-      @media (min-width: $crm-min-lg-width) {
-        width: 100% !important;
-      }
-
-      @media screen and (min-width: $crm-min-width) and (max-width: $crm-max-width) {
-        width: auto !important;
-      }
-    }
-
     .accordion,
     .crm-search_filters-accordion {
       box-shadow: $box-shadow;
@@ -424,11 +337,6 @@
       border-radius: $border-radius-base;
       box-shadow: $box-shadow;
       overflow: hidden;
-
-      .crm-accordion-header {
-        background: $crm-white !important;
-        border-bottom: 1px solid $crm-grayblue-dark;
-      }
     }
 
     .dataTables_length,

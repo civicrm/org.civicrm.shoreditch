@@ -3,14 +3,12 @@
 #{civi-page('contact')} {
   #GroupContact {
     h3 {
+      @include box-shadow($box-shadow);
+      @include panel-header;
       background: $brand-primary;
-      border-bottom: 1px solid $brand-primary;
-      border-radius: $border-radius-small;
+      border: 0;
       color: $crm-white;
-      font: $crm-font-weight-h4 $font-size-h2 $font-family-base;
-      line-height: 48px;
       margin: 0;
-      padding: 0 20px;
 
       &.status-removed {
         background: $brand-danger;
@@ -35,9 +33,6 @@
         th {
           background: $gray-lighter;
           border: 0;
-          color: $gray-darker;
-          padding: 10px 20px;
-          vertical-align: middle;
         }
 
         th:first-child {
@@ -61,11 +56,6 @@
         line-height: 30px;
 
         td {
-          background: $crm-white;
-          border: 0;
-          color: $gray-dark;
-          padding: 10px 20px;
-
           &.bold {
             font-weight: $crm-font-weight-h4;
           }
@@ -104,15 +94,16 @@
       margin-bottom: 20px;
     }
 
-    h3,
-    .accordion,
     .dataTables_wrapper {
-      border-radius: $border-radius-small;
-      box-shadow: $box-shadow;
-      overflow: hidden;
+      @include box-shadow($crm-form-layout-shadow-lower);
+      border-radius: 0 0 $border-radius-small $border-radius-small;
     }
 
     .accordion {
+      border-radius: $border-radius-small;
+      box-shadow: $box-shadow;
+      overflow: hidden;
+
       .ht-one {
         height: 0;
       }
@@ -130,10 +121,12 @@
       }
 
       .crm-accordion-body {
-        padding: 15px 0 0 !important;
-
         .section-shown {
           padding: 0;
+        }
+
+        .status.no-popup {
+          margin: 0;
         }
       }
     }
@@ -147,17 +140,20 @@
     }
 
     .description {
-      font-family: $font-family-base;
-      margin: 15px;
+      @include box-shadow($box-shadow);
+      background: $crm-white;
+      padding: 15px;
+    }
+
+    .spacer {
+      display: none;
     }
 
     #_qf_GroupContact_next {
-      background: $brand-primary url('../images/plus-icon.png') 8px 11px no-repeat;
-      border: 0;
-      height: 27px;
-      line-height: 27px;
-      padding: 1px 10px 3px 20px;
-      text-shadow: unset;
+      margin-left: 5px;
+      padding: 4px 10px;
+      text-shadow: none;
+      vertical-align: middle;
     }
 
     .select2-container {
@@ -218,19 +214,8 @@
     padding: 20px !important;
 
     h3 {
-      @extend .collapsible-title;
-      background: $gray-lighter;
-      border: 0;
-      border-bottom: 1px solid $crm-grayblue-dark;
-      color: $gray-darker;
-      font-family: $font-family-base;
-      font-size: $font-size-h2;
-      margin-bottom: 20px;
-      margin-left: -2% !important;
-      margin-top: -20px;
-      padding: 17px 20px;
-      vertical-align: middle;
-      width: 104%;
+      @include panel-header;
+      margin: -20px -20px 20px;
     }
 
     > table td {

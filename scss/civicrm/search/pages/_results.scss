@@ -6,7 +6,8 @@
 .CRM_Campaign_Form_Search .crm-results-block,
 .CRM_Grant_Form_Search .crm-results-block,
 .CRM_Pledge_Form_Search .crm-results-block,
-.CRM_Contribute_Form_Search .crm-results-block {
+.CRM_Contribute_Form_Search .crm-results-block,
+.CRM_Activity_Form_Search .crm-results-block {
   @extend %block-with-shadow;
   border-radius: $border-radius-base;
   margin-top: 20px;

@@ -262,4 +262,24 @@
     font-size: 1.1em;
     padding: 15px 20px;
   }
+
+  #{civi-dialog()} {
+    .row-highlight {
+      @include expandable-table;
+      border-bottom: 1px solid $crm-grayblue-dark;
+      border-top: 1px solid $crm-grayblue-dark;
+    }
+
+    #individual_prefix,
+    #individual_suffix,
+    #phone_type,
+    #instant_messenger_service,
+    #website_type {
+      margin: 0 -20px;
+
+      + .action-link {
+        margin-top: 20px !important;
+      }
+    }
+  }
 }

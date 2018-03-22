@@ -6,6 +6,7 @@
 
   #mainTabContainer {
     background-color: transparent;
+    display: flex;
     padding: 0;
 
     .ui-tabs-nav {
@@ -13,8 +14,8 @@
       border-radius: 0;
       box-shadow: $box-shadow;
       float: left;
-      margin-bottom: -99999px;
-      padding: 0 0 99999px;
+      margin-right: 20px;
+      padding: 0;
       width: 200px;
 
       ~.ui-tabs-panel {
@@ -164,6 +165,7 @@
     .ui-tabs-panel {
       box-sizing: border-box;
       float: right;
+      padding: 20px 20px 0 0 !important;
       width: calc(100% - 220px);
 
       .absence-tab-page,

@@ -1,0 +1,48 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('contact-dedupefind')} {
+  .crm-container {
+    .crm-search_filters-accordion {
+      @include box-shadow($box-shadow);
+      margin-bottom: 20px;
+    }
+
+    .form-item {
+      table.form-layout-compressed {
+        margin: 0;
+      }
+
+      #dupePairs_wrapper {
+        margin-top: 20px;
+
+        .dataTables_length,
+        #dupePairs_filter {
+          padding: 15px;
+        }
+
+        .dataTables_info {
+          padding: 12px;
+        }
+
+        #dupePairs_filter {
+          input[type=search] {
+            display: inline-block;
+            width: 230px;
+          }
+        }
+
+        tr.columnheader {
+          border: 0;
+
+          th {
+            border-bottom-color: $crm-grayblue-dark;
+          }
+        }
+      }
+    }  
+  }
+
+  #{civi-dialog()} {
+    min-width: 400px;
+  }
+}

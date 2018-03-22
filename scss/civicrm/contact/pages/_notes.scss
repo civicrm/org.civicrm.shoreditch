@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact')} {
   .ui-widget-content .action-link .button {
     box-shadow: $box-shadow;
@@ -8,9 +10,14 @@
     box-shadow: $box-shadow;
     margin: 20px 0;
 
+    .dataTables_length,
+    .dataTables_info {
+      padding: 15px;
+    }
+
     .ui-widget-header {
       background: $gray-lighter;
-      border: none;
+      border: 0;
       border-bottom: 1px solid $crm-background;
       font-family: $font-family-base;
       font-size: $font-size-base;
@@ -55,7 +62,7 @@
 
     table {
       background: transparent;
-      border: none;
+      border: 0;
       font-family: $font-family-base;
       width: 100% !important;
 
@@ -64,7 +71,7 @@
 
         th {
           background: $gray-lighter;
-          border: none;
+          border: 0;
           color: $gray-darker;
           padding: 16px 20px;
           vertical-align: middle;
@@ -79,12 +86,12 @@
     table tbody tr {
       background: $crm-white;
       border-bottom: 1px solid $crm-background;
-      border-left: none;
-      border-right: none;
+      border-left: 0;
+      border-right: 0;
 
       td {
         background: $crm-white;
-        border: none;
+        border: 0;
         color: $gray-dark;
         line-height: 1.1em;
         padding: 12px 15px !important;
