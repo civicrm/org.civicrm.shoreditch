@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 //This is due to no proper selector on config list page
 #id_Customize_Data_and_Screens,
 #id_Communications,
@@ -14,18 +16,27 @@
   &_show {
     padding: 0;
 
+    .font-size11pt {
+      font-size: $font-size-base;
+      font-weight: $crm-font-weight-h3;
+    }
+
     .form-layout {
-      border: none;
+      border: 0;
 
       tr {
-        border: none;
+        border: 0;
       }
     }
   }
 
+  .font-size11pt {
+    font-size: $font-size-base;
+  }
+
   legend {
     @include section-title;
-    border-bottom: none;
+    border-bottom: 0;
     box-sizing: border-box;
     margin: 0;
     width: 100%;

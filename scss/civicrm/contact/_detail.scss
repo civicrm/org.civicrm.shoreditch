@@ -204,7 +204,6 @@
           @include fa-icon($font-size-base, $fa-var-chevron-right);
           left: 0;
           position: absolute;
-
         }
 
         &.expanded::after {
@@ -488,7 +487,7 @@
       .select2-container {
         .select2-choice {
           box-shadow: $crm-input-shadow;
-          min-width: 100px !important;
+          min-width: $crm-sm-input-width !important;
 
           .select2-arrow {
             padding-top: 1px;
@@ -592,7 +591,7 @@
 
   .crm-form-text {
     max-width: 100% !important;
-    min-width: 100px !important;
+    min-width: $crm-sm-input-width !important;
     width: 94% !important;
   }
 
@@ -648,7 +647,7 @@
     }
 
     .crm-form-select {
-      min-width: 100px !important;
+      min-width: $crm-sm-input-width !important;
       width: 96% !important;
     }
   }
@@ -748,7 +747,7 @@
   }
 
   .crm-form-text {
-    min-width: 100px;
+    min-width: $crm-sm-input-width;
 
     &.crm-form-time {
       padding: 0.17em 0.8em !important;

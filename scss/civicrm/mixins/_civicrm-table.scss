@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 /*
  * Adds CiviCRM table-specific styles for all children tables of admin part
  */
@@ -9,22 +11,21 @@
 
     tr {
       background: $crm-white;
-      border: none;
+      border: 0;
       border-bottom: 1px solid $gray-light;
 
       &.columnheader {
         background: $gray-lighter;
       }
 
-      & > td,
-      & > th {
+      > td,
+      > th {
         background: transparent;
-        border: none;
+        border: 0;
         color: $gray-dark;
         line-height: 18px;
         padding: 16px 10px;
         text-transform: unset;
-        vertical-align: middle;
 
         &:first-child {
           padding-left: 20px;
@@ -35,7 +36,7 @@
         }
       }
 
-      & > th {
+      > th {
         color: $gray-darker;
 
         .DataTables_sort_icon {

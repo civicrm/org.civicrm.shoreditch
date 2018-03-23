@@ -33,8 +33,7 @@ $button-border-radius: 2px;
   $toolbar-top-space: 6px;
   margin-left: 0 !important;
 
-  %btn,
-  .crm-profile-selector-preview {
+  %btn {
     @extend %btn-civi;
 
     /**
@@ -279,12 +278,7 @@ $button-border-radius: 2px;
     @extend .btn;
     border: 0;
     box-sizing: border-box;
-    float: right;
     line-height: 26px;
-    margin-left: 15px;
-    margin-top: $toolbar-top-space;
-    padding: 0;
-    width: 30px;
   }
 
   .crm-search-form-block > a {
@@ -296,26 +290,14 @@ $button-border-radius: 2px;
 
     > a {
       &::before {
-        @include fa-icon();
+        @include fa-icon($font-size-base, $fa-var-expand, $brand-primary);
         display: inline-block;
         line-height: 30px;
-        padding: 0 15px 0 0;
         width: 30px;
       }
 
-      &:hover {
-        &,
-        &::before {
-          color: $crm-white !important;
-        }
-      }
-
       &[href~='#collapse']::before {
-        content: '\f066';
-      }
-
-      &[href~='#expand']::before {
-        content: '\f065';
+        content: $fa-var-compress;
       }
     }
   }
@@ -358,12 +340,26 @@ $button-border-radius: 2px;
     }
   }
 
-  .crm-profile-selector-preview {
-    padding: 4px 12px;
+  .crm-profile-selector-preview,
+  .crm-profile-selector-edit,
+  .crm-profile-selector-copy,
+  .crm-profile-selector-create {
+    border: 0;
+    height: auto;
+    line-height: normal;
+    padding: 6px 12px;
 
     .crm-i {
       position: relative;
       top: -1px;
+    }
+
+    &:not([disabled]) {
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      opacity: 0.65;
     }
   }
 }
@@ -371,7 +367,6 @@ $button-border-radius: 2px;
 a {
   &.button {
     i {
-      margin-right: 10px;
       margin-top: -4px;
     }
   }

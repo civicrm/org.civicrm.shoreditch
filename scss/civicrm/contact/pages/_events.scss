@@ -70,7 +70,7 @@
 
   .dataTables_wrapper,
   .form-item table.row-highlight {
-    @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+    @include box-shadow($crm-form-layout-shadow-lower);
 
     tr:last-child {
       td {
@@ -134,6 +134,7 @@
         .crm-absolute-date-range > span,
         .crm-absolute-date-range > span > input {
           display: inline-block;
+          margin-top: 5px;
           vertical-align: middle;
         }
       }
@@ -150,64 +151,13 @@
 }
 
 #Participant {
-  input,
-  select,
-  textarea,
-  .select2-container {
-    &.crm-inline-error,
-    &.crm-error,
-    &.error {
-      background: none !important;
-      border: 1px solid $brand-danger;
-      min-height: 30px;
-
-      &.select2-container {
-        padding: 0;
-      }
-    }
-  }
-
-  label {
-    &.crm-inline-error,
-    &.crm-error {
-      background: $brand-danger !important;
-      border-radius: 3px;
-      color: $crm-white !important;
-      padding: 5px;
-
-      &.crm-inline-error {
-        margin: 0 4px;
-      }
-
-      span {
-        background: none;
-        color: $crm-white;
-      }
-    }
-  }
-
-  span {
-    &.crm-error {
-      background: $brand-danger !important;
-      border-radius: 3px;
-      color: $crm-white !important;
-      margin: 2px;
-      padding: 5px;
-
-      span {
-        background: none;
-        color: $crm-white;
-      }
-    }
+  #_qf_Participant_reload {
+    min-width: auto;
+    width: auto;
   }
 
   &#Participant a.crm-option-edit-link {
     left: 0;
-  }
-
-  textarea {
-    padding: 0 5px;
-    vertical-align: middle;
   }
 
   .select2-container {
@@ -220,29 +170,11 @@
       width: 100%;
 
       &.form-layout {
-        #payment-info {
-          width: 100%;
-
-          table {
-            tr {
-              td,
-              th {
-                &:first-child {
-                  padding-left: 0;
-                }
-              }
-            }
-          }
-        }
-
         .crm-event-eventfees-form-block-line_items {
-          > td {
-            &:nth-child(2) {
-              width: 100%;
-
-              .total_amount-section {
-                padding: 15px;
-              }
+          > td:nth-child(2) {
+            .total_amount-section {
+              margin: 0;
+              padding: 0 20px;
             }
           }
         }
@@ -261,30 +193,6 @@
         legend {
           padding: 10px 30px;
         }
-      }
-    }
-  }
-
-  .crm-event-eventfees-form-block-price_set_amount div[class*='-section'] {
-    .label {
-      box-sizing: border-box;
-      position: relative;
-      right: 225px;
-      width: 210px;
-    }
-
-    div[class*='-content'] {
-      bottom: 45px;
-      position: relative;
-    }
-
-    #pricesetTotal {
-      margin-bottom: 0;
-      margin-top: -95px;
-
-      #pricelabel {
-        position: relative;
-        top: 40px;
       }
     }
   }
@@ -310,17 +218,6 @@
     }
   }
 
-  .crm-event-eventfees-form-block-price_set_amount {
-    .view-value {
-      padding: 10px 15px 0;
-      width: 100%;
-    }
-
-    .price_set-section {
-      margin-bottom: 0;
-    }
-  }
-
   .crm-event-eventfees-form-block-receipt_text {
     td:not(.label) {
       width: 100%;
@@ -328,70 +225,6 @@
 
     textarea {
       margin-bottom: 20px;
-    }
-  }
-
-  #priceset,
-  #pricesetTotal {
-    .label {
-      padding-left: 0;
-      text-align: left;
-    }
-
-    .content {
-      clear: both;
-      margin: 0;
-    }
-
-    .price-set-option-content label::after {
-      top: 6px;
-    }
-  }
-
-  #payment_information {
-    > td {
-      padding: 0;
-
-      legend {
-        padding: 10px 15px 10px 0;
-      }
-    }
-
-    .crm-section {
-      display: table;
-    }
-
-    .content {
-      display: table-cell;
-      margin-left: 0;
-      padding: 0 15px;
-      vertical-align: middle;
-    }
-
-    .label {
-      display: table-cell;
-      text-align: left;
-      vertical-align: middle;
-    }
-
-    input#cvv2 {
-      margin: 0;
-    }
-
-    div.crm-field-wrapper {
-      display: table;
-      margin-bottom: 0;
-    }
-  }
-
-  #billing-payment-block {
-    legend {
-      padding: 10px 15px 10px 0;
-    }
-
-    .label {
-      text-align: left;
-      width: 210px;
     }
   }
 
@@ -410,112 +243,100 @@
     @include expandable-table;
     box-shadow: none !important;
   }
+
+  #priceset {
+    margin-left: -180px;
+  }
+
+  #payment_information,
+  #priceset {
+    div.label {
+      width: 170px;
+    }
+
+    div.content {
+      margin-left: 180px;
+    }
+  }
+
+  legend {
+    @include section-title;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .crm-event-eventfees-form-block-payment_information {
+    fieldset {
+      margin: 10px -4px 0;
+    }
+  }
+
+  .crm-event-eventfees-form-block-contribution_status_id,
+  .crm-participant-form-block-note {
+    td {
+      padding-bottom: 20px;
+    }
+  }
+
+  .custom-group {
+    td.label {
+      padding-top: 6px;
+    }
+  }
 }
 
+#{civi-dialog()} {
+  #Participant {
+    .view-content {
+      margin: 0 -20px;
+    }
+
+    .description {
+      padding: 20px;
+    }
+
+    .crm-participant-form-block-delete {
+      margin: $crm-status-bar-no-bottom;
+    }
+  }
+}
+
+
 #ParticipantView {
-  .action-link {
-    display: none;
-  }
-
   .crm-event-participant-view-form-block {
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-top: -20px;
-  }
-
-  .description {
-    margin: 20px 20px 10px;
+    margin: 0 -20px;
   }
 
   table {
-    background: transparent;
-    border: 0;
-    box-shadow: none !important;
-    font-family: $font-family-base;
-    margin: 10px 0;
-
-    &.selector {
-      display: block;
-      overflow-x: auto;
-
-      th,
-      td {
-        white-space: nowrap;
-      }
-    }
-
-    thead tr {
-      border: 1px solid $crm-background !important;
-
-      th {
-        background: $gray-lighter !important;
-        border: 0;
-        color: $gray-darker !important;
-        vertical-align: middle;
-
-        div {
-          padding: 0;
-        }
-      }
-    }
-
     tbody tr {
-      background: $crm-white;
-      border: 0;
-
       &.crm-event-participantview-form-block-displayName td {
-        strong {
-          display: inline-block;
-          padding-top: 3px;
-        }
-
         div {
           float: right;
         }
       }
 
-      &.crm-child-row td {
-        padding: 0;
-      }
-
-      &.crm-child-row td .crm-ajax-container {
-        table {
-          margin: 0;
-
-          th {
-            background: $gray-lighter !important;
-            border: 0;
-            color: $gray-darker;
-            vertical-align: middle;
-          }
-        }
-      }
-
       td {
-        background: $crm-white !important;
-        border: 0;
-        line-height: 1.1em;
-        padding: 10px;
-
-        &.label {
-          border-bottom: 0;
-          color: $gray-darker !important;
-          vertical-align: middle;
-
-          div {
-            padding: 0;
-          }
-        }
-
-        &:not(.label) {
-          color: $gray-dark;
-        }
-      }
-
-      td  > table {
-        margin: 0 !important;
+        line-height: 18px;
       }
     }
+
+    &.crm-info-panel {
+      tr {
+        td {
+          &:first-child {
+            padding-left: 20px;
+          }
+
+          &:last-child {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    padding: 20px;
   }
 
   #paymentDetails_Information {
@@ -649,9 +470,32 @@
   }
 }
 
+#ParticipantStatus {
+  .crm-event-batch-form-block {
+    @include civicrm-table;
+
+    padding-top: 20px;
+
+    .help {
+      margin: $crm-status-bar-no-top;
+    }
+  }
+}
+
 .CRM_Event_Form_SearchEvent {
   .float-right {
     padding: 16px 14px 0 !important;
+  }
+
+  .crm-configure-actions,
+  .crm-event-participants,
+  .crm-event-links,
+  .crm-event-more {
+    .btn-slide {
+      padding-right: 15px !important;
+      text-indent: initial;
+      width: auto;
+    }
   }
 
   .crm-event-searchevent-form-block {
@@ -734,7 +578,7 @@
   }
 
   .dataTables_wrapper {
-    @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+    @include box-shadow($crm-form-layout-shadow-lower);
 
     thead {
       tr {
@@ -790,19 +634,53 @@
   }
 }
 
-.crm-participant-form-block-delete {
-  background-color: $alert-warning-bg;
-  color: $gray-darker;
-}
-
-.CRM_Event_Form_Task_Cancel {
+.CRM_Event_Form_Task_Cancel,
+.CRM_Event_Form_Task_Delete,
+.CRM_Event_Form_Task_Badge,
+.CRM_Event_Form_Task_PDF,
+.CRM_Event_Form_Task_PickProfile {
   .crm-form-block {
     padding-top: 20px;
   }
 
   .status.no-popup {
-    border: 1px solid $brand-warning;
-    border-radius: $border-radius-base;
-    margin: 0 20px 20px;
+    margin: $crm-status-bar-no-top;
+  }
+}
+
+.CRM_Event_Form_Task_Badge {
+  .crm-task-count {
+    margin-left: 25px;
+  }
+}
+
+.CRM_Event_Form_Task_PDF {
+  .form-layout-compressed {
+    tr {
+      td:first-child {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .crm-pdf-format-accordion {
+    .crm-form-block {
+      box-shadow: none;
+
+      tr {
+        td:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .crm-html_email-accordion {
+    margin-bottom: 10px;
+
+    .helpIcon {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
   }
 }

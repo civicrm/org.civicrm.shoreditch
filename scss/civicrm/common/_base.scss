@@ -26,8 +26,12 @@ body {
     }
   }
 
+  .status-overdue {
+    color: $brand-danger !important;
+  }
+
   .description {
-    color: $crm-copy;
+    color: $crm-gray-matte;
     font-size: 13px;
     line-height: 18px;
   }
@@ -138,6 +142,7 @@ body {
 
   a.crm-hover-button.action-item,
   .crm-hover-button.btn-slide {
+    padding: 0 5px;
     text-transform: capitalize;
 
     &:hover {
@@ -157,7 +162,7 @@ body {
       background: none;
       right: -2px;
       text-indent: 0;
-      top: 4px;
+      top: 0;
       width: 5px;
     }
 
@@ -258,7 +263,7 @@ body {
       &.page-title {
         background: $crm-white;
         color: $gray-darker;
-        margin-bottom: 46px !important;
+        margin-bottom: 20px !important;
         margin-top: -20px !important;
         padding: 0 40px !important;
       }
@@ -287,7 +292,6 @@ body {
     font-size: $font-size-h2;
     font-weight: 600;
     padding-bottom: 10px;
-    width: auto !important;
   }
 
   .font-size11pt {
@@ -305,22 +309,25 @@ a.sorting,
 a.sorting_asc,
 a.sorting_desc {
   background: none !important;
+  display: inline-block;
+  padding-left: 0;
+  padding-right: 20px;
 
-  &::before {
-    left: 0;
+  &::after {
     position: absolute;
+    right: 0;
     top: 3px;
   }
 }
 
-a.sorting::before {
+a.sorting::after {
   @include fa-icon($font-size-base, $fa-var-sort, $crm-grayblue-darker);
 }
 
-a.sorting_asc::before {
+a.sorting_asc::after {
   @include fa-icon($font-size-base, $fa-var-sort-asc, $brand-primary);
 }
 
-a.sorting_desc::before {
+a.sorting_desc::after {
   @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
 }

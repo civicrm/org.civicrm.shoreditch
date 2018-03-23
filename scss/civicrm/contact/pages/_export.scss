@@ -19,10 +19,6 @@
     color: $gray-darker;
   }
 
-  label {
-    font-weight: normal !important;
-  }
-
   #postal_mailing_export_postal_mailing_export {
     margin-left: 0 !important;
   }
@@ -39,6 +35,11 @@
 
     &.crm-export-mapping-section {
       padding: 0;
+
+      .label,
+      .content {
+        padding: 20px 0;
+      }
     }
 
     h3 {
@@ -53,7 +54,7 @@
     box-shadow: none;
 
     > .crm-submit-buttons {
-      @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+      @include box-shadow($crm-form-layout-shadow-lower);
       border-radius: 0 0 $border-radius-base $border-radius-base;
     }
   }
@@ -131,6 +132,13 @@
 
   .crm-submit-buttons {
     border-radius: 0 0 $border-radius-base $border-radius-base;
+  }
+
+  #saveMapping,
+  #saveMapping + label {
+    display: inline-block;
+    margin-bottom: 20px;
+    vertical-align: middle;
   }
 
   #saveDetails {

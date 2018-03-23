@@ -1,15 +1,17 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 $datepicker-border-color: rgba(0, 0, 0, 0.15);
 $datepicker-gray-dark: #535a67;
 $datepicker-gray-darker: #525966;
 
 .ui-datepicker {
-  z-index: 9999 !important;
-  min-width: 160px;
-  width: auto !important;
-  padding: 10px !important;
   border: 1px solid $datepicker-border-color !important;
   border-radius: 0;
   box-shadow: $box-shadow !important;
+  min-width: 160px;
+  padding: 10px !important;
+  width: auto !important;
+  z-index: 9999 !important;
 
   .ui-datepicker-header {
     .ui-datepicker-prev,
@@ -19,24 +21,24 @@ $datepicker-gray-darker: #525966;
       text-align: center;
       width: 35px;
 
-      &:before {
-        padding: 0 !important;
+      &::before {
         color: $datepicker-gray-dark !important;
-        font-weight: normal;
         font-size: 14px;
+        font-weight: normal;
+        padding: 0 !important;
       }
 
       &-hover {
-        color: $datepicker-gray-dark;
         background-color: #e6e6e6 !important;
-        border-color: $datepicker-gray-darker;
         border: 0 !important;
+        border-color: $datepicker-gray-darker;
+        color: $datepicker-gray-dark;
       }
     }
 
     .ui-datepicker-prev {
-      &:before {
-        content: '\f053' !important;
+      &::before {
+        content: $fa-var-chevron-left !important;
       }
 
       &-hover {
@@ -45,8 +47,8 @@ $datepicker-gray-darker: #525966;
     }
 
     .ui-datepicker-next {
-      &:before {
-        content: '\f054' !important;
+      &::before {
+        content: $fa-var-chevron-right !important;
       }
 
       &-hover {
@@ -62,16 +64,17 @@ $datepicker-gray-darker: #525966;
         margin: 0 5px;
 
         .select2-choice {
-          font-weight: 400 !important;
           background: none;
-          border-radius: 2px;
           border: 1px solid $crm-grayblue-darker;
+          border-radius: 2px;
           box-shadow: $crm-select2-box-shadow-inset;
+          font-weight: 400 !important;
         }
 
         .select2-arrow {
           background: none;
-          padding: 0 5px;
+          border-color: $crm-grayblue-darker;
+          padding: 0 4px;
         }
       }
     }
@@ -93,23 +96,23 @@ $datepicker-gray-darker: #525966;
 
     td[data-handler],
     td.ui-state-disabled {
-      padding: 7px;
-      font-size: 12px;
       background-color: $gray-lighter !important;
       border: 0;
+      font-size: 12px;
       opacity: 1;
+      padding: 7px;
 
       a {
         background-color: transparent !important;
-        width: auto;
-        text-align: center;
         border: 0;
         border-radius: 20px;
-        padding: 7px;
-        line-height: 1;
-        width: auto !important;
         color: $datepicker-gray-dark;
         cursor: pointer;
+        line-height: 1;
+        padding: 7px;
+        text-align: center;
+        width: auto;
+        width: auto !important;
 
         &.ui-state-active {
           background-color: $brand-primary !important;

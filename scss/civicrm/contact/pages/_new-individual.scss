@@ -11,10 +11,8 @@
 
   @media (min-device-width: $screen-sm-min) {
     .crm-container .crm-contactDetails-accordion {
-      border-radius: $border-radius-child $border-radius-child 0 0 !important;
-
       .crm-accordion-header {
-        border-radius: $border-radius-child $border-radius-child 0 0 !important;
+        border-top: 1px solid $crm-grayblue-dark;
       }
 
       .contact_basic_information-section tr {
@@ -188,12 +186,9 @@
   }
 
   #demographics {
-    .labels {
-      padding: 15px 0;
-
-      label {
-        float: left;
-      }
+    .form-item,
+    .fields {
+      margin: 0;
     }
   }
 

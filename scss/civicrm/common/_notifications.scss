@@ -150,6 +150,7 @@
   :not(.crm-footer) .status {
     background-color: $alert-warning-bg;
     border-color: $brand-warning;
+    border-radius: $border-radius-base;
     color: $gray-darker;
     padding: 16px 20px;
 
@@ -161,13 +162,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
-
-  .crm-block,
-  form {
-    > .status {
-      border: 0;
     }
   }
 }

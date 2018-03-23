@@ -1,19 +1,21 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #crm-contact-actions-list {
   background-image: none;
-  margin-top: 20px;
   box-shadow: $box-shadow;
+  margin-top: 20px;
   width: auto;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 10px;
-    width: 0;
-    height: 0;
+  &::before {
+    border-bottom: 10px solid $crm-white;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid $crm-white;
+    content: '';
+    height: 0;
+    left: 10px;
+    position: absolute;
+    top: -5px;
+    width: 0;
   }
 
   .crm-contact-actions-list-inner {
@@ -22,19 +24,19 @@
 
     .crm-contact_actions-list {
       border-color: $crm-background !important;
-      width: 175px;
       margin-left: 175px;
       margin-right: 175px;
+      width: 175px;
 
-        .crm-action-new-case,
-        .crm-action-new-relationship,
-        .crm-action-new-note,
-        .crm-action-tag-contact {
-          display: none;
-        }
+      .crm-action-new-case,
+      .crm-action-new-relationship,
+      .crm-action-new-note,
+      .crm-action-tag-contact {
+        display: none;
+      }
     }
 
-    .crm-contact_print-list{
+    .crm-contact_print-list {
       width: 175px;
 
       .crm-contact-print {
@@ -43,8 +45,8 @@
     }
 
     ul {
-      padding: 0 !important;
       height: auto;
+      padding: 0 !important;
 
       li {
         padding: 10px !important;

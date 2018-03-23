@@ -21,6 +21,17 @@
   }
 
   .CRM_Campaign_Form_Task_Interview {
+    padding-bottom: 1px;
+
+    .messages.status {
+      margin: 20px;
+
+      ul {
+        list-style: none;
+        margin: 0;
+      }
+    }
+
     .float-right {
       margin-bottom: 16px;
       margin-right: 14px;
@@ -89,6 +100,33 @@
             text-transform: capitalize;  
           }
         }
+      }
+    }
+  }
+
+  .CRM_Campaign_Form_Gotv {
+    .crm-contribution_search_form-accordion {
+      .crm-accordion-body {
+        @include box-shadow($crm-box-shadow-inset-top);
+      }
+    }
+
+    .dataTables_wrapper {
+      border-radius: 0;
+      border-top: 1px solid $crm-grayblue-dark;
+    }
+
+    .dataTables_paginate {
+      margin-right: 15px;
+
+      .paginate_button {
+        padding: 5px;
+      }
+    }
+
+    .crm-datatable-pager-bottom {
+      .dataTables_paginate {
+        margin-top: -5px;
       }
     }
   }

@@ -1,44 +1,49 @@
-@import "permissions/access";
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+@import 'permissions/access';
 
 #{civi-page('admin')},
 #{civi-page('a')} {
-  @import "common/common";
+  @import 'common/common';
 
-  @import "system-status/administer-list";
-  @import "system-status/configtask";
-  @import "system-status/system-status";
+  @import 'system-status/administer-list';
+  @import 'system-status/configtask';
+  @import 'system-status/system-status';
 
-  @import "customize-data/customize-data";
-  @import "profiles/profiles";
-  @import "tags/tags";
-  @import "relationship/relationship";
-  @import "contact-types/contact-types";
-  @import "location/location";
-  @import "date/date";
-  @import "display/display";
-  @import "menu/menu";
-  @import "replacement/replacement";
-  @import "communication-organisation/organisation";
-  @import "communication-organisation/message-templates";
-  @import "communication-organisation/reminders";
-  @import "localization/languages";
+  @import 'customize-data/customize-data';
+  @import 'profiles/profiles';
+  @import 'tags/tags';
+  @import 'relationship/relationship';
+  @import 'contact-types/contact-types';
+  @import 'location/location';
+  @import 'date/date';
+  @import 'display/display';
 
-  @import "contribute/personal-campaign-pages";
-  @import "contribute/contribute";
-  @import "contribute/managepremiums";
+  @import 'events/badgelayout';
 
-  @import "financial/financial-account";
+  @import 'menu/menu';
+  @import 'replacement/replacement';
+  @import 'communication-organisation/organisation';
+  @import 'communication-organisation/message-templates';
+  @import 'communication-organisation/reminders';
+  @import 'localization/languages';
 
-  @import "settings/components";
-  @import "settings/extensions";
-  @import "settings/scheduled-jobs";
-  @import "settings/resource-urls";
-  @import "settings/sms-provider";
-  @import "settings/smtp";
-  @import "settings/option-groups";
-  @import "settings/mapping";
-  @import "settings/paymentprocessor";
-  @import "settings/connection";
+  @import 'contribute/personal-campaign-pages';
+  @import 'contribute/contribute';
+  @import 'contribute/managepremiums';
 
-  @import "civi-case/case-types";
+  @import 'financial/financial-account';
+
+  @import 'settings/components';
+  @import 'settings/extensions';
+  @import 'settings/scheduled-jobs';
+  @import 'settings/resource-urls';
+  @import 'settings/sms-provider';
+  @import 'settings/smtp';
+  @import 'settings/option-groups';
+  @import 'settings/mapping';
+  @import 'settings/paymentprocessor';
+  @import 'settings/connection';
+
+  @import 'civi-case/case-types';
 }
