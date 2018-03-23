@@ -1,5 +1,7 @@
-@import "collapse";
-@import "tooltip";
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+@import 'collapse';
+@import 'tooltip';
 
 .ui-tabs-panel {
   padding-top: 10px !important;
@@ -50,8 +52,8 @@
 
   // Fix the row width when has the .container class
   .container.crm-summary-row {
-    width: auto;
     padding: 0;
+    width: auto;
   }
 
   // Hide the user photo from the panels
@@ -64,15 +66,8 @@
     padding: 0 !important;
   }
 
-  // Summary tab
-  &#contact-summary {
-    padding: 20px !important;
-  }
-
   // Contributions tab
   .CRM_Contribute_Form_Search {
-    padding-right: 10px;
-
     .action-link {
       line-height: normal;
     }
@@ -120,7 +115,7 @@
       }
 
       tr th {
-        border: none !important;
+        border: 0 !important;
         color: $gray-darker;
         text-transform: capitalize;
 
@@ -135,7 +130,8 @@
         border-bottom-right-radius: $panel-border-radius;
         border-top: 1px solid $crm-grayblue-dark;
 
-        td, th {
+        td,
+        th {
           &:first-child {
             border-bottom-left-radius: $panel-border-radius;
           }
@@ -204,14 +200,14 @@
         background: none;
         position: relative;
 
-        &:after {
+        &::after {
           @include fa-icon($font-size-base, $fa-var-chevron-right);
           left: 0;
           position: absolute;
 
         }
 
-        &.expanded:after {
+        &.expanded::after {
           @include fa-icon($font-size-base, $fa-var-chevron-down);
         }
       }
@@ -255,14 +251,13 @@
 
 // Edit label
 #crm-container {
-
   .crm-summary-block-wrap {
     float: left;
     width: calc(100% - $contact-avatar*2); // 100% - width of the image - margin
   }
 
   #crm-contactname-content {
-    border: none !important;
+    border: 0 !important;
     max-height: 70px;
 
     .crm-summary-display_name {
@@ -289,7 +284,7 @@
 
   .crm-contact-detail-wrap {
     clear: both;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .crm-actions-ribbon {
@@ -313,13 +308,12 @@
   }
 
   form.CRM_Contact_Form_Inline_ContactName {
-    border: none;
+    border: 0;
 
     .select2-choice {
-
       .select2-search-choice-close {
-        top: 8px;
         right: 30px;
+        top: 8px;
       }
 
       .select2-chosen {
@@ -329,18 +323,18 @@
 
     .crm-inline-edit-form {
       background-color: transparent !important;
-      padding: 0;
-      padding-left: 10px;
+      border: 0;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      border: 0;
+      padding: 0;
+      padding-left: 10px;
 
-      & > .crm-inline-edit-field ~ .crm-inline-edit-field {
+      > .crm-inline-edit-field ~ .crm-inline-edit-field {
         padding: 10px 5px;
       }
 
-      & > .crm-inline-edit-field {
+      > .crm-inline-edit-field {
         padding: 10px 5px 10px 0;
 
         label {
@@ -365,11 +359,11 @@
       .crm-inline-button {
         border: 0;
         margin: 0 !important;
-        padding: 27px 5px;
         order: 2;
+        padding: 27px 5px;
 
         .crm-button {
-          border: none;
+          border: 0;
 
           i {
             display: none;
@@ -400,7 +394,7 @@
 
         &.cancel {
           background-color: $brand-danger !important;
-          border: none !important;
+          border: 0 !important;
           border-radius: $border-radius-base;
           color: $crm-white !important;
 
@@ -434,8 +428,8 @@
 
     [id*='Email_Block'],
     .crm-phone-is_primary {
-      input[type="checkbox"],
-      input[type="radio"] {
+      input[type='checkbox'],
+      input[type='radio'] {
         display: block;
         margin-top: 7px;
       }
@@ -449,7 +443,7 @@
       background: $crm-accordion-header-color !important;
       border-radius: 0;
       color: $gray-dark;
-      padding: .2em .9em;
+      padding: 0.2em 0.9em;
     }
 
     &:hover {
@@ -468,7 +462,7 @@
       border-radius: $border-radius-small;
       font-family: $font-family-base;
 
-      input[type="text"],
+      input[type='text'],
       input.crm-form-text,
       input.dateplugin {
         @include input-text;
@@ -484,7 +478,7 @@
         padding: 0 5px;
         vertical-align: top;
 
-        &:before {
+        &::before {
           @include fa-icon($font-size-base, $fa-var-plus-circle);
           color: $brand-primary;
           padding-right: 5px;
@@ -494,7 +488,7 @@
       .select2-container {
         .select2-choice {
           box-shadow: $crm-input-shadow;
-          min-width:100px !important;
+          min-width: 100px !important;
 
           .select2-arrow {
             padding-top: 1px;
@@ -529,8 +523,8 @@
 
       .delete-button {
         background: $brand-danger !important;
-        color: $crm-white !important;
         border-color: $brand-danger !important;
+        color: $crm-white !important;
 
         float: right !important;
         margin-right: 15px;
@@ -571,10 +565,10 @@
 
   .crm-inline-button,
   .crm-submit-buttons {
+    border-bottom: 1px solid #ccc;
     height: 35px;
     margin-bottom: 10px !important;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
     white-space: normal;
   }
 
@@ -585,7 +579,7 @@
 
 
 //Apply to more than one address
-[class*="#Address_"] {
+[class*='#Address_'] {
   padding: 10px;
 
   .form {
@@ -618,19 +612,19 @@
     width: 18% !important;
   }
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     margin: 6.5px 5px 7.5px 0 !important;
   }
 
   label {
     font-weight: normal !important;
 
-    &[for="address_1_location_type_id"],
-    &[for="address_2_location_type_id"],
-    &[for="address_3_location_type_id"],
-    &[for="address_4_location_type_id"],
-    &[for="address_5_location_type_id"],
-    &[for="address_6_location_type_id"] {
+    &[for='address_1_location_type_id'],
+    &[for='address_2_location_type_id'],
+    &[for='address_3_location_type_id'],
+    &[for='address_4_location_type_id'],
+    &[for='address_5_location_type_id'],
+    &[for='address_6_location_type_id'] {
       font-weight: bold !important;
     }
   }
@@ -647,10 +641,10 @@
     }
 
     .helpicon {
-      position: relative;
-      top: 15px;
-      right: 7px;
       float: right;
+      position: relative;
+      right: 7px;
+      top: 15px;
     }
 
     .crm-form-select {
@@ -666,7 +660,7 @@
     .crm-content {
       margin-left: 0 !important;
 
-      input[type="text"] {
+      input[type='text'] {
         width: 100%;
       }
     }
@@ -705,8 +699,8 @@
       }
 
       .select2-container {
-        width: 9em !important;
         max-width: 16em;
+        width: 9em !important;
       }
     }
 
@@ -742,7 +736,7 @@
       }
 
       .crm-clear-link {
-        padding: 4px 0px;
+        padding: 4px 0;
       }
     }
   }
@@ -757,7 +751,7 @@
     min-width: 100px;
 
     &.crm-form-time {
-      padding: 0.17em .8em !important;
+      padding: 0.17em 0.8em !important;
       width: 35% !important;
     }
   }
@@ -776,10 +770,10 @@
   }
 }
 
-input[type="text"] {
+input[type='text'] {
+  box-sizing: border-box;
   height: 30px;
   line-height: 30px;
-  box-sizing: border-box;
   margin-top: 8px;
 }
 
@@ -789,23 +783,23 @@ input[type="text"] {
 }
 
 .select2-choice {
-  border-radius: 0;
-  box-sizing: inherit;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
-
-  color: $gray-dark;
   background-color: $crm-white;
   background-image: none;
   border: 1px solid $gray-dark;
+  border-radius: 0;
+  box-sizing: inherit;
+
+  color: $gray-dark;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
 }
 
 #CustomData {
   .custom_20_1-row {
     .label {
-      width: 100% !important;
       display: table-cell !important;
+      width: 100% !important;
     }
 
     .html-adjust {
@@ -817,8 +811,8 @@ input[type="text"] {
 }
 
 .action-link {
-  min-height: 45px;
   height: auto;
+  min-height: 45px;
 }
 
 .form-layout-compressed {
@@ -835,7 +829,7 @@ input[type="text"] {
   }
 
   #s2id_currency {
-    &:after {
+    &::after {
       display: none;
     }
   }
