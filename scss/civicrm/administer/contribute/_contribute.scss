@@ -45,4 +45,53 @@
       width: auto;
     }
   }
+
+  .crm-contribution-contributionpage-amount-form-block {
+    table.form-layout-compressed {
+      tbody {
+        th.label {
+          background: $crm-white;
+          border: 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    fieldset {
+      @include civicrm-table;
+      margin: 0 -4px;
+
+      legend {
+        @include section-title;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .description {
+        padding: 0 20px;
+      }
+
+      #map-field-table {
+        tr.columnheader {
+          background: $gray-lighter;
+        }
+
+        td:not(:last-child) {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  .crm-member-membershipblock-form-block {
+    #memberFields {
+      margin-right: 20px;
+    }
+  }
+
+  .crm-friend-manage-block {
+    br {
+      display: none;
+    }
+  }
 }

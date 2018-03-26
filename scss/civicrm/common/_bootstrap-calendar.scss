@@ -69,6 +69,11 @@ $datepicker-gray-darker: #525966;
           border-radius: 2px;
           box-shadow: $crm-select2-box-shadow-inset;
           font-weight: 400 !important;
+
+          > .select2-chosen {
+            display: inline-block;
+            font-size: $font-size-base;
+          }
         }
 
         .select2-arrow {

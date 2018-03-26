@@ -176,13 +176,17 @@ body[class*='page-civicrm-report-'] {
 
       .crm-accordion-wrapper {
         &:first-of-type {
-          margin-top: 20px;
+          margin-top: 10px;
         }
 
         table.report-layout {
           td {
             border: 0;
           }
+        }
+
+        .crm-form-select {
+          margin: 0;
         }
       }
     }

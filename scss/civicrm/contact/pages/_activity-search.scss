@@ -1,0 +1,37 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('activity-search')} {
+  .crm-container {
+    .CRM_Activity_Form_Search {
+      div#searchForm {
+        table.form-layout {
+          td {
+            border: 0;
+          }
+        }
+
+        div.description {
+          color: $crm-gray-matte;
+          font-size: $font-size-base;
+          margin: 0;
+        }
+
+        .crm-i {
+          display: none;
+        }
+      }
+
+      .crm-contactDetails-accordion {
+        margin: 0 -25px;
+      }
+
+      .crm-results-block {
+        .crm-pager {
+          .element-right {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

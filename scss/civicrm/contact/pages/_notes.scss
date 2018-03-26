@@ -151,35 +151,18 @@
   }
 
   #Note {
-    td {
-      vertical-align: middle;
+    .crm-note-form-block {
+      padding-bottom: 0;
 
-      &.label {
-        box-sizing: border-box;
-        width: 210px;
-      }
+      .crm-activity-form-block-attachment {
+        td {
+          padding-bottom: 0;
 
-      &:not(.label) {
-        padding: 0;
-        width: 100%;
-      }
-    }
-
-    #attachments tr {
-      &:nth-child(4),
-      &:nth-child(7) {
-        td.label {
-          padding: 0;
+          .crm-accordion-wrapper {
+            margin: 0 -25px;
+          }
         }
       }
-    }
-
-    .crm-accordion-body {
-      padding-bottom: 0 !important;
-    }
-
-    .crm-accordion-header {
-      font-weight: 600 !important;
     }
   }
 }

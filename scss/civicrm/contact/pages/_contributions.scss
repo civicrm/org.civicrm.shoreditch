@@ -246,6 +246,12 @@
       margin: 0;
     }
   }
+
+  #{civi-dialog()} {
+    .crm-contribution-form-block {
+      padding-bottom: 0;
+    }
+  }
 }
 
 #{civi-page('contribute-campaign')},
@@ -295,6 +301,8 @@
 
 #{civi-page('contribute-transact')} {
   .crm-form-block {
+    padding-top: 20px;
+
     legend {
       @include section-title;
     }
@@ -307,8 +315,9 @@
       margin-bottom: 10px !important;
     }
 
-    .intro_text-section {
-      padding: 20px;
+    .intro_text-section,
+    .status.no-popup {
+      margin: $crm-status-bar-no-top !important;
     }
   }
 
@@ -336,12 +345,19 @@
       }
     }
 
+    .crm-absolute-date-range > span,
+    .crm-absolute-date-range > span > input {
+      display: inline-block;
+      margin-top: 5px;
+      vertical-align: middle;
+    }
+
     .description {
       padding: 10px 20px;
     }
 
     #contribution_recur {
-      margin: 0 -25px 15px;
+      margin: 0 -24px 15px;
     }
 
     #search-status {
@@ -361,6 +377,10 @@
         }
       }
     }
+  }
+
+  .crm-results-block-empty {
+    box-shadow: none !important;
   }
 }
 
@@ -405,6 +425,40 @@
   }
 }
 
+#{civi-page('contact-view-contribution')},
+#{civi-page('contribute-add')} {
+  .CRM_Contribute_Form_Contribution {
+    > .form-layout-compressed {
+      @include civicrm-panel;
+      margin-bottom: 20px;
+      width: 100%;
+
+      tr {
+        &:first-child {
+          td {
+            padding-top: 20px;
+          }
+        }
+
+        &:last-child {
+          td {
+            padding-bottom: 20px;
+          }
+        }
+
+        td:first-child {
+          padding-left: 20px !important;
+        }
+      }
+
+      #_qf_Contribution_reload {
+        min-width: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
 #{civi-page('contact-view-contribution')} {
   #branding {
     display: block;
@@ -416,19 +470,8 @@
     padding: 20px 0 40px;
   }
 
-  .CRM_Contribute_Form_Contribution {
-    padding-top: 35px;
-  }
-
   .crm-contribution-form-block {
     position: relative;
-  }
-
-  .help {
-    padding: 10px 20px !important;
-    position: absolute;
-    top: -55px;
-    width: calc(100% - 40px);
   }
 
   .description {
@@ -706,10 +749,6 @@
         color: $crm-white;
       }
     }
-  }
-
-  .help {
-    padding: 15px 0;
   }
 
   .form-layout-compressed td.label {
@@ -1059,32 +1098,20 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   .ui-tabs {
     border-radius: 0 0 $border-radius-base $border-radius-base;
+  }
 
-    &::before {
-      border-radius: 0 0 $border-radius-base $border-radius-base;
-      box-shadow: $crm-tab-shadow;
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+  #mainTabContainer {
+    @include box-shadow($crm-form-layout-shadow-lower);
   }
 
   > h3 {
-    background: $gray-lighter;
-    border-radius: $border-radius-base $border-radius-base 0 0;
-    box-shadow: $box-shadow;
-    color: $datepicker-gray-darker;
-    height: 50px;
-    line-height: 50px;
-    margin: 10px 0 0;
-    padding: 0 15px;
+    @include panel-header;
+    @include box-shadow($box-shadow);
+    margin: 0;
   }
 
   .spacer + h3 {
-    border-radius: $border-radius-base;
+    margin-top: 20px;
 
     + div {
       position: relative;
@@ -1092,8 +1119,9 @@ form.CRM_Contribute_Form_ContributionCharts {
   }
 
   .crm-pager {
-    background: $crm-gray-lightest;
+    @include box-shadow($crm-form-layout-shadow-lower);
     line-height: 1.7em;
+    margin: 0;
     padding: 7px 0;
 
     > .element-right {
@@ -1101,34 +1129,26 @@ form.CRM_Contribute_Form_ContributionCharts {
     }
   }
 
-  .crm-pager:first-child {
-    background: $gray-lighter;
-    border-bottom: 1px solid $crm-background;
-    border-radius: $panel-border-radius $panel-border-radius 0 0;
-    margin-bottom: 0;
-    margin-top: 75px;
-  }
-
   p.description {
-    background: $alert-success-bg;
-    border-radius: $border-radius-base;
-    color: $gray-darker;
-    margin: 15px 0;
-    padding: 10px;
-    position: absolute;
-    top: -70px;
-    width: calc(100% - 40px);
+    @include box-shadow($crm-form-layout-shadow-lower);
+    background: $crm-white;
+    padding: 15px;
+    position: relative;
   }
 
   table.selector {
+    @include box-shadow($crm-form-layout-shadow-lower);
     border-radius: 0;
-    box-shadow: $crm-form-item-shadow !important;
 
     > tbody > tr > td + .crm-pager {
       border-radius: 0 0 $panel-border-radius $panel-border-radius;
       border-top: 1px solid $crm-background;
       box-shadow: $crm-form-item-shadow;
       margin-top: 0;
+    }
+
+    + .crm-pager {
+      margin-bottom: 10px;
     }
   }
 
