@@ -1,7 +1,12 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 .CRM_Contact_Form_Search_Advanced .crm-results-block,
 .CRM_Contact_Form_Search_Basic .crm-results-block,
 .CRM_Event_Form_Search .crm-results-block,
-.CRM_Campaign_Form_Search .crm-results-block {
+.CRM_Campaign_Form_Search .crm-results-block,
+.CRM_Grant_Form_Search .crm-results-block,
+.CRM_Pledge_Form_Search .crm-results-block,
+.CRM_Contribute_Form_Search .crm-results-block {
   @extend %block-with-shadow;
   border-radius: $border-radius-base;
   margin-top: 20px;
@@ -10,30 +15,6 @@
     margin: 0;
   }
 
-  table:not(.crm-table-group-summary) {
-    table-layout: fixed;
-
-    td:not(:last-child):not(:nth-child(2)):not(:nth-child(3)) {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    td:nth-child(3) {
-      word-wrap: break-word;
-    }
-
-    th:first-child,
-    td:first-child {
-      width: 20px;
-    }
-
-    th:nth-child(2),
-    td:nth-child(2) {
-      width: 28px;
-    }
-  }
-  
   .crm-search-tasks {
     background: $gray-lighter;
     border-bottom: solid 1px $crm-background;
@@ -58,14 +39,13 @@
     margin: 0;
 
     > .element-right {
+      margin-right: 20px !important;
       margin-top: 7px;
     }
+  }
 
-    + .float-right {
-      float: none !important;
-      padding: 4px 10px 10px !important;
-      text-align: right;
-    }
+  .float-right {
+    padding: 10px 20px 20px !important;
   }
 
   script + .crm-pager {
@@ -74,11 +54,7 @@
 
   .sticky th {
     line-height: 1.1em !important;
-    padding: 15px 20px !important;
-
-    &:not(:first-child):not(:nth-child(2)) {
-      padding-left: 0 !important;
-    }
+    padding: 15px 10px !important;
 
     .sticky-header {
       height: 30px;
@@ -128,9 +104,8 @@
       > th {
         background: $gray-lighter;
         color: $gray-darker;
-        line-height: 1.5em !important;
+        line-height: 18px !important;
         padding: 15px 10px !important;
-        vertical-align: middle;
 
         a.sorting,
         a.sorting_asc,
@@ -146,7 +121,7 @@
       > td {
         line-height: 1.5em;
         padding: 12px 10px;
-        vertical-align: middle;
+        text-align: left;
 
         &:first-child {
           padding-left: 20px;
@@ -205,15 +180,15 @@
   }
 
   .font-size12pt {
+    color: $gray-darker;
     font-size: $font-size-h2;
     font-weight: $crm-font-weight-h2;
-    color: $gray-darker;
     padding-bottom: 10px;
   }
 
   .font-size11pt {
+    color: $gray-darker;
     font-size: $font-size-base;
     font-weight: $crm-font-weight-h2;
-    color: $gray-darker;
   }
 }

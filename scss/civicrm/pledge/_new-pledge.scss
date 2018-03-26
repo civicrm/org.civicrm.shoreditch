@@ -1,0 +1,11 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('pledge-add')} {
+  .crm-container {
+    .CRM_Pledge_Form_Pledge {
+      .accordion + br {
+        display: none;
+      }
+    }
+  }
+}

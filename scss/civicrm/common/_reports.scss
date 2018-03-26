@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('report-list')},
 #{civi-page('report-template')} {
   .crm-report-instanceList-form-block,
@@ -20,14 +22,13 @@
       padding: 0 !important;
 
       .report-layout {
-
         tr {
           &:not(:last-child) td {
             border-bottom: 1px solid $gray-light !important;
           }
 
           &:last-child td {
-            border-bottom: none !important;
+            border-bottom: 0 !important;
           }
         }
 
@@ -59,7 +60,11 @@
     }
   }
 
-  .action-link:first-of-type {
-    margin-top: 0;
+  .action-link {
+    margin: 20px 0 0;
+
+    &:first-of-type {
+      margin: 0 0 20px;
+    }
   }
 }

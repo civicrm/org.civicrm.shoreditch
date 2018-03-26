@@ -1,2 +1,5 @@
-@import "pages/campaign";
-@import "pages/survey";
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+@import 'pages/campaign';
+@import 'pages/gotv';
+@import 'pages/survey';

@@ -18,14 +18,34 @@ body[class*='page-civicrm-report-'] {
           border-color: $gray-light;
         }
       }
+
+      tr:last-child {
+        td {
+          border: 0;
+        }
+      }
     }
 
     .crm-report-form-block {
+      .report-layout.statistics-table {
+        margin-bottom: 20px;
+
+        th + td {
+          background-color: $gray-lighter !important;
+        }
+      }
+
       .report-layout {
-        @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+        @include box-shadow($crm-form-layout-shadow-lower);
         border-top: 1px solid $crm-grayblue-dark;
         position: relative;
         z-index: 0;
+
+        th {
+          background-color: $gray-lighter !important;
+          border-left: 0;
+          border-right: 0;
+        }
 
         th,
         td {
@@ -57,7 +77,7 @@ body[class*='page-civicrm-report-'] {
       }
 
       .crm-pager {
-        @include box-shadow(0 8px 18px 0 rgba(48,40,40,0.25));
+        @include box-shadow($crm-form-layout-shadow-lower);
         margin: 0;
         padding-bottom: 5px;
 
@@ -91,6 +111,8 @@ body[class*='page-civicrm-report-'] {
 
   #report-tab {
     &-col-groups {
+      border: 0;
+
       tr {
         td {
           border: 0;
@@ -99,6 +121,26 @@ body[class*='page-civicrm-report-'] {
           &:first-child {
             padding-left: 20px;
           }
+        }
+      }
+
+      .crm-accordion-wrapper {
+        &:first-of-type {
+          margin-top: 20px;
+        }
+
+        tr {
+          td {
+            padding: 4px;
+          }
+        }
+      }
+    }
+
+    &-group-by-elements {
+      .crm-report-criteria-groupby {
+        td:first-child {
+          padding-left: 20px;
         }
       }
     }
@@ -111,7 +153,14 @@ body[class*='page-civicrm-report-'] {
       }
     }
 
+    &-format,
+    &-access {
+      padding: 10px 0 !important;
+    }
+
     &-set-filters {
+      border: 0;
+
       .label {
         padding-left: 20px;
       }
@@ -122,6 +171,19 @@ body[class*='page-civicrm-report-'] {
 
       .select2-container {
         min-width: 230px !important;
+        width: 230px !important;
+      }
+
+      .crm-accordion-wrapper {
+        &:first-of-type {
+          margin-top: 20px;
+        }
+
+        table.report-layout {
+          td {
+            border: 0;
+          }
+        }
       }
     }
 
@@ -161,5 +223,6 @@ body[class*='page-civicrm-report-'] {
 
   .crm-submit-buttons {
     @include civicrm-submit-buttons;
+    border-top: 0;
   }
 }

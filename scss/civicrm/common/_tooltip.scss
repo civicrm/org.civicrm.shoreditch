@@ -1,38 +1,22 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .crm-tooltip-wrapper {
-  background-image: none !important;
-  overflow: visible;
-  padding-bottom: 0;
+  background: none !important;
+  overflow: visible !important;
+  padding-bottom: 0 !important;
 
   .crm-tooltip {
     @include box-shadow($box-shadow);
-    background: $crm-white !important;
+    background: $crm-white;
     border-radius: $border-radius-base;
     padding: 0;
 
-    .content,
-    .crm-table-group-summary tr td,
-    .label {
-      color: $crm-copy !important;
-      font-weight: 600;
-    }
-
-    td {
-      display: table-cell !important;
-      max-width: none !important;
+    .crm-table-group-summary tr td {
+      font-weight: $crm-font-weight-h3;
     }
 
     .crm-table-group-summary {
       background: $gray-lighter !important;
-
-      tbody > tr,
-      tr > td {
-        background: $crm-white !important;
-      }
-
-      tbody > tr:first-child td {
-        text-align: left;
-        width: 100%;
-      }
 
       > div {
         line-height: 30px;
@@ -40,10 +24,18 @@
 
       .label,
       .content {
-        font-weight: normal;
         font-size: 13px;
         line-height: 17px;
         margin-bottom: 10px;
+      }
+
+      .content {
+        color: $gray-dark;
+        font-weight: normal;
+      }
+
+      .label {
+        color: $gray-darker;
       }
     }
 
@@ -54,28 +46,23 @@
     }
 
     .crm-table-group-summary > tbody > tr {
-      &:nth-child(1) { 
-        background: $gray-lighter !important;
-
-        & > td {
+      &:nth-child(1) {
+        > td {
           background: $gray-lighter !important;
+          color: $gray-darker !important;
           font-size: $font-size-h2;
         }
       }
 
-      &:nth-child(2) {
+      &:nth-child(2) > td {
         border-top: 1px solid $crm-grayblue-dark !important;
+        width: 50% !important;
       }
 
       > td {
         vertical-align: top !important;
+        white-space: normal !important;
       }
-    }
-
-    td,
-    tr {
-      border: 0 !important;
-      border-bottom: 0 !important;
     }
   }
 }
@@ -84,15 +71,15 @@ a {
   &.crm-tooltip-down {
     .crm-tooltip-wrapper {
       &::before {
-        content: '';
-        position: relative;
-        top: -9px;
-        left: 30px;
-        width: 0;
-        height: 0;
+        border-bottom: 10px solid $crm-grayblue-dark !important;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid $crm-grayblue-dark !important;
+        content: '';
+        height: 0;
+        left: 30px;
+        position: relative;
+        top: -9px;
+        width: 0;
       }
     }
   }
@@ -100,15 +87,15 @@ a {
   &:not(.crm-tooltip-down) {
     .crm-tooltip-wrapper {
       &::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 30px;
-        width: 0;
-        height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-top: 10px solid $crm-grayblue-dark !important;
+        bottom: -10px;
+        content: '';
+        height: 0;
+        left: 30px;
+        position: absolute;
+        width: 0;
       }
     }
   }

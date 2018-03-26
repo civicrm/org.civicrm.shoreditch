@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #civicrm-dashboard {
   .column {
     .widget-controls {
@@ -16,10 +18,21 @@
 
     .widget-content {
       padding: 0;
+
+      .status.no-popup {
+        border: 0;
+      }
     }
 
     .crm-activity-selector-dashlet {
       display: grid;
+
+      .crm-search_filters-accordion {
+        .select2-container {
+          min-width: auto;
+          width: auto;
+        }
+      }
 
       .crm-accordion-header {
         border-bottom: 1px solid $crm-background;
@@ -27,28 +40,9 @@
         font-weight: $crm-font-weight-h1;
       }
 
-      .crm-search_filters-accordion {
-        margin-bottom: 0;
-
-        .crm-inline-edit-field {
-          float: left;
-          margin-bottom: 20px;
-          width: 50%;
-
-          .select2-container {
-            width: 98% !important;
-          }
-
-          label {
-            display: block;
-            margin-bottom: 5px;
-          }
-        }
-      }
-
       .dataTables_wrapper {
-        box-shadow: none;
         border-radius: 0;
+        box-shadow: none;
         margin-bottom: 0;
 
         .crm-datatable-pager-top {
@@ -56,8 +50,8 @@
         }
 
         .crm-datatable-pager-bottom {
-          padding: 0 15px;
           line-height: 1.5em;
+          padding: 0 15px;
         }
 
         .dataTables_paginate .ui-button {
@@ -69,7 +63,7 @@
           width: 49%;
         }
 
-        div[id*="s2id_autogen"] {
+        div[id*='s2id_autogen'] {
           .select2-choice {
             background: none;
             border: 1px solid $crm-grayblue-darker;
@@ -91,11 +85,11 @@
       }
 
       table {
-        border: none;
+        border: 0;
         margin: 7px 0;
 
         tbody tr td {
-          border: none;
+          border: 0;
           color: $gray-dark;
           padding: 7px 15px;
         }
@@ -108,7 +102,7 @@
     }
   }
 
-  #civicrm-news-feed [id*="civicrm-news-feed-"] {
+  #civicrm-news-feed [id*='civicrm-news-feed-'] {
     padding: 0 !important;
 
     .crm-accordion-header {

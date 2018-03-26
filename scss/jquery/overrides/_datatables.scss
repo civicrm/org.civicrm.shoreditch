@@ -1,4 +1,4 @@
-/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 .dataTables_wrapper {
   > table {
@@ -6,7 +6,8 @@
     tbody td {
       border: initial;
       border-bottom: solid 1px $table-border-color;
-      padding: 12px 10px;
+      line-height: 18px !important;
+      padding: 15px 10px;
 
       &:first-child:not(.hiddenElement) {
         padding-left: 20px;
@@ -28,14 +29,15 @@
 
       .sorting,
       .sorting_asc,
-      .sorting_desc {
+      .sorting_desc,
+      .sorting_disabled {
         background: none;
         position: relative;
 
         &::after {
-          position: absolute;
-          right: 0;
-          top: 18px;
+          padding-left: 10px;
+          position: relative;
+          top: 1px;
         }
       }
 

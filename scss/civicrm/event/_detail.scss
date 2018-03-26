@@ -25,11 +25,17 @@
     }
   }
 
-  .crm-event-manage-location-form-block > table {
-    margin-left: 15px;
+  .crm-event-manage-location-form-block {
+    > table {
+      margin-left: 15px;
 
-    .status {
-      padding-left: 0;
+      .status {
+        padding-left: 0;
+      }
+    }
+
+    #Address_Block_1 {
+      padding: 12px;
     }
   }
 
@@ -37,6 +43,29 @@
   .crm-event-manage-fee-form-block {
     .crm-submit-buttons:first-of-type {
       border-top: 0;
+    }
+  }
+
+  .crm-friend-manage-block {
+    .replace-plain,
+    textarea {
+      + br {
+        display: none;
+      }
+    }
+
+    .crm-friend-manage-form-block-thankyou_text {
+      td {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .crm-contribution-contributionpage-pcp-form-block {
+    .crm-contribution-contributionpage-pcp-form-block-link_text {
+      td {
+        padding-bottom: 20px;
+      }
     }
   }
 
@@ -50,13 +79,13 @@
 
   fieldset#discount,
   fieldset#map-field {
-    padding-left: 20px;
-    padding-right: 20px;
+    @include civicrm-table();
 
     > legend {
       @include section-title;
+      box-sizing: border-box;
       display: block;
-      margin-left: -20px;
+      margin: 0;
       width: 100%;
     }
 
@@ -64,45 +93,22 @@
       min-width: 100%;
     }
 
-    tr {
-      background-color: transparent;
-      display: block;
-      margin: 0 -20px;
-      padding: 0 20px;
-    }
-
-    td {
-      border: 0;
-      display: inline-block;
-      padding: 5px 10px 9px 0;
-      width: 260px;
-    }
-
-    .dateplugin {
-      margin-top: 5px;
-    }
-
     .columnheader {
-      background-color: $gray-lighter;
-      border-bottom: 1px solid $crm-grayblue-dark;
-      border-left: 0;
-      border-radius: 0;
-      border-right: 0;
-      display: block;
-      margin: 20px -20px 0;
-      padding: 6px 20px 4px;
-
-      br {
-        display: none;
-      }
-
       td {
-        color: $datepicker-gray-dark;
         font-size: 13px;
       }
+    }
 
-      label {
-        margin-left: 5px;
+    .description {
+      display: block;
+      padding: 20px;
+    }
+  }
+
+  fieldset#map-field {
+    table {
+      td:not(:last-child) {
+        width: 300px;
       }
     }
   }
@@ -110,12 +116,16 @@
   fieldset#discount {
     .columnheader td:first-child,
     .form-item td:first-child {
-      padding-left: 2px;
       width: 20px;
     }
 
     .crm-form-submit {
-      margin: 10px 20px 0;
+      margin: 20px;
+    }
+
+    .add-remove-link {
+      font-size: $font-size-base;
+      padding: 16px 20px;
     }
   }
 
@@ -153,15 +163,17 @@
     }
   }
 
-  #Registration .crm-submit-buttons {
-    padding: 8px 20px 20px;
+  #Registration {
+    .crm-submit-buttons {
+      padding: 8px 20px 20px;
 
-    #_qf_Registration_upload_done-bottom {
-      padding-left: 26px;
-    }
+      #_qf_Registration_upload_done-bottom {
+        padding-left: 26px;
+      }
 
-    .fa-check-circle {
-      padding-top: 4px;
+      .fa-check-circle {
+        padding-top: 4px;
+      }
     }
   }
 
@@ -170,7 +182,17 @@
   }
 }
 
-&-add #crm-container .crm-form-block.crm-form-block>.crm-submit-buttons {
-  margin-top: 20px !important;
-}
+#{civi-dialog()} {
+  .crm-scheduleReminder-form-block {
+    .crm-html_email-accordion,
+    .crm-plaint_text_email-accordion {
+      .helpIcon {
+        margin: 0 0 10px;
+      }
+    }
+  }
 
+  #editMessageDetails {
+    padding: 20px 0;
+  }
+}

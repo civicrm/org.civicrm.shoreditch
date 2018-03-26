@@ -1,8 +1,11 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+
 #{civi-page('survey')} {
   .CRM_Campaign_Form_Survey_Main {
     .help {
-      margin: 0px 20px;
+      margin: $crm-status-bar-no-top;
     }
+
     .crm-campaign-survey-new_campaign_link {
       text-transform: capitalize;
     }
@@ -10,9 +13,11 @@
 
   .CRM_Campaign_Form_Search {
     .crm-results-block {
+      overflow-x: auto;
+
       .crm-pager {
         > .element-right {
-          margin-top: 0px;
+          margin-top: 0;
         }
       }
     }
@@ -35,10 +40,12 @@
           width: 100%;
 
           td {
-            vertical-align: middle;
-
             &:not(.label) {
               padding: 0;
+            }
+
+            &.label + td {
+              padding: 5px;
             }
           }
         }

@@ -1,6 +1,11 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .CRM_Contact_Form_Search_Basic .crm-basic-criteria-form-block,
 .CRM_Campaign_Form_Search,
-.CRM_Campaign_Form_Gotv .crm-search-form-block {
+.CRM_Campaign_Form_Gotv .crm-search-form-block,
+.CRM_Grant_Form_Search .crm-search-form-block,
+.CRM_Pledge_Form_Search .crm-search-form-block,
+.CRM_Contribute_Form_Search .crm-contribution-search-form-block {
   .crm-accordion-body {
     padding: 20px;
 

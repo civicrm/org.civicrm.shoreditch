@@ -1,116 +1,69 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-#Search.CRM_Pledge_Form_Search {
-  table.selector {
-    @include expandable-table;
-    margin-bottom: 20px;
+#{civi-page('contact-view')} {
+  #Search.CRM_Pledge_Form_Search {
+    table.selector {
+      @include expandable-table;
+      margin-bottom: 20px;
 
-    thead.sticky {
-      background: transparent;
-    }
-
-    thead.sticky th {
-      &:not(:first-child),
-      &:not(:last-child) {
-        padding: 15px 10px !important;
-      }
-    }
-
-    tr:not(.crm-child-row) > td {
-      &:not(:last-child) {
-        padding: 15px 10px;
-        text-align: center;
+      thead.sticky {
+        background: transparent;
       }
 
-      &:first-child {
-        padding: 15px 5px 15px 20px;
-      }
+      td .crm-hover-button:hover {
+        color: $brand-primary !important;
 
-      &:last-child {
-        min-width: 82px;
-        padding-left: 5px;
-      }
-    }
-
-    tbody > tr > td {
-      &:nth-child(6),
-      &:nth-child(7) {
-        min-width: 130px;
-      }
-    }
-
-    td .crm-hover-button:hover {
-      color: $brand-primary !important;
-
-      a {
-        color: $crm-copy !important;
-      }
-    }
-
-    .crm-expand-row {
-      padding-left: 0;
-    }
-
-    .crm-ajax-container table {
-      tr td {
-        min-width: 55px !important;
-        text-align: left;
-
-        &:nth-child(2) {
-          min-width: 130px !important;
+        a {
+          color: $crm-copy !important;
         }
       }
 
-      th:not(:first-child) {
-        padding: 15px 10px !important;
+      .crm-expand-row {
+        padding-left: 0;
       }
+    }
 
-      th:first-child {
-        padding-left: 20px !important;
-      }
+    p.description {
+      padding: 10px;
+    }
+
+    .action-link {
+      margin-bottom: 0;
     }
   }
 
-  p.description {
-    padding: 10px;
-  }
+  #Pledge {
+    .crm-pledge-form-block-create_date,
+    .crm-pledge-form-block-start_date,
+    .crm-PaymentReminders-accordion {
+      br {
+        display: none;
+      }
 
-  .action-link {
-    margin-bottom: 0;
-  }
-}
+      span.description {
+        display: block;
+      }
 
-#Pledge {
-  .crm-pledge-form-block-create_date,
-  .crm-pledge-form-block-start_date,
-  .crm-PaymentReminders-accordion {
-    br {
-      display: none;
+      .crm-accordion-body {
+        padding: 20px !important;
+      }
     }
 
     span.description {
       display: block;
+      line-height: 1.5em;
     }
 
-    .crm-accordion-body {
-      padding: 20px !important;
-    }
-  }
-
-  span.description {
-    display: block;
-    line-height: 1.5em;
-  }
-
-  .crm-pledge-form-block-installments  #eachPaymentAmount {
-    &[disabled],
-    &[readonly] {
-      background: $gray-lighter !important;
-      border-color: $crm-grayblue-darker;
-      color: $gray-darker;
-      cursor: not-allowed;
-      margin-right: 5px !important;
-      opacity: 0.6;
+    .crm-pledge-form-block-installments  #eachPaymentAmount {
+      &[disabled],
+      &[readonly] {
+        background: $gray-lighter !important;
+        border-color: $crm-grayblue-darker;
+        color: $gray-darker;
+        cursor: not-allowed;
+        margin-right: 5px !important;
+        opacity: 0.6;
+      }
     }
   }
 }

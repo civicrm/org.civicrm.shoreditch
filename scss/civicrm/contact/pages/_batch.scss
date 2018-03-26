@@ -1,20 +1,8 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 #{civi-page('batch')} {
-  .crm-submit-buttons {
-    margin: 0;
-    margin-bottom: 25px;
-    margin-top: 15px;
-
-    #newBatch.button {
-      background: $gray-dark;
-      border: transparent !important;
-      color: $crm-white !important;
-
-      &:hover {
-        color: $crm-white !important;
-      }
-    }
+  .action-link {
+    margin: 20px 0;
   }
 
   .crm-batch-search-form-block {
@@ -199,52 +187,37 @@
     }
   }
 
+  .crm-form-time {
+    @include civicrm-form-control;
+    display: inline-block;
+  }
+
   .crm-grid-table {
-    border: 0 !important;
-    border-radius: $border-radius-base;
+    border: 0;
 
     .crm-grid-header {
-      border-bottom: 1px solid  $crm-grayblue-dark;
-      border-top: 1px solid  $crm-grayblue-dark;
-      border-top-left-radius: $border-radius-base;
-      border-top-right-radius: $border-radius-base;
+      border-bottom: 1px solid $crm-grayblue-dark;
+      border-top: 1px solid $crm-grayblue-dark;
 
       .crm-grid-cell {
         background: $gray-lighter;
         border: 0;
         color: $gray-darker;
-        font: bold $font-size-base $font-family-base;
-        line-height: 1.5em;
-        min-width: 130px;
-        padding: 10px 15px;
-        vertical-align: middle;
-      }
+        font-size: $font-size-base;
+        font-weight: $crm-font-weight-h3;
+        line-height: 18px;
+        padding: 12px 10px;
+        vertical-align: top;
 
-      .crm-grid-cell:first-child {
-        border-top-left-radius: $border-radius-base;
-        min-width: 10px;
-      }
-
-      .crm-grid-cell:last-child {
-        border-top-right-radius: $border-radius-base;
+        &:first-child {
+          min-width: 10px;
+        }
       }
     }
 
     .crm-grid-row {
       background: $crm-white;
-      border-bottom: 1px solid  $crm-background;
-      border-bottom-left-radius: $border-radius-base;
-      border-bottom-right-radius: $border-radius-base;
-
-      &:last-child .crm-grid-cell {
-        &:first-child {
-          border-bottom-left-radius: $border-radius-base;
-        }
-
-        &:last-child {
-          border-bottom-right-radius: $border-radius-base;
-        }
-      }
+      border-bottom: 1px solid $crm-background;
 
       .crm-grid-cell {
         border: 0;
@@ -255,24 +228,14 @@
         span.batch-invalid {
           line-height: 30px;
         }
+
+        .crm-form-date-wrapper {
+          width: 370px;
+        }
       }
 
       > .select2-container {
         margin: 10px;
-      }
-
-      input.crm-form-text,
-      input.dateplugin {
-        @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
-        background-color: $crm-white;
-        background-image: none;
-        border: 1px solid $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-input-shadow;
-        color: $gray-darker;
-        font-size: $font-size-base;
-        height: 20px;
-        padding: 4px 10px;
       }
 
       input.dateplugin {

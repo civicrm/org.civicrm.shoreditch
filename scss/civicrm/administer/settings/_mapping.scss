@@ -1,5 +1,15 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-mapping')} {
   @include civicrm-table;
+
+  .crm-content-block {
+    overflow: hidden;
+
+    .status.no-popup {
+      margin: 0;
+    }
+  }
 
   .form-item {
     padding: 0;
@@ -8,13 +18,17 @@
   #crm-container {
     tr.columnheader {
       background: $gray-lighter;
-      border: none;
+      border: 0;
       border-bottom: 1px solid $gray-light;
     }
   }
 }
 
 &#{civi-page('admin-setting-mapping')} {
+  .crm-map-form-block {
+    overflow: hidden;
+  }
+
   .form-layout-compressed {
     tr {
       td:first-child {

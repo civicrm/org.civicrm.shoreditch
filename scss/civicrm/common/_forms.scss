@@ -45,6 +45,7 @@
     input.crm-form-text,
     input.dateplugin {
       @extend %responsive;
+      @include civicrm-input-small;
       display: inline-block;
     }
 
@@ -113,6 +114,14 @@
       @include placeholder;
       box-sizing: border-box;
       width: unset;
+
+      &.big {
+        width: 35em;
+      }
+
+      &.huge {
+        width: 45em;
+      }
     }
 
     // "Select2" Drop-downs
@@ -319,6 +328,7 @@
       background: none !important;
 
       &.label {
+        color: $gray-darker;
         padding-left: 20px;
       }
 
@@ -364,6 +374,7 @@
 
     input.crm-form-text:not(.crm-form-date) {
       @extend %responsive;
+      @include civicrm-input-small;
     }
 
     table:not(.form-layout-compressed) {
@@ -435,14 +446,6 @@
           bottom: initial !important;
         }
 
-        > select,
-        > select.crm-form-multiselect {
-          + .crm-error {
-            position: relative;
-            top: 7px;
-          }
-        }
-
         &.view-value {
           > div.cke {
             width: 95%;
@@ -454,6 +457,7 @@
         > input:not([type='radio']):not([type='checkbox']),
         > div.select2-container {
           @extend %responsive;
+          @include civicrm-input-small;
           margin-right: 0 !important;
         }
       }

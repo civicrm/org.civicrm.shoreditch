@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('admin-access')} {
   #crm-container {
     @include civicrm-table;
@@ -14,6 +16,14 @@
   .crm-form-block {
     .help {
       display: none;
+    }
+
+    .status.no-popup {
+      margin: $crm-status-bar-no-top;
+
+      img {
+        vertical-align: middle;
+      }
     }
   }
 }

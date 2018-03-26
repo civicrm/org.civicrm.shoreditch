@@ -22,6 +22,9 @@
 @import 'dashboard/dashboard';
 @import 'campaign/campaign';
 @import 'event/event';
+@import 'financial/financial';
+@import 'grant/grant';
+@import 'pledge/pledge';
 
 body {
   @include open-sans-font-family();

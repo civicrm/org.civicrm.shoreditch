@@ -1,0 +1,29 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('financial-batch')} {
+  .crm-container {
+    .crm-collapsible {
+      margin-top: 10px;
+
+      .collapsible-title {
+        @include accordion-header;
+        border-top: 1px solid $crm-grayblue-dark;
+        font-size: $font-size-base;
+
+        &:hover {
+          color: $gray-darker;
+        }
+
+        + div {
+          margin: 10px 0;
+        }
+      }
+
+      &:not(.collapsed) {
+        .collapsible-title::before {
+          @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
+        }
+      }
+    }
+  }
+}

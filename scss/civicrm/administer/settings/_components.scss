@@ -1,13 +1,15 @@
-&#{civi-page('admin-setting-component')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+&#{civi-page('admin-setting-component')} {
   .crm-form-block {
+    overflow: hidden;
 
     .advmultiselect {
       margin-left: 20px;
     }
 
     p.description {
-      padding-left: 20px;
+      padding: 10px 20px 20px;
     }
   }
 }

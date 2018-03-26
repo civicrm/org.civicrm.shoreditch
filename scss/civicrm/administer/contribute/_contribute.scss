@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-contribute')},
 &#{civi-page('admin-pcp')} {
   .crm-container {
@@ -6,7 +8,7 @@
       background: $crm-white;
       border-bottom: 1px solid $crm-grayblue-dark;
       border-radius: $border-radius-base $border-radius-base 0 0;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       margin-top: 10px;
       padding: 15px 10px 10px;
     }
@@ -15,7 +17,7 @@
   #crm-main-content-wrapper {
     .dataTables_wrapper {
       @include civicrm-table;
-      @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+      @include box-shadow($crm-form-layout-shadow-lower);
     }
   }
 }
@@ -30,6 +32,17 @@
 
     .form-layout-compressed {
       margin-left: 20px;
+    }
+  }
+
+  .crm-contribution-page-configure-actions,
+  .crm-contribution-online-contribution-actions,
+  .crm-contribution-search-contribution-actions,
+  .crm-contribution-page-more {
+    .btn-slide {
+      padding-right: 15px !important;
+      text-indent: initial;
+      width: auto;
     }
   }
 }
