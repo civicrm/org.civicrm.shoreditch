@@ -1,11 +1,44 @@
-&#{civi-page('admin-messagetemplates')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+&#{civi-page('admin-messagetemplates')} {
   .crm-content-block {
     box-shadow: none;
 
     #mainTabContainer {
       .spacer {
         display: none;
+      }
+    }
+  }
+}
+
+&#{civi-page('admin-messagetemplates-add')} {
+  h3 {
+    @include box-shadow($box-shadow);
+    @include panel-header;
+    margin: 0;
+  }
+
+  .crm-form-block {
+    @include box-shadow($crm-form-layout-shadow-lower);
+
+    #message_templates {
+      margin: 0;
+      padding: 0;
+    }
+
+    .crm-html_email-accordion {
+      .helpIcon {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .form-layout-compressed {
+    tr {
+      td:first-child {
+        padding-left: 20px;
       }
     }
   }

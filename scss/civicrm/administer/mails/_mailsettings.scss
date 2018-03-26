@@ -1,0 +1,16 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+&#{civi-page('admin-mailsettings')} {
+  #mSettings {
+    @include civicrm-table;
+    overflow: hidden;
+
+    p {
+      display: none;
+    }
+
+    .form-item {
+      padding: 0;
+    }
+  }
+}

@@ -24,23 +24,17 @@
   }
 
   #attachments {
-    > .form-layout-compressed {
-      width: 100%;
+    .form-layout-compressed {
+      margin-bottom: 0;
 
-      tr {
-        &:first-child {
-          td {
-            padding-bottom: 20px;
-          }
-        }
-
-        &.attachment-fieldset {
-          td {
-            padding-bottom: 13px;
-          }
-        }
+      td:empty {
+        display: none;
       }
     }
+  }
+
+  .spacer {
+    display: none;
   }
 }
 

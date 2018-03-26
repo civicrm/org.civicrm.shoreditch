@@ -10,6 +10,7 @@
   }
 }
 
+@import 'pages/activity-search';
 @import 'pages/new-individual';
 @import 'pages/new-email';
 @import 'pages/import-contact';
@@ -17,6 +18,8 @@
 @import 'pages/find-and-merge-duplicate';
 @import 'pages/dedupe-exception';
 @import 'pages/contact-dedupefind';
+@import 'pages/contact-discount';
+@import 'pages/contact-grant';
 @import 'pages/contact-merge';
 @import 'pages/contact-report';
 @import 'pages/reports';

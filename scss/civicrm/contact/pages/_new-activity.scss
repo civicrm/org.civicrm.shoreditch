@@ -64,6 +64,29 @@
       }
     }
   }
+
+  #{civi-dialog()} {
+    .ui-dialog-content {
+      padding: 0;
+    }
+
+    h3 {
+      @include section-title;
+      margin-bottom: 0;
+    }
+
+    .row-highlight {
+      @include expandable-table;
+
+      tbody {
+        tr {
+          td:last-child {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
 }
 
 .ui-dialog-content .CRM_Activity_Form_Activity {
