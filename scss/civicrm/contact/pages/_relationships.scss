@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact')} {
   #contact-summary-relationship-tab {
     font-family: $font-family-base;
@@ -17,16 +19,17 @@
     h3 {
       background: $gray-lighter;
       border-bottom: 1px solid $crm-background;
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
       color: $gray-darker;
       font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
-      margin: 0 0 25px;
+      margin: 0;
       padding: 12px 20px;
     }
 
     .dataTables_wrapper {
-      border-radius: $border-radius-child;
-      box-shadow: $box-shadow;
-      margin: 20px 0;
+      @include box-shadow($crm-form-layout-shadow-lower);
+      border-radius: 0 0 $border-radius-child $border-radius-child;
+      margin: 0 0 20px;
 
       table {
         box-shadow: none !important;
@@ -35,8 +38,8 @@
       .crm-datatable-pager-top {
         background: $gray-lighter;
         border-bottom: 1px solid $crm-background;
-        border-radius: $border-radius-child $border-radius-child 0 0;
-        padding-bottom: 39px;
+        border-radius: 0;
+        padding-bottom: 20px;
         padding-top: 10px;
 
         .dataTables_paginate {
@@ -48,7 +51,7 @@
         background: $crm-gray-lightest;
         border-radius: 0 0 $border-radius-child $border-radius-child;
         line-height: 1.8em;
-        padding-bottom: 39px;
+        padding-bottom: 15px;
         padding-top: 10px;
 
         .dataTables_info,
@@ -75,99 +78,22 @@
       }
     }
 
-    div[id*="DataTables_Table_"] table.dataTable {
-      background: transparent;
-      border: none;
-      border-radius: $border-radius-child;
-      font-family: $font-family-base;
-      max-width: 100%;
-      width: 100% !important;
-
+    div[id*='DataTables_Table_'] table.dataTable {
       thead tr {
-        border-bottom: 1px solid $crm-grayblue-dark;
-        border-top-left-radius: $border-radius-base;
-        border-top-right-radius: $border-radius-base;
-
         th {
           background: $gray-lighter !important;
-          border: none;
-          color: $gray-darker;
-          font-weight: $crm-font-weight-h5;
-          line-height: 1.5em;
-          padding: 15px 20px;
-          vertical-align: middle;
-        }
-
-        th:first-child {
-          border-top-left-radius: $border-radius-base;
-        }
-
-        th:last-child {
-          border-top-right-radius: $border-radius-base;
-        }
-
-        th div {
-          padding: 0;
         }
       }
 
       > tbody > tr {
-        background: $crm-white;
-        border-bottom: 1px solid $crm-background;
-        border-left: none;
-        border-right: none;
-
         > td {
-          background: $crm-white;
-          border: none;
-          color: $gray-dark;
-          line-height: 1.1em;
-          max-width: 87px;
-          min-width: 76px;
-          padding: 15px 20px;
-          vertical-align: middle;
-
-          &:not(:first-child) {
-            padding: 15px 10px;
-          }
-
-          &:nth-child(1),
-          &:nth-child(5),
-          &:nth-child(6),
-          &:nth-child(7) {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-          }
-
-          &:nth-child(2) a:last-child {
-            display: inline-block;
-            line-height: 1.2em;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 76%;
-          }
-
-          &:nth-child(3),
-          &:nth-child(4) {
-            max-width: 130px;
-            min-width: 130px;
-          }
-
-          &:last-child {
-            max-width: 100px;
-            padding: 10px 20px 10px 5px;
-            text-align: right;
-            width: 100px;
-
-            span {
-              display: inline-block;
-            }
-          }
-
           &.dataTables_empty {
             text-align: center;
+          }
+
+          .description {
+            box-shadow: none;
+            padding: 0;
           }
 
           a:not(.action-item) {
@@ -175,34 +101,16 @@
             color: $brand-primary;
           }
         }
-
-        > td .btn-slide,
-        > td .crm-hover-button {
-          background: none;
-          color: $brand-primary;
-          text-transform: capitalize;
-
-          &:hover a {
-            color: $crm-copy;
-          }
-        }
-      }
-
-      tbody > tr > td .btn-slide {
-        padding: 3px 0 !important;
-        text-indent: -600em;
-        width: 5px;
-
-        &:after, .panel {
-          text-indent: 0;
-        }
       }
     }
 
     h3,
     .accordion {
-      border-radius: $panel-border-radius;
       box-shadow: $box-shadow;
+    }
+
+    .accordion {
+      border-radius: $panel-border-radius;
       margin-bottom: 10px;
     }
 
@@ -212,13 +120,11 @@
     }
 
     .description {
-      background-color: $alert-success-bg;
-      border-radius: $border-radius-base;
-      color: $gray-darker;
+      background-color: $crm-white;
       padding: 10px;
     }
 
-    div[id*="s2id_autogen"] {
+    div[id*='s2id_autogen'] {
       .select2-choice {
         background: $crm-white;
         border: 1px solid $crm-grayblue-darker;
@@ -233,13 +139,8 @@
     }
 
     .font-red.label {
-      background: $gray-lighter;
-      border-bottom: 1px solid $crm-background;
-      border-radius: $panel-border-radius;
-      box-shadow: $box-shadow;
-      color: $gray-darker !important;
+      border-radius: $panel-border-radius $panel-border-radius 0 0;
       font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
-      margin: 0 0 10px;
       padding: 12px 20px;
     }
   }
@@ -255,7 +156,7 @@
     }
 
     table tbody td label {
-        font-weight: 600;
+      font-weight: 600;
     }
   }
 }

@@ -19,6 +19,19 @@
 
     &.crm-address-block {
       margin-bottom: 20px !important;
+
+      .crm-edit-address-form {
+        tr:not(:first-child) {
+          td:first-child {
+            padding-left: 20px !important;
+
+            .crm-address-element td,
+            .form-layout-compressed tr td:first-child {
+              padding-left: 0 !important;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -769,13 +782,6 @@
   }
 }
 
-input[type='text'] {
-  box-sizing: border-box;
-  height: 30px;
-  line-height: 30px;
-  margin-top: 8px;
-}
-
 .select2-arrow {
   background: none !important;
   padding: 0 4px;
@@ -831,10 +837,6 @@ input[type='text'] {
     &::after {
       display: none;
     }
-  }
-
-  #total_amount {
-    margin-top: 8px !important;
   }
 
   table {

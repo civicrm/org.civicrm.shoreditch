@@ -746,8 +746,8 @@
 
 #{civi-page('contact-view')} .ui-dialog .CRM_Contribute_Form_Contribution {
   .crm-link-credit-card-mode {
-    position: absolute;
-    right: 0;
+    float: right;
+    margin-bottom: -30px !important;
   }
 
   #recurringPaymentBlock {
