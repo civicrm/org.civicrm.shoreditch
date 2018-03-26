@@ -28,6 +28,9 @@ $button-border-radius: 2px;
 }
 
 .crm-container {
+
+  // "Toolbar" buttons
+  $toolbar-top-space: 6px;
   margin-left: 0 !important;
 
   %btn {
@@ -375,7 +378,6 @@ button {
   border-radius: $border-radius-base;
   color: $crm-white;
   font-family: $font-family-base;
-  height: 36px;
   line-height: 1;
   padding: 11px 12px;
   text-shadow: none;

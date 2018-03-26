@@ -6,15 +6,23 @@
 
   #mainTabContainer {
     background-color: transparent;
+    display: flex;
     padding: 0;
 
-    .ui-tabs-nav {
+    // This snippet is used to hide tab panel until javascript loads tabs properly and generates required classes.
+    &:not(.ui-tabs) {
+      .ui-tabs-panel {
+        visibility: hidden;
+      }
+    }
+
+    .crm-contact-tabs-list {
       background: $crm-white;
       border-radius: 0;
       box-shadow: $box-shadow;
-      float: left;
-      margin-bottom: -99999px;
-      padding: 0 0 99999px;
+      flex-shrink: 0;
+      margin: 0;
+      padding: 0;
       width: 200px;
 
       ~.ui-tabs-panel {
@@ -163,17 +171,9 @@
 
     .ui-tabs-panel {
       box-sizing: border-box;
-      float: right;
-      width: calc(100% - 220px);
+      flex-grow: 1;
+      padding: 20px !important;
 
-      .absence-tab-page,
-      .job-roles,
-      #cividocuments,
-      #civitasks,
-      #contactsummary,
-      #hrjob-contract {
-        padding: 15px 15px 0 0 !important;
-      }
     }
   }
 

@@ -1,8 +1,6 @@
-#{civi-page('contact-view')} {
-  #crm-main-content-wrapper {
-    overflow: hidden;
-  }
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+#{civi-page('contact-view')} {
   #crm-container {
     .ui-widget-content {
       font-family: $font-family-base;
@@ -18,7 +16,7 @@
         margin: 15px 0;
 
         &.collapsed .crm-accordion-header {
-          border-bottom: none;
+          border-bottom: 0;
           border-radius: $panel-border-radius !important;
         }
 
@@ -32,11 +30,11 @@
         }
 
         table.crm-info-panel {
-          border: none;
+          border: 0;
           border-bottom: 1px solid $crm-background;
 
           &:last-child {
-            border-bottom: none;
+            border-bottom: 0;
           }
         }
 
@@ -56,7 +54,7 @@
       }
 
       table.no-border td {
-        border: none;
+        border: 0;
       }
     }
   }
