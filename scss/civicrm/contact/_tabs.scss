@@ -9,6 +9,7 @@
     display: flex;
     padding: 0;
 
+    // This snippet is used to hide tab panel until javascript loads tabs properly and generates required classes.
     &:not(.ui-tabs) {
       .ui-tabs-panel {
         visibility: hidden;
