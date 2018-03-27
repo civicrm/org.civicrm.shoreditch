@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 .crm-container.ui-dialog {
   border: 0;
@@ -7,7 +7,6 @@
   color: $gray-darker;
   font-family: $font-family-base;
   padding: 0;
-  z-index: 2001;
 
   .ui-dialog-header,
   .ui-dialog-titlebar {
@@ -50,8 +49,4 @@
     background: $crm-white;
     padding: 10px 20px;
   }
-}
-
-.ui-widget-overlay.ui-front {
-  z-index: 2000;
 }
