@@ -598,6 +598,10 @@
     }
   }
 
+  .ui-accordion + br {
+    display: none;
+  }
+
   .required {
     &::after {
       display: none;
@@ -1120,12 +1124,13 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   .crm-pager {
     @include box-shadow($crm-form-layout-shadow-lower);
+    background: $gray-lighter;
     line-height: 1.7em;
     margin: 0;
     padding: 7px 0;
 
     > .element-right {
-      margin-top: 7px;
+      margin-top: 3px;
     }
   }
 
@@ -1137,7 +1142,7 @@ form.CRM_Contribute_Form_ContributionCharts {
   }
 
   table.selector {
-    @include box-shadow($crm-form-layout-shadow-lower);
+    @include box-shadow($crm-form-layout-shadow-lower !important);
     border-radius: 0;
 
     > tbody > tr > td + .crm-pager {

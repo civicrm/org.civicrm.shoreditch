@@ -72,6 +72,7 @@
 
     h3 {
       @include section-title;
+      background: $crm-white;
       margin-bottom: 0;
     }
 
@@ -291,6 +292,7 @@
 
   #mainTabContainer .crm-activity-selector-activity {
     .crm-accordion-body {
+      @include box-shadow($crm-box-shadow-inset-top);
       padding: 6px 15px !important;
     }
 
@@ -301,6 +303,7 @@
 
       table {
         box-shadow: none;
+        width: 100% !important;
       }
 
       .crm-datatable-pager-top {
@@ -336,7 +339,6 @@
 
       .dataTables_paginate {
         padding-right: 5px;
-        width: 47% !important;
       }
 
       .dataTables_info {

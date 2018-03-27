@@ -4,9 +4,20 @@
   .crm-container {
     .CRM_Activity_Form_Search {
       div#searchForm {
+        margin: 0;
+        padding: 0;
+
         table.form-layout {
           td {
             border: 0;
+          }
+
+          tr:last-child {
+            td {
+              .crm-button {
+                margin-top: 15px;
+              }
+            }
           }
         }
 
