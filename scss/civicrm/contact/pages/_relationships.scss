@@ -120,7 +120,6 @@
     }
 
     .description {
-      background-color: $crm-white;
       padding: 10px;
     }
 
@@ -142,6 +141,11 @@
       border-radius: $panel-border-radius $panel-border-radius 0 0;
       font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
       padding: 12px 20px;
+
+      + .description {
+        background-color: $gray-lighter;
+        color: $gray-dark;
+      }
     }
   }
 

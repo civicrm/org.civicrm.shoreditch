@@ -196,8 +196,7 @@
   }
 
   .crm-submit-buttons {
-    @include clearfix;
-    height: auto;
+    padding: 0;
 
     a.newGroup.button {
       @extend %btn-civi-primary;
@@ -247,40 +246,10 @@
     box-shadow: $box-shadow;
     margin: 20px 0;
 
-    .crm-datatable-pager-top {
-      background: $gray-lighter;
-      border-bottom: 1px solid $crm-background;
-      border-radius: $border-radius-child $border-radius-child 0 0;
-      margin-top: 10px;
-      padding-bottom: 39px;
-      padding-top: 10px;
-
-      .dataTables_length {
-        padding-left: 20px;
-      }
-
-      .dataTables_paginate {
-        padding-right: 5px;
-        padding-top: 0;
-      }
-    }
-
     .crm-datatable-pager-bottom {
-      background: $crm-gray-lightest;
-      border-radius: 0 0 $border-radius-child $border-radius-child;
-      border-top: 1px solid $crm-background;
-      line-height: 1.8em;
-      padding-bottom: 39px;
-      padding-top: 10px;
-
       .dataTables_info {
         line-height: 2.3em;
         padding-left: 20px;
-      }
-
-      .dataTables_info,
-      .dataTables_paginate {
-        padding-top: 0;
       }
     }
   }
@@ -361,7 +330,20 @@
   }
 
   .ui-dialog .CRM_Group_Form_Edit .crm-form-block {
-    padding: 0 13px;
+    margin: 0 -20px;
+
+    h3 {
+      @include section-title;
+      margin: 0 0 10px;
+    }
+
+    .action-link {
+      margin-left: 20px;
+    }
+
+    .help {
+      margin: 10px 20px 20px;
+    }
 
     table tr {
       border-bottom: 0 !important;

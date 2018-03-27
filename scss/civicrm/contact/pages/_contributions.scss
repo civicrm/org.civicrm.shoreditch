@@ -249,6 +249,7 @@
 
   #{civi-dialog()} {
     .crm-contribution-form-block {
+      margin-bottom: -10px;
       padding-bottom: 0;
     }
   }
@@ -1044,6 +1045,10 @@ form.CRM_Contribute_Form_ContributionCharts {
     border: 0;
     padding: 0 20px;
     position: relative;
+  }
+
+  .row-highlight.selector {
+    border-top: 1px solid $crm-grayblue-dark;
   }
 
   .ui-tabs-nav .crm-tab-button {

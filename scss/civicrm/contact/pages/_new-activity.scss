@@ -307,44 +307,26 @@
       }
 
       .crm-datatable-pager-top {
-        background: $gray-lighter;
-        border-bottom: 1px solid $crm-background;
-        border-radius: $border-radius-child $border-radius-child 0 0;
-        margin-top: 10px;
-        padding-bottom: 39px;
-        padding-top: 10px;
-
         .dataTables_length {
-          padding-left: 20px;
-        }
-
-        .dataTables_paginate {
-          padding-right: 5px;
-          padding-top: 0;
+          width: auto;
         }
       }
 
       .crm-datatable-pager-bottom {
-        background: $crm-gray-lightest;
-        border-radius: 0 0 $border-radius-child $border-radius-child;
-        line-height: 1.8em;
-        padding-bottom: 39px;
-        padding-top: 10px;
-
         .dataTables_info,
         .dataTables_paginate {
           padding-top: 0;
         }
-      }
 
-      .dataTables_paginate {
-        padding-right: 5px;
+        .dataTables_paginate {
+          margin-top: -5px;
+        }
       }
 
       .dataTables_info {
         font-size: $font-size-base;
         padding-left: 20px;
-        width: 49%;
+        width: auto;
       }
 
       @media (max-width: $crm-page-main-max-width) {

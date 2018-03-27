@@ -6,6 +6,7 @@
   }
 
   #notes .dataTables_wrapper {
+    background: $crm-white;
     border-radius: $border-radius-child;
     box-shadow: $box-shadow;
     margin: 20px 0;
@@ -13,6 +14,10 @@
     .dataTables_length,
     .dataTables_info {
       padding: 15px;
+    }
+
+    .dataTables_paginate {
+      padding-top: 10px;
     }
 
     .ui-widget-header {
@@ -63,6 +68,7 @@
     table {
       background: transparent;
       border: 0;
+      border-top: 1px solid $crm-grayblue-dark;
       font-family: $font-family-base;
       width: 100% !important;
 

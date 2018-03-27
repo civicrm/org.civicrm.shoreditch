@@ -154,27 +154,6 @@ table {
   }
 }
 
-.dataTables_wrapper {
-  .dataTables_paginate {
-    .paginate_button {
-      color: $gray-darker !important;
-
-      &:hover:not(.disabled),
-      &.current,
-      &:active {
-        background: none;
-        border: 1px solid transparent;
-        box-shadow: none;
-        font-weight: $crm-font-weight-h3;
-      }
-
-      &.disabled {
-        color: $crm-placeholder !important;
-      }
-    }
-  }
-}
-
 .crm-container {
   > table,
   table.report-layout,

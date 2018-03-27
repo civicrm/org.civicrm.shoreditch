@@ -66,14 +66,7 @@
     }
 
     a.button {
-      background: $brand-primary !important;
-      border-color: $brand-primary !important;
       box-shadow: $box-shadow;
-      color: $crm-white !important;
-
-      &:hover {
-        color: $gray-darker !important;
-      }
     }
   }
 
