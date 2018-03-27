@@ -83,6 +83,71 @@
     }
   }
 
+  .crm-contribution-contributionpage-thankyou-form-block,
+  .crm-friend-manage-block,
+  .crm-contribution-contributionpage-pcp-form-block {
+    table.form-layout {
+      border: 0;
+
+      tr {
+        border: 0;
+
+        td {
+          padding: 5px;
+
+          &:first-child {
+            padding-left: 20px;
+          }
+        }
+
+        &.crm-contribution-contributionpage-thankyou-form-block-bcc_receipt,
+        &.crm-friend-manage-form-block-thankyou_text,
+        &.crm-contribution-contributionpage-pcp-form-block-link_text {
+          td {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .crm-contribution-contributionpage-premium-form-block {
+    .description {
+      margin: 20px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    #ltype {
+      .form-item {
+        @include civicrm-table;
+      }
+    }
+  }
+
+  #Widget {
+    h3,
+    legend {
+      @include section-title;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    #id-get_code {
+      margin-bottom: 10px;
+
+      .description {
+        margin-bottom: 10px;
+      }
+    }
+
+    #crm-submit-buttons {
+      margin: 0;
+    }
+  }
+
   .crm-member-membershipblock-form-block {
     #memberFields {
       margin-right: 20px;

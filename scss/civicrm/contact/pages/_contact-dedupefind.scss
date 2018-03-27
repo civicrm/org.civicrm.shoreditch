@@ -5,6 +5,10 @@
     .crm-search_filters-accordion {
       @include box-shadow($box-shadow);
       margin-bottom: 20px;
+
+      .crm-accordion-body {
+        @include box-shadow($crm-box-shadow-inset-top);
+      }
     }
 
     .form-item {
@@ -13,6 +17,7 @@
       }
 
       #dupePairs_wrapper {
+        background: $crm-white;
         margin-top: 20px;
 
         .dataTables_length,
@@ -31,8 +36,17 @@
           }
         }
 
+        .dataTables_paginate {
+          margin: 2px 10px 0 0;
+        }
+
+        .paginate_button {
+          padding: 5px;
+        }
+
         tr.columnheader {
           border: 0;
+          border-top: 1px solid $crm-grayblue-dark;
 
           th {
             border-bottom-color: $crm-grayblue-dark;

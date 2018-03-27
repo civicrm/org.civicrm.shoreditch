@@ -208,6 +208,34 @@
           }
         }
       }
+
+      .jstree-default {
+        .jstree-checkbox {
+          @include box-shadow($crm-input-shadow);
+          background: none;
+          border: 1px solid $crm-grayblue-darker;
+          border-radius: $border-radius-base;
+          height: 16px;
+          position: relative;
+          top: 5px;
+          width: 16px;
+        }
+
+        .jstree-clicked {
+          > .jstree-checkbox {
+            &::after {
+              @include fa-icon($font-size-base,$fa-var-check);
+              left: 2px;
+              position: absolute;
+              top: -3px;
+            }
+          }
+        }
+
+        .jstree-wholerow-clicked {
+          background: $crm-white;
+        }
+      }
     }
   }
 }
