@@ -1,15 +1,18 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-max-id */
+
 .crm-container.ui-dialog {
-  border: none;
+  border: 0;
   border-radius: $border-radius-small;
   box-shadow: $box-shadow;
   color: $gray-darker;
   font-family: $font-family-base;
   padding: 0;
+  z-index: 2001;
 
   .ui-dialog-header,
   .ui-dialog-titlebar {
     background: $gray-lighter;
-    border: none;
+    border: 0;
     color: $gray-darker;
     font-size: $font-size-h2;
     font-weight: $crm-font-weight-h2;
@@ -43,8 +46,12 @@
   }
 
   .ui-dialog-content#bootstrap-theme,
-  .ui-dialog-content[id*="crm-ajax-dialog"] {
+  .ui-dialog-content[id*='crm-ajax-dialog'] {
     background: $crm-white;
     padding: 10px 20px;
   }
+}
+
+.ui-widget-overlay.ui-front {
+  z-index: 2000;
 }
