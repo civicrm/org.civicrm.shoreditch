@@ -1,10 +1,12 @@
-.___outside-namespace.mobile {
+.mobile {
   [type='date'][uib-datepicker-popup] {
     line-height: normal;
 
     &::-webkit-inner-spin-button,
     &::-webkit-clear-button {
-      appearance: none;
+      /* stylelint-disable */
+      -webkit-appearance: none;
+      /* stylelint-enable */
       display: none;
     }
 
