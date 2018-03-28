@@ -1,10 +1,10 @@
-@at-root .mobile {
-  input[type="date"][uib-datepicker-popup] {
+.___outside-namespace.mobile {
+  [type='date'][uib-datepicker-popup] {
     line-height: normal;
 
     &::-webkit-inner-spin-button,
     &::-webkit-clear-button {
-      -webkit-appearance: none;
+      appearance: none;
       display: none;
     }
 
@@ -20,13 +20,13 @@
       width: auto;
     }
 
-    & + .input-group-addon {
+    + .input-group-addon {
       border-left: 1px solid $crm-color-neutral !important;
       height: $input-height-base !important;
       line-height: $input-height-base !important;
       padding: 0 !important;
-      position: absolute !important;
       pointer-events: none;
+      position: absolute !important;
       right: 0 !important;
       width: 38px !important;
       z-index: 3;
