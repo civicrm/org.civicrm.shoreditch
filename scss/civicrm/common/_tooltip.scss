@@ -32,6 +32,7 @@
       .content {
         color: $gray-dark;
         font-weight: normal;
+        text-align: left;
       }
 
       .label {
@@ -51,6 +52,7 @@
           background: $gray-lighter !important;
           color: $gray-darker !important;
           font-size: $font-size-h2;
+          text-align: left !important;
         }
       }
 

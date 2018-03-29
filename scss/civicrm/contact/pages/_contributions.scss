@@ -687,16 +687,6 @@
 
   .credit_card_info-section,
   .billing_name_address-section {
-    .label label {
-      display: inline-block;
-      text-align: left;
-      width: 105px;
-    }
-
-    .billing_middle_name-section label {
-      width: 120px;
-    }
-
     .cvv2-section {
       input,
       .cvv2-icon {
@@ -760,22 +750,6 @@
     padding-left: 0 !important;
   }
 
-  .credit_card_info-group,
-  .billing_name_address-group {
-    input[type='text'] {
-      margin-top: 0 !important;
-    }
-
-    .label {
-      line-height: 29px;
-      text-align: left !important;
-
-      label {
-        width: auto;
-      }
-    }
-  }
-
   .crm-contribution-form-block-note {
     .label {
       display: table-cell;
@@ -808,8 +782,17 @@
     margin-top: 10px;
   }
 
-  #softCredit > .crm-accordion-body label {
-    display: block;
+  #payment_information {
+    .credit_card_info-group,
+    .billing_name_address-group {
+      margin: 0 -20px;
+
+      legend {
+        @include section-title;
+        box-sizing: border-box;
+        width: 100%;
+      }
+    }
   }
 }
 
