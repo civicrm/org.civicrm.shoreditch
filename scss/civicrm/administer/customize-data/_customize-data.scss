@@ -246,13 +246,11 @@
   }
 
   .ui-dialog-content {
-    tr td.html-adjust input[type='checkbox'] {
-      display: block;
-      position: absolute;
-
-      + .description,
-      + br + .description {
-        padding-left: 20px;
+    .form-layout {
+      tr {
+        td {
+          line-height: 18px;
+        }
       }
     }
 

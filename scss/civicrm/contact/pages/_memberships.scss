@@ -270,17 +270,19 @@
   .crm-membership-form-block {
     .auto-renew-text {
       display: block;
-      padding: 10px 20px;
+      padding: $crm-status-bar-no-top;
     }
 
-    textarea {
-      padding: 0 5px;
-      vertical-align: middle;
-    }
+    .crm-link-credit-card-mode {
+      margin: 20px 20px 0 0;
 
-    .crm-submit-buttons {
-      border: 0;
-      padding: 0 !important;
+      .open-inline-noreturn {
+        padding: 8px 12px;
+
+        &:hover {
+          color: $crm-white !important;
+        }
+      }
     }
 
     .crm-membership-form-block-membership_type_id {

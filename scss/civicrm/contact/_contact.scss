@@ -4,10 +4,6 @@
   @import 'tabs';
   @import 'header';
   @import 'detail';
-
-  .select2-search::before {
-    top: 17px !important;
-  }
 }
 
 @import 'pages/activity-search';
