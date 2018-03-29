@@ -4,9 +4,7 @@
 
     &::-webkit-inner-spin-button,
     &::-webkit-clear-button {
-      /* stylelint-disable */
-      -webkit-appearance: none;
-      /* stylelint-enable */
+      -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
       display: none;
     }
 
