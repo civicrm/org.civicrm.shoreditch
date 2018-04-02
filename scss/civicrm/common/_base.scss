@@ -63,6 +63,7 @@ body {
 
     li {
       background: $crm-white;
+      cursor: default;
       padding: 0;
     }
 
@@ -78,6 +79,16 @@ body {
         background: $crm-background !important;
         color: $crm-copy !important;
       }
+
+      &.disabled {
+        color: $crm-gray-matte !important;
+        cursor: default;
+
+        &:hover {
+          background: $crm-white !important;
+          color: $crm-gray-matte !important;
+        }
+      }
     }
 
     li:hover {
@@ -86,6 +97,12 @@ body {
       .crm-hover-button.action-item {
         background: $crm-background !important;
         color: $crm-copy !important;
+
+        &.disabled {
+          background: $crm-white !important;
+          color: $crm-gray-matte !important;
+          cursor: default !important;
+        }
       }
     }
   }
