@@ -1,27 +1,5 @@
-.btn .caret {
-  margin: 0 5px;
-}
-
 .btn-group {
-
-  .btn {
-    box-shadow: none;
-    border-color: $input-border;
-
-    &:not([class*=" btn-"]) {
-      &:hover {
-        border-color: $input-border;
-      }
-    }
-
-    // Adds missing border color on button hover:
-    &:hover {
-      border-color: $crm-grayblue-darker;
-    }
-
-    &.active {
-      background-color: $gray;
-      color: $crm-white;
-    }
+  .btn.active {
+    background-color: $gray;
   }
 }

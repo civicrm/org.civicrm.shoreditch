@@ -1,6 +1,6 @@
 $box-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
-$crm-form-control-shadow: inset 0 0 3px 0 rgba(0,0,0,0.2);
-$crm-box-shadow-inset: inset 0px 10px 8px -10px rgba(0,0,0,0.15), inset 0px -11px 8px -9px rgba(0,0,0,0.15);
+$crm-form-control-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+$crm-box-shadow-inset: inset 0 10px 8px -10px rgba(0, 0, 0, 0.15), inset 0 -11px 8px -9px rgba(0, 0, 0, 0.15);
 $crm-select2-box-shadow-inset: inset 0 0 9px -5px rgb(51, 51, 51);
 
 //== CiviCRM Page
@@ -21,9 +21,9 @@ $crm-page-topbar-item-padding: 15px !default;
 //== Font paths
 //
 //##
-$icon-font-path: "../base/fonts/" !default;
-$fa-font-path:   "../fonts/font-awesome" !default;
-$os-font-path:   "../fonts/open-sans" !default;
+$icon-font-path: '../base/fonts/' !default;
+$fa-font-path:   '../fonts/font-awesome' !default;
+$os-font-path:   '../fonts/open-sans' !default;
 
 
 //== Colors
@@ -31,24 +31,24 @@ $os-font-path:   "../fonts/open-sans" !default;
 //## Gray and brand colors for use across Bootstrap.
 
 $crm-gray-clay:             #222831 !default;
-$crm-gray-bright:           #393E46 !default;
+$crm-gray-bright:           #393e46 !default;
 $gray-darker:               #464354 !default;
-$gray-dark:                 #4D4D69 !default;
-$gray-light:                #E8EEF0 !default;
-$gray-lighter:              #F3F6F7 !default;
-$crm-gray-lightest:         #FAFAFB !default;
-$crm-gray-matte:            #9494A5 !default;
+$gray-dark:                 #4d4d69 !default;
+$gray-light:                #e8eef0 !default;
+$gray-lighter:              #f3f6f7 !default;
+$crm-gray-lightest:         #fafafb !default;
+$crm-gray-matte:            #9494a5 !default;
 
-$brand-primary:             #0071BD !default;
-$brand-success:             #44CB7E !default;
-$brand-info:                #0071BD !default;
-$brand-warning:             #E6AB5E !default;
-$brand-danger:              #CF3458 !default;
+$brand-primary:             #0071bd !default;
+$brand-success:             #44cb7e !default;
+$brand-info:                #0071bd !default;
+$brand-warning:             #e6ab5e !default;
+$brand-danger:              #cf3458 !default;
 
-$crm-grayblue-dark:         #D3DEE2 !default;
-$crm-grayblue-darker:       #C2CFD8 !default;
-$crm-white:                 #FFFFFF !default;
-$crm-black:                 #000000 !default;
+$crm-grayblue-dark:         #d3dee2 !default;
+$crm-grayblue-darker:       #c2cfd8 !default;
+$crm-white:                 #fff !default;
+$crm-black:                 #000 !default;
 
 
 //== CRM specific variables
@@ -84,8 +84,8 @@ $body-bg: $crm-background !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-base:        "Open Sans", $font-family-sans-serif !default;
+$font-family-sans-serif:  'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-base:        'Open Sans', $font-family-sans-serif !default;
 
 $font-size-small:         12px !default;
 $font-size-base:          13px !default;
@@ -116,13 +116,14 @@ $crm-font-weight-h6:          500 !default;
 //
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
-$icon-font-path: "../vendor/bootstrap/fonts/bootstrap/" !default;
+$icon-font-path: '../vendor/bootstrap/fonts/bootstrap/' !default;
 
 //== Layout
 //
 //## Common layout spacings, margins, and paddings
 
 $crm-gap-small:               5px !default;
+$crm-gap-medium:              8px !default;
 
 //== Components
 //
@@ -355,7 +356,7 @@ $crm-badge-min-width:            25px;
 //
 //##
 
-$breadcrumb-separator:           ">" !default;
+$breadcrumb-separator:           '>' !default;
 
 
 //== Type
