@@ -5,6 +5,10 @@
   color: $gray-darker;
   font-family: $font-family-base;
   font-size: $font-size-h2;
-  line-height: 24px;
+  line-height: 28px;
   padding: 13px 20px;
+
+  a {
+    line-height: 18px;
+  }
 }

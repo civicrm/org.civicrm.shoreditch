@@ -23,6 +23,10 @@
 }
 
 &#{civi-page('admin-contribute')} {
+  .crm-actions-ribbon {
+    margin-bottom: 20px !important;
+  }
+
   .crm-contribution-search_contribution-form-block {
     margin-bottom: 20px;
 
@@ -112,17 +116,21 @@
   }
 
   .crm-contribution-contributionpage-premium-form-block {
-    .description {
-      margin: 20px;
-
-      p {
-        margin: 0;
-      }
+    textarea + br {
+      display: none;
     }
 
     #ltype {
       .form-item {
         @include civicrm-table;
+      }
+
+      .description {
+        margin: 20px;
+
+        p {
+          margin: 0;
+        }
       }
     }
   }
@@ -133,6 +141,11 @@
       @include section-title;
       box-sizing: border-box;
       width: 100%;
+    }
+
+    h3 {
+      background: $crm-white;
+      border-top: 0;
     }
 
     #id-get_code {
