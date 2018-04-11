@@ -6,7 +6,7 @@ the [Bootstrap v3](https://getbootstrap.com/docs/3.3/) framework.
 Please note that this extension is currrently in **alpha stage** and under **active development**. Significant elements may change.
 
 ## Supported CMSs
-At the moment the theme is beind developed to work only in Drupal. WordPress and Joomla are not currently supported.
+At the moment the theme is being developed to work only in Drupal. WordPress and Joomla are not currently supported.
 
 ## Components
 The theme includes two major components:
