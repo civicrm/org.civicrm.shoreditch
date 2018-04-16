@@ -166,7 +166,7 @@
   }
 }
 
-#crm-main-content-wrapper form .messages.crm-error {
+.crm-container:not(.crm-public) #crm-main-content-wrapper form .messages.crm-error {
   position: absolute;
   visibility: hidden;
 }
