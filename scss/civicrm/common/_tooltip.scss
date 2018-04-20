@@ -52,13 +52,25 @@
           background: $gray-lighter !important;
           color: $gray-darker !important;
           font-size: $font-size-h2;
+          line-height: 1.5em;
+          padding: 12px 20px;
           text-align: left !important;
         }
       }
 
       &:nth-child(2) > td {
+        background: $crm-white !important;
         border-top: 1px solid $crm-grayblue-dark !important;
+        padding: 12px 10px;
         width: 50% !important;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
+        }
       }
 
       > td {
