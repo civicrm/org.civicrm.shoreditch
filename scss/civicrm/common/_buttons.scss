@@ -172,6 +172,30 @@ $button-border-radius: 2px;
 
   .crm-button {
     background: none;
+
+    &.btn-primary {
+      background: $brand-primary;
+    }
+
+    &.btn-info {
+      background: $brand-info;
+    }
+
+    &.btn-danger {
+      background: $brand-danger;
+    }
+
+    &.btn-secondary {
+      background: $gray-dark;
+    }
+
+    &.btn-success {
+      background: $brand-success;
+    }
+
+    &.btn-warning {
+      background: $brand-warning;
+    }
   }
 
   table.form-layout > tbody > tr > td > span.crm-button.crm-i-button {
