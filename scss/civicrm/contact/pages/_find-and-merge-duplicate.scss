@@ -94,7 +94,7 @@
 
       &.crm-form-block {
         > .crm-submit-buttons {
-          margin: 20px 0 0 !important;
+          margin: 20px -20px 0 !important;
         }
       }
 
@@ -134,7 +134,7 @@
             border: 1px solid $crm-background !important;
 
             td {
-              font-size: 1em;
+              font-size: $font-size-base;
 
               div {
                 padding: 0;
@@ -145,12 +145,15 @@
           td {
             width: 33.2%;
 
-            input[name*='weight_'],
-            input[name*='length_'] {
-              min-width: 50px;
-              width: 50px !important;
+            &:last-child {
+              text-align: left !important;
             }
           }
+        }
+
+        .two {
+          min-width: 50px;
+          width: 50px !important;
         }
       }
     }
