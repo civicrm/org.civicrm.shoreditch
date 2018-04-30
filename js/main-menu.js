@@ -63,7 +63,9 @@
    * @return {boolean}
    */
   function isQuickSearchOnGoing () {
-    return !!$('#sort_name_navigation').val().trim();
+    var searchValue = $('#sort_name_navigation').val() || '';
+
+    return !!searchValue.trim();
   }
 
   /**

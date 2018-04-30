@@ -1,5 +1,7 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #changeLog {
-  & > div.bold {
+  > div.bold {
     background: $gray-lighter;
     border-bottom: 1px solid $crm-background;
     border-top-left-radius: $panel-border-radius;
@@ -40,8 +42,8 @@
     }
 
     tbody tr {
-      td {
-        padding: 15px 20px;
+      td:last-child {
+        text-align: left;
       }
 
       &:last-child {

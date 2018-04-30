@@ -12,10 +12,6 @@ input[type='checkbox'] + label {
   }
 }
 
-.select2-container {
-  margin-top: 5px !important;
-}
-
 a.crm-clear-link {
   position: relative;
   top: -2px;
@@ -128,7 +124,9 @@ a.crm-clear-link {
     display: flex;
     float: left;
     line-height: 20px;
+    margin-bottom: 0;
     margin-right: 15px;
+
 
     &::after {
       left: 4px !important;
@@ -375,6 +373,10 @@ a.crm-clear-link {
         flex: auto !important;
       }
 
+      .helpicon {
+        margin-left: 5px;
+      }
+
       @media (max-width: $screen-sm-min) {
         margin-right: 0 !important;
         width: 100%;
@@ -441,11 +443,6 @@ a.crm-clear-link {
         display: block;
       }
     }
-
-    #age_low,
-    #age_high {
-      margin-top: 5px !important;
-    }
   }
 
   @media (max-width: $screen-sm-min) {
@@ -458,13 +455,6 @@ a.crm-clear-link {
         display: none;
       }
     }
-  }
-}
-
-#{$notes},
-#{$changelog} {
-  .crm-form-text {
-    margin-top: 5px !important;
   }
 }
 
@@ -599,11 +589,6 @@ a.crm-clear-link {
   td {
     color: $gray-darker;
   }
-
-  .crm-form-text,
-  #s2id_contribution_or_softcredits {
-    margin-top: 5px !important;
-  }
 }
 
 #{$pledges} {
@@ -625,10 +610,6 @@ a.crm-clear-link {
         padding-top: 0;
       }
     }
-  }
-
-  .select2-container {
-    margin-top: 5px !important;
   }
 }
 

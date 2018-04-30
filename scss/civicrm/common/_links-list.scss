@@ -1,0 +1,32 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#crm-event-links-list,
+#crm-contribpage-links-list,
+#crm-participant-list {
+  @include box-shadow($box-shadow);
+  background: none;
+  border-radius: $border-radius-base;
+  padding: 0;
+  top: 36px;
+
+  div[class*='-list-inner'] {
+    background: $crm-white;
+    border-radius: $border-radius-base;
+    padding: 0;
+
+    li {
+      padding: 0;
+
+      a {
+        color: $gray-dark;
+        font-size: $font-size-base;
+        line-height: 18px;
+        padding: 10px 20px;
+
+        &:hover {
+          background: $gray-light;
+        }
+      }  
+    }
+  }
+}

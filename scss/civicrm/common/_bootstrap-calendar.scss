@@ -69,12 +69,24 @@ $datepicker-gray-darker: #525966;
           border-radius: 2px;
           box-shadow: $crm-select2-box-shadow-inset;
           font-weight: 400 !important;
+          text-align: left;
+
+          > .select2-chosen {
+            display: inline-block;
+            font-size: $font-size-base;
+          }
         }
 
         .select2-arrow {
           background: none;
           border-color: $crm-grayblue-darker;
           padding: 0 4px;
+        }
+
+        &.select2-dropdown-open {
+          .select2-choice {
+            border-color: $brand-primary;
+          }
         }
       }
     }

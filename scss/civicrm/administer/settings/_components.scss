@@ -13,3 +13,24 @@
     }
   }
 }
+
+&#{civi-page('admin-component')} {
+  #ltype {
+    .form-item {
+      table {
+        @include expandable-table;
+      }
+    }
+  }
+
+  .CRM_Mailing_Form_Component {
+    .crm-mailing-component-form-block {
+      legend {
+        @include panel-header;
+        box-sizing: border-box;
+        font-weight: $crm-font-weight-h3;
+        width: 100%;
+      }
+    }
+  }
+}

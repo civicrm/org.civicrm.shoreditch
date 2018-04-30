@@ -1,0 +1,153 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('api')} {
+  .crm-container {
+    ul.ui-tabs-nav {
+      margin: 0 !important;
+    }
+
+    #api-explorer,
+    #api-examples,
+    #api-docs {
+      .select2-container {
+        width: 230px !important;
+      }
+    }
+
+    #api-explorer {
+      padding: 20px 0;
+
+      label[for='api-entity'] {
+        margin-left: 20px;
+      }
+
+      #api-result,
+      #api-generated-wraper {
+        margin: 0 20px;
+      }
+
+      caption {
+        color: $gray-dark;
+        font-weight: $crm-font-weight-h3;
+      }
+
+      #api-generated {
+        td {
+          &:first-child {
+            color: $gray-dark;
+            font-weight: $crm-font-weight-h3;
+            padding-left: 0;
+          }
+
+          + td {
+            background: $gray-lighter !important;
+            border: 0;
+          }
+        }
+      }
+    }
+
+    #api-examples,
+    #api-docs {
+      padding: 20px;
+    }
+
+    #api-docs {
+      #doc-result {
+        border-color: $crm-grayblue-dark;
+        padding: 20px;
+
+        .api-doc-code {
+          border-color: $crm-grayblue-dark;
+          margin: 20px -20px -20px;
+        }
+      }
+    }
+
+    #api-examples {
+      #example-result {
+        border-color: $crm-grayblue-dark;
+      }
+    }
+
+    #api-params-table {
+      @include expandable-table;
+      border-top: 1px solid $crm-grayblue-dark;
+      box-shadow: none !important;
+      margin-top: 20px;
+
+      tr {
+        border-bottom: 1px solid $gray-light !important;
+      }
+
+      tbody {
+        tr {
+          td:last-child {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    #api-param-buttons {
+      margin: 10px 20px 0;
+    }
+
+    .crm-collapsible {
+      padding: 0 !important;
+
+      .collapsible-title {
+        @include accordion-header;
+        font-size: $font-size-base !important;
+        margin: 0 !important;
+
+        + div {
+          @include box-shadow($crm-box-shadow-inset);
+          padding: 20px;
+        }
+      }
+
+      &:not(.collapsed) {
+        .collapsible-title::before {
+          @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
+        }
+      }
+    }
+
+    .fa-ul {
+      list-style: none;
+    }
+
+    #api-params {
+      tr {
+        td {
+          > .crm-i,
+          > a .crm-i {
+            color: $brand-primary;
+
+            &:hover {
+              color: darken($brand-primary, $crm-darken-percentage);
+            }
+          }
+        }
+      }
+    }
+
+    pre {
+      &,
+      li.L1,
+      li.L3,
+      li.L5,
+      li.L7,
+      li.L9 {
+        background: $gray-lighter !important;
+      }
+
+      ol.linenums {
+        li:hover {
+          background: $gray-light !important;
+        }
+      }
+    }
+  }
+}

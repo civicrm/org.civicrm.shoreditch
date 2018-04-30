@@ -5,17 +5,6 @@
     width: 250px;
   }
 
-  #Group {
-    .crm-form-block {
-      background: none;
-      box-shadow: none;
-    }
-
-    .form-layout {
-      @include civicrm-panel;
-    }
-  }
-
   #options {
     border: 0;
     border-radius: $border-radius-child $border-radius-child 0 0;
@@ -147,17 +136,6 @@
     box-shadow: none !important;
     position: relative;
 
-    &::before {
-      box-shadow: $crm-form-layout-shadow;
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: -1;
-    }
-
     tr {
       padding: 0;
 
@@ -268,13 +246,11 @@
   }
 
   .ui-dialog-content {
-    tr td.html-adjust input[type='checkbox'] {
-      display: block;
-      position: absolute;
-
-      + .description,
-      + br + .description {
-        padding-left: 20px;
+    .form-layout {
+      tr {
+        td {
+          line-height: 18px;
+        }
       }
     }
 

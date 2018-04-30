@@ -1,0 +1,50 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('contact-merge')} {
+  .crm-container {
+    .crm-contact-merge-form-block {
+      padding-top: 20px;
+
+      .help,
+      .message.status {
+        margin: $crm-status-bar-no-top;
+      }
+    }
+
+    .crm-submit-buttons {
+      .crm-button-icon {
+        display: none;
+      }
+    }
+
+    .action-link {
+      margin-left: 20px;
+
+      .action-item {
+        border-radius: $border-radius-base;
+        padding: 8px 12px;
+
+        &:hover {
+          color: $crm-white !important;
+        }
+      }
+    }
+
+    .row-highlight {
+      @include expandable-table;
+      box-shadow: none !important;
+
+      tbody {
+        tr {
+          &.columnheader {
+            border-width: 0 0 1px !important;
+          }
+
+          td:last-child {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,10 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-schedulereminders')},
 &#{civi-page('admin-labelformats')},
 &#{civi-page('admin-pdfformats')} {
-
-  #reminder, #ltype {
+  #reminder,
+  #ltype {
     @include civicrm-table;
   }
 
@@ -13,5 +15,37 @@
 
   #crm-main-content-wrapper > .spacer {
     display: none;
+  }
+
+  .crm-html_email-accordion {
+    .helpIcon {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+}
+
+&#{civi-page('admin-pdfformats')} {
+  .crm-content-block {
+    padding-top: 1px !important;
+
+    #ltype {
+      margin-top: -1px;
+    }
+
+    .status.no-popup {
+      margin: $crm-status-bar-no-bottom;
+    }
+  }
+}
+
+&#{civi-page('admin-schedulereminders')} {
+  #{civi-dialog()} {
+    .crm-scheduleReminder-form-block-description {
+      .crm-form-text,
+      .crm-form-select {
+        margin-bottom: 5px;
+      }
+    }
   }
 }
