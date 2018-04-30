@@ -1,19 +1,24 @@
-@import "vendor/text-angular/text-angular";
-@import "vendor/angular-xeditable/angular-xeditable";
-@import "vendor/font-awesome/font-awesome";
-@import "vendor/perfect-scrollbar/main";
-@import "vendor/ui-bootstrap/ui-bootstrap";
-@import "vendor/ui-select/ui-select";
-@import "vendor/select2/select2-bootstrap";
+@import 'vendor/text-angular/text-angular';
+@import 'vendor/angular-xeditable/angular-xeditable';
+@import 'vendor/font-awesome/font-awesome';
+@import 'vendor/perfect-scrollbar/main';
+@import 'vendor/ui-bootstrap/ui-bootstrap';
+@import 'vendor/ui-select/ui-select';
+@import 'vendor/select2/select2-bootstrap';
 
-@import "overrides/variables";
-@import "fonts/*";
-@import "mixins/*";
+@import 'overrides/variables';
+@import 'fonts/*';
+@import 'mixins/*';
 
-@import "SCSSROOT/org.civicrm.shoreditch/base/scss/bootstrap";
-@import "overrides/style/*";
-@import "overrides/vendors/*";
-@import "overrides/crm/*";
-@import "variants/*";
-@import "components/*";
-@import "helper";
+@import 'SCSSROOT/org.civicrm.shoreditch/base/scss/bootstrap';
+@import 'overrides/style/*';
+@import 'overrides/vendors/*';
+@import 'overrides/crm/*';
+@import 'variants/*';
+@import 'components/*';
+@import 'helper';
+
+#{$outside-namespace-marker} {
+  @import 'components/outside-namespace/*';
+  @import 'overrides/crm/outside-namespace/*';
+}
