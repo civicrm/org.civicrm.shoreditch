@@ -1,15 +1,16 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('a')} {
   @include civicrm-table;
-  
+
   .crmCaseType {
-    
     .crm-block {
       padding: 20px;
     }
 
     .ui-tabs {
-      box-shadow: none;
       border-top: 1px solid $crm-background;
+      box-shadow: none;
 
       table.row-highlight {
         box-shadow: none;
@@ -34,6 +35,10 @@
 
       .ui-tabs-panel {
         padding: 0 !important;
+
+        table:first-child {
+          border-top: 0;
+        }
       }
     }
   }
@@ -44,7 +49,8 @@
 
   #crm-main-content-wrapper {
     .crm-submit-buttons {
-      border-top: none;
+      background: none !important;
+      border-top: 0;
     }
   }
 }
