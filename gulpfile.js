@@ -9,6 +9,7 @@ var transformSelectors = require('gulp-transform-selectors');
 var civicrmScssRoot = require('civicrm-scssroot')();
 
 var bootstrapNamespace = '#bootstrap-theme';
+var outsideNamespaceRegExp = /^\.___outside-namespace/;
 
 gulp.task('sass:bootstrap', ['sass:sync'], function () {
   return gulp.src('scss/bootstrap/bootstrap.scss')
@@ -21,9 +22,10 @@ gulp.task('sass:bootstrap', ['sass:sync'], function () {
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: bootstrapNamespace + ' ',
-      exclude: [/^html/, /^body/, /\.ta-hidden-input/, /\.mobile/]
+      exclude: [/^html/, /^body/, /\.ta-hidden-input/, outsideNamespaceRegExp]
     })]))
     .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
+    .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
     .pipe(gulp.dest('css/'));
 });
 
@@ -72,4 +74,15 @@ function namespaceRootElements (selector) {
   }
 
   return selector;
+}
+
+/**
+ * Deletes the special class that was used as marker for styles that should
+ * not be nested inside the bootstrap namespace from the given selector
+ *
+ * @param  {String} selector
+ * @return {String}
+ */
+function removeOutsideNamespaceMarker (selector) {
+  return selector.replace(outsideNamespaceRegExp, '');
 }

@@ -279,6 +279,10 @@
   }
 
   .custom-group {
+    .form-layout-compressed {
+      margin-bottom: -10px;
+    }
+
     td.label {
       padding-top: 6px;
     }
@@ -645,6 +649,12 @@
 
   .status.no-popup {
     margin: $crm-status-bar-no-top;
+  }
+}
+
+.CRM_Event_Form_Task_PickProfile {
+  .crm-submit-buttons {
+    margin-top: 10px !important;
   }
 }
 

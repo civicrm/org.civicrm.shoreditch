@@ -164,11 +164,17 @@
       }
     }
   }
-}
 
-#crm-main-content-wrapper form .messages.crm-error {
-  position: absolute;
-  visibility: hidden;
+  &:not(.crm-public) {
+    #crm-main-content-wrapper {
+      form {
+        .messages.crm-error {
+          position: absolute;
+          visibility: hidden;
+        }
+      }
+    }
+  }
 }
 
 div.error,

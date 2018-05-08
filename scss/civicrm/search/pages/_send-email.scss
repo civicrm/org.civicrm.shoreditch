@@ -1,8 +1,9 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+.CRM_Event_Form_Task_Email,
 .CRM_Contact_Form_Task_Email {
   .status {
-    padding: 10px 25px !important;
+    margin: 0 0 20px;
   }
 
   .crm-contactEmail-form-block-recipient {
@@ -22,9 +23,20 @@
     margin-right: -20px !important;
   }
 
+  .crm-block > .crm-submit-buttons
   .crm-block > .form-layout-compressed {
     td.label {
       padding-left: 20px !important;
+    }
+  }
+
+  .spacer ~ .crm-submit-buttons {
+    margin-top: 10px;
+  }
+
+  .crm-contactEmail-form-block-campaign_id {
+    .status {
+      margin-right: 20px;
     }
   }
 
@@ -36,6 +48,17 @@
   .crm-html_email-accordion > .crm-accordion-body,
   #editMessageDetails > .section {
     padding: 20px !important;
+  }
+
+  .crm-html_email-accordion {
+    .helpIcon {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+
+  .spacer {
+    height: 15px;
   }
 
   #attachments,

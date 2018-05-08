@@ -9,11 +9,19 @@
     display: flex;
     padding: 0;
 
-    .ui-tabs-nav {
+    // This snippet is used to hide tab panel until javascript loads tabs properly and generates required classes.
+    &:not(.ui-tabs) {
+      .ui-tabs-panel {
+        visibility: hidden;
+      }
+    }
+
+    .crm-contact-tabs-list {
       background: $crm-white;
       border-radius: 0;
       box-shadow: $box-shadow;
       flex-shrink: 0;
+      margin: 0;
       padding: 0;
       width: 200px;
 
@@ -165,7 +173,6 @@
       box-sizing: border-box;
       flex-grow: 1;
       padding: 20px !important;
-
     }
   }
 

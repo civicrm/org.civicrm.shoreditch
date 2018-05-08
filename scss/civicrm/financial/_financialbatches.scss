@@ -10,7 +10,7 @@
         }
 
         .crm-accordion-body {
-          @inlude box-shadow($crm-box-shadow-inset-top);
+          @include box-shadow($crm-box-shadow-inset-top);
         }
 
         .form-layout-compressed {

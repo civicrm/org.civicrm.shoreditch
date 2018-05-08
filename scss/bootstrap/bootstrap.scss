@@ -14,4 +14,10 @@
 @import 'overrides/crm/*';
 @import 'variants/*';
 @import 'components/*';
+
 @import 'utilities/*';
+
+#{$outside-namespace-marker} {
+  @import 'components/outside-namespace/*';
+  @import 'overrides/crm/outside-namespace/*';
+}

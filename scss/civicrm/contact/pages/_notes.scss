@@ -1,16 +1,28 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact')} {
   .ui-widget-content .action-link .button {
     box-shadow: $box-shadow;
   }
 
   #notes .dataTables_wrapper {
+    background: $crm-white;
     border-radius: $border-radius-child;
     box-shadow: $box-shadow;
     margin: 20px 0;
 
+    .dataTables_length,
+    .dataTables_info {
+      padding: 15px;
+    }
+
+    .dataTables_paginate {
+      padding-top: 10px;
+    }
+
     .ui-widget-header {
       background: $gray-lighter;
-      border: none;
+      border: 0;
       border-bottom: 1px solid $crm-background;
       font-family: $font-family-base;
       font-size: $font-size-base;
@@ -55,7 +67,8 @@
 
     table {
       background: transparent;
-      border: none;
+      border: 0;
+      border-top: 1px solid $crm-grayblue-dark;
       font-family: $font-family-base;
       width: 100% !important;
 
@@ -64,7 +77,7 @@
 
         th {
           background: $gray-lighter;
-          border: none;
+          border: 0;
           color: $gray-darker;
           padding: 16px 20px;
           vertical-align: middle;
@@ -79,12 +92,12 @@
     table tbody tr {
       background: $crm-white;
       border-bottom: 1px solid $crm-background;
-      border-left: none;
-      border-right: none;
+      border-left: 0;
+      border-right: 0;
 
       td {
         background: $crm-white;
-        border: none;
+        border: 0;
         color: $gray-dark;
         line-height: 1.1em;
         padding: 12px 15px !important;
@@ -144,35 +157,22 @@
   }
 
   #Note {
-    td {
-      vertical-align: middle;
+    .crm-note-form-block {
+      padding-bottom: 0;
 
-      &.label {
-        box-sizing: border-box;
-        width: 210px;
-      }
+      .crm-activity-form-block-attachment {
+        td {
+          padding-bottom: 0;
 
-      &:not(.label) {
-        padding: 0;
-        width: 100%;
-      }
-    }
-
-    #attachments tr {
-      &:nth-child(4),
-      &:nth-child(7) {
-        td.label {
-          padding: 0;
+          .crm-accordion-wrapper {
+            margin: 0 -25px;
+          }
         }
       }
     }
 
-    .crm-accordion-body {
-      padding-bottom: 0 !important;
-    }
-
-    .crm-accordion-header {
-      font-weight: 600 !important;
+    .form-layout {
+      margin-bottom: -23px;
     }
   }
 }

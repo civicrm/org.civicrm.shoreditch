@@ -1,0 +1,21 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+&#{civi-page('admin-member-membershipstatus')} {
+  #{civi-dialog()} {
+    .crm-membership-status-form-block {
+      padding-bottom: 0;
+
+      fieldset {
+        margin: -11px -20px;
+
+        legend {
+          @include section-title;
+          background: $crm-white;
+          box-sizing: border-box;
+          margin: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -19,6 +19,19 @@
 
     &.crm-address-block {
       margin-bottom: 20px !important;
+
+      .crm-edit-address-form {
+        tr:not(:first-child) {
+          td:first-child {
+            padding-left: 20px !important;
+
+            .crm-address-element td,
+            .form-layout-compressed tr td:first-child {
+              padding-left: 0 !important;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -769,29 +782,9 @@
   }
 }
 
-input[type='text'] {
-  box-sizing: border-box;
-  height: 30px;
-  line-height: 30px;
-  margin-top: 8px;
-}
-
 .select2-arrow {
   background: none !important;
   padding: 0 4px;
-}
-
-.select2-choice {
-  background-color: $crm-white;
-  background-image: none;
-  border: 1px solid $gray-dark;
-  border-radius: 0;
-  box-sizing: inherit;
-
-  color: $gray-dark;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
 }
 
 #CustomData {
@@ -807,11 +800,6 @@ input[type='text'] {
       }
     }
   }
-}
-
-.action-link {
-  height: auto;
-  min-height: 45px;
 }
 
 .form-layout-compressed {
@@ -833,25 +821,12 @@ input[type='text'] {
     }
   }
 
-  #total_amount {
-    margin-top: 8px !important;
-  }
-
   table {
     width: 100%;
   }
 
   .crm-button_qf_Contribution_upload {
     margin-left: 0;
-  }
-
-  .crm-button_qf_Contribution_cancel {
-    overflow: visible;
-  }
-
-  #_qf_Contribution_cancel {
-    position: relative;
-    top: 1px;
   }
 
   .font-size12pt.label {

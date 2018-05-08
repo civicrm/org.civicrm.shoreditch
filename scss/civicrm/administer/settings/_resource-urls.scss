@@ -28,3 +28,11 @@
     }
   }
 }
+
+&#{civi-page('admin-setting-uf')} {
+  .crm-form-block {
+    table.form-layout-compressed {
+      margin-bottom: 10px !important;
+    }
+  }
+}

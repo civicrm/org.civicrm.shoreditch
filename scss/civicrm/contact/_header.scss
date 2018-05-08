@@ -1,25 +1,27 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #branding {
   display: none;
 }
 
 #page {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .crm-summary-block-wrap {
   display: inline-block;
-  vertical-align: top;
   height: 100%;
+  vertical-align: top;
 }
 
 .crm-summary-contactphoto {
-  float: left;
-  width: $contact-avatar;
-  height: $contact-avatar;
   border-radius: 50%;
+  float: left;
+  height: $contact-avatar;
   margin: 10px $contact-avatar/2 0;
   padding-top: 5px;
+  width: $contact-avatar;
 }
 
 .crm-summary-contactname-block-without-contract {
@@ -67,6 +69,10 @@
     &.delete {
       background-color: $brand-danger !important;
     }
+
+    .crm-i {
+      top: 0;
+    }
   }
 
   .crm-next-action,
@@ -83,12 +89,6 @@
     }
   }
 
-  .button {
-    .crm-i {
-      top: 0;
-    }
-  }
-
   .crm-i {
     position: relative;
     top: -2px;
@@ -96,12 +96,21 @@
 }
 
 .crm-summary-display_name {
-  font-size: 24px !important;
+  font-size: $font-size-h1 !important;
   font-weight: $headings-font-weight;
   padding-top: 12px;
 
   .crm-summary-link {
-    display: none;
+    .crm-icon {
+      @include contact-type-icons();
+
+      margin-right: 10px;
+
+      &::before {
+        color: $crm-white !important;
+        font-size: $font-size-h1 !important;
+      }
+    }
   }
 }
 

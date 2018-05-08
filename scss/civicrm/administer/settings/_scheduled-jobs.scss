@@ -41,4 +41,8 @@
     @include panel-header;
     margin-bottom: 0;
   }
+
+  .status.no-popup {
+    margin: 0 20px;
+  }
 }

@@ -64,4 +64,26 @@
   .paging_full_numbers {
     width: auto !important;
   }
+
+  .dataTables_paginate {
+    padding-right: 10px;
+
+    .paginate_button {
+      color: $gray-darker !important;
+      padding: 5px;
+
+      &:hover:not(.disabled),
+      &.current,
+      &:active {
+        background: none;
+        border: 1px solid transparent;
+        box-shadow: none;
+        font-weight: $crm-font-weight-h3;
+      }
+
+      &.disabled {
+        color: $crm-placeholder !important;
+      }
+    }
+  }
 }
