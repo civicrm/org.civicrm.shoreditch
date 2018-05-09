@@ -10,7 +10,7 @@
     min-height: $input-height-base;
     padding: 2px 2px 0;
 
-    input.ui-select-search {
+    .ui-select-search {
       height: 1.9em;
       text-indent: 10px;
     }
@@ -84,7 +84,7 @@
       }
     }
 
-    a.btn {
+    .ui-select-match a {
       margin-right: 14px !important;
     }
 

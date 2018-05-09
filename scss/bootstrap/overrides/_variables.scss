@@ -373,3 +373,25 @@ $blockquote-border-color:        $brand-primary !default;
 $crm-ui-select-top-padding:      4px !default;
 
 $hr-border: $crm-grayblue-dark !default;
+
+
+//== Datepicker
+//
+//##
+
+$crm-uib-datepicker-active-border-radius:  50% !default;
+$crm-uib-datepicker-active-cell-padding:   7px !default;
+$crm-uib-datepicker-active-font-color:     $crm-white !default;
+$crm-uib-datepicker-arrow-font-weight:     300 !default;
+$crm-uib-datepicker-border:                0 !default;
+$crm-uib-datepicker-body-bg-color:         transparent !default;
+$crm-uib-datepicker-body-font-color:       $gray-darker !default;
+$crm-uib-datepicker-cell-padding:          7px !default;
+$crm-uib-datepicker-cell-padding-span:     0 !default;
+$crm-uib-datepicker-header-bg-color:       $crm-white !default;
+$crm-uib-datepicker-header-font-color:     $gray-darker !default;
+$crm-uib-datepicker-header-font-size:      $font-size-small !default;
+$crm-uib-datepicker-header-font-weight:    $crm-font-weight-h5 !default;
+$crm-uib-datepicker-muted-cell-color:      #dcdddd !default;
+$crm-uib-datepicker-today-bg-color:        transparent !default;
+$crm-uib-datepicker-today-font-color:      $brand-primary !default;
