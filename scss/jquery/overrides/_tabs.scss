@@ -1,4 +1,4 @@
-/* stylelint-disable selector-max-compound-selectors, max-nesting-depth, selector-no-qualifying-type */
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
 
 .ui-tabs {
   background: $crm-white;
@@ -34,17 +34,19 @@
       }
 
       .crm-editable {
-        button[type=button] .crm-i {
+        /* stylelint-disable selector-no-qualifying-type */
+        button[type='button'] .crm-i {
           color: $brand-primary;
         }
 
-        button[type=cancel] .crm-i {
+        button[type='cancel'] .crm-i {
           color: $brand-danger;
         }
 
         .crm-i {
           margin: 0;
         }
+        /* stylelint-enable selector-no-qualifying-type */
       }
 
       .crm-i {
