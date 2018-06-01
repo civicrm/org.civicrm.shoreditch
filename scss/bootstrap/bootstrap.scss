@@ -20,4 +20,5 @@
 #{$outside-namespace-marker} {
   @import 'components/outside-namespace/*';
   @import 'overrides/crm/outside-namespace/*';
+  @import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/outside-namespace/ALL';
 }
