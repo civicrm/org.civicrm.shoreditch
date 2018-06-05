@@ -1,0 +1,54 @@
+[text-angular] {
+  $crm-text-angular-min-height: 120px;
+
+  border: 1px solid $gray-light;
+  padding: 0;
+
+  .ta-editor {
+    border: 0 !important;
+  }
+
+  .form-control {
+    border: 0;
+    box-shadow: none !important;
+    min-height: $crm-text-angular-min-height;
+
+    &.ta-scroll-window {
+      height: auto;
+
+      > .ta-bind {
+        min-height: $crm-text-angular-min-height;
+        outline: 0;
+      }
+    }
+  }
+}
+
+[text-angular-toolbar] {
+  background-color: #f4f7f8;
+  border: 0;
+  margin-left: 0;
+  padding: 10px;
+
+  .btn {
+    background: transparent !important;
+    border: 0;
+    box-shadow: none;
+    color: $crm-copy;
+    padding-left: $padding-small-horizontal;
+    padding-right: $padding-small-horizontal;
+
+    &.active {
+      color: $gray-darker !important;
+    }
+
+    &:hover:not(:disabled) {
+      color: $gray-dark;
+    }
+
+    .fa {
+      font-size: $font-size-small;
+      font-weight: 700;
+    }
+  }
+}

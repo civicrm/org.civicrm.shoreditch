@@ -1,0 +1,248 @@
+/**
+ * Custom style for jQuery UI's .ui-dialog
+ *
+ * The style needs to function both as stand-alone and as a civicrm override, which
+ * is why the root selector is not provided.
+ *
+ * @example
+ *   // stand-alone
+ *   .ui-dialog {
+ *     @mixin ui-dialog;
+ *   }
+ *
+ *   // civicrm override
+ *   .crm-container.ui-dialog {
+ *     @mixin ui-dialog
+ *   }
+ */
+@mixin ui-dialog {
+  background: $gray-lighter;
+  border: 0;
+  border-radius: $border-radius-small;
+  box-shadow: $box-shadow;
+  color: $gray-darker;
+  font-family: $font-family-base;
+  max-height: 90%;
+  padding: 0;
+
+  table {
+    @extend %crm-table;
+  }
+
+  td {
+    background: $crm-white;
+    color: $crm-copy;
+    font-weight: $badge-font-weight;
+
+    .status {
+      line-height: normal;
+    }
+  }
+
+  td:first-child {
+    background: $crm-white;
+    color: $gray-darker;
+    font-weight: $crm-font-weight-h3 !important;
+
+    label {
+      color: $gray-darker;
+      font-weight: $crm-font-weight-h3 !important;
+    }
+  }
+
+  .ui-dialog-header,
+  .ui-dialog-titlebar {
+    background: $gray-lighter;
+    border: 0;
+    color: $gray-darker;
+    font-size: $font-size-h2;
+    font-weight: $crm-font-weight-h2;
+    padding: 14px 20px;
+
+    .ui-dialog-title {
+      background: 0;
+      padding: 0;
+    }
+
+    .ui-button {
+      background: none;
+      line-height: 30px;
+      outline: 0;
+    }
+
+    > .ui-button {
+      &[type='button'] {
+        height: $font-size-h1;
+        margin-top: 0;
+        padding: 0;
+        right: 20px;
+        top: 13px;
+        width: $font-size-h2;
+      }
+
+      &.crm-dialog-titlebar-resize {
+        right: 45px !important;
+      }
+
+      &.crm-dialog-titlebar-print {
+        right: 70px !important;
+      }
+    }
+
+    .ui-button-icon.ui-icon {
+      background: none;
+      overflow: visible;
+      text-indent: 0;
+      top: 0;
+    }
+
+    .ui-button-icon.ui-icon[class*=' fa-'] {
+      font-size: $font-size-h2;
+      height: $font-size-h1;
+      left: 0;
+      line-height: $font-size-h1;
+      margin: 0;
+      width: $font-size-h2;
+    }
+
+    .ui-button-icon.ui-icon.ui-icon-closethick::after {
+      @include fa-icon(13px, '\f00d');
+    }
+
+    .ui-button-icon.ui-icon.ui-icon-newwin::after {
+      @include fa-icon(13px, '\f2d0');
+    }
+  }
+
+  .ui-dialog-titlebar {
+    @extend .modal-header; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
+    @include open-sans-font-family();
+
+    border: 0 !important;
+    border-bottom: 1px solid $crm-grayblue-dark !important;
+    box-shadow: $crm-contribute-form-shadow;
+    color: $gray-darker !important;
+    position: relative;
+    z-index: 99999;
+
+    .ui-dialog-title {
+      @extend .modal-title; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
+      @include open-sans-font-family();
+
+      font-size: $font-size-h2;
+      font-weight: $crm-font-weight-h2;
+      line-height: $font-size-h1;
+      padding-left: 0;
+      width: 80%;
+    }
+
+    .ui-button-text {
+      display: none;
+    }
+  }
+
+  .ui-dialog-content {
+    @include open-sans-font-family();
+    @include calc(max-height, '100vh - 280px',!important);
+
+    background: $crm-white;
+    color: $gray-darker;
+    font-size: $font-size-base;
+    height: auto !important;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 30px;
+    position: static;
+    z-index: 1;
+
+    .button:not(.hr-job-info-close) {
+      @extend .btn-primary; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
+    }
+
+    .crm-block {
+      box-shadow: none;
+      padding: 0 0 20px;
+    }
+
+    .crm-submit-buttons {
+      display: none;
+    }
+
+    tr,
+    td,
+    th {
+      border-bottom: 0;
+    }
+
+    .crm-accordion-wrapper {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  }
+
+  .ui-dialog-content[id*='crm-ajax-dialog'] {
+    background: $crm-white;
+    padding: 10px 20px;
+  }
+
+  .ui-dialog-buttonpane {
+    @extend .modal-footer; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
+    @include open-sans-font-family();
+
+    background: $gray-lighter;
+    border-radius: 0 0 $border-radius-base $border-radius-base;
+    border-top: 1px solid $crm-grayblue-dark !important;
+    box-shadow: $crm-contribute-form-shadow;
+    display: block;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    z-index: 99999;
+  }
+
+  .ui-dialog-buttonset {
+    margin: 0;
+    width: 100%;
+
+    button {
+      @include button-variant(
+        $btn-primary-color, $btn-primary-bg, $btn-primary-border
+      );
+
+      float: right;
+      font-size: $font-size-base !important;
+      margin-left: 10px;
+      margin-right: 0;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: darken($brand-primary, $crm-darken-percentage);
+        color: $crm-white;
+        outline: none;
+        text-shadow: none;
+      }
+    }
+
+    [data-identifier*='cancel'] {
+      float: left;
+      margin-left: 0 !important;
+    }
+
+    [data-op='no'] {
+      @include button-outline-variant($gray-dark);
+    }
+
+    .ui-icon {
+      margin: 0;
+
+      &.fa-check {
+        padding-right: 1px;
+      }
+    }
+
+    .ui-button-text {
+      font-size: $font-size-base !important;
+    }
+  }
+}

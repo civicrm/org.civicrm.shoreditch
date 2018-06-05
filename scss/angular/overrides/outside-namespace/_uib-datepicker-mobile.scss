@@ -1,10 +1,11 @@
+// In mobile the native html date picker is displayed which is a [type='date'] element.
 .mobile {
   [type='date'][uib-datepicker-popup] {
     line-height: normal;
 
     &::-webkit-inner-spin-button,
     &::-webkit-clear-button {
-      -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+      @include prefix(appearance, none, webkit);
       display: none;
     }
 
@@ -19,7 +20,7 @@
       top: 0;
       width: auto;
     }
-
+    /* stylelint-disable selector-max-compound-selectors */
     + .input-group-addon {
       border-left: 1px solid $crm-color-neutral !important;
       height: $input-height-base !important;
@@ -31,5 +32,6 @@
       width: 38px !important;
       z-index: 3;
     }
+    /* stylelint-enable */
   }
 }
