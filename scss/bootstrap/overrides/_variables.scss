@@ -186,7 +186,9 @@ $input-border-radius-small: $border-radius-base !default;
 $dropdown-link-hover-bg:    $gray-lighter !default;
 $dropdown-header-color:     $gray-darker !default;
 
-$crm-dropdown-padding:      11px 20px;
+$crm-dropdown-container-padding: 4px 0 9px 0;
+$crm-dropdown-item-padding:      7px 19px 7px 24px;
+$crm-dropdown-divider-margin:    7px 0;
 
 
 //== Labels
