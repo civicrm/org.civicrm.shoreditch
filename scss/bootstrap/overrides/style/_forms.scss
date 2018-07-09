@@ -13,23 +13,20 @@ label {
 .form-control {
   @include box-shadow($crm-form-control-shadow);
 
+  &[disabled],
+  [disabled] & {
+    color: $crm-grayblue-darker;
+  }
+
   &:focus {
     @include box-shadow($crm-form-control-shadow);
     border-color: $brand-primary;
-  }
-
-  &[disabled] {
-    color: $crm-grayblue-darker;
   }
 
   &[readonly] {
     background-color: $crm-white;
     color: $crm-gray-matte;
   }
-}
-
-[disabled] .form-control {
-  color: $crm-grayblue-darker;
 }
 
 // Wrapper for a custom error message
