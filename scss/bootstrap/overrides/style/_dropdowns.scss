@@ -1,5 +1,5 @@
 .dropdown-header {
-  padding: $crm-dropdown-padding;
+  padding: $crm-dropdown-item-padding;
 }
 
 .dropdown-menu {
@@ -7,7 +7,7 @@
 
   border: 0;
   margin: 0;
-  padding: 0;
+  padding: $crm-dropdown-container-padding;
 
   > li {
     border: 0;
@@ -16,6 +16,10 @@
   }
 
   > li > a {
-    padding: $crm-dropdown-padding;
+    padding: $crm-dropdown-item-padding;
+  }
+
+  .divider {
+    margin: $crm-dropdown-divider-margin;
   }
 }
