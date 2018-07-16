@@ -133,4 +133,10 @@
       }
     }
   }
+  
+  .crm-accordion-body {
+    td:nth-child(3) {
+      min-width: 290px;
+    }
+  }
 }
