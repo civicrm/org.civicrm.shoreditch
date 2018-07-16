@@ -28,6 +28,7 @@
       label {
         color: $gray-darker;
         font-weight: $crm-font-weight-h3 !important;
+        width: 205px;
       }
     }
   }
@@ -112,7 +113,13 @@
 
     .crm-block {
       box-shadow: none;
-      padding: 0 0 20px;
+      padding: 0;
+
+      .crm-activity-form-block-custom_data {
+        td {
+          padding: 0;
+        }
+      }
     }
 
     .crm-submit-buttons {

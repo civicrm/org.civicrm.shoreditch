@@ -264,7 +264,7 @@
 
     .label,
     td {
-      min-width: 210px;
+      min-width: 235px;
       padding: 0;
     }
 
@@ -280,6 +280,12 @@
         legend {
           padding: 10px 30px;
         }
+      }
+    }
+
+    .crm-participant-form-block-customData {
+      .crm-accordion-body {
+        padding-left: 20px !important;
       }
     }
   }
@@ -390,16 +396,15 @@
     }
 
     .content {
-      margin-left: 0;
-      padding: 0 15px;
       display: table-cell;
+      margin-left: 0;
       vertical-align: middle;
     }
 
     .label {
       display: table-cell;
-      vertical-align: middle;
       text-align: left;
+      vertical-align: middle;
     }
 
     input#cvv2 {
@@ -407,8 +412,8 @@
     }
 
     div.crm-field-wrapper {
-      margin-bottom: 0;
       display: table;
+      margin-bottom: 0;
     }
   }
 

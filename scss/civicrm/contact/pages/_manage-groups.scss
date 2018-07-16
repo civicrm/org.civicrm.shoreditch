@@ -246,6 +246,19 @@
     }
   }
 
+  .crm-group-form-block-description {
+    td:nth-child(2) {
+      height: 75px;
+      position: relative;
+
+      span.description {
+        bottom: 0;
+        left: 5px;
+        position: absolute;
+      }
+    }
+  }
+
   .crm-block > .css_right {
     margin-bottom: 5px;
 

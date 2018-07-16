@@ -239,17 +239,17 @@
 
   .select2-container {
     max-width: 230px;
-    width: 230px;
     min-height: 30px;
+    width: 230px;
   }
 
   select,
   #from_email_address {
-    max-width: 230px;
-    padding-right: 30px !important;
-    max-height: 33px;
     line-height: 1.5em;
+    max-height: 33px;
+    max-width: 230px;
     padding: 0 5px !important;
+    padding-right: 30px !important;
   }
 
   #payment_information {
@@ -259,8 +259,8 @@
 
     div {
       &.label {
+        min-width: 245px;
         text-align: left;
-        min-width: 185px;
       }
     }
 

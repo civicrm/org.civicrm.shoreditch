@@ -263,6 +263,11 @@
         }
       }
 
+      .crm-grid-cell:nth-child(6) {
+        float: left;
+        width: 255px;
+      }
+
       > .select2-container {
         margin: 10px;
       }

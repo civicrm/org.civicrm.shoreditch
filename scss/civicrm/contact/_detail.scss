@@ -7,6 +7,14 @@
   // Remove the space from the angular's container
   > div {
     padding: 0 !important;
+
+    .crm-contact-contribute-contributions {
+      padding-top: 20px !important;
+    }
+  }
+
+  > div.crm-contact-contribute-contributions {
+    padding-top: 20px !important;
   }
 
   .crm-summary-block {
