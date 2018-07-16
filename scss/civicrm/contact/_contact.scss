@@ -1,19 +1,27 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact-view')} {
   @import 'tabs';
   @import 'header';
   @import 'detail';
 }
 
+@import 'pages/activity-search';
 @import 'pages/new-individual';
 @import 'pages/new-email';
 @import 'pages/import-contact';
 @import 'pages/manage-groups';
 @import 'pages/find-and-merge-duplicate';
 @import 'pages/dedupe-exception';
+@import 'pages/contact-dedupefind';
+@import 'pages/contact-discount';
+@import 'pages/contact-grant';
+@import 'pages/contact-merge';
 @import 'pages/contact-report';
-@import 'pages/activity-details';
+@import 'pages/reports';
 @import 'pages/export';
 @import 'pages/new-activity';
+@import 'pages/task-common';
 @import 'pages/task-delete';
 @import 'pages/contact-preferences';
 @import 'pages/email-builder';

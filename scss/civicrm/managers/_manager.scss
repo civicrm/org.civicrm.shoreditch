@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+
 #contact-summary-relationship-tab.view-content {
   font-family: $font-family-base;
 
@@ -9,13 +11,20 @@
     }
   }
 
+  h3,
+  .label.font-red {
+    @include box-shadow($box-shadow);
+    color: $crm-white !important;
+    font-size: $font-size-h2;
+    font-weight: $crm-font-weight-h2;
+  }
+
   h3 {
-    box-shadow: $box-shadow;
     background-color: $brand-primary;
-    color: $crm-white;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 11px 20px 10px;
+  }
+
+  .label.font-red {
+    background-color: $brand-danger;
   }
 
   .crm-contact-relationship-current {
@@ -30,26 +39,16 @@
   .crm-datatable-pager-top,
   .crm-datatable-pager-bottom {
     background: $crm-white;
-    padding: 15px;
+    font-size: $font-size-base;
     height: 20px;
-    font-size: 14px;
   }
 
   .dataTables_paginate {
-    padding: 0;
     margin-top: -5px;
-  }
-
-  .label.font-red {
-    box-shadow: $box-shadow;
-    background-color: $brand-danger;
-    color: $crm-white !important;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 11px 20px 10px;
+    padding: 0;
   }
 
   .description {
-    margin: 10px 0;
+    @include box-shadow($box-shadow);
   }
 }

@@ -1,0 +1,73 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('grant')} {
+  .CRM_Grant_Form_Search {
+    h3 {
+      @include box-shadow($box-shadow);
+      @include panel-header;
+      margin-bottom: 0;
+
+      + .description {
+        @include box-shadow($crm-form-layout-shadow-lower);
+        background: $crm-white;
+        border-radius: 0 0 $border-radius-base $border-radius-base;
+        margin-bottom: 20px;
+        padding: 20px;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+    }
+
+    .help {
+      margin-bottom: 20px;
+    }
+
+    .form-item {
+      padding-top: 0;
+    }
+
+    .selector,
+    .report {
+      @include expandable-table;
+      @include box-shadow($crm-form-layout-shadow-lower !important);
+    }
+
+    .report {
+      border-radius: $panel-border-radius;
+      margin-top: 20px;
+
+      tr {
+        &.columnheader-dark {
+          background: transparent !important;
+          border-radius: $panel-border-radius $panel-border-radius 0 0;
+        }
+
+        &.columnfooter {
+          border-top: 1px solid $crm-grayblue-dark !important;
+        }
+
+        th,
+        td {
+          font-size: $font-size-base !important;
+          padding: 15px 20px !important;
+        }
+      }
+    }
+  }
+
+  .CRM_Grant_Form_Task_Delete {
+    .crm-grant-task-delete-form-block {
+      padding-top: 20px;
+
+      .status.no-popup {
+        margin: $crm-status-bar-no-top;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('dedupe-exception')} {
   .action-link {
     height: auto;
@@ -42,23 +44,28 @@
   }
 
   .dataTables_wrapper {
+    background: $crm-white;
+    border-radius: $border-radius-base;
     margin: 20px 0 0;
 
     .dataTables_length,
     .dataTables_info {
       float: left;
-      padding: 0 0 0 20px;
+      padding: 12px;
     }
 
-    .dataTables_filter,
     .dataTables_paginate {
-      margin: 0;
-      padding-right: 20px;
-      padding-top: 0;
+      margin-top: 2px;
+    }
+
+    .dataTables_length,
+    #dedupeExceptions_filter {
+      padding: 15px;
     }
   }
 
-  .dataTables_filter input[type="search"] {
+  .dataTables_filter input[type='search'] {
+    @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
     background-color: $crm-white;
     border: 1px solid $crm-grayblue-darker;
     border-radius: $border-radius-base;
@@ -68,17 +75,11 @@
     height: 30px;
     line-height: 1.5;
     padding: 4px 10px;
-    @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
   }
 
   table {
     th {
       background: $gray-lighter !important;
-      padding: 7px 20px !important;
-    }
-
-    td {
-      padding: 7px 20px !important;
     }
   }
 }

@@ -1,0 +1,15 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('contact-view')} {
+  .crm-container {
+    .crm-discount-view-form-block {
+      .crm-info-panel {
+        @include expandable-table;
+
+        th {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

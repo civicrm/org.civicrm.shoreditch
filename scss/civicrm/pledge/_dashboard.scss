@@ -1,0 +1,43 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('pledge')} {
+  .CRM_Pledge_Form_Search {
+    h3 {
+      @include box-shadow($box-shadow);
+      @include panel-header;
+      margin-bottom: 0;
+    }
+
+    .description {
+      @include box-shadow($crm-form-layout-shadow-lower);
+      background: $crm-white;
+      padding: 20px !important;
+    }
+
+    .spacer {
+      display: none;
+    }
+
+    .selector,
+    .report {
+      @include expandable-table;
+      @include box-shadow($crm-form-layout-shadow-lower !important);
+    }
+
+    .selector {
+      border-top: 1px solid $crm-grayblue-dark !important;
+    }
+
+    .report {
+      margin-bottom: 20px;
+
+      tr {
+        th,
+        td {
+          font-size: $font-size-base !important;
+          padding: 15px 20px !important;
+        }
+      }
+    }
+  }
+}

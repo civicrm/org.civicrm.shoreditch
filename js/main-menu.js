@@ -63,7 +63,9 @@
    * @return {boolean}
    */
   function isQuickSearchOnGoing () {
-    return !!$('#sort_name_navigation').val().trim();
+    var searchValue = $('#sort_name_navigation').val() || '';
+
+    return !!searchValue.trim();
   }
 
   /**
@@ -127,13 +129,16 @@
   }
 
   /**
-   * Creates an HTML element out of the text node of the given menu item
+   * Creates an HTML element out of the text node next to the icon (an element
+   * with either the .crm-i or the .fa class) of the given menu item
    *
    * @param {object} $menuItem
    */
   function wrapMenuItemLabelInHTML ($menuItem) {
-    $menuItem.contents().filter(function () {
-      return this.nodeType === 3 && $(this).parent().is($menuItem);
-    }).wrap('<span class="menumain-label" />')
+    var itemLabel = $('.crm-i, .fa', $menuItem)[0].nextSibling;
+
+    if (itemLabel.nodeType === Node.TEXT_NODE) {
+      $(itemLabel).wrap('<span class="menumain-label" />');
+    }
   }
 }(CRM.$, CRM._));

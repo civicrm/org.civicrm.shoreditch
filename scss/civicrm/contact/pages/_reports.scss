@@ -1,0 +1,232 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+
+body[class*='page-civicrm-report-'] {
+  #crm-container {
+    .ui-tabs-panel {
+      padding: 0;
+    }
+
+    .report-contents {
+      border: 0;
+    }
+
+    table.report-layout {
+      td {
+        border-bottom: 1px solid $gray-light;
+
+        &.report-contents-right {
+          border-color: $gray-light;
+        }
+      }
+
+      tr:last-child {
+        td {
+          border: 0;
+        }
+      }
+    }
+
+    .crm-report-form-block {
+      .report-layout.statistics-table {
+        margin-bottom: 20px;
+
+        th + td {
+          background-color: $gray-lighter !important;
+        }
+      }
+
+      .report-layout {
+        @include box-shadow($crm-form-layout-shadow-lower);
+        border-top: 1px solid $crm-grayblue-dark;
+        position: relative;
+        z-index: 0;
+
+        th {
+          background-color: $gray-lighter !important;
+          border-left: 0;
+          border-right: 0;
+        }
+
+        th,
+        td {
+          line-height: 18px;
+          padding: 16px 10px;
+
+          &:first-child {
+            border-left: 0;
+            padding-left: 20px;
+          }
+
+          &:last-child {
+            border-right: 0;
+            padding-right: 20px;
+          }
+        }
+      }
+
+      h3 {
+        @include box-shadow($box-shadow);
+        @include panel-header;
+        border-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 20px;
+      }
+
+      br {
+        display: none;
+      }
+
+      .crm-pager {
+        @include box-shadow($crm-form-layout-shadow-lower);
+        margin: 0;
+        padding-bottom: 5px;
+
+        .crm-pager-nav {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .crm-report-field-form-block {
+    box-shadow: $box-shadow;
+    margin-bottom: 20px;
+  }
+
+  .crm-tasks {
+    @include box-shadow($box-shadow);
+    background: $crm-white;
+    border-radius: $border-radius-base;
+    margin: 20px 0 0;
+    padding: 16px;
+
+    td {
+      border: 0 !important;
+
+      td {
+        padding: 0;
+      }
+    }
+  }
+
+  #report-tab {
+    &-col-groups {
+      border: 0;
+
+      tr {
+        td {
+          border: 0;
+          padding: 8px 10px 0;
+
+          &:first-child {
+            padding-left: 20px;
+          }
+        }
+      }
+
+      .crm-accordion-wrapper {
+        &:first-of-type {
+          margin-top: 20px;
+        }
+
+        tr {
+          td {
+            padding: 4px;
+          }
+        }
+      }
+    }
+
+    &-group-by-elements {
+      .crm-report-criteria-groupby {
+        td:first-child {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    &-format,
+    &-email,
+    &-access {
+      h3 {
+        @include section-title;
+      }
+    }
+
+    &-format,
+    &-access {
+      padding: 10px 0 !important;
+    }
+
+    &-set-filters {
+      border: 0;
+
+      .label {
+        padding-left: 20px;
+      }
+
+      .crm-form-select {
+        margin-top: 5px;
+      }
+
+      .select2-container {
+        min-width: 230px !important;
+        width: 230px !important;
+      }
+
+      .crm-accordion-wrapper {
+        &:first-of-type {
+          margin-top: 10px;
+        }
+
+        table.report-layout {
+          td {
+            border: 0;
+          }
+        }
+
+        .crm-form-select {
+          margin: 0;
+        }
+      }
+    }
+
+    &-order-by-elements {
+      #optionField {
+        @extend %civihr-table;
+        box-shadow: none !important;
+
+        .form-link {
+          &::before {
+            @include fa-icon($content: $fa-var-times);
+          }
+        }
+      }
+
+      #optionFieldLink {
+        padding: 20px;
+
+        > .form-link {
+          @extend .btn, .btn-primary;
+        }
+      }
+
+      .action-icon {
+        display: none;
+      }
+    }
+
+    &-access {
+      .crm-report-instanceForm-form-block-is_navigation {
+        .report-label {
+          padding-top: 17px;
+        }
+      }
+    }
+  }
+
+  .crm-submit-buttons {
+    @include civicrm-submit-buttons;
+    border-top: 0;
+  }
+}

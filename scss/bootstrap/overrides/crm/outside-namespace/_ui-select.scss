@@ -1,0 +1,13 @@
+// This partial makes CRM modals appear on top of Bootstrap modals,
+// this is needed when a CRM modal is opened from a Bootstrap modal.
+// Bootstrap modals have z-indexes starting from 1040 and are incremented by 10 within each stacked modal.
+// The fixed z-index works for stacking CRM modals since they are populated at the same DOM level.
+// This partial assumes that the Bootstrap modal is very unlikely to be called from a CRM modal.
+
+.crm-container.ui-dialog {
+  z-index: 2001;
+}
+
+.ui-widget-overlay.ui-front {
+  z-index: 2000;
+}

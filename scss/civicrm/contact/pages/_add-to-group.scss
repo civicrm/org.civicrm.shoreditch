@@ -1,19 +1,20 @@
-.CRM_Contact_Form_Task_AddToGroup {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.CRM_Contact_Form_Task_AddToGroup,
+.CRM_Event_Form_Task_AddToGroup {
   .crm-contact-task-addtogroup-form-block {
     > .form-layout {
       > tbody > tr > td {
-        padding: 20px;
+        padding: 20px 0 0 20px;
       }
 
       .label {
         padding-left: 0 !important;
       }
     }
-  }
 
-  #id_existing_group {
-    > td {
-      padding: 20px;
+    .crm-submit-buttons {
+      margin-top: 20px;
     }
   }
 
@@ -26,14 +27,14 @@
 
   .crm-contact-task-addtogroup-form-block-description {
     .label {
-      vertical-align: top;
       display: table-cell;
       text-align: left;
+      vertical-align: top;
     }
 
     textarea {
-      width: 300px;
       min-height: 100px;
+      width: 300px;
     }
   }
 }

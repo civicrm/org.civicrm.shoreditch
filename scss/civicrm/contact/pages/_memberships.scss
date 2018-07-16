@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact')} {
   #memberships,
   #inactive-memberships {
@@ -21,7 +23,7 @@
 
     table {
       background: transparent;
-      border: none;
+      border: 0;
       border-radius: 0 0 $panel-border-radius $panel-border-radius;
       font-family: $font-family-base;
 
@@ -30,7 +32,7 @@
 
         th {
           background: $gray-lighter;
-          border: none;
+          border: 0;
           color: $gray-darker;
           line-height: 1.5em;
           padding: 15px 20px;
@@ -44,13 +46,13 @@
 
       tbody tr {
         background: transparent;
-        border-left: none;
-        border-right: none;
+        border-left: 0;
+        border-right: 0;
         border-top: 1px solid $crm-background;
 
         td {
           background: $crm-white;
-          border: none;
+          border: 0;
           color: $gray-dark;
           line-height: 1.5em;
           padding: 15px 20px;
@@ -71,7 +73,8 @@
             text-indent: -9999px;
             width: 7px;
 
-            &:after, .panel {
+            &::after,
+            .panel {
               text-indent: 0;
             }
           }
@@ -151,7 +154,6 @@
   }
 
   .ui-widget-content {
-
     .crm-button i {
       top: 0.7em;
     }
@@ -178,13 +180,13 @@
 
 .CRM_Member_Form_MembershipRenewal {
   .crm-button {
-    border: none;
+    border: 0;
   }
 
   .crm-button .crm-i {
+    @include transform(translate(0, -50%));
     left: 0.7em;
     top: 50%;
-    @include transform(translate(0, -50%));
   }
 
   #help {
@@ -221,10 +223,10 @@
     &.crm-inline-error,
     &.crm-error {
       background: $brand-danger !important;
-      color: $crm-white !important;
-      padding: 5px;
       border-radius: 3px;
+      color: $crm-white !important;
       line-height: 1.5em;
+      padding: 5px;
 
       &.crm-inline-error {
         margin: 0 4px;
@@ -249,29 +251,10 @@
     max-height: 33px;
     max-width: 230px;
     padding: 0 5px !important;
-    padding-right: 30px !important;
+    padding-right: 30px !important;    
   }
 
   #payment_information {
-    .content {
-      margin-left: 166px;
-    }
-
-    div {
-      &.label {
-        min-width: 245px;
-        text-align: left;
-      }
-    }
-
-    input {
-      margin-top: 0;
-    }
-
-    legend {
-      padding: 5px 20px;
-    }
-
     .cvv2-section {
       input,
       .cvv2-icon {
@@ -285,52 +268,21 @@
   }
 
   .crm-membership-form-block {
-    table {
-      &.form-layout-compressed {
-        tr {
-          border-bottom: 0;
+    .auto-renew-text {
+      display: block;
+      padding: $crm-status-bar-no-top;
+    }
 
-          td {
-            border-bottom: 0;
+    .crm-link-credit-card-mode {
+      margin: 20px 20px 0 0;
 
-            &:not(.label) {
-              padding-left: 0;
-            }
-          }
+      .open-inline-noreturn {
+        padding: 8px 12px;
+
+        &:hover {
+          color: $crm-white !important;
         }
       }
-    }
-
-    .label {
-      padding: 10px 20px;
-      width: 205px;
-      box-sizing: border-box;
-      height: 50px;
-      vertical-align: middle;
-      line-height: 1.5em;
-    }
-
-    .auto-renew-text {
-      padding: 10px 20px;
-      display: block;
-    }
-
-    span {
-      &.description {
-        display: block;
-        line-height: 1.5em;
-        margin-bottom: 5px;
-      }
-    }
-
-    textarea {
-      vertical-align: middle;
-      padding: 0 5px;
-    }
-
-    .crm-submit-buttons {
-      border: 0;
-      padding: 0 !important;
     }
 
     .crm-membership-form-block-membership_type_id {
@@ -341,23 +293,18 @@
     }
 
     .crm-membership-form-block-record_contribution {
-      & > td {
+      > td {
         padding: 0;
 
         legend {
-          padding: 10px 20px;
           margin-bottom: 0;
+          padding: 10px 20px;
         }
       }
     }
 
-    .crm-membership-form-block-soft-credit-type .crm-option-edit-link{
+    .crm-membership-form-block-soft-credit-type .crm-option-edit-link {
       left: 0 !important;
-    }
-
-    #record_contribution {
-      position: relative;
-      bottom: 5px;
     }
 
     #record-different-contact {
@@ -368,31 +315,6 @@
       td {
         &:nth-child(2) {
           width: 100%;
-        }
-      }
-    }
-
-    #recordContribution {
-      tr {
-        td {
-          &:nth-child(2) {
-            padding-left: 0;
-            width: 100%;
-          }
-
-          &.label {
-            width: 205px;
-            height: 50px;
-            vertical-align: middle;
-            box-sizing: border-box;
-          }
-        }
-      }
-
-      .crm-membership-form-block-contribution-contact {
-        .helpicon {
-          bottom: -1px;
-          left: 0;
         }
       }
     }
@@ -413,9 +335,9 @@
       .crm-accordion-body {
         padding: 15px 0 !important;
 
-        & > p {
+        > p {
           &.description {
-            padding: 0px 20px  15px 20px;
+            padding: 0 20px 15px;
           }
         }
       }
@@ -428,13 +350,13 @@
 
       thead {
         th {
-          border-bottom: none;
           background: $crm-background !important;
+          border: 0;
+          border-bottom: 0;
           color: $gray-darker !important;
-          vertical-align: middle;
-          border: none;
-          padding: 10px;
           line-height: 1.1em;
+          padding: 10px;
+          vertical-align: middle;
 
           div {
             padding: 0;
@@ -448,7 +370,7 @@
           border: 1px solid $crm-background !important;
 
           &.crm-child-row {
-            & > td {
+            > td {
               padding: 0;
 
               .crm-ajax-container {
@@ -456,15 +378,15 @@
                   margin: 0;
 
                   tbody {
-                    border-top: 1px solid $crm-grayblue-dark !important
+                    border-top: 1px solid $crm-grayblue-dark !important;
                   }
 
                   th {
-                    border-bottom: none;
                     background: $gray-lighter !important;
+                    border: 0;
+                    border-bottom: 0;
                     color: $gray-darker;
                     vertical-align: middle;
-                    border: none;
                   }
                 }
               }
@@ -472,48 +394,35 @@
           }
 
           td {
-            border: none;
             background: $crm-white;
+            border: 0;
             color: $gray-dark;
-            padding: 10px 30px;
             line-height: 1.1em;
+            padding: 10px 30px;
           }
         }
       }
     }
   }
-
-  table tr td {
-    vertical-align: middle;
-
-    .helpicon {
-      position: relative;
-      bottom: 2px;
-      left: 5px;
-    }
-  }
 }
 
-
-
 .CRM_Member_Form_MembershipView {
-
   .action-link {
     display: none;
   }
 
   table {
     background: transparent;
-    border: none;
+    border: 0;
+    box-shadow: none !important;
     font-family: $font-family-base;
     margin: 10px 0;
-    box-shadow: none !important;
 
     &.crm-info-panel {
-      width: 105%;
-      margin-top: -20px;
       margin-left: -20px;
       margin-right: -20px;
+      margin-top: -20px;
+      width: 105%;
     }
 
     thead {
@@ -521,13 +430,13 @@
         border: 1px solid $crm-background !important;
 
         th {
-          border-bottom: none;
           background: $gray-lighter !important;
+          border: 0;
+          border-bottom: 0;
           color: $gray-darker !important;
-          vertical-align: middle;
-          border: none;
-          line-height: 1.1em;
           height: 42px;
+          line-height: 1.1em;
+          vertical-align: middle;
 
           div {
             padding: 0;
@@ -540,11 +449,11 @@
       tr {
         background: $crm-white;
         border: 1px solid $crm-background !important;
-        border-right: 0;
         border-left: 0;
+        border-right: 0;
 
         &.crm-child-row {
-          & > td {
+          > td {
             padding: 0;
 
             .crm-ajax-container {
@@ -552,15 +461,15 @@
                 margin: 0;
 
                 tbody {
-                  border-top: 1px solid $crm-grayblue-dark !important
+                  border-top: 1px solid $crm-grayblue-dark !important;
                 }
 
                 th {
-                  border-bottom: none;
                   background: $gray-lighter !important;
+                  border: 0;
+                  border-bottom: 0;
                   color: $gray-darker;
                   vertical-align: middle;
-                  border: none;
                 }
               }
             }
@@ -568,13 +477,13 @@
         }
 
         td {
-          border: none;
-          padding: 20px;
-          line-height: 1.1em;
           background: $crm-white !important;
+          border: 0;
+          line-height: 1.1em;
+          padding: 20px;
 
           &.label {
-            border-bottom: none;
+            border-bottom: 0;
             color: $gray-darker !important;
             vertical-align: middle;
 
@@ -609,7 +518,7 @@
     .crm-accordion-body {
       padding: 15px 0 !important;
 
-      & > p {
+      > p {
         &.description {
           padding: 0 20px;
         }
@@ -635,6 +544,12 @@
     margin: 20px 0 0;
   }
 
+  .crm-button-type-refresh {
+    .crm-i {
+      line-height: 1.8em;
+    }
+  }
+
   .crm-accordion-wrapper {
     border-radius: $panel-border-radius !important;
   }
@@ -651,7 +566,15 @@
   .selector,
   .report {
     @include expandable-table;
-    @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25) !important);
+    @include box-shadow($crm-form-layout-shadow-lower !important);
+
+    tbody {
+      tr:last-child {
+        td {
+          text-align: left;
+        }
+      }
+    }
   }
 
   .form-item {
@@ -696,59 +619,6 @@
           color: $gray-darker;
         }
       }
-    }
-  }
-
-  .selector {
-    background-color: $crm-white;
-
-    thead.sticky {
-      background: transparent;
-
-      tr:first-child {
-        th:first-child,
-        th:last-child {
-          border-radius: 0;
-        }
-      }
-    }
-
-    tbody tr:not(.crm-child-row) > td {
-      padding: 12px 10px !important;
-
-      &:first-child {
-        max-width: 10px;
-        padding-left: 20px !important;
-        padding-right: 5px;
-      }
-
-      &:nth-child(2),
-      &:nth-child(7) {
-        max-width: 120px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6) {
-        max-width: 130px;
-        min-width: 130px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-
-      &:last-child {
-        min-width: 82px !important;
-        padding-right: 20px !important;
-      }
-    }
-
-    tr:last-child td {
-      display: table-cell !important;
-      padding: 18px 20px 17px !important;
     }
   }
 }
@@ -798,37 +668,6 @@
       thead.sticky {
         background: transparent;
       }
-
-      th, td {
-        padding: 15px 10px 15px;
-
-        &:nth-child(1),
-        &:nth-child(2) {
-          padding: 15px 5px 15px 20px !important;
-          text-align: left;
-        }
-
-        &:last-child {
-          min-width: 82px;
-          padding: 15px 20px 15px 5px !important;
-
-          .crm-hover-button:hover {
-            color: $brand-primary !important;
-          }
-        }
-
-        &:nth-child(5), &:nth-child(6), &:nth-child(7) {
-          min-width: 110px;
-        }
-
-        &:nth-child(3),
-        &:nth-child(8) {
-          max-width: 95px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-      }
     }
   }
 
@@ -852,18 +691,20 @@
         line-height: 30px;
       }
 
-      .select2-container, input.crm-form-text {
+      .select2-container,
+      input.crm-form-text {
         margin: 0 15px 0 0 !important;
       }
     }
 
     tr.columnheader {
-      border-left: none !important;
-      border-right: none !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
 
-      th, td {
+      th,
+      td {
         background: $gray-lighter !important;
-        border: none;
+        border: 0;
         color: $gray-darker;
         padding: 10px 20px;
         vertical-align: middle;
@@ -872,10 +713,10 @@
 
     tbody tr {
       background: $crm-white;
-      border-right: none;
+      border-right: 0;
 
       td {
-        border-right: none;
+        border-right: 0;
         color: $crm-copy;
         line-height: 1.5em;
         padding: 15px 20px;
@@ -927,7 +768,7 @@
     }
 
     .crm-accordion-body td {
-      padding-left: 5px !important
+      padding-left: 5px !important;
     }
 
     .spacer {
@@ -967,7 +808,8 @@
       }
 
       table thead tr.columnheader {
-        th, td {
+        th,
+        td {
           font: bold $font-size-base $font-family-base !important;
           padding: 15px 10px;
 
@@ -1032,7 +874,7 @@
       }
 
       table + .crm-submit-buttons {
-        border-top: none !important;
+        border-top: 0 !important;
         padding: 0 0 15px !important;
       }
 
@@ -1066,7 +908,8 @@
         line-height: 30px;
       }
 
-      .select2-container, input.crm-form-text {
+      .select2-container,
+      input.crm-form-text {
         margin: 0 15px 0 0 !important;
       }
     }
@@ -1075,7 +918,7 @@
       background: transparent;
       box-shadow: none;
       margin: 0 -16px;
-      padding: 0
+      padding: 0;
     }
 
     .helpIcon {
@@ -1104,23 +947,23 @@
 
   table {
     @extend %civihr-table;
-    border: none;
+    border: 0;
     border-radius: $panel-border-radius;
     margin: 30px 0 20px;
 
     tr.columnheader {
-      border: none !important;
+      border: 0 !important;
       border-bottom: 1px solid $crm-grayblue-dark !important;
     }
 
     tr.crm-membership {
-      border-left: none;
-      border-right: none;
+      border-left: 0;
+      border-right: 0;
     }
 
     th,
     td {
-      border: none !important;
+      border: 0 !important;
       line-height: 1.5em !important;
       padding: 15px 20px !important;
     }
@@ -1131,7 +974,7 @@
   }
 
   .crm-button {
-    border: none;
+    border: 0;
     margin: 0 0 0 15px;
 
     i {
@@ -1144,7 +987,7 @@
       padding: 8px 12px 8px 25px !important;
     }
 
-    &.crm-button_qf_Print_next i:before {
+    &.crm-button_qf_Print_next i::before {
       @include fa-icon($font-size-base, $fa-var-print, $crm-white);
     }
 

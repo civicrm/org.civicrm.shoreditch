@@ -1,6 +1,9 @@
-#{civi-page('report-list')} {
-  .crm-report-instanceList-form-block {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+#{civi-page('report-list')},
+#{civi-page('report-template')} {
+  .crm-report-instanceList-form-block,
+  .crm-report-templateList-form-block {
     .crm-accordion-wrapper {
       &:first-of-type {
         .crm-accordion-header:first-of-type {
@@ -19,21 +22,19 @@
       padding: 0 !important;
 
       .report-layout {
-
         tr {
           &:not(:last-child) td {
             border-bottom: 1px solid $gray-light !important;
           }
 
           &:last-child td {
-            border-bottom: none !important;
+            border-bottom: 0 !important;
           }
         }
 
         td {
           line-height: normal;
           padding: 12px 10px !important;
-          vertical-align: middle !important;
 
           &:first-child {
             padding-left: 20px !important;
@@ -42,13 +43,27 @@
           &:last-child {
             padding-right: 20px !important;
             text-align: right;
+
+            &.crm-report-templateList-description {
+              text-align: left;
+            }
+          }
+
+          &.crm-report-templateList-title {
+            div {
+              float: right;
+            }
           }
         }
       }
     }
   }
 
-  .action-link:first-of-type {
-    margin-top: 0;
+  .action-link {
+    margin: 20px 0 0;
+
+    &:first-of-type {
+      margin: 0 0 20px;
+    }
   }
 }

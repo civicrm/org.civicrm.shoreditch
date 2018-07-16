@@ -1,0 +1,29 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+&#{civi-page('admin-contribute-managepremiums')} {
+  #crm-main-content-wrapper {
+    .dataTables_wrapper {
+      box-shadow: none;
+    }
+  }
+
+  #{civi-dialog()} {
+    .CRM_Contribute_Form_ManagePremiums {
+      .crm-collapsible {
+        margin: 0 -20px;
+
+        .collapsible-title {
+          @include accordion-header;
+          font-size: $font-size-base;
+          margin-bottom: 15px;
+        }
+      }
+
+      .premium-full-disabled {
+        input[type='button'] {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}

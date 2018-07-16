@@ -1,0 +1,27 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+&#{civi-page('admin-financial-financialaccount')},
+&#{civi-page('admin-financial-financialtype')} {
+  #ltype {
+    p {
+      display: none;
+    }
+
+    .form-item {
+      padding: 0;
+    }
+  }
+
+  #crm-main-content-wrapper {
+    .dataTables_wrapper {
+      margin-bottom: 0;
+    }
+  }
+
+  #{civi-dialog()} {
+    .form-item {
+      @include civicrm-table;
+      margin: -10px -20px;
+    }
+  }
+}

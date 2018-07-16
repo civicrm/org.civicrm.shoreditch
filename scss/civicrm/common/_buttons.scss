@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/buttons';
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/button-groups';
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/modals';
@@ -8,10 +10,10 @@ $button-border-radius: 2px;
 %btn-civi {
   @extend .btn;
   @include open-sans-font-family();
+  font-size: $font-size-base;
+  opacity: 1;
   text-shadow: none;
   text-transform: uppercase;
-  opacity: 1;
-  font-size: 1em !important;
 }
 
 %btn-civi-primary {
@@ -25,18 +27,13 @@ $button-border-radius: 2px;
   border-radius: $button-border-radius;
 }
 
-%submit-buttons-civi {
-  background: $crm-white !important;
-  border-top: 1px solid $gray-lighter;
-  margin: 0;
-  padding: 20px;
-}
-
 .crm-container {
+
+  // "Toolbar" buttons
+  $toolbar-top-space: 6px;
   margin-left: 0 !important;
 
-  %btn,
-  .crm-profile-selector-preview {
+  %btn {
     @extend %btn-civi;
 
     /**
@@ -53,7 +50,7 @@ $button-border-radius: 2px;
   }
 
   #actions,
-  #crm-main-content-wrapper div.action-link  {
+  #crm-main-content-wrapper div.action-link {
     %btn {
       @extend .btn-secondary;
     }
@@ -95,7 +92,6 @@ $button-border-radius: 2px;
   }
 
   .crm-button-type-cancel {
-
     i {
       color: $crm-cancel-color;
     }
@@ -139,14 +135,11 @@ $button-border-radius: 2px;
     }
   }
 
-  // "Toolbar" buttons
-  $toolbar-top-space: 6px;
-
   .crm-form-block {
     &.crm-search-form-block > .crm-submit-buttons,
     &.crm-form-block > .crm-submit-buttons,
     .form-item > .crm-submit-buttons {
-      @extend %submit-buttons-civi;
+      @include civicrm-submit-buttons;
     }
 
     .crm-submit-buttons {
@@ -159,13 +152,13 @@ $button-border-radius: 2px;
       .crm-button-type-cancel,
       .crm-button-type-back {
         input {
+          border: solid 1px $gray-dark;
           ///The default theme uses "!important"
           color: $crm-cancel-color !important;
-          border: solid 1px $gray-dark;
 
           &:hover {
-            color: $crm-white !important;
             background: darken($crm-copy, $crm-darken-percentage);
+            color: $crm-white !important;
           }
         }
       }
@@ -234,8 +227,8 @@ $button-border-radius: 2px;
   }
 
   a.crm-hover-button {
-    padding: 4px 6px;
     border-radius: 2 !important;
+    padding: 4px 6px;
 
     &.css_right {
       padding: 7px 12px;
@@ -256,16 +249,16 @@ $button-border-radius: 2px;
     border: 0;
 
     .crm-i {
-      padding: 3px;
       background-color: transparent !important;
       color: $crm-white;
+      padding: 3px;
     }
   }
 
   .crm-i {
+    line-height: inherit;
     text-shadow: none;
     vertical-align: middle;
-    line-height: inherit;
   }
 
   .crm-button-type-refresh {
@@ -275,22 +268,17 @@ $button-border-radius: 2px;
   }
 
   .crm-form-block > .crm-submit-buttons {
-    min-height: 0;
     margin-left: 0;
+    min-height: 0;
   }
 
   //"Expand all" and "configure pane" buttons;
   .crm-search-form-block > a,
   .crm-search-form-block > span {
     @extend .btn;
-    float: right;
     border: 0;
-    margin-top: $toolbar-top-space;
-    padding: 0;
     box-sizing: border-box;
-    width: 30px;
     line-height: 26px;
-    margin-left: 15px;
   }
 
   .crm-search-form-block > a {
@@ -302,26 +290,14 @@ $button-border-radius: 2px;
 
     > a {
       &::before {
-        @include fa-icon();
-        padding: 0 15px 0 0;
-        width: 30px;
-        line-height: 30px;
+        @include fa-icon($font-size-base, $fa-var-expand, $brand-primary);
         display: inline-block;
-      }
-
-      &:hover {
-        &,
-        &::before {
-          color: $crm-white !important;
-        }
+        line-height: 30px;
+        width: 30px;
       }
 
       &[href~='#collapse']::before {
-        content: '\f066';
-      }
-
-      &[href~='#expand']::before {
-        content: '\f065';
+        content: $fa-var-compress;
       }
     }
   }
@@ -349,8 +325,8 @@ $button-border-radius: 2px;
 
   &.ui-dialog {
     .button {
-      padding: 4px 12px !important;
       font-weight: normal !important;
+      padding: 4px 12px !important;
     }
 
     .ui-dialog-buttonset {
@@ -364,21 +340,67 @@ $button-border-radius: 2px;
     }
   }
 
-  .crm-profile-selector-preview {
-    padding: 4px 12px;
+  .crm-profile-selector-preview,
+  .crm-profile-selector-edit,
+  .crm-profile-selector-copy,
+  .crm-profile-selector-create {
+    border: 0;
+    height: auto;
+    line-height: normal;
+    padding: 6px 12px;
 
     .crm-i {
       position: relative;
       top: -1px;
     }
+
+    &:not([disabled]) {
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      opacity: 0.65;
+    }
   }
 }
 
 a {
-  &.button  {
+  &.button {
     i {
       margin-top: -4px;
-      margin-right: 10px;
+    }
+  }
+}
+
+button {
+  background: $brand-primary;
+  border: 0;
+  border-radius: $border-radius-base;
+  color: $crm-white;
+  font-family: $font-family-base;
+  line-height: 1;
+  padding: 11px 12px;
+  text-shadow: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &:hover {
+    background: darken($brand-primary, $crm-darken-percentage);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &.cancel {
+    background: $crm-white;
+    border: 1px solid $crm-copy;
+    color: $crm-cancel-color;
+
+    &:hover {
+      background: $crm-copy;
+      color: $crm-white;
     }
   }
 }

@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #crm-notification-container div {
   &.ui-notify-message {
     border-radius: $border-radius-base;
@@ -47,12 +49,27 @@
 
     &,
     a.ui-notify-cross,
-    h1 {
+    h1,
+    td {
       color: $gray-darker;
+    }
+
+    table {
+      table-layout: fixed;
+    }
+
+    td {
+      font-size: $font-size-base;
+      word-wrap: break-word;
     }
 
     a {
       color: $brand-primary;
+
+      &,
+      &:link {
+        text-decoration: none;
+      }
 
       &.ui-button {
         background: $brand-primary;
@@ -112,6 +129,19 @@
       line-height: 20px;
       margin-bottom: 10px;
     }
+
+    table {
+      td,
+      th {
+        background: $crm-white;
+        border-color: $gray-light;
+        color: $gray-dark;
+      }
+    }
+  }
+
+  td {
+    border-color: $crm-grayblue-dark;
   }
 }
 
@@ -120,6 +150,7 @@
   :not(.crm-footer) .status {
     background-color: $alert-warning-bg;
     border-color: $brand-warning;
+    border-radius: $border-radius-base;
     color: $gray-darker;
     padding: 16px 20px;
 
@@ -134,17 +165,16 @@
     }
   }
 
-  .crm-block,
-  form {
-    > .status {
-      border: 0;
+  &:not(.crm-public) {
+    #crm-main-content-wrapper {
+      form {
+        .messages.crm-error {
+          position: absolute;
+          visibility: hidden;
+        }
+      }
     }
   }
-}
-
-#crm-main-content-wrapper form .messages.crm-error {
-  position: absolute;
-  visibility: hidden;
 }
 
 div.error,

@@ -1,0 +1,198 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#crm-container {
+  .crm-actions-ribbon {
+    margin-bottom: 20px;
+  }
+
+  #newLocation {
+    .crm-submit-buttons {
+      padding-left: 5px;
+    }
+
+    .crm-event-is_show_location br {
+      display: none;
+    }
+
+    > div {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    h3 {
+      @include section-title;
+      margin-bottom: 20px;
+    }
+  }
+
+  .crm-event-manage-location-form-block {
+    > table {
+      margin-left: 15px;
+
+      .status {
+        padding-left: 0;
+      }
+    }
+
+    #Address_Block_1 {
+      padding: 12px;
+    }
+  }
+
+  .crm-event-manage-eventinfo-form-block,
+  .crm-event-manage-fee-form-block {
+    .crm-submit-buttons:first-of-type {
+      border-top: 0;
+    }
+  }
+
+  .crm-friend-manage-block {
+    .replace-plain,
+    textarea {
+      + br {
+        display: none;
+      }
+    }
+
+    .crm-friend-manage-form-block-thankyou_text {
+      td {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .crm-contribution-contributionpage-pcp-form-block {
+    .crm-contribution-contributionpage-pcp-form-block-link_text {
+      td {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  #priceSet .message {
+    margin-right: 15px;
+  }
+
+  #contributionType .description {
+    padding-right: 15px;
+  }
+
+  fieldset#discount,
+  fieldset#map-field {
+    @include civicrm-table();
+
+    > legend {
+      @include section-title;
+      box-sizing: border-box;
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+
+    table {
+      min-width: 100%;
+    }
+
+    .columnheader {
+      td {
+        font-size: 13px;
+      }
+    }
+
+    .description {
+      display: block;
+      padding: 20px;
+    }
+  }
+
+  fieldset#map-field {
+    table {
+      td:not(:last-child) {
+        width: 300px;
+      }
+    }
+  }
+
+  fieldset#discount {
+    .columnheader td:first-child,
+    .form-item td:first-child {
+      width: 20px;
+    }
+
+    .crm-form-submit {
+      margin: 20px;
+    }
+
+    .add-remove-link {
+      font-size: $font-size-base;
+      padding: 16px 20px;
+    }
+  }
+
+  #isDiscount {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .crm-event-manage-fee-form-block-is_discount td {
+      width: auto;
+    }
+  }
+
+  .crm-collapsible {
+    &:not(.collapsed) .collapsible-title::before {
+      content: $fa-var-angle-down;
+    }
+
+    &.collapsed .collapsible-title::before {
+      content: $fa-var-angle-right;
+    }
+
+    .collapsible-title + div,
+    #confirm_screen_settings {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
+    .collapsible-title + table {
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    .collapsible-title {
+      @include accordion-header;
+    }
+  }
+
+  #Registration {
+    .crm-submit-buttons {
+      padding: 8px 20px 20px;
+
+      #_qf_Registration_upload_done-bottom {
+        padding-left: 26px;
+      }
+
+      .fa-check-circle {
+        padding-top: 4px;
+      }
+    }
+  }
+
+  .description {
+    color: $crm-gray-matte;
+  }
+}
+
+#{civi-dialog()} {
+  .crm-scheduleReminder-form-block {
+    .crm-html_email-accordion,
+    .crm-plaint_text_email-accordion {
+      .helpIcon {
+        margin: 0 0 10px;
+      }
+    }
+  }
+
+  #editMessageDetails {
+    padding: 20px 0;
+  }
+}

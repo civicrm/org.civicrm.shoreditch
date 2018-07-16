@@ -1,13 +1,36 @@
-&#{civi-page('admin-setting-component')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
+&#{civi-page('admin-setting-component')} {
   .crm-form-block {
+    overflow: hidden;
 
     .advmultiselect {
       margin-left: 20px;
     }
 
     p.description {
-      padding-left: 20px;
+      padding: 10px 20px 20px;
+    }
+  }
+}
+
+&#{civi-page('admin-component')} {
+  #ltype {
+    .form-item {
+      table {
+        @include expandable-table;
+      }
+    }
+  }
+
+  .CRM_Mailing_Form_Component {
+    .crm-mailing-component-form-block {
+      legend {
+        @include panel-header;
+        box-sizing: border-box;
+        font-weight: $crm-font-weight-h3;
+        width: 100%;
+      }
     }
   }
 }

@@ -1,34 +1,25 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 %no-border-radius {
   border-radius: 0 !important;
 }
 
 .crm-accordion-header {
-  @extend %no-border-radius;
-  background: $crm-accordion-header-color !important;
-  background-image: none !important;
-  color: $gray-darker;
-  font-family: $font-family-base;
-  font-weight: 600;
-  line-height: 18px;
-  padding: 16px 20px;
-  position: relative;
+  @include accordion-header;
 
   &:not(.crm-master-accordion-header) {
-    font-size: 13px !important;
-  }
-
-  &::before {
-    @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
-    padding-right: 10px;
+    border-bottom: 1px solid $crm-grayblue-dark;
+    font-size: $font-size-base !important;
+    font-weight: $crm-font-weight-h3;
   }
 
   &.crm-master-accordion-header {
     background: $brand-primary !important;
     border-radius: $border-radius-base $border-radius-base 0 0 !important;
     color: $crm-white !important;
-    font-weight: $crm-font-weight-h3 !important;
     font-size: $font-size-h2;
-
+    font-weight: $crm-font-weight-h3 !important;
+    
     &::before {
       color: $crm-white;
     }
@@ -42,12 +33,12 @@
   }
 
   .helpicon {
-    padding-left: 15px;
     color: $brand-primary;
     opacity: 1;
+    padding-left: 15px;
 
-    &:hover{
-      opacity: .8;
+    &:hover {
+      opacity: 0.8;
     }
   }
 }
@@ -57,7 +48,6 @@
   margin-bottom: 0;
 
   &:not(.collapsed) {
-
     .crm-accordion-header {
       &::before {
         content: '\f107';
@@ -71,31 +61,25 @@
         content: '\f105';
       }
     }
+
     .crm-master-accordion-header {
       border-radius: $border-radius-base !important;
     }
   }
 }
 
-.crm-accordion-header:not(.crm-master-accordion-header) {
-  font-weight: 600;
-  border-bottom: 1px solid $crm-grayblue-dark;
-}
-
 .crm-master-accordion-header + .crm-accordion-body {
   border-radius: 0 0 $border-radius-base $border-radius-base !important;
 }
 
-.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
-.section {
+.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
   box-shadow: $crm-box-shadow-inset;
   padding: 15px !important;
 
   td {
     &.label {
-      font-weight: 600;
-      text-align: left;
       color: $gray-darker;
+      font-weight: $crm-font-weight-h3;
       padding-left: 0;
 
       label {
@@ -137,7 +121,7 @@
 
   .helpicon {
     color: $brand-primary;
-    font-size: 13px;
+    font-size: $font-size-base;
     opacity: 1;
   }
 

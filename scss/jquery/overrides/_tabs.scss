@@ -1,0 +1,101 @@
+/* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+
+.ui-tabs {
+  background: $crm-white;
+  border: 0;
+  border-radius: 0;
+  font-family: $font-family-base;
+  padding: 0;
+
+  .ui-tabs-nav {
+    background: $gray-lighter;
+    border-bottom: 1px solid $crm-grayblue-dark;
+    border-radius: 0;
+    padding: 10px 10px 0;
+
+    *:focus {
+      outline: none;
+    }
+
+    .ui-corner-all,
+    .ui-corner-top {
+      background: $gray-lighter;
+      border: 1px solid transparent;
+      border-bottom: 1px solid $crm-grayblue-dark;
+      border-radius: $border-radius-base $border-radius-base 0 0;
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+      margin-bottom: -1px;
+      padding: 7px 15px;
+
+      &.crm-tab-button {
+        margin-right: 0;
+        top: 0;
+      }
+
+      .crm-editable {
+        /* stylelint-disable selector-no-qualifying-type */
+        button[type='button'] .crm-i {
+          color: $brand-primary;
+        }
+
+        button[type='cancel'] .crm-i {
+          color: $brand-danger;
+        }
+
+        .crm-i {
+          margin: 0;
+        }
+        /* stylelint-enable selector-no-qualifying-type */
+      }
+
+      .crm-i {
+        color: $gray-darker;
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        font-weight: $crm-font-weight-h3;
+        padding-left: 5px;
+
+        &::before {
+          font-family: $font-family-fontawesome;
+          font-weight: normal;
+          padding-right: 5px;
+        }
+      }
+
+      a {
+        color: $gray-darker;
+        display: block;
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        font-weight: $crm-font-weight-h3;
+        outline: none;
+
+        .crm-i {
+          line-height: normal;
+        }
+      }
+
+      &.ui-tabs-active {
+        background: $crm-white;
+        border: 1px solid $crm-grayblue-dark;
+        border-bottom: 1px solid transparent;
+
+        a {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+
+  .ui-tabs-panel {
+    border-bottom: 1px solid $crm-grayblue-dark;
+    border-radius: 0;
+
+    table th,
+    table:not(.form-layout-compressed) th {
+      background-color: $crm-white;
+      border-bottom: 2px solid $crm-grayblue-dark;
+    }
+  }
+}

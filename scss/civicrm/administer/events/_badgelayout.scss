@@ -1,0 +1,23 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+&#{civi-page('admin-badgelayout')} {
+  .crm-container {
+    h3 {
+      @include box-shadow($box-shadow);
+      @include panel-header;
+      margin-bottom: 0;
+    }
+
+    .crm-badge-layout-form-block {
+      @include box-shadow($crm-form-layout-shadow-lower);
+
+      .crm-badge-layout-form-block-elements {
+        div[id*='s2id_font_size_'],
+        div[id*='s2id_font_style_'],
+        div[id*='s2id_text_alignment_'] {
+          min-width: $crm-sm-input-width !important;
+        }
+      }
+    }
+  }
+}

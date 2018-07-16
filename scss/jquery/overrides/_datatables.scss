@@ -1,0 +1,89 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.dataTables_wrapper {
+  > table {
+    thead th,
+    tbody td {
+      border: initial;
+      border-bottom: solid 1px $table-border-color;
+      line-height: 18px !important;
+      padding: 15px 10px;
+
+      &:first-child:not(.hiddenElement) {
+        padding-left: 20px;
+      }
+
+      &:last-child:not(.hiddenElement) {
+        padding-right: 20px;
+      }
+    }
+
+    thead {
+      tr {
+        th {
+          .button {
+            color: $crm-white !important;
+          }
+        }
+      }
+
+      .sorting,
+      .sorting_asc,
+      .sorting_desc,
+      .sorting_disabled {
+        background: none;
+        position: relative;
+
+        &::after {
+          padding-left: 10px;
+          position: relative;
+          top: 1px;
+        }
+      }
+
+      .sorting::after {
+        @include fa-icon($font-size-base, $fa-var-sort, $crm-grayblue-darker);
+      }
+
+      .sorting_asc::after {
+        @include fa-icon($font-size-base, $fa-var-sort-asc, $brand-primary);
+      }
+
+      .sorting_desc::after {
+        @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
+      }
+    }
+  }
+
+  .dataTables_length,
+  .dataTables_info,
+  .dataTables_paginate {
+    font-size: $font-size-base;
+  }
+
+  .paging_full_numbers {
+    width: auto !important;
+  }
+
+  .dataTables_paginate {
+    padding-right: 10px;
+
+    .paginate_button {
+      color: $gray-darker !important;
+      padding: 5px;
+
+      &:hover:not(.disabled),
+      &.current,
+      &:active {
+        background: none;
+        border: 1px solid transparent;
+        box-shadow: none;
+        font-weight: $crm-font-weight-h3;
+      }
+
+      &.disabled {
+        color: $crm-placeholder !important;
+      }
+    }
+  }
+}

@@ -1,28 +1,38 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 &#{civi-page('admin-setting-url')},
 &#{civi-page('admin-setting-mapping')},
 &#{civi-page('admin-setting-path')},
 &#{civi-page('admin-setting-debug')},
 &#{civi-page('admin-setting-uf')} {
-
   .crm-form-block {
     @include civicrm-table;
 
-
-    table.form-layout {
-      td:first-of-type {
-        width: 30%;
+    table:not(.form-layout-compressed) {
+      tr {
+        > td {
+          vertical-align: top;
+        }
       }
     }
 
     table.form-layout-compressed {
-      width: 100%;
       margin: 0 !important;
+      width: 100%;
     }
 
     .form-item {
       @include civicrm-panel;
 
       padding: 10px;
+    }
+  }
+}
+
+&#{civi-page('admin-setting-uf')} {
+  .crm-form-block {
+    table.form-layout-compressed {
+      margin-bottom: 10px !important;
     }
   }
 }

@@ -1,0 +1,146 @@
+.ui-select-bootstrap[theme='civihr-ui-select'] {
+  + .input-group-btn {
+    .btn {
+      @include border-left-radius(0);
+      margin-left: -1px;
+    }
+  }
+
+  &.ui-select-multiple {
+    min-height: $input-height-base;
+    padding: 2px 2px 0;
+
+    .ui-select-search {
+      height: 1.9em;
+      text-indent: 10px;
+    }
+
+    .ui-select-match .close {
+      line-height: 0.8;
+    }
+
+    .ui-select-match-item {
+      border-color: $brand-primary;
+      margin: 0 2px 2px 1px;
+      padding: 2px 8px;
+      text-transform: none;
+    }
+  }
+
+  .ui-select-match-text,
+  .ui-select-placeholder {
+    text-transform: none;
+  }
+
+  .ui-select-toggle {
+    border-color: $input-border;
+    padding: 4px 30px 4px 12px;
+
+    &:hover {
+      border-color: $input-border;
+    }
+
+    &[disabled] {
+      background-color: $input-bg-disabled;
+      border-color: $input-border;
+      opacity: 1;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $input-bg-disabled;
+        border-color: $input-border;
+      }
+    }
+  }
+}
+
+.ui-select-container:not([theme='civihr-ui-select']) {
+  &:not(.ui-select-multiple) {
+    .btn {
+      &.ui-select-toggle {
+        border-color: $input-border;
+        height: $input-height-base;
+        padding: $crm-ui-select-top-padding 10px;
+        text-transform: none;
+      }
+
+      &:hover {
+        background: $crm-white;
+      }
+    }
+
+    .dropdown-menu {
+      border: 1px solid $input-border;
+      border-top: 1px solid transparent;
+    }
+
+    .ui-select-match-text {
+      color: $gray;
+      padding-right: 3em;
+
+      span {
+        text-overflow: ellipsis;
+      }
+    }
+
+    .ui-select-match a {
+      margin-right: 14px !important;
+    }
+
+    .glyphicon-remove {
+      font-size: 10px;
+    }
+
+    .caret {
+      display: none;
+    }
+
+    input {
+      border: 1px solid $input-border !important;
+      box-shadow: none !important;
+      height: $input-height-base;
+    }
+
+    &::after {
+      @include search-icon();
+    }
+  }
+
+  .text-muted {
+    color: $crm-copy;
+  }
+}
+
+.ui-select-multiple:not([theme='civihr-ui-select']) {
+  border: 1px solid $input-border;
+  min-height: $input-height-base;
+  padding: 3px !important;
+
+  .ui-select-match-item {
+    border: 1px solid #ccc;
+    padding: 1px 5px;
+    text-transform: none;
+  }
+
+  .ui-select-search {
+    padding-left: 6px !important;
+  }
+
+  &::after {
+    @include search-icon();
+  }
+}
+
+.ui-select-bootstrap .ui-select-choices-row:not([theme='civihr-ui-select']) {
+  > span {
+    color: $gray;
+    font-size: $font-size-small;
+    padding: 3px 10px;
+  }
+
+  &.active > span {
+    background: #eeeded;
+    color: $gray;
+  }
+}

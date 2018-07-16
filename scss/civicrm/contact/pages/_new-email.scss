@@ -1,19 +1,8 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('activity-email')} {
   .crm-submit-buttons:first-child {
     display: none;
-  }
-
-  table {
-    &.form-layout-compressed {
-      tr {
-        td {
-          &.label {
-            text-align: left;
-            vertical-align: middle;
-          }
-        }
-      }
-    }
   }
 
   .crm-contactEmail-form-block {
@@ -31,27 +20,21 @@
   }
 
   #helphtml {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
   }
 
   #attachments {
-    > .form-layout-compressed {
-      width: 100%;
+    .form-layout-compressed {
+      margin-bottom: 0;
 
-      tr {
-        &:first-child {
-          td {
-            padding-bottom: 20px;
-          }
-        }
-
-        &.attachment-fieldset {
-          td {
-            padding-bottom: 13px;
-          }
-        }
+      td:empty {
+        display: none;
       }
     }
+  }
+
+  .spacer {
+    display: none;
   }
 }
 
@@ -60,7 +43,7 @@
     .crm-contactEmail-form-block-recipient {
       td {
         &:first-child {
-          &:after {
+          &::after {
             display: none;
           }
         }
@@ -77,8 +60,8 @@
       .crm-contactEmail-form-block-recipient {
         td {
           &.label {
-            font-weight: 600;
             color: $gray-darker;
+            font-weight: 600;
           }
         }
 
@@ -103,7 +86,7 @@
 
     #s2id_fromEmailAddress,
     #s2id_to {
-      &:after {
+      &::after {
         display: none;
       }
     }

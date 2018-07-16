@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .CRM_Event_Form_Search {
   h3 {
     @include box-shadow($box-shadow);
@@ -50,21 +52,15 @@
     padding: 20px;
 
     table.form-layout td {
-      border: none;
+      border: 0;
     }
   }
 
   .crm-contactDetails-accordion {
-
     .crm-accordion-header,
     .crm-accordion-body {
       margin-left: -24px;
       margin-right: -24px;
-
-      table td {
-        display: table-cell;
-        vertical-align: middle;
-      }
     }
   }
 
@@ -74,11 +70,11 @@
 
   .dataTables_wrapper,
   .form-item table.row-highlight {
-    @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+    @include box-shadow($crm-form-layout-shadow-lower);
 
     tr:last-child {
       td {
-        border-bottom: none;
+        border-bottom: 0;
       }
     }
   }
@@ -99,7 +95,7 @@
 
       th {
         background: $gray-lighter !important;
-        border: none;
+        border: 0;
         line-height: normal;
         padding: 15px 10px;
         white-space: nowrap;
@@ -115,7 +111,6 @@
     }
 
     tbody tr {
-
       td {
         line-height: normal;
         padding: 10px;
@@ -136,13 +131,10 @@
           line-height: 17px;
         }
 
-        .crm-hover-button.crm-clear-link {
-          vertical-align: bottom;
-        }
-
         .crm-absolute-date-range > span,
         .crm-absolute-date-range > span > input {
           display: inline-block;
+          margin-top: 5px;
           vertical-align: middle;
         }
       }
@@ -159,64 +151,13 @@
 }
 
 #Participant {
-  input,
-  select,
-  textarea,
-  .select2-container {
-    &.crm-inline-error,
-    &.crm-error,
-    &.error {
-      background: none !important;
-      border: 1px solid $brand-danger;
-      min-height: 30px;
-
-      &.select2-container {
-        padding: 0;
-      }
-    }
-  }
-
-  label {
-    &.crm-inline-error,
-    &.crm-error {
-      background: $brand-danger !important;
-      color: $crm-white !important;
-      padding: 5px;
-      border-radius: 3px;
-
-      &.crm-inline-error {
-        margin: 0 4px;
-      }
-
-      span {
-        background: none;
-        color: $crm-white;
-      }
-    }
-  }
-
-  span {
-    &.crm-error {
-      background: $brand-danger !important;
-      color: $crm-white !important;
-      padding: 5px;
-      border-radius: 3px;
-      margin: 2px;
-
-      span {
-        background: none;
-        color: $crm-white;
-      }
-    }
+  #_qf_Participant_reload {
+    min-width: auto;
+    width: auto;
   }
 
   &#Participant a.crm-option-edit-link {
     left: 0;
-  }
-
-  textarea {
-    vertical-align: middle;
-    padding: 0px 5px;
   }
 
   .select2-container {
@@ -225,33 +166,15 @@
 
   .crm-participant-form-block {
     table {
+      box-shadow: none;
       width: 100%;
 
       &.form-layout {
-
-        #payment-info {
-          width: 100%;
-
-          table {
-            tr {
-              td,
-              th {
-                &:first-child {
-                  padding-left: 0;
-                }
-              }
-            }
-          }
-        }
-
         .crm-event-eventfees-form-block-line_items {
-          & > td {
-            &:nth-child(2) {
-              width: 100%;
-
-              .total_amount-section {
-                padding: 15px;
-              }
+          > td:nth-child(2) {
+            .total_amount-section {
+              margin: 0;
+              padding: 0 20px;
             }
           }
         }
@@ -274,7 +197,7 @@
     }
 
     .crm-membership-form-block-record_contribution {
-      & > td {
+      > td {
         padding: 0;
 
         legend {
@@ -288,35 +211,6 @@
         padding-left: 20px !important;
       }
     }
-  }
-
-  .crm-event-eventfees-form-block-price_set_amount div[class*="-section"] {
-    .label {
-      box-sizing: border-box;
-      position: relative;
-      right: 225px;
-      width: 210px;
-    }
-
-    div[class*="-content"] {
-      bottom: 45px;
-      position: relative;
-    }
-
-    #pricesetTotal {
-      margin-bottom: 0;
-      margin-top: -95px;
-
-      #pricelabel {
-        position: relative;
-        top: 40px;
-      }
-    }
-  }
-
-  textarea {
-    height: 80px;
-    width: 100% !important;
   }
 
   #send_confirmation_receipt {
@@ -340,21 +234,6 @@
     }
   }
 
-  .crm-participant-form-block-note td:nth-child(2) {
-    width: 100%;
-  }
-
-  .crm-event-eventfees-form-block-price_set_amount {
-    .view-value {
-      padding: 10px 15px 0;
-      width: 100%;
-    }
-
-    .price_set-section {
-      margin-bottom: 0;
-    }
-  }
-
   .crm-event-eventfees-form-block-receipt_text {
     td:not(.label) {
       width: 100%;
@@ -363,75 +242,6 @@
     textarea {
       margin-bottom: 20px;
     }
-  }
-
-  #priceset,
-  #pricesetTotal {
-    .label {
-      padding-left: 0;
-      text-align: left;
-    }
-
-    .content {
-      clear: both;
-      margin: 0;
-    }
-
-    .price-set-option-content label:after {
-      top: 6px;
-    }
-  }
-
-  #payment_information {
-    & > td {
-      padding: 0;
-
-      legend {
-        padding: 10px 15px 10px 0;
-      }
-    }
-
-    .crm-section {
-      display: table;
-    }
-
-    .content {
-      display: table-cell;
-      margin-left: 0;
-      vertical-align: middle;
-    }
-
-    .label {
-      display: table-cell;
-      text-align: left;
-      vertical-align: middle;
-    }
-
-    input#cvv2 {
-      margin: 0;
-    }
-
-    div.crm-field-wrapper {
-      display: table;
-      margin-bottom: 0;
-    }
-  }
-
-  #billing-payment-block {
-    legend {
-      padding: 10px 15px 10px 0;
-    }
-
-    .label {
-      text-align: left;
-      width: 210px;
-    }
-  }
-
-  span.description {
-      display: block;
-      line-height: 1.5em;
-      margin-bottom: 5px;
   }
 
   .cvv2-section {
@@ -445,115 +255,108 @@
   table#info,
   .crm-event-participantview-form-block-fee_amount table,
   table.selector,
-  .crm-event-eventfees-form-block-line_items table  {
+  .crm-event-eventfees-form-block-line_items table {
     @include expandable-table;
     box-shadow: none !important;
   }
+
+  #priceset {
+    margin-left: -180px;
+  }
+
+  #payment_information,
+  #priceset {
+    div.label {
+      width: 170px;
+    }
+
+    div.content {
+      margin-left: 180px;
+    }
+  }
+
+  legend {
+    @include section-title;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .crm-event-eventfees-form-block-payment_information {
+    fieldset {
+      margin: 10px -4px 0;
+    }
+  }
+
+  .crm-event-eventfees-form-block-contribution_status_id,
+  .crm-participant-form-block-note {
+    td {
+      padding-bottom: 20px;
+    }
+  }
+
+  .custom-group {
+    .form-layout-compressed {
+      margin-bottom: -10px;
+    }
+
+    td.label {
+      padding-top: 6px;
+    }
+  }
 }
 
+#{civi-dialog()} {
+  #Participant {
+    .view-content {
+      margin: 0 -20px;
+    }
+
+    .description {
+      padding: 20px;
+    }
+
+    .crm-participant-form-block-delete {
+      margin: $crm-status-bar-no-bottom;
+    }
+  }
+}
+
+
 #ParticipantView {
-  .action-link {
-    display: none;
-  }
-
   .crm-event-participant-view-form-block {
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-top: -20px;
-  }
-
-  .description {
-    margin: 20px 20px 10px;
+    margin: 0 -20px;
   }
 
   table {
-    background: transparent;
-    border: none;
-    box-shadow: none !important;
-    font-family: $font-family-base;
-    margin: 10px 0;
-
-    &.selector {
-      display: block;
-      overflow-x: auto;
-
-      th, td {
-        white-space: nowrap;
-      }
-    }
-
-    thead tr {
-      border: 1px solid $crm-background !important;
-
-      th {
-        background: $gray-lighter !important;
-        border: none;
-        color: $gray-darker !important;
-        vertical-align: middle;
-
-        div {
-          padding: 0;
-        }
-      }
-    }
-
     tbody tr {
-      background: $crm-white;
-      border: none;
-
       &.crm-event-participantview-form-block-displayName td {
-        strong {
-          display: inline-block;
-          padding-top: 3px;
-        }
-
         div {
           float: right;
         }
       }
 
-      &.crm-child-row td {
-        padding: 0;
-      }
-
-      &.crm-child-row td .crm-ajax-container {
-        table {
-          margin: 0;
-
-          th {
-            background: $gray-lighter !important;
-            border: none;
-            color: $gray-darker;
-            vertical-align: middle;
-          }
-        }
-      }
-
       td {
-        background: $crm-white !important;
-        border: none;
-        line-height: 1.1em;
-        padding: 10px;
-
-        &.label {
-          border-bottom: none;
-          color: $gray-darker !important;
-          vertical-align: middle;
-
-          div {
-            padding: 0;
-          }
-        }
-
-        &:not(.label) {
-          color: $gray-dark;
-        }
-      }
-
-      td  > table {
-        margin: 0 !important;
+        line-height: 18px;
       }
     }
+
+    &.crm-info-panel {
+      tr {
+        td {
+          &:first-child {
+            padding-left: 20px;
+          }
+
+          &:last-child {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    padding: 20px;
   }
 
   #paymentDetails_Information {
@@ -568,8 +371,8 @@
   }
 
   .crm-accordion-header {
-    font-size: $font-size-base !important;
     font-family: $font-family-base;
+    font-size: $font-size-base !important;
 
     + .crm-accordion-body {
       padding: 20px !important;
@@ -580,15 +383,15 @@
     }
   }
 
-  label[for="thankyou_date"] {
+  label[for='thankyou_date'] {
     top: 7px;
   }
 
-  label[for="thankyou_date_time"] {
+  label[for='thankyou_date_time'] {
     top: 5px;
   }
 
-  [id*="Food_Preference"] {
+  [id*='Food_Preference'] {
     .crm-accordion-wrapper {
       margin-left: -40px;
       margin-right: -40px;
@@ -639,10 +442,10 @@
 
     .crm-section .label,
     .crm-section .content {
-      display: table-cell;
-      text-align: left;
-      min-width: 180px;
       box-sizing: border-box;
+      display: table-cell;
+      min-width: 180px;
+      text-align: left;
       vertical-align: top;
     }
 
@@ -669,10 +472,10 @@
 
   .form-layout tr {
     td {
-      display: table-cell;
-      text-align: left;
       box-sizing: border-box;
+      display: table-cell;
       padding-left: 0;
+      text-align: left;
 
       &.label {
         min-width: 180px;
@@ -681,15 +484,38 @@
   }
 
   textarea {
-    padding: 5px;
     line-height: 1em;
+    padding: 5px;
     vertical-align: middle;
+  }
+}
+
+#ParticipantStatus {
+  .crm-event-batch-form-block {
+    @include civicrm-table;
+
+    padding-top: 20px;
+
+    .help {
+      margin: $crm-status-bar-no-top;
+    }
   }
 }
 
 .CRM_Event_Form_SearchEvent {
   .float-right {
     padding: 16px 14px 0 !important;
+  }
+
+  .crm-configure-actions,
+  .crm-event-participants,
+  .crm-event-links,
+  .crm-event-more {
+    .btn-slide {
+      padding-right: 15px !important;
+      text-indent: initial;
+      width: auto;
+    }
   }
 
   .crm-event-searchevent-form-block {
@@ -701,7 +527,7 @@
     .form-layout {
       > tbody {
         > tr {
-         > td {
+          > td {
             padding: 10px;
 
             .crm-button_qf_SearchEvent_refresh {
@@ -763,7 +589,7 @@
     @include box-shadow($box-shadow);
     background: $crm-white;
     border-radius: $border-radius-base $border-radius-base 0 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding: 15px 10px 10px;
   }
 
@@ -772,7 +598,7 @@
   }
 
   .dataTables_wrapper {
-    @include box-shadow(0 8px 18px 0px rgba(48,40,40,0.25));
+    @include box-shadow($crm-form-layout-shadow-lower);
 
     thead {
       tr {
@@ -781,7 +607,7 @@
 
         th {
           background-color: $gray-lighter;
-          border: none;
+          border: 0;
           line-height: normal;
           padding: 15px 10px;
           white-space: nowrap;
@@ -820,7 +646,7 @@
           border-radius: 0 0 $border-radius-base $border-radius-base;
 
           td {
-            border: none;
+            border: 0;
           }
         }
       }
@@ -828,7 +654,59 @@
   }
 }
 
-.crm-participant-form-block-delete {
-  background-color: $alert-warning-bg;
-  color: $gray-darker;
+.CRM_Event_Form_Task_Cancel,
+.CRM_Event_Form_Task_Delete,
+.CRM_Event_Form_Task_Badge,
+.CRM_Event_Form_Task_PDF,
+.CRM_Event_Form_Task_PickProfile {
+  .crm-form-block {
+    padding-top: 20px;
+  }
+
+  .status.no-popup {
+    margin: $crm-status-bar-no-top;
+  }
+}
+
+.CRM_Event_Form_Task_PickProfile {
+  .crm-submit-buttons {
+    margin-top: 10px !important;
+  }
+}
+
+.CRM_Event_Form_Task_Badge {
+  .crm-task-count {
+    margin-left: 25px;
+  }
+}
+
+.CRM_Event_Form_Task_PDF {
+  .form-layout-compressed {
+    tr {
+      td:first-child {
+        padding-left: 20px;
+      }
+    }
+  }
+
+  .crm-pdf-format-accordion {
+    .crm-form-block {
+      box-shadow: none;
+
+      tr {
+        td:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .crm-html_email-accordion {
+    margin-bottom: 10px;
+
+    .helpIcon {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
 }
