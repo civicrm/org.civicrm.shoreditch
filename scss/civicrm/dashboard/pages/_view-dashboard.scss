@@ -40,9 +40,8 @@
       display: grid;
 
       .crm-search_filters-accordion {
-        .select2-container {
-          min-width: auto;
-          width: auto;
+        td:nth-child(3) {
+          min-width: 285px;
         }
       }
 

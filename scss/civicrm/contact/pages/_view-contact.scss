@@ -59,6 +59,16 @@
     }
   }
 
+  .crm-block {
+    padding: 0 !important;
+
+    .crm-activity-form-block-custom_data {
+      td:first-child {
+        padding: 0;
+      }
+    }
+  }
+
   .action-link a.button {
     font-size: $font-size-base !important;
   }

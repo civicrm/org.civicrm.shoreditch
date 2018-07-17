@@ -196,6 +196,7 @@
   }
 
   .crm-submit-buttons {
+    margin-bottom: 20px;
     padding: 0;
 
     a.newGroup.button {
@@ -230,6 +231,12 @@
       .font-italic {
         font-style: normal;
       }
+    }
+  }
+
+  .crm-group-form-block-description {
+    br {
+      display: none;
     }
   }
 

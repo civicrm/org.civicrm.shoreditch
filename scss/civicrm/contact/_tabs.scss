@@ -183,6 +183,15 @@
     color: #222;
   }
 
+  #ui-id-11 {
+    overflow: auto;
+
+    .crm-accordion-body,
+    .contact-activity-selector-activity {
+      overflow: auto;
+    }
+  }
+
   .ui-dialog {
     background: $crm-white;
   }
