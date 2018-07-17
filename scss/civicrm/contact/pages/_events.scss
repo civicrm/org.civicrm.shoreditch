@@ -201,7 +201,7 @@
     legend {
       float: left;
       margin: 15px 0;
-      padding: 10px 15px 10px 0;
+      padding: 10px 15px 10px 20px;
       width: 100%;
     }
 
@@ -209,6 +209,11 @@
       br {
         display: none;
       }
+    }
+
+    td.label {
+      min-width: 170px;
+      padding-left: 0;
     }
   }
 

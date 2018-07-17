@@ -107,6 +107,11 @@
   .CRM_Tag_Form_Edit {
     table.form-layout-compressed {
       margin: 0 25px;
+
+      td > input.crm-form-color {
+        min-width: 48px !important;
+        width: 48px !important;
+      }
     }
 
     div,
