@@ -8,9 +8,9 @@ h3 {
   @include initial(font-family, $font-family-base);
   @include initial(padding, 0);
   @include initial(margin, 0);
+  font-size: $font-size-h3;
 
   font-weight: 400;
-  font-size: $font-size-h3;
 }
 
 table {
@@ -52,6 +52,12 @@ table {
 }
 
 .crm-button .crm-i {
-  left: .6em;
-  top: .6em;
+  left: 0.6em;
+  top: 0.6em;
+}
+
+label .crm-error-label {
+  @include initial(padding, 0);
+
+  font-size: $font-size-base;
 }

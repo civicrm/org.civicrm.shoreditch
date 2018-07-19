@@ -5,7 +5,6 @@ label {
 
 .checkbox,
 .radio {
-
   > label {
     color: $text-color;
   }
@@ -14,15 +13,19 @@ label {
 .form-control {
   @include box-shadow($crm-form-control-shadow);
 
+  &[disabled],
+  [disabled] & {
+    color: $crm-grayblue-darker;
+  }
+
   &:focus {
     @include box-shadow($crm-form-control-shadow);
     border-color: $brand-primary;
   }
 
-  &[disabled],
-  &[readonly],
-  fieldset[disabled] & {
-    color: $crm-grayblue-darker;
+  &[readonly] {
+    background-color: $crm-white;
+    color: $crm-gray-matte;
   }
 }
 
@@ -32,10 +35,8 @@ label {
 }
 
 .form-horizontal {
-
   .has-feedback {
-
-    [uib-datepicker-popup] + .form-control-feedback {
+    [uib-datepicker-popup] + .form-control-feedback { /* stylelint-disable selector-max-compound-selectors */
       right: 41px;
     }
   }
@@ -51,8 +52,8 @@ label {
     .form-group {
       overflow: initial;
 
-      input[type="checkbox"] {
-          margin-top: 8px;
+      [type='checkbox'] {
+        margin-top: 8px;
       }
     }
 
@@ -68,7 +69,6 @@ label {
 
 // A .form-horizontal spreaded on a single line
 .form-horizontal-inline {
-
   .form-group {
     margin-bottom: 0;
   }
@@ -78,9 +78,8 @@ label {
 .form-inline {
 
   @media (min-width: $screen-sm-min) {
-
-    .checkbox input[type="checkbox"],
-    .radio input[type="radio"] {
+    .checkbox [type='checkbox'],
+    .radio [type='radio'] {
       margin-right: 10px;
     }
   }
@@ -115,7 +114,6 @@ label {
 .has-success,
 .has-warning,
 .has-error {
-
   .control-label {
     color: $gray-darker;
   }
@@ -124,40 +122,38 @@ label {
 // Restoring label colors for checkboxes and radio buttons with status
 .has-success {
 
+  @include form-control-validation($state-success-text, $state-success-border, $state-success-bg);
+
   .radio label,
   .checkbox label,
   .radio-inline label,
-  .checkbox-inline label  {
+  .checkbox-inline label {
     color: $state-success-text;
   }
-
-  @include form-control-validation($state-success-text, $state-success-border, $state-success-bg);
 }
 
 .has-warning {
 
+  @include form-control-validation($state-warning-text, $state-warning-border, $state-warning-bg);
+
   .radio label,
   .checkbox label,
   .radio-inline label,
-  .checkbox-inline label  {
+  .checkbox-inline label {
     color: $state-warning-text;
   }
-
-  @include form-control-validation($state-warning-text, $state-warning-border, $state-warning-bg);
 }
 
 .has-error {
-
   .radio label,
   .checkbox label,
   .radio-inline label,
-  .checkbox-inline label  {
+  .checkbox-inline label {
     color: $state-danger-text;
   }
 }
 
 .input-group-btn {
-
   .btn-default {
     border-color: $input-border;
     text-transform: none;
@@ -165,8 +161,8 @@ label {
 }
 
 // AngularJS CSS classes
-.form-submitted, .ng-submitted {
-
+.form-submitted,
+.ng-submitted {
   .ng-invalid {
     border: 1px solid $brand-danger;
   }
@@ -174,10 +170,9 @@ label {
 
 // Required mark (*)
 .required-mark {
-
-  &:after {
-    content:"*";
+  &::after {
     color: $brand-danger;
+    content: '*';
     margin-left: 5px;
   }
 }
@@ -185,7 +180,7 @@ label {
 .required-mark-input {
   position: relative;
 
-  &:after {
+  &::after {
     bottom: 0;
     position: absolute;
     right: -10px;
