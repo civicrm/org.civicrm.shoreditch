@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 #{civi-page('contact-search')} {
   #searchForm {
     .crm-form-block {
@@ -8,6 +10,10 @@
       .label {
         margin-top: 6px;
       }
+    }
+
+    label.crm-inline-error {
+      margin-left: 10px;
     }
   }
 }
