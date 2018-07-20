@@ -74,4 +74,20 @@
       margin: 0 0 0 30px;
     }
   }
+
+  #relationship {
+    .select2-container {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form-layout {
+    .crm-i-button {
+      margin-top: 15px;
+
+      .crm-i {
+        top: -2px;
+      }
+    }
+  }
 }
