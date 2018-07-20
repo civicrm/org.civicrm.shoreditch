@@ -98,6 +98,10 @@
       font-weight: $crm-font-weight-h3 !important;
     }
 
+    label.crm-inline-error {
+      margin-left: 10px;
+    }
+
     input[type=email],
     input[type=number],
     input[type=password],
