@@ -32,7 +32,7 @@
     margin-right: 15px;
     padding: 0 24px;
 
-    &:before {
+    &::before {
       @include fa-icon(1em, $fa-var-search);
       color: $crm-gray-matte;
       float: left;
@@ -50,7 +50,7 @@
 
     .form-text {
       background: transparent !important;
-      border: none;
+      border: 0;
       color: $gray-dark;
       font-family: $font-family-base;
       font-size: $font-size-base;
@@ -78,8 +78,7 @@
 
 // Sub menus of the main menu
 #root-menu-div {
-
-  [class^="shadowbox"] {
+  [class^='shadowbox'] {
     display: none;
   }
 
@@ -150,7 +149,7 @@
 
     &.ui-state-active {
       background: $gray-light;
-      border: none;
+      border: 0;
       margin: 0;
     }
 
