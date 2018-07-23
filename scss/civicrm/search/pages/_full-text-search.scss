@@ -1,8 +1,14 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
 
-.CRM_Contact_Form_Search_Custom .crm-search-form-block table.form-layout-compressed td {
-  input.crm-form-submit {
-    @extend .btn-sm;
-    margin-left: 20px !important;
+.CRM_Contact_Form_Search_Custom .crm-search-form-block table.form-layout-compressed {
+  td {
+    input.crm-form-submit {
+      @extend .btn-sm;
+      margin-left: 20px !important;
+    }
+  }
+
+  td.label {
+    width: auto;
   }
 }

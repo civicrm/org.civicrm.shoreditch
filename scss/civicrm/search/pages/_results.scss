@@ -82,6 +82,7 @@
     margin: 0 !important;
 
     + .crm-selection-reset {
+      clear: right;
       float: right;
       margin-bottom: 10px !important;
       margin-top: 10px;
@@ -131,6 +132,12 @@
 
         a.action-item {
           display: inline-block;
+        }
+
+        .btn-slide-active {
+          a.action-item {
+            display: block;
+          }
         }
       }
 
