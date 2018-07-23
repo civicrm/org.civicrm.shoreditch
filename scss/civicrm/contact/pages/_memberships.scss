@@ -256,6 +256,12 @@
       margin-left: 40px;
     }
   }
+  
+  #contributionTypeToggle {
+    > td {
+      padding-left: 20px;
+    }
+  }
 
   .crm-membership-form-block {
     .auto-renew-text {
