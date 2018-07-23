@@ -60,7 +60,8 @@
     .crm-activity-form-block-location,
     .crm-activity-form-block-duration {
       input {
-        min-width: 500px !important;
+        min-width: 100px !important;
+        width: 100px !important;
       }
     }
   }

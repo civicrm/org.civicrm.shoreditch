@@ -5,6 +5,10 @@
     display: none;
   }
 
+  .crm-submit-buttons:last-child {
+    border-top: 0 !important;
+  }
+
   .crm-contactEmail-form-block {
     padding-top: 20px !important;
 
