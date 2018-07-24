@@ -1,13 +1,19 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .crm-pager {
   background: $crm-white;
   border-radius: 0;
   box-shadow: $box-shadow;
-  margin: 15px 0;
   font-size: 13px;
+  margin: 15px 0;
 
   &,
   a {
     color: $gray-darker !important;
+  }
+
+  a.ui-spinner-button:hover {
+    border-left: 1px solid $crm-grayblue-dark;
   }
 
   > .element-right {
@@ -15,17 +21,17 @@
   }
 
   .crm-hover-button {
-    text-transform: capitalize !important;
     position: relative;
+    text-transform: capitalize !important;
     top: -2px;
   }
 }
 
 .ui-spinner {
-  border-radius: 2px;
   border: 1px solid $crm-grayblue-darker !important;
-  font-size: 13px;
+  border-radius: 2px;
   color: $crm-copy;
+  font-size: 13px;
 
   > a {
     background: none;
