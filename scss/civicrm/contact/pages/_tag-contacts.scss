@@ -247,9 +247,13 @@
 }
 
 #popupContainer {
-  background: none !important;
+  background-color: $crm-white !important;
 
-  td {
-    text-align: left;
+  #selectedRecords-_wrapper {
+    box-shadow: none;
+
+    td {
+      text-align: left;
+    }
   }
 }
