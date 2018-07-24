@@ -75,6 +75,12 @@
         text-transform: none;
       }
     }
+
+    #options {
+      .field-action {
+        float: right;
+      }
+    }
   }
 
   .CRM_Price_Form_Field {

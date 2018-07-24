@@ -253,6 +253,12 @@
       padding-bottom: 0;
     }
   }
+
+  .crm-contact-contribute-contributions {
+    .crm-ajax-container {
+      border: 1px solid $crm-grayblue-dark !important;
+    }
+  }
 }
 
 #{civi-page('contribute-campaign')},
@@ -382,6 +388,16 @@
 
   .crm-results-block-empty {
     box-shadow: none !important;
+  }
+
+  #contributionSearch {
+    .crm-pager {
+      margin: 15px 0;
+
+      .element-right {
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -567,6 +583,14 @@
 
     .crm-submit-buttons {
       border-bottom: 0;
+    }
+
+    .crm-contribution-form-block {
+      padding-top: 20px !important;
+
+      .status {
+        margin: 0 20px 20px;
+      }
     }
   }
 }
@@ -808,13 +832,6 @@
     font-family: $font-family-base;
     margin: 10px 0;
 
-    &.crm-info-panel {
-      margin-left: -20px;
-      margin-right: -20px;
-      margin-top: -20px;
-      width: 105%;
-    }
-
     thead tr {
       border: 1px solid $crm-background !important;
 
@@ -948,6 +965,13 @@
 
     .html-adjust {
       width: 100%;
+    }
+  }
+
+  .crm-submit-buttons {
+    a.button {
+      background-color: #0071bd;
+      margin-bottom: 29px;
     }
   }
 }
@@ -1130,7 +1154,6 @@ form.CRM_Contribute_Form_ContributionCharts {
   }
 
   table.selector {
-    @include box-shadow($crm-form-layout-shadow-lower !important);
     border-radius: 0;
 
     > tbody > tr > td + .crm-pager {
@@ -1209,6 +1232,14 @@ form.CRM_Contribute_Form_ContributionCharts {
       padding: 4px 10px;
       text-shadow: none;
       vertical-align: middle;
+    }
+  }
+}
+
+#{civi-page('contribute-import')} {
+  #upload-file {
+    .help {
+      margin: 20px;
     }
   }
 }
