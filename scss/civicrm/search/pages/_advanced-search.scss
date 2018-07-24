@@ -26,6 +26,10 @@
 
       &:nth-child(3) {
         clear: left;
+
+        .crm-submit-buttons {
+          padding: 0 20px;
+        }
       }
     }
 

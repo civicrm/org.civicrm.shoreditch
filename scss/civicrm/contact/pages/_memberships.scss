@@ -576,6 +576,8 @@
 
     tbody {
       tr:last-child {
+        border-bottom: 1px solid $gray-light !important;
+
         td {
           text-align: left;
         }
