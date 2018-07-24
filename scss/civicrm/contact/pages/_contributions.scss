@@ -1239,7 +1239,7 @@ form.CRM_Contribute_Form_ContributionCharts {
 #{civi-page('contribute-import')} {
   #upload-file {
     .help {
-      margin: 20px;
+      margin: $crm-panel-nested-indent;
     }
   }
 }
