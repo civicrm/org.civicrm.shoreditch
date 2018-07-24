@@ -160,7 +160,7 @@
 
     > div {
       background-color: $crm-white;
-      padding: 15px;
+      padding: 5px 15px;
     }
   }
 }
@@ -243,5 +243,13 @@
         }
       }
     }
+  }
+}
+
+#popupContainer {
+  background: none !important;
+
+  td {
+    text-align: left;
   }
 }
