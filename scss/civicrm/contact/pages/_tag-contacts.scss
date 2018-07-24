@@ -160,7 +160,7 @@
 
     > div {
       background-color: $crm-white;
-      padding: 15px;
+      padding: 5px 15px;
     }
   }
 }
@@ -242,6 +242,18 @@
           background: $crm-white;
         }
       }
+    }
+  }
+}
+
+#popupContainer {
+  background-color: $crm-white !important;
+
+  #selectedRecords-_wrapper {
+    box-shadow: none;
+
+    td {
+      text-align: left;
     }
   }
 }
