@@ -78,7 +78,7 @@
         display: inline-block;
         height: $crm-control-height !important;
         line-height: normal;
-        padding-right: 10px !important;
+        padding-right: 35px !important;
         position: relative;
         top: 1px;
         width: auto !important;
@@ -96,6 +96,10 @@
       color: $gray-darker;
       font-size: $font-size-base;
       font-weight: $crm-font-weight-h3 !important;
+    }
+
+    label.crm-inline-error {
+      margin-left: 10px;
     }
 
     input[type=email],

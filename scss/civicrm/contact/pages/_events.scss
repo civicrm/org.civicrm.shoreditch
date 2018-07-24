@@ -699,3 +699,16 @@
     }
   }
 }
+
+.CRM_Event_Form_Task_Batch {
+  .help {
+    background: none;
+
+    .status {
+      background: none;
+      border: 0;
+      font-weight: $crm-font-weight-h5;
+      padding: 0;
+    }
+  }
+}

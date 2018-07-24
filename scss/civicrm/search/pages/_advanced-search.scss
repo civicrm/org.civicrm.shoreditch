@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
 .CRM_Contact_Form_Search_Advanced {
   @import 'variables';
   @import 'labels';
@@ -24,14 +26,18 @@
 
       &:nth-child(3) {
         clear: left;
+
+        .crm-submit-buttons {
+          padding: 0 20px;
+        }
       }
     }
 
     .adv-search-top-submit {
       border-top: solid 1px $crm-background;
-      width: 100% !important;
-      padding-top: 20px;
       margin-top: 20px;
+      padding-top: 20px;
+      width: 100% !important;
 
       > div {
         float: left;
@@ -51,9 +57,9 @@
 
   #{$cases} {
     > table > tbody > tr:nth-child(-n+3) td {
-      width: 50vw;
       padding-left: 0;
       padding-right: 0;
+      width: 50vw;
     }
   }
 
@@ -64,6 +70,28 @@
   #{$footer} {
     td {
       padding-left: 20px;
+    }
+  }
+
+  #location {
+    input[type='checkbox'] {
+      margin: 0 0 0 30px;
+    }
+  }
+
+  #relationship {
+    .select2-container {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form-layout {
+    .crm-i-button {
+      margin-top: 15px;
+
+      .crm-i {
+        top: -2px;
+      }
     }
   }
 }

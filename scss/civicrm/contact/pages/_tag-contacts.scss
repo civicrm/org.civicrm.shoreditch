@@ -35,6 +35,8 @@
     }
 
     .button {
+      margin-top: 10px !important;
+
       &:hover {
         .fa-trash {
           color: $crm-white;
@@ -68,7 +70,7 @@
 
   .ui-tabs {
     div.tag-tree-wrapper {
-      min-height: 300px;
+      min-height: 350px;
     }
 
     input[name='filter_tag_tree'] {

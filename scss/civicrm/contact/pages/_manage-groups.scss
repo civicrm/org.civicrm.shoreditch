@@ -188,7 +188,7 @@
 
 #{civi-page('group')} {
   .help {
-    margin: 20px 0;
+    margin: 0 0 20px;
 
     + .crm-submit-buttons {
       display: none;
@@ -204,6 +204,7 @@
 
       .crm-i {
         bottom: 1px;
+        margin: 0;
         position: relative;
       }
     }
@@ -464,10 +465,12 @@
 
     h3 {
       @extend .collapsible-title;
+      border-bottom: 0;
       margin-top: 20px;
     }
 
     .crm-submit-buttons {
+      border-top: 0;
       margin: 20px 0 0 !important;
     }
   }
