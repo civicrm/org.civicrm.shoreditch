@@ -1,0 +1,92 @@
+#{civi-page('case')} {
+  .crm-case-dashboard-switch-view-buttons {
+    > div {
+      display: inline-block;
+      padding: 7.5px;
+    }
+
+    input,
+    span {
+      display: inline;
+      line-height: 21px;
+    }
+
+    input {
+      margin-right: 5px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .crm-content-block {
+    > .form-item {
+      padding: 0;
+    }
+  }
+
+  .form-item {
+    .dataTables_wrapper {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      .dataTables_wrapper {
+        margin-bottom: 20px;
+      }      
+    }
+  }
+
+  .dataTables_wrapper {
+    @include box-shadow($crm-form-layout-shadow-lower !important);
+    border-top: 1px solid $crm-grayblue-dark;
+    margin-bottom: 0;
+
+    .crm-datatable-pager-top {
+      border-radius: 0;
+    }      
+  }
+
+  .selector,
+  .report {
+    @include expandable-table;
+    @include box-shadow($crm-form-layout-shadow-lower !important);
+
+    th:first-child,
+    td:first-child {
+      width: 300px;
+    }
+    
+    td:last-child {
+      text-align: left !important;
+    }
+  }  
+
+  .CRM_Case_Form_Search {
+    .crm-submit-buttons {
+      padding: 15px 0;
+    }
+
+    .columnheader {
+      border: 0 !important;
+      border-bottom: 1px solid $crm-grayblue-dark !important;
+    }
+
+    h3 {
+      @include box-shadow($box-shadow);
+      @include panel-header();
+      margin: 20px 0 0;
+    }
+
+    .crm-accordion-body {
+      box-shadow: none !important;
+    }
+
+    div[class*='crm-case-filter-'] {
+      @include box-shadow($crm-form-layout-shadow-lower !important);
+    }
+
+    .spacer {
+      display: none;
+    }
+  }  
+}
