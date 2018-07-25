@@ -1,0 +1,43 @@
+.CRM_Case_Form_CaseView {
+  h3 {
+    @include box-shadow($box-shadow);
+    @include panel-header();
+    margin: 20px 0 0;    
+  }
+
+  .crm-submit-buttons {
+    padding: 20px 0;
+  }
+
+  .report {
+    @include expandable-table;
+    border-bottom: 1px solid $crm-grayblue-dark !important;
+    box-shadow: none !important;
+
+    th:first-child,
+    td:first-child {
+      width: 300px;
+    }
+    
+    td:last-child {
+      text-align: left !important;
+    }
+  }
+
+  .dataTables_empty {
+    padding: 20px 0 !important;
+  }
+
+  .case-control-panel {
+    padding: 10px 20px;
+  }
+
+  .crm-search_filters-accordion {
+    @include box-shadow($box-shadow);
+    border-bottom: 1px solid $crm-grayblue-dark !important;
+    
+    .crm-accordion-body {
+      box-shadow: none;
+    }
+  }
+}

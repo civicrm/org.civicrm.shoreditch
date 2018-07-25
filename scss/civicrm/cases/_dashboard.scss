@@ -84,9 +84,5 @@
     div[class*='crm-case-filter-'] {
       @include box-shadow($crm-form-layout-shadow-lower !important);
     }
-
-    .spacer {
-      display: none;
-    }
   }  
 }
