@@ -62,7 +62,7 @@ $datepicker-gray-darker: #525966;
       @extend .form-control; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
       @include prefix(appearance, none, webkit moz);
 
-      background: url('../svgs/drop-down-arrow.svg') no-repeat right !important;
+      background: url($crm-image-path + 'drop-down-arrow.svg') no-repeat right !important;
       display: inline-block;
       float: left;
       font-size: 0.8em;
