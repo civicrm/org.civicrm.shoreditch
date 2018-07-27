@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #contact-summary-relationship-tab.view-content {
   font-family: $font-family-base;
@@ -11,20 +11,12 @@
     }
   }
 
-  h3,
   .label.font-red {
     @include box-shadow($box-shadow);
+    background-color: $brand-danger;
     color: $crm-white !important;
     font-size: $font-size-h2;
     font-weight: $crm-font-weight-h2;
-  }
-
-  h3 {
-    background-color: $brand-primary;
-  }
-
-  .label.font-red {
-    background-color: $brand-danger;
   }
 
   .crm-contact-relationship-current {

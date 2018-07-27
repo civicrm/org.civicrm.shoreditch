@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #{civi-page('contact')} {
   #contact-summary-relationship-tab {
@@ -14,16 +14,6 @@
         background: $brand-primary !important;
         border-color: transparent !important;
       }
-    }
-
-    h3 {
-      background: $gray-lighter;
-      border-bottom: 1px solid $crm-background;
-      border-radius: $panel-border-radius $panel-border-radius 0 0;
-      color: $gray-darker;
-      font: $crm-font-weight-h2 $font-size-h2 $font-family-base;
-      margin: 0;
-      padding: 12px 20px;
     }
 
     .dataTables_wrapper {
@@ -104,13 +94,9 @@
       }
     }
 
-    h3,
-    .accordion {
-      box-shadow: $box-shadow;
-    }
-
     .accordion {
       border-radius: $panel-border-radius;
+      box-shadow: $box-shadow;
       margin-bottom: 10px;
     }
 

@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #{civi-page('activity')} {
   .CRM_Activity_Form_Activity {
@@ -69,12 +69,6 @@
   #{civi-dialog()} {
     .ui-dialog-content {
       padding: 0;
-    }
-
-    h3 {
-      @include section-title;
-      background: $crm-white;
-      margin-bottom: 0;
     }
 
     .row-highlight {

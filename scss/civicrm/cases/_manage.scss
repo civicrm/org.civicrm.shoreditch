@@ -1,10 +1,6 @@
-.CRM_Case_Form_CaseView {
-  h3 {
-    @include box-shadow($box-shadow);
-    @include panel-header();
-    margin: 20px 0 0;    
-  }
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
+.CRM_Case_Form_CaseView {
   .crm-submit-buttons {
     padding: 20px 0;
   }

@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 #{civi-page('case')} {
   .crm-case-dashboard-switch-view-buttons {
     > div {
@@ -69,12 +71,6 @@
     .columnheader {
       border: 0 !important;
       border-bottom: 1px solid $crm-grayblue-dark !important;
-    }
-
-    h3 {
-      @include box-shadow($box-shadow);
-      @include panel-header();
-      margin: 20px 0 0;
     }
 
     .crm-accordion-body {

@@ -1,5 +1,6 @@
-&#{civi-page('admin-setting-preferences-date')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
+&#{civi-page('admin-setting-preferences-date')} {
   #crm-main-content-wrapper .form-item {
     @include civicrm-panel;
     @include civicrm-table;
