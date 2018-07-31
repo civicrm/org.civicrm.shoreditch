@@ -1,12 +1,13 @@
-#{civi-page('member-import')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
+#{civi-page('member-import')} {
   #DataSource,
   #MapField,
   #Summary {
     .crm-submit-buttons {
-      padding: 15px 20px !important;
-      border: none;
+      border: 0;
       margin: 0 !important;
+      padding: 15px 20px !important;
     }
   }
 
@@ -17,9 +18,9 @@
   }
 
   .form-layout {
-    padding: 20px;
-    display: block;
     box-sizing: border-box;
+    display: block;
+    padding: 20px;
 
     #uploadFile,
     #upload-file,
@@ -29,8 +30,8 @@
     }
 
     #skipColumnHeader {
-      position: relative;
       left: 80px;
+      position: relative;
     }
 
     input[type=radio] + label[for] {
@@ -39,16 +40,16 @@
 
     .crm-import-datasource-form-block-fieldSeparator {
       .helpicon {
-        position: relative;
         bottom: 5px;
+        position: relative;
       }
     }
   }
 
   #map-field {
-    padding: 20px;
     margin-left: -20px;
     margin-right: -20px;
+    padding: 20px;
 
     table {
       @include expandable-table;
@@ -56,12 +57,12 @@
       margin-bottom: 20px;
 
       th {
-        border-right: none !important;
+        border-right: 0 !important;
       }
 
       td {
+        padding: 8px 10px 10px !important;
         vertical-align: middle;
-        padding: 8px 10px 10px 10px !important;
       }
 
       tr {
@@ -86,12 +87,12 @@
     width: 96% !important;
 
     th {
-      border-right: none !important;
+      border-right: 0 !important;
     }
 
     td {
+      padding: 8px 10px 10px !important;
       vertical-align: middle;
-      padding: 8px 10px 10px 10px !important;
     }
 
     tr {

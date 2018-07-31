@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 #{civi-page('case')} {
   .crm-case-dashboard-switch-view-buttons {
     > div {
@@ -71,22 +73,12 @@
       border-bottom: 1px solid $crm-grayblue-dark !important;
     }
 
-    h3 {
-      @include box-shadow($box-shadow);
-      @include panel-header();
-      margin: 20px 0 0;
-    }
-
     .crm-accordion-body {
       box-shadow: none !important;
     }
 
     div[class*='crm-case-filter-'] {
       @include box-shadow($crm-form-layout-shadow-lower !important);
-    }
-
-    .spacer {
-      display: none;
     }
   }  
 }

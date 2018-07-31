@@ -3,6 +3,6 @@
  */
 @mixin civicrm-panel() {
   background: $crm-white;
-  box-shadow: $box-shadow;
   border-radius: $border-radius-base;
+  box-shadow: $box-shadow;
 }

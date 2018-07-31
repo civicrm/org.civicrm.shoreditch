@@ -1,18 +1,7 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 &#{civi-page('admin-setting-smtp')} {
   .crm-form-block {
-    h3 {
-      @include panel-header;
-    }
-
-    .crm-smtp-mailer-form-block {
-      h3 {
-        border-radius: 0;
-        border-top: 1px solid $crm-grayblue-dark;
-      }
-    }
-
     table.form-layout-compressed {
       .crm-smtp-form-block-outBound_option {
         td {

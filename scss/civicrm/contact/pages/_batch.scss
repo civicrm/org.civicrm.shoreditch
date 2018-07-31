@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #{civi-page('batch')} {
   .action-link {
@@ -20,16 +20,6 @@
 
   .crm-batch-search-form-block,
   .CRM_Batch_Form_Batch {
-    h3 {
-      background: $gray-lighter !important;
-      border-bottom: 1px solid $crm-grayblue-dark;
-      border-radius: $border-radius-child $border-radius-child 0 0;
-      color: $gray-darker;
-      font: $crm-font-weight-h3 $font-size-h2 $font-family-base;
-      margin: 0;
-      padding: 17px 25px;
-    }
-
     div.messages {
       margin: 0 20px;
     }

@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 #crm-container li.widget {
   padding: 5px !important;
 
@@ -5,15 +7,11 @@
     background-color: $crm-copy;
     padding: 17px 10px;
 
-    h3 {
-      font: $crm-font-weight-h4 $font-size-h2 $font-family-base;
-    }
-
-    .fa-caret-down:before {
+    .fa-caret-down::before {
       content: $fa-caret-down;
     }
 
-    .fa-caret-right:before {
+    .fa-caret-right::before {
       content: $fa-caret-right;
     }
 
@@ -36,7 +34,7 @@
 
   table {
     background: transparent;
-    border: none;
+    border: 0;
     font-family: $font-family-base;
 
     thead {
@@ -45,8 +43,8 @@
 
     thead th {
       background: $gray-lighter !important;
-      border: none;
-      border-bottom: none;
+      border: 0;
+      border-bottom: 0;
       color: $gray-darker !important;
       line-height: 1.5em;
       padding: 10px 15px;
@@ -64,7 +62,7 @@
 
       td {
         background: $crm-white;
-        border: none;
+        border: 0;
         color: $gray-dark;
         line-height: 1.5em;
         padding: 10px 15px;
@@ -75,7 +73,7 @@
 
   #help {
     background-color: $alert-success-bg;
-    border: none;
+    border: 0;
     border-radius: 0;
     clear: both;
     color: $gray-darker;
@@ -83,19 +81,10 @@
     padding: 15px;
   }
 
-  h3 {
-    background-color: $gray-lighter;
-    border-bottom: 1px solid $crm-grayblue-dark;
-    border-top: 1px solid $crm-background;
-    color: $crm-copy;
-    font-family: $font-family-base;
-    font-size: $font-size-medium;
-    padding: 10px 15px;
-  }
 }
 
 #crm-container .portlet {
-  border: none;
+  border: 0;
 
   .portlet-header {
     background: $crm-accordion-header-color;
@@ -131,7 +120,7 @@
 
   #help {
     background-color: $alert-success-bg;
-    border: none;
+    border: 0;
     border-radius: $border-radius-base;
     clear: both;
     color: $gray-darker;
@@ -143,7 +132,7 @@
   }
 }
 
-#crm-container div[id*="dashlets-header-col"] {
+#crm-container div[id*='dashlets-header-col'] {
   @include border-box();
   background: $crm-copy;
   color: $crm-white;
@@ -154,26 +143,26 @@
   text-align: center;
   width: 49% !important;
 
-  &[id*="col-1"] {
+  &[id*='col-1'] {
     float: right;
   }
 }
 
-#crm-container div[id*="existing-dashlets-col"] {
+#crm-container div[id*='existing-dashlets-col'] {
   @include border-box();
   background: $crm-white !important;
-  border: none !important;
+  border: 0 !important;
   float: left;
   margin: 0 !important;
   padding: 15px;
   width: 49% !important;
 
-  &[id*="col-1"] {
+  &[id*='col-1'] {
     float: right;
   }
 
   .portlet {
-    border: none;
+    border: 0;
     margin-bottom: 10px;
     margin-left: 0;
     margin-right: 0;

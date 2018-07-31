@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 // System Status
 #crm-status-list {
@@ -16,16 +16,14 @@
       }
 
       h3 {
-        font-family: $font-family-base;
-        margin: 0;
-        opacity: 1;
-        padding: 10px;
+        @include section-title;
 
         &.crm-severity-alert,
         &.crm-severity-critical,
         &.crm-severity-emergency,
         &.crm-severity-error {
           background: $brand-danger;
+          color: $crm-white;
         }
 
         &.crm-severity-warning {
@@ -41,6 +39,7 @@
 
         &.crm-severity-notice {
           background: $brand-primary;
+          color: $crm-white;
         }
       }
 
@@ -58,6 +57,7 @@
         color: $gray-dark;
         cursor: pointer;
         height: auto;
+        margin: 5px 0;
         padding: 5px 10px;
       }
 
