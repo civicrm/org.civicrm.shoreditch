@@ -2,21 +2,6 @@
 
 #{civi-page('contact')} {
   #GroupContact {
-    h3 {
-      @include box-shadow($box-shadow);
-      @include panel-header;
-      background: $brand-primary;
-      border: 0;
-      color: $crm-white;
-      margin: 0;
-
-      &.status-removed {
-        background: $brand-danger;
-        border-color: $brand-danger;
-        color: $crm-white !important;
-      }
-    }
-
     .dataTables_wrapper table tbody tr td:last-child {
       text-align: right;
     }
@@ -216,8 +201,7 @@
     padding: 20px !important;
 
     h3 {
-      @include panel-header;
-      margin: -20px -20px 20px;
+      margin: -20px -20px 20px !important;
     }
 
     > table td {
@@ -340,11 +324,6 @@
   .ui-dialog .CRM_Group_Form_Edit .crm-form-block {
     margin: 0 -20px;
 
-    h3 {
-      @include section-title;
-      margin: 0 0 10px;
-    }
-
     .action-link {
       margin-left: 20px;
     }
@@ -462,13 +441,7 @@
     .crm-form-textarea {
       min-height: 70px;
     }
-
-    h3 {
-      @extend .collapsible-title;
-      border-bottom: 0;
-      margin-top: 20px;
-    }
-
+    
     .crm-submit-buttons {
       border-top: 0;
       margin: 20px 0 0 !important;

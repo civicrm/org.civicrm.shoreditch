@@ -1,7 +1,7 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 &#{civi-page('admin-menu')} {
-
   .crm-content-block {
-
     #new-menu-item {
       background: $gray-lighter;
       margin: 0;
@@ -21,7 +21,6 @@
     }
 
     #navigation-tree {
-
       ul > li {
         padding: 5px;
       }

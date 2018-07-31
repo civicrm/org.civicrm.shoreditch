@@ -1,9 +1,1 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
-
-#{civi-page('cividiscount')} {
-  .CRM_CiviDiscount_Form_Admin {
-    h3 {
-      background: none;
-    }
-  }
-}
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */

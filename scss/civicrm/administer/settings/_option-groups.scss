@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 &#{civi-page('admin-options')} {
   #browseValues {
@@ -24,10 +24,6 @@
 
     .form-layout {
       margin: 0 0 10px;
-    }
-
-    h3 {
-      @include section-title;
     }
 
     h3 + .description {

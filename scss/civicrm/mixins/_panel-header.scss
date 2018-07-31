@@ -1,4 +1,7 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 @mixin panel-header() {
+  @include box-shadow($crm-contribute-form-shadow);
   background: $gray-lighter;
   border-bottom: 1px solid $crm-grayblue-dark;
   border-radius: $border-radius-base $border-radius-base 0 0;
@@ -6,6 +9,7 @@
   font-family: $font-family-base;
   font-size: $font-size-h2;
   line-height: 28px;
+  margin: 0;
   padding: 13px 20px;
 
   a {

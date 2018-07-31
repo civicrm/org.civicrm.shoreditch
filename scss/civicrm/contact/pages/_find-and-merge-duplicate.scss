@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #{civi-page('contact-deduperules')} {
   #crm-main-content-wrapper {
@@ -77,11 +77,6 @@
   }
 
   #DedupeRules {
-    h3 {
-      @extend .collapsible-title;
-      margin-bottom: 0;
-    }
-
     .crm-dedupe-rules-form-block {
       padding: 20px 20px 0 !important;
 
@@ -110,16 +105,7 @@
 
 #DedupeRules {
   box-shadow: $box-shadow;
-
-  h3 {
-    background: $gray-lighter !important;
-    color: $gray-darker;
-    font-size: $font-size-h2;
-    font-weight: 600;
-    margin: 0;
-    padding: 17px 25px;
-  }
-
+  
   .crm-dedupe-rules-form-block {
     box-shadow: none;
   }

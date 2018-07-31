@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #{civi-page('tag')} {
   #branding .page-title {
@@ -145,11 +145,6 @@
 
 .CRM_Contact_Form_Task_AddToTag,
 .CRM_Contact_Form_Task_RemoveFromTag {
-  h3 {
-    padding-left: 25px;
-    padding-top: 20px;
-  }
-
   table {
     &.form-layout-compressed {
       margin: 25px;
@@ -171,17 +166,6 @@
   #Tag {
     background: $crm-white;
     box-shadow: $box-shadow;
-
-    h3 {
-      background: $gray-lighter;
-      border: 0;
-      border-bottom: 1px solid $crm-grayblue-dark;
-      color: $gray-darker;
-      font-family: $font-family-base;
-      font-size: $font-size-h2;
-      padding: 17px 20px;
-      vertical-align: middle;
-    }
 
     #tagtree {
       padding: 20px;

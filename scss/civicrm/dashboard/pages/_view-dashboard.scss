@@ -1,15 +1,10 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #civicrm-dashboard {
   .column {
     .widget-controls {
       background: $crm-copy;
       padding: 17px 10px;
-
-      h3 {
-        font-family: $font-family-base;
-        font-size: $font-size-h2;
-      }
 
       .crm-i {
         opacity: 1;
@@ -91,10 +86,6 @@
     }
 
     #civicrm-getting-started {
-      h3 {
-        @include section-title;
-      }
-
       table {
         border: 0;
         margin: 7px 0;
