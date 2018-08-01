@@ -148,3 +148,14 @@ function shoreditch_civicrm_buildForm($formName) {
       ->addVars('shoreditch', array('cssUrl' => $cssUrl));
   }
 }
+
+/**
+ * Implements hook_civicrm_pageRun().
+ */
+function shoreditch_civicrm_pageRun(&$page) {
+  $pageName = $page->getVar('_name');
+
+  if ($pageName == 'CRM_Contact_Page_View_Summary') {
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/contact-summary.js');
+  }
+}
