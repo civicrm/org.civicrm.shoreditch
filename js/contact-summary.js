@@ -1,4 +1,3 @@
-/* global CRM */
 (function ($) {
   $(document).ready(function () {
     moveUserPictureNextToContactTitle();
