@@ -4,11 +4,9 @@
   });
 
   /**
-   * Deletes User Image parent div (#crm-contact-thumbnail) and move the user picture next to contatct tile.
-   * Also adds class "crm-summary-contactphoto" to it.
+   * Prepends the container image div on .crm-summary-contactname-block
    */
   function moveUserPictureNextToContactTitle () {
-    $('.crm-summary-contactname-block').prepend($('#crm-contact-thumbnail').find('img').addClass('crm-summary-contactphoto'));
-    $('#crm-contact-thumbnail').remove();
+    $('.crm-summary-contactname-block').prepend($('#crm-contact-thumbnail'));
   }
 }(CRM.$));
