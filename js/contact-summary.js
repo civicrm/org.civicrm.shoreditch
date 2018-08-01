@@ -8,7 +8,7 @@
    * Also adds class "crm-summary-contactphoto" to it.
    */
   function moveUserPictureNextToContactTitle () {
-    $('#contactname-block').prepend($('#crm-contact-thumbnail').find('img').addClass('crm-summary-contactphoto'));
+    $('.crm-summary-contactname-block').prepend($('#crm-contact-thumbnail').find('img').addClass('crm-summary-contactphoto'));
     $('#crm-contact-thumbnail').remove();
   }
 }(CRM.$));
