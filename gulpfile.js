@@ -51,7 +51,7 @@ gulp.task('sass:civicrm', gulp.series('sass:sync', function buildCiviCRMCSS () {
 gulp.task('sass', gulp.parallel('sass:bootstrap', 'sass:civicrm'));
 
 gulp.task('watch', function () {
-  gulp.watch(civicrmScssRoot.getWatchList(), ['sass']);
+  gulp.watch(civicrmScssRoot.getWatchList(), gulp.parallel('sass'));
 });
 
 gulp.task('default', gulp.parallel('sass'));
