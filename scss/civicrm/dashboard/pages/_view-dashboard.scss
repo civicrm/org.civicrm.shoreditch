@@ -37,6 +37,11 @@
       .crm-search_filters-accordion {
         td:nth-child(3) {
           min-width: 285px;
+
+          .crm-absolute-date-from label,
+          .crm-absolute-date-to label {
+            display: block;
+          }
         }
       }
 
