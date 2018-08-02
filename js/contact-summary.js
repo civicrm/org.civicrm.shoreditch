@@ -4,7 +4,7 @@
   });
 
   /**
-   * Prepends the container image div on .crm-summary-contactname-block
+   * Moves image el left to the Contact title on contact Summary page
    */
   function moveUserPictureNextToContactTitle () {
     $('.crm-summary-contactname-block').prepend($('#crm-contact-thumbnail'));
