@@ -5,6 +5,7 @@
     padding: 20px 0;
   }
 
+  .dataTable,
   .report {
     @include expandable-table;
     border-bottom: 1px solid $crm-grayblue-dark !important;
@@ -15,13 +16,17 @@
       width: 300px;
     }
     
-    td:last-child {
-      text-align: left !important;
-    }
-  }
+    td {
+      padding: 15px 20px !important;
 
-  .dataTables_empty {
-    padding: 20px 0 !important;
+      &:last-child {
+        text-align: left !important; 
+      }
+
+      &.dataTables_empty {
+        text-align: center !important;
+      }
+    }
   }
 
   .case-control-panel {
