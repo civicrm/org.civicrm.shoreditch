@@ -1,4 +1,6 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 @mixin table-header {
-  font-weight: bold !important;
   color: $gray-darker;
+  font-weight: bold !important;
 }

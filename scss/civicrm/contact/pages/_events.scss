@@ -1,17 +1,6 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 .CRM_Event_Form_Search {
-  h3 {
-    @include box-shadow($box-shadow);
-    @include panel-header();
-    border-radius: $border-radius-base $border-radius-base 0 0;
-    margin-bottom: 0;
-
-    a {
-      font-size: $font-size-base;
-    }
-  }
-
   .status {
     background: lighten($btn-success-bg, 30%);
     border-color: $btn-success-bg;
@@ -508,11 +497,6 @@
   }
 
   .crm-event-searchevent-form-block {
-    h3 {
-      @include panel-header();
-      margin-bottom: 0;
-    }
-
     .form-layout {
       > tbody {
         > tr {

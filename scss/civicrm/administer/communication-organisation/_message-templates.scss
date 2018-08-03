@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 &#{civi-page('admin-messagetemplates')} {
   .crm-content-block {
@@ -13,12 +13,6 @@
 }
 
 &#{civi-page('admin-messagetemplates-add')} {
-  h3 {
-    @include box-shadow($box-shadow);
-    @include panel-header;
-    margin: 0;
-  }
-
   .crm-form-block {
     @include box-shadow($crm-form-layout-shadow-lower);
 

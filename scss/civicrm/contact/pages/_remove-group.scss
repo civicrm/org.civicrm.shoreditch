@@ -1,10 +1,12 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 #RemoveFromGroup {
   .crm-contact-task-removefromgroup-form-block {
     > .form-layout-compressed {
       margin-left: 20px !important;
     }
 
-    .required:after {
+    .required::after {
       display: none;
     }
   }

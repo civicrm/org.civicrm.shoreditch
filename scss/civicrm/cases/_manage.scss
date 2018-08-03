@@ -1,0 +1,44 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
+.CRM_Case_Form_CaseView {
+  .crm-submit-buttons {
+    padding: 20px 0;
+  }
+
+  .dataTable,
+  .report {
+    @include expandable-table;
+    border-bottom: 1px solid $crm-grayblue-dark !important;
+    box-shadow: none !important;
+
+    th:first-child,
+    td:first-child {
+      width: 300px;
+    }
+    
+    td {
+      padding: 15px 20px !important;
+
+      &:last-child {
+        text-align: left !important; 
+      }
+
+      &.dataTables_empty {
+        text-align: center !important;
+      }
+    }
+  }
+
+  .case-control-panel {
+    padding: 10px 20px;
+  }
+
+  .crm-search_filters-accordion {
+    @include box-shadow($box-shadow);
+    border-bottom: 1px solid $crm-grayblue-dark !important;
+    
+    .crm-accordion-body {
+      box-shadow: none;
+    }
+  }
+}

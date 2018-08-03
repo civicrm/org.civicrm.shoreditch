@@ -1,8 +1,10 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 #{civi-page('report')} {
   .action-link,
   .crm-submit-buttons {
-    line-height: normal;
     height: auto;
+    line-height: normal;
   }
 
   .crm-submit-buttons {

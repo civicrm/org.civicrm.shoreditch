@@ -64,14 +64,6 @@ body[class*='page-civicrm-report-'] {
         }
       }
 
-      h3 {
-        @include box-shadow($box-shadow);
-        @include panel-header;
-        border-bottom: 0;
-        margin-bottom: 0;
-        margin-top: 20px;
-      }
-
       br {
         display: none;
       }
@@ -144,15 +136,7 @@ body[class*='page-civicrm-report-'] {
         }
       }
     }
-
-    &-format,
-    &-email,
-    &-access {
-      h3 {
-        @include section-title;
-      }
-    }
-
+    
     &-format,
     &-access {
       padding: 10px 0 !important;

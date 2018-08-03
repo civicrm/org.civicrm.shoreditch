@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 @import '../bootstrap/components/editable-content';
 
 .crm-editable-enabled {
@@ -11,7 +13,7 @@
     box-sizing: border-box;
   }
 
-  &:not(.crm-editable-editing):hover:after {
+  &:not(.crm-editable-editing):hover::after {
     line-height: normal;
     top: calc(50% - 6px);
   }

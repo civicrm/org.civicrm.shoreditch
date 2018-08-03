@@ -1,5 +1,6 @@
-&#{civi-page('admin-domain')} {
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
+&#{civi-page('admin-domain')} {
   .crm-form-block {
     .crm-edit-address-form {
       td {
@@ -13,10 +14,6 @@
       td {
         padding: 5px 10px;
       }
-    }
-
-    h3 {
-      @include section-title;
     }
 
     div.description {

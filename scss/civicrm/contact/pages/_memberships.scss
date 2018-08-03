@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #{civi-page('contact')} {
   #memberships,
@@ -6,16 +6,6 @@
     border-radius: $panel-border-radius;
     box-shadow: $box-shadow;
     margin-bottom: 20px;
-
-    h3 {
-      background: $gray-lighter;
-      border-bottom: 1px solid $crm-background;
-      border-radius: $panel-border-radius $panel-border-radius 0 0;
-      color: $gray-darker;
-      font: $crm-font-weight-h3 $font-size-h2 $font-family-base;
-      margin: 0;
-      padding: 13px 20px;
-    }
 
     .dataTables_wrapper {
       box-shadow: none;
@@ -544,12 +534,6 @@
 }
 
 .CRM_Member_Form_Search {
-  h3 {
-    @include box-shadow($box-shadow);
-    @include panel-header();
-    margin: 20px 0 0;
-  }
-
   .crm-button-type-refresh {
     .crm-i {
       line-height: 1.8em;
@@ -893,17 +877,6 @@
   }
 
   .CRM_Member_Form_Task_PDFLetter .crm-block {
-    h3 {
-      background: $brand-primary;
-      border-bottom: 1px solid $brand-primary;
-      border-radius: $border-radius-base $border-radius-base 0 0;
-      color: $crm-white;
-      font: $crm-font-weight-h4 $font-size-h2 $font-family-base;
-      line-height: 48px;
-      margin: 0 0 15px;
-      padding: 0 20px;
-    }
-
     .no-popup {
       margin: 10px 20px;
     }

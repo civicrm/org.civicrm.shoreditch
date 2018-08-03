@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 .CRM_Contact_Form_Task_AddToHousehold,
 .CRM_Contact_Form_Task_AddToOrganization {
   .form-layout-compressed {
@@ -7,35 +9,35 @@
           padding-left: 20px;
         }
 
-        input[id*="_refresh"] {
-          color: $crm-white;
+        input[id*='_refresh'] {
           background: $brand-primary;
           border-color: $brand-primary;
-          text-shadow: none;
-          font-size: $font-size-base;
-          font-family: $font-family-base;
-          text-transform: uppercase;
-          padding: 8px 12px;
           border-radius: 2px;
+          color: $crm-white;
+          font-family: $font-family-base;
+          font-size: $font-size-base;
           margin-bottom: 20px !important;
           margin-right: 3px !important;
+          padding: 8px 12px;
+          text-shadow: none;
+          text-transform: uppercase;
         }
 
-        input[id*="_cancel"] {
-          color: $gray-darker;
+        input[id*='_cancel'] {
           background: $crm-white;
           border-color: $crm-copy;
-          text-shadow: none;
-          font-size: $font-size-base;
-          font-family: $font-family-base;
-          text-transform: uppercase;
-          padding: 8px 12px;
           border-radius: 2px;
+          color: $gray-darker;
+          font-family: $font-family-base;
+          font-size: $font-size-base;
           margin-bottom: 20px !important;
+          padding: 8px 12px;
+          text-shadow: none;
+          text-transform: uppercase;
 
           &:hover {
-            color: $crm-white;
             background: $crm-copy;
+            color: $crm-white;
           }
         }
       }
@@ -52,18 +54,18 @@
 
     > table {
       @include expandable-table;
-      margin-top: 20px;
       box-shadow: none !important;
+      margin-top: 20px;
 
       tr {
         &.columnheader {
-          border: none !important;
+          border: 0 !important;
           border-bottom: 1px solid $crm-grayblue-dark !important;
         }
 
         &.columnheader > td,
         td {
-          padding: 18px 10px 17px 10px !important;
+          padding: 18px 10px 17px !important;
         }
 
         &:not(.columnheader) {
@@ -76,16 +78,16 @@
   }
 
   .form-item {
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
 
     .description {
       margin: 0 !important;
     }
 
     .crm-submit-buttons {
-      height: 36px;
       border-top: 0 !important;
+      height: 36px;
       margin-top: 0 !important;
       padding: 20px 0 !important;
     }

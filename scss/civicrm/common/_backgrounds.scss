@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 .page-civicrm {
   &,
   #page {
@@ -5,8 +7,8 @@
   }
 
   %block-with-shadow {
-    box-shadow: 0 0 16px 1px rgba(0, 0, 0, .1);
     background: $crm-white;
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
   }
 
   h1.page-title {
@@ -19,8 +21,8 @@
     .crm-form-block {
       @extend %block-with-shadow;
       border-radius: 0;
-      padding: 0;
       margin: 0;
+      padding: 0;
 
       &.crm-api-import-uploadfile-form-block,
       .crm-form-block {

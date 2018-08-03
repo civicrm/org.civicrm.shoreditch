@@ -1,25 +1,27 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 ul.wizard-bar {
-  width: 100%;
-  height: 60px !important;
   background-color: $crm-white;
+  border: 1px solid $crm-background !important;
+  height: 60px !important;
   margin-top: 0 !important;
+  overflow: hidden;
   padding: 0 !important;
   text-align: left !important;
-  border: 1px solid $crm-background !important;
-  overflow: hidden;
+  width: 100%;
 
   > li {
-    position: relative;
+    background-color: $crm-white !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    color: $gray-darker !important;
     display: inline-block !important;
+    font-size: $font-size-base !important;
+    font-weight: 600;
     height: 62px !important;
     line-height: 62px !important;
     padding: 0 20px !important;
-    border-radius: 0 !important;
-    border: 0 !important;
-    font-size: $font-size-base !important;
-    font-weight: 600;
-    color: $gray-darker !important;
-    background-color: $crm-white !important;
+    position: relative;
 
     &:first-child {
       padding-left: 30px !important;
@@ -29,29 +31,29 @@ ul.wizard-bar {
       padding-left: 50px !important;
     }
 
-    &:before {
-      content: '';
-      width: 0px;
-      height: 0px;
-      border-top: 200px solid transparent;
+    &::before {
       border-bottom: 200px solid transparent;
       border-left: 40px solid $crm-white;
+      border-top: 200px solid transparent;
+      content: '';
+      height: 0;
       position: absolute;
-      top: -167px;
       right: -20px;
+      top: -167px;
+      width: 0;
       z-index: 11;
     }
 
-    &:after {
-      content: '';
-      width: 0px;
-      height: 0px;
-      border-top: 200px solid transparent;
+    &::after {
       border-bottom: 200px solid transparent;
       border-left: 40px solid $crm-background;
+      border-top: 200px solid transparent;
+      content: '';
+      height: 0;
       position: absolute;
-      top: -167px;
       right: -21px;
+      top: -167px;
+      width: 0;
       z-index: 10;
     }
 
@@ -59,7 +61,7 @@ ul.wizard-bar {
       background-color: $crm-background !important;
       color: $brand-primary !important;
 
-      &:before {
+      &::before {
         border-left-color: $crm-background;
       }
     }

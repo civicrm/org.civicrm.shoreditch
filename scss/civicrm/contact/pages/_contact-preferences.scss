@@ -1,14 +1,7 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 .CRM_Contact_Form_Task_AlterPreferences {
   .crm-contact-task-addtodonot-form-block {
-    h3 {
-      padding-left: 23px;
-      padding-top: 20px;
-      font-family: $font-family-base;
-      font-size: $font-size-h3;
-      font-weight: 600;
-      color: $gray-darker;
-    }
-
     .crm-submit-buttons {
       margin-left: 0 !important;
       margin-right: 0 !important;
@@ -23,9 +16,9 @@
         padding: 15px 0;
         position: relative;
 
-        &:after {
-          top: 21px;
+        &::after {
           left: 4px;
+          top: 21px;
         }
       }
 
@@ -33,15 +26,15 @@
         padding: 15px !important;
         position: relative;
 
-        &:after {
+        &::after {
           left: 17px;
         }
       }
 
       .listing-box {
-        max-height: 216px;
-        height: auto;
         border-color: $crm-background;
+        height: auto;
+        max-height: 216px;
 
         > div {
           background-color: $crm-white;

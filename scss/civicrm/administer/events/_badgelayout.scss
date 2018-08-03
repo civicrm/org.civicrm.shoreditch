@@ -1,13 +1,7 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 &#{civi-page('admin-badgelayout')} {
   .crm-container {
-    h3 {
-      @include box-shadow($box-shadow);
-      @include panel-header;
-      margin-bottom: 0;
-    }
-
     .crm-badge-layout-form-block {
       @include box-shadow($crm-form-layout-shadow-lower);
 
