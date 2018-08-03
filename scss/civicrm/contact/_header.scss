@@ -15,13 +15,16 @@
   vertical-align: top;
 }
 
-.crm-summary-contactphoto {
-  border-radius: 50%;
+#crm-contact-thumbnail { 
   float: left;
-  height: $contact-avatar;
   margin: 10px $contact-avatar/2 0;
   padding-top: 5px;
-  width: $contact-avatar;
+
+  img {
+    border-radius: 50%;
+    height: $contact-avatar;
+    width: $contact-avatar;
+  }
 }
 
 .crm-summary-contactname-block-without-contract {

@@ -22,6 +22,12 @@
       "git add"
     ]
   },
+  "semistandard": {
+    "globals": [
+      "CRM",
+      "jQuery"
+    ]
+  },  
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
     "plugins": [
