@@ -1,10 +1,12 @@
 /**
- * Resets css rules that are applied by the CiviCRM style
- *
- * (`initial` was used at first, but there is no support by IE for it)
+ * Resets css rules that are applied by the original CiviCRM style
+ * and the "legacy mode" of Shoreditch
  */
 h3 {
   @include initial(background-color, transparent);
+  @include initial(border, 0);
+  @include initial(border-radius, 0);
+  @include initial(box-shadow, none);
   @include initial(font-family, $font-family-base);
   @include initial(padding, 0);
   @include initial(margin, 0);
