@@ -41,8 +41,10 @@ gulp.task('sass:civicrm', ['sass:sync'], function () {
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',
       exclude: [/^body/, /tooltip/, /page-civicrm/, /crm-container/,
-        /ui-datepicker/, /civicrm-menu/, /#root-menu-div/, /jstree-contextmenu/]
+        /ui-datepicker/, /civicrm-menu/, /#root-menu-div/, /jstree-contextmenu/,
+        outsideNamespaceRegExp]
     }), postcssDiscardDuplicates]))
+    .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
     .pipe(gulp.dest('css/'));
 });
 
