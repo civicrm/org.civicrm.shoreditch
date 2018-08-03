@@ -184,9 +184,3 @@
 #root-menu-div .menu-item a {
   color: $gray-darker;
 }
-
-#{$outside-namespace-marker} {
-  #wpadminbar {
-    z-index: 999;
-  }
-}
