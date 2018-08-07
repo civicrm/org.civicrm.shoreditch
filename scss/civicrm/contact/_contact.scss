@@ -1,6 +1,9 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-body:not([class*='page-civicrm-contact-view-'])#{civi-page('contact-view')} {
+$page-class: civi-page('contact-view');
+$page-class-name: str_slice($page-class, 2);
+
+#{$page-class}:not([class*='#{$page-class-name}-']) {
   @import 'tabs';
   @import 'header';
   @import 'detail';
