@@ -1,5 +1,4 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
-
 #{civi-page('case')} {
   .crm-case-dashboard-switch-view-buttons {
     > div {
@@ -40,7 +39,7 @@
 
   .dataTables_wrapper {
     @include box-shadow($crm-form-layout-shadow-lower !important);
-    border-top: 1px solid $crm-grayblue-dark;
+    border-top: 1px solid $crm-background;
     margin-bottom: 0;
 
     .crm-datatable-pager-top {
@@ -65,7 +64,7 @@
 
   .CRM_Case_Form_Search {
     .crm-submit-buttons {
-      padding: 15px 0;
+      padding: 20px 0;
     }
 
     .columnheader {
@@ -73,12 +72,43 @@
       border-bottom: 1px solid $crm-grayblue-dark !important;
     }
 
-    .crm-accordion-body {
-      box-shadow: none !important;
-    }
-
     div[class*='crm-case-filter-'] {
       @include box-shadow($crm-form-layout-shadow-lower !important);
     }
-  }  
+
+    .spacer {
+      height: 20px;
+    }
+  }
+
+  div[class*='crm-case-filter-'] {
+    @include box-shadow($crm-form-layout-shadow-lower !important);
+    position: relative;
+
+    + .spacer {
+      display: none;
+    }
+
+    .crm-accordion-header {
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+    }
+
+    .crm-accordion-body {
+      background-color: $gray-lighter;
+      box-shadow: none !important;
+    }
+
+    .select2-container {
+      background-color: $crm-white;
+    }
+  }
+
+  table[class*='case-search-options-'] {
+    .crm-inline-edit-field {
+      padding: 5px 15px 5px 5px;
+    }
+  }
 }
