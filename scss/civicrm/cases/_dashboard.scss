@@ -38,13 +38,19 @@
   }
 
   .dataTables_wrapper {
-    @include box-shadow($crm-form-layout-shadow-lower !important);
-    border-top: 1px solid $crm-background;
-    margin-bottom: 0;
+    @include box-shadow(0 10px 18px 0 rgba(48,40,40,0.25));
+    border-radius: 0;
 
     .crm-datatable-pager-top {
       border-radius: 0;
-    }      
+    }    
+  }
+
+  .dataTables_length {
+    select {
+      margin: 0 5px;
+      min-width: 80px;
+    }
   }
 
   .selector,
@@ -72,10 +78,6 @@
       border-bottom: 1px solid $crm-grayblue-dark !important;
     }
 
-    div[class*='crm-case-filter-'] {
-      @include box-shadow($crm-form-layout-shadow-lower !important);
-    }
-
     .spacer {
       height: 20px;
     }
@@ -90,6 +92,7 @@
     }
 
     .crm-accordion-header {
+      font-weight: normal;
       position: absolute;
       right: 0;
       top: 0;
@@ -98,6 +101,7 @@
 
     .crm-accordion-body {
       background-color: $gray-lighter;
+      border-bottom: 1px solid $crm-background;
       box-shadow: none !important;
     }
 
