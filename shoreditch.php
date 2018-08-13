@@ -158,4 +158,8 @@ function shoreditch_civicrm_pageRun(&$page) {
   if ($pageName == 'CRM_Contact_Page_View_Summary') {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/contact-summary.js');
   }
+
+  if ($pageName == 'CRM_Case_Page_DashBoard') {
+    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/close-cases-filters.js');
+  }  
 }
