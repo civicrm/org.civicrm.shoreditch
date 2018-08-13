@@ -1,0 +1,25 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+@import '../bootstrap/variants/outlined-buttons';
+
+.crmMailing-btn-primary,
+.crmUi-btn-primary {
+  @extend .btn-primary;
+  background: $brand-primary;
+
+  &[disabled] {
+    opacity: 0.65;
+  } 
+}
+
+.crmMailing-btn-secondary-outline {
+  @extend .btn-secondary-outline;
+
+  &[disabled] {
+    opacity: 0.65;
+  }
+}
+
+.crmMailing-btn-danger-outline {
+  @extend .btn-danger-outline;
+  color: $brand-danger;
+}
