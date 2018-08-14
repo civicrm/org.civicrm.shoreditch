@@ -27,7 +27,7 @@
       "CRM",
       "jQuery"
     ]
-  },  
+  },
   "stylelint": {
     "extends": "stylelint-config-sass-guidelines",
     "plugins": [
