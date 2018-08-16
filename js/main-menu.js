@@ -139,4 +139,4 @@
       $(itemLabel).wrap('<span class="menumain-label" />');
     }
   }
-}(CRM.$, CRM._, CRM.ts('org.civicrm.shoreditch'));
+}(CRM.$, CRM._, CRM.ts('org.civicrm.shoreditch')));
