@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var bulk = require('gulp-sass-bulk-import');
+var bulk = require('gulp-sass-glob');
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var postcssPrefix = require('postcss-prefix-selector');
