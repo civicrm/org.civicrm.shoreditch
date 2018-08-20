@@ -17,15 +17,21 @@ First of all you need [NodeJS](https://nodejs.org/). Please be aware that curren
 
 Once you have NodeJS installed, run
 
-```
-npm install -g gulp
+```sh
 npm install
 ```
 
-Once you have the tools, you can run `gulp`. This will monitor the SCSS files and automatically recompile whenever they change.
+Once you have the tools, you can run `npx gulp watch`. This will monitor the SCSS files and automatically recompile whenever they are changed.
 
+```sh
+# npx command ensures you run a local repository Gulp and not the global one
+npx gulp watch
 ```
-gulp
+
+If you would like to just compile files without watching, simply run `npx gulp`.
+
+```sh
+npx gulp
 ```
 
 ## Guidelines for `custom-civicrm.css`

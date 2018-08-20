@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var bulk = require('gulp-sass-bulk-import');
+var bulk = require('gulp-sass-glob');
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var postcssPrefix = require('postcss-prefix-selector');
@@ -11,7 +11,9 @@ var civicrmScssRoot = require('civicrm-scssroot')();
 var bootstrapNamespace = '#bootstrap-theme';
 var outsideNamespaceRegExp = /^\.___outside-namespace/;
 
-gulp.task('sass:bootstrap', ['sass:sync'], function () {
+gulp.task('sass:sync', civicrmScssRoot.update);
+
+gulp.task('sass:bootstrap', gulp.series('sass:sync', function buildBootstrapCSS () {
   return gulp.src('scss/bootstrap/bootstrap.scss')
     .pipe(bulk())
     .pipe(sass({
@@ -27,9 +29,9 @@ gulp.task('sass:bootstrap', ['sass:sync'], function () {
     .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
     .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
     .pipe(gulp.dest('css/'));
-});
+}));
 
-gulp.task('sass:civicrm', ['sass:sync'], function () {
+gulp.task('sass:civicrm', gulp.series('sass:sync', function buildCiviCRMCSS () {
   return gulp.src('scss/civicrm/custom-civicrm.scss')
     .pipe(bulk())
     .pipe(sass({
@@ -46,19 +48,15 @@ gulp.task('sass:civicrm', ['sass:sync'], function () {
     }), postcssDiscardDuplicates]))
     .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
     .pipe(gulp.dest('css/'));
-});
+}));
 
-gulp.task('sass:sync', function () {
-  civicrmScssRoot.updateSync();
-});
-
-gulp.task('sass', ['sass:bootstrap', 'sass:civicrm']);
+gulp.task('sass', gulp.parallel('sass:bootstrap', 'sass:civicrm'));
 
 gulp.task('watch', function () {
-  gulp.watch(civicrmScssRoot.getWatchList(), ['sass']);
+  gulp.watch(civicrmScssRoot.getWatchList(), gulp.parallel('sass'));
 });
 
-gulp.task('default', ['sass']);
+gulp.task('default', gulp.parallel('sass'));
 
 /**
  * Apply the namespace on html and body elements
