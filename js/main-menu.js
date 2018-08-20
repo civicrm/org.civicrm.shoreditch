@@ -1,4 +1,4 @@
-(function ($, _) {
+(function ($, _, ts) {
   $(document).ready(function () {
     amendMarkupOfMenuItemsWithFontAwesomeIcons();
     customizeQuickSearchField();
@@ -20,7 +20,7 @@
    * Changes the placeholder text of the quicksearch field
    */
   function changeQuickSearchFieldPlaceholder () {
-    $('#crm-qsearch .ui-autocomplete-input').attr('placeholder', 'Quick Search');
+    $('#crm-qsearch .ui-autocomplete-input').attr('placeholder', ts('Quick Search'));
   }
 
   /**
@@ -141,4 +141,4 @@
       $(itemLabel).wrap('<span class="menumain-label" />');
     }
   }
-}(CRM.$, CRM._));
+}(CRM.$, CRM._, CRM.ts('org.civicrm.shoreditch')));

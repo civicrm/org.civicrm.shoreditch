@@ -239,10 +239,11 @@ body {
     }
 
     .crm-datatable-pager-bottom {
+      @include clearfix;
       background: $crm-gray-lightest;
       border-radius: 0 0 $border-radius-child $border-radius-child;
       line-height: 1.8em;
-      padding-bottom: 39px;
+      padding-bottom: 10px;
       padding-top: 10px;
 
       .dataTables_info,
@@ -254,6 +255,8 @@ body {
 
     .dataTables_info {
       color: $crm-copy;
+      line-height: 25px;
+      margin: 5px 0;
       padding-left: 20px;
       width: 50%;
     }
