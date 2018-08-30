@@ -32,6 +32,15 @@
     text-transform: none;
   }
 
+  .ui-select-match-close {
+    color: $brand-primary;
+    cursor: pointer;
+
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+
   .ui-select-toggle {
     border-color: $input-border;
     padding: 4px 30px 4px 12px;
