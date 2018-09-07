@@ -42,7 +42,7 @@ gulp.task('sass:civicrm', gulp.series('sass:sync', function buildCiviCRMCSS () {
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',
-      exclude: [/^body/, /tooltip/, /page-civicrm/, /crm-container/,
+      exclude: [/^body/, /popover/, /tooltip/, /page-civicrm/, /crm-container/,
         /ui-datepicker/, /civicrm-menu/, /#root-menu-div/, /jstree-contextmenu/,
         outsideNamespaceRegExp]
     }), postcssDiscardDuplicates]))
