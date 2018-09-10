@@ -1,4 +1,4 @@
-.ui-select-bootstrap[theme='civihr-ui-select'] {
+.civihr-ui-select {
   + .input-group-btn {
     .btn {
       @include border-left-radius(0);
@@ -32,6 +32,15 @@
     text-transform: none;
   }
 
+  .ui-select-match-close {
+    color: $brand-primary;
+    cursor: pointer;
+
+    &:hover {
+      color: $gray-dark;
+    }
+  }
+
   .ui-select-toggle {
     border-color: $input-border;
     padding: 4px 30px 4px 12px;
@@ -55,7 +64,7 @@
   }
 }
 
-.ui-select-container:not([theme='civihr-ui-select']) {
+.ui-select-container:not(.civihr-ui-select) {
   &:not(.ui-select-multiple) {
     .btn {
       &.ui-select-toggle {
@@ -112,7 +121,7 @@
   }
 }
 
-.ui-select-multiple:not([theme='civihr-ui-select']) {
+.ui-select-multiple:not(.civihr-ui-select) {
   border: 1px solid $input-border;
   min-height: $input-height-base;
   padding: 3px !important;
@@ -132,7 +141,7 @@
   }
 }
 
-.ui-select-bootstrap .ui-select-choices-row:not([theme='civihr-ui-select']) {
+.ui-select-bootstrap .ui-select-choices-row:not(.civihr-ui-select) {
   > span {
     color: $gray;
     font-size: $font-size-small;
