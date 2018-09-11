@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 &#{civi-page('admin-paymentprocessor')} {
   @include civicrm-table;
@@ -16,12 +16,6 @@
     }
 
     .CRM_Admin_Form_PaymentProcessor {
-      h3 {
-        @include box-shadow($box-shadow);
-        @include panel-header;
-        margin-bottom: 0;
-      }
-
       .crm-paymentProcessor-form-block {
         @include box-shadow($crm-form-layout-shadow-lower);
         border-radius: 0 0 $border-radius-base $border-radius-base !important;

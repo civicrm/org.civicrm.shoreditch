@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 &#{civi-page('admin-setting-preferences-display')},
 &#{civi-page('admin-setting-search')},
@@ -7,12 +7,8 @@
 &#{civi-page('admin-setting-date')},
 &#{civi-page('admin-setting-case')} {
   .crm-form-block {
-    h3,
     legend {
       @include section-title;
-    }
-
-    legend {
       box-sizing: border-box;
       width: 100%;
     }

@@ -1,9 +1,11 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 .crm-container {
   .uploaded-file {
-    min-width: 300px;
-    display: inline-block;
     cursor: pointer;
+    display: inline-block;
     margin: 10px 0;
+    min-width: 300px;
 
     .uploaded-file-icon-trash {
       color: $brand-danger;

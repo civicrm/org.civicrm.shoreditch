@@ -1,4 +1,4 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 #{civi-page('contribute')} {
   #branding h1.page-title {
@@ -187,16 +187,6 @@
   }
 
   form[class*='CRM_Contribute_Form_'] {
-    h3 {
-      background: $gray-lighter;
-      color: $gray-darker;
-      font-family: $font-family-base;
-      font-size: $font-size-h2;
-      font-weight: $crm-font-weight-h3;
-      margin: 0;
-      padding: 17px 15px;
-    }
-
     .status {
       margin-bottom: 0;
       margin-top: 0;
@@ -268,6 +258,7 @@
     legend {
       @include panel-header;
       box-sizing: border-box;
+      margin-bottom: 10px;
       width: 100%;
     }
 
@@ -1118,20 +1109,6 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   #mainTabContainer {
     @include box-shadow($crm-form-layout-shadow-lower);
-  }
-
-  > h3 {
-    @include panel-header;
-    @include box-shadow($box-shadow);
-    margin: 0;
-  }
-
-  .spacer + h3 {
-    margin-top: 20px;
-
-    + div {
-      position: relative;
-    }
   }
 
   .crm-pager {

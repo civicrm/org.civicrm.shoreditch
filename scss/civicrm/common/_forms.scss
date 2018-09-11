@@ -73,7 +73,7 @@
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
-        background: url('../svgs/drop-down-arrow.svg') no-repeat right $crm-white !important;
+        background: url($crm-image-path + 'drop-down-arrow.svg') no-repeat right $crm-white !important;
         cursor: pointer;
         display: inline-block;
         height: $crm-control-height !important;
@@ -623,7 +623,7 @@
       display: inline !important;
       margin-left: 0;
       text-indent: 0 !important;
-      
+
       &:hover,
       &:focus {
         background: none !important;

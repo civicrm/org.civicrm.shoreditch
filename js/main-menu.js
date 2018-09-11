@@ -1,4 +1,4 @@
-(function ($, _) {
+(function ($, _, ts) {
   $(document).ready(function () {
     amendMarkupOfMenuItemsWithFontAwesomeIcons();
     customizeQuickSearchField();
@@ -7,7 +7,7 @@
   /**
    * Amends the markup of any menu item with a FontAwesome icon
    */
-  function amendMarkupOfMenuItemsWithFontAwesomeIcons() {
+  function amendMarkupOfMenuItemsWithFontAwesomeIcons () {
     menuItemsWithFontAwesomeIcon().each(function () {
       var $menuItem = $(this);
 
@@ -20,7 +20,7 @@
    * Changes the placeholder text of the quicksearch field
    */
   function changeQuickSearchFieldPlaceholder () {
-    $('#crm-qsearch .ui-autocomplete-input').attr('placeholder', 'Quick Search');
+    $('#crm-qsearch .ui-autocomplete-input').attr('placeholder', ts('Quick Search'));
   }
 
   /**
@@ -86,7 +86,7 @@
    */
   function menuItemsWithFontAwesomeIcon () {
     return $('.menumain[class*="crm"]').filter(function () {
-      return $('.crm-i,.fa', this).length > 0
+      return $('.crm-i,.fa', this).length > 0;
     });
   }
 
@@ -104,7 +104,7 @@
     });
   }
 
-   /**
+  /**
    * Toggles the given custom class to the quicksearch field
    * so that custom behaviour can be applied to it
    *
@@ -141,4 +141,4 @@
       $(itemLabel).wrap('<span class="menumain-label" />');
     }
   }
-}(CRM.$, CRM._));
+}(CRM.$, CRM._, CRM.ts('org.civicrm.shoreditch')));

@@ -1,0 +1,118 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+#{civi-page('case')} {
+  .crm-case-dashboard-switch-view-buttons {
+    > div {
+      display: inline-block;
+      padding: 7.5px;
+    }
+
+    input,
+    span {
+      display: inline;
+      line-height: 21px;
+    }
+
+    input {
+      margin-right: 5px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .crm-content-block {
+    > .form-item {
+      padding: 0;
+    }
+  }
+
+  .form-item {
+    .dataTables_wrapper {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      .dataTables_wrapper {
+        margin-bottom: 20px;
+      }      
+    }
+  }
+
+  .dataTables_wrapper {
+    @include box-shadow(0 10px 18px 0 rgba(48,40,40,0.25));
+    border-radius: 0;
+
+    .crm-datatable-pager-top {
+      border-radius: 0;
+    }    
+  }
+
+  .dataTables_length {
+    select {
+      margin: 0 5px;
+      min-width: 80px;
+    }
+  }
+
+  .selector,
+  .report {
+    @include expandable-table;
+    @include box-shadow($crm-form-layout-shadow-lower !important);
+
+    th:first-child,
+    td:first-child {
+      width: 300px;
+    }
+    
+    td:last-child {
+      text-align: left !important;
+    }
+  }  
+
+  .CRM_Case_Form_Search {
+    .crm-submit-buttons {
+      padding: 20px 0;
+    }
+
+    .columnheader {
+      border: 0 !important;
+      border-bottom: 1px solid $crm-grayblue-dark !important;
+    }
+
+    .spacer {
+      height: 20px;
+    }
+  }
+
+  div[class*='crm-case-filter-'] {
+    @include box-shadow($crm-form-layout-shadow-lower !important);
+    position: relative;
+
+    + .spacer {
+      display: none;
+    }
+
+    .crm-accordion-header {
+      font-weight: normal;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+    }
+
+    .crm-accordion-body {
+      background-color: $gray-lighter;
+      border-bottom: 1px solid $crm-background;
+      box-shadow: none !important;
+    }
+
+    .select2-container {
+      background-color: $crm-white;
+    }
+  }
+
+  table[class*='case-search-options-'] {
+    .crm-inline-edit-field {
+      padding: 5px 15px 5px 5px;
+    }
+  }
+}

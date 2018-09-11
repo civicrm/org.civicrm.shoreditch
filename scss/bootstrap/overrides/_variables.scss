@@ -19,6 +19,10 @@ $crm-page-topbar-item-padding: 15px !default;
 // Variables override
 // --------------------------------------------------
 
+// Shoreditch does not have an actual folder for images but this variable
+// allows other extensions to reuse and/or re-define it.
+// This is a relative path to the distributive CSS file.
+$crm-image-path: '../img/' !default;
 
 //== Font paths
 //

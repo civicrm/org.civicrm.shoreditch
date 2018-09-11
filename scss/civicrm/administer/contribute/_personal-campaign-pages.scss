@@ -1,10 +1,7 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 &#{civi-page('admin-pcp')} {
   .CRM_PCP_Form_PCP {
-    h3 {
-      @include panel-header;
-      margin-bottom: 0;
-    }
-
     table.form-layout-compressed {
       margin: 20px;
     }
