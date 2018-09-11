@@ -10,6 +10,12 @@
     }
   }
 
+  .crm-pager {
+    .element-right {
+      margin-top: 0 !important;
+    }
+  }
+
   .description {
     color: $crm-gray-matte;
     font-size: $font-size-base;
