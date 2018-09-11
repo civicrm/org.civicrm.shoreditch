@@ -2,7 +2,7 @@
 
 .CRM_Case_Form_CaseView {
   .crm-submit-buttons {
-    padding: 20px 0;
+    padding: 0 0 20px;
   }
 
   .dataTable,
@@ -34,10 +34,21 @@
   }
 
   .crm-search_filters-accordion {
-    @include box-shadow($box-shadow);
-    border-bottom: 1px solid $crm-grayblue-dark !important;
+    border: 1px solid $crm-background;
+    box-shadow: none;
     
+    .crm-accordion-header:not(.crm-master-accordion-header) {
+      border-bottom: 1px solid $crm-background;
+    }
+
     .crm-accordion-body {
+      box-shadow: none;
+    }
+  }
+
+  .crm-accordion-body {
+    .dataTables_wrapper {
+      border: 1px solid $crm-background;
       box-shadow: none;
     }
   }
