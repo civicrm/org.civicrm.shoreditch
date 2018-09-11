@@ -1,7 +1,7 @@
-(function ($) {
+(function () {
   var profilePicWrapper = '#crm-contact-thumbnail';
 
-  $(document).ready(function () {
+  document.addEventListener('DOMContentLoaded', function () {
     usePictureAsBackground();
     moveUserPictureNextToContactTitle();
   });
@@ -10,7 +10,11 @@
    * Moves the user image to the left of the contact name
    */
   function moveUserPictureNextToContactTitle () {
-    $('.crm-summary-contactname-block').prepend($(profilePicWrapper));
+    var header = document.querySelector('.crm-summary-contactname-block');
+    var wrapper = document.querySelector(profilePicWrapper);
+    var block = document.querySelector('.crm-summary-block');
+
+    header.insertBefore(wrapper, block);
   }
 
   /**
@@ -21,11 +25,11 @@
    * picture ratios that would otherwise get stretched with a <img> element
    */
   function usePictureAsBackground () {
-    var $wrapper = $(profilePicWrapper);
-    var $picture = $wrapper.find('.crm-contact_image');
-    var pictureSrc = $picture.find('img').attr('src');
+    var wrapper = document.querySelector(profilePicWrapper);
+    var picture = wrapper.querySelector('.crm-contact_image');
+    var src = picture.querySelector('img').getAttribute('src');
 
-    $picture.find('a').css('background-image', 'url(' + pictureSrc + ')');
-    $picture.find('img').remove();
+    picture.querySelector('a').style.backgroundImage = 'url(' + src + ')';
+    picture.querySelector('a').removeChild(picture.querySelector('img'));
   }
-}(CRM.$));
+}());
