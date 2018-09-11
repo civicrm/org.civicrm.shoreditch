@@ -1,11 +1,11 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 .CRM_Activity_Form_Search {
-  div#searchForm {
+  #searchForm {
     margin: 0;
     padding: 0;
 
-    table.form-layout {
+    .form-layout {
       td {
         border: 0;
       }
@@ -19,7 +19,7 @@
       }
     }
 
-    div.description {
+    .description {
       color: $crm-gray-matte;
       font-size: $font-size-base;
       margin: 0;
