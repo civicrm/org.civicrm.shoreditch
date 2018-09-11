@@ -1,7 +1,5 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
-
 .CRM_Activity_Form_Search {
-  #searchForm {
+  #searchForm { /* stylelint-disable-line selector-max-id */
     margin: 0;
     padding: 0;
   }
