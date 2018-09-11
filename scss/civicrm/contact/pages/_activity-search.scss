@@ -1,5 +1,6 @@
 .CRM_Activity_Form_Search {
-  #CiviVolunteer { /* stylelint-disable-line selector-max-id */
+  // Element exists when CiviVolunteer is enabled on the site
+  #CiviVolunteer.crm-contactDetails-accordion { /* stylelint-disable-line selector-max-id */
     margin: 0 -24px 15px;
   }
 
