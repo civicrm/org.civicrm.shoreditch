@@ -7,7 +7,7 @@
   /**
    * Amends the markup of any menu item with a FontAwesome icon
    */
-  function amendMarkupOfMenuItemsWithFontAwesomeIcons () {
+  function amendMarkupOfMenuItemsWithFontAwesomeIcons() {
     menuItemsWithFontAwesomeIcon().each(function () {
       var $menuItem = $(this);
 
@@ -86,7 +86,7 @@
    */
   function menuItemsWithFontAwesomeIcon () {
     return $('.menumain[class*="crm"]').filter(function () {
-      return $('.crm-i,.fa', this).length > 0;
+      return $('.crm-i,.fa', this).length > 0
     });
   }
 
@@ -104,7 +104,7 @@
     });
   }
 
-  /**
+   /**
    * Toggles the given custom class to the quicksearch field
    * so that custom behaviour can be applied to it
    *
