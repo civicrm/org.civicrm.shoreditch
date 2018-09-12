@@ -62,6 +62,8 @@
         @include civicrm-form-control;
         @include open-sans-font-family();
         @include placeholder;
+        display: inline-block;
+        height: auto;
       }
 
       #email {
