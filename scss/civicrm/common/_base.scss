@@ -1,17 +1,22 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-body {
-  // Ensures that there is the same top padding regardless whether
-  // the user can see the admin toolbar or not
+#{$outside-namespace-marker} {
+  html {
+    // Ensures that there is the same amount of vertical room for the main menu
+    // regardless of whether there is a drupal menu module enabled or not
+    body {
+      @include open-sans-font-family();
 
-  &:not(.toolbar) {
-    padding-top: $crm-main-menu-height !important;
-  }
+      &:not(.toolbar) {
+        margin-top: $crm-main-menu-height !important;
+      }
 
-  .toolbar-menu {
-    height: $crm-main-menu-height !important;
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
+      .toolbar-menu {
+        height: $crm-main-menu-height !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+      }
+    }
   }
 }
 

@@ -264,6 +264,8 @@
   }
 
   .crm-membership-form-block {
+    padding: 0 !important;
+
     .auto-renew-text {
       display: block;
       padding: $crm-status-bar-no-top;
@@ -313,12 +315,6 @@
       .label {
         padding-left: 0;
       }
-
-      td {
-        &:nth-child(2) {
-          width: 100%;
-        }
-      }
     }
 
     #send-receipt {
@@ -335,7 +331,7 @@
       }
 
       .crm-accordion-body {
-        padding: 15px 0 !important;
+        padding: 0 !important;
 
         > p {
           &.description {
@@ -406,6 +402,12 @@
       }
     }
   }
+
+  .no-popup {
+    p {
+      margin: 0;
+    }
+  }
 }
 
 .CRM_Member_Form_MembershipView {
@@ -413,12 +415,19 @@
     display: none;
   }
 
+  .crm-membership-view-form-block {
+    padding: 0 !important;
+    
+    .crm-block {
+      padding: 0;
+    }
+  }
+
   table {
     background: transparent;
     border: 0;
     box-shadow: none !important;
     font-family: $font-family-base;
-    margin: 10px 0;
 
     &.crm-info-panel {
       margin-left: -20px;
@@ -518,7 +527,7 @@
     }
 
     .crm-accordion-body {
-      padding: 15px 0 !important;
+      padding: 0 !important;
 
       > p {
         &.description {
@@ -536,6 +545,10 @@
   #related-contacts-memberships {
     margin-left: -20px;
     margin-right: -20px;
+
+    .dataTables_wrapper {
+      margin-bottom: 0;
+    }
   }
 }
 
