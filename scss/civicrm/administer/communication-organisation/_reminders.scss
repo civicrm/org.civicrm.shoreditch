@@ -47,5 +47,46 @@
         margin-bottom: 5px;
       }
     }
+
+    .CRM_Admin_Form_ScheduleReminders {
+      .crm-block {
+        padding: 0;
+      }
+
+      #editMessageDetails {
+        margin: 20px;
+      }
+
+      .crm-form-multiselect {
+        @extend %responsive;
+        @include civicrm-form-control;
+        @include open-sans-font-family();
+        @include placeholder;
+      }
+
+      #email {
+        margin-left: -20px;
+        margin-right: -20px;
+
+        .collapsible-title {
+          @include accordion-header;
+          font-size: $font-size-base;
+
+          &:hover {
+            color: $gray-darker;
+          }
+        }
+
+        &:not(.collapsed) {
+          .collapsible-title::before {
+            @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
+          }
+        }
+
+        .crm-accordion-wrapper {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }

@@ -8,6 +8,10 @@
       .spacer {
         display: none;
       }
+
+      .help {
+        margin: 20px 20px 0 !important;
+      }
     }
   }
 }
@@ -31,8 +35,12 @@
 
   .form-layout-compressed {
     tr {
-      td:first-child {
-        padding-left: 20px;
+      td {
+        padding: 20px 0;
+
+        &:first-child {
+          padding: 20px;
+        }
       }
     }
   }
