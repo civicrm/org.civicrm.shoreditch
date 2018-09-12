@@ -48,6 +48,10 @@
         td {
           font-size: $font-size-base !important;
           padding: 15px 20px !important;
+
+          &:last-child {
+            text-align: left !important;
+          }
         }
       }
     }
@@ -60,6 +64,12 @@
       .status.no-popup {
         margin: $crm-status-bar-no-top;
       }
+    }
+  }
+
+  .CRM_Grant_Form_Grant {
+    .crm-grant-form-block {
+      padding: 0 !important;
     }
   }
 }
