@@ -2,9 +2,9 @@
 
 #{$outside-namespace-marker} {
   html {
+    // Ensures that there is the same amount of vertical room for the main menu
+    // regardless of whether there is a drupal menu module enabled or not
     body {
-      // Ensures that there is the same top padding regardless whether
-      // the user can see the admin toolbar or not
       &:not(.toolbar) {
         margin-top: $crm-main-menu-height !important;
       }
