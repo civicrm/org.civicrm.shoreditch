@@ -29,7 +29,3 @@
 @import 'grant/grant';
 @import 'pledge/pledge';
 @import 'discount/discount';
-
-body {
-  @include open-sans-font-family();
-}
