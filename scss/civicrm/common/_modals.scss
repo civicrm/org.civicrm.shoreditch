@@ -6,3 +6,15 @@
 .crm-container.ui-dialog {
   @include ui-dialog;
 }
+
+#popupContainer {
+  background-color: $crm-white !important;
+
+  #selectedRecords-_wrapper {
+    box-shadow: none;
+
+    td {
+      text-align: left;
+    }
+  }
+}
