@@ -24,7 +24,7 @@ gulp.task('sass:bootstrap', gulp.series('sass:sync', function buildBootstrapCSS 
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: bootstrapNamespace + ' ',
-      exclude: [/^html/, /\.popover/, /\.tooltip/, /^body/, /\.ta-hidden-input/, outsideNamespaceRegExp]
+      exclude: [/^html/, /^body/, /\.popover/, /\.tooltip/, /\.ta-hidden-input/, outsideNamespaceRegExp]
     })]))
     .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
     .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
