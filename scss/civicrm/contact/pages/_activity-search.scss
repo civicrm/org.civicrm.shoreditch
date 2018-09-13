@@ -1,48 +1,36 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+.CRM_Activity_Form_Search {
+  #searchForm { /* stylelint-disable-line selector-max-id */
+    margin: 0;
+    padding: 0;
+  }
 
-#{civi-page('activity-search')} {
-  .crm-container {
-    .CRM_Activity_Form_Search {
-      div#searchForm {
-        margin: 0;
-        padding: 0;
+  // Element exists when an extension (ie CiviVolunteer)
+  // adds additional fields to the page
+  .crm-accordion-wrapper {
+    margin: 0 -24px 15px;
+  }
 
-        table.form-layout {
-          td {
-            border: 0;
-          }
+  .crm-button {
+    .crm-i {
+      display: none;
+    }
+  }
 
-          tr:last-child {
-            td {
-              .crm-button {
-                margin-top: 15px;
-              }
-            }
-          }
-        }
+  .crm-pager {
+    .element-right {
+      margin-top: 0 !important;
+    }
+  }
 
-        div.description {
-          color: $crm-gray-matte;
-          font-size: $font-size-base;
-          margin: 0;
-        }
+  .description {
+    color: $crm-gray-matte;
+    font-size: $font-size-base;
+    margin: 0;
+  }
 
-        .crm-i {
-          display: none;
-        }
-      }
-
-      .crm-contactDetails-accordion {
-        margin: 0 -25px;
-      }
-
-      .crm-results-block {
-        .crm-pager {
-          .element-right {
-            margin-top: 0;
-          }
-        }
-      }
+  .form-layout {
+    td {
+      border: 0 !important;
     }
   }
 }
