@@ -16,4 +16,20 @@
       }
     }
   }
+
+  #popupContainer {
+    padding: 20px;
+
+    .dataTables_wrapper {
+      margin-bottom: 0;
+    }
+
+    .crm-search-form-block {
+      padding: 0;
+      
+      select {
+        min-width: auto;
+      }
+    }
+  }
 }
