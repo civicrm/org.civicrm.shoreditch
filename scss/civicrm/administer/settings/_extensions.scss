@@ -62,4 +62,14 @@
       }
     }
   }
+
+  .CRM_Admin_Form_Extensions {
+    .crm-admin-optionvalue-form-block {
+      box-shadow: none;
+
+      .crm-submit-buttons {
+        border-radius: $border-radius-base;
+      }
+    }
+  }
 }
