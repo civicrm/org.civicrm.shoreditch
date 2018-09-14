@@ -300,8 +300,15 @@
         }
 
         .crm-membership-form-block-billing {
-          #payment_information .check_number-section .content {
-            margin-left: 23.5%;
+          #payment_information .check_number-section {
+            .label {
+              padding: 0 5px 0 15px;
+              width: 175px;
+            }
+
+            .content {
+              margin-left: 200px;
+            }
           }
         }
       }
@@ -317,6 +324,7 @@
       }
     }
 
+    #recordContribution,
     #send-receipt {
       td {
         &.label {
