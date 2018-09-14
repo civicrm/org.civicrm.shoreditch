@@ -692,8 +692,15 @@
     .status {
       background: none;
       border: 0;
-      font-weight: $crm-font-weight-h5;
       padding: 0;
+    }
+  }
+}
+
+.CRM_Event_Form_Task_Batch {
+  .help {
+    .status {
+      font-weight: $crm-font-weight-h5;
     }
   }
 }
