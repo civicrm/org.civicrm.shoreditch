@@ -426,7 +426,7 @@
     &.no-border {
       margin-left: -20px;
       margin-right: -20px;
-      width: 105%;
+      width: calc(100% + 40px);
     }
 
     thead {
