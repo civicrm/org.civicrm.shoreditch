@@ -423,6 +423,12 @@
       width: 105%;
     }
 
+    &.no-border {
+      margin-left: -20px;
+      margin-right: -20px;
+      width: calc(100% + 40px);
+    }
+
     thead {
       tr {
         border: 1px solid $crm-background !important;
@@ -495,6 +501,10 @@
           }
         }
 
+        td.section-shown {
+          padding: 0 20px;
+        }
+
         &:last-child {
           border-bottom: 0;
         }
@@ -522,16 +532,36 @@
         }
       }
 
-      tr td.label {
-        background: none !important;
-        padding: 10px 30px !important;
+      tr {
+        th {
+          padding: 10px 20px !important;
+        }
+
+        td.label {
+          background: none !important;
+          padding: 10px 30px !important;
+        }
       }
+    }
+  }
+
+  .section-shown .crm-info-panel {
+    margin: 0;
+    width: 100%;
+
+    tr td.label {
+      background: $crm-white !important;
+      padding: 10px 30px !important;
     }
   }
 
   #related-contacts-memberships {
     margin-left: -20px;
     margin-right: -20px;
+
+    h3 {
+      background: $crm-background;
+    }
 
     .dataTables_wrapper {
       margin-bottom: 0;
@@ -636,6 +666,14 @@
 
       tr:first-child td {
         padding-top: 0;
+      }
+
+      tr:last-child td {
+        padding-top: 15px;
+
+        .crm-button-type-refresh .crm-i {
+          padding: 3px 3px 3px 5px;
+        }
       }
 
       td {
