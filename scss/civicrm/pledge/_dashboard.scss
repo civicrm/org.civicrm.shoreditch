@@ -34,4 +34,11 @@
       }
     }
   }
+
+  .CRM_Pledge_Form_Pledge {
+    .crm-pledge-form-block {
+      line-height: 0;
+      padding: 0 !important;
+    }
+  }
 }
