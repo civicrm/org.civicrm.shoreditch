@@ -208,27 +208,6 @@
     }
   }
 
-  label,
-  span {
-    &.crm-inline-error,
-    &.crm-error {
-      background: $brand-danger !important;
-      border-radius: 3px;
-      color: $crm-white !important;
-      line-height: 1.5em;
-      padding: 5px;
-
-      &.crm-inline-error {
-        margin: 0 4px;
-      }
-
-      span {
-        background: none;
-        color: $crm-white;
-      }
-    }
-  }
-
   .select2-container {
     max-width: 230px;
     min-height: 30px;
