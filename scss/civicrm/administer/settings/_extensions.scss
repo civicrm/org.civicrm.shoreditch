@@ -68,7 +68,8 @@
       box-shadow: none;
 
       .crm-submit-buttons {
-        border-radius: $border-radius-base;
+        border-bottom-left-radius: $border-radius-base;
+        border-bottom-right-radius: $border-radius-base;
       }
     }
   }
