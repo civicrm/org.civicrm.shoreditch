@@ -118,6 +118,10 @@
         color: $crm-white;
       }
     }
+
+    .crm-form-block {
+      box-shadow: none;
+    }
   }
 }
 
@@ -169,6 +173,10 @@
 
       .crm-accordion-body {
         padding: 0 20px !important;
+      }
+
+      .crm-block {
+        padding: 0;
       }
     }
   }

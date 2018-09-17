@@ -37,6 +37,11 @@
       .crm-search_filters-accordion {
         td:nth-child(3) {
           min-width: 285px;
+
+          .crm-absolute-date-from label,
+          .crm-absolute-date-to label {
+            display: block;
+          }
         }
       }
 
@@ -113,7 +118,7 @@
       .crm-news-feed-item-preview,
       .crm-news-feed-item-title {
         color: $crm-copy;
-        font-weight: $crm-font-weight-h1 !important;
+        font-weight: normal;
       }
     }
 

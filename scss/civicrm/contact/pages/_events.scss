@@ -289,8 +289,8 @@
       margin: 0 -20px;
     }
 
-    .description {
-      padding: 20px;
+    .td {
+      line-height: 18px !important;
     }
 
     .crm-participant-form-block-delete {
@@ -684,6 +684,7 @@
   }
 }
 
+.CRM_Event_Form_Task_ParticipantStatus,
 .CRM_Event_Form_Task_Batch {
   .help {
     background: none;
@@ -691,8 +692,15 @@
     .status {
       background: none;
       border: 0;
-      font-weight: $crm-font-weight-h5;
       padding: 0;
+    }
+  }
+}
+
+.CRM_Event_Form_Task_Batch {
+  .help {
+    .status {
+      font-weight: $crm-font-weight-h5;
     }
   }
 }

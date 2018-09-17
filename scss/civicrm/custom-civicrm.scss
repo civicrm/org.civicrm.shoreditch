@@ -5,7 +5,6 @@
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/overrides/variables';
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/variables';
 @import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/mixins/ALL';
-@import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/tooltip';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/mixins/ALL';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/fonts/ALL';
 @import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/vendor/font-awesome/variables';
@@ -29,7 +28,3 @@
 @import 'grant/grant';
 @import 'pledge/pledge';
 @import 'discount/discount';
-
-body {
-  @include open-sans-font-family();
-}

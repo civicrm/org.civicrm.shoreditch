@@ -24,7 +24,7 @@ gulp.task('sass:bootstrap', gulp.series('sass:sync', function buildBootstrapCSS 
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: bootstrapNamespace + ' ',
-      exclude: [/^html/, /^body/, /\.ta-hidden-input/, outsideNamespaceRegExp]
+      exclude: [/^html/, /^body/, /\.popover/, /\.tooltip/, /\.ta-hidden-input/, outsideNamespaceRegExp]
     })]))
     .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
     .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
@@ -42,7 +42,7 @@ gulp.task('sass:civicrm', gulp.series('sass:sync', function buildCiviCRMCSS () {
     .pipe(stripCssComments({ preserve: false }))
     .pipe(postcss([postcssPrefix({
       prefix: '.crm-container ',
-      exclude: [/^body/, /tooltip/, /page-civicrm/, /crm-container/,
+      exclude: [/^body/, /page-civicrm/, /crm-container/,
         /ui-datepicker/, /civicrm-menu/, /#root-menu-div/, /jstree-contextmenu/,
         outsideNamespaceRegExp]
     }), postcssDiscardDuplicates]))

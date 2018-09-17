@@ -18,5 +18,14 @@
         }
       }
     }
+
+    #enableDisableStatusMsg {
+      h3 {
+        background: none;
+        border-bottom: 0;
+        box-shadow: none;
+        padding: 0 0 13px 5px;
+      }
+    }
   }
 }

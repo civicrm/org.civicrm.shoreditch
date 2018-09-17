@@ -9,6 +9,7 @@ $page-class-name: str_slice($page-class, 2);
   @import 'detail';
 }
 
+@import 'pages/activities';
 @import 'pages/activity-search';
 @import 'pages/new-individual';
 @import 'pages/new-email';

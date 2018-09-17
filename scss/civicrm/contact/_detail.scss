@@ -11,7 +11,7 @@
     padding: 0 !important;
   }
 
-  > div.crm-contact-contribute-contributions {
+  div.crm-contact-contribute-contributions {
     padding-top: 20px !important;
   }
 
@@ -712,6 +712,10 @@
       .select2-container {
         max-width: 16em;
         width: 9em !important;
+      }
+
+      a.crm-hover-button {
+        padding: 4px 11px;
       }
     }
 
