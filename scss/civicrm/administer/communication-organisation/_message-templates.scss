@@ -35,11 +35,17 @@
 
   .form-layout-compressed {
     tr {
-      td {
-        padding: 20px 0;
+      td:first-child {
+        padding-left: 20px;
+      }
+    }
 
-        &:first-child {
-          padding: 20px;
+    &:last-of-type {
+      td {
+        padding: 20px;
+
+        &:last-child {
+          padding: 20px 0;
         }
       }
     }
