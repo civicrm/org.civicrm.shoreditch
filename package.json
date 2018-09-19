@@ -10,6 +10,7 @@
     "url": "https://github.com/civicrm/org.civicrm.shoreditch/issues"
   },
   "scripts": {
+    "postmerge": "./.githooks/post-merge.sh",
     "precommit": "./.githooks/pre-commit.sh"
   },
   "lint-staged": {
