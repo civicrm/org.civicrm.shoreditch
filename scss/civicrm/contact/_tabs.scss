@@ -3,7 +3,6 @@
 #mainTabContainer {
   background-color: transparent;
   display: flex;
-  padding: 0;
   position: relative;
 
   #ui-id-11 {
@@ -22,8 +21,6 @@
   // override of jquery-ui.css that creates weird white background
   .ui-widget-content {
     background: transparent;
-    border: 0 !important;
-    color: #222;
   }
 }
 
@@ -32,7 +29,6 @@
   border-radius: 0;
   box-shadow: $box-shadow;
   flex-shrink: 0;
-  margin: 0;
   padding: 0;
   width: 200px;
 
@@ -46,8 +42,6 @@
 
   .ui-tabs-anchor {
     box-sizing: border-box;
-    display: block;
-    font-size: $font-size-small;
     height: 100%;
     padding: 15px !important;
     width: 100%;
@@ -152,7 +146,6 @@
   }
 
   ~ .ui-tabs-panel {
-    box-sizing: border-box;
     flex-grow: 1;
     padding: 20px !important;
 
@@ -165,12 +158,9 @@
     background: transparent;
     border: 0;
     border-radius: 0;
-    box-sizing: border-box;
-    display: block;
     font: $crm-font-weight-h2 $font-size-base $font-family-base;
     margin-bottom: 0;
     padding: 0;
-    top: 0;
     white-space: normal;
     width: 100%;
 
