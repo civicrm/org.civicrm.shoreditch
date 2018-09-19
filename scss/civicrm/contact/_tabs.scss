@@ -29,6 +29,7 @@
   border-radius: 0;
   box-shadow: $box-shadow;
   flex-shrink: 0;
+  margin: 0;
   padding: 0;
   width: 200px;
 
@@ -40,8 +41,9 @@
     }
   }
 
-  .ui-tabs-anchor {
+  a {
     box-sizing: border-box;
+    display: block;
     font-size: $font-size-small !important;
     height: 100%;
     padding: 15px !important;
@@ -56,6 +58,7 @@
       margin-right: 10px;
     }
 
+    /* stylelint-disable selector-no-qualifying-type */
     &[title='Contact Summary']::before {
       content: '\f007';
     }
@@ -144,24 +147,18 @@
     &[title='Communications']::before {
       content: '\f0c0';
     }
+    /* stylelint-enable selector-no-qualifying-type */
   }
 
-  ~ .ui-tabs-panel {
-    flex-grow: 1;
-    padding: 20px !important;
-
-    .container-fluid {
-      max-width: $container-large-desktop;
-    }
-  }
-
-  .ui-tabs-tab {
+  .crm-tab-button {
     background: transparent;
     border: 0;
     border-radius: 0;
+    display: block;
     font: $crm-font-weight-h2 $font-size-base $font-family-base;
     margin-bottom: 0;
     padding: 0;
+    top: 0;
     white-space: normal;
     width: 100%;
 
@@ -181,5 +178,20 @@
       color: $gray-darker !important;
       cursor: default;
     }
+  }
+
+  ~ .ui-tabs-panel {
+    flex-grow: 1;
+    padding: 20px !important;
+
+    .container-fluid {
+      max-width: $container-large-desktop;
+    }
+  }
+
+  // Necessary because of the !important defined in
+  // https://github.com/civicrm/civicrm-core/blob/cc38fb8ddcbbc8b60679504dd93522df852c48bf/css/civicrm.css#L1616-L1619
+  .ui-tabs-anchor {
+    padding: 15px !important;
   }
 }
