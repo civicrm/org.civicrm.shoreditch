@@ -27,10 +27,15 @@ const PluginError = require('plugin-error');
         precision: 10
       }).on('error', sass.logError))
       .pipe(stripCssComments({ preserve: false }))
-      .pipe(postcss([postcssPrefix({
-        prefix: `${bootstrapNamespace} `,
-        exclude: [/^html/, /^body/, /\.popover/, /\.tooltip/, /\.ta-hidden-input/, outsideNamespaceRegExp]
-      })]))
+      .pipe(postcss([
+        postcssPrefix({
+          prefix: `${bootstrapNamespace} `,
+          exclude: [
+            /^html/, /^body/, /\.popover/, /\.tooltip/, /\.ta-hidden-input/,
+            outsideNamespaceRegExp
+          ]
+        })
+      ]))
       .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
       .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
       .pipe(gulp.dest('css/'));
@@ -45,12 +50,15 @@ const PluginError = require('plugin-error');
         precision: 10
       }).on('error', sass.logError))
       .pipe(stripCssComments({ preserve: false }))
-      .pipe(postcss([postcssPrefix({
-        prefix: '.crm-container ',
-        exclude: [/^body/, /page-civicrm/, /crm-container/,
-          /ui-datepicker/, /civicrm-menu/, /#root-menu-div/, /jstree-contextmenu/,
-          outsideNamespaceRegExp]
-      }), postcssDiscardDuplicates]))
+      .pipe(postcss([
+        postcssPrefix({
+          prefix: '.crm-container ',
+          exclude: [
+            /^body/, /page-civicrm/, /crm-container/, /ui-datepicker/, /civicrm-menu/,
+            /#root-menu-div/, /jstree-contextmenu/, outsideNamespaceRegExp]
+        }),
+        postcssDiscardDuplicates
+      ]))
       .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
       .pipe(gulp.dest('css/'));
   }));
@@ -101,16 +109,9 @@ const PluginError = require('plugin-error');
   });
 
   gulp.task('release:update-info', () => {
-    const date = new Date();
-    const day = date.getDate();
-    const month = date.getMonth() + 1;
-    const year = date.getFullYear();
-
-    const dateString = `${year}-${(month < 10 ? '0' + month : month)}-${(day < 10 ? '0' + day : day)}`;
-
     return gulp.src(['info.xml'])
       .pipe(replace(/<version>([^>]+)<\/version>/g, `<version>${argv.ver}</version>`))
-      .pipe(replace(/<releaseDate>([^>]+)<\/releaseDate>/g, `<releaseDate>${dateString}</releaseDate>`))
+      .pipe(replace(/<releaseDate>([^>]+)<\/releaseDate>/g, `<releaseDate>${formatTodayDate()}</releaseDate>`))
       .pipe(gulp.dest('.'));
   });
 
@@ -141,6 +142,20 @@ const PluginError = require('plugin-error');
     'release:update-info',
     'release:commit-changes'
   ));
+
+  /**
+   * Build the YYYY-MM-DD string of today's date
+   *
+   * @return {String}
+   */
+  function formatTodayDate () {
+    const date = new Date();
+    const day = ('0' + date.getDate()).slice(-2);
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const year = date.getFullYear();
+
+    return `${year}-${month}-${day}`;
+  }
 }
 
 gulp.task('default', gulp.parallel('sass'));
