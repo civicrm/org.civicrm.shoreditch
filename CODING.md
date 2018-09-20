@@ -10,15 +10,14 @@
   * `scss/bootstrap` Contains the custom Bootstrap theme. In here not only the base Bootstrap theme is customized, but also Bootstrap elements are augmented with new modifiers, and completely custom component are added.
 
 ## Build
-If you are doing development on this extension, then you may need to build
-new CSS files. This requires the toolchain for SCSS=>CSS compilation.
+If you are doing development on this extension, then you'll need to build your changes in the .css files. This requires the toolchain for SCSS=>CSS compilation.
 
 First of all you need [NodeJS](https://nodejs.org/). Please be aware that currently Shoreditch *does not* support NodeJS v9 or higher! It is recommended that you install NodeJS LTS version **v8.9.4** (you can use [nvm](https://github.com/creationix/nvm) for managing multiple node versions on the same machine.
 
 Once you have NodeJS installed, run
 
 ```sh
-npm install
+npm i
 ```
 
 Once you have the tools, you can run `npx gulp watch`. This will monitor the SCSS files and automatically recompile whenever they are changed.
@@ -33,6 +32,15 @@ If you would like to just compile files without watching, simply run `npx gulp`.
 ```sh
 npx gulp
 ```
+
+## Git hooks
+Once `npm i` is executed, two git hooks will be enabled on your local repo: pre-commit and post-merge
+
+### pre-commit hook
+In addition of running the JS/SCSS linters on your changes, the hook will block the commit if it contains any .css files (see ["Submitting a PR"](CONTRIBUTING.md#submitting-a-pr)).
+
+### post-merge hook
+The hook will be triggered after a successful `git merge` or `git pull` command, and will rebuild the .css files via `gulp sass` if it will detect new changes in any of the .scss files.
 
 ## Guidelines for `custom-civicrm.css`
 Any style changes that are aimed at making the core screens look like they are part of the Bootstrap theme, should go here.
