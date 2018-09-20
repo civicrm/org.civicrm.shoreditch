@@ -72,8 +72,8 @@ const PluginError = require('plugin-error');
   /**
    * Apply the namespace on html and body elements
    *
-   * @param  {string} selector the current selector to be transformed
-   * @return string
+   * @param  {String} selector the current selector to be transformed
+   * @return {String}
    */
   function namespaceRootElements (selector) {
     const regex = /^(body|html)/;
