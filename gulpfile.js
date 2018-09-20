@@ -105,7 +105,7 @@ const PluginError = require('plugin-error');
   const replace = require('gulp-replace');
 
   gulp.task('release:create-branch', () => {
-    return git.checkoutLocalBranch(`v${argv.ver}-rc`);
+    return git.checkoutLocalBranch(releaseBranchName());
   });
 
   gulp.task('release:update-info', () => {
@@ -135,12 +135,24 @@ const PluginError = require('plugin-error');
     done();
   });
 
+  gulp.task('release:push', () => {
+    return git.push(['-u', 'origin', releaseBranchName()]);
+  });
+
   gulp.task('release', gulp.series(
     'release:params-check',
     'release:create-branch',
     'sass',
     'release:update-info',
-    'release:commit-changes'
+    'release:commit-changes',
+    'release:push',
+    function releasePrepared (done) {
+      const compareUrl = `https://github.com/civicrm/org.civicrm.shoreditch/compare/${releaseBranchName()}`;
+
+      console.log(`Branch ${releaseBranchName()} prepared and pushed upstream`);
+      console.log(`Please check ${compareUrl}`);
+      done();
+    }
   ));
 
   /**
@@ -155,6 +167,16 @@ const PluginError = require('plugin-error');
     const year = date.getFullYear();
 
     return `${year}-${month}-${day}`;
+  }
+
+  /**
+   * Returns the name of the -rc branch, based on the version number
+   * passed as a parameter
+   *
+   * @return {String}
+   */
+  function releaseBranchName () {
+    return `v${argv.ver}-rc`;
   }
 }
 
