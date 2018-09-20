@@ -7,6 +7,10 @@ var postcssDiscardDuplicates = require('postcss-discard-duplicates');
 var stripCssComments = require('gulp-strip-css-comments');
 var transformSelectors = require('gulp-transform-selectors');
 var civicrmScssRoot = require('civicrm-scssroot')();
+var git = require('simple-git/promise')(__dirname);
+var replace = require('gulp-replace');
+var argv = require('yargs').argv;
+var PluginError = require('plugin-error');
 
 var bootstrapNamespace = '#bootstrap-theme';
 var outsideNamespaceRegExp = /^\.___outside-namespace/;
@@ -55,6 +59,52 @@ gulp.task('sass', gulp.parallel('sass:bootstrap', 'sass:civicrm'));
 gulp.task('watch', function () {
   gulp.watch(civicrmScssRoot.getWatchList(), gulp.parallel('sass'));
 });
+
+gulp.task('release:create-branch', function () {
+  return git.checkoutLocalBranch('v' + argv.ver + '-rc');
+});
+
+gulp.task('release:update-info', function () {
+  var date = new Date();
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+
+  var dateString = year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
+
+  return gulp.src(['info.xml'])
+    .pipe(replace(/<version>([^>]+)<\/version>/g, '<version>' + argv.ver + '</version>'))
+    .pipe(replace(/<releaseDate>([^>]+)<\/releaseDate>/g, '<releaseDate>' + dateString + '</releaseDate>'))
+    .pipe(gulp.dest('.'));
+});
+
+gulp.task('release:commit-changes', function () {
+  return git.add(['info.xml', '*.css'])
+    .then(function () {
+      return git.commit('Update css and info files for v' + argv.ver, null, {
+        '--no-verify': null
+      });
+    });
+});
+
+gulp.task('release:params-check', function (done) {
+  if (typeof argv.ver === 'undefined') {
+    throw new PluginError('release', {
+      message: 'Please specify the version using --ver (example: "--ver 1.1.0")',
+      showProperties: false
+    });
+  }
+
+  done();
+});
+
+gulp.task('release', gulp.series(
+  'release:params-check',
+  'release:create-branch',
+  'sass',
+  'release:update-info',
+  'release:commit-changes'
+));
 
 gulp.task('default', gulp.parallel('sass'));
 
