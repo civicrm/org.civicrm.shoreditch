@@ -1,5 +1,7 @@
 <?php
 
+use \Civi\Core\Event\GenericHookEvent;
+
 require_once 'shoreditch.civix.php';
 
 /**
@@ -9,6 +11,22 @@ require_once 'shoreditch.civix.php';
  */
 function shoreditch_civicrm_config(&$config) {
   _shoreditch_civix_civicrm_config($config);
+
+  // Add listeners for CiviCRM hooks that might need altering by other scripts
+  Civi::service('dispatcher')->addListener('hook_civicrm_coreResourceList', 'shoreditch_symfony_civicrm_coreResourceList', -100);
+  Civi::service('dispatcher')->addListener('hook_civicrm_buildForm', 'shoreditch_symfony_civicrm_buildForm', -100);
+  Civi::service('dispatcher')->addListener('hook_civicrm_pageRun', 'shoreditch_symfony_civicrm_pageRun', -100);
+
+  /**
+   * Dispatch an event to say that Shoreditch is configured.
+   *
+   * @since 0.1-alpha25
+   *
+   * @param string $hook_name The dispatched hook name.
+   * @param object $hook_event The dispatched hook event object.
+   */
+  Civi::service('dispatcher')->dispatch('hook_shoreditch_civicrm_config', GenericHookEvent::create(array()));
+
 }
 
 /**
@@ -114,9 +132,12 @@ function shoreditch_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 }
 
 /**
- * Implements hook_civicrm_coreResourceList().
+ * Implements hook_civicrm_coreResourceList() via Symfony hook system.
  */
-function shoreditch_civicrm_coreResourceList(&$items, $region) {
+function shoreditch_symfony_civicrm_coreResourceList( $event, $hook ) {
+  // Extract args for this hook
+  list( $items, $region ) = $event->getHookValues();
+
   if ($region == 'html-header') {
     CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/bootstrap.css', -50, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/crm-ui.js');
@@ -134,9 +155,12 @@ function shoreditch_civicrm_coreResourceList(&$items, $region) {
 }
 
 /**
- * Implements hook_civicrm_buildForm().
+ * Implements hook_civicrm_buildForm() via Symfony hook system.
  */
-function shoreditch_civicrm_buildForm($formName) {
+function shoreditch_symfony_civicrm_buildForm( $event, $hook ) {
+  // Extract args for this hook
+  list( $formName ) = $event->getHookValues();
+
   if ($formName == 'CRM_Contact_Form_Search_Advanced') {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/highlight-table-rows.js');
   }
@@ -150,9 +174,12 @@ function shoreditch_civicrm_buildForm($formName) {
 }
 
 /**
- * Implements hook_civicrm_pageRun().
+ * Implements hook_civicrm_pageRun() via Symfony hook system.
  */
-function shoreditch_civicrm_pageRun(&$page) {
+function shoreditch_symfony_civicrm_pageRun( $event, $hook ) {
+  // Extract args for this hook
+  list( $page ) = $event->getHookValues();
+
   $pageName = $page->getVar('_name');
 
   if ($pageName == 'CRM_Contact_Page_View_Summary') {
