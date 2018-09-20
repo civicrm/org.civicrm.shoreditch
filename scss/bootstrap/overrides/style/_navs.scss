@@ -41,7 +41,7 @@
   padding: $crm-nav-tab-content-padding;
 }
 
-.nav-pills {
+.nav-pills:not(.nav-stacked) {
   > li {
     > a:focus {
       background-color: transparent;
