@@ -166,24 +166,24 @@
     > .nav-tabs {
       border: $crm-nav-tabs-panel-heading-border;
       margin: $crm-nav-tabs-panel-heading-margin;
+    }
+  }
 
-      > li {
-        > a {
-          background: $crm-nav-tabs-panel-heading-link-background !important;
-          border-color: $crm-white !important;
-          border-width: $crm-nav-tabs-panel-heading-link-border-width;
-          color: $crm-white !important;
-          font-weight: $crm-nav-tabs-panel-heading-link-weight;
-          padding: $crm-nav-tabs-panel-heading-link-padding;
-        }
-      }
+  li {
+    > a {
+      background: $crm-nav-tabs-panel-heading-link-background !important;
+      border-color: $crm-white !important;
+      border-width: $crm-nav-tabs-panel-heading-link-border-width;
+      color: $crm-white !important;
+      font-weight: $crm-nav-tabs-panel-heading-link-weight;
+      padding: $crm-nav-tabs-panel-heading-link-padding;
+    }
+  }
 
-      > .active,
-      > li:hover {
-        > a {
-          border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
-        }
-      }
+  .active,
+  li:hover {
+    > a {
+      border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
     }
   }
 }
@@ -206,18 +206,18 @@
 
     > li {
       float: none;
+    }
 
-      > a {
-        margin-right: 0;
-        padding: $crm-nav-stacked-link-padding;
+    a {
+      margin-right: 0;
+      padding: $crm-nav-stacked-link-padding;
 
-        &,
-        &:hover {
-          border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
-        }
+      &:hover {
+        border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
       }
     }
 
+    /* stylelint-disable max-nesting-depth, selector-max-compound-selectors */
     > .active {
       > a,
       > a:hover,
@@ -226,15 +226,18 @@
         border-color: $nav-tabs-active-link-hover-border-color transparent $nav-tabs-active-link-hover-border-color transparent;
       }
     }
+    /* stylelint-enable */
 
     // The wrapper that enforces the layout
     &-wrapper {
       border-top: 1px solid $crm-grayblue-dark;
       display: flex;
 
+      /* stylelint-disable max-nesting-depth, selector-max-compound-selectors */
       .active:first-child > a {
         border-top-color: transparent !important;
       }
+      /* stylelint-enable */
 
       // Removes the grid gutter to visually connect the tabs to the content
       .nav-tabs-stacked {
