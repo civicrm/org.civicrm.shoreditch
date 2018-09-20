@@ -1,20 +1,20 @@
-var gulp = require('gulp');
-var argv = require('yargs').argv;
-var PluginError = require('plugin-error');
+const gulp = require('gulp');
+const argv = require('yargs').argv;
+const PluginError = require('plugin-error');
 
 // sass
-(function () {
-  var bulk = require('gulp-sass-glob');
-  var sass = require('gulp-sass');
-  var postcss = require('gulp-postcss');
-  var postcssPrefix = require('postcss-prefix-selector');
-  var postcssDiscardDuplicates = require('postcss-discard-duplicates');
-  var stripCssComments = require('gulp-strip-css-comments');
-  var transformSelectors = require('gulp-transform-selectors');
-  var civicrmScssRoot = require('civicrm-scssroot')();
+{
+  const bulk = require('gulp-sass-glob');
+  const sass = require('gulp-sass');
+  const postcss = require('gulp-postcss');
+  const postcssPrefix = require('postcss-prefix-selector');
+  const postcssDiscardDuplicates = require('postcss-discard-duplicates');
+  const stripCssComments = require('gulp-strip-css-comments');
+  const transformSelectors = require('gulp-transform-selectors');
+  const civicrmScssRoot = require('civicrm-scssroot')();
 
-  var bootstrapNamespace = '#bootstrap-theme';
-  var outsideNamespaceRegExp = /^\.___outside-namespace/;
+  const bootstrapNamespace = '#bootstrap-theme';
+  const outsideNamespaceRegExp = /^\.___outside-namespace/;
 
   gulp.task('sass:sync', civicrmScssRoot.update);
 
@@ -28,7 +28,7 @@ var PluginError = require('plugin-error');
       }).on('error', sass.logError))
       .pipe(stripCssComments({ preserve: false }))
       .pipe(postcss([postcssPrefix({
-        prefix: bootstrapNamespace + ' ',
+        prefix: `${bootstrapNamespace} `,
         exclude: [/^html/, /^body/, /\.popover/, /\.tooltip/, /\.ta-hidden-input/, outsideNamespaceRegExp]
       })]))
       .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
@@ -57,7 +57,7 @@ var PluginError = require('plugin-error');
 
   gulp.task('sass', gulp.parallel('sass:bootstrap', 'sass:civicrm'));
 
-  gulp.task('watch', function () {
+  gulp.task('watch', () => {
     gulp.watch(civicrmScssRoot.getWatchList(), gulp.parallel('sass'));
   });
 
@@ -68,10 +68,10 @@ var PluginError = require('plugin-error');
    * @return string
    */
   function namespaceRootElements (selector) {
-    var regex = /^(body|html)/;
+    const regex = /^(body|html)/;
 
     if (regex.test(selector)) {
-      selector = selector.replace(regex, function (match) {
+      selector = selector.replace(regex, match => {
         return match + bootstrapNamespace;
       }) + ',\n' + selector.replace(regex, bootstrapNamespace);
     }
@@ -89,41 +89,41 @@ var PluginError = require('plugin-error');
   function removeOutsideNamespaceMarker (selector) {
     return selector.replace(outsideNamespaceRegExp, '');
   }
-}());
+}
 
 // release
-(function () {
-  var git = require('simple-git/promise')(__dirname);
-  var replace = require('gulp-replace');
+{
+  const git = require('simple-git/promise')(__dirname);
+  const replace = require('gulp-replace');
 
-  gulp.task('release:create-branch', function () {
-    return git.checkoutLocalBranch('v' + argv.ver + '-rc');
+  gulp.task('release:create-branch', () => {
+    return git.checkoutLocalBranch(`v${argv.ver}-rc`);
   });
 
-  gulp.task('release:update-info', function () {
-    var date = new Date();
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var year = date.getFullYear();
+  gulp.task('release:update-info', () => {
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
-    var dateString = year + '-' + (month < 10 ? '0' + month : month) + '-' + (day < 10 ? '0' + day : day);
+    const dateString = `${year}-${(month < 10 ? '0' + month : month)}-${(day < 10 ? '0' + day : day)}`;
 
     return gulp.src(['info.xml'])
-      .pipe(replace(/<version>([^>]+)<\/version>/g, '<version>' + argv.ver + '</version>'))
-      .pipe(replace(/<releaseDate>([^>]+)<\/releaseDate>/g, '<releaseDate>' + dateString + '</releaseDate>'))
+      .pipe(replace(/<version>([^>]+)<\/version>/g, `<version>${argv.ver}</version>`))
+      .pipe(replace(/<releaseDate>([^>]+)<\/releaseDate>/g, `<releaseDate>${dateString}</releaseDate>`))
       .pipe(gulp.dest('.'));
   });
 
-  gulp.task('release:commit-changes', function () {
+  gulp.task('release:commit-changes', () => {
     return git.add(['info.xml', '*.css'])
-      .then(function () {
-        return git.commit('Update css and info files for v' + argv.ver, null, {
+      .then(() => {
+        return git.commit(`Update css and info files for v${argv.ver}`, null, {
           '--no-verify': null
         });
       });
   });
 
-  gulp.task('release:params-check', function (done) {
+  gulp.task('release:params-check', done => {
     if (typeof argv.ver === 'undefined') {
       throw new PluginError('release', {
         message: 'Please specify the version using --ver (example: "--ver 1.1.0")',
@@ -141,6 +141,6 @@ var PluginError = require('plugin-error');
     'release:update-info',
     'release:commit-changes'
   ));
-}());
+}
 
 gulp.task('default', gulp.parallel('sass'));
