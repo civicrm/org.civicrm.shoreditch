@@ -19,7 +19,7 @@ If you want to suggest an enhancement, please make sure to provide:
 * Reason why it would be beneficial for the theme
 
 ## Code contributions
-If you'd like to contribute to the project, please make sure to familiarize with the [coding guidelines](CODING.md) and with how to appropriately [test](TESTING.md) your style changes before submitting your contribution!
+If you'd like to contribute to the project, please make sure to familiarize with the [coding documentation](CODING.md) and with how to appropriately [test](TESTING.md) your style changes before submitting your contribution!
 
 ### Git commit messages guidelines
 * Use the present tense ("Customize .panel-primary" not "Customized .panel-primary")

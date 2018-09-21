@@ -10,11 +10,7 @@
   * `scss/bootstrap` Contains the custom Bootstrap theme. In here not only the base Bootstrap theme is customized, but also Bootstrap elements are augmented with new modifiers, and completely custom component are added.
 
 ## Build
-If you are doing development on this extension, then you'll need to build your changes in the .css files. This requires the toolchain for SCSS=>CSS compilation.
-
-First of all you need [NodeJS](https://nodejs.org/). Please be aware that currently Shoreditch *does not* support NodeJS v9 or higher! It is recommended that you install NodeJS LTS version **v8.9.4** (you can use [nvm](https://github.com/creationix/nvm) for managing multiple node versions on the same machine.
-
-Once you have NodeJS installed, run
+If you are doing development on this extension, then you'll need to build your changes in the .css files. This requires the toolchain for SCSS=>CSS compilation which can get by simply running
 
 ```sh
 npm i
@@ -23,7 +19,7 @@ npm i
 Once you have the tools, you can run `npx gulp watch`. This will monitor the SCSS files and automatically recompile whenever they are changed.
 
 ```sh
-# npx command ensures you run a local repository Gulp and not the global one
+# npx command ensures you run the local version of gulp rather than the global one
 npx gulp watch
 ```
 
