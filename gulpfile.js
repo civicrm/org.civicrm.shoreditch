@@ -76,7 +76,13 @@ const PluginError = require('plugin-error');
   gulp.task('sass', gulp.parallel('sass:bootstrap', 'sass:civicrm'));
 
   gulp.task('watch', () => {
-    gulp.watch(civicrmScssRoot.getWatchList(), gulp.parallel('sass'));
+    gulp.watch([
+      'base/scss/**/*.scss',
+      'scss/angular/**/*.scss',
+      'scss/jquery/**/*.scss'
+    ], gulp.parallel('sass'));
+    gulp.watch('scss/bootstrap/**/*.scss', gulp.parallel('sass:bootstrap'));
+    gulp.watch('scss/civicrm/**/*.scss', gulp.parallel('sass:civicrm'));
   });
 
   /**
