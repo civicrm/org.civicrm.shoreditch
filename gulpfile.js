@@ -49,12 +49,14 @@ const PluginError = require('plugin-error');
       .pipe(gulp.dest('css/'));
   });
 
-  gulp.task('sass:civicrm', gulp.series('sass:sync', function buildCiviCRMCSS () {
+  gulp.task('sass:civicrm', function buildCiviCRMCSS () {
     return gulp.src('scss/civicrm/custom-civicrm.scss')
-      .pipe(bulk())
+      .pipe(bulk({
+        includePaths: includePaths
+      }))
       .pipe(sass({
         outputStyle: 'compressed',
-        includePaths: civicrmScssRoot.getPath(),
+        includePaths: includePaths,
         precision: 10
       }).on('error', sass.logError))
       .pipe(stripCssComments({ preserve: false }))
@@ -69,7 +71,7 @@ const PluginError = require('plugin-error');
       ]))
       .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
       .pipe(gulp.dest('css/'));
-  }));
+  });
 
   gulp.task('sass', gulp.parallel('sass:bootstrap', 'sass:civicrm'));
 

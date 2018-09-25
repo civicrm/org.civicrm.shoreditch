@@ -1,7 +1,7 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
 
-@import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/modals';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/bootstrap/overrides/style/modals';
+@import 'base/scss/vendor/bootstrap/modals';
+@import 'bootstrap/overrides/style/modals';
 
 .crm-container.ui-dialog {
   @include ui-dialog;
