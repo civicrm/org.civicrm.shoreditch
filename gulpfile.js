@@ -11,7 +11,6 @@ const PluginError = require('plugin-error');
   const postcssDiscardDuplicates = require('postcss-discard-duplicates');
   const stripCssComments = require('gulp-strip-css-comments');
   const transformSelectors = require('gulp-transform-selectors');
-  const civicrmScssRoot = require('civicrm-scssroot')();
   const path = require('path');
 
   const bootstrapNamespace = '#bootstrap-theme';
@@ -21,8 +20,6 @@ const PluginError = require('plugin-error');
     __dirname,
     path.join(__dirname, 'scss')
   ];
-
-  gulp.task('sass:sync', civicrmScssRoot.update);
 
   gulp.task('sass:bootstrap', function buildBootstrapCSS () {
     return gulp.src('scss/bootstrap/bootstrap.scss')
