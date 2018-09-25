@@ -1,4 +1,4 @@
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/vendor/ALL';
+@import 'angular/vendor/**/*';
 @import 'vendor/font-awesome/font-awesome';
 @import 'vendor/perfect-scrollbar/main';
 @import 'vendor/select2/select2-bootstrap';
@@ -7,8 +7,8 @@
 @import 'fonts/*';
 @import 'mixins/*';
 
-@import 'SCSSROOT/org.civicrm.shoreditch/base/scss/bootstrap';
-@import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/ALL';
+@import 'base/scss/bootstrap';
+@import 'angular/overrides/**/*';
 @import 'overrides/style/*';
 @import 'overrides/vendors/*';
 @import 'overrides/crm/**/*';
@@ -20,5 +20,5 @@
 #{$outside-namespace-marker} {
   @import 'components/outside-namespace/*';
   @import 'overrides/crm/outside-namespace/*';
-  @import 'SCSSROOT/org.civicrm.shoreditch/scss/angular/overrides/outside-namespace/ALL';
+  @import 'angular/overrides/outside-namespace/**/*';
 }

@@ -12,18 +12,26 @@ const PluginError = require('plugin-error');
   const stripCssComments = require('gulp-strip-css-comments');
   const transformSelectors = require('gulp-transform-selectors');
   const civicrmScssRoot = require('civicrm-scssroot')();
+  const path = require('path');
 
   const bootstrapNamespace = '#bootstrap-theme';
   const outsideNamespaceRegExp = /^\.___outside-namespace/;
 
+  var includePaths = [
+    __dirname,
+    path.join(__dirname, 'scss')
+  ];
+
   gulp.task('sass:sync', civicrmScssRoot.update);
 
-  gulp.task('sass:bootstrap', gulp.series('sass:sync', function buildBootstrapCSS () {
+  gulp.task('sass:bootstrap', function buildBootstrapCSS () {
     return gulp.src('scss/bootstrap/bootstrap.scss')
-      .pipe(bulk())
+      .pipe(bulk({
+        includePaths: includePaths
+      }))
       .pipe(sass({
         outputStyle: 'compressed',
-        includePaths: civicrmScssRoot.getPath(),
+        includePaths: includePaths,
         precision: 10
       }).on('error', sass.logError))
       .pipe(stripCssComments({ preserve: false }))
@@ -39,7 +47,7 @@ const PluginError = require('plugin-error');
       .pipe(transformSelectors(namespaceRootElements, { splitOnCommas: true }))
       .pipe(transformSelectors(removeOutsideNamespaceMarker, { splitOnCommas: true }))
       .pipe(gulp.dest('css/'));
-  }));
+  });
 
   gulp.task('sass:civicrm', gulp.series('sass:sync', function buildCiviCRMCSS () {
     return gulp.src('scss/civicrm/custom-civicrm.scss')
