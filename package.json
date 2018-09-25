@@ -55,6 +55,7 @@
     "gulp-transform-selectors": "0.0.2",
     "husky": "^0.14.3",
     "lint-staged": "^6.1.1",
+    "path": "^0.12.7",
     "plugin-error": "^1.0.1",
     "postcss-discard-duplicates": "^2.1.0",
     "postcss-prefix-selector": "^1.6.0",
