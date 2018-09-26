@@ -10,7 +10,7 @@
     "url": "https://github.com/civicrm/org.civicrm.shoreditch/issues"
   },
   "scripts": {
-    "postinstall": "npx gulp sass"
+    "postinstall": "npx gulp sass && git update-index --skip-worktree css/*"
   },
   "husky": {
     "hooks": {
