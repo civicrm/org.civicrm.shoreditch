@@ -1,24 +1,23 @@
 @import 'angular/vendor/**/*';
-@import 'vendor/font-awesome/font-awesome';
-@import 'vendor/perfect-scrollbar/main';
-@import 'vendor/select2/select2-bootstrap';
+@import 'bootstrap/vendor/font-awesome/font-awesome';
+@import 'bootstrap/vendor/perfect-scrollbar/main';
+@import 'bootstrap/vendor/select2/select2-bootstrap';
 
-@import 'overrides/variables';
-@import 'fonts/*';
-@import 'mixins/*';
+@import 'bootstrap/overrides/variables';
+@import 'bootstrap/fonts/*';
+@import 'bootstrap/mixins/*';
 
 @import 'base/scss/bootstrap';
 @import 'angular/overrides/**/*';
-@import 'overrides/style/*';
-@import 'overrides/vendors/*';
-@import 'overrides/crm/**/*';
-@import 'variants/*';
-@import 'components/**/*';
+@import 'bootstrap/overrides/style/*';
+@import 'bootstrap/overrides/vendors/*';
+@import 'bootstrap/overrides/crm/**/*';
+@import 'bootstrap/variants/*';
+@import 'bootstrap/components/**/*';
 
-@import 'utilities/*';
+@import 'bootstrap/utilities/*';
 
 #{$outside-namespace-marker} {
-  @import 'components/outside-namespace/*';
-  @import 'overrides/crm/outside-namespace/*';
+  @import 'bootstrap/overrides/crm/outside-namespace/*';
   @import 'angular/overrides/outside-namespace/**/*';
 }
