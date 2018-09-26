@@ -10,9 +10,13 @@
     "url": "https://github.com/civicrm/org.civicrm.shoreditch/issues"
   },
   "scripts": {
-    "postinstall": "npx gulp sass",
-    "postmerge": "./.githooks/post-merge.sh",
-    "precommit": "./.githooks/pre-commit.sh"
+    "postinstall": "npx gulp sass"
+  },
+  "husky": {
+    "hooks": {
+      "post-merge": "./.githooks/post-merge.sh",
+      "pre-commit": "./.githooks/pre-commit.sh"
+    }
   },
   "lint-staged": {
     "*.js": [
@@ -52,7 +56,7 @@
     "gulp-sass-glob": "^1.0.9",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-transform-selectors": "0.0.2",
-    "husky": "^0.14.3",
+    "husky": "^1.0.0",
     "lint-staged": "^6.1.1",
     "path": "^0.12.7",
     "plugin-error": "^1.0.1",
