@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Copy this hook in .git/hooks if you want the min files to be rebuilt
+# whenever HEAD is pointed to a different branch with source code changes
 YELLOW='\033[0;33m'
 RESET_COLOR='\033[0m'
 
