@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "post-merge": "./.githooks/post-merge",
+    "pre-commit": "./.githooks/pre-commit"
+  }
+}

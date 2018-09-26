@@ -12,41 +12,11 @@
   "scripts": {
     "postinstall": "npx gulp sass && git update-index --skip-worktree css/*"
   },
-  "husky": {
-    "hooks": {
-      "post-merge": "./.githooks/post-merge",
-      "pre-commit": "./.githooks/pre-commit"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "semistandard --fix",
-      "git add"
-    ],
-    "*.scss": [
-      "stylelint --fix",
-      "git add"
-    ]
-  },
   "semistandard": {
     "globals": [
       "CRM",
       "jQuery"
     ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-sass-guidelines",
-    "plugins": [
-      "stylelint-order",
-      "stylelint-scss"
-    ],
-    "rules": {
-      "selector-class-pattern": null,
-      "max-nesting-depth": 3,
-      "no-extra-semicolons": true,
-      "no-duplicate-selectors": true,
-      "scss/dollar-variable-colon-space-after": "at-least-one-space"
-    }
   },
   "devDependencies": {
     "gulp": "^4.0.0",
