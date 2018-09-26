@@ -30,13 +30,28 @@ npx gulp
 ```
 
 ## Git hooks
-Once `npm i` is executed, two git hooks will be enabled on your local repo: pre-commit and post-merge
+### pre-commit
+Installed automatically on `npm i`. In addition of running the JS/SCSS linters on your changes, the hook will block the commit if it contains any .css files (see ["Submitting a PR"](CONTRIBUTING.md#submitting-a-pr)).
 
-### pre-commit hook
-In addition of running the JS/SCSS linters on your changes, the hook will block the commit if it contains any .css files (see ["Submitting a PR"](CONTRIBUTING.md#submitting-a-pr)).
+### post-merge
+Installed automatically on `npm i`. The hook will be triggered after a successful `git merge` or `git pull` command, and will rebuild the .css files via `gulp sass` if it will detect new changes in any of the .scss files.
 
-### post-merge hook
-The hook will be triggered after a successful `git merge` or `git pull` command, and will rebuild the .css files via `gulp sass` if it will detect new changes in any of the .scss files.
+### post-checkout
+Needs to be installed manually. The hook does the same that `post-merge` does, only difference being that is triggered whenever a checkout happens, most likely because `HEAD` is pointing to a new branch.
+
+It can be useful in case one wants to make sure to always rebuild when switching branches, or for automated setups when a branch is being deployed automatically on a remote site.
+
+## Ignoring .css files
+Given that the .css files are still part of the repo but should not be included in commits, the npm's `postinstall` script will run
+```
+git update-index --skip-worktree css/*
+```
+which will make your local repo ignore any changes on both minified files, so that you don't accidentally end up trying to add them to a commit.
+
+In case you want to not ignore those files, simply run
+```
+git update-index --no-skip-worktree css/*
+```
 
 ## Guidelines for `custom-civicrm.css`
 Any style changes that are aimed at making the core screens look like they are part of the Bootstrap theme, should go here.
