@@ -1,14 +1,5 @@
 # Coding
 
-## Project structure
-* `base/` Where vanilla Bootstrap is located. Contains the original Bootstrap SASS partials (`scss/vendor/bootstrap/`) but also custom partials (`scss/overrides`) and mixins (`scss/mixins`) that allow using Bootstrap alongside the original CiviCRM style
-* `css/` Contains the two post-processed css files, `bootstrap.css` and `custom-civicrm.css`
-* `fonts/` Font files used by the theme
-* `js/` Any custom javascript code that the theme relies on
-* `scss/` Contains the SASS partials that make up Shoreditch. It's split into two sub-folders
-  * `scss/civicrm` Contains the style that the theme applies to the existing core screens, in order to make them look like as if they were also Bootstrap-based pages.
-  * `scss/bootstrap` Contains the custom Bootstrap theme. In here not only the base Bootstrap theme is customized, but also Bootstrap elements are augmented with new modifiers, and completely custom component are added.
-
 ## Build
 If you are doing development on this extension, then you'll need to build your changes in the .css files. This requires the toolchain for SCSS=>CSS compilation which can get by simply running
 
@@ -52,6 +43,15 @@ In case you want to not ignore those files, simply run
 ```
 git update-index --no-skip-worktree css/*
 ```
+
+## Project structure
+* `base/` Where vanilla Bootstrap is located. Contains the original Bootstrap SASS partials (`scss/vendor/bootstrap/`) but also custom partials (`scss/overrides`) and mixins (`scss/mixins`) that allow using Bootstrap alongside the original CiviCRM style
+* `css/` Contains the two post-processed css files, `bootstrap.css` and `custom-civicrm.css`
+* `fonts/` Font files used by the theme
+* `js/` Any custom javascript code that the theme relies on
+* `scss/` Contains the SASS partials that make up Shoreditch. It's split into two sub-folders
+  * `scss/civicrm` Contains the style that the theme applies to the existing core screens, in order to make them look like as if they were also Bootstrap-based pages.
+  * `scss/bootstrap` Contains the custom Bootstrap theme. In here not only the base Bootstrap theme is customized, but also Bootstrap elements are augmented with new modifiers, and completely custom component are added.
 
 ## Guidelines for `custom-civicrm.css`
 Any style changes that are aimed at making the core screens look like they are part of the Bootstrap theme, should go here.
