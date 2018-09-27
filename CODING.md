@@ -1,30 +1,16 @@
 # Coding
 
-## Project structure
-* `base/` Where vanilla Bootstrap is located. Contains the original Bootstrap SASS partials (`scss/vendor/bootstrap/`) but also custom partials (`scss/overrides`) and mixins (`scss/mixins`) that allow using Bootstrap alongside the original CiviCRM style
-* `css/` Contains the two post-processed css files, `bootstrap.css` and `custom-civicrm.css`
-* `fonts/` Font files used by the theme
-* `js/` Any custom javascript code that the theme relies on
-* `scss/` Contains the SASS partials that make up Shoreditch. It's split into two sub-folders
-  * `scss/civicrm` Contains the style that the theme applies to the existing core screens, in order to make them look like as if they were also Bootstrap-based pages.
-  * `scss/bootstrap` Contains the custom Bootstrap theme. In here not only the base Bootstrap theme is customized, but also Bootstrap elements are augmented with new modifiers, and completely custom component are added.
-
 ## Build
-If you are doing development on this extension, then you may need to build
-new CSS files. This requires the toolchain for SCSS=>CSS compilation.
-
-First of all you need [NodeJS](https://nodejs.org/). Please be aware that currently Shoreditch *does not* support NodeJS v9 or higher! It is recommended that you install NodeJS LTS version **v8.9.4** (you can use [nvm](https://github.com/creationix/nvm) for managing multiple node versions on the same machine.
-
-Once you have NodeJS installed, run
+If you are doing development on this extension, then you'll need to build your changes in the .css files. This requires the toolchain for SCSS=>CSS compilation which can get by simply running
 
 ```sh
-npm install
+npm i
 ```
 
 Once you have the tools, you can run `npx gulp watch`. This will monitor the SCSS files and automatically recompile whenever they are changed.
 
 ```sh
-# npx command ensures you run a local repository Gulp and not the global one
+# npx command ensures you run the local version of gulp rather than the global one
 npx gulp watch
 ```
 
@@ -33,6 +19,39 @@ If you would like to just compile files without watching, simply run `npx gulp`.
 ```sh
 npx gulp
 ```
+
+## Git hooks
+### pre-commit
+Installed automatically on `npm i`. In addition of running the JS/SCSS linters on your changes, the hook will block the commit if it contains any .css files (see ["Submitting a PR"](CONTRIBUTING.md#submitting-a-pr)).
+
+### post-merge
+Installed automatically on `npm i`. The hook will be triggered after a successful `git merge` or `git pull` command, and will rebuild the .css files via `gulp sass` if it will detect new changes in any of the .scss files.
+
+### post-checkout
+Needs to be installed manually. The hook does the same that `post-merge` does, only difference being that is triggered whenever a checkout happens, most likely because `HEAD` is pointing to a new branch.
+
+It can be useful in case one wants to make sure to always rebuild when switching branches, or for automated setups when a branch is being deployed automatically on a remote site.
+
+## Ignoring .css files
+Given that the .css files are still part of the repo but should not be included in commits, the npm's `postinstall` script will run
+```
+git update-index --skip-worktree css/*
+```
+which will make your local repo ignore any changes on both minified files, so that you don't accidentally end up trying to add them to a commit.
+
+In case you want to not ignore those files, simply run
+```
+git update-index --no-skip-worktree css/*
+```
+
+## Project structure
+* `base/` Where vanilla Bootstrap is located. Contains the original Bootstrap SASS partials (`scss/vendor/bootstrap/`) but also custom partials (`scss/overrides`) and mixins (`scss/mixins`) that allow using Bootstrap alongside the original CiviCRM style
+* `css/` Contains the two post-processed css files, `bootstrap.css` and `custom-civicrm.css`
+* `fonts/` Font files used by the theme
+* `js/` Any custom javascript code that the theme relies on
+* `scss/` Contains the SASS partials that make up Shoreditch. It's split into two sub-folders
+  * `scss/civicrm` Contains the style that the theme applies to the existing core screens, in order to make them look like as if they were also Bootstrap-based pages.
+  * `scss/bootstrap` Contains the custom Bootstrap theme. In here not only the base Bootstrap theme is customized, but also Bootstrap elements are augmented with new modifiers, and completely custom component are added.
 
 ## Guidelines for `custom-civicrm.css`
 Any style changes that are aimed at making the core screens look like they are part of the Bootstrap theme, should go here.
