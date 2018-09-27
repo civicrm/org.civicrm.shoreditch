@@ -139,7 +139,7 @@ const PluginError = require('plugin-error');
 
   gulp.task('release:params-check', done => {
     if (typeof argv.ver === 'undefined') {
-      throw new PluginError('release', {
+      throw new PluginError('release:params-check', {
         message: 'Please specify the version using --ver (example: "--ver 1.1.0")',
         showProperties: false
       });
@@ -148,12 +148,34 @@ const PluginError = require('plugin-error');
     done();
   });
 
+  gulp.task('release:worktree-check', () => {
+    return git.raw([
+      'ls-files',
+      '-v'
+    ])
+      .then(files => {
+        return !!files.split('\n').filter(file => {
+          return file.indexOf('S css/') === 0;
+        }).length;
+      })
+      .then(areMinFilesSkipped => {
+        if (areMinFilesSkipped) {
+          throw new PluginError('release:worktree-check', {
+            message: `The .css files are currently ignored in your local repo, unable to create the release commit.
+    Please run \`git update-index --no-skip-worktree css/*\` before running the release command again.`,
+            showProperties: false
+          });
+        }
+      });
+  });
+
   gulp.task('release:push', () => {
     return git.push(['-u', 'origin', releaseBranchName()]);
   });
 
   gulp.task('release', gulp.series(
     'release:params-check',
+    'release:worktree-check',
     'release:create-branch',
     'sass',
     'release:update-info',
