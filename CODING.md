@@ -21,6 +21,8 @@ npx gulp
 ```
 
 ## Git hooks
+Following is the list of git hooks, stored in _.githooks/_, that the project provides:
+
 ### pre-commit
 Installed automatically on `npm i`. In addition of running the JS/SCSS linters on your changes, the hook will block the commit if it contains any .css files (see ["Submitting a PR"](CONTRIBUTING.md#submitting-a-pr)).
 
@@ -28,7 +30,7 @@ Installed automatically on `npm i`. In addition of running the JS/SCSS linters o
 Installed automatically on `npm i`. The hook will be triggered after a successful `git merge` or `git pull` command, and will rebuild the .css files via `gulp sass` if it will detect new changes in any of the .scss files.
 
 ### post-checkout
-Needs to be installed manually. The hook does the same that `post-merge` does, only difference being that is triggered whenever a checkout happens, most likely because `HEAD` is pointing to a new branch.
+Needs to be installed manually (`cp .githooks/post-checkout .git/hooks/post-checkout`). The hook does the same that `post-merge` does, only difference being that is triggered whenever a checkout happens, most likely because `HEAD` is pointing to a new branch.
 
 It can be useful in case one wants to make sure to always rebuild when switching branches, or for automated setups when a branch is being deployed automatically on a remote site.
 
