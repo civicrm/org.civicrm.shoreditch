@@ -35,13 +35,11 @@ Needs to be installed manually (`cp .githooks/post-checkout .git/hooks/post-chec
 It can be useful in case one wants to make sure to always rebuild when switching branches, or for automated setups when a branch is being deployed automatically on a remote site.
 
 ## Ignoring .css files
-Given that the .css files are still part of the repo but should not be included in commits, the npm's `postinstall` script will run
+Given that the .css files are still part of the repo but should not be included in commits, if you want to make sure you don't accidentally end up trying to add them in a commit, you can run:
 ```
 git update-index --skip-worktree css/*
 ```
-which will make your local repo ignore any changes on both minified files, so that you don't accidentally end up trying to add them to a commit.
-
-In case you want to not ignore those files, simply run
+which will make your local repo ignore any changes on both minified files. To undo it, simply run
 ```
 git update-index --no-skip-worktree css/*
 ```
