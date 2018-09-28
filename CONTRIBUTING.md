@@ -7,14 +7,19 @@ First of all, thank you for considering contributing to the Shoreditch theme!
 3. The [org.civicrm.styleguide](https://github.com/civicrm/org.civicrm.styleguide/) extension is a very useful companion to the theme, please make sure to have it installed and enabled locally when working on Shoreditch.
 
 ## Reporting a bug / Suggesting enhancements
-Both bugs and enhancements are tracked as [GitHub issues](https://github.com/civicrm/org.civicrm.shoreditch/issues).
+Both bugs and enhancements suggestions are tracked as [GitHub issues](https://github.com/civicrm/org.civicrm.shoreditch/issues).
 
-If you want to report a bug, open an issue and apply the "bug" label to it. Please use a clear and descriptive title, provide screenshots (if it relates to styling issues) and report on what OS/browser the bug is reproducible.
+If you want to report a bug, please make sure to provide:
+* Shoreditch, CiviCRM, and Drupal versions
+* Steps to reproduce
+* Screenshots (if the bug relates to styling issues)
 
-If you want to suggest an enhancement, open an issue and apply the "enhancement" label to it. Please use a clear and descriptive title and provide a description of the suggested enhancement and why it would be beneficial for the theme.
+If you want to suggest an enhancement, please make sure to provide:
+* A clear description of the suggested enhancement
+* Reason why it would be beneficial for the theme
 
 ## Code contributions
-If you'd like to contribute to the project, please make sure to familiarize with the [coding guidelines](CODING.md) and with how to appropriately [test](TESTING.md) your style changes before submitting your contribution!
+If you'd like to contribute to the project, please make sure to familiarize with the [coding documentation](CODING.md) and with how to appropriately [test](TESTING.md) your style changes before submitting your contribution!
 
 ### Git commit messages guidelines
 * Use the present tense ("Customize .panel-primary" not "Customized .panel-primary")
@@ -26,6 +31,8 @@ If you'd like to contribute to the project, please make sure to familiarize with
 When your work is complete and you have tested it locally, you can open a PR against the `master` branch.
 
 In the PR give a description of what you changed (and why!), and attach before & after screenshots to show the effects of your changes.
+
+Please be aware that the min files (`bootstrap.css`, `custom-civicrm.css`) _must not_ be included in any of your commits, as any PR should include source files (.scss) only.
 
 Currently you are also required, for any work done on the style, to attach a screenshot of the BackstopJS report (see [here](TESTING.md)), showing how many tests passed, how many failed and which ones.
 

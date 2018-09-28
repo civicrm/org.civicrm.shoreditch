@@ -1,7 +1,7 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
-@import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/forms';
-@import '../bootstrap/overrides/style/forms';
+@import 'base/scss/vendor/bootstrap/forms';
+@import 'bootstrap/overrides/style/forms';
 
 %arrow {
   @include fa-icon($font-size-base, $fa-var-caret-down);

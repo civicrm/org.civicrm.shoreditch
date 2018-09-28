@@ -5,8 +5,38 @@ the [Bootstrap v3](https://getbootstrap.com/docs/3.3/) framework.
 
 Please note that this extension is currrently in **alpha stage** and under **active development**. Significant elements may change.
 
+## Requirements
+* Drupal 7
+* CiviCRM, `v5.0`+ recommended
+* "CiviCRM Theme" module enabled
+* "Seven" theme set as CiviCRM Administration theme
+
+For development, or for building the stylesheets it's necessary to have NodeJS `v8.9.0`
+
 ## Supported CMSs
-At the moment the theme is being developed to work only in Drupal (with default theme set to "Seven"). WordPress and Joomla are not currently supported.
+At the moment the theme is being developed to work only in Drupal 7 (with default theme set to "Seven"). WordPress and Joomla are not currently supported.
+
+## Installation (git/cli)
+```bash
+# Navigate to your extension directory, e.g.
+cd sites/default/files/civicrm/ext
+
+# Download and enable the extension
+git clone https://github.com/civicrm/org.civicrm.shoreditch
+cv en org.civicrm.shoreditch
+
+# Enable the "CiviCRM Theme" module and set "Seven" as the Civi admin theme
+drush en -y civicrmtheme
+drush vset civicrmtheme_theme_admin seven
+drush cc civicrm
+```
+If you are [developing](CONTRIBUTING.md#code-contributions) for the theme or if want the very latest (but untested) version of the theme on your site, run
+```bash
+cd org.civicrm.shoreditch
+npm i
+```
+
+Once all the packages are installed `gulp sass` will be automatically invoked, which will build the stylesheets with the latest version of the source code.
 
 ## Components
 The theme includes two major components:

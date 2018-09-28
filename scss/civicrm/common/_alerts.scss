@@ -1,6 +1,6 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
 
-@import 'SCSSROOT/org.civicrm.shoreditch/base/scss/vendor/bootstrap/alerts';
+@import 'base/scss/vendor/bootstrap/alerts';
 
 .page-civicrm div#console {
   @extend .alert, .alert-warning;
