@@ -277,11 +277,14 @@ select.crm-form-select {
     border-color: $input-border-focus;
     outline: 0;
   }
+
+  &[disabled] {
+    background: url('../img/drop-down-arrow.svg') no-repeat right $input-bg-disabled;
+  }
 }
 
 input.crm-form-text[disabled],
 input.dateplugin[disabled],
-select.crm-form-select[disabled],
 input.crm-form-text[readonly],
 input.crm-form-password[disabled],
 input.crm-form-password[readonly] {
@@ -319,115 +322,3 @@ input.error {
     border-color: $input-border-focus;
   }
 }
-
-.select2-container {
-  .select2-choice {
-    background: $crm-white;
-    border-color: $crm-grayblue-darker;
-    border-radius: $border-radius-base;
-    box-shadow: $crm-form-control-shadow;
-    height: 28px;
-    line-height: 28px;
-
-    abbr {
-      background-image: none !important;
-      right: 30px;
-      top: 1px;
-
-      &::before {
-        @include fa-icon();
-        color: $brand-primary;
-        content: $fa-var-times-circle;
-        font-size: $font-size-base;
-      }
-    }
-
-    .select2-arrow {
-      background: $crm-white;
-      border-left-color: $crm-grayblue-darker;
-      border-radius: 0 $border-radius-base $border-radius-base 0;
-      text-align: center;
-      width: 26px;
-
-      &::before {
-        @include fa-icon();
-        color: $gray-darker;
-        content: $fa-var-caret-down;
-        font-size: $font-size-base;
-        vertical-align: middle;
-      }
-
-      b {
-        background-image: none !important;
-      }
-    }
-
-    > .select2-chosen {
-      font-size: $font-size-base;
-    }
-  }
-}
-
-.select2-dropdown-open .select2-choice {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-color: $input-border-focus;
-  box-shadow: none;
-
-  .select2-arrow {
-    &::before {
-      content: $fa-var-caret-up;
-    }
-  }
-}
-
-#{$outside-namespace-marker} {
-  .select2-drop.select2-drop-active.crm-container {
-    background: $crm-white;
-    border-color: $input-border-focus;
-
-    .select2-results {
-      li {
-        color: $gray-dark;
-        padding: 5px;
-      }
-
-      .select2-highlighted {
-        background: $gray-light;
-        color: $gray-dark;
-      }
-
-      .select2-result-label {
-        padding: 5px 10px;
-      }
-    }
-  }
-
-  .select2-search {
-    &::before {
-      @include fa-icon();
-      color: $gray-darker;
-      content: $fa-var-search;
-      font-size: $font-size-base;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-    }
-
-    input {
-      @include open-sans-font-family();
-      background-image: none !important;
-      border-color: $input-border-focus;
-      line-height: 20px;
-    }
-  }
-}
-
-
-// .select2-input {
-//   @include open-sans-font-family();
-//   box-sizing: border-box;
-//   display: block;
-//   height: $input-height-base;
-// }
