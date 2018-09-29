@@ -75,10 +75,6 @@
         tr.columnheader {
           background: $gray-lighter;
         }
-
-        td:not(:last-child) {
-          width: 300px;
-        }
       }
     }
   }
@@ -154,12 +150,6 @@
   .crm-member-membershipblock-form-block {
     #memberFields {
       margin-right: 20px;
-    }
-  }
-
-  .crm-friend-manage-block {
-    br {
-      display: none;
     }
   }
 }

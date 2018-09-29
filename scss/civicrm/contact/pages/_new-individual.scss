@@ -32,11 +32,6 @@
         }
 
         td {
-          > input[type='text'] {
-            min-width: 100% !important;
-            width: 100% !important;
-          }
-
           &:last-child {
             > .select2-container {
               min-width: auto !important;
@@ -55,10 +50,6 @@
       .crm-form-select {
         min-width: 120px !important;
         width: 120px !important;
-      }
-
-      input[type='text'] {
-        width: auto !important;
       }
     }
   }

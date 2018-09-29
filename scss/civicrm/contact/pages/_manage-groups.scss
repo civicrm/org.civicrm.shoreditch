@@ -219,12 +219,6 @@
     }
   }
 
-  .crm-group-form-block-description {
-    br {
-      display: none;
-    }
-  }
-
   .crm-block > .css_right {
     margin-bottom: 5px;
 
@@ -351,10 +345,6 @@
       margin: 20px 0 0 !important;
     }
 
-    .crm-form-textarea {
-      min-height: 70px;
-    }
-
     #s2id_visibility::after {
       display: none;
     }
@@ -370,10 +360,6 @@
         display: block;
         line-height: 1.5em;
       }
-    }
-
-    textarea {
-      line-height: 1.5em;
     }
   }
 
@@ -438,10 +424,6 @@
   }
 
   .CRM_Group_Form_Edit .crm-group-form-block {
-    .crm-form-textarea {
-      min-height: 70px;
-    }
-    
     .crm-submit-buttons {
       border-top: 0;
       margin: 20px 0 0 !important;
