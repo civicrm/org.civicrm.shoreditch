@@ -42,28 +42,6 @@
   $control-spacing: 15px;
 
   @include input-fields-container {
-    input.crm-form-text,
-    input.dateplugin {
-      @extend %responsive;
-      @include civicrm-input-small;
-      display: inline-block;
-    }
-
-    input.crm-form-file {
-      padding: 0;
-    }
-
-
-    input[type='checkbox'],
-    input[type='radio'] {
-      margin: 0 5px 0 0;
-      vertical-align: middle;
-    }
-
-    div.form-item {
-      @extend .form-group;
-    }
-
     select {
       @extend %responsive;
       @include open-sans-font-family();
@@ -100,32 +78,6 @@
 
     label.crm-inline-error {
       margin-left: 10px;
-    }
-
-    input[type=email],
-    input[type=number],
-    input[type=password],
-    input[type=search],
-    input[type=text] {
-      @include civicrm-form-control;
-      @include open-sans-font-family();
-      @include placeholder;
-    }
-
-    textarea {
-      @extend .form-control;
-      @include open-sans-font-family();
-      @include placeholder;
-      box-sizing: border-box;
-      width: unset;
-
-      &.big {
-        width: 35em;
-      }
-
-      &.huge {
-        width: 45em;
-      }
     }
 
     // "Select2" Drop-downs
@@ -336,10 +288,6 @@
         padding-left: 20px;
       }
 
-      label ~ input ~ label ~ input {
-        margin-left: 5px;
-      }
-
       // "Edit options" ("wrench") buttons besides the dropdowns
       .crm-option-edit-link {
         margin-left: 5px;
@@ -358,75 +306,18 @@
       }
 
       .crm-field-wrapper {
-        width: 100% !important;
-
         label {
           padding-right: 5px;
         }
-
-        > div {
-          align-items: baseline;
-          display: flex;
-
-          > input:not(:only-child) {
-            flex-grow: 1;
-            width: 20%;
-          }
-        }
       }
     }
 
-    input.crm-form-text:not(.crm-form-date) {
-      @extend %responsive;
-      @include civicrm-input-small;
-    }
-
-    table:not(.form-layout-compressed) {
-      .crm-age-range input {
-        @extend %control-half-width;
-        margin: 0 $control-spacing;
-      }
-    }
-
-    .select2-container-multi,
-    label ~ input.crm-form-text,
-    td .crm-field-wrapper input.crm-form-text:only-child,
-    td .crm-form-date-wrapper input.crm-form-text:only-child,
-    td input.crm-form-text {
+    .select2-container-multi {
       @extend %responsive;
       box-sizing: border-box;
       display: inline-block;
       min-height: $crm-control-height;
     }
-
-    td > input.crm-form-color {
-      border-color: $crm-grayblue-darker;
-      border-radius: $border-radius-base;
-      min-width: 30px !important;
-      width: 30px !important;
-    }
-
-    .crm-form-date-wrapper {
-      display: inline-block;
-      position: relative;
-
-      ~ .crm-form-date-wrapper {
-        float: right;
-      }
-
-      .crm-form-date {
-        border-radius: $border-radius-base 0 0 $border-radius-base;
-        padding-right: 0;
-      }
-    }
-  }
-
-  input.crm-form-text {
-    @include input-text;
-  }
-
-  input[type='file'] {
-    display: inline-block;
   }
 
   &.select2-container,
@@ -442,11 +333,7 @@
 
         > div.select2-container,
         > div.select2-container ~ a,
-        > select,
-        > span:not(.crm-form-date-wrapper) input,
-        > span:not(.crm-form-date-wrapper) select,
-        > input:not([type='radio']):not([type='checkbox']),
-        > textarea {
+        > select {
           bottom: initial !important;
         }
 
@@ -458,7 +345,6 @@
       }
 
       tr td.label + td {
-        > input:not([type='radio']):not([type='checkbox']),
         > div.select2-container {
           @extend %responsive;
           @include civicrm-input-small;
@@ -674,14 +560,81 @@
 
     @include plain-old-text();
   }
+}
 
-  #crm-main-content-wrapper input.crm-error,
-  #crm-main-content-wrapper input.error {
-    border-color: $brand-danger;
+input.crm-form-text,
+.crm-icon-picker-button,
+input.dateplugin,
+input.crm-form-password {
+  @include open-sans-font-family();
+  @include transition(border-color 0.15s ease-in-out 0s);
+  background-color: $crm-white;
+  background-image: none;
+  border-color: $crm-grayblue-darker;
+  border-radius: $border-radius-base;
+  box-shadow: $crm-form-control-shadow;
+  color: $gray-darker;
+  font-size: $font-size-base;
+  height: $input-height-small;
+  padding: 2px 10px;
+
+  &:focus {
+    border-color: $input-border-focus;
+    outline: 0;
   }
+}
 
-  span.crm-error:not(.crm-error-label) {
-    background-color: $brand-danger;
+input[type='file'] {
+  @include open-sans-font-family();
+  display: inline-block;
+  font-size: $font-size-base;
+}
+
+textarea {
+  @include open-sans-font-family();
+}
+
+.replace-plain,
+textarea,
+select.crm-form-multiselect {
+  @include transition(border-color 0.15s ease-in-out 0s);
+  border-color: $crm-grayblue-darker;
+  border-radius: $border-radius-base;
+  box-shadow: $crm-form-control-shadow;
+  color: $gray-darker;
+  padding: 4px 10px;
+
+  &:focus {
+    border-color: $input-border-focus;
+    outline: 0;
+  }
+}
+
+.select2-input {
+  @include open-sans-font-family();
+  box-sizing: border-box;
+  display: block;
+  height: $input-height-base;
+}
+
+input.crm-form-text[disabled],
+input.dateplugin[disabled],
+select.crm-form-select[disabled],
+input.crm-form-text[readonly],
+input.crm-form-password[disabled],
+input.crm-form-password[readonly] {
+  background: $input-bg-disabled;
+}
+
+input.crm-error,
+input.error {
+  border-color: $brand-danger;
+}
+
+.crm-error,
+.crm-inline-error {
+  &:not(.crm-error-label) {
+    background: $brand-danger;
     color: $crm-white;
 
     a {
@@ -690,32 +643,17 @@
   }
 }
 
-.crm-form-text:focus + .addon.fa-calendar {
-  border-color: $input-border-focus;
-}
-
 .addon.fa-calendar {
   background: $gray-lighter;
   border: 1px solid $crm-grayblue-darker;
   border-radius: 0 $border-radius-base $border-radius-base 0;
   color: $gray-darker;
   cursor: pointer;
-  line-height: $font-size-base;
   margin-left: -2px;
   padding: 8px 10px 7px;
-  vertical-align: bottom;
-}
+  vertical-align: middle;
 
-input.dateplugin,
-input.crm-form-date {
-  background: $crm-white;
-  border: 1px solid $gray-dark;
-  height: 26px;
-  vertical-align: bottom;
-}
-
-.CRM_Admin_Form_Options .form-layout-compressed {
-  td.label {
-    padding-left: 0;
+  input:focus + & {
+    border-color: $input-border-focus;
   }
 }
