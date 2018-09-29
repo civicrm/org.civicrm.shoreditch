@@ -112,45 +112,6 @@
     }
   }
 
-  .select2-container {
-    .select2-choice {
-      background: $crm-white;
-      border-color: $crm-grayblue-darker;
-      border-radius: $border-radius-base;
-      box-shadow: none;
-
-      .select2-arrow {
-        background: $crm-white;
-        padding: 0 4px;
-      }
-
-      .select2-arrow b {
-        height: 18px;
-        margin-top: 2px;
-      }
-
-      abbr {
-        right: 28px;
-        top: 8px;
-      }
-    }
-
-    .select2-default {
-      color: $input-color-placeholder !important;
-    }
-
-    &.select2-dropdown-open {
-      .select2-choice {
-        border-color: $brand-primary;
-      }
-
-      &.select2-drop-above .select2-choice {
-        border-color: $crm-blue-light-color;
-        border-top: 0;
-      }
-    }
-  }
-
   .crm-section {
     color: $crm-copy;
     font-family: $font-family-base;

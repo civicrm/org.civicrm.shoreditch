@@ -116,8 +116,7 @@
       padding: 8px 10px 9px;
     }
 
-    input[type='text'],
-    .select2-choice {
+    input[type='text'] {
       @include transition(border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s);
       background: $crm-white;
       border: 1px solid $crm-grayblue-darker;
@@ -134,54 +133,6 @@
 
       &:focus {
         border-color: $brand-primary;
-      }
-    }
-
-    .select2-container {
-      .select2-choice {
-        width: 78%;
-      }
-
-      .select2-chosen {
-        color: $gray-darker;
-        font-size: $font-size-base;
-        margin-right: 0;
-      }
-
-      abbr {
-        background: none;
-      }
-
-      .select2-arrow {
-        background: none;
-        padding: 0 4px;
-
-        &::before {
-          color: $crm-copy;
-          content: $fa-var-caret-down;
-          display: block;
-          font-family: $font-family-fontawesome;
-          font-size: $font-size-base;
-          font-style: normal;
-          text-align: center;
-          text-rendering: auto;
-        }
-      }
-
-      &.select2-dropdown-open {
-        .select2-choices {
-          border-color: $brand-primary;
-        }
-
-        .select2-arrow {
-          background: none;
-          border-left: 0;
-          filter: none;
-
-          &::before {
-            content: $fa-var-caret-up;
-          }
-        }
       }
     }
   }
@@ -215,10 +166,6 @@
         padding: 15px 0;
         width: 220px;
       }
-    }
-
-    .select2-container#s2id_format_id {
-      margin-right: 0 !important;
     }
 
     .crm-html_email-accordion .helpIcon {
@@ -545,7 +492,6 @@
             vertical-align: middle !important;
           }
 
-          .select2-container,
           input {
             margin: 0 !important;
           }
@@ -666,8 +612,7 @@
       color: $gray-darker;
     }
 
-    input,
-    .select2-container {
+    input {
       margin-bottom: 5px;
       margin-top: 0;
     }
@@ -683,10 +628,6 @@
   textarea {
     padding: 0 5px;
     vertical-align: middle;
-  }
-
-  .select2-container {
-    max-width: 230px;
   }
 
   #from_email_address {
@@ -712,18 +653,13 @@
 
   input,
   select,
-  textarea,
-  .select2-container {
+  textarea {
     &.crm-inline-error,
     &.crm-error,
     &.error {
       background: none !important;
       border: 1px solid $brand-danger;
       min-height: 30px;
-
-      &.select2-container {
-        padding: 0;
-      }
     }
   }
 
@@ -784,8 +720,7 @@
   }
 
   #recurringPaymentBlock {
-    .crm-form-text,
-    .select2-container {
+    .crm-form-text {
       margin-top: 0;
       min-width: $crm-sm-input-width !important;
       width: 150px !important;
@@ -986,13 +921,9 @@
               content: '*';
               font-weight: bold;
               margin: 0 5px;
-              
+
             }
           }
-        }
-
-        .select2-container {
-          width: 100% !important;
         }
       }
 

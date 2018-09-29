@@ -109,20 +109,6 @@
       padding: 10px;
     }
 
-    div[id*='s2id_autogen'] {
-      .select2-choice {
-        background: $crm-white;
-        border: 1px solid $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-select2-box-shadow-inset;
-      }
-
-      .select2-arrow {
-        background: none;
-        padding: 0 5px;
-      }
-    }
-
     .font-red.label {
       border-radius: $panel-border-radius $panel-border-radius 0 0;
       font: $crm-font-weight-h2 $font-size-h2 $font-family-base;

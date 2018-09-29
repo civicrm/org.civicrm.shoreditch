@@ -15,12 +15,6 @@
     > .form-layout-compressed {
       margin: 0 0 20px 20px;
     }
-
-    .select2-choice {
-      > span.select2-chosen {
-        color: $brand-primary;
-      }
-    }
   }
 
   #helphtml {
@@ -67,10 +61,6 @@
             color: $gray-darker;
             font-weight: 600;
           }
-        }
-
-        .select2-container {
-          width: 100% !important;
         }
       }
 

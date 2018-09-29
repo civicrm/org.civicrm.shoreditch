@@ -44,27 +44,6 @@
       background: $crm-gray-lightest;
     }
 
-    .select2-container {
-      background: $crm-white;
-
-      .select2-choice {
-        box-shadow: $crm-select2-box-shadow-inset;
-      }
-
-      &.select2-dropdown-open .select2-choice {
-        box-shadow: none;
-      }
-
-      .select2-arrow {
-        background: none;
-        padding: 0 5px;
-      }
-
-      .select2-search-choice-close {
-        right: 35px;
-      }
-    }
-
     table {
       background: transparent;
       border: 0;

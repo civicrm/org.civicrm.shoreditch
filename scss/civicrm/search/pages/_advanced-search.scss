@@ -3,7 +3,7 @@
 .CRM_Contact_Form_Search_Advanced {
   @import 'variables';
   @import 'labels';
-  
+
   td input + label + br {
     display: none;
   }
@@ -76,12 +76,6 @@
   #location {
     input[type='checkbox'] {
       margin: 0 0 0 30px;
-    }
-  }
-
-  #relationship {
-    .select2-container {
-      margin-bottom: 20px;
     }
   }
 

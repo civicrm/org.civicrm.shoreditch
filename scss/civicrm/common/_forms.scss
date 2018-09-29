@@ -3,12 +3,6 @@
 @import 'base/scss/vendor/bootstrap/forms';
 @import 'bootstrap/overrides/style/forms';
 
-%arrow {
-  @include fa-icon($font-size-base, $fa-var-caret-down);
-  display: block;
-  text-align: center;
-}
-
 %control-half-width {
   @media (min-width: 1065px) {
     min-width: 115px;
@@ -42,33 +36,6 @@
   $control-spacing: 15px;
 
   @include input-fields-container {
-    select {
-      @extend %responsive;
-      @include open-sans-font-family();
-
-      &:not([multiple]) {
-        @include civicrm-form-control;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        background: url($crm-image-path + 'drop-down-arrow.svg') no-repeat right $crm-white !important;
-        cursor: pointer;
-        display: inline-block;
-        height: $crm-control-height !important;
-        line-height: normal;
-        padding-right: 35px !important;
-        position: relative;
-        top: 1px;
-        width: auto !important;
-
-        option {
-          @include civicrm-form-control;
-          border: 0;
-          padding-top: 5px 0;
-        }
-      }
-    }
-
     label {
       @extend .control-label;
       color: $gray-darker;
@@ -78,206 +45,6 @@
 
     label.crm-inline-error {
       margin-left: 10px;
-    }
-
-    // "Select2" Drop-downs
-    .select2-container,
-    .crm-form-select {
-      &.select2-container-multi {
-        .select2-choices,
-        .select2-choices::before {
-          @extend %arrow;
-          background: none;
-          padding-right: 3px;
-
-          b {
-            display: none;
-          }
-        }
-
-        .select2-choices {
-          border: solid 1px $crm-grayblue-darker;
-          border-radius: $border-radius-base;
-          box-shadow: $crm-checkbox-shadow;
-          box-sizing: border-box;
-          font-family: inherit;
-          line-height: inherit;
-          padding-right: 20px;
-          width: 100%;
-
-          &::before {
-            line-height: 22px;
-            top: 4px;
-          }
-
-          .select2-search-choice {
-            background: none;
-            border-color: $brand-primary;
-            border-radius: 0;
-            line-height: 20px;
-            margin-top: 4px;
-            padding: 0 15px 0 5px;
-
-            > div {
-              display: inline-block;
-              line-height: normal;
-              padding-right: 10px;
-              vertical-align: text-bottom;
-            }
-
-            .select2-search-choice-close {
-              left: auto !important;
-              line-height: inherit;
-              padding-right: 5px;
-              position: absolute;
-              right: 0 !important;
-              top: 1px;
-            }
-          }
-
-          .select2-search-field {
-            margin: 0;
-            padding: 0;
-
-            input {
-              box-shadow: none;
-              margin: -2px 0 0;
-              padding-left: 10px;
-            }
-          }
-        }
-
-        &.select2-dropdown-open .select2-choices::before {
-          @include fa-icon($fa-var-search);
-        }
-
-        &.select2-container-disabled .select2-choices {
-          width: inherit;
-        }
-      }
-
-      &:not(.select2-container-active).select2-container-disabled {
-        &,
-        .select2-arrow,
-        .select2-choice,
-        .select2-choices {
-          &,
-          &::before {
-            color: $crm-placeholder !important;
-          }
-        }
-
-        .select2-chosen {
-          &,
-          &::before {
-            border-color: $disabled-color !important;
-            color: $crm-placeholder !important;
-          }
-        }
-
-        .select2-arrow {
-          border-left: 1px solid $crm-grayblue-dark;
-        }
-      }
-
-      .select2-choice {
-        @include civicrm-form-control;
-        box-sizing: inherit;
-        height: $crm-control-height;
-        line-height: $crm-control-height;
-        padding: 0 10px;
-
-        abbr {
-          top: 0;
-        }
-
-        .select2-chosen {
-          font-size: $font-size-base;
-          font-weight: normal;
-          line-height: 27px;
-        }
-      }
-
-      &.select2-container-active {
-        &:not(.select2-dropdown-open) span {
-          color: $brand-primary;
-        }
-
-        &.select2-dropdown-open {
-          .select2-choice,
-          .select2-choices {
-            border-color: $brand-primary;
-            box-shadow: none;
-          }
-
-          span {
-            color: lighten($gray-light, 30);
-          }
-
-          &:not(.select2-container-multi) {
-            .select2-search-choice-close {
-              display: none !important;
-            }
-          }
-        }
-      }
-
-      .select2-arrow {
-        background: none;
-        border-color: $crm-grayblue-darker;
-        padding: 0 4px;
-
-        > b {
-          display: none;
-        }
-
-        &::before {
-          @extend %arrow;
-          width: inherit;
-        }
-      }
-
-      &.select2-dropdown-open {
-        .select2-arrow::before {
-          content: $fa-var-caret-up;
-        }
-
-        .select2-choice,
-        .select2-choices {
-          @extend .select2-drop;
-        }
-
-        .select2-choices {
-          border: 1px solid $brand-primary !important;
-        }
-      }
-
-      .select2-search-choice-close {
-        background: none;
-        background-image: none !important;
-        right: 35px;
-
-        &::before {
-          @include fa-icon($font-size-base, $fa-var-times-circle, $brand-primary);
-          display: block;
-          line-height: inherit;
-          text-align: right;
-          vertical-align: middle;
-        }
-      }
-
-      .select2-input {
-        border: 0 !important;
-        box-shadow: none !important;
-      }
-
-      &.error {
-        background-image: none;
-      }
-
-      .crm-select2-icon .crm-icon {
-        @include contact-type-icons();
-      }
     }
 
     td {
@@ -293,14 +60,6 @@
         margin-left: 5px;
       }
 
-      > .select2-container-multi,
-      > .select2-container {
-        @extend %responsive;
-        // Needed in order to render correctly in PhantomJS
-        height: auto !important;
-        width: initial !important;
-      }
-
       > input[type='text']:not(:only-of-type) {
         @extend %control-half-width;
       }
@@ -311,18 +70,6 @@
         }
       }
     }
-
-    .select2-container-multi {
-      @extend %responsive;
-      box-sizing: border-box;
-      display: inline-block;
-      min-height: $crm-control-height;
-    }
-  }
-
-  &.select2-container,
-  &.select2-choice {
-    @extend %responsive;
   }
 
   table {
@@ -331,24 +78,10 @@
       td {
         padding: 4px;
 
-        > div.select2-container,
-        > div.select2-container ~ a,
-        > select {
-          bottom: initial !important;
-        }
-
         &.view-value {
           > div.cke {
             width: 95%;
           }
-        }
-      }
-
-      tr td.label + td {
-        > div.select2-container {
-          @extend %responsive;
-          @include civicrm-input-small;
-          margin-right: 0 !important;
         }
       }
     }
@@ -408,90 +141,6 @@
     .cke_combo_open {
       margin: 0 !important;
       padding: 0 10px;
-    }
-  }
-
-  &.select2-container-active.select2-drop-above .select2-choice {
-    border-top: 0;
-  }
-
-  &.select2-drop,
-  &.select2-drop.select2-drop-above {
-    background: $crm-white !important;
-    border-color: $brand-primary;
-    border-radius: $border-radius-base $border-radius-base 0 0;
-    box-shadow: none;
-    margin-left: 0;
-
-    .select2-choice {
-      border-radius: 0 0 $border-radius-base $border-radius-base;
-    }
-
-    .select2-input {
-      background: none !important;
-      border-color: $brand-primary !important;
-      height: $crm-control-height !important;
-    }
-
-    .select2-search::before {
-      @include fa-icon(13px, '\f002');
-      position: absolute;
-      right: 15px;
-      top: 10px;
-    }
-
-    .select2-results {
-      color: $gray-darker;
-      margin: 4px 0 0;
-
-      li {
-        background: $crm-white;
-        padding: 5px;
-      }
-
-      .select2-result-label {
-        color: $gray-dark;
-        padding: 5px 10px;
-
-        .crm-icon {
-          @include contact-type-icons();
-        }
-      }
-
-      .select2-highlighted {
-        background: $crm-background;
-        color: $gray-dark;
-
-        .crm-select2-row-description {
-          p {
-            color: $gray-dark;
-          }
-        }
-      }
-
-      .select2-no-results {
-        background: none;
-        margin: 0;
-        padding: 4px;
-      }
-
-      select {
-        background: $crm-white;
-        border: 1px solid $crm-grayblue-darker;
-        height: 30px;
-      }
-    }
-  }
-
-  &.select2-drop:not(.select2-drop-above) {
-    margin-top: -4px;
-  }
-
-  &.select2-drop {
-    border-radius: 0 0 $border-radius-base $border-radius-base;
-
-    .select2-choice {
-      border-radius: $border-radius-base $border-radius-base 0 0;
     }
   }
 
@@ -608,13 +257,6 @@ select.crm-form-multiselect {
     border-color: $input-border-focus;
     outline: 0;
   }
-}
-
-.select2-input {
-  @include open-sans-font-family();
-  box-sizing: border-box;
-  display: block;
-  height: $input-height-base;
 }
 
 input.crm-form-text[disabled],
