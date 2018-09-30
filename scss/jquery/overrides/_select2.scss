@@ -62,6 +62,7 @@
     .select2-choices {
       &::before {
         content: $fa-var-search;
+        right: 0;
       }
     }
   }
@@ -72,6 +73,7 @@
     border-color: $crm-grayblue-darker;
     border-radius: $border-radius-base;
     box-shadow: $crm-form-control-shadow;
+    line-height: 27px;
 
     // By default use a caret down icon, without borders
     &::before {
@@ -80,7 +82,8 @@
       color: $gray-darker;
       content: $fa-var-caret-down;
       font-size: $font-size-base;
-      top: 5px;
+      right: -3px;
+      top: 1px;
     }
 
     // The selected option
@@ -128,7 +131,7 @@
         @include open-sans-font-family();
         font-size: $font-size-base;
         padding-left: 8px;
-        
+
         // Spinner icon that appears when fetching data via ajax
         &.select2-active { /* stylelint-disable-line max-nesting-depth, selector-no-qualifying-type */
           background-position: center right 20px !important;
@@ -143,7 +146,6 @@
 .select2-dropdown-open {
   .select2-choice,
   .select2-choices, {
-    border-bottom: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-color: $input-border-focus;
