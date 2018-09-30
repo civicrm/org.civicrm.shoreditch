@@ -1,4 +1,6 @@
+// Single select2
 .select2-container {
+  // The input field overlay
   .select2-choice {
     background: $crm-white;
     border-color: $crm-grayblue-darker;
@@ -11,6 +13,7 @@
       outline: 0;
     }
 
+    // The X icon to deselect the option
     abbr {
       background-image: none !important;
       right: 30px;
@@ -39,89 +42,22 @@
         vertical-align: middle;
       }
 
-
+      // The original arrow icon
       b { /* stylelint-disable-line selector-max-compound-selectors */
         background-image: none !important;
       }
     }
 
+    // The selected option
     > .select2-chosen {
       font-size: $font-size-base;
     }
   }
 }
 
-#{$outside-namespace-marker} {
-  .select2-drop.select2-drop-active.crm-container {
-    background: $crm-white;
-    border-bottom-left-radius: $border-radius-base;
-    border-bottom-right-radius: $border-radius-base;
-    border-color: $input-border-focus;
-
-    .crm-entityref-filters {
-      /* stylelint-disable selector-max-compound-selectors */
-      select,
-      input {
-        background: $crm-white;
-        border-color: $crm-grayblue-darker;
-        box-sizing: border-box;
-        height: $input-height-base;
-      }
-      /* stylelint-enable selector-max-compound-selectors */
-    }
-
-    .select2-results {
-      /* stylelint-disable selector-max-compound-selectors */
-      li {
-        color: $gray-dark;
-        padding: 5px;
-      }
-
-      .select2-highlighted {
-        background: $gray-light;
-
-        p { /* stylelint-disable-line max-nesting-depth */
-          color: $gray-dark;
-        }
-      }
-
-      .select2-result-label {
-        padding: 5px 10px;
-      }
-      /* stylelint-enable selector-max-compound-selectors */
-    }
-  }
-
-  .select2-search {
-    &::before {
-      @include fa-icon();
-      color: $gray-darker;
-      content: $fa-var-search;
-      font-size: $font-size-base;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-    }
-
-    input {
-      @include open-sans-font-family();
-      background-image: none !important;
-      border-color: $input-border-focus;
-      line-height: 20px;
-    }
-  }
-
-  .select2-results {
-    .select2-ajax-error,
-    .select2-no-results,
-    .select2-searching,
-    .select2-selection-limit {
-      background: $crm-white;
-    }
-  }
-}
-
+// Multiple select2
 .select2-container-multi {
+  // Use the magnifying glass icon when fetching data via ajax
   &.crm-ajax-select {
     .select2-choices {
       &::before {
@@ -130,12 +66,14 @@
     }
   }
 
+  // Wrapper
   .select2-choices {
     background: $crm-white;
     border-color: $crm-grayblue-darker;
     border-radius: $border-radius-base;
     box-shadow: $crm-form-control-shadow;
-    
+
+    // By default use a caret down icon, without borders
     &::before {
       @include fa-icon();
       background: none;
@@ -145,6 +83,7 @@
       top: 5px;
     }
 
+    // The selected option
     .select2-search-choice {
       background: none;
       border-color: $brand-primary;
@@ -182,16 +121,15 @@
       /* stylelint-enable selector-max-compound-selectors, max-nesting-depth */
     }
 
+    // The input field overlay
     .select2-search-field {
       /* stylelint-disable selector-max-compound-selectors */
       input {
         @include open-sans-font-family();
         font-size: $font-size-base;
         padding-left: 8px;
-        // box-sizing: border-box;
-        // display: block;
-        // height: $input-height-base;
-
+        
+        // Spinner icon that appears when fetching data via ajax
         &.select2-active { /* stylelint-disable-line max-nesting-depth, selector-no-qualifying-type */
           background-position: center right 20px !important;
         }
@@ -201,6 +139,7 @@
   }
 }
 
+// The state of both single and multiple select2 when open
 .select2-dropdown-open {
   .select2-choice,
   .select2-choices, {
@@ -211,11 +150,88 @@
     box-shadow: none;
   }
 
+  // Only for single select2, when open the arrow points up
   .select2-choice {
     .select2-arrow {
       &::before {
         content: $fa-var-caret-up;
       }
+    }
+  }
+}
+
+// The select2 dropdown is appended right before </body>
+#{$outside-namespace-marker} {
+  // The dropdown list
+  .select2-drop.select2-drop-active.crm-container {
+    background: $crm-white;
+    border-bottom-left-radius: $border-radius-base;
+    border-bottom-right-radius: $border-radius-base;
+    border-color: $input-border-focus;
+
+    // CiviCRM-specific "refine search" controls
+    .crm-entityref-filters {
+      /* stylelint-disable selector-max-compound-selectors */
+      select,
+      input {
+        background: $crm-white;
+        border-color: $crm-grayblue-darker;
+        box-sizing: border-box;
+        height: $input-height-base;
+      }
+      /* stylelint-enable selector-max-compound-selectors */
+    }
+
+    // The list of items that match the search
+    .select2-results {
+      /* stylelint-disable selector-max-compound-selectors */
+      li {
+        color: $gray-dark;
+        padding: 5px;
+      }
+
+      // Class applied to an item when hovered
+      .select2-highlighted {
+        background: $gray-light;
+
+        p { /* stylelint-disable-line max-nesting-depth */
+          color: $gray-dark;
+        }
+      }
+
+      .select2-result-label {
+        padding: 5px 10px;
+      }
+      /* stylelint-enable selector-max-compound-selectors */
+    }
+  }
+
+  // Search text input field
+  .select2-search {
+    &::before {
+      @include fa-icon();
+      color: $gray-darker;
+      content: $fa-var-search;
+      font-size: $font-size-base;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    input {
+      @include open-sans-font-family();
+      background-image: none !important;
+      border-color: $input-border-focus;
+      line-height: 20px;
+    }
+  }
+
+  .select2-results {
+    .select2-ajax-error,
+    .select2-no-results,
+    .select2-searching,
+    .select2-selection-limit {
+      background: $crm-white;
     }
   }
 }
