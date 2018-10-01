@@ -212,10 +212,6 @@
     td:not(.label) {
       width: 100%;
     }
-
-    textarea {
-      margin-bottom: 20px;
-    }
   }
 
   .cvv2-section {
@@ -455,12 +451,6 @@
         min-width: 180px;
       }
     }
-  }
-
-  textarea {
-    line-height: 1em;
-    padding: 5px;
-    vertical-align: middle;
   }
 }
 

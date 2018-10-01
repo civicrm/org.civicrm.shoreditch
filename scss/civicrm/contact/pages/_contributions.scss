@@ -108,10 +108,6 @@
       max-width: 150px;
     }
 
-    .six.crm-form-text {
-      max-width: 83px;
-    }
-
     .addon.fa-calendar {
       padding: 8px 10px 9px;
     }
@@ -625,11 +621,6 @@
     }
   }
 
-  textarea {
-    padding: 0 5px;
-    vertical-align: middle;
-  }
-
   #from_email_address {
     padding-right: 30px !important;
   }
@@ -706,10 +697,6 @@
       display: table-cell;
       vertical-align: top;
     }
-
-    .crm-form-textarea {
-      min-height: 110px;
-    }
   }
 }
 
@@ -717,14 +704,6 @@
   .crm-link-credit-card-mode {
     float: right;
     margin-bottom: -30px !important;
-  }
-
-  #recurringPaymentBlock {
-    .crm-form-text {
-      margin-top: 0;
-      min-width: $crm-sm-input-width !important;
-      width: 150px !important;
-    }
   }
 
   .description {

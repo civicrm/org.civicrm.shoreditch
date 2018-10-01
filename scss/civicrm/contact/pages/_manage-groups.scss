@@ -391,10 +391,6 @@
 #{civi-page('group-add')} .CRM_Group_Form_Edit .crm-group-form-block {
   padding: 15px;
 
-  textarea {
-    line-height: 1.5em;
-  }
-
   #s2id_visibility::after {
     display: none;
   }
