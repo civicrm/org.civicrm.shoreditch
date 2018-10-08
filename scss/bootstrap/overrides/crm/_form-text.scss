@@ -1,8 +1,5 @@
-// Removes fixed with for text inputs when they have the size attribute:
+// Bootstrap applies border-box to everything, so the height
+// of .crm-form-text needs to be adjusted accordingly
 .crm-form-text {
-
-  &[size] {
-    min-width: inherit;
-    width: initial;
-  }
+  height: $input-height-base;
 }
