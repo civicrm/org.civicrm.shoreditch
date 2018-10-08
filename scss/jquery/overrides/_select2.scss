@@ -131,7 +131,11 @@
       /* stylelint-disable selector-max-compound-selectors */
       input {
         @include open-sans-font-family();
-        font-size: $font-size-base;
+        // These !important are necessary to counteract Bootstrap's base style
+        // when select2 is used inside the bootstrap namespace
+        font-size: $font-size-base !important;
+        line-height: normal !important;
+        margin: 1px 0 !important;
         padding-left: 8px;
 
         // Spinner icon that appears when fetching data via ajax
