@@ -185,7 +185,9 @@
     padding: 20px !important;
 
     .container-fluid {
-      max-width: $container-large-desktop;
+      // Necessary to override the id-based namespaces of T&A and JC
+      // (as they still use their own copy of Bootstrap)
+      max-width: $container-large-desktop !important;
     }
   }
 
