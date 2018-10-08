@@ -6,7 +6,8 @@
     border-color: $crm-grayblue-darker;
     border-radius: $border-radius-base;
     box-shadow: $crm-form-control-shadow;
-    height: 28px;
+    box-sizing: border-box;
+    height: $input-height-base;
     line-height: 28px;
 
     &:focus {
