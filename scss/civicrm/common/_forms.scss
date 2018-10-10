@@ -259,7 +259,8 @@ select.crm-form-multiselect {
   }
 }
 
-select.crm-form-select {
+select.crm-form-select,
+select[aria-controls] {
   @include open-sans-font-family();
   @include transition(border-color 0.15s ease-in-out 0s);
   -webkit-appearance: none;
