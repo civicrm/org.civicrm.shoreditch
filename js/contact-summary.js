@@ -21,9 +21,8 @@
      */
     function moveUserPictureNextToContactTitle () {
       var header = document.querySelector('.crm-summary-contactname-block');
-      var block = document.querySelector('.crm-summary-block');
 
-      header.insertBefore(picWrapper, block);
+      header.insertBefore(picWrapper, header.firstElementChild);
     }
 
     /**
