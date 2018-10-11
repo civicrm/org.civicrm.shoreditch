@@ -8,7 +8,7 @@
     box-shadow: $crm-form-control-shadow;
     box-sizing: border-box;
     height: $input-height-base;
-    line-height: 28px;
+    line-height: 27px;
 
     &:focus {
       outline: 0;
@@ -40,12 +40,14 @@
         color: $gray-darker;
         content: $fa-var-caret-down;
         font-size: $font-size-base;
+        position: relative;
+        top: -1px;
         vertical-align: middle;
       }
 
       // The original arrow icon
       b { /* stylelint-disable-line selector-max-compound-selectors */
-        background-image: none !important;
+        display: none;
       }
     }
 
@@ -94,7 +96,6 @@
       border-color: $brand-primary;
       border-radius: $border-radius-base;
       font-size: $font-size-base;
-      margin-top: 4px;
       padding: 3px 25px 3px 5px;
 
       &.select2-search-choice-focus {
@@ -135,8 +136,8 @@
         // when select2 is used inside the bootstrap namespace
         font-size: $font-size-base !important;
         line-height: normal !important;
-        margin: 1px 0 !important;
-        padding-left: 8px;
+        margin: 0;
+        padding: 4px 4px 6px 8px;
 
         // Spinner icon that appears when fetching data via ajax
         &.select2-active { /* stylelint-disable-line max-nesting-depth, selector-no-qualifying-type */
