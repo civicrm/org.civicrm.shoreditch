@@ -193,6 +193,8 @@
 
         .crm-form-date-wrapper {
           display: inline-block;
+          // Necessary to make sure the calendar icon addon has enough
+          // space to be displayed next to the input field 
           width: 255px;
         }
       }

@@ -18,7 +18,7 @@
     background: $crm-white;
   }
 
-  // override of jquery-ui.css that creates weird white background
+  // Override a white background rule made by jquery-ui.css
   .ui-widget-content {
     background: transparent;
   }
@@ -188,7 +188,7 @@
   }
 
   // Necessary because of the !important defined in
-  // https://github.com/civicrm/civicrm-core/blob/cc38fb8ddcbbc8b60679504dd93522df852c48bf/css/civicrm.css#L1616-L1619
+  // @see https://github.com/civicrm/civicrm-core/blob/cc38fb8ddcbbc8b60679504dd93522df852c48bf/css/civicrm.css#L1616-L1619
   .ui-tabs-anchor {
     padding: 15px !important;
   }
