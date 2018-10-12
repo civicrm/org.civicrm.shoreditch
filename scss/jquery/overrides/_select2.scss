@@ -1,3 +1,8 @@
+$crm-jquery-select2-arrow-width: 26px;
+$crm-jquery-select2-line-height: 27px;
+$crm-jquery-select2-search-items-padding: 5px;
+$crm-jquery-select2-search-items-label-padding: 5px 10px;
+
 // Single select2
 .select2-container {
   // The input field overlay
@@ -8,7 +13,7 @@
     box-shadow: $crm-form-control-shadow;
     box-sizing: border-box;
     height: $input-height-base;
-    line-height: 27px;
+    line-height: $crm-jquery-select2-line-height;
 
     &:focus {
       outline: 0;
@@ -17,7 +22,7 @@
     // The X icon to deselect the option
     abbr {
       background-image: none !important;
-      right: 30px;
+      right: $crm-jquery-select2-arrow-width + 4;
       top: 1px;
 
       &::before {
@@ -33,7 +38,7 @@
       border-left-color: $crm-grayblue-darker;
       border-radius: 0 $border-radius-base $border-radius-base 0;
       text-align: center;
-      width: 26px;
+      width: $crm-jquery-select2-arrow-width;
 
       &::before {
         @include fa-icon();
@@ -77,7 +82,7 @@
     border-color: $crm-grayblue-darker;
     border-radius: $border-radius-base;
     box-shadow: $crm-form-control-shadow;
-    line-height: 27px;
+    line-height: $crm-jquery-select2-line-height;
 
     // By default use a caret down icon, without borders
     &::before {
@@ -196,7 +201,7 @@
       /* stylelint-disable selector-max-compound-selectors */
       li {
         color: $gray-dark;
-        padding: 5px;
+        padding: $crm-jquery-select2-search-items-padding;
       }
 
       // Class applied to an item when hovered
@@ -209,7 +214,7 @@
       }
 
       .select2-result-label {
-        padding: 5px 10px;
+        padding: $crm-jquery-select2-search-items-label-padding;
       }
       /* stylelint-enable selector-max-compound-selectors */
     }
