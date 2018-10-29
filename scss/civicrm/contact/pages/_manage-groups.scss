@@ -117,14 +117,6 @@
       }
     }
 
-    .crm-action-menu .select2-default span.select2-chosen {
-      color: $crm-copy;
-
-      .crm-i {
-        display: none;
-      }
-    }
-
     .description {
       @include box-shadow($box-shadow);
       background: $crm-white;
@@ -140,33 +132,6 @@
       padding: 4px 10px;
       text-shadow: none;
       vertical-align: middle;
-    }
-
-    .select2-container {
-      background: $crm-white;
-
-      .select2-choice {
-        background: none;
-        border: 1px solid $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-select2-box-shadow-inset;
-        font-family: $font-family-base;
-        line-height: 28px;
-      }
-
-      &.select2-dropdown-open .select2-choice {
-        border-color: $brand-primary;
-        box-shadow: none;
-      }
-
-      .select2-arrow {
-        background: none;
-        padding: 0 5px;
-      }
-
-      .select2-search-choice-close {
-        right: 35px;
-      }
     }
   }
 }
@@ -216,12 +181,6 @@
       .font-italic {
         font-style: normal;
       }
-    }
-  }
-
-  .crm-group-form-block-description {
-    br {
-      display: none;
     }
   }
 
@@ -280,22 +239,6 @@
   #crm-main-content-wrapper div[id*='DataTables_Table_'] {
     div[id*='s2id_autogen'] {
       background: $crm-white;
-
-      .select2-choice {
-        background: none;
-        border: 1px solid $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-select2-box-shadow-inset;
-      }
-
-      .select2-arrow {
-        background: none;
-        padding: 0 5px;
-      }
-    }
-
-    .dataTables_length .select2-choice .select2-arrow b {
-      margin-top: 0;
     }
 
     .dataTable thead tr {
@@ -351,10 +294,6 @@
       margin: 20px 0 0 !important;
     }
 
-    .crm-form-textarea {
-      min-height: 70px;
-    }
-
     #s2id_visibility::after {
       display: none;
     }
@@ -370,10 +309,6 @@
         display: block;
         line-height: 1.5em;
       }
-    }
-
-    textarea {
-      line-height: 1.5em;
     }
   }
 
@@ -438,10 +373,6 @@
   }
 
   .CRM_Group_Form_Edit .crm-group-form-block {
-    .crm-form-textarea {
-      min-height: 70px;
-    }
-    
     .crm-submit-buttons {
       border-top: 0;
       margin: 20px 0 0 !important;
@@ -459,10 +390,6 @@
 
 #{civi-page('group-add')} .CRM_Group_Form_Edit .crm-group-form-block {
   padding: 15px;
-
-  textarea {
-    line-height: 1.5em;
-  }
 
   #s2id_visibility::after {
     display: none;

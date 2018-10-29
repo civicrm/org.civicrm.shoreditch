@@ -185,8 +185,7 @@ $button-border-radius: 2px;
   a.button,
   a.button:link,
   a.button:visited,
-  input[type=button],
-  input[type=file] {
+  input[type=button] {
     @extend %btn;
   }
 

@@ -42,13 +42,6 @@
   }
 
   .crm-friend-manage-block {
-    .replace-plain,
-    textarea {
-      + br {
-        display: none;
-      }
-    }
-
     .crm-friend-manage-form-block-thankyou_text {
       td {
         padding-bottom: 20px;

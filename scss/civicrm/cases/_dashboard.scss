@@ -33,7 +33,7 @@
     &:last-child {
       .dataTables_wrapper {
         margin-bottom: 20px;
-      }      
+      }
     }
   }
 
@@ -43,7 +43,7 @@
 
     .crm-datatable-pager-top {
       border-radius: 0;
-    }    
+    }
   }
 
   .dataTables_length {
@@ -62,11 +62,11 @@
     td:first-child {
       width: 300px;
     }
-    
+
     td:last-child {
       text-align: left !important;
     }
-  }  
+  }
 
   .CRM_Case_Form_Search {
     .crm-submit-buttons {
@@ -103,10 +103,6 @@
       background-color: $gray-lighter;
       border-bottom: 1px solid $crm-background;
       box-shadow: none !important;
-    }
-
-    .select2-container {
-      background-color: $crm-white;
     }
   }
 

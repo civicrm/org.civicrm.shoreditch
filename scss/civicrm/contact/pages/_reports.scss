@@ -136,7 +136,7 @@ body[class*='page-civicrm-report-'] {
         }
       }
     }
-    
+
     &-format,
     &-access {
       padding: 10px 0 !important;
@@ -151,11 +151,6 @@ body[class*='page-civicrm-report-'] {
 
       .crm-form-select {
         margin-top: 5px;
-      }
-
-      .select2-container {
-        min-width: 230px !important;
-        width: 230px !important;
       }
 
       .crm-accordion-wrapper {

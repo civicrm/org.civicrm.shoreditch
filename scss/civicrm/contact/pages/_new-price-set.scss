@@ -3,19 +3,6 @@
 #{civi-page('admin-price')} {
   &,
   .ui-dialog-content {
-    table.form-layout td {
-      input.crm-form-text,
-      .crm-form-select,
-      .crm-form-textarea {
-        margin-bottom: 0 !important;
-        margin-top: 0 !important;
-      }
-
-      .crm-form-textarea {
-        min-height: 100px;
-      }
-    }
-
     .ui-dialog-titlebar .ui-button .ui-icon {
       top: 12px;
     }
@@ -105,11 +92,6 @@
 
       td {
         padding: 10px 20px !important;
-
-        .crm-form-text {
-          min-width: 50px !important;
-          width: 50px !important;
-        }
       }
     }
   }

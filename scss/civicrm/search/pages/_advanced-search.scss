@@ -1,95 +1,16 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
-
 .CRM_Contact_Form_Search_Advanced {
-  @import 'variables';
-  @import 'labels';
-  
-  td input + label + br {
-    display: none;
-  }
-
-  #{$search-settings},
-  #{$bottom} {
-    .fa-check {
-      display: none;
-    }
-  }
-
-  #{$bottom} {
-    padding: 23px 40px 33px;
-  }
-
-  #{$search-settings} {
-    td {
-      float: left;
-      width: 20%;
-
-      &:nth-child(3) {
-        clear: left;
-
-        .crm-submit-buttons {
-          padding: 0 20px;
-        }
-      }
-    }
-
-    .adv-search-top-submit {
-      border-top: solid 1px $crm-background;
-      margin-top: 20px;
-      padding-top: 20px;
-      width: 100% !important;
-
-      > div {
-        float: left;
-
-        &:nth-child(1) {
-          padding-right: 10px;
-        }
-
-        &:nth-child(2) {
-          i {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
-  }
-
-  #{$cases} {
-    > table > tbody > tr:nth-child(-n+3) td {
-      padding-left: 0;
-      padding-right: 0;
-      width: 50vw;
-    }
-  }
-
-  .spacer {
-    display: none;
-  }
-
-  #{$footer} {
-    td {
-      padding-left: 20px;
-    }
-  }
-
-  #location {
-    input[type='checkbox'] {
-      margin: 0 0 0 30px;
-    }
-  }
-
-  #relationship {
-    .select2-container {
-      margin-bottom: 20px;
+  .adv-search-top-submit {
+    .crm-button {
+      float: right !important;
     }
   }
 
   .form-layout {
     .crm-i-button {
+      margin-left: 20px;
       margin-top: 15px;
 
-      .crm-i {
+      .crm-i { /* stylelint-disable-line selector-max-compound-selectors */
         top: -2px;
       }
     }
