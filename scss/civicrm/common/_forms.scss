@@ -241,6 +241,11 @@ input[type='file'] {
 
 textarea {
   @include open-sans-font-family();
+
+  &.ng-valid,
+  &.ng-pristine {
+    border-color: $crm-grayblue-darker;
+  }
 }
 
 .replace-plain,
