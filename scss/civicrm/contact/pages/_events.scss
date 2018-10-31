@@ -149,10 +149,6 @@
     left: 0;
   }
 
-  .select2-container {
-    max-width: 230px;
-  }
-
   .crm-participant-form-block {
     table {
       box-shadow: none;
@@ -215,10 +211,6 @@
   .crm-event-eventfees-form-block-receipt_text {
     td:not(.label) {
       width: 100%;
-    }
-
-    textarea {
-      margin-bottom: 20px;
     }
   }
 
@@ -459,12 +451,6 @@
         min-width: 180px;
       }
     }
-  }
-
-  textarea {
-    line-height: 1em;
-    padding: 5px;
-    vertical-align: middle;
   }
 }
 

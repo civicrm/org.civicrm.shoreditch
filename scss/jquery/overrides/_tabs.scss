@@ -9,6 +9,7 @@
 
   .ui-tabs-nav {
     background: $gray-lighter;
+    border: 0;
     border-bottom: 1px solid $crm-grayblue-dark;
     border-radius: 0;
     padding: 10px 10px 0;
@@ -89,9 +90,6 @@
   }
 
   .ui-tabs-panel {
-    border-bottom: 1px solid $crm-grayblue-dark;
-    border-radius: 0;
-
     table th,
     table:not(.form-layout-compressed) th {
       background-color: $crm-white;

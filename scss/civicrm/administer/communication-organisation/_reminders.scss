@@ -41,13 +41,6 @@
 
 &#{civi-page('admin-schedulereminders')} {
   #{civi-dialog()} {
-    .crm-scheduleReminder-form-block-description {
-      .crm-form-text,
-      .crm-form-select {
-        margin-bottom: 5px;
-      }
-    }
-
     .CRM_Admin_Form_ScheduleReminders {
       .crm-block {
         padding: 0;

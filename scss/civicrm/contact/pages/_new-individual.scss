@@ -32,17 +32,7 @@
         }
 
         td {
-          > input[type='text'] {
-            min-width: 100% !important;
-            width: 100% !important;
-          }
-
           &:last-child {
-            > .select2-container {
-              min-width: auto !important;
-              width: auto !important;
-            }
-
             #s2id_suffix_id {
               min-width: 80px !important;
               width: 80px !important;
@@ -51,14 +41,9 @@
         }
       }
 
-      .select2-container,
       .crm-form-select {
         min-width: 120px !important;
         width: 120px !important;
-      }
-
-      input[type='text'] {
-        width: auto !important;
       }
     }
   }
@@ -101,12 +86,6 @@
       border: 0;
     }
 
-    .select2-choice {
-      > .select2-chosen {
-        font-size: 13px;
-      }
-    }
-
     #customFields {
       width: auto !important;
     }
@@ -124,14 +103,6 @@
 
       #s2id_contact_sub_type {
         max-width: 180px;
-
-        .select2-search-field {
-          width: 20%;
-        }
-
-        .select2-choices {
-          padding-right: 20px;
-        }
       }
 
       #s2id_group {
@@ -222,11 +193,6 @@
 
     #Address-Primary-html {
       padding-bottom: 10px;
-
-      .select2-container {
-        margin-right: 10px;
-        min-width: 90px;
-      }
     }
 
     label[for*='[use_shared_address]'] {

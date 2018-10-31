@@ -47,24 +47,6 @@
 
     .crm-datatable-pager-top {
       border-radius: $panel-border-radius $panel-border-radius 0 0;
-
-      div[id*='s2id_autogen'] {
-        .select2-choice {
-          background: none;
-          border: 1px solid $crm-grayblue-darker;
-          border-radius: $border-radius-base;
-          box-shadow: $crm-select2-box-shadow-inset;
-        }
-
-        .select2-arrow {
-          background: none;
-          padding: 0 5px;
-
-          b {
-            margin-top: 0;
-          }
-        }
-      }
     }
 
     .crm-datatable-pager-bottom,
@@ -119,11 +101,6 @@
 
   .crm-batch-form-block {
     box-shadow: none;
-
-    textarea {
-      line-height: 1.5em;
-      vertical-align: middle;
-    }
   }
 }
 
@@ -177,12 +154,6 @@
     }
   }
 
-  .crm-form-time {
-    @include civicrm-form-control;
-    display: inline-block;
-    width: 30%;
-  }
-
   .crm-grid-table {
     border: 0;
 
@@ -221,12 +192,11 @@
         }
 
         .crm-form-date-wrapper {
-          width: 370px;
+          display: inline-block;
+          // Necessary to make sure the calendar icon addon has enough
+          // space to be displayed next to the input field 
+          width: 255px;
         }
-      }
-
-      > .select2-container {
-        margin: 10px;
       }
 
       input.dateplugin {
@@ -242,24 +212,6 @@
           margin-left: -5px !important;
           padding: 4px 0;
         }
-      }
-
-      .select2-container {
-        margin-bottom: 10px;
-
-        .select2-choice {
-          box-shadow: $crm-input-shadow;
-          height: 28px;
-          line-height: 28px;
-
-          .select2-arrow {
-            background: transparent;
-          }
-        }
-      }
-
-      .select2-container#s2id_field_1_membership_type_1 {
-        width: 120px !important;
       }
     }
   }

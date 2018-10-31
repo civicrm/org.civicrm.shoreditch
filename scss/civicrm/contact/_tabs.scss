@@ -1,183 +1,9 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+/* stylelint-disable selector-max-id */
 
-.crm-contact-page {
-  padding: 4px;
+#mainTabContainer {
+  background-color: transparent;
+  display: flex;
   position: relative;
-
-  #mainTabContainer {
-    background-color: transparent;
-    display: flex;
-    padding: 0;
-
-    // This snippet is used to hide tab panel until javascript loads tabs properly and generates required classes.
-    &:not(.ui-tabs) {
-      .ui-tabs-panel {
-        visibility: hidden;
-      }
-    }
-
-    .crm-contact-tabs-list {
-      background: $crm-white;
-      border-radius: 0;
-      box-shadow: $box-shadow;
-      flex-shrink: 0;
-      margin: 0;
-      padding: 0;
-      width: 200px;
-
-      ~.ui-tabs-panel {
-        .container-fluid {
-          max-width: $container-large-desktop;
-        }
-      }
-    }
-
-    li.crm-tab-button {
-      background: transparent;
-      border: 0;
-      border-radius: 0;
-      box-sizing: border-box;
-      display: block;
-      font: $crm-font-weight-h2 $font-size-base $font-family-base;
-      margin-bottom: 0;
-      padding: 0;
-      top: 0;
-      white-space: normal;
-      width: 100%;
-
-      &.ui-tabs-active,
-      &:hover {
-        background: $crm-background;
-
-        a,
-        em {
-          color: $brand-primary !important;
-        }
-      }
-
-      a {
-        box-sizing: border-box;
-        display: block;
-        font-size: $font-size-small;
-        height: 100%;
-        padding: 15px !important;
-        width: 100%;
-
-        // ICONS
-        // ==============
-        &::before {
-          content: '\f12e';
-          font-family: 'FontAwesome';
-          font-weight: normal;
-          margin-right: 10px;
-        }
-
-        &[title='Contact Summary']::before {
-          content: '\f007';
-        }
-
-        &[title='Job Contract']::before {
-          content: '\f016';
-        }
-
-        &[title='Job Roles']::before {
-          content: '\f022';
-        }
-
-        &[title='Personal Details']::before {
-          content: '\f05a';
-        }
-
-        &[title='Leave']::before {
-          content: '\f0b1';
-        }
-
-        &[title='Assignments']::before {
-          content: '\f0f2';
-        }
-
-        &[title='Tasks']::before {
-          content: '\f03a';
-        }
-
-        &[title='Documents']::before {
-          content: '\f0c5';
-        }
-
-        &[title='Identification']::before {
-          content: '\f09d';
-        }
-
-        &[title='Immigration']::before {
-          content: '\f072';
-        }
-
-        &[title='Emergency Contacts']::before {
-          content: '\f0fa';
-        }
-
-        &[title='Managers']::before,
-        &[title='Relationships']::before {
-          content: '\f0e8';
-        }
-
-        &[title='Bank Details']::before {
-          content: '\f19c';
-        }
-
-        &[title='Career History']::before {
-          content: '\f1da';
-        }
-
-        &[title='Medical & Disability']::before {
-          content: '\f193';
-        }
-
-        &[title='Qualifications']::before {
-          content: '\f0a3';
-        }
-
-        &[title='Notes']::before {
-          content: '\f040';
-        }
-
-        &[title='Groups']::before {
-          content: '\f0c0';
-        }
-
-        &[title='Change Log']::before {
-          content: '\f187';
-        }
-
-        &[title='Cases']::before {
-          content: '\f0f6';
-        }
-
-        &[title='Communications']::before {
-          content: '\f0c0';
-        }
-      }
-
-      a,
-      em {
-        color: $gray-darker !important;
-        cursor: default;
-      }
-    }
-
-    .ui-tabs-panel {
-      box-sizing: border-box;
-      flex-grow: 1;
-      padding: 20px !important;
-    }
-  }
-
-  /* override of jquery-ui.css that creates weird white background */
-  .ui-widget-content {
-    background: transparent;
-    border: 0 !important;
-    color: #222;
-  }
 
   #ui-id-11 {
     overflow: auto;
@@ -190,5 +16,180 @@
 
   .ui-dialog {
     background: $crm-white;
+  }
+
+  // Override a white background rule made by jquery-ui.css
+  .ui-widget-content {
+    background: transparent;
+  }
+}
+
+.crm-contact-tabs-list {
+  background: $crm-white;
+  border-radius: 0;
+  box-shadow: $box-shadow;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+
+  // This snippet is used to hide the tab panels until
+  // jQuery UI is bootstraped on the tabs container
+  &:not(.ui-tabs-nav) {
+    ~ .ui-tabs-panel {
+      visibility: hidden;
+    }
+  }
+
+  a {
+    box-sizing: border-box;
+    display: block;
+    font-size: $font-size-small !important;
+    height: 100%;
+    padding: 15px !important;
+    width: 100%;
+
+    // ICONS
+    // ==============
+    &::before {
+      content: '\f12e';
+      font-family: 'FontAwesome';
+      font-weight: normal;
+      margin-right: 10px;
+    }
+
+    /* stylelint-disable selector-no-qualifying-type */
+    &[title='Contact Summary']::before {
+      content: '\f007';
+    }
+
+    &[title='Job Contract']::before {
+      content: '\f016';
+    }
+
+    &[title='Job Roles']::before {
+      content: '\f022';
+    }
+
+    &[title='Personal Details']::before {
+      content: '\f05a';
+    }
+
+    &[title='Leave']::before {
+      content: '\f0b1';
+    }
+
+    &[title='Assignments']::before {
+      content: '\f0f2';
+    }
+
+    &[title='Tasks']::before {
+      content: '\f03a';
+    }
+
+    &[title='Documents']::before {
+      content: '\f0c5';
+    }
+
+    &[title='Identification']::before {
+      content: '\f09d';
+    }
+
+    &[title='Immigration']::before {
+      content: '\f072';
+    }
+
+    &[title='Emergency Contacts']::before {
+      content: '\f0fa';
+    }
+
+    &[title='Managers']::before,
+    &[title='Relationships']::before {
+      content: '\f0e8';
+    }
+
+    &[title='Bank Details']::before {
+      content: '\f19c';
+    }
+
+    &[title='Career History']::before {
+      content: '\f1da';
+    }
+
+    &[title='Medical & Disability']::before {
+      content: '\f193';
+    }
+
+    &[title='Qualifications']::before {
+      content: '\f0a3';
+    }
+
+    &[title='Notes']::before {
+      content: '\f040';
+    }
+
+    &[title='Groups']::before {
+      content: '\f0c0';
+    }
+
+    &[title='Change Log']::before {
+      content: '\f187';
+    }
+
+    &[title='Cases']::before {
+      content: '\f0f6';
+    }
+
+    &[title='Communications']::before {
+      content: '\f0c0';
+    }
+    /* stylelint-enable selector-no-qualifying-type */
+  }
+
+  .crm-tab-button {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    display: block;
+    font: $crm-font-weight-h2 $font-size-base $font-family-base;
+    margin-bottom: 0;
+    padding: 0;
+    top: 0;
+    white-space: normal;
+    width: 100%;
+
+    &.ui-tabs-active,
+    &:hover {
+      background: $crm-background;
+      border: 0;
+
+      a,
+      em {
+        color: $brand-primary !important;
+      }
+    }
+
+    a,
+    em {
+      color: $gray-darker !important;
+      cursor: default;
+    }
+  }
+
+  ~ .ui-tabs-panel {
+    flex-grow: 1;
+    padding: 20px !important;
+
+    .container-fluid {
+      // Necessary to override the id-based namespaces of T&A and JC
+      // (as they still use their own copy of Bootstrap)
+      max-width: $container-large-desktop !important;
+    }
+  }
+
+  // Necessary because of the !important defined in
+  // @see https://github.com/civicrm/civicrm-core/blob/cc38fb8ddcbbc8b60679504dd93522df852c48bf/css/civicrm.css#L1616-L1619
+  .ui-tabs-anchor {
+    padding: 15px !important;
   }
 }
