@@ -222,14 +222,13 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
 
   // Search text input field
   .select2-search {
-    &::before {
+    &::after {
       @include fa-icon();
       color: $gray-darker;
       content: $fa-var-search;
       font-size: $font-size-base;
-      position: absolute;
-      right: 10px;
-      top: 10px;
+      position: relative;
+      right: 20px;
     }
 
     input {
