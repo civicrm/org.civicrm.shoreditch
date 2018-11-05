@@ -193,25 +193,14 @@
 .CRM_Member_Form_Membership {
   input,
   select,
-  textarea,
-  .select2-container {
+  textarea {
     &.crm-inline-error,
     &.crm-error,
     &.error {
       background: none !important;
       border: 1px solid $brand-danger;
       min-height: 30px;
-
-      &.select2-container {
-        padding: 0;
-      }
     }
-  }
-
-  .select2-container {
-    max-width: 230px;
-    min-height: 30px;
-    width: 230px;
   }
 
   select,
@@ -220,7 +209,7 @@
     max-height: 33px;
     max-width: 230px;
     padding: 0 5px !important;
-    padding-right: 30px !important;    
+    padding-right: 30px !important;
   }
 
   #payment_information {
@@ -235,7 +224,7 @@
       margin-left: 40px;
     }
   }
-  
+
   #contributionTypeToggle {
     > td {
       padding-left: 20px;
@@ -404,7 +393,7 @@
 
   .crm-membership-view-form-block {
     padding: 0 !important;
-    
+
     .crm-block {
       padding: 0;
     }
@@ -657,10 +646,6 @@
   }
 
   .CRM_Member_Form_Search {
-    .select2-container {
-      max-width: 230px;
-    }
-
     .crm-accordion-body {
       padding: 20px !important;
 
@@ -726,11 +711,6 @@
       label {
         line-height: 30px;
       }
-
-      .select2-container,
-      input.crm-form-text {
-        margin: 0 15px 0 0 !important;
-      }
     }
 
     tr.columnheader {
@@ -783,10 +763,6 @@
 
       tbody tr td {
         padding: 10px 10px 10px 0;
-      }
-
-      .select2-container-multi {
-        width: 100% !important;
       }
     }
 
@@ -901,12 +877,6 @@
           max-width: 120px;
           width: 120px;
         }
-
-        .select2-container {
-          margin-top: 0 !important;
-          min-width: 100% !important;
-          width: 100% !important;
-        }
       }
 
       table + .crm-submit-buttons {
@@ -932,11 +902,6 @@
       label {
         line-height: 30px;
       }
-
-      .select2-container,
-      input.crm-form-text {
-        margin: 0 15px 0 0 !important;
-      }
     }
 
     .crm-accordion-body .crm-form-block {
@@ -948,11 +913,6 @@
 
     .helpIcon {
       margin-bottom: 10px;
-
-      .select2-chosen i {
-        line-height: 20px;
-        margin-top: -3px;
-      }
     }
 
     #saveDetails {

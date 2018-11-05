@@ -1,16 +1,16 @@
 .nav {
-
   > li {
-
     > a {
       color: $gray-darker;
       font-weight: 600;
     }
+  }
 
-    &.disabled > a:hover {
-      border-top-color: transparent;
-      border-right-color: transparent;
+  > .disabled {
+    > a:hover {
       border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
     }
   }
 }
@@ -19,7 +19,6 @@
   background: $crm-nav-stacked-bg;
 
   > li {
-
     > a {
       padding: $crm-nav-stacked-link-padding;
 
@@ -43,14 +42,9 @@
 }
 
 .nav-pills {
-
   > li {
-
-    &.active > a,
-    > a {
-      &:focus {
-        background-color: transparent;
-      }
+    > a:focus {
+      background-color: transparent;
     }
   }
 }
@@ -61,6 +55,7 @@
   padding-left: 20px;
 
   > li {
+    opacity: 0.75;
 
     > a {
       padding: $crm-nav-stacked-link-padding;
@@ -69,30 +64,31 @@
     + li {
       margin-left: 0;
     }
+  }
 
-    &.active {
+  > .disabled {
+    opacity: 0.4;
+  }
 
-      > a {
-        background: transparent;
-        position: relative;
+  > .active {
+    opacity: 1;
 
-        &:after {
-          border-bottom: 3px solid transparent;
-          bottom: 0;
-          content: '';
-          left: 0;
-          position: absolute;
-          width: 100%;
-        }
-
-        &:hover {
-          background: transparent;
-        }
-      }
+    > a {
+      background: transparent !important;
+      position: relative;
     }
 
-    &.disabled {
-      opacity: 0.5;
+    > a::after {
+      border-bottom: 3px solid transparent;
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    > a:hover {
+      background: transparent;
     }
   }
 }
@@ -134,35 +130,35 @@
     > a {
       background: $crm-nav-stacked-bg;
     }
+  }
 
-    &.active {
-      z-index: 0;
+  > .active {
+    z-index: 0;
 
-      &:after,
-      &:before {
-        @include box-shadow($box-shadow);
+    &::after,
+    &::before {
+      @include box-shadow($box-shadow);
 
-        content: '';
-        display: block;
-        height: 999999px;
-        left: 0;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-      }
+      content: '';
+      display: block;
+      height: 999999px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
 
-      &:after {
-        top: 100%;
-      }
+    &::after {
+      top: 100%;
+    }
 
-      &:before {
-        bottom: 100%;
-      }
+    &::before {
+      bottom: 100%;
+    }
 
-      > a {
-        background: transparent !important;
-        color: $gray-darker !important;
-      }
+    > a {
+      background: transparent !important;
+      color: $gray-darker !important;
     }
   }
 }
@@ -170,32 +166,28 @@
 
 //== Nav tabs in the heading of a primary panel
 .panel-primary {
-
   > .panel-heading {
-
     > .nav-tabs {
       border: $crm-nav-tabs-panel-heading-border;
       margin: $crm-nav-tabs-panel-heading-margin;
+    }
+  }
 
-      > li {
+  li {
+    > a {
+      background: $crm-nav-tabs-panel-heading-link-background !important;
+      border-color: $crm-white !important;
+      border-width: $crm-nav-tabs-panel-heading-link-border-width;
+      color: $crm-white !important;
+      font-weight: $crm-nav-tabs-panel-heading-link-weight;
+      padding: $crm-nav-tabs-panel-heading-link-padding;
+    }
+  }
 
-        &.active,
-        &:hover {
-
-          > a {
-            border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
-          }
-        }
-
-        > a {
-          background: $crm-nav-tabs-panel-heading-link-background !important;
-          border-color: $crm-white !important;
-          border-width: $crm-nav-tabs-panel-heading-link-border-width;
-          color: $crm-white !important;
-          font-weight: $crm-nav-tabs-panel-heading-link-weight;
-          padding: $crm-nav-tabs-panel-heading-link-padding;
-        }
-      }
+  .active,
+  li:hover {
+    > a {
+      border-width: $crm-nav-tabs-panel-heading-link-border-hover-width;
     }
   }
 }
@@ -218,36 +210,38 @@
 
     > li {
       float: none;
+    }
 
-      > a {
-        margin-right: 0;
-        padding: $crm-nav-stacked-link-padding;
+    a {
+      margin-right: 0;
+      padding: $crm-nav-stacked-link-padding;
 
-        &,
-        &:hover {
-          border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
-        }
-      }
-
-      &.active {
-
-        > a,
-        > a:hover,
-        > a:focus {
-          border-color: $nav-tabs-active-link-hover-border-color transparent $nav-tabs-active-link-hover-border-color transparent;
-          border-bottom-color: $nav-tabs-active-link-hover-border-color;
-        }
+      &:hover {
+        border-color: transparent $nav-tabs-active-link-hover-border-color transparent transparent;
       }
     }
+
+    /* stylelint-disable max-nesting-depth, selector-max-compound-selectors */
+    > .active {
+      > a,
+      > a:hover,
+      > a:focus {
+        border-bottom-color: $nav-tabs-active-link-hover-border-color;
+        border-color: $nav-tabs-active-link-hover-border-color transparent $nav-tabs-active-link-hover-border-color transparent;
+      }
+    }
+    /* stylelint-enable */
 
     // The wrapper that enforces the layout
     &-wrapper {
       border-top: 1px solid $crm-grayblue-dark;
       display: flex;
 
+      /* stylelint-disable max-nesting-depth, selector-max-compound-selectors */
       .active:first-child > a {
         border-top-color: transparent !important;
       }
+      /* stylelint-enable */
 
       // Removes the grid gutter to visually connect the tabs to the content
       .nav-tabs-stacked {
@@ -266,7 +260,6 @@
 
   // If under a panel heading, add a border
   .panel-heading {
-
     + .nav-tabs {
       border-top: 1px solid $gray-light;
     }

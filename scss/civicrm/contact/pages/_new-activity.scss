@@ -16,7 +16,6 @@
         padding-right: 20px;
       }
 
-      > td > .select2-container,
       > td > .crm-form-text {
         &::after {
           display: none;
@@ -81,15 +80,6 @@
           }
         }
       }
-    }
-  }
-}
-
-.ui-dialog-content .CRM_Activity_Form_Activity {
-  .crm-activity-form-block-followup_activity_type_id {
-    input.crm-form-text,
-    .dateplugin {
-      margin: 0 !important;
     }
   }
 }
@@ -198,17 +188,6 @@
       &.label {
         padding-left: 0 !important;
       }
-
-      input.crm-form-text,
-      .crm-form-select,
-      .crm-form-textarea {
-        margin-bottom: 0 !important;
-        margin-top: 0 !important;
-      }
-
-      .crm-form-textarea {
-        min-height: 100px;
-      }
     }
 
     .crm-activity-form-block-details {
@@ -219,46 +198,7 @@
   }
 }
 
-.crm-entityref-filters {
-  .select2-container {
-    width: 100% !important;
-  }
-}
-
 #{civi-page('contact')} {
-  .crm-activityLinks .select2-container {
-    .select2-choice {
-      background: none;
-      background: $crm-white;
-      border: 1px solid $crm-grayblue-darker;
-      border-radius: $border-radius-base;
-      box-shadow: $crm-select2-box-shadow-inset;
-      display: block !important;
-      line-height: 30px;
-
-      .select2-chosen {
-        color: $gray-dark;
-        font-family: $font-family-base;
-      }
-    }
-
-    &.select2-dropdown-open {
-      .select2-choice {
-        border-color: $brand-primary;
-        box-shadow: none;
-      }
-    }
-
-    .select2-arrow {
-      background: none;
-      padding: 0 5px;
-    }
-
-    .select2-search-choice-close {
-      right: 35px;
-    }
-  }
-
   #Activity {
     .crm-activity-form-block-assignee_contact_id td:not(.label) {
       padding: 0 5px;
@@ -344,20 +284,6 @@
     .dataTables_length,
     .dataTables_paginate {
       font-size: $font-size-base;
-    }
-
-    div[id*='s2id_autogen'] {
-      .select2-choice {
-        background: $crm-white;
-        border: 1px solid $crm-grayblue-darker;
-        border-radius: $border-radius-base;
-        box-shadow: $crm-select2-box-shadow-inset;
-      }
-
-      .select2-arrow {
-        background: none;
-        padding: 0 5px;
-      }
     }
   }
 }

@@ -14,8 +14,8 @@
     <url desc="Support">http://civicrm.stackexchange.com/</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
-  <releaseDate>2018-09-17</releaseDate>
-  <version>0.1-alpha25</version>
+  <releaseDate>2018-10-29</releaseDate>
+  <version>0.1-alpha27</version>
   <compatibility>
     <ver>4.7</ver>
   </compatibility>

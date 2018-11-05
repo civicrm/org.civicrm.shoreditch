@@ -28,8 +28,7 @@ a.crm-clear-link {
         padding-right: 15px;
         width: calc(100% / 3);
 
-        input:not([type='radio']):not([type='checkbox']),
-        .select2-container {
+        input:not([type='radio']):not([type='checkbox']) {
           flex: 1 auto;
           margin-top: 0 !important;
           width: 100% !important;
@@ -231,8 +230,7 @@ a.crm-clear-link {
       padding-right: 15px;
       width: calc(100% / 3);
 
-      input:not([type='radio']):not([type='checkbox']),
-      .select2-container {
+      input:not([type='radio']):not([type='checkbox']) {
         flex: 1 auto;
         width: 100% !important;
       }
@@ -258,16 +256,6 @@ a.crm-clear-link {
 #{$display-settings-for-results} {
   br {
     display: none;
-  }
-
-  .select2-choices,
-  .select2-container {
-    flex: 5 1 auto;
-    max-width: initial !important;
-
-    .select2-input {
-      width: initial !important;
-    }
   }
 
   input.crm-form-text {
@@ -331,8 +319,7 @@ a.crm-clear-link {
           flex-direction: column;
 
           label,
-          input:not([type='radio']):not([type='checkbox']),
-          .select2-container {
+          input:not([type='radio']):not([type='checkbox']) {
             flex: 1 auto;
             width: 100% !important;
           }
@@ -384,10 +371,6 @@ a.crm-clear-link {
           align-items: flex-start;
           flex-direction: column;
           justify-content: flex-start;
-
-          .select2-container {
-            width: 100% !important;
-          }
 
           .postal_code_range-wrapper {
             .crm-form-text {
@@ -474,24 +457,13 @@ a.crm-clear-link {
 }
 
 .crm-accordion-body {
-  .select2-container {
-    width: 230px !important;
-  }
-
-  @media (max-width: $screen-sm-min) {
-    .select2-container {
-      width: 100% !important;
-    }
-  }
-
   @media (max-width: $screen-sm-min) {
     tr {
       display: flex;
       flex-direction: column;
     }
 
-    input:not([type='radio']):not([type='checkbox']),
-    .select2-container {
+    input:not([type='radio']):not([type='checkbox']) {
       flex: 1 auto;
       margin-right: 0 !important;
       width: 100% !important;

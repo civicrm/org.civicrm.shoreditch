@@ -20,12 +20,6 @@
     .crm-job-form-block {
       @include box-shadow($crm-form-layout-shadow-lower);
       border-radius: 0 0 $border-radius-base $border-radius-base !important;
-
-      .crm-form-time {
-        @include civicrm-form-control;
-        @include open-sans-font-family();
-        margin: 10px 0;
-      }
     }
   }
 }

@@ -58,6 +58,13 @@ table {
   top: 0.6em;
 }
 
+// It is necessary to keep the min width of the <select multiple>
+// underneath the CiviCRM's select2, otherwise the select2 might be too narrow
+// for the <option>s to display properly
+.crm-select2 {
+  width: 15em;
+}
+
 label .crm-error-label {
   @include initial(padding, 0);
 

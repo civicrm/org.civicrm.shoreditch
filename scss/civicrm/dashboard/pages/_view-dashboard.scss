@@ -73,20 +73,6 @@
           padding: 10px 0;
           width: 49%;
         }
-
-        div[id*='s2id_autogen'] {
-          .select2-choice {
-            background: none;
-            border: 1px solid $crm-grayblue-darker;
-            border-radius: $border-radius-small;
-            box-shadow: $crm-select2-box-shadow-inset;
-          }
-
-          .select2-arrow {
-            background: none;
-            padding: 0 5px;
-          }
-        }
       }
     }
 
