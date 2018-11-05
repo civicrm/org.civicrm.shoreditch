@@ -83,6 +83,7 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
     border-radius: $border-radius-base;
     box-shadow: $crm-form-control-shadow;
     line-height: $crm-jquery-select2-line-height;
+    padding-right: 20px;
 
     // By default use a caret down icon, without borders
     &::before {
