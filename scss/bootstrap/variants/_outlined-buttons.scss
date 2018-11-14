@@ -1,11 +1,7 @@
-@import 'bootstrap/mixins/button-outline-variant';
-@import 'bootstrap/mixins/hover';
-@import 'bootstrap/overrides/variables';
+@import '../overrides/variables';
 
 .btn-default-outline {
   @include button-outline-variant($crm-white);
-  border-color: $crm-white !important;
-  color: $crm-white !important;
 
   .open &,
   &:hover,
