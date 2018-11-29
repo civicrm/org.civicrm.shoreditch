@@ -1,3 +1,9 @@
+// Namespace for the entire theme
+// (set it to an empty string to remove the namespace)
+$bootstrap-namespace: '#bootstrap-theme';
+
+// Any selector within this namespace will be place outside
+// of $bootstrap-namespace during the build process
 $outside-namespace-marker: '.___outside-namespace';
 
 $box-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
@@ -401,3 +407,11 @@ $crm-uib-datepicker-header-font-weight:    $crm-font-weight-h5 !default;
 $crm-uib-datepicker-muted-cell-color:      #dcdddd !default;
 $crm-uib-datepicker-today-bg-color:        transparent !default;
 $crm-uib-datepicker-today-font-color:      $brand-primary !default;
+
+
+//== CRM Wizard
+//
+//##
+
+$crm-wizard-active-bg-color: $gray-lighter;
+$crm-wizard-active-font-color: $brand-primary;
