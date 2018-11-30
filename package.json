@@ -16,6 +16,9 @@
     "globals": [
       "CRM",
       "jQuery"
+    ],
+    "ignore": [
+      "base/js/*"
     ]
   },
   "devDependencies": {
