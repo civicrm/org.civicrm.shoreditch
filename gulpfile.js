@@ -7,17 +7,25 @@ const PluginError = require('plugin-error');
 {
   const ASSETS_PATH = path.join(__dirname, '/node_modules/bootstrap-sass/assets/');
 
-  gulp.task('copy:fonts', function () {
+  gulp.task('copy:fonts', () => {
     const source = path.join(ASSETS_PATH, 'fonts/bootstrap/*');
 
     return gulp.src(source).pipe(gulp.dest('base/fonts'));
   });
 
-  gulp.task('copy:js', function () {
+  gulp.task('copy:js', () => {
     const source = path.join(ASSETS_PATH, 'javascripts/bootstrap/*');
 
     return gulp.src(source).pipe(gulp.dest('base/js'));
   });
+
+  gulp.task('copy:sass', () => {
+    const source = path.join(ASSETS_PATH, 'stylesheets/bootstrap/**/*');
+
+    return gulp.src(source).pipe(gulp.dest('base/scss/vendor/bootstrap'));
+  });
+
+  gulp.task('copy', gulp.parallel('copy:sass', 'copy:js', 'copy:fonts'));
 }
 
 // sass
