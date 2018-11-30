@@ -12,6 +12,12 @@ const PluginError = require('plugin-error');
 
     return gulp.src(source).pipe(gulp.dest('base/fonts'));
   });
+
+  gulp.task('copy:js', function () {
+    const source = path.join(ASSETS_PATH, 'javascripts/bootstrap/*');
+
+    return gulp.src(source).pipe(gulp.dest('base/js'));
+  });
 }
 
 // sass
