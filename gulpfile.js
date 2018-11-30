@@ -1,6 +1,18 @@
 const gulp = require('gulp');
 const argv = require('yargs').argv;
+const path = require('path');
 const PluginError = require('plugin-error');
+
+// copy assets
+{
+  const ASSETS_PATH = path.join(__dirname, '/node_modules/bootstrap-sass/assets/');
+
+  gulp.task('copy:fonts', function () {
+    const source = path.join(ASSETS_PATH, 'fonts/bootstrap/*');
+
+    return gulp.src(source).pipe(gulp.dest('base/fonts'));
+  });
+}
 
 // sass
 {
@@ -11,7 +23,6 @@ const PluginError = require('plugin-error');
   const postcssDiscardDuplicates = require('postcss-discard-duplicates');
   const stripCssComments = require('gulp-strip-css-comments');
   const transformSelectors = require('gulp-transform-selectors');
-  const path = require('path');
 
   const bootstrapNamespace = '#bootstrap-theme';
   const outsideNamespaceRegExp = /^\.___outside-namespace/;
