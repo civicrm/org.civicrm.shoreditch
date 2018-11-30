@@ -370,7 +370,7 @@ $breadcrumb-separator:           '>' !default;
 //
 //##
 
-$text-muted:                     #AAB2B9 !default;
+$text-muted:                     #aab2b9 !default;
 
 $dl-horizontal-offset:           250px !default;
 
@@ -408,5 +408,5 @@ $crm-uib-datepicker-today-font-color:      $brand-primary !default;
 //
 //##
 
-$crm-wizard-active-bg-color: $gray-lighter;
-$crm-wizard-active-font-color: $brand-primary;
+$crm-wizard-active-bg-color: $gray-lighter !default;
+$crm-wizard-active-font-color: $brand-primary !default;
