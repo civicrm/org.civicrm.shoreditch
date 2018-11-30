@@ -22,7 +22,7 @@
     ]
   },
   "devDependencies": {
-    "bootstrap-sass": "3.3.7",
+    "bootstrap-sass": "twbs/bootstrap-sass#next",
     "gulp": "^4.0.0",
     "gulp-postcss": "^7.0.1",
     "gulp-replace": "^1.0.0",
