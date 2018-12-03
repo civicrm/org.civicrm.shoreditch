@@ -3,29 +3,41 @@ const argv = require('yargs').argv;
 const path = require('path');
 const PluginError = require('plugin-error');
 
-// copy assets
+// tasks for copying the bootstrap-sass package's assets from the node_modules/
+// folder to the base/ folder, so that they can be served in the browser and
+// referenced by other extensions if needed.
+//
+// The following is copied:
+// * fonts: glyphicons font files
+// * js: components (alert, modal, etc) scripts
+// * sass: sass partials that make up bootstrap-sass styleshee
 {
-  const ASSETS_PATH = path.join(__dirname, '/node_modules/bootstrap-sass/assets/');
-
   gulp.task('copy:fonts', () => {
-    const source = path.join(ASSETS_PATH, 'fonts/bootstrap/*');
-
-    return gulp.src(source).pipe(gulp.dest('base/fonts'));
+    return copyFiles('fonts/bootstrap/*', 'base/fonts');
   });
 
   gulp.task('copy:js', () => {
-    const source = path.join(ASSETS_PATH, 'javascripts/bootstrap/*');
-
-    return gulp.src(source).pipe(gulp.dest('base/js'));
+    return copyFiles('javascripts/bootstrap/*', 'base/js');
   });
 
   gulp.task('copy:sass', () => {
-    const source = path.join(ASSETS_PATH, 'stylesheets/bootstrap/**/*');
-
-    return gulp.src(source).pipe(gulp.dest('base/scss/vendor/bootstrap'));
+    return copyFiles('stylesheets/bootstrap/**/*', 'base/scss/vendor/bootstrap');
   });
 
   gulp.task('copy', gulp.parallel('copy:sass', 'copy:js', 'copy:fonts'));
+
+  /**
+   * Copies the source files in the destination folder
+   *
+   * @param  {String} source
+   * @param  {String} dest
+   * @return {Object}
+   */
+  function copyFiles (source, dest) {
+    return gulp.src(
+      path.join(__dirname, 'node_modules/bootstrap-sass/assets', source)
+    ).pipe(gulp.dest(dest));
+  }
 }
 
 // sass
