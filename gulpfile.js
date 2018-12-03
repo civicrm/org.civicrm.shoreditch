@@ -1,6 +1,44 @@
 const gulp = require('gulp');
 const argv = require('yargs').argv;
+const path = require('path');
 const PluginError = require('plugin-error');
+
+// tasks for copying the bootstrap-sass package's assets from the node_modules/
+// folder to the base/ folder, so that they can be served in the browser and
+// referenced by other extensions if needed.
+//
+// The following is copied:
+// * fonts: glyphicons font files
+// * js: components (alert, modal, etc) scripts
+// * sass: sass partials that make up bootstrap-sass styleshee
+{
+  gulp.task('copy:fonts', () => {
+    return copyFiles('fonts/bootstrap/*', 'base/fonts');
+  });
+
+  gulp.task('copy:js', () => {
+    return copyFiles('javascripts/bootstrap/*', 'base/js');
+  });
+
+  gulp.task('copy:sass', () => {
+    return copyFiles('stylesheets/bootstrap/**/*', 'base/scss/vendor/bootstrap');
+  });
+
+  gulp.task('copy', gulp.parallel('copy:sass', 'copy:js', 'copy:fonts'));
+
+  /**
+   * Copies the source files in the destination folder
+   *
+   * @param  {String} source
+   * @param  {String} dest
+   * @return {Object}
+   */
+  function copyFiles (source, dest) {
+    return gulp.src(
+      path.join(__dirname, 'node_modules/bootstrap-sass/assets', source)
+    ).pipe(gulp.dest(dest));
+  }
+}
 
 // sass
 {
@@ -11,7 +49,6 @@ const PluginError = require('plugin-error');
   const postcssDiscardDuplicates = require('postcss-discard-duplicates');
   const stripCssComments = require('gulp-strip-css-comments');
   const transformSelectors = require('gulp-transform-selectors');
-  const path = require('path');
 
   const bootstrapNamespace = '#bootstrap-theme';
   const outsideNamespaceRegExp = /^\.___outside-namespace/;

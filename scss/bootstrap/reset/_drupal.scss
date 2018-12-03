@@ -1,7 +1,12 @@
+/* stylelint-disable */
+
 // Media query variables.
 $tablet:  "screen and (min-width: #{screen-sm-min})";
 $normal:  "screen and (min-width: #{screen-md-min})";
 $wide:    "screen and (min-width: #{screen-lg-min})";
+
+@import 'base/scss/vendor/bootstrap/variables';
+@import 'base/scss/vendor/bootstrap/mixins';
 
 html {
   &.overlay-open .navbar-fixed-top {

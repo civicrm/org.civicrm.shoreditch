@@ -1,8 +1,8 @@
 /* ========================================================================
- * Bootstrap: modal.js v3.3.5
+ * Bootstrap: modal.js v3.4.0
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -33,7 +33,7 @@
     }
   }
 
-  Modal.VERSION  = '3.3.5'
+  Modal.VERSION  = '3.4.0'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -140,7 +140,9 @@
     $(document)
       .off('focusin.bs.modal') // guard against infinite focus loop
       .on('focusin.bs.modal', $.proxy(function (e) {
-        if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
+        if (document !== e.target &&
+            this.$element[0] !== e.target &&
+            !this.$element.has(e.target).length) {
           this.$element.trigger('focus')
         }
       }, this))
@@ -320,7 +322,10 @@
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
-    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+    var target  = $this.attr('data-target') ||
+      (href && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+
+    var $target = $(document).find(target)
     var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()

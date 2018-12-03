@@ -10,15 +10,19 @@
     "url": "https://github.com/civicrm/org.civicrm.shoreditch/issues"
   },
   "scripts": {
-    "postinstall": "npx gulp sass"
+    "postinstall": "npx gulp copy && npx gulp sass"
   },
   "semistandard": {
     "globals": [
       "CRM",
       "jQuery"
+    ],
+    "ignore": [
+      "base/js/*"
     ]
   },
   "devDependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#next",
     "gulp": "^4.0.0",
     "gulp-postcss": "^7.0.1",
     "gulp-replace": "^1.0.0",

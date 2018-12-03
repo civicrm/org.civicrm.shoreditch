@@ -7,6 +7,10 @@
 @import 'bootstrap/fonts/*';
 @import 'bootstrap/mixins/*';
 
+// Reset CMS and old CiviCRM style before adding Bootstrap styles
+@import 'bootstrap/reset/drupal';
+@import 'bootstrap/reset/civicrm';
+
 @import 'base/scss/bootstrap';
 @import 'angular/overrides/**/*';
 @import 'bootstrap/overrides/style/*';
