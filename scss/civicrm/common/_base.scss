@@ -11,6 +11,14 @@
         margin-top: $crm-main-menu-height !important;
       }
 
+      &.admin-menu.adminimal-menu {
+        margin-top: $crm-main-menu-height !important;
+
+        &::after {
+          content: none;
+        }
+      }
+
       .toolbar-menu {
         height: $crm-main-menu-height !important;
         padding-bottom: 0 !important;
