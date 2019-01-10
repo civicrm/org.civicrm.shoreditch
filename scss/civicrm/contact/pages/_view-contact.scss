@@ -29,6 +29,14 @@
           border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
         }
 
+        .crm-submit-buttons {
+          padding: 0;
+
+          .crm-hover-button:first-child {
+            padding-left: 0;
+          }
+        }
+
         table.crm-info-panel {
           border: 0;
           border-bottom: 1px solid $crm-background;
