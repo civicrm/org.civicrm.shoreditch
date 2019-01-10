@@ -43,11 +43,6 @@
 
         table.crm-info-panel {
           border: 0;
-          border-bottom: 1px solid $crm-background;
-
-          &:last-child {
-            border-bottom: 0;
-          }
         }
 
         table.crm-info-panel td {
