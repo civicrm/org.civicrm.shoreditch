@@ -43,16 +43,16 @@
 
         table.crm-info-panel {
           border: 0;
-        }
 
-        table.crm-info-panel td {
-          color: $crm-copy;
-          vertical-align: middle;
-        }
+          td {
+            color: $crm-copy;
+            vertical-align: middle;
 
-        table.crm-info-panel td.label {
-          color: $gray-darker;
-          font-weight: $crm-font-weight-h1;
+            &.label {
+              color: $gray-darker;
+              font-weight: $crm-font-weight-h1;
+            }
+          }
         }
       }
 
