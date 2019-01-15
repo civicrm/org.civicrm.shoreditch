@@ -29,27 +29,30 @@
           border-radius: 0 0 $panel-border-radius $panel-border-radius !important;
         }
 
-        table.crm-info-panel {
-          border: 0;
-          border-bottom: 1px solid $crm-background;
+        .crm-submit-buttons {
+          padding: 0;
 
-          &:last-child {
-            border-bottom: 0;
+          .crm-hover-button:first-child {
+            padding-left: 0;
+          }
+
+          .crm-i {
+            vertical-align: baseline;
           }
         }
 
-        table.crm-info-panel td {
-          color: $crm-copy;
-          vertical-align: middle;
-        }
+        table.crm-info-panel {
+          border: 0;
 
-        table.crm-info-panel td.label {
-          color: $gray-darker;
-          font-weight: $crm-font-weight-h1;
-        }
+          td {
+            color: $crm-copy;
+            vertical-align: middle;
 
-        table.crm-info-panel td.html-adjust {
-          width: 100%;
+            &.label {
+              color: $gray-darker;
+              font-weight: $crm-font-weight-h1;
+            }
+          }
         }
       }
 
