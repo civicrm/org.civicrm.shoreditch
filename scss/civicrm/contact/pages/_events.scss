@@ -366,7 +366,15 @@
     top: 5px;
   }
 
-  [id*='Food_Preference'] {
+  table#info,
+  .crm-event-participantview-form-block-fee_amount table,
+  table.selector {
+    @include expandable-table;
+    box-shadow: none !important;
+  }
+
+  // custom fields
+  .section-shown {
     padding: 0;
 
     .crm-accordion-wrapper {
@@ -388,13 +396,6 @@
     .html-adjust {
       width: 100%;
     }
-  }
-
-  table#info,
-  .crm-event-participantview-form-block-fee_amount table,
-  table.selector {
-    @include expandable-table;
-    box-shadow: none !important;
   }
 }
 
