@@ -367,9 +367,11 @@
   }
 
   [id*='Food_Preference'] {
+    padding: 0;
+
     .crm-accordion-wrapper {
-      margin-left: -40px;
-      margin-right: -40px;
+      margin-left: 0;
+      margin-right: 0;
 
       .crm-accordion-body {
         padding: 20px 43px !important;
