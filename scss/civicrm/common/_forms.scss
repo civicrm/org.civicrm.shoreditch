@@ -304,7 +304,7 @@ input.error {
 
 .crm-error,
 .crm-inline-error {
-  &:not(.crm-error-label) {
+  &:not(.crm-error-label):not(input):not(textarea):not(select) {
     background: $brand-danger;
     color: $crm-white;
 
