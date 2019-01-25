@@ -191,18 +191,6 @@
 }
 
 .CRM_Member_Form_Membership {
-  input,
-  select,
-  textarea {
-    &.crm-inline-error,
-    &.crm-error,
-    &.error {
-      background: none !important;
-      border: 1px solid $brand-danger;
-      min-height: 30px;
-    }
-  }
-
   select,
   #from_email_address {
     line-height: 1.5em;
