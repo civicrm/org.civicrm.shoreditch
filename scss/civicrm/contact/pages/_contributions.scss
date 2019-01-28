@@ -543,6 +543,10 @@
   .crm-contact-contribute-recur-active {
     margin-bottom: 13px;
   }
+
+  .crm-contact-contribute-recur {
+    @include civicrm-table-with-header;
+  }
 }
 
 .CRM_Contribute_Form_Contribution {
