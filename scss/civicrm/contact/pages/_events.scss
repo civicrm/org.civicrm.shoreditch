@@ -281,6 +281,11 @@
       margin: 0 -20px;
     }
 
+    .crm-accordion-wrapper {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     .td {
       line-height: 18px !important;
     }
@@ -361,10 +366,20 @@
     top: 5px;
   }
 
-  [id*='Food_Preference'] {
+  table#info,
+  .crm-event-participantview-form-block-fee_amount table,
+  table.selector {
+    @include expandable-table;
+    box-shadow: none !important;
+  }
+
+  // custom fields
+  .section-shown {
+    padding: 0;
+
     .crm-accordion-wrapper {
-      margin-left: -40px;
-      margin-right: -40px;
+      margin-left: 0;
+      margin-right: 0;
 
       .crm-accordion-body {
         padding: 20px 43px !important;
@@ -381,13 +396,6 @@
     .html-adjust {
       width: 100%;
     }
-  }
-
-  table#info,
-  .crm-event-participantview-form-block-fee_amount table,
-  table.selector {
-    @include expandable-table;
-    box-shadow: none !important;
   }
 }
 
