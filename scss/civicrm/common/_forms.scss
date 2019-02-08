@@ -297,22 +297,32 @@ input.crm-form-password[readonly] {
   background: $input-bg-disabled;
 }
 
+// Input forms errors
 input.crm-error,
 input.error {
   border-color: $brand-danger;
 }
-
+// alert messages
 .crm-error,
 .crm-inline-error {
+  color: $brand-danger;
+  padding: 0;
+
   &:not(.crm-error-label) {
-    background: $brand-danger;
-    color: $crm-white;
+    background: lighten($brand-danger, 44);
+    color: $brand-danger;
+    display: inline-block;
+    height: $input-height-base;
+    line-height: $input-height-base;
+    padding: 0 10px;
 
     a {
-      color: $crm-white;
+      color: $brand-danger;
     }
   }
 }
+ 
+
 
 .addon.fa-calendar {
   background: $gray-lighter;
