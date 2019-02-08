@@ -286,7 +286,8 @@ input.crm-form-password[readonly] {
 
 
 // Forms Errors Display
-.form-layout {
+.form-layout,
+.form-layout-compressed {
   // inputs 
   input.error,
   input.crm-error,
@@ -308,6 +309,13 @@ input.crm-form-password[readonly] {
     height: $input-height-base;
     line-height: $input-height-base;
     padding: 0 10px;
+  }
+  // descriptions
+  .description {
+    color: $crm-gray-matte;
+    display: inline-block;
+    line-height: 17px;
+    padding: 5px 0;
   }
   
 }
