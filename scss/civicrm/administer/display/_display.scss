@@ -69,7 +69,10 @@
       }
 
       .crm-button {
+        @extend .btn-sm, .btn-secondary;
         border: 0;
+        height: $input-height-base;
+        line-height: 27px;
         padding: 0;
       }
 
@@ -78,8 +81,11 @@
       }
 
       #ckeditor_config {
+        background-color: transparent;
         margin: 0 !important;
+        padding-bottom: 0;
         padding-left: 30px;
+        padding-top: 0;
       }
     }
   }
