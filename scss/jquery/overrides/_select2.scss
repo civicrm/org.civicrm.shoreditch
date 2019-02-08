@@ -64,13 +64,13 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
     }
   }
 
-  // if select is disabled 
+  // select is disabled 
   &.select2-container-disabled {
     .select2-choice {
       background: $input-bg-disabled;
     }
   }
-
+  // select is open
   &.select2-dropdown-open {
     .select2-arrow {
       box-shadow: none;
