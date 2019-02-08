@@ -88,11 +88,17 @@
 
   .menu-div {
     margin-top: 0 !important;
+    position: fixed;
   }
 
   .menu-item {
     font-size: $font-size-base;
-    padding: 6px 80px 6px 24px;
+    padding: 6px 24px;
+    width: 194px;
+
+    input {
+      margin-right: 8px;
+    }
   }
 
   .menu-item-arrow {
@@ -141,6 +147,7 @@
   font-family: $font-family-base;
   left: 0 !important;
   padding: $crm-main-menu-sub-menu-padding;
+  position: fixed;
   top: $crm-main-menu-height !important;
 
   .ui-menu-item {
