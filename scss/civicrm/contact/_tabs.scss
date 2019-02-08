@@ -73,10 +73,14 @@
       }
     }
 
-    a,
-    em {
+    a {
       color: $gray-darker !important;
       cursor: default;
+    }
+
+    em {
+      color: $crm-gray-matte !important;
+      margin-left: 1rem;
     }
   }
 
