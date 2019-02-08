@@ -157,7 +157,22 @@
     top: 0;
     white-space: normal;
     width: 100%;
+    // Standby state
+    i,
+    .crm-i {
+      vertical-align: inherit;
+    }
 
+    a {
+      color: $gray-darker !important;
+    }
+
+    em {
+      color: $crm-gray-matte !important;
+      margin-left: 1rem;
+    }
+
+    // Hover/active state
     &.ui-tabs-active,
     &:hover {
       background: $crm-background;
@@ -167,12 +182,11 @@
       em {
         color: $brand-primary !important;
       }
-    }
 
-    a,
-    em {
-      color: $gray-darker !important;
-      cursor: default;
+      i,
+      .crm-i {
+        color: $brand-primary !important;
+      }
     }
   }
 
