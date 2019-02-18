@@ -7,7 +7,7 @@
     box-shadow: $box-shadow;
     margin-bottom: 20px;
 
-    .dataTables_wrapper {
+    /*.dataTables_wrapper {
       box-shadow: none;
     }
 
@@ -103,7 +103,7 @@
           }
         }
       }
-    }
+    }*/
   }
 
   #memberships table td {
@@ -389,172 +389,6 @@
 .CRM_Member_Form_MembershipView {
   .action-link {
     display: none;
-  }
-
-  .crm-membership-view-form-block {
-    padding: 0 !important;
-
-    .crm-block {
-      padding: 0;
-    }
-  }
-
-  table {
-    background: transparent;
-    border: 0;
-    box-shadow: none !important;
-    font-family: $font-family-base;
-
-    &.crm-info-panel {
-      margin-left: -20px;
-      margin-right: -20px;
-      margin-top: -20px;
-      width: 105%;
-    }
-
-    &.no-border {
-      margin-left: -20px;
-      margin-right: -20px;
-      width: calc(100% + 40px);
-    }
-
-    thead {
-      tr {
-        border: 1px solid $crm-background !important;
-
-        th {
-          background: $gray-lighter !important;
-          border: 0;
-          border-bottom: 0;
-          color: $gray-darker !important;
-          height: 42px;
-          line-height: 1.1em;
-          vertical-align: middle;
-
-          div {
-            padding: 0;
-          }
-        }
-      }
-    }
-
-    tbody {
-      tr {
-        background: $crm-white;
-        border: 1px solid $crm-background !important;
-        border-left: 0;
-        border-right: 0;
-
-        &.crm-child-row {
-          > td {
-            padding: 0;
-
-            .crm-ajax-container {
-              table {
-                margin: 0;
-
-                tbody {
-                  border-top: 1px solid $crm-grayblue-dark !important;
-                }
-
-                th {
-                  background: $gray-lighter !important;
-                  border: 0;
-                  border-bottom: 0;
-                  color: $gray-darker;
-                  vertical-align: middle;
-                }
-              }
-            }
-          }
-        }
-
-        td {
-          background: $crm-white !important;
-          border: 0;
-          line-height: 1.1em;
-          padding: 20px;
-
-          &.label {
-            border-bottom: 0;
-            color: $gray-darker !important;
-            vertical-align: middle;
-
-            div {
-              padding: 0;
-            }
-          }
-
-          &:not(.label) {
-            color: $gray-dark;
-          }
-        }
-
-        td.section-shown {
-          padding: 0 20px;
-        }
-
-        &:last-child {
-          border-bottom: 0;
-        }
-
-        &:first-child {
-          border-top: 0;
-        }
-      }
-    }
-  }
-
-  .crm-accordion-wrapper {
-    padding: 0;
-
-    .crm-accordion-header {
-      background: $crm-background !important;
-    }
-
-    .crm-accordion-body {
-      padding: 0 !important;
-
-      > p {
-        &.description {
-          padding: 0 20px;
-        }
-      }
-
-      tr {
-        th {
-          padding: 10px 20px !important;
-        }
-
-        td.label {
-          background: none !important;
-          padding: 10px 30px !important;
-        }
-      }
-    }
-  }
-
-  .section-shown .crm-info-panel {
-    margin: 0;
-    width: 100%;
-
-    tr td.label {
-      background: $crm-white !important;
-      padding: 10px 30px !important;
-    }
-  }
-
-  #related-contacts-memberships {
-    margin-left: -20px;
-    margin-right: -20px;
-
-    h3 {
-      background: $crm-background;
-    }
-
-    .dataTables_wrapper {
-      margin-bottom: 0;
-    }
   }
 }
 
