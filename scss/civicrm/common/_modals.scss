@@ -44,6 +44,10 @@
         color: $gray-darker !important;
         padding-right: $crm-standard-gap;
       }
+
+      tr:last-of-type td {
+        border: 0 !important;
+      }
     }
   }
 
@@ -74,16 +78,19 @@
     width: calc(100% + #{$crm-standard-gap * 2});
   }
 
+  .crm-form-block {
+    margin-bottom: 0;
+  }
+
   .crm-accordion-header:not(.crm-master-accordion-header)+.crm-accordion-body {
     box-shadow: none;
-    padding: 0 !important;
+    padding: 20px 0 !important;
 
     td {
       padding-left: $crm-standard-gap;
     }
 
-    .form-layout-compressed,
-    table.selector {
+    .form-layout-compressed {
       margin-top: $crm-standard-gap;
     }
   }
