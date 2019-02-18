@@ -37,6 +37,7 @@
         background-color: transparent !important;
         border-bottom: 1px solid $crm-background !important;
         color: $gray-darker !important;
+        padding-right: $crm-standard-gap;
       }
     }
   }
@@ -62,10 +63,6 @@
   .form-item,
   .crm-accordion-wrapper {
     padding: 0;
-  }
-
-  .crm-accordion-body {
-    padding: 0 !important;
   }
 
   .crm-info-panel {
