@@ -21,6 +21,11 @@
 
 .ui-dialog-content {
   table {
+    // @NOTE This selector is used for nested accordions
+    td[colspan='2'] {
+      padding: 0;
+    }
+
     &.no-border {
       margin: 0;
       width: 100%;
