@@ -6,104 +6,6 @@
     border-radius: $panel-border-radius;
     box-shadow: $box-shadow;
     margin-bottom: 20px;
-
-    /*.dataTables_wrapper {
-      box-shadow: none;
-    }
-
-    table {
-      background: transparent;
-      border: 0;
-      border-radius: 0 0 $panel-border-radius $panel-border-radius;
-      font-family: $font-family-base;
-
-      thead tr {
-        border-bottom: 1px solid $crm-grayblue-dark;
-
-        th {
-          background: $gray-lighter;
-          border: 0;
-          color: $gray-darker;
-          line-height: 1.5em;
-          padding: 15px 20px;
-          vertical-align: middle;
-
-          div {
-            padding: 0;
-          }
-        }
-      }
-
-      tbody tr {
-        background: transparent;
-        border-left: 0;
-        border-right: 0;
-        border-top: 1px solid $crm-background;
-
-        td {
-          background: $crm-white;
-          border: 0;
-          color: $gray-dark;
-          line-height: 1.5em;
-          padding: 15px 20px;
-          vertical-align: middle;
-
-          &:last-child {
-            padding-left: 10px;
-            text-align: right;
-            width: 84px;
-
-            span {
-              display: inline-block;
-            }
-          }
-
-          .btn-slide {
-            padding-right: 0 !important;
-            text-indent: -9999px;
-            width: 7px;
-
-            &::after,
-            .panel {
-              text-indent: 0;
-            }
-          }
-
-          a,
-          span.btn-slide {
-            color: $brand-primary !important;
-            text-transform: none;
-
-            &:hover {
-              background: none;
-            }
-
-            a {
-              color: $crm-copy !important;
-
-              &:hover {
-                background: none;
-              }
-            }
-          }
-        }
-
-        &:last-child {
-          border-bottom-left-radius: $border-radius-base;
-          border-bottom-right-radius: $border-radius-base;
-
-          td {
-            &:first-child {
-              border-bottom-left-radius: $border-radius-base;
-            }
-
-            &:last-child {
-              border-bottom-right-radius: $border-radius-base;
-            }
-          }
-        }
-      }
-    }*/
   }
 
   #memberships table td {
@@ -573,7 +475,7 @@
       td .dateplugin {
         display: inline-block;
         font-weight: normal;
-        max-width: 150px;
+        max-width: $crm-table-label-column-width;
       }
     }
   }
