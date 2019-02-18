@@ -18,3 +18,74 @@
     }
   }
 }
+
+.ui-dialog-content {
+  table {
+    &.no-border {
+      margin: 0;
+      width: 100%;
+    }
+
+    &.crm-info-panel {
+      background: transparent;
+      border: 0;
+      box-shadow: none !important;
+      font-family: $font-family-base;
+
+      th,
+      td {
+        background-color: transparent !important;
+        border-bottom: 1px solid $crm-background !important;
+        color: $gray-darker !important;
+      }
+    }
+  }
+
+  thead.sticky {
+    border-bottom: 1px solid $crm-background !important;
+  }
+
+  td.label {
+    padding-left: $crm-standard-gap;
+  }
+
+  .crm-accordion-header,
+  .crm-info-panel,
+  .dataTables_wrapper {
+    margin: 0 -#{$crm-standard-gap};
+  }
+
+  .crm-accordion-wrapper {
+    margin: 0 !important;
+  }
+
+  .form-item,
+  .crm-accordion-wrapper {
+    padding: 0;
+  }
+
+  .crm-accordion-body {
+    padding: 0 !important;
+  }
+
+  .crm-info-panel {
+    width: calc(100% + #{$crm-standard-gap * 2});
+  }
+
+  .crm-accordion-header:not(.crm-master-accordion-header)+.crm-accordion-body {
+    box-shadow: none;
+    padding: 0 !important;
+
+    td {
+      padding-left: $crm-standard-gap;
+    }
+  }
+
+  .dataTables_length {
+    padding: $crm-standard-gap;
+  }
+
+  .dataTables_wrapper {
+    box-shadow: none;
+  }
+}
