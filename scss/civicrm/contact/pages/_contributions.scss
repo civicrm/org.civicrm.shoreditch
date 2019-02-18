@@ -105,7 +105,7 @@
 
     .dateplugin {
       margin-bottom: 5px;
-      max-width: 150px;
+      max-width: $crm-table-label-column-width;
     }
 
     .addon.fa-calendar {
@@ -360,7 +360,7 @@
 
     .pay-later_info-section {
       .label {
-        width: 150px;
+        width: $crm-table-label-column-width;
       }
 
       .content {
