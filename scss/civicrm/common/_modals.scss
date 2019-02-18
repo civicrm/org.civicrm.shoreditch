@@ -77,7 +77,8 @@
       padding-left: $crm-standard-gap;
     }
 
-    .form-layout-compressed {
+    .form-layout-compressed,
+    table.selector {
       margin-top: $crm-standard-gap;
     }
   }
