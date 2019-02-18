@@ -99,6 +99,14 @@
     padding: $crm-standard-gap;
   }
 
+  .crm-accordion-body {
+    .dataTables_wrapper:first-child {
+      .dataTables_length {
+        padding-top: 0;
+      }
+    }
+  }
+
   .dataTables_wrapper {
     box-shadow: none;
   }
