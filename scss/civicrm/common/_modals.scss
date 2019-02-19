@@ -26,8 +26,11 @@
 
   table {
     // @NOTE This selector is used for nested accordions
-    td[colspan='2'] {
-      padding: 0;
+    &.form-layout,
+    &.form-layout-compressed {
+      > tbody > tr > td[colspan='2'] {
+        padding: 0;
+      }
     }
 
     &.no-border {
