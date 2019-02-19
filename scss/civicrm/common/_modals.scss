@@ -20,6 +20,10 @@
 }
 
 .ui-dialog-content {
+  .messages.no-popup {
+    margin-bottom: $crm-standard-gap;
+  }
+
   table {
     // @NOTE This selector is used for nested accordions
     td[colspan='2'] {
