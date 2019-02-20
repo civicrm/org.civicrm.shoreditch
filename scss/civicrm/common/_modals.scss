@@ -112,6 +112,35 @@
         padding-top: 0;
       }
     }
+
+    > table,
+    > div > table {
+      margin: 0 -#{$crm-standard-gap};
+      width: calc(100% + #{$crm-standard-gap * 2});
+
+      th,
+      td {
+        line-height: 1.5em;
+      }
+
+      th {
+        background: $gray-lighter;
+        border: 0;
+        color: $gray-darker;
+        padding: 15px $crm-standard-gap;
+        vertical-align: middle;
+
+        div {
+          padding: 0;
+        }
+      }
+
+      &:not(.crm-info-panel) {
+        td {
+          padding: $crm-standard-gap;
+        }
+      }
+    }
   }
 
   .dataTables_wrapper {
