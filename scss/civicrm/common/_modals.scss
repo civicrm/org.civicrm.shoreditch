@@ -135,7 +135,7 @@
         }
       }
 
-      &:not(.crm-info-panel) {
+      &:not(.crm-info-panel):not(.form-layout-compressed):not(.form-layout) {
         td {
           padding: $crm-standard-gap;
         }
