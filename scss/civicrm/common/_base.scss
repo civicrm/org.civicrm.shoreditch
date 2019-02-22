@@ -11,10 +11,13 @@
         margin-top: $crm-main-menu-height !important;
       }
 
+      // These rules are needed to fix the visual issue produced by Adminimal Menu module: it removes body top-margin but adds `body::before{height: 29px;...}`.
+      // That causes Civicrm menu overlap the header which looks badly.
+      // @see /sites/all/modules/contrib/adminimal_admin_menu/adminimal_admin_menu.css line 95.
       &.admin-menu.adminimal-menu {
         margin-top: $crm-main-menu-height !important;
 
-        &::after {
+        &::before {
           content: none;
         }
       }
