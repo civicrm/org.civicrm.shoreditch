@@ -136,7 +136,7 @@ function shoreditch_civicrm_coreResourceList(&$items, $region) {
 /**
  * Implements hook_civicrm_buildForm().
  */
-function shoreditch_civicrm_buildForm($formName) {
+function shoreditch_civicrm_buildForm($formName, $form) {
   if ($formName == 'CRM_Contact_Form_Search_Advanced') {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/highlight-table-rows.js');
   }
@@ -147,6 +147,8 @@ function shoreditch_civicrm_buildForm($formName) {
       ->addScriptFile('org.civicrm.shoreditch', 'js/urlSettingsForm.js')
       ->addVars('shoreditch', array('cssUrl' => $cssUrl));
   }
+
+  _add_shoreditch_page_styles($form->urlPath);
 }
 
 /**
@@ -157,5 +159,48 @@ function shoreditch_civicrm_pageRun(&$page) {
 
   if ($pageName == 'CRM_Contact_Page_View_Summary') {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/contact-summary.js');
+  }
+
+  _add_shoreditch_page_styles($page->urlPath);
+}
+
+/**
+ * @return bool
+ */
+function _shoreditch_is_custom_css_enabled() {
+  $cssUrl = (string) Civi::settings()->get('customCSSURL');
+  return (bool) strpos($cssUrl, 'shoreditch/css/custom-civicrm.css');
+}
+
+/**
+ * Adds css files that match the current url path.
+ *
+ * E.g. if we are on the page civicrm/contact/view
+ * This function will search for and load the following css files if they exist.
+ *   css/civicrm.css
+ *   css/civicrm/contact.css
+ *   css/civicrm/contact/view.css
+ *
+ * @param array $path
+ */
+function _add_shoreditch_page_styles($path) {
+  // Sometimes the dashboard path is just "civicrm"
+  if (count($path) < 2) {
+    $path = ['civicrm', 'dashboard'];
+  }
+  // Only add page styles if we are in full override mode and this is not an ajax callback
+  if (!in_array($path[1], ['ajax', 'angular']) && _shoreditch_is_custom_css_enabled()) {
+    $base = CRM_Utils_File::addTrailingSlash(__DIR__);
+    $dir = 'css';
+
+    foreach ($path as $piece) {
+      if (!is_dir($base . $dir)) {
+        break;
+      }
+      if (file_exists($base . $dir . "/{$piece}.css")) {
+        Civi::resources()->addStyleFile('org.civicrm.shoreditch', $dir . "/{$piece}.css");
+      }
+      $dir .= '/' . $piece;
+    }
   }
 }
