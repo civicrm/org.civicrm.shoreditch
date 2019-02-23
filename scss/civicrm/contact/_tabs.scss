@@ -163,16 +163,36 @@
       background: $crm-background;
       border: 0;
 
-      a,
-      em {
+      a {
         color: $brand-primary !important;
       }
     }
 
-    a,
-    em {
+    a {
       color: $gray-darker !important;
       cursor: default;
+    }
+
+    em {
+      background: $brand-primary;
+      border-radius: 10px;
+      color: $crm-white !important;
+      display: inline-block;
+      float: right;
+      margin-left: 5px;
+      min-width: 10px;
+      padding: 0 5px;
+      text-align: center;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    &.crm-count-0 {
+      em {
+        background: $crm-gray-matte;
+      }
     }
   }
 
