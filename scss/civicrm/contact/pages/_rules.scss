@@ -82,6 +82,14 @@
       width: 20px;
     }
   }
+
+  // "CiviRules Edit Condition parameters" pages
+  &.page-civicrm-civirule-form-condition-datachangedcomparison,
+  &.page-civicrm-civirule-form-condition-datacomparison {
+    .crm-form-block {
+      @include block-form();
+    }
+  }
 }
 
 // "Find CiviRules Rules" page
