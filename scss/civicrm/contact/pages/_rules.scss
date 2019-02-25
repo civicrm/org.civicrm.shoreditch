@@ -2,11 +2,56 @@
 
 .page-civicrm-civirule {
 
-  // "CiviRules Add Rule" page
+  // "CiviRules Add Rule" and "CiviRules Update Rule" pages
   .CRM_Civirules_Form_Rule {
     .crm-civirule-rule_label-block,
     .crm-civirule-trigger-block {
       @include block-form();
+    }
+
+    // "CiviRules Update Rule" page
+    .crm-civirule-trigger-block,
+    .crm-civirule-rule_condition-block,
+    .crm-civirule-rule_action-block {
+      > .crm-section {
+        margin-bottom: 0;
+      }
+
+      .dataTables_wrapper {
+        box-shadow: none;
+        margin-bottom: 0;
+
+        th,
+        td {
+          border-bottom: solid 1px $gray-light;
+          color: $crm-black;
+          padding-left: $crm-standard-gap;
+          padding-right: $crm-standard-gap;
+        }
+
+        tr {
+          background-color: transparent !important;
+        }
+      }
+
+      // Table above will always have rows with bottom borders,
+      // so we remove the top border to eliminate the border duplication.
+      .crm-submit-buttons {
+        border-top: 0;
+      }
+    }
+
+    // Only one trigger can be specified, thus, flush table styling
+    #civirule-triggerBlock-table {
+      tr {
+        background-color: transparent !important;
+      }
+
+      td {
+        border-bottom: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
     }
   }
 }
