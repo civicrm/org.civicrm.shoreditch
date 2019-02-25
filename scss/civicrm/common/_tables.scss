@@ -183,4 +183,23 @@ table {
       }
     }
   }
+
+  table.selector {
+    background-color: $crm-white;
+
+    thead tr,
+    tbody tr:not(:last-of-type) {
+      border-bottom: solid 1px $gray-light !important;
+    }
+
+    td,
+    th {
+      border: 0 !important;
+      padding-left: $crm-standard-gap !important;
+
+      &:last-of-type {
+        padding-right: $crm-standard-gap !important;
+      }
+    }
+  }
 }

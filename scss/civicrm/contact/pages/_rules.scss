@@ -45,7 +45,7 @@
   }
 
   // "CiviRules Add Condition", "CiviRules Add Action" and
-  // "CiviRules Edit Action parameters" pages
+  // "CiviRules Edit Action Parameters" pages
   &.page-civicrm-civirule-form-rule-condition,
   &.page-civicrm-civirule-form-rule-action,
   &.page-civicrm-civirule-form-action {
@@ -73,4 +73,19 @@
       width: 20px;
     }
   }
+}
+
+// "Find CiviRules Rules" page
+// This is the only reliable selector for this page because it is built as a
+// Custom Search page and it does not contain any Rules extension specific classes
+#civirule_helptext_dialog-block + .crm-form-block {
+  @include block-form();
+  padding-bottom: 0 !important;
+
+  padding-top: 0 !important;
+}
+
+// Help icon in "Description" column on "Find CiviRules Rules" results page
+#civirule_help_text_icon {
+  margin-left: $crm-standard-gap / 4;
 }

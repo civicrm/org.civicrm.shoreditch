@@ -26,4 +26,12 @@
       margin-bottom: 0;
     }
   }
+
+  .form-layout {
+    margin-top: $crm-standard-gap;
+
+    tr td:first-of-type {
+      padding-left: $crm-standard-gap;
+    }
+  }
 }
