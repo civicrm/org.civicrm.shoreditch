@@ -44,11 +44,21 @@
     }
   }
 
-  // "CiviRules Add Condition" and "CiviRules Add Action" pages
+  // "CiviRules Add Condition", "CiviRules Add Action" and
+  // "CiviRules Edit Action parameters" pages
   &.page-civicrm-civirule-form-rule-condition,
-  &.page-civicrm-civirule-form-rule-action {
+  &.page-civicrm-civirule-form-rule-action,
+  &.page-civicrm-civirule-form-action {
     .crm-form-block {
       @include block-form();
+    }
+  }
+
+  &.page-civicrm-civirule-form-action {
+    // There is a switch between `.groups-single` and `.groups-multiple`
+    // and `.groups-single` is not a last child, but doesn't need that margin
+    .groups-single {
+      margin-bottom: 0;
     }
   }
 
