@@ -187,7 +187,10 @@ table {
   table.selector {
     background-color: $crm-white;
 
-    thead tr,
+    thead th {
+      background-color: $gray-light !important;
+    }
+
     tbody tr:not(:last-of-type) {
       border-bottom: solid 1px $gray-light !important;
     }
