@@ -1,11 +1,9 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 .page-civicrm-civirule {
-
   // "CiviRules Add Rule" and "CiviRules Update Rule" pages
   .CRM_Civirules_Form_Rule {
-    .crm-civirule-rule_label-block,
-    .crm-civirule-trigger-block {
+    .crm-civirule-rule_label-block {
       @include block-form();
     }
 
@@ -42,19 +40,6 @@
       // so we remove the top border to eliminate the border duplication.
       .crm-submit-buttons {
         border-top: 0;
-      }
-    }
-
-    // Only one trigger can be specified, thus, flush table styling
-    #civirule-triggerBlock-table {
-      tr {
-        background-color: transparent !important;
-      }
-
-      td {
-        border-bottom: 0;
-        padding-bottom: 0;
-        padding-top: 0;
       }
     }
   }
