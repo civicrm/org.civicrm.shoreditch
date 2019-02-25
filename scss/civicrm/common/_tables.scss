@@ -198,7 +198,10 @@ table {
     td,
     th {
       border: 0 !important;
+      line-height: 1.5em !important;
+      padding-bottom: #{$crm-standard-gap / 4 * 3} !important;
       padding-left: $crm-standard-gap !important;
+      padding-top: #{$crm-standard-gap / 4 * 3} !important;
 
       &:last-of-type {
         padding-right: $crm-standard-gap !important;
