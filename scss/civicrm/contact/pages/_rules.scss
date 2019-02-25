@@ -2,7 +2,7 @@
 
 .page-civicrm-civirule {
   // "CiviRules Add Rule" and "CiviRules Update Rule" pages
-  .CRM_Civirules_Form_Rule {
+  &.page-civicrm-civirule-form-rule {
     .crm-civirule-rule_label-block {
       @include block-form();
     }
@@ -44,9 +44,10 @@
     }
   }
 
-  // "CiviRules Add Condition" page
-  &.page-civicrm-civirule-form-rule-condition {
-    .crm-civirule-rule_condition-block {
+  // "CiviRules Add Condition" and "CiviRules Add Action" pages
+  &.page-civicrm-civirule-form-rule-condition,
+  &.page-civicrm-civirule-form-rule-action {
+    .crm-form-block {
       @include block-form();
     }
   }
