@@ -43,4 +43,11 @@
       }
     }
   }
+
+  // "CiviRules Add Condition" page
+  &.page-civicrm-civirule-form-rule-condition {
+    .crm-civirule-rule_condition-block {
+      @include block-form();
+    }
+  }
 }
