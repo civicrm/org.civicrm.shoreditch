@@ -43,6 +43,14 @@
         border-top: 0;
       }
     }
+
+    // Fix for the "Linked Trigger" container - it appears on both
+    // "CiviRules Add Rule" and "CiviRules Update Rule" pages,
+    // but on the "CiviRules Update Rule" it should not have vertical gaps
+    #civirule-triggerBlock-table {
+      margin-bottom: -#{$crm-standard-gap};
+      margin-top: -#{$crm-standard-gap};
+    }
   }
 
   // "CiviRules Add Condition", "CiviRules Add Action" and
@@ -81,8 +89,8 @@
 // Custom Search page and it does not contain any Rules extension specific classes
 #civirule_helptext_dialog-block + .crm-form-block {
   @include block-form();
-  padding-bottom: 0 !important;
 
+  padding-bottom: 0 !important;
   padding-top: 0 !important;
 }
 
