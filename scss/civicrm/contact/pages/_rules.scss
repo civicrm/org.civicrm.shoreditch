@@ -26,7 +26,11 @@
           border-bottom: solid 1px $gray-light;
           color: $crm-black;
           padding-left: $crm-standard-gap;
-          padding-right: $crm-standard-gap;
+          padding-right: 0;
+
+          &:last-of-type {
+            padding-right: $crm-standard-gap;
+          }
         }
 
         tr {
