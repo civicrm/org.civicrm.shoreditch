@@ -51,4 +51,16 @@
       @include block-form();
     }
   }
+
+  // "CiviRules Add Action" page
+  &.page-civicrm-civirule-form-rule-action {
+    #XWeekDay_time_hour {
+      text-align: right;
+    }
+
+    #XWeekDay_time_hour,
+    #XWeekDay_time_minute {
+      width: 20px;
+    }
+  }
 }

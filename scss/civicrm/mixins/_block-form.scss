@@ -14,8 +14,12 @@
     padding-right: $crm-standard-gap;
   }
 
-  .crm-section {
-    // This rule is taken from the vanilla CiviCRM
+  .crm-section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .clear {
+    // This value is taken from the vanilla CiviCRM
     margin-bottom: 1em;
 
     &:last-of-type {
