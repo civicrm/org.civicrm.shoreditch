@@ -1,0 +1,12 @@
+/**
+ * Styles block forms. Adds paddings to the form and labels.
+ */
+@mixin block-form() {
+  padding-bottom: $crm-standard-gap;
+  padding-top: $crm-standard-gap;
+
+  .label,
+  .content {
+    padding-left: $crm-standard-gap;
+  }
+}

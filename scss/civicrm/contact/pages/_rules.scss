@@ -1,0 +1,12 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.page-civicrm-civirule {
+
+  // "CiviRules Add Rule" page
+  .CRM_Civirules_Form_Rule {
+    .crm-civirule-rule_label-block,
+    .crm-civirule-trigger-block {
+      @include block-form();
+    }
+  }
+}
