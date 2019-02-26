@@ -5,7 +5,8 @@
     margin-top: $crm-standard-gap;
   }
 
-  .dc-chart:not(#datacount) {
+  div.dc-chart:not(#datacount),
+  [class^='col-md-'][id] {
     background-color: $crm-white;
     border-radius: $border-radius-child;
     margin-bottom: #{$crm-standard-gap / 2};
@@ -24,5 +25,9 @@
     .pie-slice {
       fill: $crm-black;
     }
+  }
+
+  .hidden {
+    display: none;
   }
 }
