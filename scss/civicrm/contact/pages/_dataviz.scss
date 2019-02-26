@@ -20,7 +20,7 @@
       color: $crm-white;
       display: block;
       font-size: $font-size-medium;
-      line-height: auto;
+      line-height: 1em;
       padding: #{$crm-standard-gap / 2} $crm-standard-gap;
     }
 
@@ -30,7 +30,6 @@
     }
 
     h3 + .dc-chart {
-      display: inline-block;
       margin: $crm-standard-gap / 2;
     }
   }
@@ -64,5 +63,17 @@
   .hidden,
   .hide {
     display: none;
+  }
+
+  // Fixes clipping on Events charts
+  #events,
+  #participants {
+    svg {
+      height: 210px;
+
+      > g {
+        transform: translateY(10px);
+      }
+    }
   }
 }
