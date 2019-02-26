@@ -1,0 +1,27 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.page-civicrm-dataviz {
+  #datacount {
+    margin-top: $crm-standard-gap;
+  }
+
+  .dc-chart:not(#datacount) {
+    background-color: $crm-white;
+    border-radius: $border-radius-child;
+    margin-bottom: #{$crm-standard-gap / 2};
+    margin-right: #{$crm-standard-gap / 2};
+    overflow: hidden;
+    text-align: center;
+
+    > strong:first-of-type {
+      background-color: $gray-dark;
+      color: $crm-white;
+      display: block;
+      padding: #{$crm-standard-gap / 2} $crm-standard-gap;
+    }
+
+    g.row text {
+      fill: $crm-black;
+    }
+  }
+}
