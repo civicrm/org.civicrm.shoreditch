@@ -100,6 +100,10 @@
 
   padding-bottom: 0 !important;
   padding-top: 0 !important;
+
+  + fieldset table.selector {
+    @include table-selector();
+  }
 }
 
 // Help icon in "Description" column on "Find CiviRules Rules" results page
