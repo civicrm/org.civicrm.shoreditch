@@ -19,6 +19,8 @@
       background-color: $gray-dark;
       color: $crm-white;
       display: block;
+      font-size: $font-size-medium;
+      line-height: auto;
       padding: #{$crm-standard-gap / 2} $crm-standard-gap;
     }
 
