@@ -20,7 +20,8 @@
       padding: #{$crm-standard-gap / 2} $crm-standard-gap;
     }
 
-    g.row text {
+    g.row text,
+    .pie-slice {
       fill: $crm-black;
     }
   }
