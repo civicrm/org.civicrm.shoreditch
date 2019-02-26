@@ -1,5 +1,10 @@
 /**
- * Styles block forms. Adds paddings to the form and labels.
+ * This mixin styles a `.form-layout` div inside `.crm-accordion-body`
+ *
+ * @SEE CiviCRM -> Administer -> CiviRules -> Find Rules
+ * @NOTE this mixin may *not* be needed to be moved to global styling
+ * because it really matters what is inside an accordion body
+ * (extra content, different kind of forms, buttons etc.)
  */
 @mixin block-form() {
   padding-bottom: $crm-standard-gap !important;
