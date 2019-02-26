@@ -14,7 +14,8 @@
     overflow: hidden;
     text-align: center;
 
-    > strong:first-of-type {
+    > strong:first-of-type,
+    h3 {
       background-color: $gray-dark;
       color: $crm-white;
       display: block;
@@ -24,6 +25,11 @@
     g.row text,
     .pie-slice {
       fill: $crm-black;
+    }
+
+    h3 + .dc-chart {
+      display: inline-block;
+      margin: $crm-standard-gap / 2;
     }
   }
 
@@ -47,9 +53,14 @@
     tbody tr {
       border-bottom: solid 1px $gray-light;
     }
+
+    .header-fixed {
+      position: relative;
+    }
   }
 
-  .hidden {
+  .hidden,
+  .hide {
     display: none;
   }
 }
