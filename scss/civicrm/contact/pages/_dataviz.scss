@@ -27,6 +27,28 @@
     }
   }
 
+  table.dc-chart {
+    background-color: $crm-white;
+    border-collapse: collapse;
+    border-radius: $border-radius-child;
+    overflow: hidden;
+
+    th,
+    td {
+      border: 0;
+      padding: #{$crm-standard-gap / 2} $crm-standard-gap;
+    }
+
+    thead th {
+      background-color: $gray-dark;
+      color: $crm-white;
+    }
+
+    tbody tr {
+      border-bottom: solid 1px $gray-light;
+    }
+  }
+
   .hidden {
     display: none;
   }
