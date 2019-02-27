@@ -25,12 +25,10 @@ $pivot-report-border: solid 1px $gray-light;
   margin-top: $crm-standard-gap;
   padding: #{$crm-standard-gap / 2};
 
-  .pivot-report-loading-title {
-    margin-top: #{$crm-standard-gap / 2};
-  }
-
   .progress {
+    box-shadow: none;
     margin-bottom: 0;
+    margin-top: #{$crm-standard-gap / 2};
   }
 }
 
