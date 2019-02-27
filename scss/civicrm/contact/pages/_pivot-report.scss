@@ -1,0 +1,22 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
+#pivot-report-config {
+  background-color: $crm-white;
+  border-radius: $border-radius-child;
+  padding: $crm-standard-gap;
+
+  .report-config-save-new-btn {
+    // Aligns the top of the button with the top of the selector
+    margin-bottom: -14px;
+  }
+
+  // This row needs a bit of space to breathe
+  .pivot-report-output-config {
+    margin-top: #{$crm-standard-gap / 2};
+  }
+
+  .pivot-report-export-button {
+    // Makes the gap exactly 20px between buttons and bottom edge
+    margin-top: -#{$crm-standard-gap / 2};
+  }
+}
