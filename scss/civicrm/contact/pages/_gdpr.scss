@@ -1,0 +1,14 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.page-civicrm-gdpr-settings {
+  .crm-gdpr-settings-form-block {
+    @include block-form();
+
+    #help,
+    .help {
+      margin-left: $crm-standard-gap;
+      margin-right: $crm-standard-gap;
+    }
+  }
+
+}
