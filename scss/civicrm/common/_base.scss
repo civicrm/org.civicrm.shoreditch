@@ -302,7 +302,12 @@ a.sorting_desc {
   &::after {
     position: absolute;
     right: 0;
-    top: 3px;
+  }
+
+  &:not(.sorting) {
+    &::after {
+      top: 3px;
+    }
   }
 }
 

@@ -1,0 +1,36 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+/**
+ * This mixin styles the <table> with `selector` class.
+ * This table is usually used by Civi to show results of a search.
+ *
+ * @SEE CiviCRM -> Administer -> CiviRules -> Find Rules
+ * (make sure you add a rule beforehand so it appears in the results table)
+ *
+ * @TODO Instead of having a mixin, apply the style globally to <table>.selector
+ */
+
+@mixin table-selector() {
+  background-color: $crm-white;
+
+  thead th {
+    background-color: $gray-light !important;
+  }
+
+  tbody tr:not(:last-of-type) {
+    border-bottom: solid 1px $gray-light !important;
+  }
+
+  td,
+  th {
+    border: 0 !important;
+    line-height: 1.5em !important;
+    padding-bottom: #{$crm-standard-gap / 4 * 3} !important;
+    padding-left: $crm-standard-gap !important;
+    padding-top: #{$crm-standard-gap / 4 * 3} !important;
+
+    &:last-of-type {
+      padding-right: $crm-standard-gap !important;
+    }
+  }
+}

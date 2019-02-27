@@ -1,0 +1,42 @@
+/**
+ * This mixin styles a `.form-layout` div inside `.crm-accordion-body`
+ *
+ * @SEE CiviCRM -> Administer -> CiviRules -> Find Rules
+ * @NOTE this mixin may *not* be needed to be moved to global styling
+ * because it really matters what is inside an accordion body
+ * (extra content, different kind of forms, buttons etc.)
+ */
+@mixin block-form() {
+  padding-bottom: $crm-standard-gap !important;
+  padding-top: $crm-standard-gap !important;
+
+  .label,
+  .content {
+    padding-left: $crm-standard-gap;
+  }
+
+  .content {
+    padding-right: $crm-standard-gap;
+  }
+
+  .crm-section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .clear {
+    // This value is taken from the vanilla CiviCRM
+    margin-bottom: 1em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-layout {
+    margin-top: $crm-standard-gap;
+
+    tr td:first-of-type {
+      padding-left: $crm-standard-gap;
+    }
+  }
+}
