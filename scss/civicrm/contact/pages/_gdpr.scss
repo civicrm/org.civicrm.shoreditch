@@ -26,3 +26,8 @@
     }
   }
 }
+
+// @TODO This selector is definitely not stable, find a better way.
+table.selector#SummaryTable {
+  @include table-selector();
+}
