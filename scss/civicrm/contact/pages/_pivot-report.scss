@@ -1,11 +1,12 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 $pivot-report-border: solid 1px $gray-light;
+$crm-standard-half-gap: $crm-standard-gap / 2;
 
 #pivot-report-config {
   background-color: $crm-white;
   border-radius: $border-radius-child;
-  padding: #{$crm-standard-gap / 2};
+  padding: $crm-standard-half-gap;
 
   .report-config-save-new-btn {
     // Aligns the top of the button with the top of the selector
@@ -13,9 +14,9 @@ $pivot-report-border: solid 1px $gray-light;
   }
 
   .pivot-report-export-button {
-    margin-left: #{$crm-standard-gap / 2};
+    margin-left: $crm-standard-half-gap;
     // Makes the gap exactly 20px between buttons and bottom edge
-    margin-top: -#{$crm-standard-gap / 2};
+    margin-top: -$crm-standard-half-gap;
   }
 }
 
@@ -23,12 +24,12 @@ $pivot-report-border: solid 1px $gray-light;
   background-color: $crm-white;
   border-radius: $border-radius-child;
   margin-top: $crm-standard-gap;
-  padding: #{$crm-standard-gap / 2};
+  padding: $crm-standard-half-gap;
 
   .progress {
     box-shadow: none;
     margin-bottom: 0;
-    margin-top: #{$crm-standard-gap / 2};
+    margin-top: $crm-standard-half-gap;
   }
 }
 
