@@ -67,6 +67,12 @@ $crm-standard-half-gap: $crm-standard-gap / 2;
       &.ui-sortable-helper {
         box-shadow: $box-shadow;
       }
+
+      &.pvtPlaceholder {
+        background-color: transparent;
+        border: dashed 1px $crm-gray-matte;
+        height: $font-size-medium + $crm-standard-gap;
+      }
     }
 
     &.pvtUnused {
@@ -104,5 +110,4 @@ $crm-standard-half-gap: $crm-standard-gap / 2;
       border: $pivot-report-border;
     }
   }
-
 }
