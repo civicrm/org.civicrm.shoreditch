@@ -10,5 +10,19 @@
       margin-right: $crm-standard-gap;
     }
   }
+}
 
+.page-civicrm-gdpr-dashboard {
+  .crm-gdpr-dashboard-search-form-block {
+    @include block-form();
+
+    padding-left: $crm-standard-gap !important;
+    padding-right: $crm-standard-gap !important;
+  }
+
+  .crm-gdpr-dashboard-activities-list-form-block {
+    table.selector {
+      @include table-selector();
+    }
+  }
 }
