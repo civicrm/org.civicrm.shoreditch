@@ -8,9 +8,15 @@ $crm-standard-half-gap: $crm-standard-gap / 2;
   border-radius: $border-radius-child;
   padding: $crm-standard-half-gap;
 
-  .report-config-save-new-btn {
+  .report-config-save-new-btn,
+  .report-config-save-btn,
+  .report-config-delete-btn {
     // Aligns the top of the button with the top of the selector
     margin-bottom: -14px;
+  }
+
+  .report-config-save-btn {
+    margin-left: $crm-standard-half-gap;
   }
 
   .pivot-report-export-button {
