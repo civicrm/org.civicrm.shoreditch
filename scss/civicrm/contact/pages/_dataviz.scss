@@ -9,6 +9,7 @@
   [class^='col-md-'][id] {
     background-color: $crm-white;
     border-radius: $border-radius-child;
+    float: left;
     margin-bottom: #{$crm-standard-gap / 2};
     margin-right: #{$crm-standard-gap / 2};
     overflow: hidden;
