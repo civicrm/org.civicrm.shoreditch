@@ -1,0 +1,118 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
+$pivot-report-border: solid 1px $gray-light;
+$crm-standard-half-gap: $crm-standard-gap / 2;
+
+#pivot-report-config {
+  background-color: $crm-white;
+  border-radius: $border-radius-child;
+  padding: $crm-standard-half-gap;
+
+  .report-config-save-new-btn,
+  .report-config-save-btn,
+  .report-config-delete-btn {
+    // Aligns the top of the button with the top of the selector
+    margin-bottom: -14px;
+  }
+
+  .report-config-save-btn {
+    margin-left: $crm-standard-half-gap;
+  }
+
+  .pivot-report-export-button {
+    margin-left: $crm-standard-half-gap;
+    // Makes the gap exactly 20px between buttons and bottom edge
+    margin-top: -$crm-standard-half-gap;
+  }
+}
+
+#pivot-report-preloader {
+  background-color: $crm-white;
+  border-radius: $border-radius-child;
+  margin-top: $crm-standard-gap;
+  padding: $crm-standard-half-gap;
+
+  .progress {
+    box-shadow: none;
+    margin-bottom: 0;
+    margin-top: $crm-standard-half-gap;
+  }
+}
+
+#pivot-report-table {
+  border: 0;
+  margin-top: $crm-standard-gap;
+
+  .pvtUi {
+    border: 0;
+  }
+
+  .pvtAxisContainer,
+  .pvtVals,
+  .pvtRendererArea {
+    background-color: $crm-white;
+    border: 0;
+  }
+
+  .pvtAxisContainer {
+    > li {
+      background-color: $gray-lighter;
+      border: $pivot-report-border;
+      border: 0;
+      margin-bottom: $padding-base-vertical;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: $gray-light;
+      }
+
+      &.ui-sortable-helper {
+        box-shadow: $box-shadow;
+      }
+
+      &.pvtPlaceholder {
+        background-color: transparent;
+        border: dashed 1px $crm-gray-matte;
+        height: $font-size-medium + $crm-standard-gap;
+      }
+    }
+
+    &.pvtUnused {
+      border-radius: 4px;
+    }
+
+    &.pvtRows {
+      border-radius: 0 0 0 4px;
+      border-right: $pivot-report-border;
+    }
+  }
+
+  .pvtVals {
+    border-bottom: $pivot-report-border;
+    border-radius: 4px 0 0;
+    border-right: $pivot-report-border;
+  }
+
+  .pvtHorizList {
+    border-bottom: $pivot-report-border;
+    border-radius: 0 4px 0 0;
+  }
+
+  .pvtRendererArea {
+    border-radius: 0 0 4px;
+  }
+
+  .pvtTable {
+    th {
+      background-color: $gray-lighter;
+    }
+
+    td,
+    th {
+      border: $pivot-report-border;
+    }
+  }
+}
