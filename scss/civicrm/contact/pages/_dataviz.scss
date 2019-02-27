@@ -68,7 +68,8 @@
 
   // Fixes clipping on Events charts
   #events,
-  #participants {
+  #participants,
+  #monthly-volume-chart {
     svg {
       height: 210px;
 
