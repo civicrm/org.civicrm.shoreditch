@@ -85,7 +85,8 @@
 
   // "CiviRules Edit Condition parameters" pages
   &.page-civicrm-civirule-form-condition-datachangedcomparison,
-  &.page-civicrm-civirule-form-condition-datacomparison {
+  &.page-civicrm-civirule-form-condition-datacomparison,
+  &.page-civicrm-civirule-form-condition-activity-contact-record-type {
     .crm-form-block {
       @include block-form();
     }
@@ -101,8 +102,16 @@
   padding-bottom: 0 !important;
   padding-top: 0 !important;
 
-  + fieldset table.selector {
-    @include table-selector();
+  + fieldset {
+    table.selector {
+      @include table-selector();
+    }
+
+    // This div is empty on the screen, it contains a <ul> which does not have
+    // any child elements inside. Thus, we remove it.
+    #alpha-filter {
+      display: none;
+    }
   }
 }
 
