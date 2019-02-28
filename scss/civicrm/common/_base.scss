@@ -227,6 +227,19 @@
       width: 50%;
     }
   }
+
+  /**
+   * @NOTE the table that goes straight after <h3> does not
+   * need a shadow because in that case the shadow falls onto the <h3>.
+   * The shadow instead is applied
+   * to the *container* of the <h3> and <table>.dataTables_wrapper
+   *
+   * @TODO remove all the .dataTables_wrapper { box-shadow: none; }
+   * from "per-page" styles and other files
+   */
+  h3 + .dataTables_wrapper {
+    box-shadow: none;
+  }
 }
 
 .page-civicrm {
