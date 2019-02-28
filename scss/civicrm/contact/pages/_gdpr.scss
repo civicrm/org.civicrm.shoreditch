@@ -31,3 +31,11 @@
 table.selector#SummaryTable {
   @include table-selector();
 }
+
+// @TODO this is an adhoc, should be fixed globally
+#GroupSubscriptionListTable_wrapper {
+  .dataTables_length {
+    padding-left: $crm-standard-gap;
+    padding-top: $crm-standard-gap / 2;
+  }
+}
