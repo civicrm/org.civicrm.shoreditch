@@ -46,3 +46,24 @@
     }
   }
 }
+
+
+/*
+ * Styles a table with a H3 header:
+ * - removes shadows from the table and the header
+ * - adds a shadow to their wrapper
+ * - removes unnecessary borders from the column headers
+ */
+@mixin civicrm-table-with-header() {
+  box-shadow: $box-shadow;
+
+  h3,
+  table {
+    box-shadow: none !important;
+  }
+
+  .columnheader {
+    border: 0 !important;
+    border-bottom: 1px solid $crm-grayblue-dark !important;
+  }
+}

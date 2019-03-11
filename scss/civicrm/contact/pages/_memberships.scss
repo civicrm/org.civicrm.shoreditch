@@ -102,19 +102,23 @@
     }
   }
 
-  #memberships table td {
-    &:not(:last-child) {
-      max-width: 85px;
-      overflow: hidden;
-      padding: 15px 10px 15px 20px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+  #memberships {
+    @include civicrm-table-with-header();
 
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(4) {
-      max-width: 100px;
+    table td {
+      &:not(:last-child) {
+        max-width: 85px;
+        overflow: hidden;
+        padding: 15px 10px 15px 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        max-width: 100px;
+      }
     }
   }
 
