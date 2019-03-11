@@ -1,0 +1,121 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.page-civicrm-civirule {
+  // "CiviRules Add Rule" and "CiviRules Update Rule" pages
+  &.page-civicrm-civirule-form-rule {
+    .crm-civirule-rule_label-block,
+    .crm-civirule-trigger-block {
+      @include block-form();
+    }
+
+    // "CiviRules Update Rule" page
+    .crm-civirule-trigger-block,
+    .crm-civirule-rule_condition-block,
+    .crm-civirule-rule_action-block {
+      > .crm-section {
+        margin-bottom: 0;
+      }
+
+      .dataTables_wrapper {
+        box-shadow: none;
+        margin-bottom: 0;
+
+        th,
+        td {
+          border-bottom: solid 1px $gray-light;
+          color: $crm-black;
+          padding-left: $crm-standard-gap;
+          padding-right: 0;
+
+          &:last-of-type {
+            padding-right: $crm-standard-gap;
+          }
+        }
+
+        tr {
+          background-color: transparent !important;
+        }
+      }
+
+      // Table above will always have rows with bottom borders,
+      // so we remove the top border to eliminate the border duplication.
+      .crm-submit-buttons {
+        border-top: 0;
+      }
+    }
+
+    // Fix for the "Linked Trigger" container - it appears on both
+    // "CiviRules Add Rule" and "CiviRules Update Rule" pages,
+    // but on the "CiviRules Update Rule" it should not have vertical gaps
+    #civirule-triggerBlock-table {
+      margin-bottom: -#{$crm-standard-gap};
+      margin-top: -#{$crm-standard-gap};
+    }
+  }
+
+  // "CiviRules Add Condition", "CiviRules Add Action" and
+  // "CiviRules Edit Action Parameters" pages
+  &.page-civicrm-civirule-form-rule-condition,
+  &.page-civicrm-civirule-form-rule-action,
+  &.page-civicrm-civirule-form-action {
+    .crm-form-block {
+      @include block-form();
+    }
+  }
+
+  &.page-civicrm-civirule-form-action {
+    // There is a switch between `.groups-single` and `.groups-multiple`
+    // and `.groups-single` is not a last child, but doesn't need that margin
+    .groups-single {
+      margin-bottom: 0;
+    }
+  }
+
+  // "CiviRules Add Action" page
+  &.page-civicrm-civirule-form-rule-action {
+    #XWeekDay_time_hour {
+      text-align: right;
+    }
+
+    #XWeekDay_time_hour,
+    #XWeekDay_time_minute {
+      width: 20px;
+    }
+  }
+
+  // "CiviRules Edit Condition parameters" pages
+  &.page-civicrm-civirule-form-condition-datachangedcomparison,
+  &.page-civicrm-civirule-form-condition-datacomparison,
+  &.page-civicrm-civirule-form-condition-activity-contact-record-type {
+    .crm-form-block {
+      @include block-form();
+    }
+  }
+}
+
+// "Find CiviRules Rules" page
+// This is the only reliable selector for this page because it is built as a
+// Custom Search page and it does not contain any Rules extension specific classes
+#civirule_helptext_dialog-block + .crm-form-block {
+  @include block-form();
+
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+
+  + fieldset {
+    table.selector {
+      @include table-selector();
+    }
+
+    // This div is empty on the screen, it contains a <ul> which does not have
+    // any child elements inside. Thus, we remove it.
+    #alpha-filter {
+      display: none;
+    }
+  }
+}
+
+// Help icon in "Description" column on "Find CiviRules Rules" results page
+#civirule_help_text_icon {
+  margin-left: $crm-standard-gap / 4;
+}
