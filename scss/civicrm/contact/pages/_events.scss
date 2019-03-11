@@ -251,10 +251,10 @@
     width: 100%;
   }
 
-  .crm-event-eventfees-form-block-payment_information {
-    fieldset {
-      margin: 10px -4px 0;
-    }
+  .crm-event-eventfees-form-block-payment_information fieldset,
+  #payment_information fieldset,
+  .crm-event-form-fee-block + fieldset {
+    margin: 0 -#{$crm-standard-gap};
   }
 
   .crm-event-eventfees-form-block-contribution_status_id,
