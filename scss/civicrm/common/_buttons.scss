@@ -189,6 +189,10 @@ $button-border-radius: 2px;
     @extend %btn;
   }
 
+  .crm-hover-button.crm-i {
+    font-family: $font-family-fontawesome !important;
+  }
+
   input[type=button],
   a.button,
   a.button:link,
