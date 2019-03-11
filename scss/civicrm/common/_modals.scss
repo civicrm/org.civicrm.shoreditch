@@ -114,7 +114,7 @@
     }
 
     > table,
-    > div > table {
+    > div:not(.dataTables_wrapper) > table {
       margin: 0 -#{$crm-standard-gap};
       width: calc(100% + #{$crm-standard-gap * 2});
 
