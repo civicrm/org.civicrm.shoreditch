@@ -1,0 +1,81 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.page-civicrm-dataviz {
+  #datacount {
+    margin-top: $crm-standard-gap;
+  }
+
+  div.dc-chart:not(#datacount),
+  [class^='col-md-'][id] {
+    background-color: $crm-white;
+    border-radius: $border-radius-child;
+    float: left;
+    margin-bottom: #{$crm-standard-gap / 2};
+    margin-right: #{$crm-standard-gap / 2};
+    overflow: hidden;
+    text-align: center;
+
+    > strong:first-of-type,
+    h3 {
+      background-color: $gray-dark;
+      color: $crm-white;
+      display: block;
+      font-size: $font-size-medium;
+      line-height: 1em;
+      padding: #{$crm-standard-gap / 2} $crm-standard-gap;
+    }
+
+    g.row text,
+    .pie-slice {
+      fill: $crm-black;
+    }
+
+    h3 + .dc-chart {
+      margin: $crm-standard-gap / 2;
+    }
+  }
+
+  table.dc-chart {
+    background-color: $crm-white;
+    border-collapse: collapse;
+    border-radius: $border-radius-child;
+    overflow: hidden;
+
+    th,
+    td {
+      border: 0;
+      padding: #{$crm-standard-gap / 2} $crm-standard-gap;
+    }
+
+    thead th {
+      background-color: $gray-dark;
+      color: $crm-white;
+    }
+
+    tbody tr {
+      border-bottom: solid 1px $gray-light;
+    }
+
+    .header-fixed {
+      position: relative;
+    }
+  }
+
+  .hidden,
+  .hide {
+    display: none;
+  }
+
+  // Fixes clipping on Events charts
+  #events,
+  #participants,
+  #monthly-volume-chart {
+    svg {
+      height: 210px;
+
+      > g {
+        transform: translateY(10px);
+      }
+    }
+  }
+}
