@@ -133,12 +133,6 @@
     }
   }
 
-  .crm-contact-contribute-contributions {
-    margin: 0 -#{$crm-standard-gap};
-    overflow-x: scroll;
-    width: calc(100% + #{$crm-standard-gap * 2});
-  }
-
   .crm-membership-form-block {
     .auto-renew-text {
       display: block;
