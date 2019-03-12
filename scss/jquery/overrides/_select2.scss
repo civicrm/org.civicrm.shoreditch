@@ -14,7 +14,8 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
     box-sizing: border-box;
     height: $input-height-base;
     line-height: $crm-jquery-select2-line-height;
-
+    
+ 
     &:focus {
       outline: 0;
     }
@@ -37,6 +38,7 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
       background: $crm-white;
       border-left-color: $crm-grayblue-darker;
       border-radius: 0 $border-radius-base $border-radius-base 0;
+      box-shadow: $crm-form-control-shadow;
       text-align: center;
       width: $crm-jquery-select2-arrow-width;
 
@@ -44,9 +46,9 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
         @include fa-icon();
         color: $gray-darker;
         content: $fa-var-caret-down;
-        font-size: $font-size-base;
+        font-size: 11px;
         position: relative;
-        top: -1px;
+        top: 0;
         vertical-align: middle;
       }
 
@@ -59,6 +61,19 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
     // The selected option
     > .select2-chosen {
       font-size: $font-size-base;
+    }
+  }
+
+  // select is disabled 
+  &.select2-container-disabled {
+    .select2-choice {
+      background: $input-bg-disabled;
+    }
+  }
+  // select is open
+  &.select2-dropdown-open {
+    .select2-arrow {
+      box-shadow: none;
     }
   }
 }

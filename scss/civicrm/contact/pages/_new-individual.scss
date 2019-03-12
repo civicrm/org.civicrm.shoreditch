@@ -52,8 +52,8 @@
     .form-layout-compressed {
       td {
         &.label {
+          padding-left: 0;
           text-align: left;
-          vertical-align: middle;
         }
       }
     }

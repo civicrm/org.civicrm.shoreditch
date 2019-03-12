@@ -195,20 +195,7 @@
     color: $brand-danger;
   }
 
-  label.crm-error {
-
-    @include plain-old-text();
-
-    span {
-
-      @include plain-old-text();
-    }
-  }
-
-  label span.crm-error-label {
-
-    @include plain-old-text();
-  }
+  
 }
 
 input.crm-form-text,
@@ -297,22 +284,41 @@ input.crm-form-password[readonly] {
   background: $input-bg-disabled;
 }
 
-input.crm-error,
-input.error {
-  border-color: $brand-danger;
-}
 
-.crm-error,
-.crm-inline-error {
-  &:not(.crm-error-label) {
-    background: $brand-danger;
-    color: $crm-white;
-
-    a {
-      color: $crm-white;
-    }
+// Forms Errors Display
+.form-layout,
+.form-layout-compressed {
+  // inputs 
+  input.error,
+  input.crm-error,
+  input.crm-inline-error {
+    background: $crm-white;
+    border-color: $brand-danger;
   }
+  // labels 
+  .label .crm-error,
+  .crm-error-label {
+    background: $crm-white;
+    padding: 0;
+  }
+  // messages 
+  .crm-inline-error {
+    background: lighten($brand-danger, 44);
+    color: $brand-danger;
+    display: inline-block;
+    height: $input-height-base;
+    line-height: $input-height-base;
+    padding: 0 10px;
+  }
+  // descriptions
+  .description {
+    color: $crm-gray-matte;
+  }
+  
 }
+
+ 
+
 
 .addon.fa-calendar {
   background: $gray-lighter;
