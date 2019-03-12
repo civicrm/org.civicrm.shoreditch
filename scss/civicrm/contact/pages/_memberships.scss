@@ -724,3 +724,9 @@
 #{civi-page('member')} .CRM_Member_Form_Search h3:first-of-type {
   margin-top: 0;
 }
+
+// Adhoc: fixes the <h3> margin
+#related-contacts-memberships > h3 {
+  box-shadow: none;
+  margin: 0 -#{$crm-standard-gap};
+}
