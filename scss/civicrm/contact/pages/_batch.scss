@@ -194,7 +194,7 @@
         .crm-form-date-wrapper {
           display: inline-block;
           // Necessary to make sure the calendar icon addon has enough
-          // space to be displayed next to the input field 
+          // space to be displayed next to the input field
           width: 255px;
         }
       }
@@ -206,7 +206,7 @@
       [class*='crm-batch-join_date-'],
       [class*='crm-batch-membership_'] {
         display: block;
-        width: 150px !important;
+        width: $crm-table-label-column-width !important;
 
         .crm-clear-link {
           margin-left: -5px !important;

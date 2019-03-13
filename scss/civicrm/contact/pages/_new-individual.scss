@@ -18,7 +18,7 @@
       .contact_basic_information-section tr {
         &:first-child td {
           &:last-child {
-            min-width: 150px;
+            min-width: $crm-table-label-column-width;
           }
 
           &:first-child {

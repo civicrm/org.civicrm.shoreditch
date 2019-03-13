@@ -105,7 +105,7 @@
 
     .dateplugin {
       margin-bottom: 5px;
-      max-width: 150px;
+      max-width: $crm-table-label-column-width;
     }
 
     .addon.fa-calendar {
@@ -360,7 +360,7 @@
 
     .pay-later_info-section {
       .label {
-        width: 150px;
+        width: $crm-table-label-column-width;
       }
 
       .content {
@@ -555,10 +555,6 @@
     font-weight: $crm-font-weight-h1 !important;
   }
 
-  &#Contribution .crm-accordion-body {
-    padding: 15px 20px !important;
-  }
-
   .crm-submit-buttons {
     .crm-button_qf_Contribution_upload {
       margin-left: 0 !important;
@@ -693,88 +689,6 @@
     display: none;
   }
 
-  table {
-    background: transparent;
-    border: 0;
-    box-shadow: none !important;
-    font-family: $font-family-base;
-    margin: 10px 0;
-
-    thead tr {
-      border: 1px solid $crm-background !important;
-
-      th {
-        background: $gray-lighter !important;
-        border: 0;
-        color: $gray-darker !important;
-        height: 42px;
-        line-height: 1.1em;
-        vertical-align: middle;
-
-        div {
-          padding: 0;
-        }
-      }
-    }
-
-    tbody tr {
-      background: $crm-white;
-      border: 1px solid $crm-background;
-      border-left: 0;
-      border-right: 0;
-
-      &.crm-child-row {
-        > td {
-          padding: 0;
-
-          .crm-ajax-container table {
-            margin: 0;
-
-            tbody {
-              border-top: 1px solid $crm-grayblue-dark !important;
-            }
-          }
-
-          .crm-ajax-container table th {
-            background: $gray-lighter !important;
-            border: 0;
-            color: $gray-darker;
-            vertical-align: middle;
-          }
-        }
-      }
-
-      td {
-        background: $crm-white !important;
-        border: 0;
-        line-height: 1.1em;
-        padding: 20px;
-
-        &.label {
-          border-bottom: 0;
-          color: $gray-darker !important;
-          vertical-align: middle;
-
-          div {
-            padding: 0;
-          }
-        }
-
-        &:not(.label) {
-          color: $gray-dark;
-        }
-      }
-
-      &:last-child {
-        border-bottom: 0;
-      }
-
-      &:first-child {
-        border-top: 0;
-      }
-    }
-  }
-
   #paymentDetails_Information {
     .helpicon {
       left: 0;
@@ -786,61 +700,12 @@
     }
   }
 
-  #Donor_Information__ {
-    padding: 0;
-
-    .crm-accordion-body {
-      padding: 20px 40px !important;
-    }
-  }
-
-  .crm-accordion-header {
-    font-family: $font-family-base;
-    font-size: 13px !important;
-
-    + .crm-accordion-body {
-      padding: 20px !important;
-
-      td.label {
-        padding-left: 0 !important;
-      }
-    }
-  }
-
   label[for='thankyou_date'] {
     top: 7px;
   }
 
   label[for='thankyou_date_time'] {
     top: 5px;
-  }
-}
-
-#ContributionView {
-  [id*='Donor_Information_'] {
-    padding: 0;
-
-    .crm-accordion-wrapper .crm-accordion-body {
-      padding: 20px 43px !important;
-    }
-
-    td {
-      box-sizing: border-box;
-      display: table-cell;
-      min-width: 170px;
-      vertical-align: middle;
-    }
-
-    .html-adjust {
-      width: 100%;
-    }
-  }
-
-  .crm-submit-buttons {
-    a.button {
-      background-color: #0071bd;
-      margin-bottom: 29px;
-    }
   }
 }
 

@@ -35,7 +35,7 @@
               width: auto;
 
               &.label {
-                width: 150px;
+                width: $crm-table-label-column-width;
               }
             }
           }

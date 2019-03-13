@@ -335,3 +335,7 @@ a.sorting_asc::after {
 a.sorting_desc::after {
   @include fa-icon($font-size-base, $fa-var-sort-desc, $brand-primary);
 }
+
+.crm-expand-row {
+  line-height: 1em;
+}
