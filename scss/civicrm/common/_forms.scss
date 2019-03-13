@@ -304,11 +304,14 @@ input.error {
 
 .crm-error,
 .crm-inline-error {
-  &:not(.crm-error-label) {
+  &:not(.crm-error-label):not(input):not(textarea):not(select):not(.select2-container) {
     background: $brand-danger;
+    border-radius: 3px;
     color: $crm-white;
+    padding: 5px;
 
-    a {
+    a,
+    .crm-marker {
       color: $crm-white;
     }
   }

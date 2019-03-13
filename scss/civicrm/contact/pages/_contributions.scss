@@ -651,52 +651,6 @@
     }
   }
 
-  input,
-  select,
-  textarea {
-    &.crm-inline-error,
-    &.crm-error,
-    &.error {
-      background: none !important;
-      border: 1px solid $brand-danger;
-      min-height: 30px;
-    }
-  }
-
-  label {
-    &.crm-inline-error,
-    &.crm-error {
-      background: $brand-danger !important;
-      border-radius: 3px;
-      color: $crm-white !important;
-      padding: 5px;
-
-      &.crm-inline-error {
-        margin: 0 4px;
-      }
-
-      span {
-        background: none;
-        color: $crm-white;
-      }
-    }
-  }
-
-  span {
-    &.crm-error {
-      background: $brand-danger !important;
-      border-radius: 3px;
-      color: $crm-white !important;
-      margin: 2px;
-      padding: 5px;
-
-      span {
-        background: none;
-        color: $crm-white;
-      }
-    }
-  }
-
   .form-layout-compressed td.label {
     padding-left: 0 !important;
   }
