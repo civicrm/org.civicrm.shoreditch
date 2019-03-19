@@ -77,10 +77,6 @@
     width: calc(100% + #{$crm-standard-gap * 2});
   }
 
-  .crm-form-block {
-    margin-bottom: 0;
-  }
-
   .crm-accordion-header:not(.crm-master-accordion-header)+.crm-accordion-body {
     box-shadow: none;
     padding: 20px 0 !important;
