@@ -959,6 +959,12 @@ form.CRM_Contribute_Form_ContributionCharts {
   }
 }
 
+// @NOTE This is adhoc due to not standard markup and should be moved to global styling
+.CRM_Event_Form_ParticipantView .crm-contact-contribute-contributions {
+  margin-left: -#{$crm-standard-gap};
+  margin-right: -#{$crm-standard-gap};
+}
+
 #{civi-page('contribute-import')} {
   #upload-file {
     .help {
