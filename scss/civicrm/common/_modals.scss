@@ -86,17 +86,7 @@
     }
   }
 
-  .dataTables_length {
-    padding: $crm-standard-gap;
-  }
-
   .crm-accordion-body {
-    .dataTables_wrapper:first-child {
-      .dataTables_length {
-        padding-top: 0;
-      }
-    }
-
     > table:not(.form-layout):not(.form-layout-compressed),
     > div:not(.dataTables_wrapper) > table {
       margin: 0 -#{$crm-standard-gap};
