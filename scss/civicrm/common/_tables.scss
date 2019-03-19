@@ -4,6 +4,23 @@ table {
   .crm-icon {
     @include contact-type-icons();
   }
+
+  // @NOTE This selector is used for nested accordions.
+  // Unfortunately, this seems like the only way to determine it.
+  &.form-layout,
+  &.form-layout-compressed {
+    > tbody > tr > td[colspan='2'] {
+      padding: 0;
+    }
+
+    // @NOTE This discards the padding flushing for nested tables
+    .form-layout,
+    .form-layout-compressed {
+      td[colspan='2'] {
+        padding: $crm-table-form-cell-padding;
+      }
+    }
+  }
 }
 
 %crm-table {
