@@ -121,6 +121,12 @@
     padding-left: $crm-standard-gap;
   }
 
+  // If the pager is the very first element in the modal, no top padding is needed
+  > .crm-form-block:first-child > .dataTables_wrapper:first-child >
+  .dataTables_length:first-child {
+    padding-top: 0;
+  }
+
   .crm-accordion-body {
     .dataTables_wrapper:first-child {
       .dataTables_length {
