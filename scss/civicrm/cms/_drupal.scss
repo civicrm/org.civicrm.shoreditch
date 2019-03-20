@@ -1,0 +1,7 @@
+/* stylelint-disable selector-max-id */
+
+#{$outside-namespace-marker} {
+  #branding {
+    @include open-sans-font-family();
+  }
+}
