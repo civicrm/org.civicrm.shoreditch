@@ -115,6 +115,12 @@
     padding: $crm-standard-gap;
   }
 
+  // Resets the padding for entries amount selectors inside pagers
+  .crm-datatable-pager-top .dataTables_length {
+    padding: 0;
+    padding-left: $crm-standard-gap;
+  }
+
   .crm-accordion-body {
     .dataTables_wrapper:first-child {
       .dataTables_length {
