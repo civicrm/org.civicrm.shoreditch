@@ -1,13 +1,10 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 %title {
-  @include open-sans-font-family();
   font-weight: 600 !important;
 }
 
 .page-civicrm {
-  @include open-sans-font-family();
-
   #toolbar {
     box-shadow: none !important;
   }

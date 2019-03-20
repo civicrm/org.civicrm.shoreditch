@@ -5,8 +5,6 @@
     // Ensures that there is the same amount of vertical room for the main menu
     // regardless of whether there is a drupal menu module enabled or not
     body {
-      @include open-sans-font-family();
-
       &:not(.toolbar) {
         margin-top: $crm-main-menu-height !important;
       }
@@ -21,6 +19,8 @@
 }
 
 .crm-container {
+  @include open-sans-font-family();
+
   a,
   a:link {
     color: $brand-primary;
