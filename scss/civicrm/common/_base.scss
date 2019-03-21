@@ -1,23 +1,5 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-#{$outside-namespace-marker} {
-  html {
-    // Ensures that there is the same amount of vertical room for the main menu
-    // regardless of whether there is a drupal menu module enabled or not
-    body {
-      &:not(.toolbar) {
-        margin-top: $crm-main-menu-height !important;
-      }
-
-      .toolbar-menu {
-        height: $crm-main-menu-height !important;
-        padding-bottom: 0 !important;
-        padding-top: 0 !important;
-      }
-    }
-  }
-}
-
 .crm-container {
   font-family: $font-family-base;
 
@@ -239,34 +221,6 @@
    */
   h3 + .dataTables_wrapper {
     box-shadow: none;
-  }
-}
-
-.page-civicrm {
-  #branding {
-    padding: 20px 0 0 !important;
-
-    .breadcrumb {
-      padding: 0 40px;
-    }
-
-    .breadcrumb a {
-      padding: 0 !important;
-    }
-
-    .add-shortcut {
-      display: none;
-    }
-
-    h1 {
-      &.page-title {
-        background: $crm-white;
-        color: $gray-darker;
-        margin-bottom: 20px !important;
-        margin-top: -20px !important;
-        padding: 0 40px !important;
-      }
-    }
   }
 }
 

@@ -1,7 +1,109 @@
 /* stylelint-disable selector-max-id */
 
-#{$outside-namespace-marker} {
+@import 'base/scss/vendor/bootstrap/alerts';
+
+.page-civicrm {
+  %title {
+    font-weight: 600 !important;
+  }
+
+  h2 {
+    @extend %title;
+  }
+
   #branding {
+    background: $crm-page-topbar-bg !important;
+    color: $crm-white !important;
     font-family: $font-family-base;
+    line-height: 20px;
+    overflow: visible !important;
+    padding: 20px 0 0;
+
+    h1.page-title { /* stylelint-disable-line selector-no-qualifying-type */
+      @extend %title;
+
+      background: $crm-white;
+      box-sizing: border-box;
+      color: $gray-darker;
+      display: block;
+      line-height: 50px !important;
+      margin: -20px 0 20px;
+      padding: 0 40px;
+      position: relative;
+      top: 25px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .add-shortcut {
+      display: none;
+    }
+
+    .breadcrumb {
+      color: transparent;
+      float: left;
+      left: 10px;
+      padding: 0 40px;
+      position: relative;
+      top: -5px;
+
+      /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+      > a {
+        color: $crm-white;
+        font-size: 0.8rem;
+        left: -10px;
+        padding: 0;
+        position: relative;
+
+        &:not(:last-of-type)::after {
+          content: '>';
+          display: inline-block;
+          font-size: 0.6em;
+          position: absolute;
+          right: -10px;
+        }
+      }
+      /* stylelint-enable selector-max-compound-selectors, max-nesting-depth */
+    }
+  }
+
+  #console {
+    @extend .alert, .alert-warning; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
+
+    margin-top: 0 !important;
+  }
+  
+  // The "printer" icon button
+  #printer-friendly {
+    position: absolute !important;
+    right: 0 !important;
+    top: -50px !important;
+    z-index: 2;
+
+    a {
+      color: $crm-white;
+    }
+  }
+
+  #toolbar {
+    box-shadow: none !important;
+  }
+}
+
+#{$outside-namespace-marker} {
+  html {
+    // Ensures that there is the same amount of vertical room for the main menu
+    // regardless of whether there is a drupal menu module enabled or not
+    body {
+      &:not(.toolbar) {
+        margin-top: $crm-main-menu-height !important;
+      }
+
+      .toolbar-menu { /* stylelint-disable-line selector-max-compound-selectors */
+        height: $crm-main-menu-height !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+      }
+    }
   }
 }
