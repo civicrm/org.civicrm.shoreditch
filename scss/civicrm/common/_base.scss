@@ -19,7 +19,7 @@
 }
 
 .crm-container {
-  @include open-sans-font-family();
+  font-family: $font-family-base;
 
   a,
   a:link {

@@ -53,9 +53,9 @@
       .crm-form-multiselect {
         @extend %responsive;
         @include civicrm-form-control;
-        @include open-sans-font-family();
         @include placeholder;
         display: inline-block;
+        font-family: $font-family-base;
         height: auto;
       }
 

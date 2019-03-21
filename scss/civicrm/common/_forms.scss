@@ -115,8 +115,8 @@
     }
 
     .cke_combo_text {
-      @include open-sans-font-family();
       border-right: solid 1px $gray-dark;
+      font-family: $font-family-base;
       margin: 0;
       padding-right: 7px;
       //Match the dropdown size;
@@ -215,7 +215,6 @@ input.crm-form-text,
 .crm-icon-picker-button,
 input.dateplugin,
 input.crm-form-password {
-  @include open-sans-font-family();
   @include transition(border-color 0.15s ease-in-out 0s);
   background-color: $crm-white;
   background-image: none;
@@ -223,6 +222,7 @@ input.crm-form-password {
   border-radius: $border-radius-base;
   box-shadow: $crm-form-control-shadow;
   color: $gray-darker;
+  font-family: $font-family-base;
   font-size: $font-size-base;
   height: $input-height-small;
   padding: 2px 10px;
@@ -234,13 +234,13 @@ input.crm-form-password {
 }
 
 input[type='file'] {
-  @include open-sans-font-family();
   display: inline-block;
+  font-family: $font-family-base;
   font-size: $font-size-base;
 }
 
 textarea {
-  @include open-sans-font-family();
+  font-family: $font-family-base;
 
   &.ng-valid,
   &.ng-pristine {
@@ -266,7 +266,6 @@ select.crm-form-multiselect {
 
 select.crm-form-select,
 select[aria-controls] {
-  @include open-sans-font-family();
   @include transition(border-color 0.15s ease-in-out 0s);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -275,6 +274,7 @@ select[aria-controls] {
   border: 1px solid $crm-grayblue-darker;
   border-radius: $border-radius-base;
   box-shadow: $crm-form-control-shadow;
+  font-family: $font-family-base;
   font-size: $font-size-base;
   height: $input-height-base;
   padding: 4px 35px 4px 10px;

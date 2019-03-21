@@ -14,9 +14,8 @@ $datepicker-gray-darker: #525966;
 
   &,
   * {
-    @include open-sans-font-family();
-
     border-radius: 0;
+    font-family: $font-family-base;
   }
 
   *:not(b) {

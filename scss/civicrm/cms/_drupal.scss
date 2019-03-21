@@ -2,6 +2,6 @@
 
 #{$outside-namespace-marker} {
   #branding {
-    @include open-sans-font-family();
+    font-family: $font-family-base;
   }
 }
