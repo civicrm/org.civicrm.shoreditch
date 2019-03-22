@@ -17,7 +17,7 @@
     font-family: $font-family-base;
     line-height: 20px;
     overflow: visible !important;
-    padding: 20px 0 0;
+    padding: $crm-standard-gap 0 0;
 
     h1.page-title { /* stylelint-disable-line selector-no-qualifying-type */
       @extend %title;
@@ -27,8 +27,8 @@
       color: $gray-darker;
       display: block;
       line-height: 50px !important;
-      margin: -20px 0 20px;
-      padding: 0 40px;
+      margin: -#{$crm-standard-gap} 0 $crm-standard-gap;
+      padding: 0 ($crm-standard-gap * 2);
       position: relative;
       top: 25px;
       width: 100%;
@@ -43,7 +43,7 @@
       color: transparent;
       float: left;
       left: 10px;
-      padding: 0 40px;
+      padding: 0 ($crm-standard-gap * 2);
       position: relative;
       top: -5px;
 
