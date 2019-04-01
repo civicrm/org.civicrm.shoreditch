@@ -1,11 +1,3 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
-
-@import 'base/scss/vendor/bootstrap/alerts';
-
-.page-civicrm div#console {
-  @extend .alert, .alert-warning;
-}
-
 .font-red,
 .status-warning {
   color: $brand-danger !important;

@@ -25,11 +25,20 @@
   }
 
   table {
-    // @NOTE This selector is used for nested accordions
+    // @NOTE This selector is used for nested accordions.
+    // Unfortunately, this seems like the only way to determine it.
     &.form-layout,
     &.form-layout-compressed {
       > tbody > tr > td[colspan='2'] {
         padding: 0;
+      }
+
+      // @NOTE This discards the padding flushing for nested tables
+      .form-layout,
+      .form-layout-compressed {
+        td[colspan='2'] {
+          padding: $crm-table-form-cell-padding;
+        }
       }
     }
 
@@ -85,10 +94,6 @@
     width: calc(100% + #{$crm-standard-gap * 2});
   }
 
-  .crm-form-block {
-    margin-bottom: 0;
-  }
-
   .crm-accordion-header:not(.crm-master-accordion-header)+.crm-accordion-body {
     box-shadow: none;
     padding: 20px 0 !important;
@@ -96,14 +101,22 @@
     td.label {
       padding-left: $crm-standard-gap;
     }
-
-    .form-layout-compressed {
-      margin-top: $crm-standard-gap;
-    }
   }
 
   .dataTables_length {
     padding: $crm-standard-gap;
+  }
+
+  // Resets the padding for entries amount selectors inside pagers
+  .crm-datatable-pager-top .dataTables_length {
+    padding: 0;
+    padding-left: $crm-standard-gap;
+  }
+
+  // If the pager is the very first element in the modal, no top padding is needed
+  > .crm-form-block:first-child > .dataTables_wrapper:first-child >
+  .dataTables_length:first-child {
+    padding-top: 0;
   }
 
   .crm-accordion-body {
