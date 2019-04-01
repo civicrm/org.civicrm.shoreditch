@@ -8,9 +8,9 @@ table {
 
 %crm-table {
   $border-color: $table-border-color;
-  @include open-sans-font-family();
   border: 0;
   border-radius: $border-radius-base;
+  font-family: $font-family-base;
 
   tr {
     background: $crm-white !important;
