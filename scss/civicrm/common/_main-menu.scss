@@ -57,6 +57,14 @@
 
 #root-menu-div {
   + .crm-quickSearch-results {
+    border: 0;
+    box-shadow: $box-shadow;
     font-family: $font-family-base;
+
+    .ui-state-active {
+      background: $gray-lighter;
+      border: 0;
+      margin: 0;
+    }
   }  
 }
