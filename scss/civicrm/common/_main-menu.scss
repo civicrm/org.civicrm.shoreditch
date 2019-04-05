@@ -89,12 +89,19 @@
 
 #{$outside-namespace-marker} {
   .crm-quickSearch-results {
+    background: $gray-lighter;
     border: 0;
     box-shadow: $box-shadow;
     font-family: $font-family-base;
+    font-size: $font-size-base;
+    padding: 10px 0 16px;
+    
+    .ui-menu-item-wrapper {
+      padding: 6px 21px 6px 14px;
+    }
 
     .ui-state-active {
-      background: $gray-lighter;
+      background: $gray-light;
       border: 0;
       margin: 0;
     }
