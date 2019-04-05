@@ -18,8 +18,23 @@
     }
   }
 
+  > li {
+    > a {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
   #crm-qsearch-input {
     font-family: $font-family-base;
+  }
+
+  .crm-i {
+    margin-right: 6px;
+  }
+
+  .crm-logo-sm {
+    margin: 0;
   }
 
   .crm-quickSearchField {
