@@ -1,4 +1,4 @@
-/* stylelint-disable selector-max-id, max-nesting-depth, selector-no-qualifying-type */
+/* stylelint-disable selector-max-id, max-nesting-depth, selector-no-qualifying-type, selector-max-compound-selectors */
 
 #civicrm-menu.sm {
   background: $crm-white;
@@ -15,14 +15,7 @@
       &.highlighted {
         background: $gray-lighter;
       }
-    }
-  }
-
-  > li {
-    > a {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+    } 
   }
 
   #crm-qsearch-input {
@@ -64,6 +57,29 @@
   }
 
   @media (min-width: $screen-sm-min) {
+    li {
+      a {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      li {
+        a {
+          padding: 8px 36px 8px 15px;
+        }
+      }
+
+      ul {
+        padding: 10px 0 16px;
+      }
+
+      .sub-arrow::before {
+        margin-right: 0;
+        position: absolute;
+        right: 15px;
+      }
+    }
+
     ul {
       box-shadow: $box-shadow;
     }
