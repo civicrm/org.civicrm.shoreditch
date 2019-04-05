@@ -87,8 +87,8 @@
   }
 }
 
-#root-menu-div {
-  + .crm-quickSearch-results {
+#{$outside-namespace-marker} {
+  .crm-quickSearch-results {
     border: 0;
     box-shadow: $box-shadow;
     font-family: $font-family-base;
