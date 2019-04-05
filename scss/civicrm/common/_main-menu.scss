@@ -9,12 +9,6 @@
     
     a {
       color: $gray-darker;
-
-      &:focus,
-      &:hover,
-      &.highlighted {
-        background: $gray-lighter;
-      }
     } 
   }
 
@@ -61,6 +55,12 @@
       a {
         padding-left: 15px;
         padding-right: 15px;
+
+        &:focus,
+        &:hover,
+        &.highlighted {
+          background: $gray-lighter;
+        }
       }
 
       li {
