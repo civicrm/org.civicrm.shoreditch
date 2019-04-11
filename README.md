@@ -13,7 +13,7 @@ Please note that this extension is currrently in **alpha stage** and under **act
 * "Seven" theme set as CiviCRM Administration theme
 
 ### For development
-* NodeJS `v8.9.4`
+* NodeJS `v10.15.3`
 
 ## Supported CMSs
 At the moment the theme is being developed to work only in Drupal 7 (with default theme set to "Seven"). WordPress and Joomla are not currently supported.
