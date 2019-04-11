@@ -12,6 +12,9 @@
   "scripts": {
     "postinstall": "npx gulp copy && npx gulp sass"
   },
+  "engines": {
+    "node": "~10.15.3"
+  },
   "semistandard": {
     "globals": [
       "CRM",
