@@ -7,11 +7,13 @@ Please note that this extension is currrently in **alpha stage** and under **act
 
 ## Requirements
 * Drupal 7
-* CiviCRM, `v5.0`+ recommended
+* CiviCRM `v5.8`+, `v5.12`+ recommended
+* [uk.squiffle.kam](https://github.com/aydun/uk.squiffle.kam) if the CiviCRM version is lower than `v5.12`
 * "CiviCRM Theme" module enabled
 * "Seven" theme set as CiviCRM Administration theme
 
-For development, or for building the stylesheets it's necessary to have NodeJS `v8.9.0`
+### For development
+* NodeJS `v8.9.4`
 
 ## Supported CMSs
 At the moment the theme is being developed to work only in Drupal 7 (with default theme set to "Seven"). WordPress and Joomla are not currently supported.
