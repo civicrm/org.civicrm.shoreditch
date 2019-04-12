@@ -1,11 +1,15 @@
 /* stylelint-disable selector-max-id, max-nesting-depth, selector-no-qualifying-type, selector-max-compound-selectors */
 
 #civicrm-menu.sm {
+  $item-icon-margin: 6px;
+  $item-line-height: 1.3;
+  $quicksearch-option-weight: 500;
+
   background: $crm-white;
   font-family: $font-family-base;
 
   li {
-    line-height: 1.3;
+    line-height: $item-line-height;
     
     a {
       color: $gray-darker;
@@ -18,7 +22,7 @@
   }
 
   .crm-i {
-    margin-right: 6px;
+    margin-right: $item-icon-margin;
   }
 
   .crm-logo-sm {
@@ -27,7 +31,7 @@
 
   .crm-quickSearchField {
     > label {
-      font-weight: 500;
+      font-weight: $quicksearch-option-weight;
     }
   }
 
