@@ -74,10 +74,6 @@
         }
       }
 
-      ul {
-        padding: $crm-main-menu-padding-base 0;
-      }
-
       .sub-arrow::before {
         margin-right: 0;
         position: absolute;
@@ -87,6 +83,7 @@
 
     ul {
       box-shadow: $box-shadow;
+      padding: $crm-main-menu-padding-base 0;
     }
   }
 }
