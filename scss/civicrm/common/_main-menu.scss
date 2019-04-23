@@ -58,6 +58,7 @@
   @media (min-width: $screen-sm-min) {
     li {
       a {
+        background: $crm-white;
         padding-left: $crm-main-menu-padding-base;
         padding-right: $crm-main-menu-padding-base;
 
@@ -82,6 +83,7 @@
     }
 
     ul {
+      background: $crm-white;
       box-shadow: $box-shadow;
       padding: $crm-main-menu-padding-base 0;
     }
