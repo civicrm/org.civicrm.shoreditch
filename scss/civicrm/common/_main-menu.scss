@@ -92,7 +92,7 @@
 }
 
 #{$outside-namespace-marker} {
-  .crm-quickSearch-results {
+  .ui-widget.crm-quickSearch-results {
     background: $gray-lighter;
     border: 0;
     box-shadow: $box-shadow;
