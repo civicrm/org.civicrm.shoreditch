@@ -175,7 +175,11 @@ function shoreditch_civicrm_pageRun(&$page) {
   $pageName = $page->getVar('_name');
 
   if ($pageName == 'CRM_Contact_Page_View_Summary') {
-    CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/contact-summary.js');
+    // It's hard to know for sure if we are using the shoreditch theme or not since
+    // paths and even the folder holding the shoreditch theme can be variable.
+    if(preg_match('#shoreditch/css/custom-civicrm.css$#', Civi::settings()->get('customCSSURL'))) {
+      CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/contact-summary.js');
+    }
   }
 }
 
