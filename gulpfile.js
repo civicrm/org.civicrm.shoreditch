@@ -99,7 +99,7 @@ const PluginError = require('plugin-error');
           prefix: '.crm-container ',
           exclude: [
             /^body/, /page-civicrm/, /crm-container/, /ui-datepicker/, /civicrm-menu/,
-            /#root-menu-div/, /jstree-contextmenu/, outsideNamespaceRegExp]
+            /jstree-contextmenu/, outsideNamespaceRegExp]
         }),
         postcssDiscardDuplicates
       ]))

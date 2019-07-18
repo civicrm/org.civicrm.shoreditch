@@ -1,0 +1,112 @@
+/* stylelint-disable selector-max-id, max-nesting-depth, selector-no-qualifying-type, selector-max-compound-selectors */
+
+#civicrm-menu.sm {
+  $item-icon-margin: 6px;
+  $item-line-height: 1.3;
+  $quicksearch-option-weight: 500;
+
+  background: $crm-white;
+  font-family: $font-family-base;
+
+  li {
+    line-height: $item-line-height;
+    
+    a {
+      color: $gray-darker;
+    } 
+  }
+
+  #crm-qsearch-input {
+    border-radius: $border-radius-base;
+    font-family: $font-family-base;
+  }
+
+  .crm-i {
+    margin-right: $item-icon-margin;
+  }
+
+  .crm-logo-sm {
+    margin: 0;
+  }
+
+  .crm-quickSearchField {
+    > label {
+      font-weight: $quicksearch-option-weight;
+    }
+  }
+
+  @media (max-width: $screen-sm-min) {
+    li {
+      a {
+        &:focus,
+        &:hover,
+        &.highlighted {
+          background: $gray-light;
+        }
+      }
+    }
+
+    ul {
+      background: darken($gray-light, 5%);
+
+      ul {
+        background: darken($gray-light, 15%);
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    li {
+      a {
+        background: $crm-white;
+        padding-left: $crm-main-menu-padding-base;
+        padding-right: $crm-main-menu-padding-base;
+
+        &:focus,
+        &:hover,
+        &.highlighted {
+          background: $gray-lighter;
+        }
+      }
+
+      li {
+        a {
+          padding: $crm-main-menu-padding-small ($crm-main-menu-padding-base * 3) $crm-main-menu-padding-small $crm-main-menu-padding-base;
+        }
+      }
+
+      .sub-arrow::before {
+        margin-right: 0;
+        position: absolute;
+        right: $crm-main-menu-padding-base;
+      }
+    }
+
+    ul {
+      background: $crm-white;
+      box-shadow: $box-shadow;
+      padding: $crm-main-menu-padding-base 0;
+    }
+  }
+}
+
+#{$outside-namespace-marker} {
+  .ui-widget.crm-quickSearch-results {
+    background: $gray-lighter;
+    border: 0;
+    box-shadow: $box-shadow;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    padding: $crm-main-menu-padding-base 0;
+    
+    .ui-menu-item-wrapper {
+      padding: $crm-main-menu-padding-small ($crm-main-menu-padding-base * 2) $crm-main-menu-padding-small $crm-main-menu-padding-base;
+    }
+
+    .ui-state-active {
+      background: $gray-light;
+      border: 0;
+      margin: 0;
+    }
+  }  
+}

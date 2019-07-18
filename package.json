@@ -12,6 +12,9 @@
   "scripts": {
     "postinstall": "npx gulp copy && npx gulp sass"
   },
+  "engines": {
+    "node": "10.15.3"
+  },
   "semistandard": {
     "globals": [
       "CRM",
@@ -21,18 +24,22 @@
       "base/js/*"
     ]
   },
+  "resolutions": {
+    "tar": "4.4.2"
+  },
   "devDependencies": {
     "bootstrap-sass": "3.4.1",
     "extend": "^3.0.2",
     "gulp": "^4.0.0",
     "gulp-postcss": "^7.0.1",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-transform-selectors": "0.0.2",
     "husky": "^1.0.0",
     "lint-staged": "^6.1.1",
+    "npm-force-resolutions": "0.0.2",
     "path": "^0.12.7",
     "plugin-error": "^1.0.1",
     "postcss-discard-duplicates": "^2.1.0",
