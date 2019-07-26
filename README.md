@@ -10,7 +10,7 @@ Please note that this extension is currrently in **alpha stage** and under **act
 * CiviCRM `v5.8`+, `v5.12`+ recommended
 * [uk.squiffle.kam](https://github.com/aydun/uk.squiffle.kam) if the CiviCRM version is lower than `v5.12`
 * "CiviCRM Theme" module enabled
-* The [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme) is optional but  recommended
+* The [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme) is optional but recommended
 
 ### For development
 * NodeJS `v10.15.3`
@@ -28,8 +28,8 @@ git clone https://github.com/civicrm/org.civicrm.shoreditch
 cv en org.civicrm.shoreditch
 ```
 
-### Companion theme
-If you also intend to use the [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme), please go to its repo and follow the insallation instructions there
+### CiviAdmin Companion Drupal theme
+If you also intend to use the [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme), please go to its repo and follow the installation instructions there
 
 ### Development / Bleeding edge version
 If you are [developing](CONTRIBUTING.md#code-contributions) for the theme or if want the very latest (but untested) version of the theme on your site, run
