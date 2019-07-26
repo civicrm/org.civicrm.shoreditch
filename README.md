@@ -10,13 +10,13 @@ Please note that this extension is currrently in **alpha stage** and under **act
 * CiviCRM `v5.8`+, `v5.12`+ recommended
 * [uk.squiffle.kam](https://github.com/aydun/uk.squiffle.kam) if the CiviCRM version is lower than `v5.12`
 * "CiviCRM Theme" module enabled
-* "Seven" theme set as CiviCRM Administration theme
+* The [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme) is optional but  recommended
 
 ### For development
 * NodeJS `v10.15.3`
 
 ## Supported CMSs
-At the moment the theme is being developed to work only in Drupal 7 (with default theme set to "Seven"). WordPress and Joomla are not currently supported.
+At the moment the theme is being developed to work only in Drupal 7. WordPress and Joomla are not currently supported.
 
 ## Installation (git/cli)
 ```bash
@@ -26,12 +26,12 @@ cd sites/default/files/civicrm/ext
 # Download and enable the extension
 git clone https://github.com/civicrm/org.civicrm.shoreditch
 cv en org.civicrm.shoreditch
-
-# Enable the "CiviCRM Theme" module and set "Seven" as the Civi admin theme
-drush en -y civicrmtheme
-drush vset civicrmtheme_theme_admin seven
-drush cc civicrm
 ```
+
+### Companion theme
+If you also intend to use the [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme), please go to its repo and follow the insallation instructions there
+
+### Development / Bleeding edge version
 If you are [developing](CONTRIBUTING.md#code-contributions) for the theme or if want the very latest (but untested) version of the theme on your site, run
 ```bash
 cd org.civicrm.shoreditch
