@@ -1,23 +1,16 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 .page-civicrm {
-  &,
-  #page {
-    background: $crm-background !important;
-  }
-
   %block-with-shadow {
     background: $crm-white;
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
   }
 
-  h1.page-title {
-    @extend %block-with-shadow;
+  #crm-main-content-wrapper {
+    background: $crm-background !important;
   }
-
+  
   .crm-container {
-    background: inherit;
-
     .crm-form-block {
       @extend %block-with-shadow;
       border-radius: 0;
