@@ -1,6 +1,7 @@
 <?php
 
 require_once 'shoreditch.civix.php';
+use CRM_Shoreditch_ExtensionUtil as E;
 
 /**
  * Implements hook_civicrm_config().
@@ -114,11 +115,17 @@ function shoreditch_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 }
 
 /**
+ * Implements hook_civicrm_thems().
+ */
+function shoreditch_civicrm_themes(&$themes) {
+  _shoreditch_civix_civicrm_themes($themes);
+}
+
+/**
  * Implements hook_civicrm_coreResourceList().
  */
 function shoreditch_civicrm_coreResourceList(&$items, $region) {
   if ($region == 'html-header') {
-    CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/bootstrap.css', -50, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/transition.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/scrollspy.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/dropdown.js', 1000, 'html-header');
