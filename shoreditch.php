@@ -164,3 +164,21 @@ function shoreditch_civicrm_pageRun(&$page) {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/contact-summary.js');
   }
 }
+
+/**
+ * Keeps the original civicrm.css file before adding its own custom stylesheet
+ */
+function _shoreditch_css_url($themes, $themeKey, $cssExt, $cssFile) {
+  switch ("{$cssExt}/{$cssFile}") {
+    case 'civicrm/css/civicrm.css':
+      $urls = array_merge(
+        Civi::service('themes')->resolveUrls('greenwich', $cssExt, $cssFile),
+        \Civi\Core\Themes\Resolvers::simple($themes, $themeKey, $cssExt, 'css/custom-civicrm.css')
+      );
+      break;
+    default:
+      $urls = \Civi\Core\Themes\Resolvers::simple($themes, $themeKey, $cssExt, $cssFile);
+  }
+
+  return $urls;
+}
