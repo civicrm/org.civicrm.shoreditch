@@ -11,15 +11,9 @@ class CRM_Shoreditch_Upgrader extends CRM_Shoreditch_Upgrader_Base {
    * 2. Sets shoreditch as the backend theme only
    */
   public function upgrade_0001() {
-    $customCSSUrl = civicrm_api3('setting', 'get', [
-      'sequential' => 1,
-      "return" => ["customCSSURL"]
-    ])['values'][0];
+    $customCSSUrl = Civi::settings()->get("customCSSURL");
     
-    if (
-      isset($customCSSUrl['customCSSURL']) &&
-      strpos($customCSSUrl['customCSSURL'], 'org.civicrm.shoreditch') !== FALSE
-    ) {
+    if (strpos($customCSSUrl, 'org.civicrm.shoreditch') !== FALSE) {
       civicrm_api3('setting', 'create', [
         'customCSSURL' => ''
       ]);
