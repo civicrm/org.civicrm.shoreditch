@@ -125,7 +125,13 @@ function shoreditch_civicrm_themes(&$themes) {
  * Implements hook_civicrm_coreResourceList().
  */
 function shoreditch_civicrm_coreResourceList(&$items, $region) {
+  if (!_shoreditch_isActive()) {
+    return;
+  }
+
   if ($region == 'html-header') {
+    CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/bootstrap.css', -50, 'html-header');
+    CRM_Core_Resources::singleton()->addStyleFile('org.civicrm.shoreditch', 'css/custom-civicrm.css', 99, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/transition.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/scrollspy.js', 1000, 'html-header');
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'base/js/dropdown.js', 1000, 'html-header');
@@ -142,6 +148,10 @@ function shoreditch_civicrm_coreResourceList(&$items, $region) {
  * Implements hook_civicrm_buildForm().
  */
 function shoreditch_civicrm_buildForm($formName) {
+  if (!_shoreditch_isActive()) {
+    return;
+  }
+
   if ($formName == 'CRM_Contact_Form_Search_Advanced') {
     CRM_Core_Resources::singleton()->addScriptFile('org.civicrm.shoreditch', 'js/highlight-table-rows.js');
   }
@@ -158,6 +168,10 @@ function shoreditch_civicrm_buildForm($formName) {
  * Implements hook_civicrm_pageRun().
  */
 function shoreditch_civicrm_pageRun(&$page) {
+  if (!_shoreditch_isActive()) {
+    return;
+  }
+
   $pageName = $page->getVar('_name');
 
   if ($pageName == 'CRM_Contact_Page_View_Summary') {
@@ -166,19 +180,9 @@ function shoreditch_civicrm_pageRun(&$page) {
 }
 
 /**
- * Keeps the original civicrm.css file before adding its own custom stylesheet
+ * @return bool
+ *   TRUE if Shoreditch is the active theme.
  */
-function _shoreditch_css_url($themes, $themeKey, $cssExt, $cssFile) {
-  switch ("{$cssExt}/{$cssFile}") {
-    case 'civicrm/css/civicrm.css':
-      $urls = array_merge(
-        Civi::service('themes')->resolveUrls('greenwich', $cssExt, $cssFile),
-        \Civi\Core\Themes\Resolvers::simple($themes, $themeKey, $cssExt, 'css/custom-civicrm.css')
-      );
-      break;
-    default:
-      $urls = \Civi\Core\Themes\Resolvers::simple($themes, $themeKey, $cssExt, $cssFile);
-  }
-
-  return $urls;
+function _shoreditch_isActive() {
+  return Civi::service('themes')->getActiveThemeKey() === 'shoreditch';
 }
