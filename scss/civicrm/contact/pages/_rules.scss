@@ -156,3 +156,14 @@
 #civirule_help_text_icon {
   margin-left: $crm-standard-gap / 4;
 }
+
+.CRM_CivirulesCronTrigger_Form_ActivityDate {
+  h3 + .crm-block {
+    padding-bottom: $crm-standard-gap;
+    padding-top: $crm-standard-gap;
+
+    .crm-section:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
