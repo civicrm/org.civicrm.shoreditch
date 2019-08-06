@@ -1,0 +1,107 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('mailing')} {
+  $crm-table-cell-vertical-padding: 12px;
+  $crm-block-border-radius: 2px;
+  $crm-alpha-filter-padding: 2px;
+
+  // Makes the wrapper look like a container
+  #crm-main-content-wrapper {
+    background-color: $crm-white !important;
+    border-radius: $crm-block-border-radius;
+    box-shadow: $box-shadow;
+    padding: $crm-standard-gap;
+  }
+
+  // Just needs to breathe and not look like a part of form
+  .action-link {
+    margin-bottom: $crm-standard-gap;
+  }
+
+  // Second CTA button is no necessary
+  script + .action-link {
+    display: none;
+  }
+
+  // Left padding misalighes the form with the rest of elements
+  table.form-layout {
+    td:first-child {
+      padding-left: 0;
+    }
+  }
+
+  // Stretches the A-Z filter to full width and dismisses its default colour
+  #alpha-filter {
+    background-color: transparent !important;
+    width: calc(100% + #{($crm-standard-gap - $crm-alpha-filter-padding) * 2});
+  }
+
+  // Removes unwanted shadows
+  table.row-highlight,
+  .crm-pager,
+  .crm-search-form-block {
+    box-shadow: none !important;
+  }
+
+  // Attaches the A-Z filter and tables to the left
+  #alpha-filter,
+  table.row-highlight {
+    margin-left: -#{$crm-standard-gap} !important;
+  }
+
+  .crm-pager {
+    // Attaches pager to the right
+    .element-right {
+      margin-right: 0 !important;
+    }
+
+    .crm-pager-nav {
+      // Discards three &nbsp; at the start
+      a[title='next page'] {
+        left: -#{$crm-standard-gap} !important;
+      }
+
+      // Attaches pages navigation to the left by
+      // discarding padding for first navigation element
+      a:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+
+  table.row-highlight {
+    // Stretches the table to full width
+    width: calc(100% + #{$crm-standard-gap * 2});
+
+    thead > tr {
+      border: solid 1px $crm-grayblue-dark !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
+
+    th {
+      background-color: $gray-lighter !important;
+      border: 0 !important;
+      padding-bottom: $crm-standard-gap !important;
+      padding-top: $crm-standard-gap !important;
+    }
+
+    td {
+      padding-bottom: $crm-table-cell-vertical-padding;
+      padding-top: $crm-table-cell-vertical-padding;
+    }
+
+    td,
+    th {
+      line-height: 1.5em !important;
+
+      &:first-child {
+        padding-left: $crm-standard-gap;
+      }
+
+      &:last-child {
+        padding-right: $crm-standard-gap;
+      }
+    }
+  }
+}
