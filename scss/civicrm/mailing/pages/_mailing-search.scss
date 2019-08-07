@@ -1,8 +1,7 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-#{civi-page('mailing')} {
+#{civi-page('mailing-browse')} {
   $crm-table-cell-vertical-padding: 12px;
-  $crm-block-border-radius: 2px;
   $crm-alpha-filter-padding: 2px;
 
   // Makes the wrapper look like a container
@@ -30,12 +29,6 @@
     }
   }
 
-  // Stretches the A-Z filter to full width and dismisses its default colour
-  #alpha-filter {
-    background-color: transparent !important;
-    width: calc(100% + #{($crm-standard-gap - $crm-alpha-filter-padding) * 2});
-  }
-
   // Removes unwanted shadows
   table.row-highlight,
   .crm-pager,
@@ -43,10 +36,12 @@
     box-shadow: none !important;
   }
 
-  // Attaches the A-Z filter and tables to the left
-  #alpha-filter,
-  table.row-highlight {
-    margin-left: -#{$crm-standard-gap} !important;
+  // Attaches the A-Z filter to the left,
+  // stretches it to the full width and dismisses its default colour
+  #alpha-filter {
+    background-color: transparent !important;
+    margin-left: -#{$crm-standard-gap / 2} !important;
+    width: calc(100% + #{($crm-standard-gap / 2 - $crm-alpha-filter-padding) * 2});
   }
 
   .crm-pager {
@@ -70,6 +65,8 @@
   }
 
   table.row-highlight {
+    // Attaches tables to the left
+    margin-left: -#{$crm-standard-gap} !important;
     // Stretches the table to full width
     width: calc(100% + #{$crm-standard-gap * 2});
 

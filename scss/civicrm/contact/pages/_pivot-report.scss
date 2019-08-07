@@ -2,7 +2,7 @@
 
 $pivot-report-border: solid 1px $gray-light;
 $crm-standard-half-gap: $crm-standard-gap / 2;
-$pivot-report-box-radius: $crm-box-radius * 2;
+$pivot-report-box-radius: $crm-block-border-radius * 2;
 
 #pivot-report-config {
   background-color: $crm-white;
