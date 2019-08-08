@@ -26,7 +26,8 @@
 
     > span.label {
       display: block;
-      margin: #{$crm-standard-gap * 2} 0 #{$crm-standard-gap / 4} 0;
+      margin-top: $crm-standard-gap * 2;
+      padding-top: $crm-main-menu-padding-small;
     }
 
     > * {
@@ -55,5 +56,10 @@
       color: $crm-black !important;
       font-size: $font-size-base;
     }
+  }
+
+  // We do not need striped tables here
+  .odd-row {
+    background-color: $crm-white !important;
   }
 }
