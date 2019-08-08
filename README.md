@@ -7,8 +7,7 @@ Please note that this extension is currrently in **alpha stage** and under **act
 
 ## Requirements
 * Drupal 7
-* CiviCRM `v5.8`+, `v5.12`+ recommended
-* [uk.squiffle.kam](https://github.com/aydun/uk.squiffle.kam) if the CiviCRM version is lower than `v5.12`
+* CiviCRM `v5.16`+
 * "CiviCRM Theme" module enabled
 * The [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme) is optional but recommended (only for Shoreditch `v0.1-alpha33`+)
 
