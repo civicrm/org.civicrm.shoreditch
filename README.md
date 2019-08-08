@@ -46,7 +46,7 @@ Once all the packages are installed `gulp sass` will be automatically invoked, w
 The theme includes two major components:
 
  * "`bootstrap.css`" is a build of Bootstrap based on the standard Bootstrap style-guide. It can be used with other CiviCRM extensions which satisfy the Bootstrap style-guide.
- * "`custom-civicrm.css`" is an optional replacement for "civicrm.css". It uses the same visual conventions and SCSS metadata, but it applies to existing core screens.
+ * "`custom-civicrm.css`" is a supplement for "civicrm.css". It uses the same visual conventions and SCSS metadata, but it applies to existing core screens.
 
 ### Using `bootstrap.css`
 
@@ -69,20 +69,6 @@ This extension provides the CSS for Bootstrap.  Other extensions should output c
 
 Note the use of `id="bootstrap-theme"`.  To avoid conflicts with CMS UIs, the CSS rules are
 restricted to `#bootstrap-theme`.
-
-### Using `custom-civicrm.css`
-
-This extension includes an optional file `custom-civicrm.css` which can replace the default
-`civicrm.css`.  This uses the same CSS classes as traditional CiviCRM screens, but the
-look-and-feel matches the Bootstrap look-and-feel.  It is implemented with the same SCSS variables
-and mixins. To use it, navigate to **Administer -> System Settings -> Resource URLs** And click on
-"Shoreditch" as the Custom CSS Url option.
-
-Or from the command line:
-
-```
-cv api setting.create customCSSURL=$(cv url -x shoreditch/css/custom-civicrm.css --out=list)
-```
 
 ## Contributing
 Want to report a bug, suggest enhancements, or contribute to the project? Please read [here](CONTRIBUTING.md)!
