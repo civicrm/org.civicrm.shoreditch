@@ -167,3 +167,44 @@
     }
   }
 }
+
+.CRM_Civirules_Form_RuleView {
+  .dataTables_wrapper {
+    box-shadow: none;
+  }
+
+  #civirule_wrapper + .action-link {
+    display: none;
+  }
+
+  .action-link {
+    margin: $crm-standard-gap;
+  }
+
+  .civirule-view-table {
+    &,
+    tr {
+      display: block;
+    }
+
+    td {
+      // Need that so we can break items
+      display: block;
+      float: left;
+
+      // Breaks to the new line
+      &:nth-of-type(5) {
+        clear: left;
+      }
+    }
+
+    .label,
+    .civirule_view_include_disabled {
+      padding-top: $crm-standard-gap / 4 * 3;
+    }
+
+    .content {
+      padding-top: $crm-standard-gap / 2;
+    }
+  }
+}
