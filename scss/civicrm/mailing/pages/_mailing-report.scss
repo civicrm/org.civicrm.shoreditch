@@ -26,7 +26,15 @@
 
     > span.label {
       display: block;
-      margin: #{$crm-standard-gap / 4} 0;
+      margin: #{$crm-standard-gap * 2} 0 #{$crm-standard-gap / 4} 0;
+    }
+
+    > * {
+      clear: both;
+    }
+
+    > .messages {
+      margin-top: $crm-standard-gap * 2;
     }
   }
 
