@@ -25,7 +25,7 @@
     position: relative;
 
     &::before {
-      border-radius: $crm-box-radius;
+      border-radius: $crm-block-border-radius;
       bottom: 0;
       box-shadow: $box-shadow;
       content: '';
@@ -38,7 +38,7 @@
   }
 
   .crm-container .crm-form-block {
-    border-radius: 0 0 #{$crm-box-radius} #{$crm-box-radius} !important;
+    border-radius: 0 0 #{$crm-block-border-radius} #{$crm-block-border-radius} !important;
 
     .crm-submit-buttons {
       background-color: transparent !important;

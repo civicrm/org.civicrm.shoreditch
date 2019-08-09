@@ -1,0 +1,65 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('mailing-report')} {
+  fieldset {
+    background-color: $crm-white !important;
+    border-radius: $crm-block-border-radius;
+    box-shadow: $box-shadow;
+    margin-bottom: $crm-standard-gap;
+    padding: $crm-standard-gap;
+    padding-bottom: 0;
+
+    legend {
+      background-color: $gray-lighter !important;
+      border-bottom: 1px solid $crm-grayblue-dark !important;
+      border-radius: $crm-block-border-radius $crm-block-border-radius 0 0;
+      color: $gray-darker !important;
+      float: left;
+      font-size: $font-size-h2 !important;
+      line-height: 28px !important;
+      margin-bottom: 0;
+      margin-left: -#{$crm-standard-gap} !important;
+      margin-top: -#{$crm-standard-gap} !important;
+      padding: $ui-modal-header-padding !important;
+      width: 100% !important;
+    }
+
+    > span.label {
+      display: block;
+      margin-top: $crm-standard-gap * 2;
+      padding-top: $crm-main-menu-padding-small;
+    }
+
+    > * {
+      clear: both;
+    }
+
+    > .messages {
+      margin-top: $crm-standard-gap * 2;
+    }
+  }
+
+  table.crm-info-panel {
+    @include table-selector();
+
+    border: 0 !important;
+    border-radius: $crm-block-border-radius;
+    margin-left: -#{$crm-standard-gap} !important;
+    width: calc(100% + #{$crm-standard-gap * 2});
+
+    td,
+    th {
+      background-color: transparent !important;
+    }
+
+    td.label {
+      color: $crm-black !important;
+      font-size: $font-size-base;
+    }
+  }
+
+  // We do not need striped tables here
+  .odd-row {
+    background-color: $crm-white !important;
+  }
+}
