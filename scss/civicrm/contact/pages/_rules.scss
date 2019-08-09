@@ -16,6 +16,11 @@
     z-index: -2;
   }
 
+  #crm-main-content-wrapper {
+    position: relative;
+    z-index: 0;
+  }
+
   h3,
   h3 + .crm-block {
     box-shadow: none !important;
@@ -36,6 +41,10 @@
 
   .crm-container .crm-form-block {
     border-radius: 0 0 #{$box-radius} #{$box-radius} !important;
+
+    .crm-submit-buttons {
+      background-color: transparent !important;
+    }
   }
 
   // "CiviRules Add Rule" and "CiviRules Update Rule" pages
@@ -71,6 +80,10 @@
 
         tr {
           background-color: transparent !important;
+
+          &:last-child td {
+            border: 0 !important;
+          }
         }
       }
 
