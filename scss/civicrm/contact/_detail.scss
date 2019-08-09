@@ -7,7 +7,7 @@
   padding-top: 10px !important;
 
   // Remove the space from the angular's container
-  > div {
+  > div:not(.messages.status) {
     padding: 0 !important;
   }
 

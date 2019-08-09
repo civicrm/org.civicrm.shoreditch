@@ -1,6 +1,50 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 .page-civicrm-civirule {
+  position: relative;
+
+  /**
+   * Apply shadows to the <h3> + .crm-block pair
+   */
+  // This is needed to make elements clickable
+  z-index: -3;
+
+  // This is needed because otherwise shadows will be cut
+  #page {
+    z-index: -2;
+  }
+
+  #crm-main-content-wrapper {
+    position: relative;
+    z-index: 0;
+  }
+
+  h3,
+  h3 + .crm-block {
+    box-shadow: none !important;
+    position: relative;
+
+    &::before {
+      border-radius: $crm-box-radius;
+      bottom: 0;
+      box-shadow: $box-shadow;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  .crm-container .crm-form-block {
+    border-radius: 0 0 #{$crm-box-radius} #{$crm-box-radius} !important;
+
+    .crm-submit-buttons {
+      background-color: transparent !important;
+    }
+  }
+
   // "CiviRules Add Rule" and "CiviRules Update Rule" pages
   &.page-civicrm-civirule-form-rule {
     .crm-civirule-rule_label-block,
@@ -34,6 +78,10 @@
 
         tr {
           background-color: transparent !important;
+
+          &:last-child td {
+            border: 0 !important;
+          }
         }
       }
 
@@ -118,4 +166,70 @@
 // Help icon in "Description" column on "Find CiviRules Rules" results page
 #civirule_help_text_icon {
   margin-left: $crm-standard-gap / 4;
+}
+
+.CRM_CivirulesCronTrigger_Form_ActivityDate {
+  h3 + .crm-block {
+    padding-bottom: $crm-standard-gap;
+    padding-top: $crm-standard-gap;
+
+    .crm-section:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.CRM_Civirules_Form_RuleView {
+  .dataTables_wrapper {
+    box-shadow: none;
+  }
+
+  #civirule_wrapper + .action-link {
+    display: none;
+  }
+
+  .action-link {
+    margin: $crm-standard-gap;
+    margin-top: $crm-standard-gap * 2;
+  }
+
+  .civirule-view-table {
+    &,
+    tr {
+      display: block;
+    }
+
+    td {
+      // Need that so we can break items
+      display: block;
+      float: left;
+
+      // Breaks to the new line
+      &:nth-of-type(5),
+      &:nth-of-type(9) {
+        clear: left;
+      }
+
+      // "Submit" button
+      &:nth-of-type(9) {
+        margin-left: $crm-standard-gap;
+        padding-left: 0;
+      }
+    }
+
+    .content {
+      padding-top: $crm-standard-gap / 2;
+    }
+
+    .label,
+    .civirule_view_include_disabled {
+      padding-top: $crm-standard-gap / 4 * 3;
+    }
+  }
+
+  .dataTable {
+    td:nth-of-type(2) {
+      padding-left: $crm-standard-gap;
+    }
+  }
 }

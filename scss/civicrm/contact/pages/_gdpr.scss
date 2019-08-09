@@ -1,0 +1,39 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+.page-civicrm-gdpr-settings {
+  .crm-gdpr-settings-form-block {
+    @include block-form();
+
+    #help,
+    .help {
+      margin-left: $crm-standard-gap;
+      margin-right: $crm-standard-gap;
+    }
+  }
+}
+
+.page-civicrm-gdpr-dashboard {
+  .crm-gdpr-dashboard-search-form-block {
+    @include block-form();
+
+    padding-left: $crm-standard-gap !important;
+    padding-right: $crm-standard-gap !important;
+  }
+
+  .crm-gdpr-dashboard-activities-list-form-block {
+    table.selector {
+      @include table-selector();
+    }
+  }
+}
+
+table.selector#SummaryTable {
+  @include table-selector();
+}
+
+#GroupSubscriptionListTable_wrapper {
+  .dataTables_length {
+    padding-left: $crm-standard-gap;
+    padding-top: $crm-standard-gap / 2;
+  }
+}
