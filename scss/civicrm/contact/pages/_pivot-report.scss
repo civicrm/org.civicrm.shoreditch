@@ -2,6 +2,7 @@
 
 $pivot-report-border: solid 1px $gray-light;
 $crm-standard-half-gap: $crm-standard-gap / 2;
+$pivot-report-box-radius: $crm-box-radius * 2;
 
 #pivot-report-config {
   background-color: $crm-white;
@@ -81,28 +82,28 @@ $crm-standard-half-gap: $crm-standard-gap / 2;
     }
 
     &.pvtUnused {
-      border-radius: 4px;
+      border-radius: $pivot-report-box-radius;
     }
 
     &.pvtRows {
-      border-radius: 0 0 0 4px;
+      border-radius: 0 0 0 $pivot-report-box-radius;
       border-right: $pivot-report-border;
     }
   }
 
   .pvtVals {
     border-bottom: $pivot-report-border;
-    border-radius: 4px 0 0;
+    border-radius: $pivot-report-box-radius 0 0;
     border-right: $pivot-report-border;
   }
 
   .pvtHorizList {
     border-bottom: $pivot-report-border;
-    border-radius: 0 4px 0 0;
+    border-radius: 0 $pivot-report-box-radius 0 0;
   }
 
   .pvtRendererArea {
-    border-radius: 0 0 4px;
+    border-radius: 0 0 $pivot-report-box-radius;
   }
 
   .pvtTable {

@@ -1,8 +1,6 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 .page-civicrm-civirule {
-  $box-radius: 2px;
-
   position: relative;
 
   /**
@@ -27,7 +25,7 @@
     position: relative;
 
     &::before {
-      border-radius: $box-radius;
+      border-radius: $crm-box-radius;
       bottom: 0;
       box-shadow: $box-shadow;
       content: '';
@@ -40,7 +38,7 @@
   }
 
   .crm-container .crm-form-block {
-    border-radius: 0 0 #{$box-radius} #{$box-radius} !important;
+    border-radius: 0 0 #{$crm-box-radius} #{$crm-box-radius} !important;
 
     .crm-submit-buttons {
       background-color: transparent !important;
