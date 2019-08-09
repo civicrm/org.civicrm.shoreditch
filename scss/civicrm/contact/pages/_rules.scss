@@ -192,6 +192,7 @@
 
   .action-link {
     margin: $crm-standard-gap;
+    margin-top: $crm-standard-gap * 2;
   }
 
   .civirule-view-table {
@@ -206,18 +207,31 @@
       float: left;
 
       // Breaks to the new line
-      &:nth-of-type(5) {
+      &:nth-of-type(5),
+      &:nth-of-type(9) {
         clear: left;
       }
+
+      // "Submit" button
+      &:nth-of-type(9) {
+        margin-left: $crm-standard-gap;
+        padding-left: 0;
+      }
+    }
+
+    .content {
+      padding-top: $crm-standard-gap / 2;
     }
 
     .label,
     .civirule_view_include_disabled {
       padding-top: $crm-standard-gap / 4 * 3;
     }
+  }
 
-    .content {
-      padding-top: $crm-standard-gap / 2;
+  .dataTable {
+    td:nth-of-type(2) {
+      padding-left: $crm-standard-gap;
     }
   }
 }
