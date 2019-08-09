@@ -27,12 +27,10 @@
   }
 }
 
-// @TODO This selector is definitely not stable, find a better way.
 table.selector#SummaryTable {
   @include table-selector();
 }
 
-// @TODO this is an adhoc, should be fixed globally
 #GroupSubscriptionListTable_wrapper {
   .dataTables_length {
     padding-left: $crm-standard-gap;
