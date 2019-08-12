@@ -20,6 +20,7 @@
 }
 
 .ui-dialog-content {
+  > form,
   .messages.no-popup {
     margin-bottom: $crm-standard-gap;
   }
