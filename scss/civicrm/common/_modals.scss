@@ -20,9 +20,12 @@
 }
 
 .ui-dialog-content {
-  > form,
   .messages.no-popup {
     margin-bottom: $crm-standard-gap;
+  }
+
+  > form .crm-accordion-wrapper:last-of-type.collapsed > .crm-accordion-header {
+    border-bottom: 0;
   }
 
   table {
