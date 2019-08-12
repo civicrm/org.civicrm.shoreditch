@@ -1,0 +1,25 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+/**
+ * Fixes action buttons that are placed inside <TD>
+ * which makes them appear on two lines instead of just one.
+ *
+ * @SEE /civicrm/admin/report/register
+ */
+.crm-report-register-form-block tbody {
+  &,
+  > .crm-report-register-form-block-buttons {
+    &,
+    > td {
+      display: block;
+    }
+  }
+
+  > .crm-report-register-form-block-buttons:first-of-type {
+
+    .crm-submit-buttons {
+      padding-top: 0;
+      border-top: 0 !important;
+    }
+  }
+}
