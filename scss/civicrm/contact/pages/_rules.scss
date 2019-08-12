@@ -1,50 +1,6 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 .page-civicrm-civirule {
-  position: relative;
-
-  /**
-   * Apply shadows to the <h3> + .crm-block pair
-   */
-  // This is needed to make elements clickable
-  z-index: -3;
-
-  // This is needed because otherwise shadows will be cut
-  #page {
-    z-index: -2;
-  }
-
-  #crm-main-content-wrapper {
-    position: relative;
-    z-index: 0;
-  }
-
-  h3,
-  h3 + .crm-block {
-    box-shadow: none !important;
-    position: relative;
-
-    &::before {
-      border-radius: $crm-block-border-radius;
-      bottom: 0;
-      box-shadow: $box-shadow;
-      content: '';
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: -1;
-    }
-  }
-
-  .crm-container .crm-form-block {
-    border-radius: 0 0 #{$crm-block-border-radius} #{$crm-block-border-radius} !important;
-
-    .crm-submit-buttons {
-      background-color: transparent !important;
-    }
-  }
-
   // "CiviRules Add Rule" and "CiviRules Update Rule" pages
   &.page-civicrm-civirule-form-rule {
     .crm-civirule-rule_label-block,
