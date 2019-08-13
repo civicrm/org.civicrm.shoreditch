@@ -15,8 +15,8 @@
   z-index: 0;
 }
 
-h3,
-h3 + .crm-block {
+h3:not(.crm-severity-info),
+h3:not(.crm-severity-info) + .crm-block {
   // Discard direct shadows
   box-shadow: none !important;
   position: relative;
