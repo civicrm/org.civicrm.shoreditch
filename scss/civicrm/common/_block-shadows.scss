@@ -39,13 +39,13 @@
 }
 
 h3::before {
-  border-radius: #{$crm-block-border-radius} #{$crm-block-border-radius} 0 0 !important;
+  border-radius: #{$border-radius-base} #{$border-radius-base} 0 0 !important;
 }
 
 h3 + .crm-form-block {
   &,
   &::before {
-    border-radius: 0 0 #{$crm-block-border-radius} #{$crm-block-border-radius} !important;
+    border-radius: 0 0 #{$border-radius-base} #{$border-radius-base} !important;
   }
 
   .crm-submit-buttons {
