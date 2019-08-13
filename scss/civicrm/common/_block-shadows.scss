@@ -15,22 +15,26 @@
   z-index: 0;
 }
 
-h3:not(.crm-severity-info),
-h3:not(.crm-severity-info) + .crm-block {
-  // Discard direct shadows
-  box-shadow: none !important;
-  position: relative;
+*:not(.crm-form-block) {
+  > h3:not(.crm-severity-info) {
+    &,
+    + .crm-block {
+      // Discard direct shadows
+      box-shadow: none !important;
+      position: relative;
 
-  &::before {
-    bottom: 0;
-    box-shadow: $box-shadow;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    // This is needed to place the shadows underneath so they do not overlap
-    z-index: -1;
+      &::before {
+        bottom: 0;
+        box-shadow: $box-shadow;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        // This is needed to place the shadows underneath so they do not overlap
+        z-index: -1;
+      }
+    }
   }
 }
 
