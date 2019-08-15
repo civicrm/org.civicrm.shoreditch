@@ -24,6 +24,15 @@
               display: none;
             }
           }
+
+          > .crm-accordion-wrapper {
+            margin-left: -#{$crm-standard-gap + $crm-table-form-cell-padding};
+            margin-right: -#{$crm-table-form-cell-padding};
+
+            .crm-accordion-body {
+              box-shadow: none;
+            }
+          }
         }
 
         &:nth-of-type(1) {
