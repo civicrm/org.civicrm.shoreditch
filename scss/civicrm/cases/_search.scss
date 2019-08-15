@@ -43,6 +43,7 @@
                 display: block;
 
                 + input {
+                  // Discard two hardcoded &nbsp; characters in CiviCRM
                   margin-left: -0.6em;
                 }
               }
