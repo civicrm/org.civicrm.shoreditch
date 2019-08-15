@@ -2,73 +2,74 @@
 
 #{civi-page('case-search')} {
   .crm-accordion-body .form-layout {
+    display: block;
     margin-top: $crm-standard-gap;
 
-    &,
-    tbody,
-    tr,
-    td {
+    > tbody:first-child {
       display: block;
-    }
 
-    tbody:first-child > tr {
-      td {
-        margin-left: $crm-standard-gap;
+      > tr {
+        display: block;
 
-        // Display labels as blocks for margins and paddings consistency
-        > label:first-child {
-          display: block;
-
-          // Remove <br>s after labels because labels are displayed as blocks
-          & + br {
-            display: none;
-          }
-        }
-      }
-
-      &:nth-of-type(1) {
         > td {
-          // Brings "Client Name or Email" and the input to individual lines
-          &:nth-of-type(1) {
-            label {
-              display: block;
+          display: block;
+          margin-left: $crm-standard-gap;
 
-              & + input {
-                margin-left: -0.6em;
-              }
+          // Display labels as blocks for margins and paddings consistency
+          > label:first-child {
+            display: block;
+
+            // Remove <br>s after labels because labels are displayed as blocks
+            + br {
+              display: none;
             }
           }
+        }
 
-          // Remove duplicate Search button
-          &:nth-of-type(2) {
-            display: none !important;
+        &:nth-of-type(1) {
+          > td {
+            // Brings "Client Name or Email" and the input to individual lines
+            &:nth-of-type(1) {
+              label {
+                display: block;
+
+                + input {
+                  margin-left: -0.6em;
+                }
+              }
+            }
+
+            // Remove duplicate Search button
+            &:nth-of-type(2) {
+              display: none !important;
+            }
           }
         }
-      }
 
-      // Discard paddings between dates labels and inputs
-      &:nth-of-type(3),
-      &:nth-of-type(4) {
-        > td {
-          &:first-child {
-            padding-bottom: 0;
-          }
+        // Discard paddings between dates labels and inputs
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          > td {
+            &:first-child {
+              padding-bottom: 0;
+            }
 
-          &:last-child {
-            padding-top: 0;
+            &:last-child {
+              padding-top: 0;
+            }
           }
         }
-      }
 
-      // Adds a gap between "Case Status" and "Search All Cases / Only My Cases"
-      #s2id_case_status_id {
-        margin-bottom: $crm-standard-gap;
-      }
+        // Adds a gap between "Case Status" and "Search All Cases / Only My Cases"
+        #s2id_case_status_id {
+          margin-bottom: $crm-standard-gap;
+        }
 
-      // Adds a gap between "Search All Cases / Only My Cases" and "Delete Cases"
-      label[for="case_deleted"] {
-        display: inline-block;
-        margin-top: $crm-standard-gap / 2;
+        // Adds a gap between "Search All Cases / Only My Cases" and "Delete Cases"
+        label[for='case_deleted'] {
+          display: inline-block;
+          margin-top: $crm-standard-gap / 2;
+        }
       }
     }
   }
