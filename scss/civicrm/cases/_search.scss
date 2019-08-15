@@ -1,0 +1,86 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+#{civi-page('case-search')} {
+  .crm-accordion-body .form-layout {
+    display: block;
+    margin-top: $crm-standard-gap;
+
+    > tbody:first-child {
+      display: block;
+
+      > tr {
+        display: block;
+
+        > td {
+          display: block;
+          margin-left: $crm-standard-gap;
+
+          // Display labels as blocks for margins and paddings consistency
+          > label:first-child {
+            display: block;
+
+            // Remove <br>s after labels because labels are displayed as blocks
+            + br {
+              display: none;
+            }
+          }
+
+          > .crm-accordion-wrapper {
+            margin-left: -#{$crm-standard-gap + $crm-table-form-cell-padding};
+            margin-right: -#{$crm-table-form-cell-padding};
+
+            .crm-accordion-body {
+              box-shadow: none;
+            }
+          }
+        }
+
+        &:nth-of-type(1) {
+          > td {
+            // Brings "Client Name or Email" and the input to individual lines
+            &:nth-of-type(1) {
+              label {
+                display: block;
+
+                + input {
+                  // Discard two hardcoded &nbsp; characters in CiviCRM
+                  margin-left: -0.6em;
+                }
+              }
+            }
+
+            // Remove duplicate Search button
+            &:nth-of-type(2) {
+              display: none !important;
+            }
+          }
+        }
+
+        // Discard paddings between dates labels and inputs
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          > td {
+            &:first-child {
+              padding-bottom: 0;
+            }
+
+            &:last-child {
+              padding-top: 0;
+            }
+          }
+        }
+
+        // Adds a gap between "Case Status" and "Search All Cases / Only My Cases"
+        #s2id_case_status_id {
+          margin-bottom: $crm-standard-gap;
+        }
+
+        // Adds a gap between "Search All Cases / Only My Cases" and "Delete Cases"
+        label[for='case_deleted'] {
+          display: inline-block;
+          margin-top: $crm-standard-gap / 2;
+        }
+      }
+    }
+  }
+}

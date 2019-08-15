@@ -247,5 +247,19 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
     .select2-selection-limit {
       background: $crm-white;
     }
+
+    .Individual-icon {
+      background: none;
+      text-indent: 0;
+
+      &:before {
+        // Align with the original icon position
+        margin-left: 2px;
+        font-size: $font-size-medium;
+        display: block;
+        content: '\f007';
+        font-family: "FontAwesome";
+      }
+    }
   }
 }

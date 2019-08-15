@@ -225,7 +225,7 @@ input.crm-form-password {
   font-family: $font-family-base;
   font-size: $font-size-base;
   height: $input-height-small;
-  padding: 2px 10px;
+  padding: $crm-input-padding;
 
   &:focus {
     border-color: $input-border-focus;

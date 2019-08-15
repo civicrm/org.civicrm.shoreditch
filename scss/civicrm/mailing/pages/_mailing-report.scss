@@ -3,7 +3,7 @@
 #{civi-page('mailing-report')} {
   fieldset {
     background-color: $crm-white !important;
-    border-radius: $crm-block-border-radius;
+    border-radius: $border-radius-base;
     box-shadow: $box-shadow;
     margin-bottom: $crm-standard-gap;
     padding: $crm-standard-gap;
@@ -12,7 +12,7 @@
     legend {
       background-color: $gray-lighter !important;
       border-bottom: 1px solid $crm-grayblue-dark !important;
-      border-radius: $crm-block-border-radius $crm-block-border-radius 0 0;
+      border-radius: $border-radius-base $border-radius-base 0 0;
       color: $gray-darker !important;
       float: left;
       font-size: $font-size-h2 !important;
@@ -43,7 +43,7 @@
     @include table-selector();
 
     border: 0 !important;
-    border-radius: $crm-block-border-radius;
+    border-radius: $border-radius-base;
     margin-left: -#{$crm-standard-gap} !important;
     width: calc(100% + #{$crm-standard-gap * 2});
 

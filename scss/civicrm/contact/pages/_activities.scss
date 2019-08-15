@@ -1,7 +1,23 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder */
+
 .contact-activity-selector-activity {
   .status-overdue {
     td {
       color: $brand-danger !important;
+    }
+  }
+}
+
+.crm-activity-selector-activity .crm-absolute-date-range {
+  .crm-absolute-date-from,
+  .crm-absolute-date-to {
+    display: block;
+    margin-top: $crm-standard-gap / 2;
+
+    > label {
+      display: inline-block;
+      text-align: right;
+      width: $crm-standard-gap * 2;
     }
   }
 }

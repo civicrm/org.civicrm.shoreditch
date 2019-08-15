@@ -7,7 +7,7 @@
   // Makes the wrapper look like a container
   #crm-main-content-wrapper {
     background-color: $crm-white !important;
-    border-radius: $crm-block-border-radius;
+    border-radius: $border-radius-base;
     box-shadow: $box-shadow;
     padding: $crm-standard-gap;
   }
