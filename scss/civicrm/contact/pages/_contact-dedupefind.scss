@@ -60,4 +60,11 @@
   #{civi-dialog()} {
     min-width: 400px;
   }
+
+  #searchOptions input[type='text'] {
+    @include input-text();
+    border: solid 1px $crm-grayblue-darker;
+    height: $input-height-small;
+    padding: $crm-input-padding;
+  }
 }
