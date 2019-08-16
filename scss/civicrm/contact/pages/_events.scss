@@ -660,7 +660,13 @@
   box-shadow: $box-shadow;
 
   #alpha-filter,
- .dataTables_wrapper {
+  .dataTables_wrapper {
     box-shadow: none;
   }
+}
+
+// Edit Event -> Fees -> Discounts by Signup Date
+#discount [name='_qf_Fee_submit'] {
+  // The button has "cancel" class, but actually should be a primary button
+  @extend .btn-primary;
 }
