@@ -339,3 +339,7 @@ input.error {
     @include block-form();
   }
 }
+
+.crm-container > .crm-section.form-item {
+  margin-bottom: $crm-gap-medium;
+}
