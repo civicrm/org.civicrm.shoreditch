@@ -646,3 +646,28 @@
     }
   }
 }
+
+// Edit Event -> Fees
+// @see /civicrm/event/manage/fee?reset=1&action=update&id=<id>
+#event-fees [class*='crm-event-manage-fee-form-block-value'] input {
+  // Make it half width so there is a room for the currency sign
+  width: 50%;
+}
+
+// Manage Events
+// @see /civicrm/event/manage?reset=1
+// @todo see if can be applied globally
+#event_status_id.crm-manage-events {
+  box-shadow: $box-shadow;
+
+  #alpha-filter,
+  .dataTables_wrapper {
+    box-shadow: none;
+  }
+}
+
+// Edit Event -> Fees -> Discounts by Signup Date
+#discount [name='_qf_Fee_submit'] {
+  // The button has "cancel" class, but actually should be a primary button
+  @extend .btn-primary;
+}
