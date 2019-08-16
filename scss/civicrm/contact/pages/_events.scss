@@ -648,6 +648,7 @@
 }
 
 // Edit Event -> Fees
+// @see /civicrm/event/manage/fee?reset=1&action=update&id=<id>
 #event-fees [class*='crm-event-manage-fee-form-block-value'] input {
   // Make it half width so there is a room for the currency sign
   width: 50%;
