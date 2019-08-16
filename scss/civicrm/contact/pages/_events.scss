@@ -653,3 +653,14 @@
   // Make it half width so there is a room for the currency sign
   width: 50%;
 }
+
+// Manage Events
+// @see /civicrm/event/manage?reset=1
+#event_status_id.crm-manage-events {
+  box-shadow: $box-shadow;
+
+  #alpha-filter,
+ .dataTables_wrapper {
+    box-shadow: none;
+  }
+}
