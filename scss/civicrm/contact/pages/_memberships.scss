@@ -717,8 +717,15 @@
   }
 }
 
-#{civi-page('member')} .CRM_Member_Form_Search h3:first-of-type {
-  margin-top: 0;
+#{civi-page('member')} {
+  .CRM_Member_Form_Search h3:first-of-type {
+    margin-top: 0;
+  }
+
+  // Fixes the space between tables at /civicrm/member?reset=1
+  table.report + .spacer {
+    height: $crm-standard-gap;
+  }
 }
 
 // Adhoc: fixes the <h3> margin
