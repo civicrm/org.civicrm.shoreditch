@@ -52,4 +52,8 @@ h3 + .crm-form-block {
     // Need to discard the background otherwise this block will have sharp edges
     background-color: transparent !important;
   }
+
+  .dataTables_wrapper {
+    box-shadow: none;
+  }
 }
