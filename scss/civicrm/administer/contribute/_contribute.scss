@@ -3,12 +3,8 @@
 &#{civi-page('admin-contribute')},
 &#{civi-page('admin-pcp')} {
   #alpha-filter {
-    @include box-shadow($box-shadow);
-    background: $crm-white;
-    border-radius: $border-radius-base $border-radius-base 0 0;
+    @include alpha-filter();
     margin-bottom: 0;
-    margin-top: 10px;
-    padding: 15px 10px 10px;
   }
 
   #crm-main-content-wrapper {

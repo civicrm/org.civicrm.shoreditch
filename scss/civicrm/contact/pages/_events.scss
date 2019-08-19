@@ -500,12 +500,8 @@
     }
   }
 
-  div#alpha-filter {
-    @include box-shadow($box-shadow);
-    background: $crm-white;
-    border-radius: $border-radius-base $border-radius-base 0 0;
-    margin-bottom: 0;
-    padding: 15px 10px 10px;
+  #alpha-filter {
+    @include alpha-filter();
   }
 
   .action-link {

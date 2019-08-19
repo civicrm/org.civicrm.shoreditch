@@ -1,0 +1,7 @@
+@mixin alpha-filter() {
+  @include box-shadow($box-shadow);
+  background: $crm-white;
+  border-radius: $border-radius-base $border-radius-base 0 0;
+  margin-bottom: 0;
+  padding: #{$crm-standard-gap / 4 * 3} #{$crm-standard-gap / 2} #{$crm-standard-gap / 2};
+}
