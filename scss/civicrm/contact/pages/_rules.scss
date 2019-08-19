@@ -1,6 +1,6 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-.page-civicrm-civirule {
+#{civi-page('civirule')} {
   // "CiviRules Add Rule" and "CiviRules Update Rule" pages
   &.page-civicrm-civirule-form-rule {
     .crm-civirule-rule_label-block,
@@ -60,6 +60,7 @@
   // "CiviRules Add Condition", "CiviRules Add Action" and
   // "CiviRules Edit Action Parameters" pages
   &.page-civicrm-civirule-form-rule-condition,
+  &.page-civicrm-civirule-form-condition,
   &.page-civicrm-civirule-form-rule-action,
   &.page-civicrm-civirule-form-action {
     .crm-form-block {
@@ -84,15 +85,6 @@
     #XWeekDay_time_hour,
     #XWeekDay_time_minute {
       width: 20px;
-    }
-  }
-
-  // "CiviRules Edit Condition parameters" pages
-  &.page-civicrm-civirule-form-condition-datachangedcomparison,
-  &.page-civicrm-civirule-form-condition-datacomparison,
-  &.page-civicrm-civirule-form-condition-activity-contact-record-type {
-    .crm-form-block {
-      @include block-form();
     }
   }
 }
