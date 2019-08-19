@@ -1,6 +1,6 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
-.page-civicrm-civirule {
+#{civi-page('civirule')} {
   // "CiviRules Add Rule" and "CiviRules Update Rule" pages
   &.page-civicrm-civirule-form-rule {
     .crm-civirule-rule_label-block,
