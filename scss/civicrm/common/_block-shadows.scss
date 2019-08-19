@@ -9,13 +9,14 @@
  * just a single shadow underneath the pair.
  */
 
-// Need that otherwise shadows will be cropped on the top and the bottom
-#crm-main-content-wrapper {
-  position: relative;
-  z-index: 0;
-}
-
-*:not(.crm-form-block) {
+// We need this mixin because we want to apply these styles to the
+// h3+.crm-block pairs that not only are deep children of .crm-container,
+// but are also *direct* children of that div. The `.crm-container` is added
+// by Gulp, so we cannot use `&` operator because there is no actual parent
+// in SCSS, hence we have to use this mixin to use it for both cases:
+// .crm-container >h3:not(.crm-severity-info)
+// .crm-container *:not(.crm-form-block)>h3:not(.crm-severity-info)
+@mixin block-shadows-for-h3-crm-form-block-pair () {
   > h3:not(.crm-severity-info) {
     &,
     + .crm-block {
@@ -36,6 +37,19 @@
       }
     }
   }
+}
+
+// Need that otherwise shadows will be cropped on the top and the bottom
+#crm-main-content-wrapper,
+#crm-container {
+  position: relative;
+  z-index: 0;
+}
+
+@include block-shadows-for-h3-crm-form-block-pair();
+
+*:not(.crm-form-block) {
+  @include block-shadows-for-h3-crm-form-block-pair();
 }
 
 h3::before {
