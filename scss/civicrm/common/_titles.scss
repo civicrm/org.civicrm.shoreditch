@@ -19,6 +19,7 @@ h3 {
 .crm-form-block {
   > h3:first-child {
     @include panel-header();
+    box-shadow: none;
     margin-bottom: 10px;
   }
 
