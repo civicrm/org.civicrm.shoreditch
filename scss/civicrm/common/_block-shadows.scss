@@ -1,7 +1,7 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 /**
- * Applies proper shadows to the <h3> + <div class="crm-block"> pair.
+ * Applies proper shadows to the <h3> + <div class="crm-block"> (and others) pairs.
  *
  * @NOTE
  * If you apply shadows to these elements directly (not via :before pseudoclass),
@@ -20,7 +20,9 @@
   > h3:not(.crm-severity-info) {
     &,
     + .crm-block,
-    + .form-item {
+    + .form-item,
+    + .dataTables_wrapper,
+    + script + .dataTables_wrapper {
       position: relative;
 
       // Discard direct shadows
@@ -70,19 +72,23 @@ h3::before {
   border-radius: #{$border-radius-base} #{$border-radius-base} 0 0 !important;
 }
 
-h3 + .crm-form-block,
-h3 + .form-item {
-  &,
-  &::before {
-    border-radius: 0 0 #{$border-radius-base} #{$border-radius-base} !important;
-  }
+h3 {
+  + .crm-form-block,
+  + .form-item,
+  + .dataTables_wrapper,
+  + script + .dataTables_wrapper {
+    &,
+    &::before {
+      border-radius: 0 0 #{$border-radius-base} #{$border-radius-base} !important;
+    }
 
-  .crm-submit-buttons {
-    // Need to discard the background otherwise this block will have sharp edges
-    background-color: transparent !important;
-  }
+    .crm-submit-buttons {
+      // Need to discard the background otherwise this block will have sharp edges
+      background-color: transparent !important;
+    }
 
-  .dataTables_wrapper {
-    box-shadow: none;
+    .dataTables_wrapper {
+      box-shadow: none;
+    }
   }
 }
