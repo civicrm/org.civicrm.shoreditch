@@ -966,3 +966,18 @@ form.CRM_Contribute_Form_ContributionCharts {
     }
   }
 }
+
+.contact-summary-contribute-tab {
+  .ui-tabs-nav {
+    background-color: $crm-white;
+    border: solid 1px $crm-grayblue-dark;
+
+    .ui-tabs-tab {
+      background-color: transparent;
+
+      &.ui-tabs-active {
+        background-color: $gray-light;
+      }
+    }
+  }
+}
