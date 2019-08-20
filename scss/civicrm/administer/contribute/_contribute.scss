@@ -2,16 +2,9 @@
 
 &#{civi-page('admin-contribute')},
 &#{civi-page('admin-pcp')} {
-  .crm-container {
-    div#alpha-filter {
-      @include box-shadow($box-shadow);
-      background: $crm-white;
-      border-bottom: 1px solid $crm-grayblue-dark;
-      border-radius: $border-radius-base $border-radius-base 0 0;
-      margin-bottom: 0;
-      margin-top: 10px;
-      padding: 15px 10px 10px;
-    }
+  #alpha-filter {
+    @include alpha-filter();
+    margin-bottom: 0;
   }
 
   #crm-main-content-wrapper {
@@ -22,7 +15,22 @@
   }
 }
 
+&#{civi-page('admin-pcp')} {
+  #alpha-filter {
+    border-bottom: 1px solid $crm-grayblue-dark;
+  }
+}
+
 &#{civi-page('admin-contribute')} {
+  #configure_contribution_page {
+    box-shadow: $box-shadow;
+
+    #alpha-filter,
+    .dataTables_wrapper {
+      box-shadow: none;
+    }
+  }
+
   .crm-actions-ribbon {
     margin-bottom: 20px !important;
   }

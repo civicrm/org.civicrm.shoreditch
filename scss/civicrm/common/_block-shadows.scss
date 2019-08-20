@@ -1,7 +1,7 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
 
 /**
- * Applies proper shadows to the <h3> + <div class="crm-block"> pair.
+ * Applies proper shadows to the <h3> + <div class="crm-block"> (and others) pairs.
  *
  * @NOTE
  * If you apply shadows to these elements directly (not via :before pseudoclass),
@@ -19,10 +19,17 @@
 @mixin block-shadows-for-h3-crm-form-block-pair () {
   > h3:not(.crm-severity-info) {
     &,
-    + .crm-block {
-      // Discard direct shadows
-      box-shadow: none !important;
+    + .crm-block,
+    + .form-item,
+    + .dataTables_wrapper,
+    + script + .dataTables_wrapper {
       position: relative;
+
+      // Discard direct shadows
+      &,
+      > .selector {
+        box-shadow: none !important;
+      }
 
       &::before {
         bottom: 0;
@@ -34,6 +41,15 @@
         top: 0;
         // This is needed to place the shadows underneath so they do not overlap
         z-index: -1;
+      }
+    }
+
+    // Discard unneeded paddings and borders
+    + .form-item {
+      padding-bottom: 0;
+
+      > .selector tbody tr:last-child {
+        border-bottom: 0 !important;
       }
     }
   }
@@ -56,18 +72,23 @@ h3::before {
   border-radius: #{$border-radius-base} #{$border-radius-base} 0 0 !important;
 }
 
-h3 + .crm-form-block {
-  &,
-  &::before {
-    border-radius: 0 0 #{$border-radius-base} #{$border-radius-base} !important;
-  }
+h3 {
+  + .crm-form-block,
+  + .form-item,
+  + .dataTables_wrapper,
+  + script + .dataTables_wrapper {
+    &,
+    &::before {
+      border-radius: 0 0 #{$border-radius-base} #{$border-radius-base} !important;
+    }
 
-  .crm-submit-buttons {
-    // Need to discard the background otherwise this block will have sharp edges
-    background-color: transparent !important;
-  }
+    .crm-submit-buttons {
+      // Need to discard the background otherwise this block will have sharp edges
+      background-color: transparent !important;
+    }
 
-  .dataTables_wrapper {
-    box-shadow: none;
+    .dataTables_wrapper {
+      box-shadow: none;
+    }
   }
 }
