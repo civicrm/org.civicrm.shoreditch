@@ -19,10 +19,8 @@
 @mixin block-shadows-for-h3-crm-form-block-pair () {
   > h3:not(.crm-severity-info) {
     &,
-    + .crm-block,
-    + .form-item,
-    + .dataTables_wrapper,
-    + script + .dataTables_wrapper {
+    + div,
+    + script + div {
       position: relative;
 
       // Discard direct shadows
@@ -73,10 +71,8 @@ h3::before {
 }
 
 h3 {
-  + .crm-form-block,
-  + .form-item,
-  + .dataTables_wrapper,
-  + script + .dataTables_wrapper {
+  + div,
+  + script + div {
     &,
     &::before {
       border-radius: 0 0 #{$border-radius-base} #{$border-radius-base} !important;
