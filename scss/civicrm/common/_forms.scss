@@ -343,3 +343,7 @@ input.error {
 .crm-container > .crm-section.form-item {
   margin-bottom: $crm-gap-medium;
 }
+
+input.hasDatepicker::placeholder {
+  color: transparent;
+}
