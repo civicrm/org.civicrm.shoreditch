@@ -262,6 +262,7 @@
 
     .crm-summary-display_name {
       float: left;
+      margin-left: $crm-standard-gap;
       padding: 22px 0; // centering name vertically
     }
 
@@ -610,6 +611,10 @@
 
 
 .crm-inline-edit {
+  &.form {
+    background-color: $crm-gray-clay !important;
+  }
+
   form {
     .crm-content {
       margin-left: 0 !important;
