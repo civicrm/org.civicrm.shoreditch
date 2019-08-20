@@ -137,6 +137,18 @@
 }
 
 #{civi-page('group')} {
+  .crm-group-search-form-block #DataTables_Table_0_wrapper {
+    box-shadow: none;
+    margin-left: -#{$crm-standard-gap};
+    margin-right: -#{$crm-standard-gap};
+    margin-top: $crm-standard-gap * 2;
+
+    .crm-datatable-pager-top {
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+
   .help {
     margin: 0 0 20px;
 
