@@ -286,6 +286,16 @@
   }
 }
 
+.CRM_Contribute_Form_AdditionalPayment {
+  border: solid 1px $gray-lighter;
+  border-radius: $border-radius-base;
+
+  // Makes amount and currency appear on the same line
+  tbody > tr > td:first-child {
+    white-space: nowrap;
+  }
+}
+
 .CRM_Member_Form_Search {
   .crm-button-type-refresh {
     .crm-i {
