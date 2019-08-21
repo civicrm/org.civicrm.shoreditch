@@ -280,6 +280,10 @@
   .action-link {
     display: none;
   }
+
+  .crm-contact-contribute-contributions > table.selector {
+    margin-top: -#{$crm-standard-gap} !important;
+  }
 }
 
 .CRM_Member_Form_Search {
