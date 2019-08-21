@@ -1,7 +1,9 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
+
 .help,
 #help {
   background: $alert-success-bg;
-  border: none;
+  border: solid 1px $brand-success;
   border-radius: $border-radius-base;
   color: $gray-darker;
   padding: 10px;

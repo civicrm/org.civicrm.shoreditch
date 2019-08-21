@@ -137,6 +137,26 @@
 }
 
 #{civi-page('group')} {
+  #searchForm {
+    border: solid 1px $crm-grayblue-dark;
+    border-radius: 0 0 $panel-border-radius $panel-border-radius;
+    border-top: 0;
+    margin-bottom: $crm-standard-gap / 2;
+    padding: $crm-standard-gap;
+  }
+
+  .crm-group-search-form-block #DataTables_Table_0_wrapper {
+    box-shadow: none;
+    margin-left: -#{$crm-standard-gap};
+    margin-right: -#{$crm-standard-gap};
+    margin-top: $crm-standard-gap * 2;
+
+    .crm-datatable-pager-top {
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+
   .help {
     margin: 0 0 20px;
 
@@ -146,8 +166,9 @@
   }
 
   .crm-submit-buttons {
+    border-top: 0 !important;
     margin-bottom: 20px;
-    padding: 0;
+    padding: 0 !important;
 
     a.newGroup.button {
       @extend %btn-civi-primary;

@@ -776,6 +776,15 @@
 }
 
 form.CRM_Contribute_Form_ContributionCharts {
+  h3 + div {
+    background-color: $crm-white;
+  }
+
+  .crm-pager,
+  table.selector {
+    box-shadow: none !important;
+  }
+
   .ui-tabs-nav {
     background: $crm-white;
     border: 0;
@@ -847,17 +856,28 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   #mainTabContainer {
     @include box-shadow($crm-form-layout-shadow-lower);
+
+    + .spacer {
+      height: $crm-standard-gap;
+    }
   }
 
   .crm-pager {
-    @include box-shadow($crm-form-layout-shadow-lower);
-    background: $gray-lighter;
     line-height: 1.7em;
     margin: 0;
     padding: 7px 0;
 
     > .element-right {
+      margin-right: $crm-standard-gap !important;
       margin-top: 3px;
+    }
+
+    + .form-item {
+      padding: $crm-standard-gap !important;
+    }
+
+    .crm-pager-nav {
+      padding-left: 0;
     }
   }
 
@@ -874,7 +894,6 @@ form.CRM_Contribute_Form_ContributionCharts {
     > tbody > tr > td + .crm-pager {
       border-radius: 0 0 $panel-border-radius $panel-border-radius;
       border-top: 1px solid $crm-background;
-      box-shadow: $crm-form-item-shadow;
       margin-top: 0;
     }
 
@@ -963,6 +982,21 @@ form.CRM_Contribute_Form_ContributionCharts {
   #upload-file {
     .help {
       margin: $crm-panel-nested-indent;
+    }
+  }
+}
+
+.contact-summary-contribute-tab {
+  .ui-tabs-nav {
+    background-color: $crm-white;
+    border: solid 1px $crm-grayblue-dark;
+
+    .ui-tabs-tab {
+      background-color: transparent;
+
+      &.ui-tabs-active {
+        background-color: $gray-light;
+      }
     }
   }
 }
