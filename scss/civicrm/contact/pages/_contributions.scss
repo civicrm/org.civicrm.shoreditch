@@ -856,6 +856,10 @@ form.CRM_Contribute_Form_ContributionCharts {
 
   #mainTabContainer {
     @include box-shadow($crm-form-layout-shadow-lower);
+
+    + .spacer {
+      height: $crm-standard-gap;
+    }
   }
 
   .crm-pager {
