@@ -91,7 +91,7 @@
       margin: 20px 0;
 
       td {
-        padding: 10px 20px !important;
+        padding: #{$crm-standard-gap / 2} !important;
       }
     }
   }
