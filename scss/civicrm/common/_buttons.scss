@@ -408,3 +408,12 @@ button {
     }
   }
 }
+
+// We style only plain buttons which are <div>s with `crm-button` class
+// and do *not* have `crm-button-type-*` class. <span>s should not be touched.
+// We do *not* extend to `%btn-civi` because we want the height to be preserved.
+// Because of that we need to additionally discard the text shadow though.
+div.crm-button:not([class*='crm-button-type']) {
+  @extend %btn-civi-primary;
+  text-shadow: none;
+}
