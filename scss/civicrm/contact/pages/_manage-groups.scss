@@ -286,16 +286,6 @@
   }
 
   .ui-dialog .CRM_Group_Form_Edit .crm-form-block {
-    margin: 0 -20px;
-
-    .action-link {
-      margin-left: 20px;
-    }
-
-    .help {
-      margin: 10px 20px 20px;
-    }
-
     table tr {
       border-bottom: 0 !important;
 
@@ -309,10 +299,6 @@
           padding: 8px 0;
         }
       }
-    }
-
-    .crm-submit-buttons {
-      margin: 20px 0 0 !important;
     }
 
     #s2id_visibility::after {
