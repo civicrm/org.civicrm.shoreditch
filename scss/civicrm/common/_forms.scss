@@ -347,3 +347,7 @@ input.error {
 input.hasDatepicker::placeholder {
   color: transparent;
 }
+
+fieldset:not(.collapsed) > legend {
+  margin-bottom: $crm-standard-gap !important;
+}
