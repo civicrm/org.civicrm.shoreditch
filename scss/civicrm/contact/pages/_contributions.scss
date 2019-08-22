@@ -550,6 +550,15 @@
 }
 
 .CRM_Contribute_Form_Contribution {
+  // Hides "Alternatively, you can use a price set" text
+  #totalAmountBlock {
+    display: none !important;
+  }
+
+  #priceset {
+    margin-top: $crm-standard-gap / 2;
+  }
+
   .crm-accordion-header {
     font-family: $font-family-base;
     font-weight: $crm-font-weight-h1 !important;
