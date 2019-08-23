@@ -846,7 +846,12 @@ form.CRM_Contribute_Form_ContributionCharts {
       box-shadow: none;
 
       td {
-        padding: 10px 20px;
+        padding: #{$crm-standard-gap / 2} $crm-standard-gap;
+      }
+
+      th {
+        padding-left: $crm-standard-gap;
+        padding-right: $crm-standard-gap;
       }
     }
 
