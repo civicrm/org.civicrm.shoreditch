@@ -149,6 +149,12 @@
     box-shadow: $box-shadow;
     margin-bottom: 20px;
 
+    // Sometimes there are .dataTables_wrapper > .dataTables_wrapper
+    // blocks that produce double shadows
+    > .dataTables_wrapper {
+      box-shadow: none;
+    }
+
     table.dataTable {
       box-shadow: none !important;
       max-width: 100%;
