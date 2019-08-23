@@ -13,3 +13,14 @@
     border-color: $brand-primary;
   }
 }
+
+@mixin input-text-bootstrap() {
+  @include input-text();
+  @include input-text-bootstrap-styles();
+}
+
+@mixin input-text-bootstrap-styles() {
+  border: solid 1px $crm-grayblue-darker;
+  height: $input-height-small;
+  padding: $crm-input-padding;
+}

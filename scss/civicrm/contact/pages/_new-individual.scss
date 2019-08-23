@@ -267,4 +267,11 @@
     font-size: $font-size-base;
     font-weight: $crm-font-weight-bold;
   }
+
+  // Styling Postcode Lookup extension input
+  #addressLookup input {
+    @include input-text-bootstrap();
+    // Makes the placeholder fully visible
+    min-width: 220px;
+  }
 }
