@@ -59,7 +59,7 @@
         td {
           &.label {
             color: $gray-darker;
-            font-weight: 600;
+            font-weight: $crm-font-weight-bold;
           }
         }
       }

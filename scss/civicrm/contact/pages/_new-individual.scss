@@ -248,4 +248,23 @@
       }
     }
   }
+
+  #contactDetails {
+    tr:not([id]) {
+      // Makes labels bold. We cannot use a specific selector because
+      // labels are just text inside <td>s. We also ignore <tr>s with "id"
+      // attributes because those definitely do not contain labels
+      font-weight: $crm-font-weight-bold;
+
+      // Discarding bold font for links
+      a {
+        font-weight: $crm-font-weight-normal;
+      }
+    }
+  }
+
+  .email-signature > .collapsible-title {
+    font-size: $font-size-base;
+    font-weight: $crm-font-weight-bold;
+  }
 }

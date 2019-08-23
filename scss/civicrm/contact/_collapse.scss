@@ -1,9 +1,9 @@
 // Collapse
 .crm-collapsible {
   background: $crm-white;
-  box-sizing: border-box;
-  box-shadow: $box-shadow;
   border-radius: 0;
+  box-shadow: $box-shadow;
+  box-sizing: border-box;
   margin-top: 14px;
   padding: 15px 20px !important;
 
@@ -19,18 +19,18 @@
 
   .collapsible-title {
     background-image: none !important;
-    color: $gray-darker;
-    font-family: "Open Sans";
-    font-size: 18px;
-    font-weight: 600;
-    padding: 0;
     border: 0;
+    color: $gray-darker;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: $crm-font-weight-bold;
+    padding: 0;
 
     &:hover {
       color: $gray-darker;
     }
 
-    &:before {
+    &::before {
       @include fa-icon(13px, '\f078');
       margin-right: 5px;
     }
@@ -38,7 +38,7 @@
 
   &.collapsed {
     .collapsible-title {
-      &:before {
+      &::before {
         @include fa-icon(13px, '\f054');
       }
     }
