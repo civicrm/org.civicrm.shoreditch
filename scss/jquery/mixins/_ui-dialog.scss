@@ -119,7 +119,7 @@
 
     border: 0 !important;
     border-bottom: 1px solid $crm-grayblue-dark !important;
-    box-shadow: $box-shadow;
+    box-shadow: $crm-box-shadow-light;
     color: $gray-darker !important;
     font-family: $font-family-base;
     position: relative;
@@ -190,7 +190,7 @@
     background: $gray-lighter;
     border-radius: 0 0 $border-radius-base $border-radius-base;
     border-top: 1px solid $crm-grayblue-dark !important;
-    box-shadow: $box-shadow;
+    box-shadow: $crm-box-shadow-light;
     display: block;
     font-family: $font-family-base;
     margin-left: 0;
