@@ -1,7 +1,7 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id, scss/at-extend-no-missing-placeholder, property-no-vendor-prefix */
 
 @mixin panel-header() {
-  @include box-shadow($crm-contribute-form-shadow);
+  @include box-shadow($box-shadow);
   background: $gray-lighter;
   border-bottom: 1px solid $crm-grayblue-dark;
   border-radius: $border-radius-base $border-radius-base 0 0;
