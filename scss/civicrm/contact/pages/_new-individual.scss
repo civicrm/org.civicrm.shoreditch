@@ -112,6 +112,7 @@
   }
 
   .contact_information-section {
+    position: relative;
     table-layout: fixed;
 
     tr {
@@ -125,6 +126,25 @@
         }
       }
     }
+
+    .email-signature {
+      // Position the "> Signature" button to the right side of the table
+      > .collapsible-title {
+        position: absolute;
+        right: 0;
+        top: $crm-standard-gap;
+        // We need to discard the width to attach the "button"
+        // to the very right edge of the table. Because it is not overflown,
+        // it still we be visible and clickable
+        width: 0;
+      }
+
+      #signatureBlock1 {
+        margin-top: $crm-standard-gap / 2;
+      }
+    }
+
+
   }
 
   #commPrefs {
