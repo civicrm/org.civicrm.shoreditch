@@ -351,3 +351,8 @@ input.hasDatepicker::placeholder {
 fieldset:not(.collapsed) > legend {
   margin-bottom: $crm-standard-gap !important;
 }
+
+.crm-container .crm-collapsible .collapsible-title {
+  font-size: $font-size-base;
+  padding: #{$crm-standard-gap / 2} $crm-standard-gap;
+}

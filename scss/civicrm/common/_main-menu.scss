@@ -10,15 +10,24 @@
 
   li {
     line-height: $item-line-height;
-    
+
     a {
       color: $gray-darker;
-    } 
+    }
+  }
+
+  #crm-qsearch > a:first-child {
+    background-color: $gray-lighter;
   }
 
   #crm-qsearch-input {
-    border-radius: $border-radius-base;
+    background-color: transparent;
+    border: 0;
     font-family: $font-family-base;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .crm-i {
@@ -98,7 +107,7 @@
     font-family: $font-family-base;
     font-size: $font-size-base;
     padding: $crm-main-menu-padding-base 0;
-    
+
     .ui-menu-item-wrapper {
       padding: $crm-main-menu-padding-small ($crm-main-menu-padding-base * 2) $crm-main-menu-padding-small $crm-main-menu-padding-base;
     }
@@ -108,5 +117,5 @@
       border: 0;
       margin: 0;
     }
-  }  
+  }
 }
