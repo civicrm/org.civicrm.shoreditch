@@ -9,6 +9,28 @@
  * just a single shadow underneath the pair.
  */
 
+@mixin block-shadows-for-pair () {
+  position: relative;
+
+  // Discard direct shadows
+  &,
+  > .selector {
+    box-shadow: none !important;
+  }
+
+  &::before {
+    bottom: 0;
+    box-shadow: $box-shadow;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    // This is needed to place the shadows underneath so they do not overlap
+    z-index: -1;
+  }
+}
+
 // We need this mixin because we want to apply these styles to the
 // h3+.crm-block pairs that not only are deep children of .crm-container,
 // but are also *direct* children of that div. The `.crm-container` is added
@@ -21,25 +43,7 @@
     &,
     + div,
     + script + div {
-      position: relative;
-
-      // Discard direct shadows
-      &,
-      > .selector {
-        box-shadow: none !important;
-      }
-
-      &::before {
-        bottom: 0;
-        box-shadow: $box-shadow;
-        content: '';
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        // This is needed to place the shadows underneath so they do not overlap
-        z-index: -1;
-      }
+      @include block-shadows-for-pair();
     }
 
     // Discard unneeded paddings and borders
@@ -50,6 +54,13 @@
         border-bottom: 0 !important;
       }
     }
+  }
+}
+
+*:not(.crm-accordion-wrapper) > .crm-accordion-header {
+  &,
+  + .crm-accordion-body {
+    @include block-shadows-for-pair();
   }
 }
 

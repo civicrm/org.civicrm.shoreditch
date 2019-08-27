@@ -3,13 +3,13 @@
 .page-civicrm {
   %block-with-shadow {
     background: $crm-white;
-    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow;
   }
 
   #crm-main-content-wrapper {
     background: $crm-background !important;
   }
-  
+
   .crm-container {
     .crm-form-block {
       @extend %block-with-shadow;

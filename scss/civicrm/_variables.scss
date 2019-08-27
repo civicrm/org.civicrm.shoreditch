@@ -9,8 +9,8 @@ $crm-control-height: 30px;
 $crm-main-menu-padding-base: 13px;
 $crm-main-menu-padding-small: 8px;
 
+$crm-box-shadow-light: 0 0 16px 1px rgba(0, 0, 0, 0.1);
 $crm-checkbox-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
-$crm-contribute-form-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
 $crm-form-item-shadow: 0 3px 6px 0 rgba(48, 40, 40, 0.25);
 $crm-form-layout-shadow: 0 3px 18px 0 rgba(48, 40, 40, 0.25);
 $crm-form-layout-shadow-lower: 0 8px 18px 0 rgba(48, 40, 40, 0.25);
@@ -26,6 +26,9 @@ $crm-cancel-color: #363342;
 $crm-light-gray-color: #818c97;
 
 $font-family-fontawesome: 'FontAwesome';
+
+$crm-font-weight-normal: 400;
+$crm-font-weight-bold: 600;
 
 $crm-min-width: 1005px;
 $crm-max-width: 1504px;

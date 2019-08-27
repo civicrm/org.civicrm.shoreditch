@@ -163,4 +163,8 @@
   .dataTables_wrapper {
     box-shadow: none;
   }
+
+  .crm-form-block h3 {
+    padding: $crm-table-form-cell-padding 0 !important;
+  }
 }

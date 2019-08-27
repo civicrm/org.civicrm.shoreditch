@@ -28,7 +28,7 @@
   .CRM_Contribute_Form_Task_Delete {
     background: $crm-white;
     border-radius: $border-radius-small;
-    box-shadow: $crm-contribute-form-shadow;
+    box-shadow: $box-shadow;
     margin-top: 15px;
 
     + p {
@@ -550,6 +550,15 @@
 }
 
 .CRM_Contribute_Form_Contribution {
+  // Hides "Alternatively, you can use a price set" text
+  #totalAmountBlock {
+    display: none !important;
+  }
+
+  #priceset {
+    margin-top: $crm-standard-gap / 2;
+  }
+
   .crm-accordion-header {
     font-family: $font-family-base;
     font-weight: $crm-font-weight-h1 !important;
@@ -719,7 +728,7 @@
         td {
           &.label {
             color: $gray-darker;
-            font-weight: 600;
+            font-weight: $crm-font-weight-bold;
           }
 
           &:first-child {
@@ -837,7 +846,12 @@ form.CRM_Contribute_Form_ContributionCharts {
       box-shadow: none;
 
       td {
-        padding: 10px 20px;
+        padding: #{$crm-standard-gap / 2} $crm-standard-gap;
+      }
+
+      th {
+        padding-left: $crm-standard-gap;
+        padding-right: $crm-standard-gap;
       }
     }
 

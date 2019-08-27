@@ -116,10 +116,10 @@
 
   .ui-dialog-titlebar {
     @extend .modal-header; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
-    
+
     border: 0 !important;
     border-bottom: 1px solid $crm-grayblue-dark !important;
-    box-shadow: $crm-contribute-form-shadow;
+    box-shadow: $crm-box-shadow-light;
     color: $gray-darker !important;
     font-family: $font-family-base;
     position: relative;
@@ -127,7 +127,7 @@
 
     .ui-dialog-title {
       @extend .modal-title; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
-      
+
       font-family: $font-family-base;
       font-size: $font-size-h2;
       font-weight: $crm-font-weight-h2;
@@ -143,7 +143,7 @@
 
   .ui-dialog-content {
     @include calc(max-height, '100vh - 280px',!important);
-    
+
     background: $crm-white;
     color: $gray-darker;
     font-family: $font-family-base;
@@ -186,11 +186,11 @@
 
   .ui-dialog-buttonpane {
     @extend .modal-footer; /* stylelint-disable-line scss/at-extend-no-missing-placeholder */
-    
+
     background: $gray-lighter;
     border-radius: 0 0 $border-radius-base $border-radius-base;
     border-top: 1px solid $crm-grayblue-dark !important;
-    box-shadow: $crm-contribute-form-shadow;
+    box-shadow: $crm-box-shadow-light;
     display: block;
     font-family: $font-family-base;
     margin-left: 0;
