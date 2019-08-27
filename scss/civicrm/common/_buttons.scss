@@ -415,7 +415,7 @@ button {
 // Because of that we need to additionally discard the text shadow though.
 div,
 button {
-  &.crm-button:not([class*='crm-button-type']) {
+  &.crm-button:not([class*='crm-button-type-']) {
     @extend %btn-civi-primary;
     text-shadow: none;
   }

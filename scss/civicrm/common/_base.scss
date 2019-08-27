@@ -150,7 +150,7 @@
     margin-bottom: 20px;
 
     // Sometimes there are .dataTables_wrapper > .dataTables_wrapper
-    // blocks that produce double shadows
+    // blocks that produce double shadows.
     > .dataTables_wrapper {
       box-shadow: none;
     }

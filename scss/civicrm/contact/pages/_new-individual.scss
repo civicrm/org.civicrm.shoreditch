@@ -135,7 +135,7 @@
         top: $crm-standard-gap;
         // We need to discard the width to attach the "button"
         // to the very right edge of the table. Because it is not overflown,
-        // it still we be visible and clickable
+        // it still we be visible and clickable.
         width: 0;
       }
 
@@ -273,7 +273,7 @@
     tr:not([id]) {
       // Makes labels bold. We cannot use a specific selector because
       // labels are just text inside <td>s. We also ignore <tr>s with "id"
-      // attributes because those definitely do not contain labels
+      // attributes because those definitely do not contain labels.
       font-weight: $crm-font-weight-bold;
 
       // Discarding bold font for links
