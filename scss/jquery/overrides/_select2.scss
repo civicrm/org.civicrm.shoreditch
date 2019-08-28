@@ -248,18 +248,33 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
       background: $crm-white;
     }
 
-    .Individual-icon {
+    .Individual-icon,
+    .Household-icon,
+    .Organization-icon {
       background: none;
       text-indent: 0;
 
-      &:before {
-        // Align with the original icon position
-        margin-left: 2px;
-        font-size: $font-size-medium;
+      &::before {
         display: block;
-        content: '\f007';
-        font-family: "FontAwesome";
+        font-family: 'FontAwesome';
+        // Align with the original icon position
+        font-size: $font-size-medium;
       }
+    }
+
+    .Individual-icon::before {
+      content: $fa-var-user;
+      margin-left: 2px;
+    }
+
+    .Household-icon::before {
+      content: $fa-var-home;
+      margin-left: 0;
+    }
+
+    .Organization-icon::before {
+      content: $fa-var-building;
+      margin-left: 1px;
     }
   }
 }
