@@ -2,7 +2,12 @@
 
 #{civi-page('contact')} {
   #contact-summary-relationship-tab {
+
     font-family: $font-family-base;
+    // Removes the gap between headers and tables
+    h3 + .help {
+      margin-bottom: 0;
+    }
 
     .action-link {
       line-height: 20px;
