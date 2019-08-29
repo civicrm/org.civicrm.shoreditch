@@ -40,22 +40,10 @@
   }
 
   table.crm-info-panel {
-    @include table-selector();
+    @include table-selector-full-style();
 
-    border: 0 !important;
-    border-radius: $border-radius-base;
     margin-left: -#{$crm-standard-gap} !important;
     width: calc(100% + #{$crm-standard-gap * 2});
-
-    td,
-    th {
-      background-color: transparent !important;
-    }
-
-    td.label {
-      color: $crm-black !important;
-      font-size: $font-size-base;
-    }
   }
 
   // We do not need striped tables here

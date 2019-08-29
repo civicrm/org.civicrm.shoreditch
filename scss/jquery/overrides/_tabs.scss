@@ -18,6 +18,15 @@
       outline: none;
     }
 
+    &:not(.crm-contact-tabs-list) {
+      .ui-corner-all,
+      .ui-corner-top {
+        a {
+          height: 1.2em;
+        }
+      }
+    }
+
     .ui-corner-all,
     .ui-corner-top {
       background: $gray-lighter;

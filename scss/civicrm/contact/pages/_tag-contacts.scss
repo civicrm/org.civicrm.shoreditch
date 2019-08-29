@@ -168,7 +168,7 @@
     box-shadow: $box-shadow;
 
     #tagtree {
-      padding: 20px;
+      padding-top: $crm-standard-gap;
 
       li {
         margin: 10px 0;
@@ -176,6 +176,11 @@
         span {
           background: none;
         }
+      }
+
+      // We don't want to indent the very first <ul>, just those that are nested
+      > ul ul {
+        margin-left: $crm-standard-gap / 4 * 5;
       }
     }
   }
@@ -189,10 +194,12 @@
         th {
           @include panel-header;
           border-width: 0 0 1px;
+          box-shadow: none;
         }
 
         td {
           border: 0;
+          padding: $crm-standard-gap;
         }
       }
 
@@ -203,6 +210,7 @@
           border: 1px solid $crm-grayblue-darker;
           border-radius: $border-radius-base;
           height: 16px;
+          margin-right: $crm-standard-gap / 4;
           position: relative;
           top: 5px;
           width: 16px;

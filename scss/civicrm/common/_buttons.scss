@@ -422,3 +422,11 @@ button {
     }
   }
 }
+
+.crm-container span.crm-button {
+  overflow: inherit;
+
+  > .crm-i {
+    margin-top: 7px;
+  }
+}

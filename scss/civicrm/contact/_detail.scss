@@ -257,6 +257,7 @@
   }
 
   #crm-contactname-content {
+    background-color: $crm-gray-clay;
     border: 0 !important;
     max-height: 70px;
 
@@ -611,10 +612,6 @@
 
 
 .crm-inline-edit {
-  &.form {
-    background-color: $crm-gray-clay !important;
-  }
-
   form {
     .crm-content {
       margin-left: 0 !important;

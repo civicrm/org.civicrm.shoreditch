@@ -411,6 +411,11 @@
 }
 
 #{civi-page('contact-view-contribution')} {
+  #crm-main-content-wrapper {
+    background-color: $crm-white;
+    box-shadow: $box-shadow;
+  }
+
   #branding {
     display: block;
   }
@@ -694,6 +699,23 @@
 }
 
 .CRM_Contribute_Form_ContributionView {
+  .crm-info-panel {
+    @include table-selector-full-style();
+
+    .selector {
+      box-shadow: none;
+    }
+  }
+
+  #Donor_Information__ {
+    border: 0;
+    padding: 0;
+
+    .crm-accordion-body {
+      box-shadow: none;
+    }
+  }
+
   .action-link {
     display: none;
   }
