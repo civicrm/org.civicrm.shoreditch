@@ -395,10 +395,17 @@
   }
 }
 
-#{civi-page('group-add')} .CRM_Group_Form_Edit .crm-group-form-block {
-  padding: 15px;
+#{civi-page('group-add')} {
+  .CRM_Group_Form_Edit .crm-group-form-block {
+    padding: 15px;
 
-  #s2id_visibility::after {
-    display: none;
+    #s2id_visibility::after {
+      display: none;
+    }
+  }
+
+  .custom-group.crm-accordion-wrapper {
+    margin-left: -#{$crm-standard-gap - 1px};
+    margin-right: -#{$crm-standard-gap - 1px};
   }
 }
