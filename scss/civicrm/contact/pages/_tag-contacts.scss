@@ -177,6 +177,11 @@
           background: none;
         }
       }
+
+      // We don't want to indent the very first <ul>, just those that are nested
+      > ul ul {
+        margin-left: $crm-standard-gap / 4 * 5;
+      }
     }
   }
 }
