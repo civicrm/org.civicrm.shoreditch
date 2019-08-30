@@ -59,6 +59,10 @@
         color: $gray-darker !important;
       }
     }
+
+    &.primary .crm-label::after {
+      content: '*';
+    }
   }
 
   div.crm-clear,

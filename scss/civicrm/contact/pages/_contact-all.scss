@@ -1,0 +1,35 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
+
+// Styling Postcode Lookup extension input
+#addressLookup {
+  td {
+    position: relative;
+
+    &::after {
+      bottom: $crm-standard-gap / 2;
+      color: $crm-gray-matte;
+      content: $fa-var-search;
+      font-family: $font-family-fontawesome;
+      left: $crm-standard-gap / 4 * 3;
+      position: absolute;
+    }
+  }
+
+  input {
+    @include input-text-bootstrap();
+    // Makes the placeholder fully visible
+    min-width: 220px;
+    padding-left: $crm-standard-gap / 2 * 3;
+  }
+}
+
+.crm-inline-edit-form {
+  #addressLookup {
+    td {
+      &::after {
+        margin-bottom: -2px;
+        margin-left: -2px;
+      }
+    }
+  }
+}

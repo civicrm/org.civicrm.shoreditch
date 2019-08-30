@@ -131,7 +131,8 @@
       // Position the "> Signature" button to the right side of the table
       > .collapsible-title {
         position: absolute;
-        right: 0;
+        // Discard paddings
+        right: -#{$crm-standard-gap * 2};
         top: $crm-standard-gap;
         // We need to discard the width to attach the "button"
         // to the very right edge of the table. Because it is not overflown,
@@ -286,12 +287,5 @@
   .email-signature > .collapsible-title {
     font-size: $font-size-base;
     font-weight: $crm-font-weight-bold;
-  }
-
-  // Styling Postcode Lookup extension input
-  #addressLookup input {
-    @include input-text-bootstrap();
-    // Makes the placeholder fully visible
-    min-width: 220px;
   }
 }

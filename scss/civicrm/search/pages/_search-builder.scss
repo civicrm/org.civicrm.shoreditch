@@ -32,5 +32,61 @@
 
   #crm-submit-buttons {
     padding: 25px 20px;
+    width: calc(100% - #{$crm-standard-gap * 2});
+  }
+
+  .crm-search-tasks {
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: $crm-standard-gap;
+  }
+
+  .crm-results-block {
+    box-shadow: $box-shadow;
+  }
+
+  table.selector {
+    @include table-selector();
+  }
+
+  .crm-pager {
+    box-shadow: none;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .element-right {
+      margin-right: $crm-standard-gap !important;
+    }
+
+    .crm-pager-nav a:first-child {
+      padding-left: 0;
+    }
+  }
+
+  .crm-search-results,
+  #alpha-filter {
+    background-color: $crm-white;
+  }
+
+  #alpha-filter {
+    padding-left: $crm-standard-gap / 4 * 3;
+
+    ul {
+      margin-left: 0 !important;
+    }
+
+    + a {
+      padding-left: $crm-standard-gap;
+    }
+  }
+
+  .crm-search-results {
+    padding-bottom: $crm-standard-gap;
+  }
+
+  label[for='CRM_Contact_Form_Search_Builder-rows-per-page-select'] + span {
+    margin-right: $crm-standard-gap;
   }
 }
