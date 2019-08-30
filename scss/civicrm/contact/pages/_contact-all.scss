@@ -22,3 +22,14 @@
     padding-left: $crm-standard-gap / 2 * 3;
   }
 }
+
+.crm-inline-edit-form {
+  #addressLookup {
+    td {
+      &::after {
+        margin-bottom: -2px;
+        margin-left: -2px;
+      }
+    }
+  }
+}
