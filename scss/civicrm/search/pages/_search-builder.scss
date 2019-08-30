@@ -32,6 +32,17 @@
 
   #crm-submit-buttons {
     padding: 25px 20px;
+    width: calc(100% - #{$crm-standard-gap * 2});
+  }
+
+  .crm-search-tasks {
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: $crm-standard-gap;
+  }
+
+  .crm-results-block {
+    box-shadow: $box-shadow;
   }
 
   table.selector {
@@ -72,9 +83,7 @@
   }
 
   .crm-search-results {
-    box-shadow: $box-shadow;
     padding-bottom: $crm-standard-gap;
-    padding-top: $crm-standard-gap;
   }
 
   label[for='CRM_Contact_Form_Search_Builder-rows-per-page-select'] + span {
