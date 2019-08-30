@@ -8,6 +8,21 @@
   font-family: $font-family-base;
   width: 100% !important;
 
+  .crm-row-ok {
+    background-color: $crm-row-ok-background-color !important;
+  }
+
+  .crm-row-error {
+    background-color: $crm-row-error-background-color !important;
+  }
+
+  .crm-row-ok,
+  .crm-row-error {
+    td {
+      background-color: transparent !important;
+    }
+  }
+
   thead,
   .columnheader {
     th,
