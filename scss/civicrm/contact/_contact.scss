@@ -17,6 +17,7 @@ $page-class-name: str_slice($page-class, 2);
 @import 'pages/manage-groups';
 @import 'pages/find-and-merge-duplicate';
 @import 'pages/dedupe-exception';
+@import 'pages/contact-all';
 @import 'pages/contact-dedupefind';
 @import 'pages/contact-discount';
 @import 'pages/contact-grant';
