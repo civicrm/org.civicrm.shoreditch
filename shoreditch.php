@@ -28,20 +28,6 @@ function shoreditch_civicrm_xmlMenu(&$files) {
  */
 function shoreditch_civicrm_install() {
   _shoreditch_civix_civicrm_install();
-
-  // Unset "custom css url" (customCSSURL) field
-  $customCSSUrl = Civi::settings()->get("customCSSURL");
-  if (strpos($customCSSUrl, 'org.civicrm.shoreditch') !== FALSE) {
-    civicrm_api3('setting', 'create', [
-      'customCSSURL' => ''
-    ]);
-  }
-
-  // Set "shoreditch" as the backend theme.
-  civicrm_api3('setting', 'create', [
-    'theme_frontend' => 'default',
-    'theme_backend' => 'shoreditch'
-  ]);
 }
 
 /**
@@ -133,6 +119,13 @@ function shoreditch_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
  */
 function shoreditch_civicrm_themes(&$themes) {
   _shoreditch_civix_civicrm_themes($themes);
+}
+
+/**
+ * Implements hook_civicrm_postInstall().
+ */
+function shoreditch_civicrm_postInstall() {
+  _shoreditch_civix_civicrm_postInstall();
 }
 
 /**
