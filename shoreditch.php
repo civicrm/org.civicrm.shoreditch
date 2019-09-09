@@ -122,6 +122,13 @@ function shoreditch_civicrm_themes(&$themes) {
 }
 
 /**
+ * Implements hook_civicrm_postInstall().
+ */
+function shoreditch_civicrm_postInstall() {
+  _shoreditch_civix_civicrm_postInstall();
+}
+
+/**
  * Implements hook_civicrm_coreResourceList().
  */
 function shoreditch_civicrm_coreResourceList(&$items, $region) {
