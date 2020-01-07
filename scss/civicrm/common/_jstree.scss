@@ -1,3 +1,5 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type */
+
 .jstree-default {
   .jstree-wholerow-hovered,
   .jstree-wholerow-clicked {
@@ -12,6 +14,7 @@
     border: 1px solid $crm-background;
     border-radius: $border-radius-base;
     padding: 0;
+    z-index: 1;
 
     li {
       > a {
