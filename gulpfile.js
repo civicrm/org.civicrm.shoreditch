@@ -248,7 +248,7 @@ const PluginError = require('plugin-error');
    * @return {String}
    */
   function releaseBranchName () {
-    return `v${argv.ver}-rc`;
+    return `${argv.ver}-rc`;
   }
 }
 
