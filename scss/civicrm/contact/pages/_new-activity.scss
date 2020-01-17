@@ -196,6 +196,10 @@
       }
     }
   }
+
+  .crm-info-panel {
+    table-layout: fixed;
+  }
 }
 
 #{civi-page('contact')} {
