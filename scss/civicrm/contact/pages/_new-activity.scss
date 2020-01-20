@@ -201,7 +201,7 @@
 #{civi-page('contact')} {
   #Activity {
     .crm-activity-form-block-assignee_contact_id td:not(.label) {
-      padding: 0 5px;
+      padding: 0;
     }
 
     #attachments tr {
