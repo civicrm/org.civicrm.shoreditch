@@ -6,10 +6,14 @@ CRM.$(function () {
    */
 
   /**
-   * Adds an datepicker addon to the given input
+   * Adds an datepicker addon to the given input. It also removes the calendar icon displayed
+   * as a placeholder for the input in favour of the add on button calendar icon.
+   *
    * @param {Object} input The jQuery object for the input
    */
   function addDateAddonToInput (input) {
+    var placeholderWithoutCalendar = input.attr('placeholder').replace('', '');
+
     CRM.$('<span class="addon fa fa-calendar"></span>')
       .insertAfter(input)
       .css('margin-top', input.css('margin-top'))
@@ -21,6 +25,7 @@ CRM.$(function () {
     input[0].style.setProperty('width', input.width() - 19 + 'px', 'important');
     input[0].style.setProperty('margin-right', 0, 'important');
     input.css('min-width', 'initial');
+    input.attr('placeholder', placeholderWithoutCalendar);
   }
 
   /**
