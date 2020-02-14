@@ -1,4 +1,4 @@
-CRM.$(function() {
+CRM.$(function () {
   'use strict';
 
   /**
@@ -9,12 +9,12 @@ CRM.$(function() {
    * Adds an datepicker addon to the given input
    * @param {Object} input The jQuery object for the input
    */
-  function addDateAddonToInput(input) {
+  function addDateAddonToInput (input) {
     CRM.$('<span class="addon fa fa-calendar"></span>')
       .insertAfter(input)
       .css('margin-top', input.css('margin-top'))
       .css('margin-bottom', input.css('margin-bottom'))
-      .on('click', function() {
+      .on('click', function () {
         input.focus();
       });
 
@@ -28,7 +28,7 @@ CRM.$(function() {
    * @param  {Object} input The jQuery object for the input
    * @param  {Object} addon The jQuery object for the addon
    */
-  function moveAddonToInputsSide(input, addon) {
+  function moveAddonToInputsSide (input, addon) {
     input.after(addon);
     addon.css('margin-right', 10);
   }
@@ -37,8 +37,8 @@ CRM.$(function() {
    * We're debouncing the callback to avoid calling the plugin multiple times
    * during DOM changes
    */
-  var observer = new MutationObserver(debounce(function() {
-    CRM.$('.crm-container input.hasDatepicker').each(function() {
+  var observer = new MutationObserver(debounce(function () {
+    CRM.$('.crm-container input.hasDatepicker').each(function () {
       var $this = CRM.$(this);
       var addon = $this.siblings('.addon');
       if (!addon.length && !$this.siblings('.input-group-addon').length) {
@@ -54,13 +54,13 @@ CRM.$(function() {
     subtree: true
   });
 
-  function debounce(fn, delay) {
+  function debounce (fn, delay) {
     var timer = null;
-    return function() {
+    return function () {
       var me = this;
       var args = arguments;
       clearTimeout(timer);
-      timer = setTimeout(function() {
+      timer = setTimeout(function () {
         fn.apply(me, args);
       }, delay);
     };
