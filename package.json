@@ -18,7 +18,8 @@
   "semistandard": {
     "globals": [
       "CRM",
-      "jQuery"
+      "jQuery",
+      "MutationObserver"
     ],
     "ignore": [
       "base/js/*"
