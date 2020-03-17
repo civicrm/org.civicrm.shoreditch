@@ -167,4 +167,16 @@
   .crm-form-block h3 {
     padding: $crm-table-form-cell-padding 0 !important;
   }
+
+  // Exceptional overrides for CRM_Activity_Form_Activity view block.
+  .CRM_Activity_Form_Activity {
+    > .crm-activity-view-block {
+      .crm-accordion-header,
+      .crm-accordion-body>table:not(.form-layout):not(.form-layout-compressed),
+      .crm-info-panel {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
 }
