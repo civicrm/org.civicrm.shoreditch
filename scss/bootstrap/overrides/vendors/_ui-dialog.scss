@@ -1,4 +1,6 @@
-.ui-dialog-content#bootstrap-theme {
-  background: $crm-white;
-  padding: 10px 20px;
+#{$outside-namespace-marker} {
+  .ui-dialog-content#bootstrap-theme { /* stylelint-disable-line selector-max-id */
+    background: $crm-white;
+    padding: 10px 20px;
+  }
 }
