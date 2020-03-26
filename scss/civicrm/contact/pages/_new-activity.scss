@@ -172,7 +172,6 @@
     }
   }
 
-
   .crm-form-block > .crm-submit-buttons {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -196,12 +195,55 @@
       }
     }
   }
+
+  > .crm-activity-view-block {
+    > .crm-info-panel {
+      table-layout: fixed;
+
+      // Reset table td label styles in order to make the cell label layout
+      // formatted correctly with values associated with it.
+      td {
+        &.label {
+          display: table-cell !important;
+          line-height: 18px !important;
+          padding-bottom: 8.5px !important;
+          padding-top: 8.5px !important;
+          text-align: left !important;
+          white-space: normal !important;
+          width: 30% !important;
+
+          label {
+            margin-bottom: 0;
+          }
+
+          + td {
+            width: 70% !important;
+          }
+
+          .crm-container & {
+            vertical-align: top !important;
+          }
+        }
+      }
+    }
+  }
+
+  // Mimmick the styles for crm-accordion-body to reset padding from ui-modal
+  // accordion.
+  .crm-accordion-header {
+    &:not(.crm-master-accordion-header) {
+      +.crm-accordion-body {
+        box-shadow: none;
+        padding: 0 !important;
+      }
+    }
+  }
 }
 
 #{civi-page('contact')} {
   #Activity {
     .crm-activity-form-block-assignee_contact_id td:not(.label) {
-      padding: 0 5px;
+      padding: 0;
     }
 
     #attachments tr {
