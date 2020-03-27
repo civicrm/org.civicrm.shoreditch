@@ -706,12 +706,12 @@
   .crm-info-panel {
     @include table-selector-full-style();
 
-    th {
-      background-color: $gray-lighter !important;
-    }
-
     .selector {
       box-shadow: none;
+
+      th {
+        background-color: $gray-lighter !important;
+      }
     }
   }
 
