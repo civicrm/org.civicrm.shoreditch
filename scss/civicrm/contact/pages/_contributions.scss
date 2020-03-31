@@ -699,11 +699,19 @@
 }
 
 .CRM_Contribute_Form_ContributionView {
+  #info {
+    @extend %crm-table;
+  }
+
   .crm-info-panel {
     @include table-selector-full-style();
 
     .selector {
       box-shadow: none;
+
+      th {
+        background-color: $gray-lighter !important;
+      }
     }
   }
 
