@@ -2,13 +2,13 @@
 
 #configure-dashlet {
   .crm-submit-buttons {
-    margin: 0 0 20px;
+    margin: $crm-standard-gap 0;
     padding: 0;
   }
 
   .dashlets-header {
     font-size: $font-size-h3;
-    margin-bottom: 20px;
+    margin-bottom: $crm-standard-gap;
   }
 
   .portlet-header {
@@ -22,7 +22,7 @@
     margin: 0;
     padding: 15px;
   }
-  
+
   #available-dashlets {
     background-color: $crm-white;
     border: 1px dashed $crm-copy;
@@ -41,7 +41,7 @@
     color: $crm-white;
     margin-bottom: 0;
     padding: 15px;
-    
+
     &[id*='col-1'] {
       float: right;
       margin-left: 0 !important;
@@ -53,7 +53,7 @@
     background: $crm-white;
     border: 0;
     padding: 15px;
-    
+
     &[id*='col-1'] {
       float: right;
       margin-left: 0 !important;
