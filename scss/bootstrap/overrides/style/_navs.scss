@@ -52,7 +52,10 @@
 //== Horizontal variation of .nav-pills
 .nav-pills-horizontal {
   @include box-shadow($box-shadow);
+
   padding-left: 20px;
+  position: relative;
+  z-index: 1;
 
   > li {
     opacity: 0.75;
