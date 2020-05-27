@@ -355,7 +355,7 @@
 
     legend {
       @include section-title;
-      width: 100%;
+      width: calc(100% - (2 * #{$crm-section-title-spacing-x}));
     }
 
     .pay-later_info-section {
