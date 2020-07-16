@@ -118,9 +118,6 @@
   span.btn-slide {
     background: none;
     display: inline-block;
-    padding-right: 0 !important;
-    text-indent: -500em;
-    width: 5px;
 
     &::after {
       @include fa-icon($font-size-base, $fa-var-ellipsis-v, $gray-darker);
