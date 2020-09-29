@@ -20,14 +20,15 @@
       }
 
       .premium-full-disabled {
-        input[type='button'] {
+        button {
+          background: darken($crm-copy, $crm-darken-percentage);
           margin: 20px 0;
         }
       }
 
       .crm-contribution-manage_premiums-form-block {
         padding: 0;
-        
+
         .collapsible-title {
           margin-bottom: 0;
         }
