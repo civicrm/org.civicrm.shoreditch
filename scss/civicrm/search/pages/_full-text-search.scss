@@ -4,8 +4,9 @@
   td {
     button.crm-form-submit {
       @extend .btn-sm;
+      float: none;
       margin-left: 20px !important;
-      margin-top: -8px;
+      vertical-align: initial;
     }
   }
 
