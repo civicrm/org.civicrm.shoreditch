@@ -8,17 +8,17 @@
   .crm-container.ui-dialog {
     &.fullscreen {
       bottom: 0;
-      max-height: none !important;
+      max-height: none;
 
       .ui-dialog-buttonpane {
         bottom: 0;
         left: 0;
-        position: absolute !important;
+        position: absolute;
         right: 0;
       }
 
       .ui-dialog-content {
-        max-height: none !important;
+        max-height: none !important; //needed to override inline style
       }
     }
   }
