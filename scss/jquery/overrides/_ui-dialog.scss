@@ -3,3 +3,23 @@
 .ui-dialog {
   @include ui-dialog;
 }
+
+#{$outside-namespace-marker} {
+  .crm-container.ui-dialog {
+    &.fullscreen {
+      bottom: 0;
+      max-height: none;
+
+      .ui-dialog-buttonpane {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+      }
+
+      .ui-dialog-content {
+        max-height: none !important; //needed to override inline style
+      }
+    }
+  }
+}
