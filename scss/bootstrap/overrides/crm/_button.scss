@@ -12,12 +12,9 @@
 .crm-button-type-cancel,
 .crm-button-type-delete {
   border-color: $gray-light;
+  color: $gray-darker !important;
 
-  input {
-    color: $gray-darker !important;
-  }
-
-  input:hover {
+  &:hover {
     color: $gray-dark !important;
   }
 }

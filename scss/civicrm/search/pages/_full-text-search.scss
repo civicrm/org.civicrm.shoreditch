@@ -2,9 +2,11 @@
 
 .CRM_Contact_Form_Search_Custom .crm-search-form-block table.form-layout-compressed {
   td {
-    input.crm-form-submit {
+    button.crm-form-submit {
       @extend .btn-sm;
+      float: none;
       margin-left: 20px !important;
+      vertical-align: initial;
     }
   }
 
