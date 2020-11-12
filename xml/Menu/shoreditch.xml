@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/admin/setting/shoreditch</path>
+    <page_callback>CRM_Admin_Form_Generic</page_callback>
+    <title>Shoreditch Settings</title>
+    <access_arguments>administer CiviCRM</access_arguments>
+  </item>
+</menu>
