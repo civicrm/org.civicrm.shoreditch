@@ -19,6 +19,12 @@
           background: $gray-lighter !important;
         }
       }
+
+      tr:not(.columnheader) {
+        td {
+          background: $crm-white !important;
+        }
+      }
     }
 
     td.tasklist a {

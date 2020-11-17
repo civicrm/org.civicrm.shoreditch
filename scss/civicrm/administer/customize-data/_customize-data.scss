@@ -90,9 +90,13 @@
     box-shadow: none !important;
   }
 
-  .dataTable > tbody > tr > td.crm-custom_option-links {
-    padding-right: 20px;
-    text-align: right;
+  .dataTable > tbody > tr > td {
+    background: $crm-white !important;
+
+    .crm-custom_option-links {
+      padding-right: 20px;
+      text-align: right;
+    }
   }
 
   .ui-dialog-content #field_page {
