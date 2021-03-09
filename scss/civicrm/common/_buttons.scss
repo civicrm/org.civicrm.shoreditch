@@ -435,3 +435,7 @@ button {
   color: $crm-white;
   text-transform: uppercase;
 }
+
+#bootstrap-theme .crm-button:not(:last-child) {
+  margin-right: $crm-gap-small * 2;
+}
