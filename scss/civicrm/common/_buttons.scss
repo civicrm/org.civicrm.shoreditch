@@ -61,12 +61,12 @@ $button-border-radius: 2px;
     border-color: $brand-primary;
     border-radius: $border-radius-base;
     box-sizing: content-box;
-    color: $crm-white !important;
+    color: $crm-white;
     font-family: $font-family-base;
     margin-right: 0;
     padding: 8px 12px;
     text-shadow: none;
-    text-transform: uppercase !important;
+    text-transform: uppercase;
 
     &:not(:last-child) {
       margin-right: 10px;
@@ -171,8 +171,6 @@ $button-border-radius: 2px;
 
   .crm-button {
     background: none;
-    color: $crm-white !important;
-    text-transform: uppercase !important;
   }
 
   table.form-layout > tbody > tr > td > span.crm-button.crm-i-button {
@@ -429,4 +427,11 @@ button {
   > .crm-i {
     margin-top: 7px;
   }
+}
+
+// Ensure these components look well in conjunction with Bootstrap:
+#bootstrap-theme .crm-form-submit,
+#bootstrap-theme .crm-button {
+  color: $crm-white;
+  text-transform: uppercase;
 }
