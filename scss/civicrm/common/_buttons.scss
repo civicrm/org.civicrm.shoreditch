@@ -169,7 +169,7 @@ $button-border-radius: 2px;
   }
 
   .crm-button {
-    background: none;
+    background: $brand-primary;
   }
 
   table.form-layout > tbody > tr > td > span.crm-button.crm-i-button {
