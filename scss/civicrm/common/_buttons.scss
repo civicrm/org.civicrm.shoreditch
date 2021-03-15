@@ -56,6 +56,7 @@ $button-border-radius: 2px;
     }
   }
 
+  button.crm-form-xbutton,
   button.crm-form-submit {
     background: $brand-primary;
     border-color: $brand-primary;
@@ -112,6 +113,7 @@ $button-border-radius: 2px;
     }
   }
 
+  .crm-form-xbutton,
   .crm-submit-buttons {
     height: auto;
     margin: 0;
