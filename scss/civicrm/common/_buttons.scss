@@ -113,6 +113,12 @@ $button-border-radius: 2px;
     }
   }
 
+  .crm-form-select {
+    + .crm-button {
+      float: none;
+    }
+  }
+
   .crm-form-xbutton,
   .crm-submit-buttons {
     height: auto;
