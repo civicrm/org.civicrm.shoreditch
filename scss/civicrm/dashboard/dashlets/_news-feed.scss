@@ -1,0 +1,15 @@
+#civicrm-news-feed {
+  .ui-tabs-panel {
+    padding: 0;
+  }
+
+  .crm-accordion-header {
+    background: $crm-white !important;
+
+    .crm-news-feed-item-title,
+    .crm-news-feed-item-preview {
+      color: $gray-dark;
+      font-weight: $crm-font-weight-normal;
+    }
+  }
+}
