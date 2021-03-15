@@ -1,0 +1,19 @@
+#civicrm-getting-started {
+  #help {
+    margin: 0;
+  }
+
+  table {
+    border: 0;
+    margin: 7px 0;
+  }
+
+  td {
+    border: 0;
+    padding: 7px 15px;
+  }
+
+  td:first-child {
+    padding-left: $crm-standard-gap;
+  }
+}

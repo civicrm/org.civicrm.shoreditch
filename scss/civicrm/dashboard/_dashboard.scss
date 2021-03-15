@@ -1,5 +1,8 @@
 $dashboard-dashlets-margin: 10px;
 
+@import 'scss/civicrm/dashboard/dashlets/getting-started';
+@import 'scss/civicrm/dashboard/dashlets/news-feed';
+
 .crm-inactive-dashlet-fieldset {
   legend {
     background: none;
