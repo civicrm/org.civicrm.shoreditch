@@ -61,6 +61,7 @@ $button-border-radius: 2px;
     border-color: $brand-primary;
     border-radius: $border-radius-base;
     box-sizing: content-box;
+    color: $crm-white;
     font-family: $font-family-base;
     margin-right: 0;
     padding: 8px 12px;
@@ -426,4 +427,15 @@ button {
   > .crm-i {
     margin-top: 7px;
   }
+}
+
+// Ensure these components look well in conjunction with Bootstrap:
+#bootstrap-theme .crm-form-submit,
+#bootstrap-theme .crm-button {
+  color: $crm-white;
+  text-transform: uppercase;
+}
+
+#bootstrap-theme .crm-button:not(:last-child) {
+  margin-right: $crm-gap-small * 2;
 }
