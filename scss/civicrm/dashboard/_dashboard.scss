@@ -50,11 +50,11 @@ $dashboard-dashlets-margin: 10px;
   .crm-dashlet-header h3 {
     border: 0;
     font-size: $font-size-h3;
-    line-height: 135%;
+    line-height: $crm-line-height;
   }
 
   .crm-dashlet-header .crm-i {
-    line-height: 135%;
+    line-height: $crm-line-height;
     opacity: 1;
   }
 }
