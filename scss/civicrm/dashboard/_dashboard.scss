@@ -1,7 +1,9 @@
 $dashboard-dashlets-margin: 10px;
 
+@import 'scss/civicrm/dashboard/dashlets/activity-selector';
 @import 'scss/civicrm/dashboard/dashlets/getting-started';
 @import 'scss/civicrm/dashboard/dashlets/news-feed';
+@import 'scss/civicrm/dashboard/dashlets/reports';
 
 .crm-inactive-dashlet-fieldset {
   legend {
@@ -39,6 +41,10 @@ $dashboard-dashlets-margin: 10px;
   .crm-dashlet-content {
     border-radius: 0 0 $border-radius-small $border-radius-small;
     padding: 0;
+
+    .status.no-popup {
+      border: 0;
+    }
   }
 
   .crm-dashlet-header {

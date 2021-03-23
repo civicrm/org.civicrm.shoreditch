@@ -1,0 +1,13 @@
+#civicrm-dashboard .crm-dashlet-content {
+  .CRM_Report_Form_Member_Summary,
+  .crm-report-layoutTable-form-block {
+    @include civicrm-table;
+  }
+
+  .crm-report-layoutTable-form-block {
+    .crm-pager {
+      box-shadow: none;
+      margin: 0;
+    }
+  }
+}
