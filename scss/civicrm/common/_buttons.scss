@@ -56,11 +56,13 @@ $button-border-radius: 2px;
     }
   }
 
+  button.crm-form-xbutton,
   button.crm-form-submit {
     background: $brand-primary;
     border-color: $brand-primary;
     border-radius: $border-radius-base;
     box-sizing: content-box;
+    color: $crm-white;
     font-family: $font-family-base;
     margin-right: 0;
     padding: 8px 12px;
@@ -112,6 +114,13 @@ $button-border-radius: 2px;
     }
   }
 
+  .crm-form-select {
+    + .crm-button {
+      float: none;
+    }
+  }
+
+  .crm-form-xbutton,
   .crm-submit-buttons {
     height: auto;
     margin: 0;
@@ -426,4 +435,15 @@ button {
   > .crm-i {
     margin-top: 7px;
   }
+}
+
+// Ensure these components look well in conjunction with Bootstrap:
+#bootstrap-theme .crm-form-submit,
+#bootstrap-theme .crm-button {
+  color: $crm-white;
+  text-transform: uppercase;
+}
+
+#bootstrap-theme .crm-button:not(:last-child) {
+  margin-right: $crm-gap-small * 2;
 }

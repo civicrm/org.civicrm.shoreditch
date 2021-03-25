@@ -1,5 +1,3 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
-
 &#{civi-page('admin-member-membershipstatus')} {
   #{civi-dialog()} {
     .crm-membership-status-form-block {
