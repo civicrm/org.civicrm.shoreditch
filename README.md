@@ -7,7 +7,7 @@ Please note that this extension is currrently in **alpha stage** and under **act
 
 ## Requirements
 * Drupal 7
-* CiviCRM `v5.16`+. In version `v5.16.0` CiviCRM introduces Theming (https://docs.civicrm.org/dev/en/latest/framework/theme) which makes Shoreditch no longer support the obsolete way of theme inclusion (since Shoreditch `v0.1-alpha34`) and drop the support for earlier CiviCRM versions.
+* CiviCRM `v5.31`+. In version `v5.31.0` CiviCRM introduces Theming (https://docs.civicrm.org/dev/en/latest/framework/theme) which makes Shoreditch no longer support the obsolete way of theme inclusion (since Shoreditch `v0.1-alpha34`) and drop the support for earlier CiviCRM versions.
 * [uk.squiffle.kam](https://github.com/aydun/uk.squiffle.kam) if the CiviCRM version is lower than `v5.12`
 * "CiviCRM Theme" module enabled
 * The [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme) is optional but recommended (only for Shoreditch `v0.1-alpha33`+)
