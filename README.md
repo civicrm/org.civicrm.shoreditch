@@ -13,7 +13,7 @@ Please note that this extension is currrently in **alpha stage** and under **act
 * The [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme) is optional but recommended (only for Shoreditch `v0.1-alpha33`+)
 
 ### For development
-* NodeJS `v10.15.3`
+* NodeJS `v14.16.0`
 
 ## Supported CMSs
 At the moment the theme is being developed to work only in Drupal 7. WordPress and Joomla are not currently supported.
