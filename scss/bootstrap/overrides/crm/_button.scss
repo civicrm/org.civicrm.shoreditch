@@ -1,7 +1,5 @@
 // Makes next and upload buttons look like primary buttons:
 .crm-button-type-next {
-  @include button-outline-variant(white, $brand-primary);
-
   .crm-i { display: none; }
 }
 
