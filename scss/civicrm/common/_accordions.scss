@@ -31,11 +31,12 @@
   }
 
   .helpicon {
-    color: $brand-primary;
+    color: $crm-white;
     opacity: 1;
     padding-left: 15px;
 
     &:hover {
+      color: $crm-white;
       opacity: 0.8;
     }
   }
