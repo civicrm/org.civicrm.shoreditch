@@ -103,6 +103,7 @@ $crm-jquery-select2-search-items-label-padding: 5px 10px;
       border-radius: $border-radius-base;
       font-size: $font-size-base;
       padding: 3px 25px 3px 5px;
+      word-break: break-all;
 
       &.select2-search-choice-focus {
         background: $gray-light;
