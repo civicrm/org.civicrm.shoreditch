@@ -81,6 +81,12 @@
     .spacer {
       height: 20px;
     }
+
+    .dataTable {
+      td {
+        background: $crm-white !important;
+      }
+    }
   }
 
   div[class*='crm-case-filter-'] {
