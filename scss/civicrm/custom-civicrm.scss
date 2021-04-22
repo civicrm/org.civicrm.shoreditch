@@ -1,13 +1,12 @@
 @import 'civicrm/variables';
 @import 'civicrm/functions';
 @import 'civicrm/mixins';
+@import 'bootstrap/vendor/font-awesome/font-awesome';
 @import 'bootstrap/overrides/variables';
 @import 'base/scss/vendor/bootstrap/variables';
 @import 'base/scss/vendor/bootstrap/mixins/**/*';
 @import 'bootstrap/mixins/**/*';
 @import 'bootstrap/fonts/**/*';
-@import 'bootstrap/vendor/font-awesome/variables';
-@import 'bootstrap/vendor/font-awesome/path';
 @import 'bootstrap/overrides/style/**/*';
 @import 'angular/overrides/**/*';
 @import 'jquery/overrides/**/*';
