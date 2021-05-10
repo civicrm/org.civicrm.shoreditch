@@ -3,7 +3,7 @@
 The "Shoreditch" extension is a theme for CiviCRM based on a contemporary [flat design](https://en.wikipedia.org/wiki/Flat_design) and
 the [Bootstrap v3](https://getbootstrap.com/docs/3.3/) framework.
 
-Please note that this extension is currrently in **alpha stage** and under **active development**. Significant elements may change.
+Please note that this extension is currently in **alpha stage** and under **active development**. Significant elements may change.
 
 ## Requirements
 * Drupal 7
