@@ -146,3 +146,35 @@
     }
   }
 }
+
+.crm-export-ui-save-mapping-dialog {
+  &.ui-dialog-content.ui-widget-content {
+    padding: 0;
+  }
+
+  .crm-form-block {
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: 20px;
+  }
+
+  .ui-dialog-buttonpane.ui-widget-content {
+    height: auto;
+    padding: 15px 30px;
+    position: inherit;
+    width: auto;
+
+    .crm-button {
+      background: $brand-primary;
+      border-radius: 0;
+
+      &:hover {
+        background: darken($brand-primary, $crm-darken-percentage);
+      }
+    }
+  }
+
+  .crm-marker {
+    margin-right: 0;
+  }
+}
