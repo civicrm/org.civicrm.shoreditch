@@ -156,6 +156,11 @@
     box-shadow: none;
     margin-bottom: 0;
     padding: 20px;
+
+    label {
+      display: inline-block;
+      width: 190px;
+    }
   }
 
   .ui-dialog-buttonpane.ui-widget-content {
