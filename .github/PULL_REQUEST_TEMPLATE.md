@@ -10,12 +10,7 @@ _What has been changed. Please provide screenshots or gifs ([LICEcap](http://www
 ## Technical Details
 _If the PR introduces noteworthy technical changes, please describe them here. Provide code snippets if necessary_
 
-### Core overrides
-_If the PR overrides/patches a core file, then please explain here, for each file:_
-
-1. _Which file it is_
-2. _The reason why it was overridden/patched_
-3. _What the override/patch consists of_
-
+## Backstop JS Report
+_Attaching Backstop JS test report is must for every Pull Request. Run BackstopJS tests from https://github.com/compucorp/backstopjs-config/actions/workflows/backstop.yml, and attach a link to the workflow run_
 ## Comments
 _Anything else you would like the reviewer to note_
