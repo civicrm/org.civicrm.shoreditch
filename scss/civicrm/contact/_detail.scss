@@ -1,3 +1,12 @@
+/*
+  stylelint-disable max-nesting-depth,
+  selector-max-compound-selectors,
+  selector-no-qualifying-type,
+  selector-max-id,
+  scss/at-extend-no-missing-placeholder,
+  property-no-vendor-prefix
+*/
+
 @import 'collapse';
 @import 'tooltip';
 
@@ -51,6 +60,7 @@
   div.crm-summary-row {
     div.crm-label {
       font-weight: $crm-font-weight-bold;
+      word-break: break-all;
 
       &,
       a {
