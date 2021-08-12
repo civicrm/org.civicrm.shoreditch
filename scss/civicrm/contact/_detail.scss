@@ -60,7 +60,7 @@
   div.crm-summary-row {
     div.crm-label {
       font-weight: $crm-font-weight-bold;
-      word-break: break-all;
+      word-break: break-word;
 
       &,
       a {
