@@ -10,10 +10,10 @@ return [
     'default' => FALSE,
     'html_type' => 'checkbox',
     'add' => 1.0,
-    'title' => E::ts('Disable Shoreditch from loading Bootstrap javascript'),
+    'title' => E::ts('Disable Shoreditch from loading Bootstrap Javascript'),
     'is_domain' => 1,
     'is_contact' => 0,
-    'description' => E::ts('If you have another source for the Bootrstrap javascript files, you can disable loading of Shoreditch\'s copy which may prevent javascript issues'),
+    'description' => E::ts('If you have another source for the Bootrstrap javascript files, you can disable loading of Shoreditch\'s copy which may prevent javascript issues.'),
     'settings_pages' => ['shoreditch' => ['weight' => 10]],
   ],
 ];

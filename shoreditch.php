@@ -188,7 +188,7 @@ function shoreditch_civicrm_pageRun(&$page) {
 function shoreditch_civicrm_navigationMenu(&$menu) {
   _shoreditch_civix_insert_navigation_menu($menu, 'Administer/Customize Data and Screens', [
     'label' => E::ts('Shoreditch Settings'),
-    'name' => 'shoreditch-dev',
+    'name' => 'shoreditch-settings',
     'url' => 'civicrm/admin/setting/shoreditch',
     'permission' => 'Administer CiviCRM',
   ]);
