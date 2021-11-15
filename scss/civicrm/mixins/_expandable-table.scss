@@ -125,6 +125,10 @@
       background: none;
       position: relative;
 
+      &::before {
+        opacity: 0;
+      }
+
       &::after {
         @include fa-icon($font-size-base, $fa-var-chevron-right);
         left: 0;
