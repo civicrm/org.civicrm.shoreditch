@@ -1,12 +1,10 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
-
 #{civi-page('financial-financialbatches')} {
   .crm-container {
     .CRM_Financial_Form_Search {
       .crm-search-form-block {
         .crm-form-block {
           box-shadow: none;
-          padding: 0;          
+          padding: 0;
         }
 
         .crm-accordion-body {

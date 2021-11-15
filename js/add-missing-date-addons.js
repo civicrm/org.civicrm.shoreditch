@@ -12,8 +12,10 @@ CRM.$(function () {
    * @param {Object} input The jQuery object for the input
    */
   function addDateAddonToInput (input) {
-    var placeholderWithoutCalendar = input.attr('placeholder').replace('', '');
-
+    if (input.attr('placeholder')) {
+      var placeholderWithoutCalendar = input.attr('placeholder').replace('', '');
+    }
+    
     CRM.$('<span class="addon fa fa-calendar"></span>')
       .insertAfter(input)
       .css('margin-top', input.css('margin-top'))

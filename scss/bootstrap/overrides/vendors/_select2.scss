@@ -5,6 +5,8 @@
   }
 
   .select2-choice {
+    height: 100%;
+
     > .select2-chosen {
       font-size: $font-size-base;
     }
@@ -12,5 +14,13 @@
 
   &.form-control.select2-dropdown-open {
     border-color: $brand-primary;
+  }
+}
+
+.___outside-namespace {
+  .select2-result-label {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

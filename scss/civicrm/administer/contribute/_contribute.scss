@@ -19,6 +19,12 @@
   #alpha-filter {
     border-bottom: 1px solid $crm-grayblue-dark;
   }
+
+  .dataTable {
+    td {
+      background: $crm-white !important;
+    }
+  }
 }
 
 &#{civi-page('admin-contribute')} {
@@ -28,6 +34,12 @@
     #alpha-filter,
     .dataTables_wrapper {
       box-shadow: none;
+    }
+
+    .dataTable {
+      td {
+        background: $crm-white !important;
+      }
     }
   }
 

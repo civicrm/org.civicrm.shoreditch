@@ -1,9 +1,5 @@
 // Makes next and upload buttons look like primary buttons:
-.crm-button-type-next,
-.crm-button-type-upload {
-
-  @include button-outline-variant(white, $brand-primary);
-
+.crm-button-type-next {
   .crm-i { display: none; }
 }
 
@@ -11,7 +7,7 @@
 .crm-button-type-back,
 .crm-button-type-cancel,
 .crm-button-type-delete {
-  border-color: $gray-light;
+  border-color: $gray-dark;
   color: $gray-darker !important;
 
   &:hover {

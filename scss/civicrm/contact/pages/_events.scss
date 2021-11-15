@@ -101,6 +101,7 @@
 
     tbody tr {
       td {
+        background: $crm-white !important;
         line-height: normal;
         padding: 10px;
 
@@ -491,7 +492,7 @@
       }
 
       input + label {
-        line-height: 135%;
+        line-height: $crm-line-height;
       }
     }
   }

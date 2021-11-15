@@ -1,0 +1,46 @@
+#civicrm-dashboard {
+  .crm-activity-selector-dashlet {
+    display: grid;
+
+    .crm-search_filters-accordion {
+      td:nth-child(3) {
+        min-width: 285px;
+
+        .crm-absolute-date-from label,
+        .crm-absolute-date-to label {
+          display: block;
+        }
+      }
+    }
+
+    .crm-accordion-header {
+      border-bottom: 1px solid $crm-background;
+      color: $gray-darker;
+      font-weight: $crm-font-weight-h1;
+    }
+
+    .dataTables_wrapper {
+      border-radius: 0;
+      box-shadow: none;
+      margin-bottom: 0;
+
+      .crm-datatable-pager-top {
+        border-radius: 0;
+      }
+
+      .crm-datatable-pager-bottom {
+        line-height: 1.5em;
+        padding: 0 15px;
+      }
+
+      .dataTables_paginate .ui-button {
+        padding: 10px;
+      }
+
+      .dataTables_info {
+        padding: 10px 0;
+        width: 49%;
+      }
+    }
+  }
+}

@@ -29,6 +29,35 @@
     }
   }
 
+  .crmMailing-preview {
+    display: flex;
+
+    .preview-group,
+    .preview-popup,
+    .preview-contact {
+      height: auto;
+    }
+
+    .preview-popup {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .crm-button {
+      display: inline-block;
+      float: none;
+      margin-right: 0;
+      margin-top: $crm-standard-gap;
+    }
+  }
+
+  .crm-wizard-buttons {
+    @include clearfix();
+
+    padding: $crm-standard-gap;
+  }
+
   .label {
     text-align: left;
 

@@ -146,3 +146,42 @@
     }
   }
 }
+
+.crm-export-ui-save-mapping-dialog {
+  $export-form-label-width: 190px;
+
+  &.ui-dialog-content.ui-widget-content {
+    padding: 0;
+  }
+
+  .crm-form-block {
+    box-shadow: none;
+    margin-bottom: 0;
+    padding: $panel-body-padding;
+
+    label {
+      display: inline-block;
+      width: $export-form-label-width;
+    }
+  }
+
+  .ui-dialog-buttonpane.ui-widget-content {
+    height: auto;
+    padding: $modal-inner-padding;
+    position: inherit;
+    width: auto;
+
+    .crm-button {
+      background: $brand-primary;
+      border-radius: 0;
+
+      &:hover {
+        background: darken($brand-primary, $crm-darken-percentage);
+      }
+    }
+  }
+
+  .crm-marker {
+    margin-right: 0;
+  }
+}

@@ -1,5 +1,3 @@
-/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-no-qualifying-type, selector-max-id */
-
 &#{civi-page('admin-custom-group')} {
   #options table td:last-of-type {
     width: 250px;
@@ -92,9 +90,13 @@
     box-shadow: none !important;
   }
 
-  .dataTable > tbody > tr > td.crm-custom_option-links {
-    padding-right: 20px;
-    text-align: right;
+  .dataTable > tbody > tr > td {
+    background: $crm-white !important;
+
+    .crm-custom_option-links {
+      padding-right: 20px;
+      text-align: right;
+    }
   }
 
   .ui-dialog-content #field_page {

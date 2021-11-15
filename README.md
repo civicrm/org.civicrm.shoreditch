@@ -3,17 +3,17 @@
 The "Shoreditch" extension is a theme for CiviCRM based on a contemporary [flat design](https://en.wikipedia.org/wiki/Flat_design) and
 the [Bootstrap v3](https://getbootstrap.com/docs/3.3/) framework.
 
-Please note that this extension is currrently in **alpha stage** and under **active development**. Significant elements may change.
+Please note that this extension is currently in **alpha stage** and under **active development**. Significant elements may change.
 
 ## Requirements
 * Drupal 7
-* CiviCRM `v5.16`+. In version `v5.16.0` CiviCRM introduces Theming (https://docs.civicrm.org/dev/en/latest/framework/theme) which makes Shoreditch no longer support the obsolete way of theme inclusion (since Shoreditch `v0.1-alpha34`) and drop the support for earlier CiviCRM versions.
+* CiviCRM `v5.31`+. In version `v5.31.0` CiviCRM introduces Theming (https://docs.civicrm.org/dev/en/latest/framework/theme) which makes Shoreditch no longer support the obsolete way of theme inclusion (since Shoreditch `v0.1-alpha34`) and drop the support for earlier CiviCRM versions.
 * [uk.squiffle.kam](https://github.com/aydun/uk.squiffle.kam) if the CiviCRM version is lower than `v5.12`
 * "CiviCRM Theme" module enabled
 * The [CiviAdmin Companion Drupal theme](https://github.com/compucorp/shoreditch-companion-d7-theme) is optional but recommended (only for Shoreditch `v0.1-alpha33`+)
 
 ### For development
-* NodeJS `v10.15.3`
+* NodeJS `v14.16.0`
 
 ## Supported CMSs
 At the moment the theme is being developed to work only in Drupal 7. WordPress and Joomla are not currently supported.
