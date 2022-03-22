@@ -199,5 +199,13 @@ function shoreditch_civicrm_navigationMenu(&$menu) {
  *   TRUE if Shoreditch is the active theme.
  */
 function _shoreditch_isActive() {
+  // The Job civicrm_api3_job_cleanup can clear the DB cache, causing the
+  // CiviCRM menu to be empty on the first load after the command ran.
+  // Without the menu, the getActiveThemeKey is unable to detect the current
+  // theme. This condition ensures the menu is filled.
+  if (!CRM_Core_DAO::checkTableHasData(CRM_Core_DAO_Menu::getTableName())) {
+    CRM_Core_Menu::store(FALSE);
+  }
+
   return Civi::service('themes')->getActiveThemeKey() === 'shoreditch';
 }
