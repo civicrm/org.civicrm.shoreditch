@@ -108,6 +108,7 @@
     font-size: $font-size-base;
     padding: $crm-main-menu-padding-base 0;
 
+    .ui-menu-item-uiMenuItemWrapper,
     .ui-menu-item-wrapper {
       padding: $crm-main-menu-padding-small ($crm-main-menu-padding-base * 2) $crm-main-menu-padding-small $crm-main-menu-padding-base;
     }
