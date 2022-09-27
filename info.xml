@@ -19,8 +19,14 @@
   <compatibility>
     <ver>5.31</ver>
   </compatibility>
-  <comments></comments>
+  <comments/>
   <civix>
     <namespace>CRM/Shoreditch</namespace>
+    <format>22.05.2</format>
   </civix>
+  <mixins>
+    <mixin>menu-xml@1.0.0</mixin>
+    <mixin>setting-php@1.0.0</mixin>
+    <mixin>theme-php@1.0.0</mixin>
+  </mixins>
 </extension>

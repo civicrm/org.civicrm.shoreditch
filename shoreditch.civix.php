@@ -24,7 +24,7 @@ class CRM_Shoreditch_ExtensionUtil {
    *   Translated text.
    * @see ts
    */
-  public static function ts($text, $params = []) {
+  public static function ts($text, $params = []): string {
     if (!array_key_exists('domain', $params)) {
       $params['domain'] = [self::LONG_NAME, NULL];
     }
@@ -41,7 +41,7 @@ class CRM_Shoreditch_ExtensionUtil {
    *   Ex: 'http://example.org/sites/default/ext/org.example.foo'.
    *   Ex: 'http://example.org/sites/default/ext/org.example.foo/css/foo.css'.
    */
-  public static function url($file = NULL) {
+  public static function url($file = NULL): string {
     if ($file === NULL) {
       return rtrim(CRM_Core_Resources::singleton()->getUrl(self::LONG_NAME), '/');
     }
@@ -79,6 +79,13 @@ class CRM_Shoreditch_ExtensionUtil {
 
 use CRM_Shoreditch_ExtensionUtil as E;
 
+function _shoreditch_civix_mixin_polyfill() {
+  if (!class_exists('CRM_Extension_MixInfo')) {
+    $polyfill = __DIR__ . '/mixin/polyfill.php';
+    (require $polyfill)(E::LONG_NAME, E::SHORT_NAME, E::path());
+  }
+}
+
 /**
  * (Delegated) Implements hook_civicrm_config().
  *
@@ -105,19 +112,7 @@ function _shoreditch_civix_civicrm_config(&$config = NULL) {
 
   $include_path = $extRoot . PATH_SEPARATOR . get_include_path();
   set_include_path($include_path);
-}
-
-/**
- * (Delegated) Implements hook_civicrm_xmlMenu().
- *
- * @param $files array(string)
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_xmlMenu
- */
-function _shoreditch_civix_civicrm_xmlMenu(&$files) {
-  foreach (_shoreditch_civix_glob(__DIR__ . '/xml/Menu/*.xml') as $file) {
-    $files[] = $file;
-  }
+  _shoreditch_civix_mixin_polyfill();
 }
 
 /**
@@ -130,6 +125,7 @@ function _shoreditch_civix_civicrm_install() {
   if ($upgrader = _shoreditch_civix_upgrader()) {
     $upgrader->onInstall();
   }
+  _shoreditch_civix_mixin_polyfill();
 }
 
 /**
@@ -170,6 +166,7 @@ function _shoreditch_civix_civicrm_enable() {
       $upgrader->onEnable();
     }
   }
+  _shoreditch_civix_mixin_polyfill();
 }
 
 /**
@@ -215,136 +212,6 @@ function _shoreditch_civix_upgrader() {
   else {
     return CRM_Shoreditch_Upgrader_Base::instance();
   }
-}
-
-/**
- * Search directory tree for files which match a glob pattern.
- *
- * Note: Dot-directories (like "..", ".git", or ".svn") will be ignored.
- * Note: Delegate to CRM_Utils_File::findFiles(), this function kept only
- * for backward compatibility of extension code that uses it.
- *
- * @param string $dir base dir
- * @param string $pattern , glob pattern, eg "*.txt"
- *
- * @return array
- */
-function _shoreditch_civix_find_files($dir, $pattern) {
-  return CRM_Utils_File::findFiles($dir, $pattern);
-}
-
-/**
- * (Delegated) Implements hook_civicrm_managed().
- *
- * Find any *.mgd.php files, merge their content, and return.
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_managed
- */
-function _shoreditch_civix_civicrm_managed(&$entities) {
-  $mgdFiles = _shoreditch_civix_find_files(__DIR__, '*.mgd.php');
-  sort($mgdFiles);
-  foreach ($mgdFiles as $file) {
-    $es = include $file;
-    foreach ($es as $e) {
-      if (empty($e['module'])) {
-        $e['module'] = E::LONG_NAME;
-      }
-      if (empty($e['params']['version'])) {
-        $e['params']['version'] = '3';
-      }
-      $entities[] = $e;
-    }
-  }
-}
-
-/**
- * (Delegated) Implements hook_civicrm_caseTypes().
- *
- * Find any and return any files matching "xml/case/*.xml"
- *
- * Note: This hook only runs in CiviCRM 4.4+.
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_caseTypes
- */
-function _shoreditch_civix_civicrm_caseTypes(&$caseTypes) {
-  if (!is_dir(__DIR__ . '/xml/case')) {
-    return;
-  }
-
-  foreach (_shoreditch_civix_glob(__DIR__ . '/xml/case/*.xml') as $file) {
-    $name = preg_replace('/\.xml$/', '', basename($file));
-    if ($name != CRM_Case_XMLProcessor::mungeCaseType($name)) {
-      $errorMessage = sprintf("Case-type file name is malformed (%s vs %s)", $name, CRM_Case_XMLProcessor::mungeCaseType($name));
-      throw new CRM_Core_Exception($errorMessage);
-    }
-    $caseTypes[$name] = [
-      'module' => E::LONG_NAME,
-      'name' => $name,
-      'file' => $file,
-    ];
-  }
-}
-
-/**
- * (Delegated) Implements hook_civicrm_angularModules().
- *
- * Find any and return any files matching "ang/*.ang.php"
- *
- * Note: This hook only runs in CiviCRM 4.5+.
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_angularModules
- */
-function _shoreditch_civix_civicrm_angularModules(&$angularModules) {
-  if (!is_dir(__DIR__ . '/ang')) {
-    return;
-  }
-
-  $files = _shoreditch_civix_glob(__DIR__ . '/ang/*.ang.php');
-  foreach ($files as $file) {
-    $name = preg_replace(':\.ang\.php$:', '', basename($file));
-    $module = include $file;
-    if (empty($module['ext'])) {
-      $module['ext'] = E::LONG_NAME;
-    }
-    $angularModules[$name] = $module;
-  }
-}
-
-/**
- * (Delegated) Implements hook_civicrm_themes().
- *
- * Find any and return any files matching "*.theme.php"
- */
-function _shoreditch_civix_civicrm_themes(&$themes) {
-  $files = _shoreditch_civix_glob(__DIR__ . '/*.theme.php');
-  foreach ($files as $file) {
-    $themeMeta = include $file;
-    if (empty($themeMeta['name'])) {
-      $themeMeta['name'] = preg_replace(':\.theme\.php$:', '', basename($file));
-    }
-    if (empty($themeMeta['ext'])) {
-      $themeMeta['ext'] = E::LONG_NAME;
-    }
-    $themes[$themeMeta['name']] = $themeMeta;
-  }
-}
-
-/**
- * Glob wrapper which is guaranteed to return an array.
- *
- * The documentation for glob() says, "On some systems it is impossible to
- * distinguish between empty match and an error." Anecdotally, the return
- * result for an empty match is sometimes array() and sometimes FALSE.
- * This wrapper provides consistency.
- *
- * @link http://php.net/glob
- * @param string $pattern
- *
- * @return array
- */
-function _shoreditch_civix_glob($pattern) {
-  $result = glob($pattern);
-  return is_array($result) ? $result : [];
 }
 
 /**
@@ -426,18 +293,6 @@ function _shoreditch_civix_fixNavigationMenuItems(&$nodes, &$maxNavID, $parentID
     if (isset($nodes[$origKey]['child']) && is_array($nodes[$origKey]['child'])) {
       _shoreditch_civix_fixNavigationMenuItems($nodes[$origKey]['child'], $maxNavID, $nodes[$origKey]['attributes']['navID']);
     }
-  }
-}
-
-/**
- * (Delegated) Implements hook_civicrm_alterSettingsFolders().
- *
- * @link https://docs.civicrm.org/dev/en/latest/hooks/hook_civicrm_alterSettingsFolders
- */
-function _shoreditch_civix_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  $settingsDir = __DIR__ . DIRECTORY_SEPARATOR . 'settings';
-  if (!in_array($settingsDir, $metaDataFolders) && is_dir($settingsDir)) {
-    $metaDataFolders[] = $settingsDir;
   }
 }
 
