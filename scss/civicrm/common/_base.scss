@@ -65,9 +65,18 @@
         color: $crm-copy !important;
       }
 
-      &.disabled, &.crm-disabled {
+      &.disabled {
         color: $crm-gray-matte !important;
         cursor: default;
+
+        &:hover {
+          background: $crm-white !important;
+          color: $crm-gray-matte !important;
+        }
+      }
+
+      &.crm-disabled {
+        color: $crm-gray-matte !important;
 
         &:hover {
           background: $crm-white !important;
