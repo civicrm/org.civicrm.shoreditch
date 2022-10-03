@@ -65,7 +65,7 @@
         color: $crm-copy !important;
       }
 
-      &.disabled {
+      &.disabled, &.crm-disabled {
         color: $crm-gray-matte !important;
         cursor: default;
 
