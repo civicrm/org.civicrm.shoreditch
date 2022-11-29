@@ -447,3 +447,7 @@ button {
 #bootstrap-theme .crm-button:not(:last-child) {
   margin-right: $crm-gap-small * 2;
 }
+
+.crm-submit-buttons .helpicon {
+  float: none;
+}
