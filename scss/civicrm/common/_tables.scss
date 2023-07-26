@@ -34,7 +34,17 @@ table {
   tr td {
     border: initial;
     border-bottom: solid 1px $table-border-color;
-    line-height: 35px;
+    line-height: $crm-table-cell-line-height;
+  }
+
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $crm-table-first-cell-padding-left;
+  }
+
+  tr > td,
+  tr > th {
+    padding: $crm-table-cell-padding;
   }
 
   tr:last-child {
