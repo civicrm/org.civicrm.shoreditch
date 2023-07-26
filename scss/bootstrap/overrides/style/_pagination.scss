@@ -1,3 +1,5 @@
+/* stylelint-disable selector-no-qualifying-type */
+
 .pagination {
   margin: 0;
   vertical-align: top;
@@ -10,7 +12,6 @@
     &.last:not(.disabled),
     &.next:not(.disabled),
     &.prev:not(.disabled) {
-
       > a {
         color: $gray-darker;
         font-weight: bold;
@@ -19,8 +20,8 @@
 
     > a,
     > span {
-      border: none;
-      padding: 0 5px;
+      border: 0;
+      padding: $pagination-a-padding;
 
       &:hover {
         text-decoration: underline;

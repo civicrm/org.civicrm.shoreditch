@@ -148,7 +148,7 @@ $border-radius-child:         4px !default;
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          10px 20px !default;
+$table-cell-padding:          16px 10px !default;
 $table-bg:                    $crm-white !default;
 $table-border-color:          $gray-light !default;
 
@@ -322,6 +322,8 @@ $pagination-active-bg:           $pagination-bg !default;
 
 $pagination-disabled-color:      $gray-light !default;
 $pagination-disabled-bg:         $pagination-bg !default;
+
+$pagination-a-padding:           5px 15px !default;
 
 //== Form states and alerts
 //
