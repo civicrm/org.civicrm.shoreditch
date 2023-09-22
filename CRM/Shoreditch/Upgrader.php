@@ -4,7 +4,7 @@ use CRM_Shoreditch_ExtensionUtil as E;
 /**
  * Collection of upgrade steps.
  */
-class CRM_Shoreditch_Upgrader extends CRM_Shoreditch_Upgrader_Base {
+class CRM_Shoreditch_Upgrader extends CRM_Extension_Upgrader_Base {
 
   /**
    * Called on extension install.
