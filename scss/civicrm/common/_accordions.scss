@@ -2,25 +2,16 @@
   border-radius: 0 !important;
 }
 
-.crm-accordion-header {
+.crm-accordion-header,
+.crm-accordion-bold > summary {
   @include accordion-header;
 
   &:not(.crm-master-accordion-header) {
     border-bottom: 1px solid $crm-grayblue-dark;
     font-size: $font-size-base !important;
     font-weight: $crm-font-weight-h3;
-  }
+    padding: 16px 20px !important;
 
-  &.crm-master-accordion-header {
-    background: $brand-primary !important;
-    border-radius: $border-radius-base $border-radius-base 0 0 !important;
-    color: $crm-white !important;
-    font-size: $font-size-h2;
-    font-weight: $crm-font-weight-h3 !important;
-
-    &::before {
-      color: $crm-white;
-    }
   }
 
   .crm-close-accordion {
@@ -39,6 +30,21 @@
       color: $crm-white;
       opacity: 0.8;
     }
+  }
+}
+
+.crm-master-accordion-header,
+.crm-accordion-light > summary {
+  background: $brand-primary !important;
+  border-radius: $border-radius-base $border-radius-base 0 0 !important;
+  color: $crm-white !important;
+  font-size: $font-size-h2;
+  font-weight: $crm-font-weight-h3 !important;
+  padding: 16px 20px !important;
+
+
+  &::before {
+    color: $crm-white;
   }
 }
 
@@ -67,11 +73,47 @@
   }
 }
 
-.crm-master-accordion-header + .crm-accordion-body {
+// repeats above pattern for new markup
+
+details {
+  border-radius: 0;
+  margin-bottom: 0;
+
+  &:[open] {
+    summary {
+      &::before {
+        content: '\f107';
+      }
+    }
+  }
+
+  &:not([open]) {
+    summary {
+      &::before {
+        content: '\f105';
+      }
+    }
+  }
+
+  &.crm-accordion-light:not([open]) {
+    summary {
+      border-radius: $border-radius-base !important;
+    }
+  }
+}
+
+// Remove padding for accordions in accordions
+details details {
+  padding: 0;
+}
+
+.crm-master-accordion-header + .crm-accordion-body,
+.crm-accordion-light > .crm-accordion-body {
   border-radius: 0 0 $border-radius-base $border-radius-base !important;
 }
 
-.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
+.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
+.crm-accordion-bold > .crm-accordion-body {
   box-shadow: $crm-box-shadow-inset;
   padding: 15px !important;
 
