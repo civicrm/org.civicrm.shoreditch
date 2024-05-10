@@ -6,7 +6,8 @@
  * then the shadows will overlap. The method makes it visually look like there is
  * just a single shadow underneath the pair.
  */
-
+ 
+/* stylelint-disable selector-max-id, selector-max-compound-selectors */
 @mixin block-shadows-for-pair () {
   position: relative;
 
@@ -67,6 +68,11 @@
 #crm-container {
   position: relative;
   z-index: 1;
+}
+
+// Allow alert have higher z-index than modal
+.ui-dialog-open #crm-container {
+  z-index: unset;
 }
 
 @include block-shadows-for-h3-crm-form-block-pair();
