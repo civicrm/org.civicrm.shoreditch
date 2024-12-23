@@ -191,4 +191,17 @@ table {
       }
     }
   }
+
+  .crm-form-block {
+    display: inline-block;
+    width: 100%;
+
+    > .form-layout-compressed {
+      clear: both;
+
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+  }
 }
