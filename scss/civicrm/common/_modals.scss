@@ -44,6 +44,13 @@
           padding: $crm-table-form-cell-padding;
         }
       }
+
+      td,
+      th {
+        &:not(.label) {
+          padding: 4px;
+        }
+      }
     }
 
     &.no-border {
