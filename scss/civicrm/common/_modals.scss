@@ -105,6 +105,11 @@
     width: calc(100% + #{$crm-standard-gap * 2});
   }
 
+  details[class*='crm-accordion'] > summary {
+    margin: 0 -20px;
+  }
+
+  details[class*='crm-accordion'] > summary +.crm-accordion-body,
   .crm-accordion-header:not(.crm-master-accordion-header)+.crm-accordion-body {
     box-shadow: none;
     padding: 20px 0 !important;
