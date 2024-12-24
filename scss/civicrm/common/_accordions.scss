@@ -46,10 +46,10 @@ details[class*='-accordion'] {
   background: $brand-primary !important;
   border-radius: $border-radius-base $border-radius-base 0 0 !important;
   color: $crm-white !important;
+  color: $gray-darker;
   font-size: $font-size-h2;
   font-weight: $crm-font-weight-h3 !important;
   padding: 16px 20px !important;
-
 
   &::before {
     color: $crm-white;
