@@ -32,11 +32,12 @@
     }
   }
 }
-
+// stylelint-disable-next-line selector-no-qualifying-type
 details.crm-accordion-bold > .crm-accordion-body {
   border: 0;
 }
 
+// stylelint-disable-next-line selector-no-qualifying-type
 details[class*='-accordion'] {
   margin-top: 0;
 }
@@ -103,6 +104,7 @@ details {
     }
   }
 
+  // stylelint-disable-next-line selector-no-qualifying-type
   &.crm-accordion-light:not([open]) {
     summary {
       border-radius: $border-radius-base !important;
@@ -111,6 +113,7 @@ details {
 }
 
 // Remove padding for accordions in accordions
+// stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
 details details {
   padding: 0;
 }
@@ -141,6 +144,8 @@ details details {
     }
   }
 }
+
+// stylelint-enable
 
 .crm-accordion-body {
   @extend %no-border-radius;
@@ -174,6 +179,7 @@ details details {
     opacity: 1;
   }
 
+  // stylelint-disable selector-no-qualifying-type
   span,
   div {
     &.description {
@@ -185,4 +191,6 @@ details details {
   table.crm-info-panel {
     border: 0;
   }
+
+  // stylelint-enable
 }
