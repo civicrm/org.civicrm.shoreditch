@@ -42,21 +42,6 @@ details[class*='-accordion'] {
   margin-top: 0;
 }
 
-.crm-master-accordion-header,
-.crm-accordion-light > summary {
-  background: $brand-primary !important;
-  border-radius: $border-radius-base $border-radius-base 0 0 !important;
-  color: $crm-white !important;
-  color: $gray-darker;
-  font-size: $font-size-h2;
-  font-weight: $crm-font-weight-h3 !important;
-  padding: 16px 20px !important;
-
-  &::before {
-    color: $crm-white;
-  }
-}
-
 .crm-accordion-wrapper {
   border-radius: 0;
   margin-bottom: 0;
