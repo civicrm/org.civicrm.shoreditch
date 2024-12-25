@@ -196,6 +196,7 @@ table {
     display: inline-block;
     width: 100%;
 
+    > .form-layout,
     > .form-layout-compressed {
       clear: both;
 
