@@ -104,13 +104,11 @@ h3 {
   }
 }
 
-
-div[af-fieldset] {
-  > .af-container {
-    @include block-shadows-for-pair();
-    background: $gray-lighter;
-    padding: $crm-standard-gap $crm-standard-gap 0;
-    position: relative;
-    z-index: 0;
-  }
+// stylelint-disable-next-line selector-no-qualifying-type
+div[af-fieldset] > .af-container {
+  @include block-shadows-for-pair();
+  background: $gray-lighter;
+  padding: $crm-standard-gap $crm-standard-gap 0;
+  position: relative;
+  z-index: 0;
 }

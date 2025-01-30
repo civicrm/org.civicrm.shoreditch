@@ -1,3 +1,5 @@
+// stylelint-disable selector-max-compound-selectors, selector-max-id
+
 #{$outside-namespace-marker} {
   #bootstrap-theme > .afform-directive > div {
     > .help,
@@ -21,16 +23,15 @@
     }
 
     table {
-      th {
-        .crm-i {
-          bottom: 15px !important;
-        }
+      th .crm-i {
+        bottom: 15px !important;
       }
 
       th:first-child,
       td:first-child {
         padding-left: 20px;
 
+        // stylelint-disable-next-line max-nesting-depth
         .crm-i {
           bottom: 15px !important;
           left: 12px !important;

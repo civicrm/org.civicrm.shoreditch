@@ -31,9 +31,11 @@
   }
 }
 
+// stylelint-disable-next-line selector-no-qualifying-type
 details[open] > summary::before {
   @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
 }
+
 // stylelint-disable-next-line selector-no-qualifying-type
 details.crm-accordion-bold > .crm-accordion-body {
   border: 0;
