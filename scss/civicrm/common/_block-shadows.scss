@@ -6,7 +6,7 @@
  * then the shadows will overlap. The method makes it visually look like there is
  * just a single shadow underneath the pair.
  */
- 
+
 /* stylelint-disable selector-max-id, selector-max-compound-selectors */
 @mixin block-shadows-for-pair () {
   position: relative;
@@ -101,5 +101,16 @@ h3 {
     .dataTables_wrapper {
       box-shadow: none;
     }
+  }
+}
+
+
+div[af-fieldset] {
+  > .af-container {
+    @include block-shadows-for-pair();
+    background: $gray-lighter;
+    padding: $crm-standard-gap $crm-standard-gap 0;
+    position: relative;
+    z-index: 0;
   }
 }
