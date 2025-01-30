@@ -8,10 +8,10 @@
 
   &:not(.crm-master-accordion-header) {
     border-bottom: 1px solid $crm-grayblue-dark;
+    color: $gray-darker;
     font-size: $font-size-base !important;
     font-weight: $crm-font-weight-h3;
     padding: 16px 20px !important;
-
   }
 
   .crm-close-accordion {
@@ -45,6 +45,10 @@ details[class*='-accordion'] {
 .crm-accordion-wrapper {
   border-radius: 0;
   margin-bottom: 0;
+
+  .crm-accordion-body {
+    border: 0;
+  }
 
   &:not(.collapsed) {
     .crm-accordion-header {
