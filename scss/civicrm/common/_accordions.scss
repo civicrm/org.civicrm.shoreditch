@@ -22,15 +22,17 @@
   }
 
   .helpicon {
-    color: $crm-white;
     opacity: 1;
     padding-left: 15px;
 
     &:hover {
-      color: $crm-white;
       opacity: 0.8;
     }
   }
+}
+
+details[open] > summary::before {
+  @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
 }
 // stylelint-disable-next-line selector-no-qualifying-type
 details.crm-accordion-bold > .crm-accordion-body {
@@ -53,7 +55,7 @@ details[class*='-accordion'] {
   &:not(.collapsed) {
     .crm-accordion-header {
       &::before {
-        content: '\f107';
+        @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
       }
     }
   }
@@ -61,7 +63,7 @@ details[class*='-accordion'] {
   &.collapsed {
     .crm-accordion-header {
       &::before {
-        content: '\f105';
+        @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
       }
     }
 
