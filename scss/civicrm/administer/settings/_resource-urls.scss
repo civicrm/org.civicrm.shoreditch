@@ -1,3 +1,5 @@
+//stylelint-disable selector-max-compound-selectors,  max-nesting-depth
+
 &#{civi-page('admin-setting-url')},
 &#{civi-page('admin-setting-mapping')},
 &#{civi-page('admin-setting-path')},
@@ -7,6 +9,8 @@
     @include civicrm-table;
 
     table:not(.form-layout-compressed) {
+      border-top: 0;
+
       tr {
         > td {
           vertical-align: top;

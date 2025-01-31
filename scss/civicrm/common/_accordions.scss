@@ -2,25 +2,16 @@
   border-radius: 0 !important;
 }
 
-.crm-accordion-header {
+.crm-accordion-header,
+.crm-accordion-bold > summary {
   @include accordion-header;
 
   &:not(.crm-master-accordion-header) {
     border-bottom: 1px solid $crm-grayblue-dark;
+    color: $gray-darker;
     font-size: $font-size-base !important;
     font-weight: $crm-font-weight-h3;
-  }
-
-  &.crm-master-accordion-header {
-    background: $brand-primary !important;
-    border-radius: $border-radius-base $border-radius-base 0 0 !important;
-    color: $crm-white !important;
-    font-size: $font-size-h2;
-    font-weight: $crm-font-weight-h3 !important;
-
-    &::before {
-      color: $crm-white;
-    }
+    padding: 16px 20px !important;
   }
 
   .crm-close-accordion {
@@ -31,25 +22,42 @@
   }
 
   .helpicon {
-    color: $crm-white;
     opacity: 1;
     padding-left: 15px;
 
     &:hover {
-      color: $crm-white;
       opacity: 0.8;
     }
   }
+}
+
+// stylelint-disable-next-line selector-no-qualifying-type
+details[open] > summary::before {
+  @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
+}
+
+// stylelint-disable-next-line selector-no-qualifying-type
+details.crm-accordion-bold > .crm-accordion-body {
+  border: 0;
+}
+
+// stylelint-disable-next-line selector-no-qualifying-type
+details[class*='-accordion'] {
+  margin-top: 0;
 }
 
 .crm-accordion-wrapper {
   border-radius: 0;
   margin-bottom: 0;
 
+  .crm-accordion-body {
+    border: 0;
+  }
+
   &:not(.collapsed) {
     .crm-accordion-header {
       &::before {
-        content: '\f107';
+        @include fa-icon($font-size-base, $fa-var-angle-down, $gray-darker);
       }
     }
   }
@@ -57,7 +65,7 @@
   &.collapsed {
     .crm-accordion-header {
       &::before {
-        content: '\f105';
+        @include fa-icon($font-size-base, $fa-var-angle-right, $gray-darker);
       }
     }
 
@@ -67,11 +75,49 @@
   }
 }
 
-.crm-master-accordion-header + .crm-accordion-body {
+// repeats above pattern for new markup
+
+details {
+  border-radius: 0;
+  margin-bottom: 0;
+
+  [open] {
+    summary {
+      &::before {
+        content: '\f107';
+      }
+    }
+  }
+
+  &:not([open]) {
+    summary {
+      &::before {
+        content: '\f105';
+      }
+    }
+  }
+
+  // stylelint-disable-next-line selector-no-qualifying-type
+  &.crm-accordion-light:not([open]) {
+    summary {
+      border-radius: $border-radius-base !important;
+    }
+  }
+}
+
+// Remove padding for accordions in accordions
+// stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
+details details {
+  padding: 0;
+}
+
+.crm-master-accordion-header + .crm-accordion-body,
+.crm-accordion-light > .crm-accordion-body {
   border-radius: 0 0 $border-radius-base $border-radius-base !important;
 }
 
-.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body {
+.crm-accordion-header:not(.crm-master-accordion-header) + .crm-accordion-body,
+.crm-accordion-bold > .crm-accordion-body {
   box-shadow: $crm-box-shadow-inset;
   padding: 15px !important;
 
@@ -91,6 +137,8 @@
     }
   }
 }
+
+// stylelint-enable
 
 .crm-accordion-body {
   @extend %no-border-radius;
@@ -124,6 +172,7 @@
     opacity: 1;
   }
 
+  // stylelint-disable selector-no-qualifying-type
   span,
   div {
     &.description {
@@ -131,4 +180,10 @@
       line-height: 1.5em;
     }
   }
+
+  table.crm-info-panel {
+    border: 0;
+  }
+
+  // stylelint-enable
 }

@@ -1,0 +1,90 @@
+// stylelint-disable selector-max-compound-selectors, selector-max-id
+
+#{$outside-namespace-marker} {
+  #bootstrap-theme > .afform-directive > div {
+    > .help,
+    > h3 {
+      margin: 0;
+    }
+
+    >.help:first-child {
+      margin-bottom: $crm-standard-gap;
+
+      &::before {
+        box-shadow: none;
+      }
+    }
+
+    > h3 {
+      @include panel-header();
+
+      position: relative;
+      z-index: 0;
+    }
+
+    table {
+      th .crm-i {
+        bottom: 15px !important;
+      }
+
+      th:first-child,
+      td:first-child {
+        padding-left: 20px;
+
+        // stylelint-disable-next-line max-nesting-depth
+        .crm-i {
+          bottom: 15px !important;
+          left: 12px !important;
+        }
+      }
+    }
+  }
+}
+
+.crm-search-display {
+  padding-top: $crm-search-display-pager-padding-y/2;
+
+  &.crm-search-display-table {
+    border-radius: 0 0 4px 4px;
+    box-shadow: $box-shadow;
+    margin-bottom: $crm-standard-gap;
+    overflow: hidden;
+    padding-top: 0;
+
+    > .form-inline {
+      .btn {
+        margin: $crm-standard-gap !important;
+      }
+    }
+  }
+
+  >.form-inline {
+    @include clearfix();
+    background-color: $gray-lighter;
+    position: relative;
+
+    + table {
+      border-top: 1px solid $crm-grayblue-dark !important;
+    }
+  }
+}
+
+.crm-search-display-pager {
+  background: $crm-white;
+  border-radius: 0;
+  border-top: 1px solid $table-border-color;
+  font-size: $font-size-base;
+  padding-bottom: $crm-search-display-pager-padding-y/2;
+  padding-left: $crm-search-display-pager-padding-x/2;
+  padding-right: $crm-search-display-pager-padding-x/2;
+  padding-top: $crm-search-display-pager-padding-y/2;
+
+  &,
+  a {
+    color: $gray-darker !important;
+  }
+
+  label {
+    margin-top: $crm-search-display-pager-label-margin-top;
+  }
+}

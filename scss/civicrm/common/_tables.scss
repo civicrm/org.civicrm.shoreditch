@@ -4,6 +4,8 @@ table {
   }
 }
 
+// stylelint-disable selector-max-compound-selectors, selector-max-id, selector-no-qualifying-type
+
 %crm-table {
   $border-color: $table-border-color;
   border: 0;
@@ -184,10 +186,22 @@ table {
     table {
       box-shadow: none !important;
 
-      &.form-layout-compressed {
-        tr td {
-          line-height: initial;
-        }
+      &.form-layout-compressed tr td {
+        line-height: initial;
+      }
+    }
+  }
+
+  .crm-form-block {
+    display: inline-block;
+    width: 100%;
+
+    > .form-layout,
+    > .form-layout-compressed {
+      clear: both;
+
+      &:first-child {
+        margin-top: 20px;
       }
     }
   }
