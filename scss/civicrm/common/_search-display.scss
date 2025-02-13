@@ -48,7 +48,6 @@
     border-radius: 0 0 4px 4px;
     box-shadow: $box-shadow;
     margin-bottom: $crm-standard-gap;
-    overflow: hidden;
     padding-top: 0;
 
     > .form-inline {
@@ -59,7 +58,6 @@
   }
 
   >.form-inline {
-    @include clearfix();
     background-color: $gray-lighter;
     position: relative;
 
