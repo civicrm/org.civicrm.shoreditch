@@ -212,7 +212,8 @@
     }
   }
 
-  table {
+  table,
+  table#instalment_row_table {
     &.selector {
       box-shadow: none;
 
