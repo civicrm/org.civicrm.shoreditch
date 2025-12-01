@@ -132,7 +132,7 @@ details details {
       }
     }
 
-    label {
+    label:not(.sr-only) {
       position: relative;
     }
   }
