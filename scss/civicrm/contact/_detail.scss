@@ -721,11 +721,13 @@
   }
 }
 
-.contactCardRight #CustomData {
+.contactCardRight #CustomData,.contactCardLeft #CustomData {
   td {
     display: block;
   }
+}
 
+.contactCardRight #CustomData {
   .crm-form-text {
     min-width: $crm-sm-input-width;
 
