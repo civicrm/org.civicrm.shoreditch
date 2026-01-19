@@ -276,6 +276,12 @@
       }
     }
   }
+
+  .af-layout-inline {
+    .select2-container {
+      min-width: 150px !important;
+    }
+  }
 }
 
 // Edit label
@@ -721,7 +727,8 @@
   }
 }
 
-.contactCardRight #CustomData,.contactCardLeft #CustomData {
+.contactCardRight #CustomData,
+.contactCardLeft #CustomData {
   td {
     display: block;
   }
