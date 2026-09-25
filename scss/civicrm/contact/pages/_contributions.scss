@@ -677,6 +677,8 @@
   .crm-link-credit-card-mode {
     float: right;
     margin-bottom: -30px !important;
+    position: relative;
+    z-index: 1;
   }
 
   .description {
